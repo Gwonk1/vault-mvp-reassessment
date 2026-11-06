@@ -1,0 +1,208 @@
+{
+ "gate": {
+  "IFT88": true,
+  "NDUFS2": true
+ },
+ "label": "NO MODULE",
+ "events": [
+  [
+   "Entamoeba",
+   2
+  ],
+  [
+   "Alveolata",
+   18
+  ],
+  [
+   "Cyanidiaceae",
+   2
+  ],
+  [
+   "Passeriformes",
+   2
+  ],
+  [
+   "Alligator",
+   2
+  ],
+  [
+   "Protostomia",
+   45
+  ],
+  [
+   "Fungi",
+   178
+  ],
+  [
+   "Viridiplantae",
+   76
+  ],
+  [
+   "Bacillariophyta",
+   3
+  ]
+ ],
+ "matched": 111,
+ "top_terms": [
+  {
+   "term": "GOBP_DNA_TEMPLATED_TRANSCRIPTION_ELONGATION",
+   "k": 8,
+   "K": 87,
+   "p": 7.663473187694521e-05,
+   "q": 0.1566383669429989,
+   "spec": 0.05405405405405406
+  },
+  {
+   "term": "GOCC_ACTIN_CYTOSKELETON",
+   "k": 11,
+   "K": 175,
+   "p": 0.00011719304574511592,
+   "q": 0.1566383669429989,
+   "spec": 0.036036036036036036
+  },
+  {
+   "term": "GOCC_MEDIATOR_COMPLEX",
+   "k": 4,
+   "K": 20,
+   "p": 0.0002646362986809582,
+   "q": 0.1566383669429989,
+   "spec": 0.0
+  },
+  {
+   "term": "GOBP_REGULATION_OF_CALCINEURIN_MEDIATED_SIGNALING",
+   "k": 4,
+   "K": 20,
+   "p": 0.0002646362986809582,
+   "q": 0.1566383669429989,
+   "spec": 0.02702702702702703
+  },
+  {
+   "term": "GOCC_ANCHORING_JUNCTION",
+   "k": 14,
+   "K": 295,
+   "p": 0.00027488452007377087,
+   "q": 0.1566383669429989,
+   "spec": 0.05405405405405406
+  },
+  {
+   "term": "GOBP_CALCINEURIN_MEDIATED_SIGNALING",
+   "k": 4,
+   "K": 21,
+   "p": 0.0003228307133174493,
+   "q": 0.1566383669429989,
+   "spec": 0.02702702702702703
+  },
+  {
+   "term": "GOCC_CONDENSED_CHROMOSOME_CENTROMERIC_REGION",
+   "k": 8,
+   "K": 107,
+   "p": 0.00032698776449570615,
+   "q": 0.1566383669429989,
+   "spec": 0.04504504504504504
+  },
+  {
+   "term": "GOBP_ESTABLISHMENT_OF_CELL_POLARITY",
+   "k": 7,
+   "K": 83,
+   "p": 0.000375784368969228,
+   "q": 0.1566383669429989,
+   "spec": 0.05405405405405406
+  },
+  {
+   "term": "GOBP_NEGATIVE_REGULATION_OF_CELL_CYCLE_PROCESS",
+   "k": 10,
+   "K": 170,
+   "p": 0.00041544841480954724,
+   "q": 0.1566383669429989,
+   "spec": 0.018018018018018018
+  },
+  {
+   "term": "GOCC_ACTIN_FILAMENT_BUNDLE",
+   "k": 5,
+   "K": 40,
+   "p": 0.00043780281712653597,
+   "q": 0.1566383669429989,
+   "spec": 0.0
+  },
+  {
+   "term": "GOCC_ACTOMYOSIN",
+   "k": 5,
+   "K": 40,
+   "p": 0.00043780281712653597,
+   "q": 0.1566383669429989,
+   "spec": 0.0
+  },
+  {
+   "term": "GOBP_CEREBRAL_CORTEX_CELL_MIGRATION",
+   "k": 4,
+   "K": 23,
+   "p": 0.0004658181123239032,
+   "q": 0.1566383669429989,
+   "spec": 0.0
+  },
+  {
+   "term": "GOCC_MICROTUBULE_ASSOCIATED_COMPLEX",
+   "k": 6,
+   "K": 62,
+   "p": 0.0004771084278957324,
+   "q": 0.1566383669429989,
+   "spec": 0.07207207207207207
+  },
+  {
+   "term": "GOBP_REGULATION_OF_DNA_TEMPLATED_TRANSCRIPTION_ELONGATION",
+   "k": 6,
+   "K": 64,
+   "p": 0.0005668032902919394,
+   "q": 0.16708841730029364,
+   "spec": 0.02702702702702703
+  },
+  {
+   "term": "GOBP_CELL_ADHESION",
+   "k": 17,
+   "K": 435,
+   "p": 0.0005872367056008446,
+   "q": 0.16708841730029364,
+   "spec": 0.018018018018018018
+  },
+  {
+   "term": "GOBP_CELL_JUNCTION_ORGANIZATION",
+   "k": 12,
+   "K": 250,
+   "p": 0.0007009456610165322,
+   "q": 0.18697725507615998,
+   "spec": 0.02702702702702703
+  },
+  {
+   "term": "GOBP_POSITIVE_REGULATION_OF_TRANSCRIPTION_BY_RNA_POLYMERASE_II",
+   "k": 15,
+   "K": 366,
+   "p": 0.0007854887673282447,
+   "q": 0.19720388582099696,
+   "spec": 0.02702702702702703
+  },
+  {
+   "term": "GOBP_OUTFLOW_TRACT_MORPHOGENESIS",
+   "k": 4,
+   "K": 27,
+   "p": 0.0008781474175568584,
+   "q": 0.2056320992961871,
+   "spec": 0.009009009009009009
+  },
+  {
+   "term": "GOBP_REGULATION_OF_OSSIFICATION",
+   "k": 5,
+   "K": 47,
+   "p": 0.0009325739843215246,
+   "q": 0.2056320992961871,
+   "spec": 0.009009009009009009
+  },
+  {
+   "term": "GOBP_GASTRULATION",
+   "k": 6,
+   "K": 71,
+   "p": 0.0009877487320234307,
+   "q": 0.2056320992961871,
+   "spec": 0.009009009009009009
+  }
+ ]
+}

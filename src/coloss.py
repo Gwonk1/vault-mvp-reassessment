@@ -114,14 +114,15 @@ if mode == 'final':
     cand = scored[(np.abs(nev[scored] - len(L)) <= 1) & (np.abs(frac[scored] - frac[q]) <= .1) & (scored != q)]
     print('matched candidates', len(cand))
     ch_q = rng.choice(cand, size=min(200, len(cand)), replace=False)
-    hits = {}
+    hits = {}; anyhit = 0
     for r in ch_q:
         dr, _ = score(r); er = enrich(dr[dr.co >= 1].og.head(100).tolist())
+        anyhit += int((er.q < .05).any())
         for t in er[er.q < .05].term: hits[t] = hits.get(t, 0) + 1
     e['spec'] = e.term.map(lambda t: hits.get(t, 0) / len(ch_q))
     sig = e[e.q < .05]
     lab = 'MODULE LEAD' if (sig.spec < .05).any() else ('NON-SPECIFIC' if len(sig) else 'NO MODULE')
-    print('\nLABEL', lab, '| matched queries', len(ch_q), '| fraction of matched queries with any q<.05 term', round(sum(1 for r in [0])*0,3))
+    print('\nLABEL', lab, '| matched queries', len(ch_q), '| fraction of matched queries with any q<.05 term', round(anyhit/len(ch_q),3))
     print(e.head(25).round(5).to_string(max_colwidth=70))
     top = d.head(60).assign(genes=lambda x: [','.join(HS[o][:4]) for o in x.og])
     print(top[['genes', 's', 'co', 'g_only', 'nev']].round(3).to_string(max_colwidth=50))

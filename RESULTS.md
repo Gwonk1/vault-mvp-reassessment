@@ -184,3 +184,33 @@ the expected direction stated first.
 
 **Limits.** Pooled screens read mostly growth in proliferating cancer lines. They miss subtle or redundant roles,
 primary-cell or organism-level roles, and anything non-cell-autonomous. Thresholds vary by author.
+
+## 9. Evolutionary co-loss: what is lost when MVP is lost? (pre-registered, `COLOSS_PREREGISTRATION.md`)
+
+eggNOG 5.0, 472 eukaryote species, 6,128 scored gene families, counted by independent loss events on the
+taxonomy tree. **Verdict: NO MODULE.** No GO term passed q < 0.05 (best q = 0.16).
+
+**The test could have found one.** Both pre-set controls passed: from IFT88 alone it recovers intraflagellar
+transport (IFT52, IFT122), and from NDUFS2 alone it recovers complex I (NDUFS1, NDUFS3, NDUFS4). So, unlike the
+screens, this null means something, within the limits below.
+
+- MVP's loss events: Fungi, Viridiplantae, Protostomia, Alveolata, Bacillariophyta, Entamoeba, Cyanidiaceae, plus
+  Passeriformes and Alligator, which look like assembly gaps. Removing those two leaves the label unchanged.
+- 45% of matched random gene families reach a significant term, and MVP does not.
+- MVP's best partners score at an ordinary level: top-20 mean 0.51, 31st percentile of matched families.
+- No family was co-lost in more than 5 of the 9 events. 24 reach 5, including MICU1-3, TANGO6, CDO1 and WDR91.
+  Those are not leads. The set of top names is what a lack of signal looks like.
+- TEP1's family ranks 1,132 of 6,127, which is weak. PARP4 is untestable: its family also holds PARP1-3.
+
+**Reading.** MVP is repeatedly lost without any recognizable system of genes going with it, and the lineages that
+lost it include fungi, plants and insects. That fits a self-contained particle, or one that plugs into machinery
+which is retained for other reasons. It does not show vaults lack partners.
+
+**Limits.** "Protostomia" merges into one event what the literature counts as at least 6 to 7 losses within
+Ecdysozoa, because sampling there is thin. Family-level OGs hide losses of single paralogs. Both controls are large
+systems, and a partner set of a few genes would not enrich a GO term. Only 111 matched families existed against the
+200 pre-registered, and the reporting line for the false-positive rate was corrected after freezing, with no effect
+on the analysis. eggNOG 5 dates from 2019.
+
+**Priority.** One literature search found distribution studies and no genome-wide co-loss analysis. That is not a
+claim that none exists.
