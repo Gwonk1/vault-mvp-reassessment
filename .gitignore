@@ -1,0 +1,6 @@
+.venv/
+data/raw/
+data/processed/
+__pycache__/
+# local working notes and source material are kept out of this repository
+*.pdf
