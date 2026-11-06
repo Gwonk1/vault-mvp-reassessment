@@ -175,7 +175,7 @@ read by hand. It should not be promoted:
 - Dropping one screen that called 44% of its genes hits moves p from 0.049 to 0.11.
 - Five different agents. Temozolomide, etoposide and AZD6738 lean toward loss sensitizing cells, 5-FU the
   other way, and cisplatin is ambiguous.
-- Of the four hits reporting one clean FDR, FDR is 0.50 to 1.0. They passed lenient author thresholds.
+- The three genotoxic hits with one clean FDR (5-FU, cisplatin, etoposide) have FDR 0.50 to 1.0. They passed lenient author thresholds.
 - The two strongest (etoposide, AZD6738) are both HEK293-A and may not be independent.
 - Controls such as FANCA have 27 hits against MVP's 5.
 
