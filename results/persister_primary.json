@@ -1,0 +1,132 @@
+{
+ "models": [
+  "PC9_LUNG",
+  "A375_SKIN",
+  "HT29_LARGE_INTESTINE"
+ ],
+ "excluded": [
+  [
+   "COLO829_SKIN",
+   87,
+   4217
+  ],
+  [
+   "MMACSF_SKIN",
+   50,
+   1321
+  ],
+  [
+   "EFM192A_BREAST",
+   19,
+   1216
+  ],
+  [
+   "BT474_BREAST",
+   28,
+   103
+  ],
+  [
+   "HCC827_LUNG",
+   809,
+   0
+  ]
+ ],
+ "need": 2,
+ "gate": {
+  "MKI67": [
+   2.8,
+   null,
+   16.8
+  ],
+  "TOP2A": [
+   0.4,
+   1.6,
+   3.7
+  ],
+  "CCNB1": [
+   2.3,
+   4.4,
+   16.3
+  ]
+ },
+ "gate_pass": false,
+ "label": "UNINFORMATIVE",
+ "interferon": "n/a",
+ "mvp_raw": [
+  80.6,
+  82.0,
+  81.1
+ ],
+ "mvp_resid": [
+  82.4,
+  81.5,
+  81.0
+ ],
+ "comparators": {
+  "ABCB1": [
+   null,
+   null,
+   null
+  ],
+  "ABCG2": [
+   null,
+   null,
+   null
+  ],
+  "ABCC1": [
+   null,
+   null,
+   null
+  ],
+  "IFIT1": [
+   null,
+   null,
+   98.4
+  ],
+  "ISG15": [
+   98.5,
+   36.6,
+   99.2
+  ],
+  "STAT1": [
+   63.2,
+   7.6,
+   87.6
+  ],
+  "B2M": [
+   99.8,
+   99.0,
+   99.9
+  ],
+  "AXL": [
+   null,
+   null,
+   null
+  ],
+  "NGFR": [
+   null,
+   98.4,
+   null
+  ],
+  "ALDH1A3": [
+   92.1,
+   5.9,
+   null
+  ],
+  "KDM5A": [
+   27.3,
+   67.3,
+   54.7
+  ],
+  "TEP1": [
+   null,
+   null,
+   null
+  ],
+  "PARP4": [
+   null,
+   22.5,
+   36.7
+  ]
+ }
+}

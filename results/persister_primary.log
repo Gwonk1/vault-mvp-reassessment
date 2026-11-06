@@ -1,0 +1,98 @@
+  rows 1500
+  rows 3000
+  rows 4500
+  rows 6000
+  rows 7500
+  rows 9000
+  rows 10500
+  rows 12000
+  rows 13500
+  rows 15000
+  rows 16500
+  rows 18000
+  rows 19500
+  rows 21000
+  rows 22500
+  rows 23168
+matrix (23168, 50735)
+usable models ['PC9_LUNG', 'A375_SKIN', 'HT29_LARGE_INTESTINE'] | excluded (treated, naive): [('COLO829_SKIN', 87, 4217), ('MMACSF_SKIN', 50, 1321), ('EFM192A_BREAST', 19, 1216), ('BT474_BREAST', 28, 103), ('HCC827_LUNG', 809, 0)]
+interferon scores from 187 IFNG and 95 IFNA genes (MVP excluded)
+
+-- PC9_LUNG: genes 4780, treated 9458, naive 7019
+           raw  resid    det  pct_raw  pct_resid
+MVP      0.070  0.056  0.084   80.649     82.406
+TEP1       NaN    NaN    NaN      NaN        NaN
+PARP4      NaN    NaN    NaN      NaN        NaN
+MKI67   -0.210 -0.210  0.091    2.762      2.824
+TOP2A   -0.470 -0.485  0.146    0.418      0.335
+CCNB1   -0.236 -0.228  0.152    2.322      2.343
+ABCB1      NaN    NaN    NaN      NaN        NaN
+ABCG2      NaN    NaN    NaN      NaN        NaN
+ABCC1      NaN    NaN    NaN      NaN        NaN
+IFIT1      NaN    NaN    NaN      NaN        NaN
+ISG15    0.451  0.235  0.262   98.494     96.297
+STAT1    0.023 -0.028  0.082   63.180     36.778
+B2M      1.012  0.651  0.841   99.833     99.603
+AXL        NaN    NaN    NaN      NaN        NaN
+NGFR       NaN    NaN    NaN      NaN        NaN
+ALDH1A3  0.165  0.116  0.236   92.113     90.690
+KDM5A   -0.032 -0.058  0.119   27.280     20.628
+
+-- A375_SKIN: genes 4316, treated 11869, naive 2699
+           raw  resid    det  pct_raw  pct_resid
+MVP      0.124  0.112  0.113   82.044     81.464
+TEP1       NaN    NaN    NaN      NaN        NaN
+PARP4   -0.010 -0.015  0.062   22.521     22.706
+MKI67      NaN    NaN    NaN      NaN        NaN
+TOP2A   -0.424 -0.426  0.064    1.622      1.691
+CCNB1   -0.180 -0.179  0.054    4.449      4.703
+ABCB1      NaN    NaN    NaN      NaN        NaN
+ABCG2      NaN    NaN    NaN      NaN        NaN
+ABCC1      NaN    NaN    NaN      NaN        NaN
+IFIT1      NaN    NaN    NaN      NaN        NaN
+ISG15    0.018 -0.033  0.167   36.585     17.609
+STAT1   -0.100 -0.126  0.079    7.623      6.627
+B2M      0.566  0.515  0.957   98.957     98.726
+AXL        NaN    NaN    NaN      NaN        NaN
+NGFR     0.490  0.499  0.203   98.448     98.610
+ALDH1A3 -0.131 -0.144  0.062    5.862      5.862
+KDM5A    0.070  0.058  0.135   67.331     65.060
+
+-- HT29_LARGE_INTESTINE: genes 3298, treated 9676, naive 2164
+           raw  resid    det  pct_raw  pct_resid
+MVP      0.066  0.050  0.068   81.110     81.049
+TEP1       NaN    NaN    NaN      NaN        NaN
+PARP4   -0.034 -0.043  0.070   36.659     37.265
+MKI67   -0.102 -0.118  0.128   16.798     16.465
+TOP2A   -0.367 -0.387  0.145    3.699      3.396
+CCNB1   -0.106 -0.112  0.086   16.252     17.192
+ABCB1      NaN    NaN    NaN      NaN        NaN
+ABCG2      NaN    NaN    NaN      NaN        NaN
+ABCC1      NaN    NaN    NaN      NaN        NaN
+IFIT1    0.480  0.156  0.238   98.393     93.663
+ISG15    0.750  0.203  0.747   99.242     95.603
+STAT1    0.106 -0.029  0.195   87.568     44.603
+B2M      1.419  1.197  0.963   99.879     99.848
+AXL        NaN    NaN    NaN      NaN        NaN
+NGFR       NaN    NaN    NaN      NaN        NaN
+ALDH1A3    NaN    NaN    NaN      NaN        NaN
+KDM5A   -0.000 -0.008  0.061   54.669     56.489
+
+GATE (proliferation genes must fall): FAIL {'MKI67': ([np.float64(2.8), None, np.float64(16.8)], 1), 'TOP2A': ([np.float64(0.4), np.float64(1.6), np.float64(3.7)], 3), 'CCNB1': ([np.float64(2.3), np.float64(4.4), np.float64(16.3)], 2)} need 2 of 3
+
+LABEL UNINFORMATIVE | MVP pct_raw [np.float64(80.6), np.float64(82.0), np.float64(81.1)] (0/3 >=90) | pct_resid [np.float64(82.4), np.float64(81.5), np.float64(81.0)] (0) | interferon verdict: n/a
+
+comparators (pct_raw per model, count >=90th):
+  ABCB1 [None, None, None] 0
+  ABCG2 [None, None, None] 0
+  ABCC1 [None, None, None] 0
+  IFIT1 [None, None, np.float64(98.4)] 1
+  ISG15 [np.float64(98.5), np.float64(36.6), np.float64(99.2)] 2
+  STAT1 [np.float64(63.2), np.float64(7.6), np.float64(87.6)] 0
+  B2M [np.float64(99.8), np.float64(99.0), np.float64(99.9)] 3
+  AXL [None, None, None] 0
+  NGFR [None, np.float64(98.4), None] 1
+  ALDH1A3 [np.float64(92.1), np.float64(5.9), None] 1
+  KDM5A [np.float64(27.3), np.float64(67.3), np.float64(54.7)] 0
+  TEP1 [None, None, None] 0
+  PARP4 [None, np.float64(22.5), np.float64(36.7)] 0

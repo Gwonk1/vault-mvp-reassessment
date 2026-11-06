@@ -214,3 +214,39 @@ on the analysis. eggNOG 5 dates from 2019.
 
 **Priority.** One literature search found distribution studies and no genome-wide co-loss analysis. That is not a
 claim that none exists.
+
+## 10. Persister test: is MVP a passenger marker of the drug-tolerant state? (pre-registered, `PERSISTER_PREREGISTRATION.md`)
+
+GSE150949 (Oren et al., Watermelon), 3 usable models, 50,735 cells. Replication GSE149383 (Aissa et al.).
+**Verdict: NOT A PERSISTER MARKER**, and formally UNINFORMATIVE because the pre-registered gate failed.
+
+**The reframe failed in the form it was specified.** The threshold was the 90th percentile of genome-wide
+induction in at least 2 of 3 models. MVP reached it in none.
+
+| Model | Drug | Treated / naive | MVP pct | After interferon adjustment |
+|---|---|---|---|---|
+| PC9 lung | osimertinib, 10 d | 9,458 / 7,019 | 80.6 | 82.4 |
+| A375 melanoma | BRAF inhibitor, 10 d | 11,869 / 2,699 | 82.0 | 81.5 |
+| HT29 colorectal | kinase inhibitor, 10 d | 9,676 / 2,164 | 81.1 | 81.0 |
+
+- **Reproducible but modest.** Three cancer types, three drug classes, MVP within 1.4 percentile points
+  each time. A real small induction, not a hallmark persister gene.
+- **Interferon does not explain it**, unlike the bulk tumour picture in §2. Adjusting for both Hallmark
+  interferon programs (MVP excluded, assertion enforced) leaves the value unchanged.
+- **Not specific to the non-cycling state.** Cycling persisters 61.3 / 82.6 / 82.3, non-cycling
+  80.9 / 77.8 / 78.8 (`results/persister_split.json`). The classic quiescent persister is not where it sits.
+- **Gate failed as written.** MKI67 was undetected in A375 and the rule required all three proliferation
+  genes in at least 2 of 3 models; TOP2A fell to the 0.4th-3.7th percentile in all three, so the drug
+  response is plainly detectable. The conclusion does not depend on the gate: at 0 of 3 above the 90th
+  percentile the label is NOT A PERSISTER MARKER either way. **The gate failure is reported rather than
+  rewritten.**
+- **The efflux contrast could not run.** ABCB1, ABCG2 and ABCC1 were undetected in every model, so the
+  pre-registered comparison against pump genes has no data behind it.
+- **Replication is too shallow to count.** Drop-seq detected MVP above the 5% floor in only 1 of 3 arms
+  (PC9 erlotinib D11), where it sat at the 17th percentile. The proliferation gate passed in all three arms.
+
+**Reading.** MVP rises slightly and reproducibly in drug-surviving cells, but it is not part of the persister
+program's core and does not behave like a drug-handling gene. The passenger reframe is not supported in this
+form, and the thirty-year LRP chemoresistance association remains unexplained. Kinase inhibitors in cell
+lines are not the cytotoxic chemotherapies the biomarker was built on, so this tests the state claim, not the
+clinical association.

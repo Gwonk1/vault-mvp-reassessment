@@ -1,0 +1,38 @@
+{
+ "PC9_LUNG|cycling": {
+  "MVP": 61.3,
+  "TOP2A": 0.6,
+  "B2M": 3.2,
+  "ISG15": 60.3
+ },
+ "A375_SKIN|cycling": {
+  "MVP": 82.6,
+  "TOP2A": 1.6,
+  "B2M": 98.8,
+  "ISG15": 46.4
+ },
+ "HT29_LARGE_INTESTINE|cycling": {
+  "MVP": 82.3,
+  "TOP2A": 3.0,
+  "B2M": 99.9,
+  "ISG15": 99.2
+ },
+ "PC9_LUNG|non-cycling": {
+  "MVP": 80.9,
+  "TOP2A": 0.7,
+  "B2M": 99.9,
+  "ISG15": 98.6
+ },
+ "A375_SKIN|non-cycling": {
+  "MVP": 77.8,
+  "TOP2A": 1.5,
+  "B2M": 98.9,
+  "ISG15": 22.4
+ },
+ "HT29_LARGE_INTESTINE|non-cycling": {
+  "MVP": 78.8,
+  "TOP2A": 6.1,
+  "B2M": 99.9,
+  "ISG15": 99.5
+ }
+}

@@ -1,0 +1,6 @@
+PC9_LUNG cycling: n_treated 2147 genes 4685 {'MVP': 61.3, 'TOP2A': 0.6, 'B2M': 3.2, 'ISG15': 60.3}
+A375_SKIN cycling: n_treated 8434 genes 4363 {'MVP': 82.6, 'TOP2A': 1.6, 'B2M': 98.8, 'ISG15': 46.4}
+HT29_LARGE_INTESTINE cycling: n_treated 6390 genes 3370 {'MVP': 82.3, 'TOP2A': 3.0, 'B2M': 99.9, 'ISG15': 99.2}
+PC9_LUNG non-cycling: n_treated 7311 genes 4739 {'MVP': 80.9, 'TOP2A': 0.7, 'B2M': 99.9, 'ISG15': 98.6}
+A375_SKIN non-cycling: n_treated 3435 genes 3931 {'MVP': 77.8, 'TOP2A': 1.5, 'B2M': 98.9, 'ISG15': 22.4}
+HT29_LARGE_INTESTINE non-cycling: n_treated 3286 genes 3329 {'MVP': 78.8, 'TOP2A': 6.1, 'B2M': 99.9, 'ISG15': 99.5}

@@ -1,0 +1,105 @@
+{
+ "pct_raw": {
+  "MVP": {
+   "M14_melanoma_vem_D3": null,
+   "PC9_erl_D11": 17.2,
+   "PC9_erl_D19_vs_DMSO": null
+  },
+  "TEP1": {
+   "M14_melanoma_vem_D3": null,
+   "PC9_erl_D11": null,
+   "PC9_erl_D19_vs_DMSO": null
+  },
+  "PARP4": {
+   "M14_melanoma_vem_D3": null,
+   "PC9_erl_D11": 12.0,
+   "PC9_erl_D19_vs_DMSO": null
+  },
+  "MKI67": {
+   "M14_melanoma_vem_D3": 3.4,
+   "PC9_erl_D11": 4.6,
+   "PC9_erl_D19_vs_DMSO": 8.4
+  },
+  "TOP2A": {
+   "M14_melanoma_vem_D3": 2.9,
+   "PC9_erl_D11": 1.4,
+   "PC9_erl_D19_vs_DMSO": 6.0
+  },
+  "CCNB1": {
+   "M14_melanoma_vem_D3": 9.7,
+   "PC9_erl_D11": 11.1,
+   "PC9_erl_D19_vs_DMSO": 3.2
+  },
+  "ABCB1": {
+   "M14_melanoma_vem_D3": null,
+   "PC9_erl_D11": null,
+   "PC9_erl_D19_vs_DMSO": null
+  },
+  "ABCG2": {
+   "M14_melanoma_vem_D3": null,
+   "PC9_erl_D11": null,
+   "PC9_erl_D19_vs_DMSO": null
+  },
+  "ABCC1": {
+   "M14_melanoma_vem_D3": null,
+   "PC9_erl_D11": 43.9,
+   "PC9_erl_D19_vs_DMSO": null
+  },
+  "IFIT1": {
+   "M14_melanoma_vem_D3": null,
+   "PC9_erl_D11": null,
+   "PC9_erl_D19_vs_DMSO": null
+  },
+  "ISG15": {
+   "M14_melanoma_vem_D3": null,
+   "PC9_erl_D11": null,
+   "PC9_erl_D19_vs_DMSO": null
+  },
+  "STAT1": {
+   "M14_melanoma_vem_D3": 88.9,
+   "PC9_erl_D11": 75.6,
+   "PC9_erl_D19_vs_DMSO": null
+  },
+  "B2M": {
+   "M14_melanoma_vem_D3": 99.7,
+   "PC9_erl_D11": 11.5,
+   "PC9_erl_D19_vs_DMSO": 96.5
+  },
+  "AXL": {
+   "M14_melanoma_vem_D3": null,
+   "PC9_erl_D11": 87.9,
+   "PC9_erl_D19_vs_DMSO": null
+  },
+  "NGFR": {
+   "M14_melanoma_vem_D3": null,
+   "PC9_erl_D11": null,
+   "PC9_erl_D19_vs_DMSO": null
+  },
+  "ALDH1A3": {
+   "M14_melanoma_vem_D3": 6.6,
+   "PC9_erl_D11": 99.5,
+   "PC9_erl_D19_vs_DMSO": 92.1
+  },
+  "KDM5A": {
+   "M14_melanoma_vem_D3": 73.8,
+   "PC9_erl_D11": 23.2,
+   "PC9_erl_D19_vs_DMSO": null
+  }
+ },
+ "mvp_pct_resid": {
+  "M14_melanoma_vem_D3": null,
+  "PC9_erl_D11": 13.2,
+  "PC9_erl_D19_vs_DMSO": null
+ },
+ "n": {
+  "M14_melanoma_vem_D3": [
+   3008
+  ],
+  "PC9_erl_D11": [
+   4983
+  ],
+  "PC9_erl_D19_vs_DMSO": [
+   1053
+  ]
+ }
+}
