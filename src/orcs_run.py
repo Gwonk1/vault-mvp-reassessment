@@ -18,7 +18,7 @@ def build(U):
         d = d.sort_values('HIT', ascending=False).drop_duplicates('OFFICIAL_SYMBOL')
         R.extend(genes.setdefault(g, len(genes)) for g in d.OFFICIAL_SYMBOL); C.extend([sid[s]] * len(d)); V.extend(np.where(d.HIT == 'YES', 2, 1))
     M = np.zeros((len(genes), len(sid)), dtype=np.uint8); M[R, C] = V
-    np.savez_compressed(CACHE, M=M, genes=np.array(list(genes)), screens=np.array(U.id))
+    np.savez_compressed(CACHE, M=M, genes=np.array(list(genes)), screens=np.array(U.id.astype(str).tolist()))
 
 
 def scores(M, U, mask):

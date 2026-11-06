@@ -1,0 +1,64 @@
+id,hit,lib,author,cls,cond,line,why
+6,NO,Activation,Gilbert LA (2014),baseline_fitness,-,K-562,Gene activation decreases fitness
+1885,NO,Activation,Kamber RA (2021),immune_killing,J774 macrophages; anti-CD20/anti-CD47,Ramos,Regulators of cancer response to antibody-dependent cellular phagocytosis (ADCP)
+1,NO,Knockout,Wang T (2014),genotoxic,Etoposide,KBM-7,Increased drug resistance
+2,NO,Knockout,Wang T (2014),genotoxic,Etoposide,HL-60,Increased drug resistance
+1388,NO,Knockout,Lu A (2018),autophagy_traffic,-,K-562,Extracellular vesicle release effector genes
+1578,NO,Knockout,Hill S (2019),other,Mutation: UBE2R2 (ETG54926) KO,NALM-6,Cell-essential genes in a UBE2R2 mutant background
+2425,NO,Activation,Schmidt R (2022),other_cytokine_ligand,Interleukin-2 (IL-2),CD4+ T-cells,Regulation of stimulation-responsive cytokine production
+1891,NO,Activation,Luu AP (2021),virus,Virus: Zika virus,STAT1−/− fibroblasts,Increased sensitivity to virus
+2451,YES,Knockout,Branigan TB (2021),genotoxic,Prexasertib,NCI-H460,Increased resistance to drug
+1628,NO,Activation,Schleicher EM (2020),genotoxic,Berzosertib (VE822),MCF-10A,Increased drug resistance
+1708,NO,Activation,Biering SB (2022),virus,Virus: SARS-CoV-2 (isolate USA-WA1/2020),Calu-3,Increased resistance to virus
+1642,NO,Activation,Ramaker RC (2021),genotoxic,5-fluorouracil,PANC-1,Increased resistance to drug
+2041,NO,Knockout,Matía A (2022),virus,Virus:Vaccinia virus Western Reserve,HeLa,Increased resistance to virus
+1577,NO,Knockout,Hill S (2019),other,Mutation: UBE2R2 (ETG54926) KO,NALM-6,Cell-essential genes in a UBE2R2 mutant background
+1640,NO,Activation,Ramaker RC (2021),genotoxic,Irinotecan,PANC-1,Increased resistance to drug
+1576,NO,Knockout,Hill S (2019),other,Mutation: CDC34 (ETG997) KO,NALM-6,Cell-essential genes in a CDC34 (UBE2R1) mutant background
+1346,NO,Knockout,Cai MY (2020),genotoxic,M3541 (ATM inhibitor),NCI-H460,Increased drug resistance
+2399,NO,Knockout,Lau MT (2020),other_drug,Obatoclax,HAP-1,Increased resistance to drug
+2391,NO,Knockout,Lau MT (2020),other_drug,sorafenib,HAP-1,Increased resistance to drug
+1632,NO,Knockout,Gobbi G (2019),other_drug,JQ1,A-549,Increased/decreased drug resistance
+1457,NO,Activation,Clements KE (2020),genotoxic,Mutation: BRCA2 (ETG675) KO | Olaparib,HeLa,Increased resistance to drug in a BRCA2 mutant background
+2020,NO,Activation,Trimarco JD (2022),virus,Virus: Influenza B virus (B/Yamagata/16/1988),A-549,Increased resistance to virus
+1646,NO,Activation,Ramaker RC (2021),genotoxic,5-fluorouracil,BxPC-3,Increased resistance to drug
+1641,NO,Activation,Ramaker RC (2021),genotoxic,Oxaliplatin,PANC-1,Increased resistance to drug
+1209,NO,Activation,Dukhovny A (2019),virus,Virus: Zika virus,HuH-7,Activation increases resistance to the virus
+1645,NO,Activation,Ramaker RC (2021),genotoxic,Oxaliplatin,BxPC-3,Increased resistance to drug
+1630,NO,Knockout,Prolo LM (2019),other,Cells grown in a transwell with matrigel and allowed to invade toward a higher concentration of serum in the bottom chamber,U-138MG,Essential for glioblastoma invasion
+2422,NO,Activation,Schmidt R (2022),other_cytokine_ligand,Interleukin-2 (IL-2),Primary T-cells,Regulation of stimulation-responsive cytokine production
+1177,NO,Activation,Jost M (2017),other_drug,rigosertib,K-562,Gene activation affects response to chemical
+2427,NO,Activation,Schmidt R (2022),other_cytokine_ligand,Interleukin-2 (IL-2),CD4+ T-cells,Regulation of stimulation-responsive cytokine production
+1210,NO,Activation,Dukhovny A (2019),virus,Virus: Zika virus,HuH-7,Activation increases resistance to the virus
+1863,NO,Activation,Rebendenne A (2022),virus,Virus: SARS-CoV-2 ( isolate BetaCoV/France/ IDF0372/2020),Calu-3,Increased/decreased resistance to virus
+1627,NO,Activation,Schleicher EM (2020),genotoxic,Berzosertib (VE822),HeLa,Increased drug resistance
+2054,NO,Activation,Alborzinia H (2023),oxidative_mito,"1S,3R-RSL3",SK-N-DZ,Increased drug resistance
+1706,NO,Activation,Biering SB (2022),virus,Virus: SARS-CoV-2 (isolate USA-WA1/2020),Calu-3,Decreased resistance to virus
+1347,NO,Knockout,Cai MY (2020),genotoxic,M3541 (ATM inhibitor),NCI-H460,Increased drug sensitivity
+2055,NO,Activation,Alborzinia H (2023),oxidative_mito,Erastin,SK-N-DZ,Increased drug resistance
+1148,YES,Knockout,Han J (2018),virus,Virus: Influenza A virus (A/Viet Nam/1203/2004(H5N1)),A-549,Increased resistance to virus
+2393,NO,Knockout,Lau MT (2020),other_drug,RO-3306,HAP-1,Increased resistance to drug
+2421,NO,Activation,Schmidt R (2022),other_cytokine_ligand,Interleukin-2 (IL-2),Primary T-cells,Regulation of stimulation-responsive cytokine production
+1721,YES,Knockout,Niu Y (2021),oxidative_mito,Low oxygen,Hep-G2,Hypoxia-responding essential genes
+2396,NO,Knockout,Lau MT (2020),genotoxic,Olaparib,HAP-1,Increased resistance to drug
+1639,NO,Activation,Ramaker RC (2021),genotoxic,Gemcitabine,PANC-1,Increased resistance to drug
+1644,NO,Activation,Ramaker RC (2021),genotoxic,Irinotecan,BxPC-3,Increased resistance to drug
+1944,NO,Knockout,Hayes TK (2019),other_drug,Palbociclib,Mel JuSo,Increased resistance to drug
+1162,NO,Activation,Gilbert LA (2014),toxin,CTx-DTA,K-562,Gene activation affects response to toxin
+1608,NO,Activation,Hisano Y (2019),baseline_fitness,-,U2OS,Regulators of GPCR signaling
+103,NO,Knockout,Wang T (2014),baseline_fitness,-,KBM-7,Cell-essential genes
+2032,NO,Knockout,Matía A (2022),virus,Virus:Vaccinia virus Western Reserve,HeLa,Increased resistance to virus
+104,NO,Knockout,Wang T (2014),baseline_fitness,-,HL-60,Cell-essential genes
+2383,NO,Knockout,Lau MT (2020),other_drug,Paclitaxel (Taxol),HAP-1,Increased resistance to drug
+2016,NO,Activation,Wu L (2022),genotoxic,Gemcitabine,BxPC-3,Increased resistance to drug
+1579,NO,Knockout,Hill S (2019),other,Mutation: CDC34 (ETG997)/UBE2R2 (ETG54926) Double KO,NALM-6,Cell-essential genes in a CDC34 (UBE2R1)/UBE2R2 mutant background
+2400,NO,Knockout,Lau MT (2020),other_drug,PAC-1,HAP-1,Increased resistance to drug
+2037,NO,Knockout,Matía A (2022),virus,Virus:Vaccinia virus Western Reserve,HeLa,Increased resistance to virus
+2426,NO,Activation,Schmidt R (2022),other_cytokine_ligand,Interleukin-2 (IL-2),CD4+ T-cells,Regulation of stimulation-responsive cytokine production
+1742,NO,Activation,Zhu S (2021),virus,"Virus: SARS-CoV-2 pseudovirus  + EGFP marker (Zhu, 2021)",HEK293T-CRISPRa,Decreased resistance to virus
+2392,NO,Knockout,Lau MT (2020),other_drug,Imatinib,HAP-1,Increased resistance to drug
+2040,NO,Knockout,Matía A (2022),virus,Virus:Vaccinia virus Western Reserve,HeLa,Increased resistance to virus
+1625,NO,Activation,Schleicher EM (2020),genotoxic,AZD6738,HeLa,Increased drug resistance
+1643,NO,Activation,Ramaker RC (2021),genotoxic,Gemcitabine,BxPC-3,Increased resistance to drug
+1626,NO,Activation,Schleicher EM (2020),genotoxic,AZD6738,MCF-10A,Increased drug resistance
+2042,NO,Knockout,Matía A (2022),virus,Virus:Vaccinia virus Western Reserve,HeLa,Increased resistance to virus

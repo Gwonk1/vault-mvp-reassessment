@@ -1,0 +1,360 @@
+{
+ "n_genes": 19140,
+ "n_screens": 1350,
+ "any_rate": 0.022413793103448276,
+ "gate": {
+  "genotoxic": false,
+  "virus": true,
+  "immune_killing": false
+ },
+ "MVP": {
+  "overall": 0.017213194749426633,
+  "pct": 26.188610240334377,
+  "table": [
+   {
+    "index": "genotoxic",
+    "sc": 0.0787,
+    "rest": 0.0103,
+    "p": 0.049,
+    "q": 0.5385,
+    "npap": 5,
+    "nline": 4,
+    "sig": false
+   },
+   {
+    "index": "virus",
+    "sc": 0.027,
+    "rest": 0.0148,
+    "p": 0.2338,
+    "q": 1.0,
+    "npap": 1,
+    "nline": 1,
+    "sig": false
+   },
+   {
+    "index": "other_drug",
+    "sc": 0.0116,
+    "rest": 0.0202,
+    "p": 0.5465,
+    "q": 1.0,
+    "npap": 2,
+    "nline": 2,
+    "sig": false
+   },
+   {
+    "index": "immune_killing",
+    "sc": 0.037,
+    "rest": 0.0162,
+    "p": 0.8002,
+    "q": 1.0,
+    "npap": 1,
+    "nline": 1,
+    "sig": false
+   },
+   {
+    "index": "other_cytokine_ligand",
+    "sc": 0.0,
+    "rest": 0.0175,
+    "p": 1.0,
+    "q": 1.0,
+    "npap": 0,
+    "nline": 0,
+    "sig": false
+   },
+   {
+    "index": "toxin",
+    "sc": 0.0,
+    "rest": 0.0178,
+    "p": 1.0,
+    "q": 1.0,
+    "npap": 0,
+    "nline": 0,
+    "sig": false
+   },
+   {
+    "index": "autophagy_traffic",
+    "sc": 0.0,
+    "rest": 0.0179,
+    "p": 1.0,
+    "q": 1.0,
+    "npap": 0,
+    "nline": 0,
+    "sig": false
+   },
+   {
+    "index": "baseline_fitness",
+    "sc": 0.0,
+    "rest": 0.0223,
+    "p": 1.0,
+    "q": 1.0,
+    "npap": 0,
+    "nline": 0,
+    "sig": false
+   },
+   {
+    "index": "other",
+    "sc": 0.0,
+    "rest": 0.0181,
+    "p": 1.0,
+    "q": 1.0,
+    "npap": 0,
+    "nline": 0,
+    "sig": false
+   },
+   {
+    "index": "bacteria",
+    "sc": 0.0,
+    "rest": 0.0176,
+    "p": 1.0,
+    "q": 1.0,
+    "npap": 0,
+    "nline": 0,
+    "sig": false
+   },
+   {
+    "index": "oxidative_mito",
+    "sc": 0.0,
+    "rest": 0.0176,
+    "p": 1.0,
+    "q": 1.0,
+    "npap": 0,
+    "nline": 0,
+    "sig": false
+   }
+  ]
+ },
+ "PARP4": {
+  "overall": 0.020291431056981293,
+  "pct": 37.61755485893417,
+  "table": [
+   {
+    "index": "toxin",
+    "sc": 0.1111,
+    "rest": 0.016,
+    "p": 0.1718,
+    "q": 1.0,
+    "npap": 1,
+    "nline": 1,
+    "sig": false
+   },
+   {
+    "index": "immune_killing",
+    "sc": 0.1111,
+    "rest": 0.0161,
+    "p": 0.1838,
+    "q": 1.0,
+    "npap": 1,
+    "nline": 1,
+    "sig": false
+   },
+   {
+    "index": "genotoxic",
+    "sc": 0.0387,
+    "rest": 0.0168,
+    "p": 0.3936,
+    "q": 1.0,
+    "npap": 3,
+    "nline": 2,
+    "sig": false
+   },
+   {
+    "index": "virus",
+    "sc": 0.0135,
+    "rest": 0.0214,
+    "p": 0.4655,
+    "q": 1.0,
+    "npap": 1,
+    "nline": 1,
+    "sig": false
+   },
+   {
+    "index": "baseline_fitness",
+    "sc": 0.0099,
+    "rest": 0.0219,
+    "p": 0.7043,
+    "q": 1.0,
+    "npap": 3,
+    "nline": 3,
+    "sig": false
+   },
+   {
+    "index": "other_drug",
+    "sc": 0.0017,
+    "rest": 0.0247,
+    "p": 0.8631,
+    "q": 1.0,
+    "npap": 1,
+    "nline": 1,
+    "sig": false
+   },
+   {
+    "index": "autophagy_traffic",
+    "sc": 0.0,
+    "rest": 0.0212,
+    "p": 1.0,
+    "q": 1.0,
+    "npap": 0,
+    "nline": 0,
+    "sig": false
+   },
+   {
+    "index": "other_cytokine_ligand",
+    "sc": 0.0,
+    "rest": 0.0206,
+    "p": 1.0,
+    "q": 1.0,
+    "npap": 0,
+    "nline": 0,
+    "sig": false
+   },
+   {
+    "index": "other",
+    "sc": 0.0,
+    "rest": 0.0213,
+    "p": 1.0,
+    "q": 1.0,
+    "npap": 0,
+    "nline": 0,
+    "sig": false
+   },
+   {
+    "index": "bacteria",
+    "sc": 0.0,
+    "rest": 0.0207,
+    "p": 1.0,
+    "q": 1.0,
+    "npap": 0,
+    "nline": 0,
+    "sig": false
+   },
+   {
+    "index": "oxidative_mito",
+    "sc": 0.0,
+    "rest": 0.0207,
+    "p": 1.0,
+    "q": 1.0,
+    "npap": 0,
+    "nline": 0,
+    "sig": false
+   }
+  ]
+ },
+ "TEP1": {
+  "overall": 0.010352928321678322,
+  "pct": 6.583072100313479,
+  "table": [
+   {
+    "index": "genotoxic",
+    "sc": 0.0357,
+    "rest": 0.0062,
+    "p": 0.4675,
+    "q": 1.0,
+    "npap": 1,
+    "nline": 1,
+    "sig": false
+   },
+   {
+    "index": "baseline_fitness",
+    "sc": 0.0085,
+    "rest": 0.01,
+    "p": 0.6843,
+    "q": 1.0,
+    "npap": 1,
+    "nline": 2,
+    "sig": false
+   },
+   {
+    "index": "other_drug",
+    "sc": 0.003,
+    "rest": 0.0119,
+    "p": 0.7832,
+    "q": 1.0,
+    "npap": 2,
+    "nline": 2,
+    "sig": false
+   },
+   {
+    "index": "toxin",
+    "sc": 0.0,
+    "rest": 0.0107,
+    "p": 1.0,
+    "q": 1.0,
+    "npap": 0,
+    "nline": 0,
+    "sig": false
+   },
+   {
+    "index": "other_cytokine_ligand",
+    "sc": 0.0,
+    "rest": 0.0105,
+    "p": 1.0,
+    "q": 1.0,
+    "npap": 0,
+    "nline": 0,
+    "sig": false
+   },
+   {
+    "index": "autophagy_traffic",
+    "sc": 0.0,
+    "rest": 0.0108,
+    "p": 1.0,
+    "q": 1.0,
+    "npap": 0,
+    "nline": 0,
+    "sig": false
+   },
+   {
+    "index": "virus",
+    "sc": 0.0,
+    "rest": 0.0122,
+    "p": 1.0,
+    "q": 1.0,
+    "npap": 0,
+    "nline": 0,
+    "sig": false
+   },
+   {
+    "index": "other",
+    "sc": 0.0,
+    "rest": 0.0109,
+    "p": 1.0,
+    "q": 1.0,
+    "npap": 0,
+    "nline": 0,
+    "sig": false
+   },
+   {
+    "index": "immune_killing",
+    "sc": 0.0,
+    "rest": 0.0108,
+    "p": 1.0,
+    "q": 1.0,
+    "npap": 0,
+    "nline": 0,
+    "sig": false
+   },
+   {
+    "index": "bacteria",
+    "sc": 0.0,
+    "rest": 0.0106,
+    "p": 1.0,
+    "q": 1.0,
+    "npap": 0,
+    "nline": 0,
+    "sig": false
+   },
+   {
+    "index": "oxidative_mito",
+    "sc": 0.0,
+    "rest": 0.0106,
+    "p": 1.0,
+    "q": 1.0,
+    "npap": 0,
+    "nline": 0,
+    "sig": false
+   }
+  ]
+ },
+ "mvp_tested": 1340,
+ "mvp_hits": 9
+}

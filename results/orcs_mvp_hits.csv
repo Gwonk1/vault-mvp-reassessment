@@ -1,0 +1,10 @@
+id,SOURCE_ID,AUTHOR,cls,CONDITION_NAME,CELL_LINE,SCREEN_RATIONALE,SCREEN_TYPE,NUMBER_OF_HITS,SCORES_SIZE
+1017,30655525,Flint M (2019),virus,Virus: Ebola virus (Mayinga strain),Huh-7.5.1,Increased resistance to virus,Positive Selection,538,16985
+1064,30995489,MacLeod G (2019),genotoxic,Temozolomide,G361NS-Cas9,Increased drug sensitivity,Negative Selection,157,16934
+1083,31921143,Zhuang X (2019),immune_killing,IL-2-activated NK cells,K-562,Cancer cell response to natural killer cells,Positive and Negative Selection,6358,20697
+1654,34049503,Ramaker RC (2021),genotoxic,5-fluorouracil,BxPC-3,Increased drug resistance,Positive Selection,278,20644
+1705,30414698,Goodspeed A (2019),genotoxic,Cisplatin,MGH-U4,Increased resistance to drug,Positive Selection,7367,16564
+2082,37047518,Park JM (2023),genotoxic,Etoposide,HEK293-A,Increased/decreased drug resistance,Positive and Negative Selection,1243,17928
+2220,36731340,Kwanten B (2023),other_drug,selinexor,DS,Increased/decreased drug resistance,Positive and Negative Selection,2962,19115
+2351,31462500,Stover EH (2019),other_drug,Paclitaxel (Taxol),Kuramochi,Increased/decreased drug resistance,Positive and Negative Selection,2196,18901
+2440,30532030,Wang C (2019),genotoxic,AZD6738,HEK293-A,Increased/decreased drug resistance,Positive and Negative Selection,1800,17437

@@ -1,0 +1,10 @@
+{
+ "n_genes": 19140,
+ "n_screens": 1350,
+ "any_rate": 0.022413793103448276,
+ "gate": {
+  "genotoxic": false,
+  "virus": true,
+  "immune_killing": false
+ }
+}

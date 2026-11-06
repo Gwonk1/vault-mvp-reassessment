@@ -147,3 +147,40 @@ Liu (p = 0.046) and IMvigor210 (p = 0.014). Neither survives Benjamini-Hochberg 
 MVP tolerates losing one copy, with at most mild depletion. Expected homozygotes from allele frequency are
 about 0.7, so one observed is unremarkable, and the test has no power to detect selection against losing
 both copies. gnomAD has no phenotype data for that individual and the variant was not manually curated.
+
+## 8. CRISPR screens: when does losing MVP matter? (pre-registered, `ORCS_PREREGISTRATION.md`)
+
+BioGRID ORCS 2.0.18, 1,350 human loss-of-function screens from 210 papers. **Verdict: NO SIGNAL.** MVP was a
+hit in 9 of 1,340 screens, 26th percentile for overall hit rate, with no condition signal in any class. 2.2% of
+all genes received one. TEP1 and PARP4 also show no signal, so there is no partner agreement.
+
+**How much the null can bear, by class.** Control genes decide this, and the rule was fixed in advance.
+
+| Class | Papers | Control gate | MVP | What the null means |
+|---|---|---|---|---|
+| Virus | 37 | PASS, 3 of 3 | 1 paper, p = 0.23 | Informative: no recurring viral phenotype |
+| Baseline fitness | 59 | none set | 0 of 878 screens | Informative: loss does not affect growth in culture |
+| Genotoxic | 28 | FAIL, 1 of 3 | 5 papers, p = 0.049, q = 0.54 | Uninformative by the rule |
+| Immune killing | 9 | FAIL, 1 of 3 | 1 paper, p = 0.80 | Uninformative by the rule |
+| Bacteria | 4 | no gene in the genome signals | 0 papers | Blind |
+| Interferon | 1 | not testable | | Not tested |
+
+**Baseline:** only 4.8% of genes have zero fitness hits (median gene: 5). This is the sharpest fact here, and it
+fits the knockout mice: across hundreds of cancer lines, losing MVP does not slow growth. Expression in each line
+was not checked.
+
+**Genotoxic, exploratory and not a finding.** The class is named in advance and the raw p is suggestive, so it was
+read by hand. It should not be promoted:
+- It does not survive correction (q = 0.54), and 35% of all genes have a raw p this low in some class.
+- Dropping one screen that called 44% of its genes hits moves p from 0.049 to 0.11.
+- Five different agents. Temozolomide, etoposide and AZD6738 lean toward loss sensitizing cells, 5-FU the
+  other way, and cisplatin is ambiguous.
+- Of the four hits reporting one clean FDR, FDR is 0.50 to 1.0. They passed lenient author thresholds.
+- The two strongest (etoposide, AZD6738) are both HEK293-A and may not be independent.
+- Controls such as FANCA have 27 hits against MVP's 5.
+
+Worth one targeted look later, specifically MVP's score across all DNA-damage screens in one line and lab, with
+the expected direction stated first.
+
+**Limits.** Pooled screens read mostly growth in proliferating cancer lines. They miss subtle or redundant roles,
+primary-cell or organism-level roles, and anything non-cell-autonomous. Thresholds vary by author.
