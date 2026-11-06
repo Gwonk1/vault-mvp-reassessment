@@ -132,3 +132,18 @@ Liu (p = 0.046) and IMvigor210 (p = 0.014). Neither survives Benjamini-Hochberg 
 - IFNG.GS was taken from patent claim text, because Table S1 could not be fetched. ISG.RS was independently
   matched at 38 of 38; IFNG.GS has only the Hallmark reconstruction as a check.
 - Predictions were drafted by Claude from the plan, before data, and not stated independently by Graham.
+
+## 7. Addendum: gnomAD v4 loss-of-function lookup (not pre-registered)
+
+`src/gnomad.py`, run 2026-11-06. Observed/expected LoF with 90% CI upper bound (LOEUF), pLI:
+
+| Gene | Obs/exp LoF | LOEUF | pLI | HC LoF alleles | Homozygotes |
+|---|---|---|---|---|---|
+| MVP | 0.74 | 0.92 | 0.00 | 1,457 | 1 (p.Arg474Ter) |
+| TEP1 | 0.79 | 0.88 | 0.00 | 2,532 | 6 |
+| PARP4 | 0.64 | 0.74 | 0.00 | 2,149 | 3 |
+| STAT1 (intolerant reference) | 0.22 | 0.30 | 1.00 | 62 | 0 |
+
+MVP tolerates losing one copy, with at most mild depletion. Expected homozygotes from allele frequency are
+about 0.7, so one observed is unremarkable, and the test has no power to detect selection against losing
+both copies. gnomAD has no phenotype data for that individual and the variant was not manually curated.
