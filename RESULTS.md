@@ -722,3 +722,32 @@ placenta a high-vault tissue? If it is not, my pre-eclampsia idea is dead on arr
 
 Nuance: MVP sits at the 96th percentile of all genes within lung and the 89th within placenta, so it is
 well expressed nearly everywhere; it is the *relative* enrichment that points at gut and adrenal.
+
+## 22. Does MVP's tissue profile track NAD metabolism? NOT NAD-LINKED
+
+`TISSUE_COEXPR_PREREGISTRATION.md`. Motivated by two of today's results: the SPFH shoulder binds
+NAD+/ADP-ribose with four residues at 100% conservation (§12), and MVP's top tissue is adrenal gland
+(§21), one of the most NADPH-demanding tissues in the body.
+
+**Gate passed emphatically:** RPL7 returns 21 of 25 ribosomal proteins, so tissue co-expression does
+recover real complexes.
+
+**Primary: NOT NAD-LINKED.** Only 2 of 22 measured NAD-metabolism genes (NADSYN1, NADK) appear in MVP's
+top 200. Hypergeometric p = 0.031, but my pre-registered rule required p < 0.05 **and at least 3**
+members. Two is not three, so this is reported as failed rather than as a hit.
+
+**What the profile does track — and why it is mostly an artefact.** The top GO terms are overwhelmingly
+immunoglobulin and B-cell: 70 of 143 immunoglobulin-complex genes in the top 200. That is not evidence
+MVP is an immunoglobulin gene. MVP's top tissues are colon, small intestine and duodenum, and those
+tissues are packed with IgA-secreting plasma cells. **This is cell-type composition, not partnership** —
+the same confound class that sank the §11 module.
+
+It does sharpen one thing: MVP's tissue distribution is essentially "mucosal and glandular tissue", and
+`DEFENSE_RESPONSE_TO_BACTERIUM` also appears. That is consistent with the *Pseudomonas* knockout
+phenotype and with the gut/adrenal ranking, but tissue co-expression at n = 51 cannot distinguish a
+barrier role from barrier tissue composition.
+
+### Limits
+n = 51 tissues is small and highly structured; this design is dominated by tissue specificity. A null
+says the NAD link does not appear at tissue resolution — the ligand evidence in §12 is structural and
+stands on its own.

@@ -1,0 +1,145 @@
+{
+ "gate": true,
+ "verdict": "NOT NAD-LINKED",
+ "nad_in_top200": 2,
+ "nad_p": 0.0314282771420643,
+ "top30": [
+  "TOR4A",
+  "HSD3B7",
+  "IGHV3-73",
+  "TLDC2",
+  "GIPC2",
+  "IGKV1-39",
+  "SECTM1",
+  "TP53I3",
+  "GATA6",
+  "IGHV2-26",
+  "IGHV3-15",
+  "IGHV3-64",
+  "ABCC3",
+  "ASL",
+  "TNFSF14",
+  "PAPSS2",
+  "NADK",
+  "BCL3",
+  "C1RL",
+  "TMEM150B",
+  "IGKV1-12",
+  "TNFRSF1A",
+  "TFF3",
+  "CORO1B",
+  "IGKV2D-28",
+  "PSME1",
+  "NFKB2",
+  "GSDMD",
+  "TTC38",
+  "TCIRG1"
+ ],
+ "go": [
+  {
+   "term": "GOCC_IMMUNOGLOBULIN_COMPLEX",
+   "k": 70,
+   "K": 143,
+   "p": 9.299654488447185e-98,
+   "q": 4.612628626269804e-95
+  },
+  {
+   "term": "GOBP_B_CELL_MEDIATED_IMMUNITY",
+   "k": 41,
+   "K": 181,
+   "p": 4.776012506856231e-40,
+   "q": 1.1844511017003454e-37
+  },
+  {
+   "term": "GOBP_ADAPTIVE_IMMUNE_RESPONSE_BASED_ON_SOMATIC_RECOMBINATION_OF_IMMUNE_RECEPTORS_BUILT_FROM_IMMUNOGLOBULIN_SUPERFAMILY_DOMAINS",
+   "k": 47,
+   "K": 338,
+   "p": 1.372623563256446e-35,
+   "q": 2.269404291250657e-33
+  },
+  {
+   "term": "GOBP_IMMUNOGLOBULIN_PRODUCTION",
+   "k": 37,
+   "K": 176,
+   "p": 7.730225574525526e-35,
+   "q": 9.585479712411652e-33
+  },
+  {
+   "term": "GOBP_LYMPHOCYTE_MEDIATED_IMMUNITY",
+   "k": 44,
+   "K": 321,
+   "p": 5.2792544521905125e-33,
+   "q": 4.970819356615213e-31
+  },
+  {
+   "term": "GOBP_PRODUCTION_OF_MOLECULAR_MEDIATOR_OF_IMMUNE_RESPONSE",
+   "k": 42,
+   "K": 283,
+   "p": 6.0130879313893705e-33,
+   "q": 4.970819356615213e-31
+  },
+  {
+   "term": "GOBP_LEUKOCYTE_MEDIATED_IMMUNITY",
+   "k": 44,
+   "K": 410,
+   "p": 2.073231171448395e-28,
+   "q": 1.4690323729120056e-26
+  },
+  {
+   "term": "GOCC_BLOOD_MICROPARTICLE",
+   "k": 22,
+   "K": 114,
+   "p": 3.991813907108031e-20,
+   "q": 2.474924622406979e-18
+  },
+  {
+   "term": "GOCC_IMMUNOGLOBULIN_COMPLEX_CIRCULATING",
+   "k": 7,
+   "K": 11,
+   "p": 1.5253983152974195e-11,
+   "q": 8.406639604305778e-10
+  },
+  {
+   "term": "GOBP_DEFENSE_RESPONSE_TO_BACTERIUM",
+   "k": 19,
+   "K": 223,
+   "p": 6.498617629533387e-11,
+   "q": 3.2233143442485597e-09
+  },
+  {
+   "term": "GOBP_HUMORAL_IMMUNE_RESPONSE",
+   "k": 18,
+   "K": 209,
+   "p": 1.7720903179956184e-10,
+   "q": 7.990516342962062e-09
+  },
+  {
+   "term": "GOCC_IGG_IMMUNOGLOBULIN_COMPLEX",
+   "k": 6,
+   "K": 11,
+   "p": 1.7143111703500331e-09,
+   "q": 7.08581950411347e-08
+  },
+  {
+   "term": "GOBP_ANTIMICROBIAL_HUMORAL_RESPONSE",
+   "k": 13,
+   "K": 118,
+   "p": 3.305531418994805e-09,
+   "q": 1.2611873721703257e-07
+  },
+  {
+   "term": "GOBP_HUMORAL_IMMUNE_RESPONSE_MEDIATED_BY_CIRCULATING_IMMUNOGLOBULIN",
+   "k": 9,
+   "K": 49,
+   "p": 9.574848185839438e-09,
+   "q": 3.392231928697401e-07
+  },
+  {
+   "term": "GOBP_COMPLEMENT_ACTIVATION_CLASSICAL_PATHWAY",
+   "k": 8,
+   "K": 36,
+   "p": 1.320818937770984e-08,
+   "q": 4.3675079542293876e-07
+  }
+ ]
+}
