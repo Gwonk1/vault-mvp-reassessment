@@ -1,5 +1,6 @@
 {
  "MVP": {
+  "canonical_transcript": "ENST00000357402",
   "exp_lof": 83.49662860896406,
   "obs_lof": 62,
   "oe_lof": 0.7425449510106781,
@@ -7,14 +8,24 @@
   "pli": 5.875809697590725e-16,
   "oe_mis": 0.8310125788002303,
   "mis_z": 2.5001050085306877,
-  "hc_lof_variants": 216,
-  "carrier_alleles": 1457,
+  "hc_lof_all": 216,
+  "hc_lof_canonical_pass": 165,
+  "carrier_alleles": 1413,
   "max_an": 1614012,
-  "cum_af": 0.0009027194345519117,
+  "cum_af": 0.0008754581750321559,
   "homozygotes": 1,
-  "expected_homozygotes": 0.6576311080710676
+  "expected_homozygotes": 0.6185112006602183,
+  "hom_variants": [
+   [
+    "16-29841824-C-T",
+    "p.Arg474Ter",
+    169,
+    1
+   ]
+  ]
  },
  "OR4F5": {
+  "canonical_transcript": "ENST00000641515",
   "exp_lof": 5.7869105525490445,
   "obs_lof": 1,
   "oe_lof": 0.1728037768891236,
@@ -22,14 +33,24 @@
   "pli": 0.7189894638957819,
   "oe_mis": 0.26778795466249383,
   "mis_z": 4.137118392246392,
-  "hc_lof_variants": 71,
-  "carrier_alleles": 13760,
-  "max_an": 1030012,
-  "cum_af": 0.013359067661347635,
-  "homozygotes": 389,
-  "expected_homozygotes": 91.91038551007173
+  "hc_lof_all": 71,
+  "hc_lof_canonical_pass": 4,
+  "carrier_alleles": 11,
+  "max_an": 923470,
+  "cum_af": 1.1911594312755152e-05,
+  "homozygotes": 1,
+  "expected_homozygotes": 6.551376872015334e-05,
+  "hom_variants": [
+   [
+    "1-69159-G-GT",
+    "p.Val47CysfsTer20",
+    6,
+    1
+   ]
+  ]
  },
  "PARP4": {
+  "canonical_transcript": "ENST00000381989",
   "exp_lof": 187.65029013809698,
   "obs_lof": 120,
   "oe_lof": 0.6394874205187144,
@@ -37,14 +58,36 @@
   "pli": 2.767783271207256e-24,
   "oe_mis": 0.8867506354371518,
   "mis_z": 2.197753743903895,
-  "hc_lof_variants": 408,
-  "carrier_alleles": 2149,
+  "hc_lof_all": 408,
+  "hc_lof_canonical_pass": 220,
+  "carrier_alleles": 1782,
   "max_an": 1614060,
-  "cum_af": 0.0013314251019169053,
+  "cum_af": 0.0011040481766477082,
   "homozygotes": 3,
-  "expected_homozygotes": 1.4306162720097149
+  "expected_homozygotes": 0.983706925393108,
+  "hom_variants": [
+   [
+    "13-24435475-C-T",
+    null,
+    727,
+    1
+   ],
+   [
+    "13-24460101-AG-A",
+    "p.Pro723LeufsTer7",
+    30,
+    1
+   ],
+   [
+    "13-24469111-C-T",
+    null,
+    4,
+    1
+   ]
+  ]
  },
  "STAT1": {
+  "canonical_transcript": "ENST00000361099",
   "exp_lof": 111.74302299339341,
   "obs_lof": 24,
   "oe_lof": 0.2147785101663032,
@@ -52,14 +95,17 @@
   "pli": 0.9999999999928244,
   "oe_mis": 0.3849043909919168,
   "mis_z": 7.921864734992683,
-  "hc_lof_variants": 69,
-  "carrier_alleles": 62,
+  "hc_lof_all": 69,
+  "hc_lof_canonical_pass": 47,
+  "carrier_alleles": 59,
   "max_an": 1461890,
-  "cum_af": 4.241085170566869e-05,
+  "cum_af": 4.0358713719910526e-05,
   "homozygotes": 0,
-  "expected_homozygotes": 0.0013147364028757292
+  "expected_homozygotes": 0.0011905820547373604,
+  "hom_variants": []
  },
  "TEP1": {
+  "canonical_transcript": "ENST00000262715",
   "exp_lof": 306.28847940837846,
   "obs_lof": 241,
   "oe_lof": 0.7868399113982721,
@@ -67,14 +113,54 @@
   "pli": 4.7792101152932216e-63,
   "oe_mis": 0.9312785232353114,
   "mis_z": 1.6775731402635095,
-  "hc_lof_variants": 449,
-  "carrier_alleles": 2532,
+  "hc_lof_all": 449,
+  "hc_lof_canonical_pass": 385,
+  "carrier_alleles": 2487,
   "max_an": 1614214,
-  "cum_af": 0.001568565258385815,
+  "cum_af": 0.0015406879137462566,
   "homozygotes": 6,
-  "expected_homozygotes": 1.9858036171164417
+  "expected_homozygotes": 1.9158454207434699,
+  "hom_variants": [
+   [
+    "14-20373520-C-T",
+    "p.Trp2223Ter",
+    14,
+    1
+   ],
+   [
+    "14-20376164-AG-A",
+    "p.Pro2063LeufsTer2",
+    129,
+    1
+   ],
+   [
+    "14-20380275-G-A",
+    "p.Arg1655Ter",
+    86,
+    1
+   ],
+   [
+    "14-20387903-A-G",
+    null,
+    3,
+    1
+   ],
+   [
+    "14-20389742-T-C",
+    null,
+    12,
+    1
+   ],
+   [
+    "14-20404756-CT-C",
+    "p.Arg296GlyfsTer4",
+    2,
+    1
+   ]
+  ]
  },
  "TTN": {
+  "canonical_transcript": "ENST00000589042",
   "exp_lof": 3222.9579483294465,
   "obs_lof": 1525,
   "oe_lof": 0.47316782423129417,
@@ -82,11 +168,56 @@
   "pli": 3.9840859306966888e-115,
   "oe_mis": 0.9392461560515869,
   "mis_z": 5.399422053174149,
-  "hc_lof_variants": 4253,
-  "carrier_alleles": 12294,
+  "hc_lof_all": 4253,
+  "hc_lof_canonical_pass": 3104,
+  "carrier_alleles": 8815,
   "max_an": 1614156,
-  "cum_af": 0.0076163642175849176,
-  "homozygotes": 23,
-  "expected_homozygotes": 46.81779084549449
+  "cum_af": 0.0054610582868074705,
+  "homozygotes": 12,
+  "expected_homozygotes": 24.069614399103926,
+  "hom_variants": [
+   [
+    "2-178601788-C-T",
+    null,
+    63,
+    1
+   ],
+   [
+    "2-178650272-C-T",
+    null,
+    4,
+    1
+   ],
+   [
+    "2-178662420-T-A",
+    null,
+    26,
+    4
+   ],
+   [
+    "2-178706956-T-G",
+    null,
+    167,
+    2
+   ],
+   [
+    "2-178722938-C-G",
+    null,
+    2,
+    1
+   ],
+   [
+    "2-178756220-A-G",
+    null,
+    395,
+    1
+   ],
+   [
+    "2-178769678-C-T",
+    null,
+    33,
+    2
+   ]
+  ]
  }
 }

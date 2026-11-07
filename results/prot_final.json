@@ -1,0 +1,849 @@
+{
+ "gate": {
+  "PSMA1": true,
+  "NDUFS2": true,
+  "RPL7": true
+ },
+ "gate_pass": true,
+ "cohorts": {
+  "brain_cptac_2020": [
+   6402,
+   199
+  ],
+  "brca_cptac_2020": [
+   9665,
+   122
+  ],
+  "brca_dldccc_2022": [
+   10987,
+   55
+  ],
+  "brca_tcga_pan_can_atlas_2018": [
+   9698,
+   105
+  ],
+  "coad_cptac_2019": [
+   8034,
+   97
+  ],
+  "coadread_tcga_pan_can_atlas_2018": [
+   5510,
+   84
+  ],
+  "gbm_cptac_2021": [
+   10911,
+   99
+  ],
+  "luad_cptac_2020": [
+   10248,
+   110
+  ],
+  "lusc_cptac_2021": [
+   11035,
+   108
+  ],
+  "mng_utoronto_2021": [
+   6143,
+   96
+  ],
+  "ov_tcga_pan_can_atlas_2018": [
+   7593,
+   121
+  ],
+  "paad_cptac_2021": [
+   11567,
+   140
+  ],
+  "ucec_cptac_2020": [
+   10927,
+   95
+  ]
+ },
+ "dropped_duplicates": [
+  "brca_tcga",
+  "coadread_tcga",
+  "ov_tcga"
+ ],
+ "label_A": "UNIT",
+ "label_B": "MODULE LEAD",
+ "tep1_rank": 3,
+ "parp4_rank": 2,
+ "n": 10924,
+ "matched_used": 200,
+ "top40": [
+  [
+   "MVP",
+   0.999
+  ],
+  [
+   "PARP4",
+   0.820497231351786
+  ],
+  [
+   "TEP1",
+   0.5203400186245003
+  ],
+  [
+   "ACTR3",
+   0.5121029020175769
+  ],
+  [
+   "CALHM2",
+   0.4863184196542108
+  ],
+  [
+   "CAP1",
+   0.4743778150442018
+  ],
+  [
+   "ACTR2",
+   0.4684354394250772
+  ],
+  [
+   "CAPNS1",
+   0.46248445593373294
+  ],
+  [
+   "VWA5A",
+   0.4611994010945616
+  ],
+  [
+   "CAPN2",
+   0.4591010971131064
+  ],
+  [
+   "SQOR",
+   0.45697331918985346
+  ],
+  [
+   "SERPINB1",
+   0.4520630550523246
+  ],
+  [
+   "ANXA2",
+   0.4484201215295963
+  ],
+  [
+   "IQGAP1",
+   0.4450789322358881
+  ],
+  [
+   "ARPC1B",
+   0.4442456847642041
+  ],
+  [
+   "RNH1",
+   0.4339050681383542
+  ],
+  [
+   "CLIC1",
+   0.4284975769670149
+  ],
+  [
+   "FLII",
+   0.42785337208763036
+  ],
+  [
+   "CAPZA1",
+   0.4271882022891611
+  ],
+  [
+   "PSMB8",
+   0.42584449246910105
+  ],
+  [
+   "CCDC22",
+   0.41877840910520947
+  ],
+  [
+   "CORO1B",
+   0.41223844575294855
+  ],
+  [
+   "PLIN3",
+   0.41210639037583796
+  ],
+  [
+   "EPS8L3",
+   0.4093461119458453
+  ],
+  [
+   "NFKB1",
+   0.407937130542503
+  ],
+  [
+   "FPR1",
+   0.40515550975325737
+  ],
+  [
+   "FCHO2",
+   0.4043826840090359
+  ],
+  [
+   "ARPC2",
+   0.40051140090498966
+  ],
+  [
+   "NAPSA",
+   0.40023439066651506
+  ],
+  [
+   "CAPG",
+   0.3981731091676321
+  ],
+  [
+   "CAPN1",
+   0.39646805268809404
+  ],
+  [
+   "ARHGAP1",
+   0.3961574149099198
+  ],
+  [
+   "ACTB",
+   0.39257003187570566
+  ],
+  [
+   "SNX6",
+   0.39240114973288603
+  ],
+  [
+   "LRRN4CL",
+   0.39171905080379604
+  ],
+  [
+   "ANXA4",
+   0.3916865519113391
+  ],
+  [
+   "UBA7",
+   0.3902995158132059
+  ],
+  [
+   "PYCARD",
+   0.3898907758260853
+  ],
+  [
+   "EHD4",
+   0.3898148872833003
+  ],
+  [
+   "WDR1",
+   0.38931904856327404
+  ]
+ ],
+ "terms": [
+  {
+   "term": "GOBP_ACTIN_FILAMENT_ORGANIZATION",
+   "k": 26,
+   "K": 388,
+   "p": 5.637680162738103e-16,
+   "q": 1.02831286168343e-12,
+   "spec": 0.12
+  },
+  {
+   "term": "GOCC_ACTIN_CYTOSKELETON",
+   "k": 24,
+   "K": 422,
+   "p": 3.3949741204630313e-13,
+   "q": 3.0962163978622843e-10,
+   "spec": 0.155
+  },
+  {
+   "term": "GOBP_ACTIN_NUCLEATION",
+   "k": 11,
+   "K": 50,
+   "p": 5.990471048434262e-13,
+   "q": 3.6422063974480317e-10,
+   "spec": 0.065
+  },
+  {
+   "term": "GOBP_ARP2_3_COMPLEX_MEDIATED_ACTIN_NUCLEATION",
+   "k": 10,
+   "K": 41,
+   "p": 2.3139050993923904e-12,
+   "q": 1.05514072532293e-09,
+   "spec": 0.065
+  },
+  {
+   "term": "GOBP_REGULATION_OF_SUPRAMOLECULAR_FIBER_ORGANIZATION",
+   "k": 20,
+   "K": 327,
+   "p": 1.1413322576527863e-11,
+   "q": 4.163580075917365e-09,
+   "spec": 0.08
+  },
+  {
+   "term": "GOBP_REGULATION_OF_ACTIN_FILAMENT_ORGANIZATION",
+   "k": 17,
+   "K": 231,
+   "p": 2.631688534159676e-11,
+   "q": 8.000333143845416e-09,
+   "spec": 0.08
+  },
+  {
+   "term": "GOBP_REGULATION_OF_CYTOSKELETON_ORGANIZATION",
+   "k": 22,
+   "K": 434,
+   "p": 3.732583766753667e-11,
+   "q": 9.72604684365527e-09,
+   "spec": 0.095
+  },
+  {
+   "term": "GOCC_LAMELLIPODIUM",
+   "k": 15,
+   "K": 189,
+   "p": 1.4950812369710338e-10,
+   "q": 3.408785220293957e-08,
+   "spec": 0.105
+  },
+  {
+   "term": "GOBP_REGULATION_OF_ACTIN_FILAMENT_LENGTH",
+   "k": 13,
+   "K": 134,
+   "p": 2.2685865031594423e-10,
+   "q": 4.5976686464031364e-08,
+   "spec": 0.06
+  },
+  {
+   "term": "GOBP_REGULATION_OF_ACTIN_FILAMENT_BASED_PROCESS",
+   "k": 18,
+   "K": 310,
+   "p": 3.255071698193573e-10,
+   "q": 5.9372507775050774e-08,
+   "spec": 0.085
+  },
+  {
+   "term": "GOBP_ACTIN_POLYMERIZATION_OR_DEPOLYMERIZATION",
+   "k": 14,
+   "K": 170,
+   "p": 3.950797558737036e-10,
+   "q": 6.551140679214868e-08,
+   "spec": 0.07
+  },
+  {
+   "term": "GOCC_CELL_LEADING_EDGE",
+   "k": 19,
+   "K": 364,
+   "p": 6.011603871043475e-10,
+   "q": 9.137637883986081e-08,
+   "spec": 0.11
+  },
+  {
+   "term": "GOBP_REGULATION_OF_PROTEIN_CONTAINING_COMPLEX_ASSEMBLY",
+   "k": 18,
+   "K": 345,
+   "p": 1.8217109795678876e-09,
+   "q": 2.5560006359475594e-07,
+   "spec": 0.06
+  },
+  {
+   "term": "GOCC_CELL_SUBSTRATE_JUNCTION",
+   "k": 19,
+   "K": 409,
+   "p": 4.189215817125111e-09,
+   "q": 5.356701604979465e-07,
+   "spec": 0.17
+  },
+  {
+   "term": "GOBP_REGULATION_OF_CELLULAR_COMPONENT_SIZE",
+   "k": 16,
+   "K": 280,
+   "p": 4.40518224093706e-09,
+   "q": 5.356701604979465e-07,
+   "spec": 0.06
+  },
+  {
+   "term": "GOBP_REGULATION_OF_PROTEIN_POLYMERIZATION",
+   "k": 13,
+   "K": 173,
+   "p": 5.391101233484876e-09,
+   "q": 6.145855406172759e-07,
+   "spec": 0.05
+  },
+  {
+   "term": "GOBP_PROTEIN_POLYMERIZATION",
+   "k": 15,
+   "K": 250,
+   "p": 7.279227928322334e-09,
+   "q": 7.810183377211728e-07,
+   "spec": 0.065
+  },
+  {
+   "term": "GOBP_REGULATION_OF_ANATOMICAL_STRUCTURE_SIZE",
+   "k": 17,
+   "K": 348,
+   "p": 1.453627252452042e-08,
+   "q": 1.4730089491514026e-06,
+   "spec": 0.075
+  },
+  {
+   "term": "GOCC_CORTICAL_CYTOSKELETON",
+   "k": 10,
+   "K": 98,
+   "p": 1.8815885430411895e-08,
+   "q": 1.8063250013195418e-06,
+   "spec": 0.09
+  },
+  {
+   "term": "GOBP_BARBED_END_ACTIN_FILAMENT_CAPPING",
+   "k": 6,
+   "K": 23,
+   "p": 4.501680712999889e-08,
+   "q": 4.105532810255899e-06,
+   "spec": 0.055
+  },
+  {
+   "term": "GOCC_FICOLIN_1_RICH_GRANULE",
+   "k": 12,
+   "K": 176,
+   "p": 6.444733848283482e-08,
+   "q": 5.597711685366224e-06,
+   "spec": 0.145
+  },
+  {
+   "term": "GOBP_REGULATION_OF_LAMELLIPODIUM_ORGANIZATION",
+   "k": 7,
+   "K": 45,
+   "p": 1.487294204348306e-07,
+   "q": 1.2253880327794227e-05,
+   "spec": 0.045
+  },
+  {
+   "term": "GOCC_FICOLIN_1_RICH_GRANULE_LUMEN",
+   "k": 10,
+   "K": 122,
+   "p": 1.5451713132635264e-07,
+   "q": 1.2253880327794227e-05,
+   "spec": 0.165
+  },
+  {
+   "term": "GOBP_REGULATION_OF_PLASMA_MEMBRANE_ORGANIZATION",
+   "k": 5,
+   "K": 15,
+   "p": 1.62317316208364e-07,
+   "q": 1.2336116031835663e-05,
+   "spec": 0.04
+  },
+  {
+   "term": "GOBP_NEGATIVE_REGULATION_OF_PROTEIN_POLYMERIZATION",
+   "k": 8,
+   "K": 68,
+   "p": 1.746624872328337e-07,
+   "q": 1.2743375068507546e-05,
+   "spec": 0.055
+  },
+  {
+   "term": "GOBP_NEGATIVE_REGULATION_OF_CYTOSKELETON_ORGANIZATION",
+   "k": 10,
+   "K": 134,
+   "p": 3.7345261372423895e-07,
+   "q": 2.5550758711342475e-05,
+   "spec": 0.04
+  },
+  {
+   "term": "GOBP_REGULATION_OF_PROTEIN_DEPOLYMERIZATION",
+   "k": 8,
+   "K": 75,
+   "p": 3.7821846776658266e-07,
+   "q": 2.5550758711342475e-05,
+   "spec": 0.05
+  },
+  {
+   "term": "GOBP_ACTIN_FILAMENT_DEPOLYMERIZATION",
+   "k": 7,
+   "K": 52,
+   "p": 4.1613645289400104e-07,
+   "q": 2.6971537675598075e-05,
+   "spec": 0.06
+  },
+  {
+   "term": "GOBP_NEGATIVE_REGULATION_OF_SUPRAMOLECULAR_FIBER_ORGANIZATION",
+   "k": 10,
+   "K": 136,
+   "p": 4.288237897984343e-07,
+   "q": 2.6971537675598075e-05,
+   "spec": 0.055
+  },
+  {
+   "term": "GOBP_NEGATIVE_REGULATION_OF_ACTIN_FILAMENT_POLYMERIZATION",
+   "k": 7,
+   "K": 55,
+   "p": 6.172230929719864e-07,
+   "q": 3.752716405269677e-05,
+   "spec": 0.065
+  },
+  {
+   "term": "GOCC_VESICLE_LUMEN",
+   "k": 14,
+   "K": 307,
+   "p": 7.150925053159628e-07,
+   "q": 4.207512031278439e-05,
+   "spec": 0.185
+  },
+  {
+   "term": "GOBP_NEGATIVE_REGULATION_OF_ACTIN_FILAMENT_DEPOLYMERIZATION",
+   "k": 6,
+   "K": 39,
+   "p": 1.2926399678133843e-06,
+   "q": 7.368047816536291e-05,
+   "spec": 0.055
+  },
+  {
+   "term": "GOBP_NEGATIVE_REGULATION_OF_PROTEIN_CONTAINING_COMPLEX_DISASSEMBLY",
+   "k": 7,
+   "K": 68,
+   "p": 2.675967316528916e-06,
+   "q": 0.00014790801167723465,
+   "spec": 0.035
+  },
+  {
+   "term": "GOCC_CORTICAL_ACTIN_CYTOSKELETON",
+   "k": 7,
+   "K": 70,
+   "p": 3.2599776379685045e-06,
+   "q": 0.00017488821210748684,
+   "spec": 0.08
+  },
+  {
+   "term": "GOBP_PROTEIN_DEPOLYMERIZATION",
+   "k": 8,
+   "K": 100,
+   "p": 3.4577169735452283e-06,
+   "q": 0.00018019645027847134,
+   "spec": 0.06
+  },
+  {
+   "term": "GOCC_CELL_CORTEX",
+   "k": 12,
+   "K": 268,
+   "p": 5.727491440908024e-06,
+   "q": 0.0002832865610063047,
+   "spec": 0.12
+  },
+  {
+   "term": "GOBP_REGULATION_OF_PROTEIN_CONTAINING_COMPLEX_DISASSEMBLY",
+   "k": 8,
+   "K": 107,
+   "p": 5.746492739711225e-06,
+   "q": 0.0002832865610063047,
+   "spec": 0.045
+  },
+  {
+   "term": "GOBP_LAMELLIPODIUM_ORGANIZATION",
+   "k": 7,
+   "K": 78,
+   "p": 6.768245579254691e-06,
+   "q": 0.00032307770086463717,
+   "spec": 0.045
+  },
+  {
+   "term": "GOBP_POSITIVE_REGULATION_OF_LAMELLIPODIUM_ORGANIZATION",
+   "k": 5,
+   "K": 30,
+   "p": 6.907911367171518e-06,
+   "q": 0.00032307770086463717,
+   "spec": 0.04
+  },
+  {
+   "term": "GOBP_REGULATION_OF_LAMELLIPODIUM_ASSEMBLY",
+   "k": 5,
+   "K": 33,
+   "p": 1.1257186377999743e-05,
+   "q": 0.0005133276988367883,
+   "spec": 0.05
+  },
+  {
+   "term": "GOBP_NEGATIVE_REGULATION_OF_PROTEIN_CONTAINING_COMPLEX_ASSEMBLY",
+   "k": 8,
+   "K": 119,
+   "p": 1.2635597968287513e-05,
+   "q": 0.0005621300169306445,
+   "spec": 0.025
+  },
+  {
+   "term": "GOBP_POSITIVE_REGULATION_OF_CELLULAR_COMPONENT_BIOGENESIS",
+   "k": 14,
+   "K": 398,
+   "p": 1.4673758021904613e-05,
+   "q": 0.0006372603483798575,
+   "spec": 0.04
+  },
+  {
+   "term": "GOCC_RUFFLE",
+   "k": 9,
+   "K": 167,
+   "p": 2.126204599165167e-05,
+   "q": 0.0009019063229947126,
+   "spec": 0.065
+  },
+  {
+   "term": "GOBP_PROTEIN_AUTOPROCESSING",
+   "k": 4,
+   "K": 19,
+   "p": 2.3058046039119266e-05,
+   "q": 0.0009558608176216714,
+   "spec": 0.0
+  },
+  {
+   "term": "GOCC_CLUSTER_OF_ACTIN_BASED_CELL_PROJECTIONS",
+   "k": 7,
+   "K": 100,
+   "p": 3.480713553987242e-05,
+   "q": 0.0014108492272161622,
+   "spec": 0.06
+  },
+  {
+   "term": "GOCC_BRUSH_BORDER",
+   "k": 6,
+   "K": 70,
+   "p": 4.132718543385244e-05,
+   "q": 0.0016387127441597142,
+   "spec": 0.05
+  },
+  {
+   "term": "GOBP_POSITIVE_REGULATION_OF_LAMELLIPODIUM_ASSEMBLY",
+   "k": 4,
+   "K": 22,
+   "p": 4.26079357440145e-05,
+   "q": 0.0016535505275974988,
+   "spec": 0.05
+  },
+  {
+   "term": "GOBP_CELLULAR_RESPONSE_TO_MOLECULE_OF_BACTERIAL_ORIGIN",
+   "k": 8,
+   "K": 148,
+   "p": 6.104888138933325e-05,
+   "q": 0.002319857492794664,
+   "spec": 0.025
+  },
+  {
+   "term": "GOCC_SITE_OF_DOUBLE_STRAND_BREAK",
+   "k": 6,
+   "K": 77,
+   "p": 7.097568967435687e-05,
+   "q": 0.002642033836041366,
+   "spec": 0.07
+  },
+  {
+   "term": "GOBP_NEGATIVE_REGULATION_OF_ORGANELLE_ORGANIZATION",
+   "k": 11,
+   "K": 296,
+   "p": 7.972022992695134e-05,
+   "q": 0.0029081939877351848,
+   "spec": 0.045
+  },
+  {
+   "term": "GOCC_CASPASE_COMPLEX",
+   "k": 3,
+   "K": 10,
+   "p": 8.52551496130982e-05,
+   "q": 0.0030491253508684534,
+   "spec": 0.015
+  },
+  {
+   "term": "GOBP_POSITIVE_REGULATION_OF_PROTEIN_CONTAINING_COMPLEX_ASSEMBLY",
+   "k": 8,
+   "K": 159,
+   "p": 0.00010111955143599044,
+   "q": 0.003546962727293203,
+   "spec": 0.025
+  },
+  {
+   "term": "GOBP_CELLULAR_RESPONSE_TO_BIOTIC_STIMULUS",
+   "k": 8,
+   "K": 168,
+   "p": 0.0001482781148532723,
+   "q": 0.005103005311176768,
+   "spec": 0.03
+  },
+  {
+   "term": "GOCC_CANONICAL_INFLAMMASOME_COMPLEX",
+   "k": 3,
+   "K": 12,
+   "p": 0.00015423149418114092,
+   "q": 0.005168503400544334,
+   "spec": 0.01
+  },
+  {
+   "term": "GOBP_ENDOSOMAL_TRANSPORT",
+   "k": 10,
+   "K": 266,
+   "p": 0.0001558485126260627,
+   "q": 0.005168503400544334,
+   "spec": 0.045
+  },
+  {
+   "term": "GOCC_MEMBRANE_COAT",
+   "k": 6,
+   "K": 89,
+   "p": 0.00015925624806251794,
+   "q": 0.0051872035083220126,
+   "spec": 0.04
+  },
+  {
+   "term": "GOCC_PODOSOME",
+   "k": 4,
+   "K": 31,
+   "p": 0.00017204985661734693,
+   "q": 0.005505595411755102,
+   "spec": 0.06
+  },
+  {
+   "term": "GOBP_LAMELLIPODIUM_ASSEMBLY",
+   "k": 5,
+   "K": 59,
+   "p": 0.00019673664755654496,
+   "q": 0.006187028364536862,
+   "spec": 0.05
+  },
+  {
+   "term": "GOBP_PROTEIN_PROCESSING",
+   "k": 8,
+   "K": 177,
+   "p": 0.00021227925605917016,
+   "q": 0.006562667170371634,
+   "spec": 0.055
+  },
+  {
+   "term": "GOBP_POSITIVE_REGULATION_OF_INTERLEUKIN_1_BETA_PRODUCTION",
+   "k": 4,
+   "K": 35,
+   "p": 0.0002783844671024254,
+   "q": 0.008324151934341375,
+   "spec": 0.01
+  }
+ ],
+ "pc3": {
+  "n": 10924,
+  "tep1": 3,
+  "parp4": 2,
+  "top10": [
+   "MVP",
+   "PARP4",
+   "TEP1",
+   "ALDOA",
+   "PDZK1IP1",
+   "ANXA2",
+   "CAPNS1",
+   "CLIC1",
+   "CAP1",
+   "ZNF17"
+  ]
+ },
+ "ccle": {
+  "n": 8685,
+  "TEP1": 3,
+  "PARP4": 2,
+  "top10": [
+   "PARP4",
+   "TEP1",
+   "NIBAN2",
+   "CAPN2",
+   "S100A6",
+   "IQGAP1",
+   "MGLL",
+   "EHD2",
+   "EHD4",
+   "ANXA2"
+  ],
+  "terms": [
+   {
+    "term": "GOCC_CELL_SUBSTRATE_JUNCTION",
+    "k": 16,
+    "K": 359,
+    "p": 2.9307960500970647e-06,
+    "q": 0.004229138700290064,
+    "spec": 0.17
+   },
+   {
+    "term": "GOCC_RUFFLE",
+    "k": 9,
+    "K": 138,
+    "p": 2.7794585991068703e-05,
+    "q": 0.014132866617046713,
+    "spec": 0.065
+   },
+   {
+    "term": "GOCC_ACTIN_CYTOSKELETON",
+    "k": 14,
+    "K": 344,
+    "p": 3.600264351037147e-05,
+    "q": 0.014132866617046713,
+    "spec": 0.155
+   },
+   {
+    "term": "GOBP_ACTIN_FILAMENT_BASED_PROCESS",
+    "k": 17,
+    "K": 491,
+    "p": 3.917634543879893e-05,
+    "q": 0.014132866617046713,
+    "spec": 0.0
+   },
+   {
+    "term": "GOBP_PLASMA_MEMBRANE_ORGANIZATION",
+    "k": 7,
+    "K": 86,
+    "p": 5.5477919271921454e-05,
+    "q": 0.015072890752725143,
+    "spec": 0.025
+   },
+   {
+    "term": "GOCC_MEMBRANE_MICRODOMAIN",
+    "k": 9,
+    "K": 153,
+    "p": 6.267314242297356e-05,
+    "q": 0.015072890752725143,
+    "spec": 0.07
+   },
+   {
+    "term": "GOBP_PLASMA_MEMBRANE_REPAIR",
+    "k": 4,
+    "K": 23,
+    "p": 0.00012385192400876253,
+    "q": 0.025531189477806332,
+    "spec": 0.01
+   },
+   {
+    "term": "GOCC_CELL_LEADING_EDGE",
+    "k": 12,
+    "K": 299,
+    "p": 0.00015501359187235924,
+    "q": 0.0279605766339768,
+    "spec": 0.11
+   },
+   {
+    "term": "GOBP_EPIDERMAL_GROWTH_FACTOR_RECEPTOR_SIGNALING_PATHWAY",
+    "k": 6,
+    "K": 73,
+    "p": 0.00018295417073219594,
+    "q": 0.02933365204072875,
+    "spec": 0.005
+   },
+   {
+    "term": "GOCC_CAVEOLA",
+    "k": 5,
+    "K": 48,
+    "p": 0.0002116676574598272,
+    "q": 0.030414507264250316,
+    "spec": 0.035
+   },
+   {
+    "term": "GOBP_ENDOCYTOSIS",
+    "k": 14,
+    "K": 413,
+    "p": 0.0002530323177413384,
+    "q": 0.030414507264250316,
+    "spec": 0.0
+   },
+   {
+    "term": "GOCC_SECRETORY_GRANULE_MEMBRANE",
+    "k": 9,
+    "K": 185,
+    "p": 0.0002667064910906766,
+    "q": 0.030414507264250316,
+    "spec": 0.085
+   }
+  ]
+ }
+}

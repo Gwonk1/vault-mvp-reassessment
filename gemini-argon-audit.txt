@@ -1,0 +1,84 @@
+# Vault Project Audit & Synthesis (2026-11-06)
+
+Reviewed `~/projects/Vault` end-to-end — the five articles, the Gemini and Batra transcripts, `RESULTS.md`, `LEDGER.md`, every pre-registration, `src/`, and `sb6c00512.pdf`. No existing files were modified and no pending target values were read, preserving the git pre-registration chain cleanly.
+
+---
+
+## 1. Urgent Pre-Run Catches on the Two `PENDING` Tests (`#23` & `#24`)
+
+### A. Test #23 — CPTAC Protein Co-Abundance (`PROTEOMICS_PREREGISTRATION.md` / `src/prot_coabund.py`)
+`LEDGER.md` (line 61) still marks `#23` as `fetching`, but `results/fetch_prot.log` shows all 19 cohorts finished downloading at 16:46 into `data/processed/prot/`. **Before anyone runs `src/prot_coabund.py`, three bugs need a pre-run deviation commit** (found strictly from `.clin.parquet` metadata, zero protein values read):
+
+1. **Triple Cohort Duplication (Breaks Meta-Analysis Independence):**
+   cBioPortal returned both legacy Firehose and PanCanAtlas repackagings of the **exact same CPTAC Phase II TCGA tumors**:
+   - `brca_tcga` & `brca_tcga_pan_can_atlas_2018` (**1,084 shared patients**)
+   - `coadread_tcga` & `coadread_tcga_pan_can_atlas_2018` (**594 shared patients**)
+   - `ov_tcga` & `ov_tcga_pan_can_atlas_2018` (**585 shared patients**)
+   As written, `cohorts()` (`src/prot_coabund.py` lines 10–27) pools *both* copies of all three into `reml()` (`src/models.py` lines 63–83), double-counting three studies, artificially shrinking Hartung-Knapp CIs, and letting 2-cohort proteins pass `MIN_COH = 3`.
+
+2. **Dead-Code Normal-Sample Filter:**
+   Line 23 of `src/prot_coabund.py` (`keep=[s for s in M.columns if not (re.search(r'-1[01]$',s) and False)]`) has `and False` hard-coded and is immediately overwritten by line 24 (`if 'patientId' in cl: keep=list(...)`). Any CPTAC normal-adjacent (`-11` / NAT) columns will mix tumor-vs-normal tissue contrast into co-abundance, violating `PROTEOMICS_PREREGISTRATION.md` line 20 ("One sample per patient, tumor samples").
+
+3. **Unwired Pre-Registered Checks:**
+   - The 200 matched random query proteins (matched on measurement frequency ±10% and median `|r|` ±0.05, required by `PROTEOMICS_PREREGISTRATION.md` lines 40–43 to distinguish `MODULE LEAD` from `NON-SPECIFIC`),
+   - The 3-PC-removed sensitivity check (`rm_pcs()` is defined at line 64 of `src/prot_coabund.py` but never called), and
+   - The stroma-free `ccle_broad_2019` cell-line replication (`cohorts(False)`, per `PROTEOMICS_DEVIATIONS.md` item 2)
+   are all omitted in `__main__`.
+
+### B. Test #24 — Inside vs. Outside Surface Conservation (`SURFACE_PREREGISTRATION.md`)
+Two geometric traps will invert or blur this test if coded literally as pre-registered:
+
+1. **Global Median Radius Measures *Caps vs. Belly*, Not *Lumen vs. Outside*:**
+   `SURFACE_PREREGISTRATION.md` (lines 25–29) splits exposed residues at the global median radial distance `r = sqrt(x^2 + y^2)` from the symmetry axis. Because a vault tapers from `r ~ 200 A` at the waist down to `r ~ 55–70 A` at the cap ring while the shell wall is only `~15–20 A` thick:
+   - **Every *outward*-facing residue on the shoulder, cap-helix, and cap-ring** (`r ~ 60–145 A`) falls *inside* the global median radius and gets mislabeled **"lumen-facing"**;
+   - **Every *lumen*-facing residue on the inner barrel wall of R1–R7** (`r ~ 180–190 A`) falls *outside* the global median radius and gets mislabeled **"outward-facing"**.
+   - **Fix (commit before running):** Classify each exposed residue against the **local shell midsurface radius `R(|z|)` at its own axial height `z`** (`Delta_r_i = r_i - R(|z_i|)`, plus axial normal at the flat cap top). Also separate **subunit-subunit lateral/waist interface residues** (buried in the 78-mer, exposed in the isolated monomer) as their own category — that is likely where structural packing selection lives.
+
+2. **`data/raw/struct/4V60.cif.gz` Asymmetric Unit Is Only One Half-Vault (39 Chains, Not 78):**
+   Checking coordinate headers only: `4V60.cif.gz` has `39` chains (`31,668` C-alpha atoms; `z` in `[-58.9, +327.8] A`). That passes the `>= 30 chains` gate as-is (`SURFACE_PREREGISTRATION.md` line 51), leaving the **entire N-terminal R1 waist dimerization interface open to solvent** instead of buried. Generating the full 78-mer biological assembly via `_pdbx_struct_oper_list` before computing SASA fixes it.
+
+---
+
+## 2. Two Literature Bombshells Hiding in `sb6c00512.pdf`
+
+1. **The Lupus Anti-MVP Serology Test (`LEDGER.md` "UNTESTED" line 69 / Article 4 / Article 5 §5) Was Already Run:**
+   Page 2 (Ref. 27) of `sb6c00512.pdf` cites **Moadab et al., *J. Rheumatol.* 2023, 50(9):1136 (`PMID: 37127324` / `PMC10524170`)**. From the open-access PMC full text:
+   - Tomas Mustelin's group screened **>21,000 human proteins** (`HuProt` human proteome array) unbiasedly with SLE patient sera vs. healthy controls.
+   - **#1 hit in the entire human proteome:** **Ro60 (`TROVE2`)**.
+   - **Top 10 hits out of 21,000 proteins:** Ro60, Sm/RNP, Ku80 (`XRCC5`), `RPLP2`, `AGO1/2/3`, **and `MVP` (Major Vault Protein, Fig. 1H)** — validated by ELISA in **two independent SLE cohorts** (Swedish Cohort 1, `n = 49`, Fig. 3C; Univ. of Washington Cohort 2, `n = 46`, Fig. 4C), while mostly negative in Sjögren's (`n = 12`), rheumatoid arthritis (`n = 20`), psoriatic arthritis (`n = 8`), ANCA vasculitis (`n = 11`), and large-vessel vasculitis (`n = 9`) (Fig. 6D).
+   - **What it means for `LEDGER.md`:** Under your own pre-committed falsifier in `data/raw/articles/article5.txt` (line 121: *"If anti-MVP shows up, the asymmetry I have been building on does not exist and that whole thread collapses"*), **the "autoantigen asymmetry" (that vaults are immunologically invisible in lupus while Ro60/La are targeted) is STRUCK**. Yet your *instinct* putting vaults and lupus in the same room was spot-on: in human SLE, vaults are targeted right alongside Ro60, RISC (`AGO1–3`), and ribosomes as nucleic-acid-adjuvanted cytosolic RNP particles.
+
+2. **"Born-Loaded Only" Is Softened at the Particle Level (`sb6c00512.pdf`, Collins et al., *ACS Synth. Biol.* Aug 2026):**
+   They mixed **already-assembled, purified empty human vaults** (produced in *Pichia pastoris*) overnight at 25 °C with intact **25-nm AAV9 viral capsids** conjugated to `INT` peptide (`SpC3-INT`), and **~23.7% of the intact virions packaged inside the pre-formed vaults** (occasionally *two* AAV capsids inside one vault; `0%` without `INT`). Polyribosome templating (Mrazek/Rome 2014) governs *de novo shell synthesis*, **not** an absolute lock on the lumen: assembled vaults dynamically open/breathe at the waist in solution at 25 °C and disassemble at endosomal low pH (`Llauró et al., Sci. Rep. 2016`).
+
+---
+
+## 3. Audit & Synthesis of Completed Tests (`#1–#22`) — What Fits Everything?
+
+Two post-hoc sanity audits on already-completed scripts confirm that `LEDGER.md`'s core empirical pillars hold up:
+
+- **Clade-confound check on `src/divergence.py`:** Because Fungi, Plants, and Insects deleted MVP, `2QPP0` is **70.1% vertebrate** (`94/134` species; `0` Fungi, `0` Plants). Even when restricting the matched null in `results/divergence_matched.csv` strictly to vertebrate-dominated OGs (`>= 60%` vertebrate, `n = 253`, matched median identity `52.6%` vs `47.0%` overall), MVP (`60.6%`) **still sits at the 84.2nd percentile**. The sequence conservation is real.
+- **`PASS`-filter check on `src/gnomad.py`:** `src/gnomad.py` (lines 14–15) did not filter variants on canonical transcript or `filters == []` (which inflated `OR4F5` homozygotes to 389 against official `obs_lof = 1`, and counted 216 MVP HC LoF variants vs 166 canonical `PASS` variants), **but** checking `data/raw/gnomad/MVP.json` directly confirms `MVP`'s homozygous stop-gain (`16-29841824-C-T`, `p.Arg474Ter`) **is** canonical (`ENST00000357402`) and cleanly `PASS`-filtered (`135` exome + `34` genome = `169` carrier alleles, `1` exome homozygote).
+
+### Three Clues Hiding Across Your Standing Results
+
+1. **Why `LEDGER #22` ("Dispensable but Conserved": `pLI = 0`, `LOEUF = 0.92`, yet `mis_z = 2.50` & `84–90th` pct identity) Isn't a Paradox:**
+   In a **78-subunit homo-oligomer co-translationally printed on polyribosomes**, a heterozygous null (`NMD`) makes no mutant protein — the wild-type allele simply prints fewer, *clean* barrels (`pLI = 0`). By contrast, a heterozygous **missense** allele incorporates defective subunits into 78-mers (jamming waist closure into Mrazek's unpinched "rolls" or popping caps into open rosettes), creating heterozygous assembly/proteotoxic selection (`mis_z = 2.50`)! Meanwhile, across 500 Myr (`4 * N_e * s >> 1`), even a 0.2% survival advantage during mucosal infection or membrane stress preserves primary sequence while leaving `0/878` dish growth hits.
+   - *Immediately testable with data already on disk:* map human `gnomAD v4` missense depletion (`data/raw/gnomad/MVP.json`) onto `PDB 4V60` alongside cross-species conservation to see whether human missense constraint sits on **subunit-subunit interfaces** vs. **outer/lumenal faces**.
+
+2. **Why Co-Loss (`#8`) Returned `NO MODULE` Even If MVP Has a Partner:**
+   `src/coloss.py` can only detect partners that **also get deleted** in Fungi, Plants, and Insects (like cilia or Complex I). If the vault's physical partner is **essential eukaryotic machinery that can never be deleted** — such as the **80S ribosome** (caught inside *Dictyostelium* vaults by cryo-ET), **ER/nuclear envelope lipid bilayers** (SPFH family), or **p62/LC3/STAT1** — co-loss is *structurally guaranteed* to return `NO MODULE`. That makes **Test #23 (protein co-abundance)** decisive in a way co-loss never could be.
+
+3. **Why Proliferation (`#16`, `results/proliferation.json`) Hit `0.0–0.7th` Percentile in Lung/Melanoma Yet `86.5th` in Pancreas (`PAAD`):**
+   Normal lung is barrier epithelium (high baseline MVP, lost as tumors dedifferentiate and divide); normal pancreas is ~85% acinar cells, whereas **PAAD is acinar-to-ductal metaplasia** — turning acinar cells *into* mucinous/barrier ductal epithelium that happens to be the dividing tumor clone. Combined with the **94–95th percentile developmental rise across 6 somatic organs** (`results/development.json`), MVP behaves like a **differentiated barrier / membrane-stress SPFH module** induced by maturation and amplified by alarm signals (IFN + drug stress).
+
+---
+
+## 4. Recommended Next Moves
+
+1. **Fix & run Pending Test #23 (`src/prot_coabund.py`)** after committing deviations for deduplicating the 3 TCGA cohorts, filtering normal tissue, and wiring the 200 matched queries + 3-PC check + CCLE cell-line replication.
+2. **Amend & run Pending Test #24 (`SURFACE_PREREGISTRATION.md`)** on the full 78-mer `4V60` biological assembly using local-shell transmural offset `r - R(|z|)` + subunit-interface SASA + `gnomAD v4` human missense mapping.
+3. **Update `LEDGER.md`** with `Moadab et al. 2023` (`PMID: 37127324`, striking the lupus non-autoantigen asymmetry while confirming SLE vault autoantigenicity) and `Collins et al. 2026` (`sb6c00512.pdf`, post-assembly `INT`-mediated luminal entry into pre-formed vaults).
+4. **Pre-register next targeted computational tests:**
+   - **MVP copy-number (CNA) vs. IFN/ICB** in TCGA/ICB cohorts (breaking the STAT1 transcriptional circularity identified in Article 1 §6).
+   - **Single-cell PAAD vs. LUAD epithelial ductal/barrier & SPFH program test** to resolve the proliferation flip (`LEDGER #16`) and test whether LRP chemoresistance is a mucosal-barrier lineage state.

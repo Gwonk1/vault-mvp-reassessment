@@ -250,3 +250,69 @@ program's core and does not behave like a drug-handling gene. The passenger refr
 form, and the thirty-year LRP chemoresistance association remains unexplained. Kinase inhibitors in cell
 lines are not the cytotoxic chemotherapies the biomarker was built on, so this tests the state claim, not the
 clinical association.
+
+## 11. Protein co-abundance: the vault IS a unit, and it sits in a membrane-repair neighbourhood
+
+CPTAC mass spectrometry, 13 tumour cohorts, plus 375 CCLE cell lines. Pre-registered
+(`PROTEOMICS_PREREGISTRATION.md`), deviations recorded before running (`PROTEOMICS_DEVIATIONS.md` 4-6).
+Gate passed emphatically: PSMA1 recovers 15/20 proteasome subunits, NDUFS2 20/20 complex I, RPL7 20/20
+ribosome, each from a single seed protein.
+
+### PRIMARY A — UNIT. This reverses §9 and the development/divergence readings.
+
+| Rank (excl. self) | Protein | r | Cohorts |
+|---|---|---|---|
+| 1 | **PARP4** | 0.82 | 13 |
+| 2 | **TEP1** | 0.52 | 12 |
+
+Out of 10,924 proteins, MVP's two closest partners are the two proteins that live inside it. Identical
+ranks after removing 3 principal components, and identical in 375 stroma-free cell lines.
+
+**The resolution of the apparent contradiction:** transcripts and evolutionary presence/absence are
+*not* co-regulated (co-loss §9, development §10, divergence §12 all said "separate"), but protein
+abundance is tightly coupled. Unassembled complex subunits are degraded, so complex membership shows up
+at the protein level and essentially never in mRNA. The cell does not co-regulate the genes; it
+co-regulates the particle. **Ledger #15 flips from WEAKENED to confirmed at the protein level.**
+
+### PRIMARY B — MODULE LEAD, and it is specific
+
+101 GO terms at q < 0.05, of which **50 pass the pre-registered specificity test** (fewer than 5% of 200
+matched random query proteins hit the same term). Generic actin terms do *not* pass (spec 0.05-0.17);
+what passes is coherent:
+
+| Theme | Representative terms (specificity) | Genes in MVP's top 100 |
+|---|---|---|
+| Plasma membrane repair | `PLASMA_MEMBRANE_REPAIR` (0.010, CCLE), `PLASMA_MEMBRANE_ORGANIZATION` (0.025) | ANXA2, S100A10, EHD2, EHD4, CAPN2, CAPNS1 |
+| Membrane microdomains | `CAVEOLA` (0.035), `PLASMA_MEMBRANE_RAFT` (0.040), `MEMBRANE_RAFT_ORGANIZATION` (0.025) | |
+| Vesicle traffic | `ENDOCYTOSIS` (0.000), `ENDOSOMAL_TRANSPORT` (0.045), `VESICLE_BUDDING_FROM_MEMBRANE` (0.025) | |
+| Inflammasome / pyroptosis | `CANONICAL_INFLAMMASOME_COMPLEX` (0.010), `PYROPTOSIS` (0.010), `IL1B_PRODUCTION` (0.010) | CASP1, CASP4, PYCARD |
+| Bacterial and mechanical stress | `RESPONSE_TO_MOLECULE_OF_BACTERIAL_ORIGIN` (0.025), `RESPONSE_TO_MECHANICAL_STIMULUS` (0.005) | CAPN2, CASP1, GSN, MYD88, NFKB1 |
+
+Replicated in CCLE (13 of 19 significant terms pass specificity) — so it is **not** stromal or myeloid
+infiltrate — and unchanged after removing 3 principal components.
+
+### Why this matters beyond the statistics
+
+It converges with facts nobody connected: MVP-null mice die of *Pseudomonas* lung infection (a
+pore-forming-toxin pathogen); the *Listeria* result (LLO is a pore-forming toxin); a report we could not independently source that
+**loaded vaults are immunogenic through the NLRP3 inflammasome** — and CASP1/CASP4/PYCARD are here; the
+SPFH shoulder domain, whose whole family builds membrane-microdomain cages; and the Dictyostelium
+tomography finding vaults docked on membranes.
+
+### The confound I found while checking it
+
+**Four of the top 100 lie within 2 Mb of MVP on 16p11.2** — PYCARD (31 Mb), MAPK3 (30), SULT1A3 (30),
+ALDOA (30), against MVP at 29 Mb. Chromosomal co-amplification, not biology, is the likely cause.
+Consequences:
+- **The inflammasome signal is partly compromised**: PYCARD is a 16p neighbour. CASP1 and CASP4 are on
+  chr11 and survive, so the theme is weakened, not eliminated.
+- **The membrane-repair signal is clean**: ANXA2 (chr15), S100A10 (chr1), EHD2 (chr19), EHD4 (chr15),
+  CAPN2 (chr1), S100A6 (chr1) are all off chromosome 16.
+- Overall chr16 share of the top 100 is 6.1% against a 4.5% background — modest, but the clustering at
+  29-31 Mb is the tell.
+
+### Limits
+
+Co-abundance is correlation, not interaction. GO terms are heavily nested, so 50 terms is not 50
+independent findings. Tumour tissue and cancer cell lines only. A copy-number-adjusted re-analysis is
+the obvious next step and has not been run.

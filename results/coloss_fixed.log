@@ -1,0 +1,5 @@
+species 472 nodes 763 scored OGs 6128 terms 4268
+OLD events: [('Viridiplantae', 76), ('Bacillariophyta', 3), ('Alveolata', 18), ('Fungi', 178), ('Alligator', 2), ('Passeriformes', 2), ('Protostomia', 45), ('Cyanidiaceae', 2), ('Entamoeba', 2)]
+NEW events: [('Viridiplantae', 76), ('Bacillariophyta', 3), ('Alveolata', 18), ('Fungi', 178), ('Alligator', 2), ('Passeriformes', 2), ('Ecdysozoa', 43), ('Cyanidiaceae', 2), ('Entamoeba', 2)]
+after fix: min q 0.1566 | terms<.05 0
+top partners: [('CNN1,CNN2,CNN3', 5), ('MICU1,MICU2,MICU3', 5), ('FAM160A1,FAM160A2,FAM160B1', 5), ('CDO1', 5), ('TANGO6', 5), ('WDR91', 5), ('PSAP,PSAPL1,SFTPB', 5), ('NDE1,NDEL1', 5), ('CLASP1,CLASP2', 5), ('CYFIP1', 5), ('CIR1,RP9', 5), ('APH1A,APH1B', 5)]
