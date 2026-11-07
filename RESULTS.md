@@ -2949,3 +2949,66 @@ adversarial reviewer, and the third we found in our own output — which is the 
 here. The rule that would have prevented all three is the one we keep arriving at from different
 directions: **before reporting an enrichment, ask what property other than the one you are naming could
 produce it, and match on that.**
+
+## 52. Mass is not the explanation for §40, and §40 is still not promoted
+
+`MASS_CONFOUND_PREREGISTRATION.md`. **Registered verdict: EQUIVOCAL.** Our registered expectation was
+that MVP would survive with a reduced margin; it did not, and we report the bar we actually hit.
+
+**The reproduction is exact**, which validates the pipeline before anything is read from it: MVP at
+**fold 18.49x, percentile 98.0** — §40 reported 98.0 — with gates passing identically (RPL7 **98.7**,
+RPS6 **98.7**, small-complex negatives median **65.0** < 80).
+
+### 52a. Mass does not predict the score. It is close to anti-correlated.
+
+| assembly | approx. assembled mass | n | median percentile | range |
+|---|---|---|---|---|
+| **nuclear pore complex** | **~110 MDa** | 7 | **26.0** | 6-52 |
+| spliceosome | ~1.5 MDa | 5 | **26.0** | 26-41 |
+| small-complex negatives | < 300 kDa | 6 | 65.0 | 41-79 |
+| clathrin coat | polymeric | 4 | 72.7 | 41-98 |
+| TRiC/CCT chaperonin | ~1 MDa | 7 | 75.3 | 60-81 |
+| condensin / cohesin | ~1 MDa | 5 | 91.3 | 6-94 |
+| 26S proteasome | ~2.5 MDa | 3 | 92.7 | 70-94 |
+| **cytoplasmic dynein** | **~1.4 MDa** | 4 | **96.0** | 93-98 |
+| **MVP** | **~13 MDa** | 1 | **98.0** | — |
+
+**The largest assembly tested, the 110 MDa nuclear pore, sits at the 26th percentile. The 1.4 MDa
+dynein complex sits at the 96th.** Across the seven groups, apparent mass and translation-fold are if
+anything inversely related. **The mass confound is refuted as a mechanism** — which is what this test
+was built to decide, and it decided it.
+
+### 52b. But something still shifts the large assemblies upward, and we do not know what
+
+The 35 large-assembly seeds have a **median percentile of 70.0** against a random-seed median of 50.
+That is why the registered verdict is equivocal rather than a pass: our bars were >75 confirms the
+confound, <60 clears MVP, and 70.0 sits between them. **No assembly's median reaches MVP's 98.0** — the
+closest is dynein at 96.0 — so the confound is not confirmed either.
+
+The residual pattern **looks** like compartment rather than mass: the two lowest groups, nuclear pore
+(26.0) and spliceosome (26.0), are nuclear, while proteasome (92.7), dynein (96.0), TRiC (75.3) and
+clathrin (72.7) are cytoplasmic, as MVP is. **Condensin and cohesin contradict it** at a median of 91.3
+despite being chromosomal — and with a range of 6-94 across five seeds, that group is too noisy to
+carry either reading. Group sizes are 3 to 7. **We are naming this as an untested hypothesis, not
+adopting it**, because adopting a post-hoc axis that two of our own groups violate is the error §48e
+caught us in.
+
+### 52c. Where this leaves the translation thread
+
+| claim | status |
+|---|---|
+| contact-instrument enrichment (§48a, §49a) | **withdrawn** — explained by length and charge (§51) |
+| co-elution tail enriched 18.49x, MVP at the 98.0th percentile of 150 degree-eligible seeds | **stands, reproduced exactly** |
+| ...not explained by MVP's degree | **established** — MVP is only the 73.8th percentile for degree, below every comparator used here |
+| ...not explained by abundance | established in §40 (glycolytic controls 26th-79th) |
+| ...not explained by family membership | established in §40 (SPFH relatives 41st-70th) |
+| ...**not explained by apparent mass** | **established here** |
+| ...explained by something else that also lifts cytoplasmic assemblies | **open** |
+
+So the honest position after four controls: **§40's result survives every specific alternative we have
+been able to construct, and we still decline to promote it**, because the large-assembly distribution
+is shifted enough to show there is a mechanism we have not named. Three seeds out of 150 reach above
+the 95th percentile without being ribosomal, and we cannot say why.
+
+**This is what "eliminate or mark as probable and weigh" looks like when it works.** We eliminated mass.
+We did not buy a promotion with it.

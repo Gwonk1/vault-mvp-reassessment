@@ -1,0 +1,22 @@
+universe 11805 | eligible 9773 | expected in top-200: 2.541
+seeds to evaluate: 197
+pass 2 done
+random reference: n=150 median 1.57x 95th 8.09x max 31.87x
+
+MVP: fold 18.49x percentile 98.0 (section 40 reported 98.0)
+GATE1 RPL7/RPS6 >95th: True  (RPL7 98.7, RPS6 98.7)
+GATE2 small-complex negatives median 65.0 < 80: True
+
+by assembly:
+  nuclear pore ~110 MDa      n=7  median pct  26.0  range 6-52
+  26S proteasome ~2.5 MDa    n=3  median pct  92.7  range 70-94
+  spliceosome ~1.5 MDa       n=5  median pct  26.0  range 26-41
+  dynein ~1.4 MDa            n=4  median pct  96.0  range 93-98
+  condensin/cohesin ~1 MDa   n=5  median pct  91.3  range 6-94
+  TRiC/CCT ~1 MDa            n=7  median pct  75.3  range 60-81
+  clathrin coat              n=4  median pct  72.7  range 41-98
+  small-complex negatives    n=6  median pct  65.0  range 41-79
+
+ALL large assemblies (n=35): median percentile 70.0
+
+VERDICT: EQUIVOCAL (MVP 98.0, large-assembly median 70.0) - promotes nothing

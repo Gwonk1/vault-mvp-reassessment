@@ -1,0 +1,266 @@
+{
+ "expected": 2.5412960609911055,
+ "mvp": {
+  "fold": 18.4945,
+  "pct": 98.0,
+  "degree": 10614
+ },
+ "random": {
+  "n": 150,
+  "median": 1.574,
+  "p95": 8.086424999999993
+ },
+ "gate1": true,
+ "gate2": true,
+ "negatives_median": 65.0,
+ "seeds": {
+  "NUP133": {
+   "group": "nuclear pore ~110 MDa",
+   "fold": 1.57,
+   "pct": 41.3,
+   "degree": 10569
+  },
+  "NUP93": {
+   "group": "nuclear pore ~110 MDa",
+   "fold": 1.97,
+   "pct": 52.0,
+   "degree": 10943
+  },
+  "NUP205": {
+   "group": "nuclear pore ~110 MDa",
+   "fold": 1.18,
+   "pct": 26.0,
+   "degree": 10757
+  },
+  "NUP188": {
+   "group": "nuclear pore ~110 MDa",
+   "fold": 0.39,
+   "pct": 6.0,
+   "degree": 10541
+  },
+  "NUP107": {
+   "group": "nuclear pore ~110 MDa",
+   "fold": 1.18,
+   "pct": 26.0,
+   "degree": 10772
+  },
+  "NUP160": {
+   "group": "nuclear pore ~110 MDa",
+   "fold": 1.18,
+   "pct": 26.0,
+   "degree": 10601
+  },
+  "NUP214": {
+   "group": "nuclear pore ~110 MDa",
+   "fold": 0.39,
+   "pct": 6.0,
+   "degree": 10955
+  },
+  "PSMA1": {
+   "group": "26S proteasome ~2.5 MDa",
+   "fold": 2.75,
+   "pct": 70.0,
+   "degree": 11711
+  },
+  "PSMD1": {
+   "group": "26S proteasome ~2.5 MDa",
+   "fold": 5.9,
+   "pct": 92.7,
+   "degree": 11608
+  },
+  "PSMC1": {
+   "group": "26S proteasome ~2.5 MDa",
+   "fold": 6.69,
+   "pct": 94.0,
+   "degree": 11582
+  },
+  "SF3B1": {
+   "group": "spliceosome ~1.5 MDa",
+   "fold": 1.18,
+   "pct": 26.0,
+   "degree": 11057
+  },
+  "PRPF8": {
+   "group": "spliceosome ~1.5 MDa",
+   "fold": 1.18,
+   "pct": 26.0,
+   "degree": 11027
+  },
+  "SNRNP200": {
+   "group": "spliceosome ~1.5 MDa",
+   "fold": 1.18,
+   "pct": 26.0,
+   "degree": 11067
+  },
+  "EFTUD2": {
+   "group": "spliceosome ~1.5 MDa",
+   "fold": 1.57,
+   "pct": 41.3,
+   "degree": 11090
+  },
+  "SF3B3": {
+   "group": "spliceosome ~1.5 MDa",
+   "fold": 1.57,
+   "pct": 41.3,
+   "degree": 11099
+  },
+  "DYNC1H1": {
+   "group": "dynein ~1.4 MDa",
+   "fold": 14.56,
+   "pct": 98.0,
+   "degree": 11569
+  },
+  "DCTN1": {
+   "group": "dynein ~1.4 MDa",
+   "fold": 5.9,
+   "pct": 92.7,
+   "degree": 11549
+  },
+  "DYNC1I2": {
+   "group": "dynein ~1.4 MDa",
+   "fold": 16.13,
+   "pct": 98.0,
+   "degree": 11391
+  },
+  "ACTR1A": {
+   "group": "dynein ~1.4 MDa",
+   "fold": 7.87,
+   "pct": 94.0,
+   "degree": 11659
+  },
+  "SMC1A": {
+   "group": "condensin/cohesin ~1 MDa",
+   "fold": 0.39,
+   "pct": 6.0,
+   "degree": 10816
+  },
+  "SMC2": {
+   "group": "condensin/cohesin ~1 MDa",
+   "fold": 5.9,
+   "pct": 92.7,
+   "degree": 11136
+  },
+  "SMC3": {
+   "group": "condensin/cohesin ~1 MDa",
+   "fold": 1.97,
+   "pct": 52.0,
+   "degree": 10629
+  },
+  "SMC4": {
+   "group": "condensin/cohesin ~1 MDa",
+   "fold": 7.08,
+   "pct": 94.0,
+   "degree": 11209
+  },
+  "NCAPD2": {
+   "group": "condensin/cohesin ~1 MDa",
+   "fold": 5.51,
+   "pct": 91.3,
+   "degree": 10804
+  },
+  "CCT2": {
+   "group": "TRiC/CCT ~1 MDa",
+   "fold": 3.15,
+   "pct": 75.3,
+   "degree": 11651
+  },
+  "CCT3": {
+   "group": "TRiC/CCT ~1 MDa",
+   "fold": 2.75,
+   "pct": 70.0,
+   "degree": 11596
+  },
+  "CCT4": {
+   "group": "TRiC/CCT ~1 MDa",
+   "fold": 2.36,
+   "pct": 60.0,
+   "degree": 11673
+  },
+  "CCT5": {
+   "group": "TRiC/CCT ~1 MDa",
+   "fold": 3.15,
+   "pct": 75.3,
+   "degree": 11628
+  },
+  "CCT6A": {
+   "group": "TRiC/CCT ~1 MDa",
+   "fold": 3.15,
+   "pct": 75.3,
+   "degree": 11624
+  },
+  "CCT7": {
+   "group": "TRiC/CCT ~1 MDa",
+   "fold": 2.75,
+   "pct": 70.0,
+   "degree": 11674
+  },
+  "TCP1": {
+   "group": "TRiC/CCT ~1 MDa",
+   "fold": 3.94,
+   "pct": 80.7,
+   "degree": 11619
+  },
+  "CLTC": {
+   "group": "clathrin coat",
+   "fold": 3.15,
+   "pct": 75.3,
+   "degree": 11662
+  },
+  "CLTA": {
+   "group": "clathrin coat",
+   "fold": 10.23,
+   "pct": 98.0,
+   "degree": 11493
+  },
+  "AP2M1": {
+   "group": "clathrin coat",
+   "fold": 1.57,
+   "pct": 41.3,
+   "degree": 11427
+  },
+  "AP2B1": {
+   "group": "clathrin coat",
+   "fold": 2.75,
+   "pct": 70.0,
+   "degree": 11560
+  },
+  "FLOT1": {
+   "group": "small-complex negatives",
+   "fold": 2.36,
+   "pct": 60.0,
+   "degree": 10495
+  },
+  "FLOT2": {
+   "group": "small-complex negatives",
+   "fold": 2.75,
+   "pct": 70.0,
+   "degree": 10143
+  },
+  "STOM": {
+   "group": "small-complex negatives",
+   "fold": 1.57,
+   "pct": 41.3,
+   "degree": 10904
+  },
+  "GAPDH": {
+   "group": "small-complex negatives",
+   "fold": 2.75,
+   "pct": 70.0,
+   "degree": 11803
+  },
+  "ENO1": {
+   "group": "small-complex negatives",
+   "fold": 1.97,
+   "pct": 52.0,
+   "degree": 11690
+  },
+  "PKM": {
+   "group": "small-complex negatives",
+   "fold": 3.54,
+   "pct": 79.3,
+   "degree": 11653
+  }
+ },
+ "large_assembly_median": 70.0,
+ "verdict": "EQUIVOCAL (MVP 98.0, large-assembly median 70.0) - promotes nothing"
+}
