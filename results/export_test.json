@@ -1,0 +1,67 @@
+{
+ "core": {
+  "n": 3,
+  "obs": 7.516,
+  "null": 2.0099,
+  "ge": 4797,
+  "p": 0.023989880050599748
+ },
+ "ribosome": {
+  "n": 134,
+  "obs": 0.3143,
+  "null": 0.2562,
+  "ge": 36705,
+  "p": 0.18352908235458823
+ },
+ "gate1": true,
+ "gate2": true,
+ "results": {
+  "GOBP_DETOXIFICATION": {
+   "matched": {
+    "n": 15,
+    "obs": 0.9695,
+    "null": 0.4264,
+    "ge": 10522,
+    "p": 0.05261473692631537
+   },
+   "donor": {
+    "n_donors": 45,
+    "frac_donor": 0.244,
+    "frac_universe": 0.06,
+    "ratio": 4.07,
+    "terms_used": [
+     "GOBP_RESPONSE_TO_XENOBIOTIC_STIMULUS",
+     "GOBP_RESPONSE_TO_OXIDATIVE_STRESS",
+     "GOBP_CELLULAR_RESPONSE_TO_CHEMICAL_STRESS",
+     "GOBP_GLUTATHIONE_METABOLIC_PROCESS"
+    ]
+   },
+   "donor_verdict": "INVALID as applied"
+  },
+  "GOCC_LATE_ENDOSOME": {
+   "matched": {
+    "n": 13,
+    "obs": 0.7395,
+    "null": -0.2071,
+    "ge": 2017,
+    "p": 0.010089949550252249
+   },
+   "donor": {
+    "n_donors": 32,
+    "frac_donor": 0.594,
+    "frac_universe": 0.107,
+    "ratio": 5.54,
+    "terms_used": [
+     "GOCC_ENDOSOME",
+     "GOCC_EARLY_ENDOSOME",
+     "GOBP_VESICLE_MEDIATED_TRANSPORT"
+    ]
+   },
+   "donor_verdict": "INVALID as applied"
+  }
+ },
+ "verdicts": {
+  "GOBP_DETOXIFICATION": "DIES on the matched control (p=0.053)",
+  "GOCC_LATE_ENDOSOME": "UNDECIDED - clears matching (p=0.010) but donor pool is 5.54x"
+ }
+}

@@ -1,4 +1,4 @@
-# What a wet lab should do next with vaults: twelve experiments, ranked by what they decide
+# What a wet lab should do next with vaults: fourteen experiments, ranked by what they decide
 
 **Graham W. Syfert**, with Claude (Anthropic) and two independent reviewing agents. Companion to
 `PAPER1_vault_reassessment.md`. Written for a group with a working vault purification pipeline.
@@ -289,8 +289,8 @@ established 14-3-3 or WW-domain partner from the same lysate.
 **Decides:** whether the only well-replicated non-subunit vault partner (three independent
 instruments,
 #194) is there as a ubiquitin ligase acting on the vault, or is present for some other
-reason. This is the one new partner this analysis earned, and we cannot interpret it
-computationally (§47).
+reason. This is the one new partner this analysis earned, and we cannot interpret it computationally
+(§47).
 
 **Design:** co-immunoprecipitate COP1 and MVP reciprocally in a cell line where both are expressed,
 then (a) ask whether endogenous MVP carries ubiquitin by immunoblot after COP1 knockdown versus
@@ -313,6 +313,55 @@ else — and the "degradation" reading dies, which §46d already shows has no mo
 sequence-divergent with no per-position consensus, a bare VP dipeptide is uninformative in a
 893-residue protein, and known substrates including CEBPA and GATA2 are recognised without a
 canonical motif. The scan cannot discriminate in either direction.
+
+### 13. Is there a vault in stool, mucus, or culture supernatant - and is it loaded?
+
+**Decides:** whether vaults leave cells intact, which is the premise of the export reading and is
+not answered by any reanalysis we can do. Also the cheapest unasked question we found: a literature
+search turned up **no report of MVP in the human fecal proteome or in gut mucus**, while MVP is
+independently documented in exosome preparations, released from cells by a non-exosomal route, and -
+in the Atlantic salmon louse - present in extracellular cement.
+
+**Design:** immunoblot and targeted MS for MVP, PARP4 and TEP1 in (a) conditioned medium from a
+high-vault epithelial line, cleared of cells and debris, (b) human stool supernatant, and (c) airway
+or intestinal mucus. Compare particle-containing fractions from a sucrose cushion against the
+soluble fraction, so that intact vaults are distinguished from free MVP monomer. Where a vault is
+recovered, sequence its contents - vtRNA by RT-PCR, protein by MS - and ask whether what is inside
+differs from vaults purified from the same cells' cytoplasm.
+
+**Positive control:** a known secreted protein in each matrix, and cytoplasmic vaults from the same
+cells as the particle standard. **The three subunits must co-sediment**; MVP alone could be
+degradation product rather than a particle.
+
+**Kill condition:** if no MVP is recoverable from any of the three matrices while the secreted
+control is, vaults do not leave cells in quantity and the export reading loses its premise. **If MVP
+is recovered but as monomer without PARP4 and TEP1, that is also a kill** for the particle-export
+version, though not for MVP release.
+
+**Why this and not more computation:** §57 shows the control needed to test export computationally
+is unusable at the relevant term size, and the two candidate signals rest on three proteins each,
+two of which we already knew. **ATP7A**, a copper-transporting ATPase at +2.38 and the only efflux
+pump in either list, is worth probing alongside - but as one protein, not a module.
+
+### 14. Can a specific association be separated from the co-migration envelope it sits inside?
+
+**Decides:** the one question §40 cannot answer with any amount of reanalysis. Six registered
+alternatives have been eliminated or left live, and §56c shows why that cannot finish: MVP's
+translation-rich co-elution tail shows **both** a sharp top-of-list signal the negatives entirely
+lack (12 hits at k=25 against 0.32 expected) **and** continued accumulation to 93 hits at k=800 that
+looks like a shared elution window. One instrument cannot separate them.
+
+**Design:** purify vaults from a high-expressing line and ask directly whether ribosomal protein or
+rRNA co-purifies through two orthogonal separations - a sucrose gradient and size-exclusion - then
+repeat after puromycin or EDTA treatment to dissociate polysomes. A specific association survives
+polysome dissociation; a shared-window artefact does not.
+
+**Positive control:** PARP4 and TEP1 must co-purify through both separations and survive both
+treatments, since they are the particle.
+
+**Kill condition:** if ribosomal signal disappears on polysome dissociation while PARP4 and TEP1
+persist, §40 is the co-migration artefact grok's audit describes, and the translation thread closes
+for good.
 
 ## What a home run looks like
 

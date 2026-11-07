@@ -3397,3 +3397,83 @@ registered alternatives, five cleanly eliminated — and the reason it stays unp
 we expect it to fail. It is that one instrument cannot separate a specific association from the
 co-migration envelope it sits inside, and the experiment that could is a bench experiment, not a
 reanalysis.
+
+## 57. The export test: both terms undecided, and the length-charge control is unusable for small terms
+
+`EXPORT_PREREGISTRATION.md` plus its pre-result addendum. **Registered outcome for both terms:
+UNDECIDED.** Our registered expectation was that detoxification would die on the matched control; it
+effectively did, but on a control the addendum then showed cannot be trusted in either direction.
+
+### 57a. A bug our own gate caught
+
+The first run failed gate 1: the vault core gave **p = 0.125** where §51 gave 0.024. That was not a
+finding, it was our error — we built the analysis frame indexed in **GENCODE file order** while the
+abundance proxy is **table order** (§41 established there is no intensity column), silently scrambling
+one of the three matching axes. Rebuilt in table order, the gates reproduce §51 exactly: **core
+p = 0.0240** (§51: 0.024) and **`GOCC_RIBOSOME` p = 0.1835** (§51: 0.184). Recorded because the
+positive control did its job: a gate we registered for a different purpose caught an indexing bug that
+would otherwise have read as a biological null.
+
+### 57b. The results, and why neither counts
+
+| term | n | observed | matched null | p (matched) | donor-pool ratio | verdict |
+|---|---|---|---|---|---|---|
+| `GOBP_DETOXIFICATION` | 15 | +0.970 | +0.426 | **0.0526** | **4.07x** | UNDECIDED |
+| `GOCC_LATE_ENDOSOME` | 13 | +0.740 | −0.207 | **0.0101** | **5.54x** | UNDECIDED |
+
+Late endosome **clears** the matched control at p = 0.010; detoxification **just misses** at p = 0.053.
+But the addendum's donor check disqualifies both: the donor pools are **4.07x and 5.54x** enriched for
+their own term's adjacency sets, far above the 2.0x invalidity bar.
+
+**And we extend the addendum's rule symmetrically, which it did not state.** It said a term clearing an
+invalid control is undecided rather than a survivor. The same must hold in reverse: **a control that
+cannot validly support a survival cannot validly support a death either.** So detoxification's
+p = 0.053 is not a kill, and late endosome's p = 0.010 is not a finding. Both undecided.
+
+### 57c. The real result is methodological: this control does not work for small specialised terms
+
+Three independent applications now:
+
+| term | donor-pool enrichment |
+|---|---|
+| `GOBP_CYTOPLASMIC_TRANSLATION` (§56a) | 2.48x |
+| `GOBP_DETOXIFICATION` | **4.07x** |
+| `GOCC_LATE_ENDOSOME` | **5.54x** |
+
+**Small specialised terms occupy sparse corners of length-charge space, and the only proteins available
+as donors in those corners are the term's own relatives.** The matching therefore regresses the label
+partly on itself, and the effect gets worse as the term gets more specialised. §51's method is sound in
+principle and **unusable in practice for any term small and distinctive enough to be interesting here.**
+That retrospectively weakens every use we made of it, which is #237 generalised from one case to the
+technique.
+
+### 57d. What the member lists show, which is the most useful thing here
+
+The registered transparency requirement earns its place:
+
+**`GOCC_LATE_ENDOSOME`** — NBR1 **+5.09**, ATP7A +2.38, ANXA2 +1.74, FYCO1 +0.97, SQSTM1 +0.33,
+VPS29 +0.25, MCOLN2 +0.19, then MAGI2 −0.00, HSPA8 −0.10, VAC14 −0.13, MYO5A −0.18, CHMP2A −0.20,
+GRN −0.74.
+
+**The +0.740 mean is carried by three proteins, and two of them we already knew individually** — NBR1
+(§44b, the one autophagy receptor present while p62 is not) and ANXA2 (#182, a confirmed interactor
+surviving every instrument). Ten of thirteen members sit at or below zero. **This is not a late-endosome
+module; it is two known interactors plus ATP7A, re-annotated.**
+
+**`GOBP_DETOXIFICATION`** — TXN +3.62, ALDH1A1 +3.16, ATP7A +2.38, HBD +1.67, PRDX1 +1.52, S100A9
++1.48, MT1G +1.37, GSTP1 +0.87, then ALB +0.48, TXNRD1 +0.35, NQO1 +0.19, AIFM2 +0.16, AKR1B10 −0.18,
+LANCL1 −0.81, PRDX3 −1.73. Carried by the top three of fifteen.
+
+**`ATP7A` appears in both lists** — a copper-transporting ATPase, at +2.38. One protein, not a module,
+and we are not building anything on it. But it is the single protein in this analysis that is itself an
+efflux pump, so it is the one name worth carrying forward to the bench experiment rather than another
+reanalysis.
+
+### 57e. Status of the export hypothesis
+
+**Unchanged from §54: exploratory, nothing promoted.** The shape that made it interesting is intact —
+degradation machinery is the most depleted thing in the pulldown (§49c), classical secretion is absent,
+and the two terms nearest the non-classical exit route are the two that came up. But the control that
+would have tested it does not work at this term size, the two means are carried by three proteins each,
+and two of those are already-known individual interactors. **The hypothesis is not supported and not
+refuted by this analysis, and the honest next step is the bench, not another matching scheme.**

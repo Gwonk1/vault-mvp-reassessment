@@ -1,0 +1,24 @@
+usable universe: 1166
+
+GATES
+  core, full matching: {'n': 3, 'obs': 7.516, 'null': 2.0099, 'ge': 4797, 'p': 0.023989880050599748}
+  GOCC_RIBOSOME, full matching: {'n': 134, 'obs': 0.3143, 'null': 0.2562, 'ge': 36705, 'p': 0.18352908235458823}  (section 51 gave p=0.184)
+  gate1 core clears: True | gate2 ribosome fails: True
+
+PRIMARY, abundance+length+charge matched:
+  GOBP_DETOXIFICATION              {'n': 15, 'obs': 0.9695, 'null': 0.4264, 'ge': 10522, 'p': 0.05261473692631537}
+  GOCC_LATE_ENDOSOME               {'n': 13, 'obs': 0.7395, 'null': -0.2071, 'ge': 2017, 'p': 0.010089949550252249}
+
+ADDENDUM donor-pool check:
+  GOBP_DETOXIFICATION              {'n_donors': 45, 'frac_donor': 0.244, 'frac_universe': 0.06, 'ratio': 4.07, 'terms_used': ['GOBP_RESPONSE_TO_XENOBIOTIC_STIMULUS', 'GOBP_RESPONSE_TO_OXIDATIVE_STRESS', 'GOBP_CELLULAR_RESPONSE_TO_CHEMICAL_STRESS', 'GOBP_GLUTATHIONE_METABOLIC_PROCESS']}  -> INVALID as applied
+  GOCC_LATE_ENDOSOME               {'n_donors': 32, 'frac_donor': 0.594, 'frac_universe': 0.107, 'ratio': 5.54, 'terms_used': ['GOCC_ENDOSOME', 'GOCC_EARLY_ENDOSOME', 'GOBP_VESICLE_MEDIATED_TRANSPORT']}  -> INVALID as applied
+
+MEMBER-LEVEL (registered transparency requirement):
+  GOBP_DETOXIFICATION:
+    TXN +3.62, ALDH1A1 +3.16, ATP7A +2.38, HBD +1.67, PRDX1 +1.52, S100A9 +1.48, MT1G +1.37, GSTP1 +0.87, ALB +0.48, TXNRD1 +0.35, NQO1 +0.19, AIFM2 +0.16, AKR1B10 -0.18, LANCL1 -0.81, PRDX3 -1.73
+  GOCC_LATE_ENDOSOME:
+    NBR1 +5.09, ATP7A +2.38, ANXA2 +1.74, FYCO1 +0.97, SQSTM1 +0.33, VPS29 +0.25, MCOLN2 +0.19, MAGI2 -0.00, HSPA8 -0.10, VAC14 -0.13, MYO5A -0.18, CHMP2A -0.20, GRN -0.74
+
+VERDICT GOBP_DETOXIFICATION: DIES on the matched control (p=0.053)
+
+VERDICT GOCC_LATE_ENDOSOME: UNDECIDED - clears matching (p=0.010) but donor pool is 5.54x

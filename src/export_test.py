@@ -35,8 +35,12 @@ with gzip.open('data/raw/eggnog/gencode.v25.pc_translations.fa.gz','rt') as fh:
     if name and name in uni:
         s=''.join(buf)
         if name not in seq or len(s)>len(seq[name]): seq[name]=s
-G=pd.DataFrame({'WT_LFC':[D.loc[g,'WT_LFC'] for g in seq],'len':[len(seq[g]) for g in seq],
-                'chg':[chgk(seq[g]) for g in seq]},index=list(seq))
+# IMPORTANT: build in D's row order. The abundance proxy is TABLE ORDER (section 41: no
+# intensity column exists), so indexing by GENCODE file order silently destroys it.
+G=pd.DataFrame({'WT_LFC':D['WT_LFC']})
+G['len']=[len(seq[g]) if g in seq else np.nan for g in G.index]
+G['chg']=[chgk(seq[g]) if g in seq else np.nan for g in G.index]
+G=G.dropna()
 G['ab']=pd.qcut(pd.Series(np.arange(len(G)),index=G.index).rank(method='first'),10,labels=False,duplicates='drop')
 G['ld']=pd.qcut(G['len'].rank(method='first'),10,labels=False,duplicates='drop')
 G['cd']=pd.qcut(G['chg'].rank(method='first'),10,labels=False,duplicates='drop')
