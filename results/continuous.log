@@ -1,0 +1,19 @@
+universe 1205 | mean WT_LFC overall -0.2728
+
+GATE1 vault core (MVP/PARP4/TEP1): {'n': 3, 'mean': 7.516, 'null_mean': 0.0174, 'null_sd': 1.1318, 'pct': 100.0, 'p_two_sided': 0.0}
+  -> percentile >=99: True
+
+TARGETED (previously dichotomised contact tests):
+  GOBP_CYTOPLASMIC_TRANSLATION                           {'n': 95, 'mean': 0.2284, 'null_mean': -0.1182, 'null_sd': 0.1193, 'pct': 99.85, 'p_two_sided': 0.003}
+  GOCC_RIBOSOME                                          {'n': 134, 'mean': 0.3143, 'null_mean': -0.1216, 'null_sd': 0.1155, 'pct': 100.0, 'p_two_sided': 0.0}
+  GOBP_TRANSLATION                                       {'n': 191, 'mean': 0.2798, 'null_mean': -0.1675, 'null_sd': 0.105, 'pct': 100.0, 'p_two_sided': 0.0}
+  GOCC_RUFFLE                                            {'n': 27, 'mean': -0.0709, 'null_mean': -0.1712, 'null_sd': 0.3475, 'pct': 60.45, 'p_two_sided': 0.791}
+  GOBP_ACTIN_FILAMENT_ORGANIZATION                       {'n': 65, 'mean': 0.1675, 'null_mean': -0.2527, 'null_sd': 0.2334, 'pct': 97.05, 'p_two_sided': 0.059}
+  GOCC_MITOCHONDRION                                     {'n': 191, 'mean': -0.1445, 'null_mean': -0.2282, 'null_sd': 0.1237, 'pct': 75.45, 'p_two_sided': 0.491}
+  GOCC_SMC5_SMC6_COMPLEX                                 {'n': 6, 'mean': 3.9763, 'null_mean': 0.035, 'null_sd': 0.8016, 'pct': 100.0, 'p_two_sided': 0.0}
+  GOCC_SUMO_LIGASE_COMPLEX                               {'n': 6, 'mean': 3.9763, 'null_mean': 0.03, 'null_sd': 0.782, 'pct': 100.0, 'p_two_sided': 0.0}
+  GOBP_PROTEASOMAL_PROTEIN_CATABOLIC_PROCESS             {'n': 75, 'mean': -1.0662, 'null_mean': -0.3642, 'null_sd': 0.2095, 'pct': 0.0, 'p_two_sided': 0.0}
+  GOBP_PROTEIN_CATABOLIC_PROCESS                         {'n': 111, 'mean': -0.8389, 'null_mean': -0.3459, 'null_sd': 0.174, 'pct': 0.3, 'p_two_sided': 0.006}
+  GOBP_MACROAUTOPHAGY                                    {'n': 31, 'mean': -1.1626, 'null_mean': -0.2758, 'null_sd': 0.3376, 'pct': 0.8, 'p_two_sided': 0.016}
+
+UNBIASED: 1276 terms, continuous statistic (300 draws each for speed)

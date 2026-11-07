@@ -46,3 +46,35 @@ artefact we feared. The error was registering them without checking the instrume
 **Before a pre-registration is committed, confirm every named control protein appears in the data the
 test will read.** A control that cannot fail is not a control, and it is worse than no control, because
 it launders an untested claim as a checked one.
+
+## 8. Before committing a registration, check that every registered outcome is reachable
+
+Learned by breaking it twice in one day, in opposite directions (#188, #204).
+
+A gate exists to make a result independent of what we hoped for. A gate with only one reachable answer
+does the opposite: it launders a foregone conclusion as a checked one. We built both kinds:
+
+- **A control that could only PASS.** The SMC5/6 specificity control required that fewer than two of
+  cohesin and condensin's subunits be vault interactors. All four were absent from that instrument's
+  detected proteome, so the rule could not have failed. Rule 7 came from this.
+- **A kill condition that could only KILL.** The translation replication test dichotomised a continuous
+  measurement at `LWTP > 1.3`. Its critical value was 12 observed against 6.94 expected, it had **19%
+  power at the effect actually present**, and we recorded a kill at p = 0.195. The continuous statistic
+  the cut discarded was a **+0.544 log2 shift at p = 0.004**. The signal was there the whole time.
+
+**Three pre-flight checks, all cheap, all done before the registration is committed:**
+
+1. **Minimum detectable effect.** Compute the effect size the test has 80% power for, and write it into
+   the registration. If that number is larger than the effect you are adjudicating, you are registering
+   a foregone "kill".
+2. **Ceiling.** Compute the largest effect the instrument can express. Our pulldown's maximum
+   fold-enrichment is 88/6.94 = **12.7x**, so the 18x co-elution figure it was supposed to adjudicate
+   was never a quantity it could have returned. A test that cannot express the estimand is not a test of
+   it.
+3. **Don't dichotomise a continuous measurement.** If the data are continuous, the registered primary
+   statistic should be continuous. Where a threshold is genuinely required, register the continuous
+   statistic alongside it and report both — a disagreement between them is the finding.
+
+And when a correction arrives in the direction you wanted, **apply it to every claim it touches,
+including the ones you would rather keep.** Applying a rule in one direction only is the same error as
+having no rule, and it is harder to see because each individual step looks principled.
