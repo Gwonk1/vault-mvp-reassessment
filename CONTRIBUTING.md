@@ -33,7 +33,7 @@ papers can be checked without any of this**; the data is only needed to recomput
 6. **Corrections go next to the original claim**, struck through, with the reason. Nothing is silently
    amended; `LEDGER.md` is the record of being wrong as much as of being right.
 
-## 7. Verify a control protein is present in the instrument's universe before registering it
+### 7. Verify a control protein is present in the instrument's universe before registering it
 
 Learned by breaking it (#188). We registered a specificity control requiring that fewer than two of
 cohesin and condensin's subunits be vault interactors. All four turned out to be absent from the IP-MS
@@ -47,7 +47,7 @@ artefact we feared. The error was registering them without checking the instrume
 test will read.** A control that cannot fail is not a control, and it is worse than no control, because
 it launders an untested claim as a checked one.
 
-## 8. Before committing a registration, check that every registered outcome is reachable
+### 8. Before committing a registration, check that every registered outcome is reachable
 
 Learned by breaking it twice in one day, in opposite directions (#188, #204).
 
