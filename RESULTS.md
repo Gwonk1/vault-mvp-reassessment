@@ -358,6 +358,16 @@ square angstroms at both 1.4 and 2.5 angstrom probe radii, with a maximum exteri
 straddles the midsurface (my residues W545 +1.8, F547 +7.8 outward; all ligand atoms inward), but it
 opens only to the lumen.
 
+**Correction, 2026-11-07 (ledger #61).** I went one step further than this and inferred that the
+particle must therefore *open* to admit NAD+. That inference is wrong, and the test could not have
+supported it: Test A5 sealed the z-ends of the shoulder band, so it measured radial wall crossing only.
+The assembled cage has openings at its C-terminal caps (Lodwick 2025 Supp. Fig. 4a) and breathes at the
+waist (Collins 2026), and published ITC and soaking experiments put free NAD+ and an NAD+ analogue in
+the shoulder pocket of intact cages in neutral buffer with no trigger, with purified MVP+TEP1 vaults
+hydrolysing added NAD(P)+ (Osinski 2026 Fig. 5G, 6A). **The result here is that the transmural
+shoulder-pore hypothesis is dead and the pocket is lumen-loaded. Particle opening gates macromolecular
+traffic - PARP4, TEP1, vtRNA, ADP-ribosylated targets - not the 663-Da substrate.**
+
 ### Limits
 
 4V60 is rat and lacks both the bound ADP-ribose and the PARP4 density, so 12a measures the apo shell.
