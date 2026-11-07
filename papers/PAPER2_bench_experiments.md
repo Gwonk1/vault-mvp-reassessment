@@ -109,8 +109,8 @@ exchange rather than pocket filling. Use wild-type against pocket mutants (F547A
 a bulky lumenal sensor that would itself change lumenal crowding. Pair with cryo-EM or HS-AFM on the
 same conditions.
 **Positive control:** low pH, where opening is already published, must produce the macromolecular
-uptake the physiological conditions are being tested for - otherwise a null across the
-physiological panel is uninterpretable.
+uptake the physiological conditions are being tested for - otherwise a null across the physiological
+panel is uninterpretable.
 **Kill condition:** no physiological condition increases macromolecular occupancy above baseline and
 no condition accelerates ADP-ribose release, with the pocket mutant indistinguishable from
 wild-type.
@@ -151,9 +151,9 @@ association (rho = -0.374, p = 0.001) fails to replicate across the six cohorts 
 ADP-ribose, non-hydrolysable analogues), ionic strength and MVP abundance. Does ligand occupancy set
 residence time?
 **Positive control:** the free and particle-associated PARP4 pools must separate cleanly on the same
-gradient, and a subunit of known permanent residence - MVP itself - must show no exchange in the same
-chase. Without that separation this assay cannot distinguish pool turnover from docked exchange,
-which is exactly the ambiguity it exists to resolve.
+gradient, and a subunit of known permanent residence - MVP itself - must show no exchange in the
+same chase. Without that separation this assay cannot distinguish pool turnover from docked
+exchange, which is exactly the ambiguity it exists to resolve.
 **Kill condition:** PARP4 residence is invariant to lumenal occupancy.
 
 ### 5. Does TEP1 bind misfolded noncoding RNA, as its only paralog does?
@@ -204,18 +204,38 @@ every stimulus and timepoint. That retires the signalling-brake layer.
 ## Tier 3 - cheap, and each closes a loop
 *(Experiment 10 is strictly conditional on experiment 1 returning positive; experiment 6 is last.)*
 
-### 9. Where the vault actually sits, by cell type
-**Decides:** which cell type the field's canonical abundance figure actually describes, and whether
-the lung association has any cellular basis.
-**Why now:** whole-organ expression put adrenal gland and the colon-duodenum axis above lung,
-contradicting a widely repeated claim. Bulk tissue cannot separate bronchial epithelium from
-alveolar parenchyma.
-**Design:** quantitative imaging or single-cell proteomics across adrenal cortex, intestinal
-epithelium and airway, to establish which cell type carries the 10^5 copies.
-**Positive control:** a protein of known cell-type restriction in the same sections - chromogranin A
-for adrenal medulla, villin for enterocytes - must resolve to its expected compartment.
-**Kill condition:** MVP is uniform across cell types within each organ, which would make the whole
-tissue ranking a composition artefact and retire the adrenal and gut leads.
+### 9. Where the vault actually sits, by cell type - promoted on a second look at our own data
+**Decides:** whether the tissue ranking reports parenchyma or infiltrate, which determines whether
+any tissue-level reasoning about vaults is worth doing at all.
+**Why now - and this is a stronger reason than we first gave.** Whole-organ expression puts adrenal
+gland (176 nTPM) and the colon-small intestine-duodenum axis (162/157/146) above lung (120, rank 5
+of 51). The intuitive reading is barrier and xenobiotic exposure. Our own co-expression analysis
+argues against it: across tissues, MVP abundance tracks **immunoglobulin and plasma-cell genes** -
+`GOCC_IMMUNOGLOBULIN_COMPLEX` at 70 of 143 genes, p = 9.3e-98, with 13 of 15 significant GO terms
+immune and the top 30 co-expressed genes dense with IGHV and IGKV segments. The gut lamina propria
+is the largest plasma-cell reservoir in the body, and lung carries its own lymphoid tissue. **The
+barrier-tissue rankings are therefore the ones most likely to be composition artefacts.**
+**The adrenal gland is the residual, and that is the point.** It is not a plasma-cell-rich tissue,
+so the confound that plausibly accounts for ranks 2 through 5 does not account for rank 1. Adrenal
+is the one place in the top five where the signal may be parenchymal. We have no explanation for it:
+the obvious candidate failed its own pre-registered test, since adrenal cortex is among the most
+NADPH-demanding tissues in the body and the vault's invariant pocket binds NAD+/ADP-ribose, yet only
+2 of 22 NAD-metabolism genes appear in MVP's top 200 against a registered requirement of 3. No
+steroid, cytochrome-P450 or xenobiotic term reached significance either.
+**Design:** cell-type-resolved MVP by quantitative imaging or single-cell proteomics in three
+tissues chosen to separate the hypotheses - **adrenal cortex** (parenchymal candidate, plasma-cell
+poor), **colonic mucosa** (epithelium against lamina propria plasma cells, scored separately), and
+**airway** (bronchial epithelium against alveolar parenchyma). Co-stain a plasma-cell marker
+(CD138/MZB1) so the infiltrate contribution is measured rather than assumed.
+**Positive control:** proteins of known cell-type restriction in the same sections - chromogranin A
+for adrenal medulla, villin for enterocytes, CD138 for plasma cells - must each resolve to the
+expected compartment before any MVP number is read.
+**Kill condition:** MVP localises to plasma cells in gut and is not enriched in adrenal cortical
+cells. That would make the entire tissue ranking an infiltrate artefact, retire both the barrier and
+the adrenal readings, and invalidate tissue-level reasoning about vaults generally - including ours.
+**Why it is worth running even though it decides no mechanism:** every tissue-level argument in the
+vault literature, and several of ours, assumes the organ ranking describes the organ's own cells.
+That assumption has never been tested and one experiment settles it.
 
 ### 8. Anti-MVP serology with La as internal control
 **Decides:** whether anti-MVP autoreactivity tracks anything mechanistic, now that its existence is

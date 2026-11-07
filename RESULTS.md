@@ -768,6 +768,28 @@ It does sharpen one thing: MVP's tissue distribution is essentially "mucosal and
 phenotype and with the gut/adrenal ranking, but tissue co-expression at n = 51 cannot distinguish a
 barrier role from barrier tissue composition.
 
+**Added 2026-11-07, not pre-registered: the adrenal gland is the residual this confound does not
+explain.** Reading the two results together — lung rank 5 of 51 behind adrenal 176, colon 162, small
+intestine 157 and duodenum 146 (§21), and a tissue profile dominated by plasma-cell immunoglobulin at
+p = 9.3e-98 (above) — inverts the obvious interpretation. The intuitive reading of that ranking is
+barrier and xenobiotic exposure, and the barrier tissues are precisely the ones a plasma-cell confound
+would lift: the gut lamina propria holds the body's largest plasma-cell population and lung carries its
+own lymphoid tissue. **Adrenal gland is not plasma-cell rich**, so whatever accounts for ranks 2 through
+5 does not account for rank 1. The tissues that are easy to explain are the suspicious ones; the tissue
+that is hard to explain is the one where the signal may be parenchymal.
+
+We have no explanation for adrenal, and the obvious candidate is the one this very section killed:
+adrenal cortex runs enormous P450 and NADPH flux and the vault pocket binds NAD+/ADP-ribose, yet NAD
+metabolism failed its registered threshold, and no steroid, P450 or xenobiotic GO term reached
+significance at all (13 of 15 significant terms are immune, the others being blood microparticle and
+antimicrobial humoral response). Individual steroid and sulfation genes do sit high in the ranked list,
+but naming them here would be reading a sorted table for a story we already like — the exact fault
+recorded as #59, #60, #64 and #70 — so they are logged as a hypothesis to register, not as support.
+
+This is an observation about a confound, not a finding about function, and it is why `PAPER2` experiment
+9 was promoted: one cell-type-resolved experiment decides whether any tissue-level reasoning about
+vaults, ours included, describes the organ's own cells.
+
 ### Limits
 n = 51 tissues is small and highly structured; this design is dominated by tissue specificity. A null
 says the NAD link does not appear at tissue resolution — the ligand evidence in §12 is structural and
