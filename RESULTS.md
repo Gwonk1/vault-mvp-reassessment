@@ -2149,13 +2149,36 @@ result is therefore recorded as a **co-migration property, not evidence of physi
 consistent with a 13 MDa particle assembled on and sedimenting with polyribosomes, which is a different
 claim from being attached to them. #168 and #172 are amended accordingly.
 
-### 41a. A power caveat that does not rescue it
+### 41a. The power caveat was wrong, and the null is stronger than we said
 
-With 88 interactors and 95 term members in the universe, the expected count is 6.94 and the observed 9.
-**This test could not have detected a modest enrichment**; it is only powered for a large one. So "does
-not replicate" is partly "could not test at this effect size", and we state that rather than implying a
-clean refutation. But the registered rule was p < 0.05 or kill, the rule is applied as written, and a
-power limitation is not a licence to keep the claim.
+We originally wrote here that the test "could not have detected a modest enrichment; it is only powered
+for a large one." **We computed the power and that was wrong in the direction generous to the dead
+hypothesis.** `src/power41.py`:
+
+With N = 1,205, K = 88 interactors and M = 95 term members, the critical value at α = 0.05 is **12
+observed (1.73x)**, and the test had:
+
+| true enrichment | expected obs | power |
+|---|---|---|
+| 1.5x | 10.4 | 0.34 |
+| **2.09x** | **14.5** | **0.80** |
+| 2.5x | 17.3 | 0.95 |
+| 3.0x | 20.8 | **0.99** |
+| 4.0x | 27.8 | 1.00 |
+
+**80% power at 2.09x, and essentially certain detection at 3x and above.** 2.09x is a modest effect, not
+a large one, so the original caveat understated the test. The observed 9 is 1.30x — below even the
+critical value.
+
+One honest qualification: §40's "18x" is an enrichment within a co-elution tail *ranking*, which is not
+the same quantity as a hypergeometric fold-enrichment in an interactor set, so the two numbers are not
+directly comparable and we do not claim 18x against 2.09x as a like-for-like contrast. What we can say
+is that **the replication test was well powered for any ordinary physical association**, and a null here
+is a real negative rather than a shrug. The registered kill condition was therefore not merely applied
+as a rule — it was applied to an adequately powered test.
+
+(The exact hypergeometric p for 9 of 95 is 0.251; the registered permutation test gave 0.195. Both are
+correct for what they measure — the permutation version is abundance-matched and is the registered one.)
 
 ### 41b. The amoeba observation, and why we are not using it
 

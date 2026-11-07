@@ -1,0 +1,20 @@
+universe N=1205  interactors K=88  term members M=95
+expected under null = 6.94
+critical value (smallest significant obs at alpha=0.05) = 12  -> fold = 1.73x
+observed in section 41 = 9  -> fold = 1.30x,  p = 0.251
+
+power curve (binomial approximation, p_hit = f * K/N):
+   1.0x  expected obs   6.9   power = 0.044
+   1.5x  expected obs  10.4   power = 0.344
+   2.0x  expected obs  13.9   power = 0.748
+   2.5x  expected obs  17.3   power = 0.948
+   3.0x  expected obs  20.8   power = 0.993
+   3.5x  expected obs  24.3   power = 0.999
+   4.0x  expected obs  27.8   power = 1.000
+   5.0x  expected obs  34.7   power = 1.000
+
+=> 80% power requires about 2.09x enrichment (14.5 of 95 term members as interactors)
+=> section 40 reported an 18x enrichment in the co-elution tail; this test could see ~2.1x
+
+If the true effect here were the 2x that an association might plausibly give:
+   expected 13.9 of 95, power 0.75
