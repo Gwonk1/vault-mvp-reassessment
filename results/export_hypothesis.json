@@ -1,0 +1,110 @@
+{
+ "gate": true,
+ "terms": {
+  "GOCC_SECRETORY_GRANULE": {
+   "n": 107,
+   "obs": -0.213,
+   "null": -0.2992,
+   "pct": 68.03,
+   "ge": 63950,
+   "p_hi": 0.31975340123299384,
+   "p_lo": 0.6802515987420062
+  },
+  "GOCC_SECRETORY_VESICLE": {
+   "n": 114,
+   "obs": -0.2553,
+   "null": -0.2859,
+   "pct": 56.35,
+   "ge": 87306,
+   "p_hi": 0.4365328173359133,
+   "p_lo": 0.5634721826390868
+  },
+  "GOCC_LATE_ENDOSOME": {
+   "n": 13,
+   "obs": 0.7395,
+   "null": -0.2761,
+   "pct": 97.33,
+   "ge": 5345,
+   "p_hi": 0.026729866350668246,
+   "p_lo": 0.9732751336243318
+  },
+  "GOBP_EXOCYTOSIS": {
+   "n": 17,
+   "obs": 0.0902,
+   "null": -0.1953,
+   "pct": 75.0,
+   "ge": 49997,
+   "p_hi": 0.2499887500562497,
+   "p_lo": 0.7500162499187504
+  },
+  "GOBP_VESICLE_MEDIATED_TRANSPORT": {
+   "n": 100,
+   "obs": -0.327,
+   "null": -0.23,
+   "pct": 29.65,
+   "ge": 140694,
+   "p_hi": 0.7034714826425867,
+   "p_lo": 0.29653351733241334
+  },
+  "GOBP_EXPORT_FROM_CELL": {
+   "n": 37,
+   "obs": 0.0684,
+   "null": -0.2642,
+   "pct": 86.59,
+   "ge": 26827,
+   "p_hi": 0.13413932930335348,
+   "p_lo": 0.8658656706716467
+  },
+  "GOBP_RESPONSE_TO_XENOBIOTIC_STIMULUS": {
+   "n": 30,
+   "obs": -0.5825,
+   "null": -0.2471,
+   "pct": 16.41,
+   "ge": 167177,
+   "p_hi": 0.8358858205708971,
+   "p_lo": 0.16411917940410298
+  },
+  "GOBP_DETOXIFICATION": {
+   "n": 15,
+   "obs": 0.9695,
+   "null": -0.2841,
+   "pct": 99.49,
+   "ge": 1028,
+   "p_hi": 0.005144974275128624,
+   "p_lo": 0.9948600256998715
+  },
+  "GOBP_PROTEASOMAL_PROTEIN_CATABOLIC_PROCESS": {
+   "n": 75,
+   "obs": -1.0662,
+   "null": -0.3627,
+   "pct": 0.17,
+   "ge": 199657,
+   "p_hi": 0.9982850085749572,
+   "p_lo": 0.0017199914000429997
+  },
+  "GOBP_MACROAUTOPHAGY": {
+   "n": 31,
+   "obs": -1.1626,
+   "null": -0.2785,
+   "pct": 0.78,
+   "ge": 198432,
+   "p_hi": 0.992160039199804,
+   "p_lo": 0.007844960775196124
+  },
+  "GOCC_RIBOSOME": {
+   "n": 134,
+   "obs": 0.3143,
+   "null": -0.1205,
+   "pct": 99.91,
+   "ge": 179,
+   "p_hi": 0.0008999955000224999,
+   "p_lo": 0.9991050044749776
+  }
+ },
+ "enriched": [
+  "GOCC_LATE_ENDOSOME",
+  "GOBP_DETOXIFICATION"
+ ],
+ "depleted": [],
+ "verdict": "EXPORT MACHINERY PRESENT: 2/8 terms enriched"
+}

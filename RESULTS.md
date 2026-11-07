@@ -3082,3 +3082,82 @@ to a median of 70 (§52b) is still unnamed, and because the one contact instrume
 it does not (§51). **Five eliminations and no promotion is the correct outcome of a method designed to
 make promotion hard**, and it is worth saying plainly that this is what the project looks like when it
 is working rather than when it is stuck.
+
+## 54. The export hypothesis (Graham's), exploratory — and a question the literature has not asked
+
+**This section is EXPLORATORY and unregistered. Nothing in it is promoted.** It is recorded because the
+hypothesis is specific, it makes a prediction testable in data already in hand, and the pattern that
+came back is closer to the prediction than we expected.
+
+### 54a. The hypothesis
+
+If the vault is an export device — if it exists to carry something out of the cell — then a healthy cell
+should not hold loaded vaults, and a loaded one should be got rid of promptly. That predicts vaults in
+secretions and in the gut lumen, and it predicts **disposal by export rather than by degradation**.
+
+### 54b. What the published literature already says
+
+Partly published, and more directly than we expected:
+
+- **MVP loads RNA into exosomes.** Silencing MVP reduces total exosomal RNA, and biotinylated MVP
+  partitions to exosomes.
+- **MVP-dependent loading of the tumour-suppressor miR-193a into exosomes is described as a way cancer
+  cells get rid of it** — knocking out MVP makes miR-193a accumulate in the donor cell and inhibits
+  tumour progression. That is the export-as-disposal model, already in print.
+- **Rome's group reports that human cells release Argonaute 1-4 and MVP independently of exosomes**, so
+  the release route is not the classical exosome pathway.
+- **But a 2025 *Journal of Extracellular Vesicles* study found most vtRNA and MVP in differential-
+  centrifugation pellets are *not* membrane-enclosed or protected** — consistent with free vault
+  particles being co-isolated rather than packaged as vesicle cargo. For this hypothesis that is a
+  point in favour: whole particles appear to get out.
+- **In the Atlantic salmon louse, MVP is a component of extracellular cement material** — a precedent
+  for MVP functioning outside the cell in another animal.
+- Gene annotation places MVP in the **secretory granule lumen**, though by traceable author statement
+  rather than direct measurement, and records high LRP expression in **epithelial cells of the digestive
+  tract**, matching the tissue pattern.
+
+**On the specific question — vaults in feces, gut lumen, or mucus itself — we found nothing.** No study
+reporting MVP in the human fecal proteome or in gut mucus secretions. The nearest result is a 2023
+preprint reporting **MVP genes in bacteriophages from the human gut microbiome**, which concerns phage
+genes rather than host protein in stool. **This appears to be a genuinely unasked question**, and a
+cheap one: published fecal and mucus proteomics datasets exist and could simply be queried for MVP.
+
+### 54c. What our own data says, with its caveats stated first
+
+Caveats, before the numbers: **8 terms, no pre-registration, no multiple-testing correction, two of the
+hits have n = 13 and n = 15, and the length-and-charge control that destroyed the translation finding in
+§51 has not been applied here.** Empirical nulls, 200,000 draws, vault-core gate passed (2 of 200,000).
+
+| term | n | observed | matched null | percentile | p |
+|---|---|---|---|---|---|
+| **`GOBP_DETOXIFICATION`** | 15 | **+0.970** | −0.284 | **99.5** | **0.005** |
+| **`GOCC_LATE_ENDOSOME`** | 13 | **+0.740** | −0.276 | **97.3** | **0.027** |
+| `GOBP_EXPORT_FROM_CELL` | 37 | +0.068 | −0.264 | 86.6 | 0.134 |
+| `GOBP_EXOCYTOSIS` | 17 | +0.090 | −0.195 | 75.0 | 0.250 |
+| `GOCC_SECRETORY_GRANULE` | 107 | −0.213 | −0.299 | 68.0 | 0.320 |
+| `GOCC_SECRETORY_VESICLE` | 114 | −0.255 | −0.286 | 56.4 | 0.437 |
+| `GOBP_VESICLE_MEDIATED_TRANSPORT` | 100 | −0.327 | −0.230 | 29.6 | 0.703 |
+| `GOBP_RESPONSE_TO_XENOBIOTIC_STIMULUS` | 30 | −0.583 | −0.247 | 16.4 | 0.836 |
+
+Under a crude Bonferroni across the eight, **detoxification survives (0.005 × 8 = 0.04) and late
+endosome does not (0.22).**
+
+**The shape of the result is what makes it interesting rather than either hit on its own.** Set beside
+§49c's reference points:
+
+- **classical secretion machinery is not near the vault** — secretory granule, secretory vesicle,
+  exocytosis and vesicle-mediated transport all unremarkable or below the null
+- **the late endosome is** (+0.740) — the multivesicular-body route, which is the non-classical exit
+- **detoxification enzymes are** (+0.970), the strongest hit in the set
+- **degradation machinery is the most depleted thing in the entire 1,276-term scan** — proteasomal
+  catabolism −1.066 at the 0.2nd percentile, macroautophagy −1.163 at the 0.8th
+
+So: not degraded, not classically secreted, but sitting near the non-classical exit route and near
+detoxification chemistry. **That is the hypothesis's prediction, arrived at from the other direction.**
+It is also exactly the kind of coherent story this project has been wrong about five times today, which
+is why §55 registers the real test instead of claiming this one.
+
+One tension worth naming: **`GOBP_RESPONSE_TO_XENOBIOTIC_STIMULUS` is the *lowest* term in the set**
+(16.4th percentile, −0.583) while `GOBP_DETOXIFICATION` is the highest. Those two should move together
+under any simple reading of a drug-efflux role, and they do not. Fifteen proteins against thirty, so
+this may be noise — but it is the first thing a reviewer should attack.
