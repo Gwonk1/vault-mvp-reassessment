@@ -1,0 +1,18 @@
+IP-MS universe: 1205 proteins | columns: ['KD-H6-1', 'KD-H6-2', 'KD-H6-3', 'KD-VM1-1', 'KD-VM1-2', 'KD-VM1-3', 'WT-H6-1', 'WT-H6-2', 'WT-H6-3', 'WT-VM1-1', 'WT-VM1-2', 'WT-VM1-3', 'KDLFC1', 'KDLFC2', 'KDLFC3', 'WTLFC1', 'WTLFC2', 'WTLFC3', 'KD_LFC', 'WT_LFC', 'LKDP', 'LWTP', 'KD1', 'KD2', 'KD3', 'WT1', 'WT2', 'WT3', 'WTKD_LFC1', 'WTKD_LFC2', 'WTKD_LFC3', 'WTKD_LFC', 'WTKD_P']
+WT vault interactors (WT_LFC>0 & LWTP>1.3): 88
+GATE core recovery: {'MVP': {'WT_LFC': 7.622, 'LWTP': 3.798, 'interactor': True}, 'PARP4': {'WT_LFC': 8.657, 'LWTP': 3.32, 'interactor': True}, 'TEP1': {'WT_LFC': 6.268, 'LWTP': 3.334, 'interactor': True}}
+  3/3 of MVP/PARP4/TEP1 meet interactor criteria -> PASS
+no intensity column found; using table order as the abundance proxy
+
+PRIMARY GOBP_CYTOPLASMIC_TRANSLATION: {'n_in_universe': 95, 'obs': 9, 'exp': 6.94, 'p': 0.195}
+context (no registered threshold):
+  GOCC_RIBOSOME                        {'n_in_universe': 134, 'obs': 11, 'exp': 9.79, 'p': 0.545}
+  GOBP_TRANSLATION                     {'n_in_universe': 191, 'obs': 15, 'exp': 13.95, 'p': 0.53}
+  GOCC_RUFFLE                          {'n_in_universe': 27, 'obs': 1, 'exp': 1.97, 'p': 0.85}
+  GOBP_ACTIN_FILAMENT_ORGANIZATION     {'n_in_universe': 65, 'obs': 7, 'exp': 4.75, 'p': 0.195}
+  GOCC_MITOCHONDRION                   {'n_in_universe': 191, 'obs': 17, 'exp': 13.95, 'p': 0.275}
+
+VERDICT: KILL CONDITION MET - does not replicate; translation tail is co-migration, not contact
+
+Instrument B (amoeba top60, descriptive): ribosomal entries = [('RPL38', 1.88), ('RPL10A', 1.73), ('RPL14', 1.51), ('RPL21', 1.5), ('RPLP2', 1.48), ('RPS10', 1.41), ('RPL12', 1.38), ('RPL30', 1.37), ('RPS29', 1.37), ('RPS4', 1.34), ('RPL35', 1.3)]
+Instrument C (BioPlex, descriptive): translation/ribosome partners = none

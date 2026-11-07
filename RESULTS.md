@@ -2123,3 +2123,74 @@ Limits, all live:
 4. **Our expectation was wrong twice over**, which is the correct reason to trust the result more and our
    judgement about it less. The registered prediction said MVP would be unremarkable and the glycolytic
    controls elevated; the data said the reverse on both counts.
+
+## 41. The translation result does NOT replicate in the contact instrument — and the temptation to rescue it is the finding
+
+`IPMS_TRANSLATION_PREREGISTRATION.md`. The registered kill condition fired.
+
+**The gate passed emphatically.** The anti-MVP pulldown recovers all three vault components, not two:
+MVP (WT_LFC 7.62, LWTP 3.80), PARP4 (8.66, 3.32), TEP1 (6.27, 3.33). This experiment unambiguously
+captures the particle.
+
+**Primary: no translation enrichment.** Among the 88 WT vault interactors of 1,205 proteins, against 200
+size- and abundance-matched random sets drawn from the IP-MS universe itself:
+
+| term | in universe | observed | expected | p |
+|---|---|---|---|---|
+| `GOBP_CYTOPLASMIC_TRANSLATION` | 95 | 9 | 6.94 | **0.195** |
+| `GOCC_RIBOSOME` | 134 | 11 | 9.79 | 0.545 |
+| `GOBP_TRANSLATION` | 191 | 15 | 13.95 | 0.530 |
+| `GOCC_RUFFLE` | 27 | 1 | 1.97 | 0.850 |
+| `GOBP_ACTIN_FILAMENT_ORGANIZATION` | 65 | 7 | 4.75 | 0.195 |
+| `GOCC_MITOCHONDRION` | 191 | 17 | 13.95 | 0.275 |
+
+**Nothing is enriched** — not translation, not actin, not mitochondria. Per the registration, §40's
+result is therefore recorded as a **co-migration property, not evidence of physical association**:
+consistent with a 13 MDa particle assembled on and sedimenting with polyribosomes, which is a different
+claim from being attached to them. #168 and #172 are amended accordingly.
+
+### 41a. A power caveat that does not rescue it
+
+With 88 interactors and 95 term members in the universe, the expected count is 6.94 and the observed 9.
+**This test could not have detected a modest enrichment**; it is only powered for a large one. So "does
+not replicate" is partly "could not test at this effect size", and we state that rather than implying a
+clean refutation. But the registered rule was p < 0.05 or kill, the rule is applied as written, and a
+power limitation is not a licence to keep the claim.
+
+### 41b. The amoeba observation, and why we are not using it
+
+Instrument B was registered as **descriptive only, with no statistic to be computed**, because n = 60
+and because #42 records this project producing a meaningless result by matching gene symbols across
+species. Having committed to that, here is what the list contains:
+
+**Eleven of the 60 top MVPA-proximal proteins in *Dictyostelium* are ribosomal** — RPL38 (+1.88),
+RPL10A (+1.73), RPL14 (+1.51), RPL21 (+1.50), RPLP2 (+1.48), RPS10 (+1.41), RPL12 (+1.38), RPL30
+(+1.37), RPS29 (+1.37), RPS4 (+1.34), RPL35 (+1.30).
+
+**That is 18% of the list, and it is exactly what we would want to see.** It is also from a covalent
+in-cell proximity label applied before lysis, which captures associations that an IP wash removes — a
+mechanistically real difference, and one §32's registration already noted for a different purpose.
+
+**We are not using it, and naming why is the point of this section.** We pre-committed not to test that
+list because we judged in advance that we could not interpret it. The primary instrument then failed,
+and the amoeba list now looks supportive. Reaching for it at this moment — after the registered test
+returned the unwelcome answer — would be precisely the behaviour the pre-registration exists to prevent,
+and it would be the fourth time tonight we were tempted to promote something because it fit
+(#152, #157, #110, and now this). **The observation is recorded, unregistered and uninterpreted, for
+someone else to test properly with orthology rather than symbol matching.**
+
+Instrument C (BioPlex AP-MS, 15 HEK293T and 28 HCT116 MVP interactions) contains **no** translation or
+ribosome partners. Descriptive, and with those counts it means little either way.
+
+### 41c. Where the translation lead now stands
+
+- **§40 stands as measured:** MVP's co-elution tail is specifically translation-enriched at the 98th
+  percentile among 150 comparable seeds, with abundant and SPFH controls unremarkable. That number is
+  not in question.
+- **§41 bounds what it means:** the association does not appear in a wash-based pulldown that
+  successfully recovers all three vault subunits, so it is not demonstrated contact.
+- **The honest synthesis is the same one §38 forced on cortical actin**, and it is now the third time:
+  a real, specific, replicable co-migration signal with no corresponding physical association.
+  Co-abundance, co-fractionation and co-elution tails all report where things are and how they move,
+  not what holds them together. **Only MVP-PARP4-TEP1 appears in both kinds of instrument** — and in
+  this IP-MS all three come down together at LWTP > 3.3.
