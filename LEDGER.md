@@ -102,6 +102,11 @@ Status key: ~~**STRUCK**~~ eliminated · **WEAKENED** damaged but alive · **STA
 
 | # | Item | Status | Evidence |
 |---|---|---|---|
+| 55 | ~~Phosphorylation proves assembled vaults open in vivo~~ | **NO EVIDENCE.** S585 is mid-wall in 11JB (depth 0.51, 116 atoms blocking outward) and my script printed SHELL MUST OPEN — **but S585 appears in only 1 of 7 CPTAC cohorts**, failing the written "reproducible" requirement. The reproducible sites (S445, S864-S876) are all unresolved/disordered, hence accessible. Phospho cannot carry this claim. | `results/phospho_steric.json` |
+| 56 | **MVP has a disordered, multiply-phosphorylated C-terminal tail (S864-S876) seen in 5 of 7 cohorts** | Descriptive, new, untested. Unresolved in every vault structure solved. A flexible poly-phosphorylated tail is a regulatory motif and nobody has asked what binds it. | `results/phospho_steric.csv` |
+
+| # | Item | Status | Evidence |
+|---|---|---|---|
 | 54 | ~~MVP's tissue distribution tracks NAD metabolism~~ | **NOT NAD-LINKED.** 2 of 22 NAD genes in the top 200 (p = 0.031 but rule required k>=3). Gate passed hard (RPL7 -> 21/25 ribosomal). What the profile tracks instead is immunoglobulin/B-cell at 70/143 Ig genes — **plasma-cell content of gut tissue, i.e. composition, not partnership.** Does not touch the structural NAD evidence in #28. | `results/tissue_coexpr.json` |
 | 52 | ~~Lung is the highest-vault tissue~~ | **FALSE.** Lung is rank 5 of 51 (120 nTPM). Top four: adrenal gland 176, colon 162, small intestine 157, duodenum 146. A claim repeated through all five articles and by me all day, unchecked. The LRP name came from lung-cancer drug resistance, not tissue ranking. Real pattern: adrenal + whole GI tract. | `results/tissue_expression.json` |
 | 53 | ~~Pre-eclampsia: placenta is a high-vault tissue~~ | **STRUCK by its own pre-committed criterion** (article 5 experiment 8). Placenta is rank **38 of 51**, 36 nTPM vs adrenal 176. Dead on arrival, as Graham suspected. | `results/tissue_expression.json` |

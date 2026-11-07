@@ -825,3 +825,46 @@ The ordering holds in **every** human cell type measured:
 
 PARP4 < TEP1 < MVP in 4 of 4, with an 8-fold gap in NK cells. #47 stands and is better supported than
 when I wrote it.
+
+## 23. Do vaults open in living tissue? NO EVIDENCE — and the pre-registration is why
+
+`PHOSPHO_PREREGISTRATION.md`, Part 1. A kinase needs roughly 5 A of access to its substrate, so a
+residue that is reproducibly phosphorylated in human tumours yet unreachable in the closed 78-mer would
+be in vivo evidence that assembled vaults open. Modality proposed by argon; design and gates mine.
+
+**The tempting result.** Of MVP's 6 CPTAC-annotated phosphosites, only **S585** is resolved in PDB 11JB.
+It sits at r = 119.8 A in a shell spanning 99-140 A — **fractional depth 0.51, dead centre of the wall**
+— with 116 protein atoms blocking the outward path at kinase scale. My script printed **SHELL MUST OPEN**.
+
+**The coverage check kills it.** My pre-registered rule required a **reproducible** site. Querying all
+seven CPTAC phosphoproteomes:
+
+| Cohort | MVP sites annotated |
+|---|---|
+| LUAD | S445, **S585**, S867, S873, S876 |
+| BRCA | S445, S867, S873, S876 |
+| GBM | S445, S864, S867, S873, S876 |
+| PAAD | S445, S864, S867, S873, S876 |
+| LUSC | S445, S867, S873, S876 |
+| UCEC, COAD | none mapped |
+
+**S585 appears in exactly one cohort of seven.** It is a single-cohort annotation — precisely the
+peptide-mapping ambiguity the pre-registration named as a limit. It is not reproducible, so it cannot
+carry the claim.
+
+And the **reproducible** sites — S445 and the C-terminal cluster S864/S867/S873/S876 — are **all
+unresolved in 11JB**, i.e. in disordered regions, which are typically solvent-exposed and freely
+kinase-accessible.
+
+**Verdict: NO EVIDENCE.** The one occluded site is not reproducible; the reproducible sites cannot be
+placed in the structure. This does not show vaults never open — §12 already showed the ligand pocket is
+lumen-only, so something must admit NAD+ — it shows **phosphorylation cannot be used as the evidence.**
+
+**Descriptive note worth keeping:** MVP's reproducible phosphorylation is concentrated in a
+**C-terminal cluster (S864-S876) that is disordered in every vault structure solved**, plus S445. A
+flexible, multiply-phosphorylated C-terminal tail is a regulatory motif, and no one has asked what
+binds it.
+
+**Why this section exists.** My own script returned SHELL MUST OPEN. The written rule said *reproducible*,
+and checking that one word inverted the answer. Part 2 (phospho-stoichiometry against per-vault PARP4
+loading) was not run — the coverage gate for MVP fails in 2 of 7 cohorts and the key site is singleton.

@@ -1,0 +1,78 @@
+{
+ "verdict": "SHELL MUST OPEN",
+ "occluded_sites": [
+  585
+ ],
+ "sites": [
+  {
+   "site": 445,
+   "status": "not resolved in structure",
+   "aa": NaN,
+   "z": NaN,
+   "r": NaN,
+   "inner": NaN,
+   "outer": NaN,
+   "frac_depth": NaN,
+   "blockers_outward_1p4": NaN,
+   "blockers_outward_5p0": NaN,
+   "blockers_inward_5p0": NaN,
+   "copies": NaN
+  },
+  {
+   "site": 585,
+   "status": NaN,
+   "aa": "SER",
+   "z": -196.8,
+   "r": 119.8,
+   "inner": 99.2,
+   "outer": 139.8,
+   "frac_depth": 0.507,
+   "blockers_outward_1p4": 18.0,
+   "blockers_outward_5p0": 116.0,
+   "blockers_inward_5p0": 320.0,
+   "copies": 78.0
+  },
+  {
+   "site": 867,
+   "status": "not resolved in structure",
+   "aa": NaN,
+   "z": NaN,
+   "r": NaN,
+   "inner": NaN,
+   "outer": NaN,
+   "frac_depth": NaN,
+   "blockers_outward_1p4": NaN,
+   "blockers_outward_5p0": NaN,
+   "blockers_inward_5p0": NaN,
+   "copies": NaN
+  },
+  {
+   "site": 873,
+   "status": "not resolved in structure",
+   "aa": NaN,
+   "z": NaN,
+   "r": NaN,
+   "inner": NaN,
+   "outer": NaN,
+   "frac_depth": NaN,
+   "blockers_outward_1p4": NaN,
+   "blockers_outward_5p0": NaN,
+   "blockers_inward_5p0": NaN,
+   "copies": NaN
+  },
+  {
+   "site": 876,
+   "status": "not resolved in structure",
+   "aa": NaN,
+   "z": NaN,
+   "r": NaN,
+   "inner": NaN,
+   "outer": NaN,
+   "frac_depth": NaN,
+   "blockers_outward_1p4": NaN,
+   "blockers_outward_5p0": NaN,
+   "blockers_inward_5p0": NaN,
+   "copies": NaN
+  }
+ ]
+}
