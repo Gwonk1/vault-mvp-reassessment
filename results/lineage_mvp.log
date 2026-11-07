@@ -1,0 +1,29 @@
+proteins 12096 lines 375
+lineages with n>=5: 20  (n plasma_cell = 6)
+GATE PASS {"MZB1": {"plasma_cell_rank": 1, "n_lineages": 20, "top": "plasma_cell", "pc_z": 3.512}, "XBP1": {"plasma_cell_rank": 4, "n_lineages": 18, "top": "kidney", "pc_z": 0.839}, "SDC1": {"plasma_cell_rank": 1, "n_lineages": 20, "top": "plasma_cell", "pc_z": 1.002}, "PRDM1": {"plasma_cell_rank": 1, "n_lineages": 16, "top": "plasma_cell", "pc_z": 1.483}, "DERL3": "absent from matrix"}
+
+MVP: plasma_cell rank 15 of 20 (median rank 10.5) z=-0.454
+VERDICT: INFILTRATE NOT SUPPORTED - kill condition met
+
+full MVP lineage ranking (mean z):
+LINEAGE
+kidney                    1.220
+central_nervous_system    0.782
+pancreas                  0.718
+gastric                   0.532
+colorectal                0.316
+upper_aerodigestive       0.280
+skin                      0.195
+urinary_tract             0.045
+lung                      0.043
+soft_tissue               0.042
+ovary                    -0.088
+breast                   -0.190
+liver                    -0.202
+esophagus                -0.371
+plasma_cell              -0.454
+prostate                 -0.455
+bone                     -0.476
+lymphocyte               -0.854
+uterus                   -0.932
+blood                    -1.206

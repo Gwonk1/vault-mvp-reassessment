@@ -1,0 +1,58 @@
+{
+ "gate": true,
+ "gate_detail": {
+  "MZB1": {
+   "plasma_cell_rank": 1,
+   "n_lineages": 20,
+   "top": "plasma_cell",
+   "pc_z": 3.512
+  },
+  "XBP1": {
+   "plasma_cell_rank": 4,
+   "n_lineages": 18,
+   "top": "kidney",
+   "pc_z": 0.839
+  },
+  "SDC1": {
+   "plasma_cell_rank": 1,
+   "n_lineages": 20,
+   "top": "plasma_cell",
+   "pc_z": 1.002
+  },
+  "PRDM1": {
+   "plasma_cell_rank": 1,
+   "n_lineages": 16,
+   "top": "plasma_cell",
+   "pc_z": 1.483
+  },
+  "DERL3": "absent from matrix"
+ },
+ "verdict": "INFILTRATE NOT SUPPORTED - kill condition met",
+ "mvp_plasma_cell_rank": 15,
+ "n_lineages": 20,
+ "median_rank": 10.5,
+ "mvp_plasma_cell_z": -0.4537,
+ "n_plasma_cell_lines": 6,
+ "mvp_lineage_z": {
+  "kidney": 1.2203,
+  "central_nervous_system": 0.782,
+  "pancreas": 0.7177,
+  "gastric": 0.5316,
+  "colorectal": 0.316,
+  "upper_aerodigestive": 0.2801,
+  "skin": 0.1947,
+  "urinary_tract": 0.0451,
+  "lung": 0.0428,
+  "soft_tissue": 0.0422,
+  "ovary": -0.0885,
+  "breast": -0.1902,
+  "liver": -0.2023,
+  "esophagus": -0.3706,
+  "plasma_cell": -0.4537,
+  "prostate": -0.4547,
+  "bone": -0.4763,
+  "lymphocyte": -0.8542,
+  "uterus": -0.9321,
+  "blood": -1.2056
+ }
+}

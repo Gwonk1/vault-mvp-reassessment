@@ -1,0 +1,45 @@
+{
+ "gate": true,
+ "gate_detail": {
+  "EPCAM": {
+   "epithelial": 0.31,
+   "haematopoietic": -0.574,
+   "diff": 0.884
+  },
+  "CDH1": {
+   "epithelial": 0.362,
+   "haematopoietic": -0.771,
+   "diff": 1.133
+  },
+  "KRT8": {
+   "epithelial": 0.336,
+   "haematopoietic": -0.711,
+   "diff": 1.047
+  }
+ },
+ "eta2_class": 0.338,
+ "within_epithelial_spread": 2.1524,
+ "verdict": "H1 LOSES - structure survives within epithelium",
+ "class_means": {
+  "epithelial": 0.0793,
+  "haematopoietic": -0.8378,
+  "mesenchymal": -0.217
+ },
+ "cns_z": 0.782,
+ "epithelial_ranked": {
+  "kidney": 1.2203,
+  "pancreas": 0.7177,
+  "gastric": 0.5316,
+  "colorectal": 0.316,
+  "upper_aerodigestive": 0.2801,
+  "skin": 0.1947,
+  "urinary_tract": 0.0451,
+  "lung": 0.0428,
+  "ovary": -0.0885,
+  "breast": -0.1902,
+  "liver": -0.2023,
+  "esophagus": -0.3706,
+  "prostate": -0.4547,
+  "uterus": -0.9321
+ }
+}

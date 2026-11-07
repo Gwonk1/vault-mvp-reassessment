@@ -768,28 +768,6 @@ It does sharpen one thing: MVP's tissue distribution is essentially "mucosal and
 phenotype and with the gut/adrenal ranking, but tissue co-expression at n = 51 cannot distinguish a
 barrier role from barrier tissue composition.
 
-**Added 2026-11-07, not pre-registered: the adrenal gland is the residual this confound does not
-explain.** Reading the two results together — lung rank 5 of 51 behind adrenal 176, colon 162, small
-intestine 157 and duodenum 146 (§21), and a tissue profile dominated by plasma-cell immunoglobulin at
-p = 9.3e-98 (above) — inverts the obvious interpretation. The intuitive reading of that ranking is
-barrier and xenobiotic exposure, and the barrier tissues are precisely the ones a plasma-cell confound
-would lift: the gut lamina propria holds the body's largest plasma-cell population and lung carries its
-own lymphoid tissue. **Adrenal gland is not plasma-cell rich**, so whatever accounts for ranks 2 through
-5 does not account for rank 1. The tissues that are easy to explain are the suspicious ones; the tissue
-that is hard to explain is the one where the signal may be parenchymal.
-
-We have no explanation for adrenal, and the obvious candidate is the one this very section killed:
-adrenal cortex runs enormous P450 and NADPH flux and the vault pocket binds NAD+/ADP-ribose, yet NAD
-metabolism failed its registered threshold, and no steroid, P450 or xenobiotic GO term reached
-significance at all (13 of 15 significant terms are immune, the others being blood microparticle and
-antimicrobial humoral response). Individual steroid and sulfation genes do sit high in the ranked list,
-but naming them here would be reading a sorted table for a story we already like — the exact fault
-recorded as #59, #60, #64 and #70 — so they are logged as a hypothesis to register, not as support.
-
-This is an observation about a confound, not a finding about function, and it is why `PAPER2` experiment
-9 was promoted: one cell-type-resolved experiment decides whether any tissue-level reasoning about
-vaults, ours included, describes the organ's own cells.
-
 ### Limits
 n = 51 tissues is small and highly structured; this design is dominated by tissue specificity. A null
 says the NAD link does not appear at tissue resolution — the ligand evidence in §12 is structural and
@@ -950,3 +928,176 @@ assembly, partner exchange, or shell opening** — at least not detectably acros
 and it was aimed squarely at the live question from #47: what drives the 22-hour PARP4 exchange on a
 66-hour shell. The answer is not phosphorylation of MVP. That exchange is driven by something else —
 ligand occupancy, local concentration, or a modification nobody has catalogued.
+
+## 25. Is the immunoglobulin co-expression caused by plasma cells? NO — and this reverses §22's reading
+
+`ADRENAL_PREREGISTRATION.md`, committed at `64f8ce8` before any stratified MVP value was read.
+
+§22 found MVP's cross-tissue profile dominated by plasma-cell immunoglobulin (70 of 143,
+p = 9.3e-98). Ledger #89, written this morning, read that together with §21's tissue ranking and
+concluded the gut rankings were plasma-cell **infiltrate**, leaving adrenal as the one unexplained
+residual. That reading had two possible causes and I had not separated them: plasma cells being
+intrinsically MVP-rich, or MVP and immunoglobulin merely being high in the same tissues for unrelated
+reasons. Cell lines carry no infiltrate, so lineage-stratified protein discriminates.
+
+**Gate passed emphatically.** Three of four plasma-cell markers put `plasma_cell` first of 20 lineages:
+MZB1 (z = +3.51), SDC1 (+1.00), PRDM1 (+1.48). Lineage identity is fully resolvable at protein level.
+
+**Primary: INFILTRATE NOT SUPPORTED. The pre-registered kill condition fired.** MVP in `plasma_cell`
+lines ranks **15th of 20** lineages at z = **−0.454**, below the median rank of 10.5. All six lines are
+measured, none imputed, and all six are canonical myeloma lines.
+
+The direction is consistent across far more than the six lines the registration worried about —
+**40 immune-lineage lines all point the same way**, while epithelial and glandular lineages run high:
+
+| Lineage | n | mean MVP z |
+|---|---|---|
+| kidney | 12 | **+1.22** |
+| central nervous system | 14 | +0.78 |
+| pancreas | 20 | +0.72 |
+| gastric | 14 | +0.53 |
+| colorectal | 30 | +0.32 |
+| lung | 79 | +0.04 |
+| **plasma cell** | 6 | **−0.45** |
+| lymphocyte | 11 | −0.85 |
+| blood | 23 | **−1.21** |
+
+**What this means, and it is the opposite of what I published this morning.** Plasma cells are
+MVP-*poor*. The immunoglobulin correlation in §22 is a tissue-level coincidence — gut tissue is both
+MVP-rich and plasma-cell-rich, for unrelated reasons — not evidence that the MVP signal comes from the
+plasma cells. **The gut tissue ranking is therefore not an infiltrate artefact, and is most simply read
+as epithelial.** Colorectal, gastric and pancreatic lines are all positive, which independently
+corroborates the bulk ranking rather than undermining it.
+
+**Consequences I am obliged to accept.** Ledger #89's infiltrate framing is withdrawn, and with it the
+claim that adrenal is a distinguished residual: if the whole ranking is parenchymal, adrenal is simply
+the top of a coherent glandular-and-GI series rather than an anomaly needing its own explanation. The
+`PAPER2` experiment 9 rewrite I pushed this morning was built on the infiltrate premise and has been
+corrected. The experiment survives, for a weaker and more honest reason.
+
+**What is still open.** This says nothing about adrenal directly and does not pretend to: there is
+exactly **one** `adrenal_cortex` line in all 1,739 CCLE lines and **zero** with proteomics, which was
+stated in the registration before the test ran. Why adrenal tops 51 tissues remains unexplained, and
+the NAD hypothesis that would have explained it failed in §22. I am not proposing a replacement story;
+kidney at rank 1 among lineages and CNS at rank 2 do not fit a tidy barrier reading, and inventing one
+here would repeat faults #59, #60, #64, #70 and #90.
+
+## 26. Is the lineage pattern just epithelial identity? NO — structure survives within epithelium
+
+`LINEAGE_CLASS_PREREGISTRATION.md`, with the tissue classification fixed before any class statistic was
+computed. This is a confound check, not a hypothesis test: every functional reading of §25's ranking is
+worthless if the ranking is merely epithelial versus not.
+
+**Gate passed.** CDH1 separates epithelial from haematopoietic lineages by +1.13 z and KRT8 by +1.05,
+both clearing the registered 1.0 bar (EPCAM +0.88).
+
+**Primary: H1 LOSES.** Tissue class explains **eta-squared = 0.338** of the between-lineage variance —
+below the registered 0.50 — and the spread *within* the 14 epithelial lineages is **2.15 z**, far above
+the 1.5 threshold set for rejecting the confound. Class means: epithelial +0.079, mesenchymal −0.217,
+haematopoietic −0.838.
+
+So epithelial identity accounts for roughly a third of the pattern, mostly by placing the three
+haematopoietic lineages at the bottom. It cannot account for kidney (+1.22) sitting 2.15 z above uterus
+(−0.93) when both are epithelial, and it is directly contradicted by CNS at **+0.78**, which is not
+epithelial at all.
+
+| epithelial lineage | z | | epithelial lineage | z |
+|---|---|---|---|---|
+| kidney | **+1.22** | | ovary | −0.09 |
+| pancreas | +0.72 | | breast | −0.19 |
+| gastric | +0.53 | | liver | −0.20 |
+| colorectal | +0.32 | | esophagus | −0.37 |
+| upper aerodigestive | +0.28 | | prostate | −0.46 |
+| skin | +0.20 | | uterus | **−0.93** |
+| urinary tract | +0.05 | | | |
+| lung | +0.04 | | | |
+
+**Consequence: functional hypotheses about the ranking remain worth testing.** The kill condition would
+have withdrawn them and did not fire.
+
+**One observation, offered as an observation and not a theory.** Among epithelia the high end is
+digestive, renal and barrier — kidney, pancreas, stomach, colon, upper aerodigestive, skin — and the low
+end is dominated by **hormone-responsive reproductive** epithelium: uterus, prostate, breast, ovary.
+Adrenal, the top tissue overall, is hormone-*producing* rather than hormone-*target*. I am recording
+that because it is a pattern in the ranked list and recording it is cheaper than re-deriving it later,
+**not** because I have tested it. Reading a ranked list for a story I like is fault #59/#60/#64/#70/#90,
+and liver at −0.20 already embarrasses the obvious detoxification reading it might suggest.
+
+## 27. Two corrections from a blind second opinion, both of which cost us
+
+Argon was given §25's and §26's observations with **none** of my hypotheses attached, and asked what
+unifies the pattern. It attested to answering before reading any of today's commits. Two of its findings
+are verified here independently and both damage conclusions I published today.
+
+### 27a. Adrenal is #1 for the *shell* only. The armed holoenzyme peaks in gut.
+
+Reproduced exactly from `data/raw/tissue/rna_tissue_consensus.tsv`. Adrenal gland ranks **1st of 51 for
+MVP, 16th for PARP4 and 21st for TEP1**. The MVP:TEP1 ratio is **23.5 in adrenal against 5.5 in
+duodenum**. Ranking tissues by the three-subunit geometric mean:
+
+| rank | tissue | MVP | PARP4 | TEP1 | holo |
+|---|---|---|---|---|---|
+| 1 | duodenum | 145.6 | 36.6 | 26.3 | **51.9** |
+| 2 | colon | 161.7 | 36.3 | 16.3 | 45.7 |
+| 3 | small intestine | 156.7 | 36.8 | 14.5 | 43.7 |
+| 4 | rectum | 90.6 | 37.1 | 16.8 | 38.4 |
+| 5 | spleen | 111.9 | 24.8 | 14.2 | 34.0 |
+| 6 | lung | 119.8 | 27.1 | 10.3 | 32.2 |
+| 7 | stomach | 101.7 | 32.6 | 9.0 | 31.0 |
+| **8** | **adrenal gland** | **176.2** | 21.6 | 7.5 | **30.6** |
+
+**This dissolves the question we spent the afternoon on.** We treated "why adrenal?" as the anomaly
+demanding explanation, having never once stratified the tissue ranking by the other two subunits. The
+catalytic MVP-PARP4-TEP1 particle concentrates in **gastrointestinal mucosa**, which is where Graham's
+original barrier intuition put it. Adrenal carries an extreme excess of unarmed shell.
+
+### 27b. A cytoplasmic-mass-fraction confound we never considered, and it is larger than the one we did
+
+CCLE proteomics is equal-protein-mass TMT, which mechanically penalises a strictly cytoplasmic complex
+in small nucleus-dominated suspension cells and inflates it in giant-cytoplasm clear-cell renal lines.
+Defining a housekeeping nuclear-to-cytoplasmic proxy as mean z of 88 cytosolic RPL/RPS proteins minus 46
+nuclear HNRNP/SRSF/SF3B/SMC proteins, **that proxy alone explains R² = 0.515 of lineage-mean MVP
+variance** (r = +0.718, p = 3.7e-4; argon's slightly different gene lists give 0.642). At line level
+R² = 0.197 over 375 lines.
+
+For comparison, the epithelial-class confound we *did* pre-register explains η² = 0.338. **We tested the
+smaller confound and missed the larger one.**
+
+Residualising MVP on that proxy at lineage level:
+
+- **kidney collapses from +1.22 to +0.26** — our top lineage was substantially a cytoplasmic-volume
+  artefact of clear-cell histology
+- **skin flips** +0.20 to −0.32; **esophagus flips** −0.37 to +0.19; **bone flips** −0.48 to +0.19
+- **pancreas becomes first** (+0.83), with upper aerodigestive and CNS next
+- **blood (−1.21) and lymphocyte (−0.58) stay firmly lowest**, so that part of the pattern is not the
+  confound
+
+### 27c. Consequences for §25 and §26, stated plainly
+
+**§25 weakens.** `plasma_cell` moves from **−0.454, rank 15 of 20** to **+0.124, rank 8 of 20** — from
+below the median to above it. **The pre-registered kill condition would not have fired on adjusted
+values.** It fired as written on the registered metric, and the registration did not anticipate this
+confound.
+
+What survives: plasma cells are still not MVP-*rich*, and the infiltrate hypothesis needs them to be
+rich to explain gut, so #89's withdrawal stands in substance. What does not survive is my positive claim
+that **plasma cells are MVP-poor**. They are unremarkable. §25's conclusion should have been "no
+evidence plasma cells are MVP-rich", not "plasma cells are MVP-poor".
+
+**§26 weakens further.** Within-epithelial spread falls from **2.152 z to 1.149 z**, which lands inside
+my own pre-registered **"PARTIAL — no functional hypothesis promoted"** band rather than the "H1 loses"
+band. Class η² barely moves (0.338 to 0.324), so tissue class never explained much either way. The
+honest verdict on §26 is partial, not a clean rejection of the confound.
+
+### 27d. The literature answer to the question I called unexplained
+
+**Izquierdo et al., *Am J Pathol* 1996;148(3):877-887 (PMID 8774142)** — "Broad distribution of the
+multidrug resistance-related vault lung resistance protein in normal human tissues and tumors" —
+reported high LRP by immunohistochemistry in **bronchus, digestive tract, renal proximal tubules,
+keratinocytes, macrophages and adrenal cortex**. Verified against the published abstract. It is the same
+paper that identified LRP as the major vault protein.
+
+**The tissue distribution we spent the afternoon rediscovering is that paper's result list, at protein
+level, from 1996.** Sugawara et al. 1997 (*Cancer Lett*) reports adrenal independently. This also
+further undercuts the "nobody checked lung" framing already retracted in #60: the 1996 atlas never
+claimed lung was uniquely highest, and listed adrenal cortex alongside it.

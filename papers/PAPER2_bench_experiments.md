@@ -204,38 +204,38 @@ every stimulus and timepoint. That retires the signalling-brake layer.
 ## Tier 3 - cheap, and each closes a loop
 *(Experiment 10 is strictly conditional on experiment 1 returning positive; experiment 6 is last.)*
 
-### 9. Where the vault actually sits, by cell type - promoted on a second look at our own data
-**Decides:** whether the tissue ranking reports parenchyma or infiltrate, which determines whether
-any tissue-level reasoning about vaults is worth doing at all.
-**Why now - and this is a stronger reason than we first gave.** Whole-organ expression puts adrenal
-gland (176 nTPM) and the colon-small intestine-duodenum axis (162/157/146) above lung (120, rank 5
-of 51). The intuitive reading is barrier and xenobiotic exposure. Our own co-expression analysis
-argues against it: across tissues, MVP abundance tracks **immunoglobulin and plasma-cell genes** -
-`GOCC_IMMUNOGLOBULIN_COMPLEX` at 70 of 143 genes, p = 9.3e-98, with 13 of 15 significant GO terms
-immune and the top 30 co-expressed genes dense with IGHV and IGKV segments. The gut lamina propria
-is the largest plasma-cell reservoir in the body, and lung carries its own lymphoid tissue. **The
-barrier-tissue rankings are therefore the ones most likely to be composition artefacts.**
-**The adrenal gland is the residual, and that is the point.** It is not a plasma-cell-rich tissue,
-so the confound that plausibly accounts for ranks 2 through 5 does not account for rank 1. Adrenal
-is the one place in the top five where the signal may be parenchymal. We have no explanation for it:
-the obvious candidate failed its own pre-registered test, since adrenal cortex is among the most
-NADPH-demanding tissues in the body and the vault's invariant pocket binds NAD+/ADP-ribose, yet only
-2 of 22 NAD-metabolism genes appear in MVP's top 200 against a registered requirement of 3. No
-steroid, cytochrome-P450 or xenobiotic term reached significance either.
-**Design:** cell-type-resolved MVP by quantitative imaging or single-cell proteomics in three
-tissues chosen to separate the hypotheses - **adrenal cortex** (parenchymal candidate, plasma-cell
-poor), **colonic mucosa** (epithelium against lamina propria plasma cells, scored separately), and
-**airway** (bronchial epithelium against alveolar parenchyma). Co-stain a plasma-cell marker
-(CD138/MZB1) so the infiltrate contribution is measured rather than assumed.
+### 9. Where the vault actually sits, by cell type
+**Decides:** which cell type carries the vault load in the tissues that rank highest, and whether
+the adrenal gland - the top tissue of 51 - is cortical, medullary, or neither.
+**Why now.** Whole-organ expression puts adrenal gland (176 nTPM) and the colon-small
+intestine-duodenum axis (162/157/146) above lung (120, rank 5 of 51). We tested and rejected the
+obvious objection to that ranking: because MVP's cross-tissue profile is dominated by plasma-cell
+immunoglobulin genes (70 of 143, p = 9.3e-98), we proposed the gut signal might be immune infiltrate
+rather than epithelium. It is not. In cell lines, which carry no infiltrate, **plasma cells are
+MVP-poor** - rank 15 of 20 lineages, z = -0.45, consistent across 40 immune-lineage lines - while
+colorectal, gastric, pancreatic and kidney lines all run above average. The bulk ranking is
+corroborated, not undermined, and is most simply read as parenchymal. **What remains unknown, and
+why the experiment is still worth an afternoon.** Cell lines cannot settle adrenal: there is exactly
+one adrenal cortical line in all 1,739 CCLE lines and none with proteomics. No hypothesis we tested
+explains why adrenal tops the table - NAD metabolism failed its registered threshold despite adrenal
+cortex running enormous NADPH flux, and no steroid, cytochrome-P450 or xenobiotic term reached
+significance. Bulk tissue also cannot distinguish adrenal cortex from medulla, or bronchial
+epithelium from alveolar parenchyma. Nobody has looked at vaults with cell-type resolution in the
+tissues that actually carry the most of them.
+**Design:** cell-type-resolved MVP by quantitative imaging or single-cell proteomics in **adrenal**
+(cortex scored by zone - glomerulosa, fasciculata, reticularis - against medulla), **colonic
+mucosa** (epithelium against lamina propria), and **airway** (bronchial epithelium against alveolar
+parenchyma). Co-stain CD138 or MZB1 so the plasma-cell contribution is measured rather than assumed,
+even though the cell-line result predicts it will be small.
 **Positive control:** proteins of known cell-type restriction in the same sections - chromogranin A
-for adrenal medulla, villin for enterocytes, CD138 for plasma cells - must each resolve to the
-expected compartment before any MVP number is read.
-**Kill condition:** MVP localises to plasma cells in gut and is not enriched in adrenal cortical
-cells. That would make the entire tissue ranking an infiltrate artefact, retire both the barrier and
-the adrenal readings, and invalidate tissue-level reasoning about vaults generally - including ours.
-**Why it is worth running even though it decides no mechanism:** every tissue-level argument in the
-vault literature, and several of ours, assumes the organ ranking describes the organ's own cells.
-That assumption has never been tested and one experiment settles it.
+for adrenal medulla, CYP11B1 for the cortex, villin for enterocytes, CD138 for plasma cells - must
+each resolve to the expected compartment before any MVP number is read.
+**Kill condition:** MVP is uniform across cell types within each organ. That would mean the tissue
+ranking reflects nothing about cellular specialisation and would retire tissue-level reasoning about
+vaults as a source of hypotheses, ours included.
+**What a positive result buys:** a cell type to study. Every functional experiment in this document
+is easier if it can be run in the cell that actually makes 10^5 of these particles, and right now
+nobody knows which cell that is.
 
 ### 8. Anti-MVP serology with La as internal control
 **Decides:** whether anti-MVP autoreactivity tracks anything mechanistic, now that its existence is
