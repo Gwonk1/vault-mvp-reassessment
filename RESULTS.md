@@ -2179,8 +2179,16 @@ and it would be the fourth time tonight we were tempted to promote something bec
 (#152, #157, #110, and now this). **The observation is recorded, unregistered and uninterpreted, for
 someone else to test properly with orthology rather than symbol matching.**
 
-Instrument C (BioPlex AP-MS, 15 HEK293T and 28 HCT116 MVP interactions) contains **no** translation or
-ribosome partners. Descriptive, and with those counts it means little either way.
+Instrument C (BioPlex AP-MS) contains **no** translation or ribosome partners. Descriptive, and with
+these counts it means little either way.
+
+**Correction, made in §46 while re-reading the primary file.** This section originally said "15 HEK293T
+and 28 HCT116 MVP interactions", taken from the row counts of a collaborator's `bioplex_*` arrays.
+Those arrays hold edges for **all three vault proteins as baits**, not MVP alone. Parsing the BioPlex
+network files directly, **MVP has 8 partners in 293T and 4 in HCT116**; the remaining 7 and 24 rows are
+PARP4 and TEP1 edges. The conclusion of this paragraph is unchanged — there are no translation partners
+either way — but the counts were wrong and overstated. This is the same error as #64: a container's
+label and length were read as its contents without opening it.
 
 ### 41c. Where the translation lead now stands
 
