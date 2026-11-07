@@ -3477,3 +3477,61 @@ and the two terms nearest the non-classical exit route are the two that came up.
 would have tested it does not work at this term size, the two means are carried by three proteins each,
 and two of those are already-known individual interactors. **The hypothesis is not supported and not
 refuted by this analysis, and the honest next step is the bench, not another matching scheme.**
+
+## 58. Why the literature is silent on vaults in stool: the standard workflow discards them
+
+`FECAL_MUCUS_PROTOCOL.md`. **Registered outcome: NO QUALIFYING DATASET.** The question stays open, and
+per the protocol we report that the lookup failed rather than reporting an absence. But the reason it
+failed is informative, and it is not about MVP.
+
+### 58a. The canonical stool-proteome workflow is blind to vaults by construction
+
+Lichtman, Marcobal, Sonnenburg & Elias, *"Host-centric Proteomics of Stool"*, Mol Cell Proteomics 2013;
+**PMID 23982161, PMC3820941, DOI 10.1074/mcp.M113.029967**. The paper's own deposit identifier is
+**PXD000240**, not the PXD000506 we had listed (#235 is corrected accordingly; 506 is the companion).
+
+Its method, quoted from the paper: stool is centrifuged at **2,500 × g and then 35,000 × g**, the
+pellet is **discarded**, and the soluble supernatant is analysed — *"we partitioned microbe-bound
+proteins from the secreted soluble host proteins on which our analysis focused."* Host identifications
+from the supernatant were enriched for *secreted* annotations; the pellet fraction they set aside was
+enriched for *"methylation, acetylation and filament."*
+
+**A 13 MDa 78-mer particle sediments at 35,000 × g.** Differential centrifugation in that range is how
+vaults are *purified*. So the fraction this workflow throws away is precisely the fraction where an
+intact exported vault would be.
+
+**That is a structural answer to the question, and a better one than a protein list.** The silence we
+recorded in #235 is not evidence that vaults are absent from stool; it is what a secretome-focused
+preparation guarantees. By the protocol's gate, the dataset cannot speak to MVP, and we determined that
+from the **methods** rather than from the identification table — a more fundamental disqualification
+than the ACTB/GAPDH check we had registered.
+
+Depth compounds it: the human arm identified **234 host proteins** (the text says 234, the Figure 4
+legend says 244 — an internal inconsistency we could not resolve), with a **core proteome of 57
+proteins** shared across three donors. Even ignoring centrifugation, 234 proteins is far too shallow to
+make an absence meaningful.
+
+### 58b. What we could not reach, stated plainly
+
+The human identification table (Supplemental Table S5) is **not retrievable by automated fetch**. PMC
+serves a bot interstitial in place of the supplementary `.xlsx` files; Europe PMC's supplementary-files
+API returns *"Article with id PMC3820941 is not open access one"*; the publisher copy returns HTTP 403.
+The PRIDE project pages for **PXD021424** and **PXD057120** are JavaScript shells that return a
+44-character document, so their linked publications were not reached either.
+
+**So we have not checked whether MVP, ACTB, GAPDH or HSPA8 appear in any stool protein list.** We are
+recording that as a failure to look, not as a look that found nothing. The distinction is the whole
+reason the protocol separated the two.
+
+### 58c. What this changes
+
+- **#235 stands and is strengthened**: nobody has reported MVP in stool, and we can now say *why* the
+  standard method would not have found it. That makes the question more worth asking, not less.
+- **Our registered expectation was "MVP absent or datasets fail to qualify."** The datasets failed to
+  qualify, for a reason we had not anticipated and which no protein list would have revealed.
+- **Paper 2's Experiment 13 is wrong as written and is corrected**: it must interrogate the
+  **35,000 × g pellet**, not the supernatant. Every published host-centric stool proteome we found
+  discards exactly the material the experiment needs. That is now the experiment's single most
+  important design point, and it is the kind of detail that decides whether a negative means anything.
+- **Mucus remains entirely unexamined.** We have no accession and found no human mucus proteome with a
+  protein list, and we are not substituting a related matrix for it.
