@@ -363,3 +363,38 @@ opens only to the lumen.
 4V60 is rat and lacks both the bound ADP-ribose and the PARP4 density, so 12a measures the apo shell.
 Shell boundaries in 12b are 2nd/98th percentiles of protein atoms in a ±7.5 Å axial slab — crude.
 Conservation localises constraint, not function.
+
+## 13. Cross-test: is the co-abundance module physically vault-associated? NOT CORROBORATED
+
+Pre-registered (`CROSSTEST_PREREGISTRATION.md`). §11 found MVP co-varies with a membrane-repair
+neighbourhood; co-abundance is correlation, so this asks whether an independent **physical** anti-MVP
+IP-MS (Lodwick/Zhao, Nat Commun 2025, 1,205 proteins, WT vs PARP4-depleted) agrees.
+
+Gate passed: MVP (LFC 7.62), PARP4 (8.66), TEP1 (6.27) all recovered as WT interactors, and PARP4 is
+strongly lost in the KD arm (WTKD_LFC 5.51), confirming that arm targets PARP4.
+
+**Primary result: 12 of my top 100 co-abundant proteins are WT vault interactors, against 7.4 expected.
+Hypergeometric p = 0.058.** My pre-registered threshold was p < 0.05. **It failed, so #26 is downgraded.**
+Global agreement is absent as well: Spearman between my co-abundance z and IP enrichment is **+0.019
+(p = 0.52, n = 1,092)**.
+
+**What survives, and it is not nothing:**
+
+| Protein | My co-abundance rank | IP LFC | −log10 p | Physical interactor |
+|---|---|---|---|---|
+| PARP4 | 1 | 8.66 | 3.32 | yes, PARP4-dependent |
+| TEP1 | 2 | 6.27 | 3.33 | yes |
+| ANXA2 | 12 | 1.74 | 2.62 | yes |
+| S100A10 | 65 | 2.11 | 2.69 | yes |
+| CAPNS1 | 7 | 0.48 | 0.29 | no |
+| EHD2 | 1060 | 0.96 | 0.54 | no |
+| EHD4, CAPN2, IQGAP1 | 38, 9, 13 | — | — | not in IP universe |
+
+So the method is sound — it put the two genuine vault subunits at ranks 1 and 2, and both are confirmed
+physically — and **two of the named membrane-repair proteins, ANXA2 and S100A10, are real vault
+interactors.** But the wider neighbourhood is not physically enriched, so the honest reading is that
+most of §11's module reflects **shared regulation rather than contact**.
+
+**Against argon's Tier-1 claim:** PARP4-dependence is not enriched among my top interactors (2 of 12,
+16.7%, versus 18.5% of WT interactors generally). And while S100A10 does fall from +2.11 to −0.66 on
+PARP4 depletion as argon reported, that change has −log10 p = 1.21 (p ≈ 0.062) and is **not significant**.

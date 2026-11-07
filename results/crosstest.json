@@ -1,0 +1,88 @@
+{
+ "shared": 1092,
+ "wt_interactors": 81,
+ "parp4_dependent": 15,
+ "top100_overlap": 12,
+ "expected": 7.417582417582418,
+ "hypergeom_p": 0.05755689869161233,
+ "verdict": "NOT CORROBORATED",
+ "spearman": 0.01946461665044128,
+ "spearman_p": 0.520522173903244,
+ "parp4_dep_in_top": 2,
+ "parp4_dep_rate_top": 0.16666666666666666,
+ "parp4_dep_rate_all": 0.18518518518518517,
+ "named": [
+  {
+   "gene": "ANXA2",
+   "my_rank": 12,
+   "WT_LFC": 1.740733333333333,
+   "negLog10P": 2.6228104063015656,
+   "interactor": true,
+   "PARP4_dep": false
+  },
+  {
+   "gene": "S100A10",
+   "my_rank": 65,
+   "WT_LFC": 2.113966666666666,
+   "negLog10P": 2.6900811353959355,
+   "interactor": true,
+   "PARP4_dep": false
+  },
+  {
+   "gene": "EHD2",
+   "my_rank": 1060,
+   "WT_LFC": 0.9635333333333339,
+   "negLog10P": 0.5387953678047027,
+   "interactor": false,
+   "PARP4_dep": false
+  },
+  {
+   "gene": "EHD4",
+   "my_rank": 38,
+   "WT_LFC": NaN,
+   "negLog10P": NaN,
+   "interactor": null,
+   "PARP4_dep": null
+  },
+  {
+   "gene": "CAPN2",
+   "my_rank": 9,
+   "WT_LFC": NaN,
+   "negLog10P": NaN,
+   "interactor": null,
+   "PARP4_dep": null
+  },
+  {
+   "gene": "CAPNS1",
+   "my_rank": 7,
+   "WT_LFC": 0.47916666666666724,
+   "negLog10P": 0.2946443433165131,
+   "interactor": false,
+   "PARP4_dep": false
+  },
+  {
+   "gene": "IQGAP1",
+   "my_rank": 13,
+   "WT_LFC": NaN,
+   "negLog10P": NaN,
+   "interactor": null,
+   "PARP4_dep": null
+  },
+  {
+   "gene": "PARP4",
+   "my_rank": 1,
+   "WT_LFC": 8.657333333333334,
+   "negLog10P": 3.3199468499402194,
+   "interactor": true,
+   "PARP4_dep": true
+  },
+  {
+   "gene": "TEP1",
+   "my_rank": 2,
+   "WT_LFC": 6.2682,
+   "negLog10P": 3.3340598274807567,
+   "interactor": true,
+   "PARP4_dep": false
+  }
+ ]
+}
