@@ -659,3 +659,38 @@ face.** Co-abundance and proximity see the association; turnover shows it is dyn
 Primary immune cells and hepatocytes, not the lung epithelium where vaults are most abundant.
 Pulse-SILAC conflates degradation with dilution by division. A stably incorporated protein and one that
 is never degraded are indistinguishable here.
+
+## 20. Vaultrc5-knockout mouse: the p62/autophagy buffer does NOT move
+
+`VAULTRC5_PREREGISTRATION.md`. Tests **layer 3** — the barrel sequesters vault RNA, free vault RNA brakes
+p62, so vault RNA availability sets selective-autophagy capacity. A version of this model has been raised within the field but we could find no published test of it; the ledger had it UNTESTED. GSE269048: Vaultrc5-knockout vs floxed
+control, brain and liver, 3 replicates each.
+
+**Gate, per tissue.** In **liver the knockout is confirmed**: Vaultrc5 log2FC **−1.37**, the 0.1st
+percentile of all expressed genes. In **brain Vaultrc5 is undetected** (below 1 CPM), so brain is
+inconclusive — a detection failure, not evidence the knockout failed. My written rule required reduction
+"if it is present in the annotation"; my script required it in *both* tissues and printed UNINFORMATIVE.
+Applying the rule as written, liver is the informative arm. **This is the second time today my code was
+stricter than my own pre-registration** (see §19), and it is logged as a method fault, not a result.
+
+| Gene set | Liver (gate passed) | Brain (inconclusive) |
+|---|---|---|
+| **Autophagy / p62 (17 genes)** | **−0.058, p = 0.46** | −0.061, p = 0.066 |
+| Membrane repair (6) | +0.120, p = 0.0095 | −0.064, p = 0.23 |
+| Interferon (11-16) | −0.009, p = 0.62 | −0.150, p = 0.013 |
+| Vault components (3-4) | −0.317, p = 0.90 | +0.104, p = 0.15 |
+
+**Primary result: NO EFFECT.** Deleting the vault RNA outright does not shift the p62/autophagy program
+in the tissue where the deletion is confirmed. Sqstm1 itself moves −0.09 log2FC. If vault RNA availability
+sets autophagic capacity, removing all of it should move this program, and it does not.
+
+**The two nominal secondaries are not convincing.** Eight tests were run (4 sets x 2 tissues) with no
+multiple-testing correction; 0.4 false positives are expected at p < 0.05 and two appeared. The membrane
+set is 6 genes and the brain interferon result sits in the arm whose gate failed. Neither is reported as
+a finding.
+
+### Limits
+Whole tissue, so cell-type effects dilute. **mRNA cannot see what the model actually predicts** — a change
+in p62 oligomerisation and turnover, which is a protein-level event. This bounds the tissue-level
+transcriptional consequence of losing vault RNA; it does not refute the biochemistry. The authors' own
+title already says the RNA is dispensable to development.
