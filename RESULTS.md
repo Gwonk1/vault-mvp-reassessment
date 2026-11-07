@@ -786,3 +786,42 @@ exactly what the two mechanisms predict, and my aggregated median had hidden it.
 **What survives unchanged:** Models A (ABCC1/chr16p) and C (vault RNA drug binding) are still dead —
 ABCC1 failed its gate, and mitoxantrone remains the least-associated drug. MVP is still a passenger, not
 a pump. The conclusion for #21 stands; only the ranking of the two passenger mechanisms changes.
+
+## 15/19-CORRECTED. Two more audit fixes, both verified against source
+
+### §15 — ANXA2 is not specifically ancient; an annexin is
+
+Verified in my own pipeline: the single *Dictyostelium* annexin **P24639** maps through one eggNOG
+orthogroup (KOG0819) to **all 13 human annexins**. So ANXA2, ANXA4, ANXA7 and ANXA11 appearing in my top
+100 are **one amoeba observation counted four times**, not four independent confirmations. My 32/100
+overlap is inflated by this 1-to-many cloning; counting distinct orthogroups gives ~27 and p > 0.20,
+which **strengthens** the NOT CONSERVED verdict for the wide module.
+
+**What this does to #40:** PARP4 and TEP1 are 1-to-1 ancient partners and stand. **ANXA2 specifically does
+not** — what is conserved is an *annexin-family* association predating the vertebrate ANXA1-13 radiation.
+The human IP-MS (§13) does confirm ANXA2 itself as a physical interactor, so the four-protein core
+survives in humans; the billion-year claim applies to the family, not the paralog.
+
+A second bias, also verified: taking the minimum-q amoeba paralog per orthogroup inflated the
+vault-proximal base rate from 19.4% to 23.0%. Orthogroup-level median or Stouffer z is the correct
+estimator if this is reused.
+
+### §19 — two text errors, and the result gets stronger
+
+1. **"5 primary human cell types" is wrong.** The table holds **4 human types plus `Mouse Neurons`**
+   (B cells, hepatocytes, monocytes, NK cells, and mouse neurons where the vault genes are NaN).
+2. **The human cell types are non-dividing**, per the authors' own methods table. I had listed
+   "pulse-SILAC conflates degradation with dilution by division" as a limit. It does not apply here:
+   these half-lives are **pure proteolysis**. The subunit gap is therefore stronger, not weaker.
+
+The ordering holds in **every** human cell type measured:
+
+| Cell type | PARP4 | TEP1 | MVP |
+|---|---|---|---|
+| B cells | 16.0 h | 33.5 h | 55.9 h |
+| Hepatocytes | 19.4 h | 25.9 h | 29.4 h |
+| Monocytes | 26.0 h | 47.5 h | 77.0 h |
+| NK cells | 38.2 h | 100.6 h | **310.3 h** |
+
+PARP4 < TEP1 < MVP in 4 of 4, with an 8-fold gap in NK cells. #47 stands and is better supported than
+when I wrote it.
