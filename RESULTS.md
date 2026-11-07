@@ -2495,3 +2495,61 @@ window and are flat or below chance:
 **Below expectation, not merely unsupported.** COP1 and NBR1 are two individual proteins that happen to
 share an annotation, which is exactly the pattern this project has mistaken for a module five times. The
 finding is COP1, singular, and nothing larger.
+
+## 47. Two COP1 follow-ups declined, and the reasons are the content
+
+COP1 is the project's newest survivor (§46c, three independent instruments), so the mechanistic question
+is obvious: **is MVP a COP1 substrate?** Two tests suggested themselves and **neither was run.** Both
+declines are recorded because the reasoning is reusable and the alternative was a number that
+discriminated nothing.
+
+### 47a. Declined: scanning MVP for a COP1 VP degron
+
+COP1 recognises substrates through a short valine-proline "VP degron", which would make a sequence scan
+of MVP an attractive orthogonal test — independent of every proteomics instrument used here. The
+literature does not support the test:
+
+- **The motif is explicitly sequence-divergent.** Lau et al. describe COP1-interacting partners as
+  harbouring *"sequence-divergent Val-Pro (VP) peptide motifs"*, and the structural work (Uljon et al.
+  2016, PMID 27041596) establishes an extended-conformation binding mode on the WD40 top face rather
+  than a per-position consensus. There is no residue-frequency pattern to search for.
+- **A bare VP dipeptide is far too common** to carry information in a 893-residue protein.
+- **Known substrates lack the motif.** CEBPA is ubiquitinated by COP1 via TRIB1 without a canonical
+  COP1-binding motif, and GATA2 uses a reported non-VP recognition surface. So absence would not
+  exclude substrate status either.
+
+**Both error directions are expected, so the scan cannot discriminate.** Running it would have produced
+a motif count and an implied verdict with no power behind it — the shape of error this project has
+logged five times. Not run.
+
+### 47b. Declined on rule 7: whether COP1 is present as an assembled ligase
+
+The better-posed question is whether COP1 sits on the vault *as a functioning CRL4 ligase*. If so, its
+obligate partners should come down too. Checking presence first, per house rule 7:
+
+| CRL4-COP1-DET1 component | in IP-MS universe? |
+|---|---|
+| COP1 | **present**, interactor (LWTP 2.59) |
+| DDB1 | **present**, *not* an interactor (WT_LFC −0.53, LWTP 0.71) |
+| DET1 | absent — never detected |
+| CUL4A | absent |
+| CUL4B | absent |
+| RBX1 | absent |
+
+**Four of six were never detected, so the assembly test has no power** and was not registered. Of ten
+known COP1 substrates, only ACACA is in the universe (and is not an interactor, LWTP 0.87) — so no
+substrate-presence test either.
+
+### 47c. What the instrument can say, weighted as the one protein it is
+
+**DDB1 — the CRL4 scaffold — is detectable and is not a vault interactor** (LWTP 0.71). PSMA1 (−0.86)
+and PSMD1 (LWTP 0.50) are likewise detectable and not interactors, consistent with §44 and §46d.
+
+So the single testable component of the machinery points **away** from COP1 being present as an
+assembled ligase. That is one protein and we weight it as one protein: suggestive, not decisive, and
+nowhere near the standard the trimer (#179) or COP1's own replication (#194) met.
+
+**COP1's presence on the vault is well-replicated and mechanistically uninterpretable from available
+data.** Its role needs an experiment, not another reanalysis, and it is added to Paper 2 as
+Experiment 12. This is the honest terminus of the computational thread: the instruments can establish
+that COP1 is there and cannot establish what it is doing.

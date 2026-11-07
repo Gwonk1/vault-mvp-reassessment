@@ -1,4 +1,4 @@
-# What a wet lab should do next with vaults: eleven experiments, ranked by what they decide
+# What a wet lab should do next with vaults: twelve experiments, ranked by what they decide
 
 **Graham W. Syfert**, with Claude (Anthropic) and two independent reviewing agents. Companion to
 `PAPER1_vault_reassessment.md`. Written for a group with a working vault purification pipeline.
@@ -6,9 +6,9 @@
 **Why this document exists.** We ran twenty-eight pre-registered computational tests against every
 public dataset we could reach. Eighteen returned an informative verdict with their positive controls
 recovered, eight are formally uninformative because a control gate failed, and two passed partially;
-the companion paper names each one, including the three where the gate was badly designed rather than
-the data uninformative. Between them they eliminated most standing hypotheses and left
-four constraints that no public dataset can resolve further. Everything below requires a bench. Each
+the companion paper names each one, including the three where the gate was badly designed rather
+than the data uninformative. Between them they eliminated most standing hypotheses and left four
+constraints that no public dataset can resolve further. Everything below requires a bench. Each
 entry states what it decides, the minimal design, the positive control, and the result that would
 kill the idea - including ours.
 
@@ -283,6 +283,36 @@ established 14-3-3 or WW-domain partner from the same lysate.
 **Kill condition:** no interactor, no kinase assignment, no phenotype.
 
 ---
+
+### 12. Is MVP a COP1 substrate, or is COP1 a passenger?
+
+**Decides:** whether the only well-replicated non-subunit vault partner (three independent
+instruments,
+#194) is there as a ubiquitin ligase acting on the vault, or is present for some other
+reason. This is the one new partner this analysis earned, and we cannot interpret it
+computationally (§47).
+
+**Design:** co-immunoprecipitate COP1 and MVP reciprocally in a cell line where both are expressed,
+then (a) ask whether endogenous MVP carries ubiquitin by immunoblot after COP1 knockdown versus
+control, and (b) measure MVP's half-life by cycloheximide chase in COP1-knockdown versus control
+cells. MVP's baseline half-life is ~66 h, so run the chase to 96 h; a ligase-substrate relationship
+predicts stabilisation. Probe the same lysates for DET1, DDB1 and CUL4A/B to establish whether an
+assembled CRL4 is present at all — the question §47b could not answer because four of six components
+were never detected in the available IP-MS.
+
+**Positive control:** a known COP1 substrate in the same lysate — ETV4, ETV5 or ACC1 — must show the
+expected stabilisation on COP1 knockdown. Without it, a null on MVP means the knockdown failed, not
+that MVP is not a substrate.
+
+**Kill condition:** if MVP's ubiquitination and half-life are unchanged by COP1 knockdown while the
+positive-control substrate stabilises, COP1 is not acting as a ligase on MVP. The association would
+then need explaining some other way — COP1 as cargo, or as a shared binding partner of something
+else — and the "degradation" reading dies, which §46d already shows has no module-level support.
+
+**Why not a VP-degron prediction first:** §47a declines that. COP1's VP motifs are
+sequence-divergent with no per-position consensus, a bare VP dipeptide is uninformative in a
+893-residue protein, and known substrates including CEBPA and GATA2 are recognised without a
+canonical motif. The scan cannot discriminate in either direction.
 
 ## What a home run looks like
 
