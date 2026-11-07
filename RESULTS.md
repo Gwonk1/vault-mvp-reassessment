@@ -882,9 +882,15 @@ construction. Per-vault partner loading is defined the same way: `PARP4_prot ⊥
 **Gate passed.** Residualised MAPK1 activation-loop phosphorylation recovers **MAPK1, MAPK3 and RPS6KA1**
 in its top 25, so `dp` captures live signalling and not abundance.
 
-**Primary: zero.** Across 44 tests (every MVP phosphosite x PARP4/TEP1 loading x cohort), **none reaches
-q < 0.05**; every |rho| is below 0.11 and every raw p above 0.54. No MVP phosphosite predicts how much
-PARP4 or TEP1 a vault carries.
+**Primary: zero at correction.** **CORRECTED 2026-11-07 after review:** the committed JSON holds **64
+rows, of which 2 are an acetylome entry in LUSC** (which has no MVP phosphosites), giving **62 phospho
+tests across 6 cohorts** - not the 44 first reported. My description of the effect sizes was also wrong:
+I read the bottom of a sorted table. The true range includes **UCEC S445 vs PARP4 at rho = -0.374,
+raw p = 0.001**, and 4 rows at raw p < 0.05.
+
+**The conclusion is unchanged and arguably better evidenced.** **0 of 62 tests reach q < 0.05.** The
+strongest association (q = 0.066) does not replicate: across all six cohorts measuring S445 (n = 612)
+the sample-weighted mean rho with PARP4 loading is **-0.036**, with signs flipping between cohorts.
 
 **Secondary — and the trap I nearly fell into.** 12 of 32 MVP sites had a core or signalling partner in
 their top 1%, which looks like a hit. But I had fetched **all** sites for the target genes plus a random
