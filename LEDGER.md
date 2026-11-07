@@ -98,6 +98,12 @@ Status key: ~~**STRUCK**~~ eliminated · **WEAKENED** damaged but alive · **STA
 
 ---
 
+## TESTED SINCE (2026-11-07)
+
+| # | Item | Status | Evidence |
+|---|---|---|---|
+| 46 | ~~NSUN2/svRNAb represses CYP3A4 at tissue level~~ | **NO RELATION** in 366 human livers. Partial rho -0.052, p = 0.33, with gate passed (HNF4A +0.48, PXR +0.53). Specificity control inverts the story: the only nominal hit is CYP2E1 (-0.125), a non-target. **Limit: VTRNA1-1 is absent from mRNA data, so only the NSUN2 arm was testable.** Bounds the cell-line mechanism rather than refuting it. | `results/cyp3a4.json` |
+
 ## UNTESTED (from the five articles — nothing today touched these)
 
 Lupus / Ro60 autoantigen asymmetry, with La as matched control · anti-MVP serology in banked SSA sera ·

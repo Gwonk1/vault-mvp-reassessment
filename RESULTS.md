@@ -578,3 +578,33 @@ short-term viability, not clinical response. Doubling time exists for 191 of 292
 proliferation-adjusted models run on fewer samples than the ABCB1-adjusted ones and the absorbed
 percentages are not perfectly matched comparisons. chr16p copy number was not included; ABCC1's gate
 failure made Model A moot before it was needed.
+
+## 18. NSUN2 -> CYP3A4 in human liver: NO RELATION
+
+`CYP3A4_PREREGISTRATION.md`. Article 2 called this "the single highest-value open question" — if vault
+RNA processing tunes CYP3A4, vault biology sits upstream of the pharmacokinetics of a large share of
+prescribed drugs. Shown in MCF7/HepG2; svRNAb was never detected in liver.
+
+TCGA-LIHC, 366 primary liver tumours. **Gate passed convincingly**: the known CYP3A4 regulators behave
+as they should — HNF4A rho +0.48 (p = 1.9e-22), NR1I2/PXR +0.53 (p = 7.4e-28).
+
+Partial correlations adjusted for HNF4A, NR1I2, NR1I3 and ALB:
+
+| Predictor | Target | Partial rho | p |
+|---|---|---|---|
+| **NSUN2** | **CYP3A4** | **−0.052** | **0.33** |
+| NSUN2 | CYP2E1 | −0.125 | 0.017 |
+| NSUN2 | CYP1A2 | +0.021 | 0.70 |
+| NSUN2 | ALB | −0.042 | 0.43 |
+| MVP | CYP3A4 | −0.053 | 0.31 |
+| DICER1 | CYP3A4 | −0.090 | 0.087 |
+
+**No relation.** And the specificity control argues against the mechanism rather than for it: the only
+nominally significant association is with **CYP2E1**, a P450 nobody proposed as an svRNAb target, and it
+is *stronger* than the CYP3A4 association. A mechanism specific to CYP3A4 should not behave that way.
+
+**What this does and does not settle.** It does not refute the cell-line biochemistry. It bounds how much
+that mechanism can matter at tissue level: in 366 human livers, NSUN2 carries no detectable CYP3A4 signal
+once differentiation is accounted for. **Critical limit: VTRNA1-1 itself is absent from the mRNA
+quantification** (a Pol III transcript), so only the NSUN2 arm was testable — the vault RNA was never
+measured. mRNA is also a poor proxy for enzyme activity, and these are tumours, not normal liver.

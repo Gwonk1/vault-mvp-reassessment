@@ -1,0 +1,48 @@
+{
+ "gate": true,
+ "verdict": "NO RELATION",
+ "results": [
+  {
+   "predictor": "NSUN2",
+   "target": "CYP3A4",
+   "partial_rho": -0.05150799968915423,
+   "p": 0.3257611481817488,
+   "n": 366
+  },
+  {
+   "predictor": "NSUN2",
+   "target": "CYP2E1",
+   "partial_rho": -0.125316490551329,
+   "p": 0.016453035281476312,
+   "n": 366
+  },
+  {
+   "predictor": "NSUN2",
+   "target": "CYP1A2",
+   "partial_rho": 0.020493424816628535,
+   "p": 0.6959729998699938,
+   "n": 366
+  },
+  {
+   "predictor": "NSUN2",
+   "target": "ALB",
+   "partial_rho": -0.04145740158641481,
+   "p": 0.42908768759845844,
+   "n": 366
+  },
+  {
+   "predictor": "MVP",
+   "target": "CYP3A4",
+   "partial_rho": -0.05321960947247393,
+   "p": 0.3099208887549799,
+   "n": 366
+  },
+  {
+   "predictor": "DICER1",
+   "target": "CYP3A4",
+   "partial_rho": -0.08969576888739857,
+   "p": 0.08660832613026284,
+   "n": 366
+  }
+ ]
+}
