@@ -1,0 +1,789 @@
+{
+ "gate": true,
+ "cohorts": [
+  "brca_cptac_2020",
+  "coad_cptac_2019",
+  "gbm_cptac_2021",
+  "luad_cptac_2020",
+  "lusc_cptac_2021",
+  "paad_cptac_2021",
+  "ucec_cptac_2020"
+ ],
+ "primary": [
+  {
+   "cohort": "ucec_cptac_2020",
+   "site": "MVP_S445",
+   "partner": "PARP4",
+   "rho": -0.3738319141058866,
+   "p": 0.0010347744114011228,
+   "n": 74,
+   "q": 0.06622556232967186
+  },
+  {
+   "cohort": "gbm_cptac_2021",
+   "site": "MVP_S876.1:NP_005106.2",
+   "partner": "PARP4",
+   "rho": -0.3297760210803689,
+   "p": 0.026949636048769203,
+   "n": 45,
+   "q": 0.5250755959875157
+  },
+  {
+   "cohort": "gbm_cptac_2021",
+   "site": "MVP_S873:NP_005106.2",
+   "partner": "PARP4",
+   "rho": 0.2054916512059369,
+   "p": 0.041302566320317015,
+   "n": 99,
+   "q": 0.5250755959875157
+  },
+  {
+   "cohort": "coad_cptac_2019",
+   "site": "MVP_pS445",
+   "partner": "PARP4",
+   "rho": -0.20707118967988533,
+   "p": 0.04890396128294443,
+   "n": 91,
+   "q": 0.5250755959875157
+  },
+  {
+   "cohort": "luad_cptac_2020",
+   "site": "NP_005106.2_1_1_873_873",
+   "partner": "PARP4",
+   "rho": 0.18644816626468003,
+   "p": 0.05114228334685269,
+   "n": 110,
+   "q": 0.5250755959875157
+  },
+  {
+   "cohort": "ucec_cptac_2020",
+   "site": "MVP_S876",
+   "partner": "TEP1",
+   "rho": 0.2031616982836495,
+   "p": 0.06890273930024286,
+   "n": 81,
+   "q": 0.5250755959875157
+  },
+  {
+   "cohort": "coad_cptac_2019",
+   "site": "MVP_pS873",
+   "partner": "TEP1",
+   "rho": -0.19159005788219274,
+   "p": 0.07208087015673521,
+   "n": 89,
+   "q": 0.5250755959875157
+  },
+  {
+   "cohort": "ucec_cptac_2020",
+   "site": "MVP_S445",
+   "partner": "TEP1",
+   "rho": -0.20053313587560156,
+   "p": 0.0866882991419447,
+   "n": 74,
+   "q": 0.5250755959875157
+  },
+  {
+   "cohort": "gbm_cptac_2021",
+   "site": "MVP_S867_S873:NP_005106.2",
+   "partner": "PARP4",
+   "rho": -0.2857142857142857,
+   "p": 0.09118056954682714,
+   "n": 36,
+   "q": 0.5250755959875157
+  },
+  {
+   "cohort": "gbm_cptac_2021",
+   "site": "MVP_S876:NP_005106.2",
+   "partner": "PARP4",
+   "rho": 0.1864724480578139,
+   "p": 0.09554984523136321,
+   "n": 81,
+   "q": 0.5250755959875157
+  },
+  {
+   "cohort": "paad_cptac_2021",
+   "site": "MVP_S873:NP_005106.2",
+   "partner": "PARP4",
+   "rho": 0.14020374318881784,
+   "p": 0.10614581139808643,
+   "n": 134,
+   "q": 0.5250755959875157
+  },
+  {
+   "cohort": "coad_cptac_2019",
+   "site": "MVP_pS876",
+   "partner": "TEP1",
+   "rho": 0.21761006289308174,
+   "p": 0.11394854370853583,
+   "n": 54,
+   "q": 0.5250755959875157
+  },
+  {
+   "cohort": "lusc_cptac_2021",
+   "site": "MVP_acetylprotein",
+   "partner": "PARP4",
+   "rho": 0.1772386310360994,
+   "p": 0.11576499665527304,
+   "n": 80,
+   "q": 0.5250755959875157
+  },
+  {
+   "cohort": "brca_cptac_2020",
+   "site": "MVP_S876s",
+   "partner": "TEP1",
+   "rho": 0.14052891240198134,
+   "p": 0.12261610107343708,
+   "n": 122,
+   "q": 0.5250755959875157
+  },
+  {
+   "cohort": "paad_cptac_2021",
+   "site": "MVP_S876:NP_005106.2",
+   "partner": "TEP1",
+   "rho": 0.1427475814315296,
+   "p": 0.12306459280957399,
+   "n": 118,
+   "q": 0.5250755959875157
+  },
+  {
+   "cohort": "ucec_cptac_2020",
+   "site": "MVP_S867",
+   "partner": "TEP1",
+   "rho": 0.17603850425768233,
+   "p": 0.1335360005962247,
+   "n": 74,
+   "q": 0.5341440023848988
+  },
+  {
+   "cohort": "ucec_cptac_2020",
+   "site": "MVP_S864",
+   "partner": "PARP4",
+   "rho": -0.213691026827012,
+   "p": 0.15387749969236636,
+   "n": 46,
+   "q": 0.5754040702462624
+  },
+  {
+   "cohort": "luad_cptac_2020",
+   "site": "NP_005106.2_1_1_876_876",
+   "partner": "PARP4",
+   "rho": 0.2165950895389353,
+   "p": 0.16827936199133114,
+   "n": 42,
+   "q": 0.5754040702462624
+  },
+  {
+   "cohort": "luad_cptac_2020",
+   "site": "NP_005106.2_2_2_873_876",
+   "partner": "TEP1",
+   "rho": 0.15083527386858359,
+   "p": 0.17082308335435914,
+   "n": 84,
+   "q": 0.5754040702462624
+  },
+  {
+   "cohort": "coad_cptac_2019",
+   "site": "MVP_pS873",
+   "partner": "PARP4",
+   "rho": 0.13352332070066544,
+   "p": 0.20196996678099202,
+   "n": 93,
+   "q": 0.6463038936991745
+  },
+  {
+   "cohort": "brca_cptac_2020",
+   "site": "MVP_S445s",
+   "partner": "PARP4",
+   "rho": 0.10491340653821116,
+   "p": 0.2501216144490337,
+   "n": 122,
+   "q": 0.7326431811216676
+  },
+  {
+   "cohort": "coad_cptac_2019",
+   "site": "MVP_pS445",
+   "partner": "TEP1",
+   "rho": 0.12417073704162716,
+   "p": 0.25184609351057324,
+   "n": 87,
+   "q": 0.7326431811216676
+  },
+  {
+   "cohort": "brca_cptac_2020",
+   "site": "MVP_S876s",
+   "partner": "PARP4",
+   "rho": 0.09312308134597401,
+   "p": 0.30762972825450685,
+   "n": 122,
+   "q": 0.7879676106699324
+  },
+  {
+   "cohort": "gbm_cptac_2021",
+   "site": "MVP_S873_S876:NP_005106.2",
+   "partner": "PARP4",
+   "rho": 0.10748124405621502,
+   "p": 0.3188916839608878,
+   "n": 88,
+   "q": 0.7879676106699324
+  },
+  {
+   "cohort": "paad_cptac_2021",
+   "site": "MVP_S867:NP_005106.2",
+   "partner": "TEP1",
+   "rho": -0.15137420718816066,
+   "p": 0.3266599252677366,
+   "n": 44,
+   "q": 0.7879676106699324
+  },
+  {
+   "cohort": "lusc_cptac_2021",
+   "site": "MVP_acetylprotein",
+   "partner": "TEP1",
+   "rho": 0.11104078762306611,
+   "p": 0.32679770811876124,
+   "n": 80,
+   "q": 0.7879676106699324
+  },
+  {
+   "cohort": "gbm_cptac_2021",
+   "site": "MVP_S867_S873:NP_005106.2",
+   "partner": "TEP1",
+   "rho": -0.16628056628056628,
+   "p": 0.33242383575137774,
+   "n": 36,
+   "q": 0.7879676106699324
+  },
+  {
+   "cohort": "luad_cptac_2020",
+   "site": "NP_005106.2_1_1_876_876",
+   "partner": "TEP1",
+   "rho": 0.14820516975933878,
+   "p": 0.3489231410978162,
+   "n": 42,
+   "q": 0.7927785553121204
+  },
+  {
+   "cohort": "paad_cptac_2021",
+   "site": "MVP_S876:NP_005106.2",
+   "partner": "PARP4",
+   "rho": -0.08515479203415395,
+   "p": 0.35922778287580454,
+   "n": 118,
+   "q": 0.7927785553121204
+  },
+  {
+   "cohort": "gbm_cptac_2021",
+   "site": "MVP_S867:NP_005106.2",
+   "partner": "PARP4",
+   "rho": 0.09178910976663784,
+   "p": 0.38954982059168103,
+   "n": 90,
+   "q": 0.8310396172622528
+  },
+  {
+   "cohort": "brca_cptac_2020",
+   "site": "MVP_S867s",
+   "partner": "PARP4",
+   "rho": 0.07138632150445606,
+   "p": 0.4345859880980865,
+   "n": 122,
+   "q": 0.8963378734710639
+  },
+  {
+   "cohort": "luad_cptac_2020",
+   "site": "NP_005106.2_1_1_445_445",
+   "partner": "TEP1",
+   "rho": 0.07262358271532582,
+   "p": 0.4508625137745369,
+   "n": 110,
+   "q": 0.8963378734710639
+  },
+  {
+   "cohort": "luad_cptac_2020",
+   "site": "NP_005106.2_2_2_873_876",
+   "partner": "PARP4",
+   "rho": 0.07882960413080896,
+   "p": 0.4759881358303643,
+   "n": 84,
+   "q": 0.8963378734710639
+  },
+  {
+   "cohort": "gbm_cptac_2021",
+   "site": "MVP_S864:NP_005106.2",
+   "partner": "PARP4",
+   "rho": 0.08008534850640113,
+   "p": 0.49460131876647906,
+   "n": 75,
+   "q": 0.8963378734710639
+  },
+  {
+   "cohort": "paad_cptac_2021",
+   "site": "MVP_S445:NP_005106.2",
+   "partner": "TEP1",
+   "rho": 0.058547649252296934,
+   "p": 0.5324408314014675,
+   "n": 116,
+   "q": 0.8963378734710639
+  },
+  {
+   "cohort": "luad_cptac_2020",
+   "site": "NP_005106.2_1_1_585_585",
+   "partner": "PARP4",
+   "rho": 0.10862299465240642,
+   "p": 0.5473630062546808,
+   "n": 33,
+   "q": 0.8963378734710639
+  },
+  {
+   "cohort": "luad_cptac_2020",
+   "site": "NP_005106.2_1_1_873_873",
+   "partner": "TEP1",
+   "rho": 0.05624957735049478,
+   "p": 0.559439893213087,
+   "n": 110,
+   "q": 0.8963378734710639
+  },
+  {
+   "cohort": "paad_cptac_2021",
+   "site": "MVP_S445:NP_005106.2",
+   "partner": "PARP4",
+   "rho": 0.053973013493253376,
+   "p": 0.564999528911076,
+   "n": 116,
+   "q": 0.8963378734710639
+  },
+  {
+   "cohort": "gbm_cptac_2021",
+   "site": "MVP_S445:NP_005106.2",
+   "partner": "TEP1",
+   "rho": 0.0575386518243661,
+   "p": 0.5715974373112694,
+   "n": 99,
+   "q": 0.8963378734710639
+  },
+  {
+   "cohort": "gbm_cptac_2021",
+   "site": "MVP_S876.1:NP_005106.2",
+   "partner": "TEP1",
+   "rho": -0.08484848484848484,
+   "p": 0.5794659040828395,
+   "n": 45,
+   "q": 0.8963378734710639
+  },
+  {
+   "cohort": "luad_cptac_2020",
+   "site": "NP_005106.2_1_1_867_867",
+   "partner": "TEP1",
+   "rho": 0.050091292293127164,
+   "p": 0.6032818436918177,
+   "n": 110,
+   "q": 0.8963378734710639
+  },
+  {
+   "cohort": "gbm_cptac_2021",
+   "site": "MVP_S867:NP_005106.2",
+   "partner": "TEP1",
+   "rho": 0.05450055562415112,
+   "p": 0.6099185513931078,
+   "n": 90,
+   "q": 0.8963378734710639
+  },
+  {
+   "cohort": "brca_cptac_2020",
+   "site": "MVP_S873s_S876s",
+   "partner": "TEP1",
+   "rho": 0.052756500161829756,
+   "p": 0.6174610372312508,
+   "n": 92,
+   "q": 0.8963378734710639
+  },
+  {
+   "cohort": "coad_cptac_2019",
+   "site": "MVP_pS876",
+   "partner": "PARP4",
+   "rho": -0.06253652834599649,
+   "p": 0.6409626640721422,
+   "n": 58,
+   "q": 0.8963378734710639
+  },
+  {
+   "cohort": "luad_cptac_2020",
+   "site": "NP_005106.2_1_1_445_445",
+   "partner": "PARP4",
+   "rho": 0.04400513941798345,
+   "p": 0.6480457500284986,
+   "n": 110,
+   "q": 0.8963378734710639
+  },
+  {
+   "cohort": "ucec_cptac_2020",
+   "site": "MVP_S876",
+   "partner": "PARP4",
+   "rho": 0.04920957542908762,
+   "p": 0.6626430564327213,
+   "n": 81,
+   "q": 0.8963378734710639
+  },
+  {
+   "cohort": "gbm_cptac_2021",
+   "site": "MVP_S873:NP_005106.2",
+   "partner": "TEP1",
+   "rho": 0.04326530612244898,
+   "p": 0.6706789886129797,
+   "n": 99,
+   "q": 0.8963378734710639
+  },
+  {
+   "cohort": "brca_cptac_2020",
+   "site": "MVP_S873s_S876s",
+   "partner": "PARP4",
+   "rho": -0.04469583712220459,
+   "p": 0.6722534051032979,
+   "n": 92,
+   "q": 0.8963378734710639
+  },
+  {
+   "cohort": "paad_cptac_2021",
+   "site": "MVP_S867:NP_005106.2",
+   "partner": "PARP4",
+   "rho": 0.060887949260042276,
+   "p": 0.6945983733742184,
+   "n": 44,
+   "q": 0.9072305284887751
+  },
+  {
+   "cohort": "ucec_cptac_2020",
+   "site": "MVP_S873",
+   "partner": "PARP4",
+   "rho": 0.03518518518518519,
+   "p": 0.7551610982414627,
+   "n": 81,
+   "q": 0.9415330173848474
+  },
+  {
+   "cohort": "coad_cptac_2019",
+   "site": "MVP_pS867",
+   "partner": "TEP1",
+   "rho": 0.05020242914979757,
+   "p": 0.7615049162276164,
+   "n": 39,
+   "q": 0.9415330173848474
+  },
+  {
+   "cohort": "gbm_cptac_2021",
+   "site": "MVP_S873_S876:NP_005106.2",
+   "partner": "TEP1",
+   "rho": 0.03057306893029482,
+   "p": 0.7773560989247006,
+   "n": 88,
+   "q": 0.9415330173848474
+  },
+  {
+   "cohort": "gbm_cptac_2021",
+   "site": "MVP_S864:NP_005106.2",
+   "partner": "TEP1",
+   "rho": -0.03203413940256045,
+   "p": 0.7849806630473192,
+   "n": 75,
+   "q": 0.9415330173848474
+  },
+  {
+   "cohort": "gbm_cptac_2021",
+   "site": "MVP_S876:NP_005106.2",
+   "partner": "TEP1",
+   "rho": 0.02940379403794038,
+   "p": 0.794418483418465,
+   "n": 81,
+   "q": 0.9415330173848474
+  },
+  {
+   "cohort": "luad_cptac_2020",
+   "site": "NP_005106.2_1_1_585_585",
+   "partner": "TEP1",
+   "rho": -0.042112299465240643,
+   "p": 0.8160006648697484,
+   "n": 33,
+   "q": 0.9442004117728137
+  },
+  {
+   "cohort": "brca_cptac_2020",
+   "site": "MVP_S867s",
+   "partner": "TEP1",
+   "rho": 0.015540891081583897,
+   "p": 0.8650904318354062,
+   "n": 122,
+   "q": 0.9442004117728137
+  },
+  {
+   "cohort": "luad_cptac_2020",
+   "site": "NP_005106.2_1_1_867_867",
+   "partner": "PARP4",
+   "rho": -0.01625228230732818,
+   "p": 0.8661747629453428,
+   "n": 110,
+   "q": 0.9442004117728137
+  },
+  {
+   "cohort": "ucec_cptac_2020",
+   "site": "MVP_S873",
+   "partner": "TEP1",
+   "rho": -0.01781842818428184,
+   "p": 0.8745467691655352,
+   "n": 81,
+   "q": 0.9442004117728137
+  },
+  {
+   "cohort": "ucec_cptac_2020",
+   "site": "MVP_S864",
+   "partner": "TEP1",
+   "rho": -0.022756706753006475,
+   "p": 0.8806737119666742,
+   "n": 46,
+   "q": 0.9442004117728137
+  },
+  {
+   "cohort": "ucec_cptac_2020",
+   "site": "MVP_S867",
+   "partner": "PARP4",
+   "rho": 0.017075157349129948,
+   "p": 0.8851878860370128,
+   "n": 74,
+   "q": 0.9442004117728137
+  },
+  {
+   "cohort": "coad_cptac_2019",
+   "site": "MVP_pS867",
+   "partner": "PARP4",
+   "rho": -0.016194331983805668,
+   "p": 0.9220518424402665,
+   "n": 39,
+   "q": 0.9622377837579655
+  },
+  {
+   "cohort": "paad_cptac_2021",
+   "site": "MVP_S873:NP_005106.2",
+   "partner": "TEP1",
+   "rho": 0.006291849025548948,
+   "p": 0.94248112036214,
+   "n": 134,
+   "q": 0.9622377837579655
+  },
+  {
+   "cohort": "gbm_cptac_2021",
+   "site": "MVP_S445:NP_005106.2",
+   "partner": "PARP4",
+   "rho": 0.006740878169449597,
+   "p": 0.9472028183867474,
+   "n": 99,
+   "q": 0.9622377837579655
+  },
+  {
+   "cohort": "brca_cptac_2020",
+   "site": "MVP_S445s",
+   "partner": "TEP1",
+   "rho": 0.0019595467598084735,
+   "p": 0.9829097368193771,
+   "n": 122,
+   "q": 0.9829097368193771
+  }
+ ],
+ "n_sig": 0,
+ "secondary": [
+  {
+   "cohort": "brca_cptac_2020",
+   "site": "MVP_S445s",
+   "n_compared": 1456,
+   "top1pct_hits": "-"
+  },
+  {
+   "cohort": "brca_cptac_2020",
+   "site": "MVP_S867s",
+   "n_compared": 1456,
+   "top1pct_hits": "SRC"
+  },
+  {
+   "cohort": "brca_cptac_2020",
+   "site": "MVP_S873s_S876s",
+   "n_compared": 1436,
+   "top1pct_hits": "-"
+  },
+  {
+   "cohort": "brca_cptac_2020",
+   "site": "MVP_S876s",
+   "n_compared": 1456,
+   "top1pct_hits": "ANXA2"
+  },
+  {
+   "cohort": "coad_cptac_2019",
+   "site": "MVP_pS445",
+   "n_compared": 702,
+   "top1pct_hits": "-"
+  },
+  {
+   "cohort": "coad_cptac_2019",
+   "site": "MVP_pS867",
+   "n_compared": 367,
+   "top1pct_hits": "-"
+  },
+  {
+   "cohort": "coad_cptac_2019",
+   "site": "MVP_pS873",
+   "n_compared": 695,
+   "top1pct_hits": "-"
+  },
+  {
+   "cohort": "coad_cptac_2019",
+   "site": "MVP_pS876",
+   "n_compared": 527,
+   "top1pct_hits": "PARP4"
+  },
+  {
+   "cohort": "gbm_cptac_2021",
+   "site": "MVP_S445:NP_005106.2",
+   "n_compared": 1354,
+   "top1pct_hits": "-"
+  },
+  {
+   "cohort": "gbm_cptac_2021",
+   "site": "MVP_S864:NP_005106.2",
+   "n_compared": 1173,
+   "top1pct_hits": "ANXA2,PARP4,PRKCD"
+  },
+  {
+   "cohort": "gbm_cptac_2021",
+   "site": "MVP_S867:NP_005106.2",
+   "n_compared": 1292,
+   "top1pct_hits": "PRKCD"
+  },
+  {
+   "cohort": "gbm_cptac_2021",
+   "site": "MVP_S867_S873:NP_005106.2",
+   "n_compared": 707,
+   "top1pct_hits": "-"
+  },
+  {
+   "cohort": "gbm_cptac_2021",
+   "site": "MVP_S873:NP_005106.2",
+   "n_compared": 1354,
+   "top1pct_hits": "-"
+  },
+  {
+   "cohort": "gbm_cptac_2021",
+   "site": "MVP_S873_S876:NP_005106.2",
+   "n_compared": 1296,
+   "top1pct_hits": "PRKCE"
+  },
+  {
+   "cohort": "gbm_cptac_2021",
+   "site": "MVP_S876.1:NP_005106.2",
+   "n_compared": 881,
+   "top1pct_hits": "-"
+  },
+  {
+   "cohort": "gbm_cptac_2021",
+   "site": "MVP_S876:NP_005106.2",
+   "n_compared": 1256,
+   "top1pct_hits": "-"
+  },
+  {
+   "cohort": "luad_cptac_2020",
+   "site": "NP_005106.2_1_1_445_445",
+   "n_compared": 1446,
+   "top1pct_hits": "-"
+  },
+  {
+   "cohort": "luad_cptac_2020",
+   "site": "NP_005106.2_1_1_585_585",
+   "n_compared": 796,
+   "top1pct_hits": "ANXA2,STAT1"
+  },
+  {
+   "cohort": "luad_cptac_2020",
+   "site": "NP_005106.2_1_1_867_867",
+   "n_compared": 1446,
+   "top1pct_hits": "ANXA2"
+  },
+  {
+   "cohort": "luad_cptac_2020",
+   "site": "NP_005106.2_1_1_873_873",
+   "n_compared": 1446,
+   "top1pct_hits": "-"
+  },
+  {
+   "cohort": "luad_cptac_2020",
+   "site": "NP_005106.2_1_1_876_876",
+   "n_compared": 1037,
+   "top1pct_hits": "PARP4,PRKCA,TEP1"
+  },
+  {
+   "cohort": "luad_cptac_2020",
+   "site": "NP_005106.2_2_2_873_876",
+   "n_compared": 1383,
+   "top1pct_hits": "-"
+  },
+  {
+   "cohort": "lusc_cptac_2021",
+   "site": "MVP_acetylprotein",
+   "n_compared": 1242,
+   "top1pct_hits": "-"
+  },
+  {
+   "cohort": "paad_cptac_2021",
+   "site": "MVP_S445:NP_005106.2",
+   "n_compared": 834,
+   "top1pct_hits": "-"
+  },
+  {
+   "cohort": "paad_cptac_2021",
+   "site": "MVP_S867:NP_005106.2",
+   "n_compared": 464,
+   "top1pct_hits": "-"
+  },
+  {
+   "cohort": "paad_cptac_2021",
+   "site": "MVP_S873:NP_005106.2",
+   "n_compared": 871,
+   "top1pct_hits": "PARP4"
+  },
+  {
+   "cohort": "paad_cptac_2021",
+   "site": "MVP_S876:NP_005106.2",
+   "n_compared": 847,
+   "top1pct_hits": "-"
+  },
+  {
+   "cohort": "ucec_cptac_2020",
+   "site": "MVP_S445",
+   "n_compared": 757,
+   "top1pct_hits": "-"
+  },
+  {
+   "cohort": "ucec_cptac_2020",
+   "site": "MVP_S864",
+   "n_compared": 570,
+   "top1pct_hits": "-"
+  },
+  {
+   "cohort": "ucec_cptac_2020",
+   "site": "MVP_S867",
+   "n_compared": 764,
+   "top1pct_hits": "-"
+  },
+  {
+   "cohort": "ucec_cptac_2020",
+   "site": "MVP_S873",
+   "n_compared": 784,
+   "top1pct_hits": "PTPN11"
+  },
+  {
+   "cohort": "ucec_cptac_2020",
+   "site": "MVP_S876",
+   "n_compared": 784,
+   "top1pct_hits": "ANXA2"
+  }
+ ],
+ "secondary_hits": 12,
+ "kill_condition_met": true,
+ "secondary_expected_by_chance": 18.933999999999997,
+ "secondary_binom_p": 0.018029945853661414
+}

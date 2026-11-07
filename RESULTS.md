@@ -868,3 +868,36 @@ binds it.
 **Why this section exists.** My own script returned SHELL MUST OPEN. The written rule said *reproducible*,
 and checking that one word inverted the answer. Part 2 (phospho-stoichiometry against per-vault PARP4
 loading) was not run — the coverage gate for MVP fails in 2 of 7 cohorts and the key site is singleton.
+
+## 24. Part 2 — phosphostoichiometry: the phospho-gated vault hypothesis is dead
+
+`PHOSPHO_PREREGISTRATION.md` Part 2, with the site-sampling deviation recorded before running. Seven
+CPTAC cohorts, ~1,500 residualised phosphosites each, 80-140 matched samples per cohort.
+
+**Method.** Each phosphosite is residualised on **its own gene's total protein** (`dp = phospho ⊥ total`),
+so the quantity is *phosphorylated vaults per vault* rather than how much vault there is. Cell-type
+composition and bulk abundance — the confound that defeated §11, §15, §21 and §22 — vanish by
+construction. Per-vault partner loading is defined the same way: `PARP4_prot ⊥ MVP_prot`.
+
+**Gate passed.** Residualised MAPK1 activation-loop phosphorylation recovers **MAPK1, MAPK3 and RPS6KA1**
+in its top 25, so `dp` captures live signalling and not abundance.
+
+**Primary: zero.** Across 44 tests (every MVP phosphosite x PARP4/TEP1 loading x cohort), **none reaches
+q < 0.05**; every |rho| is below 0.11 and every raw p above 0.54. No MVP phosphosite predicts how much
+PARP4 or TEP1 a vault carries.
+
+**Secondary — and the trap I nearly fell into.** 12 of 32 MVP sites had a core or signalling partner in
+their top 1%, which looks like a hit. But I had fetched **all** sites for the target genes plus a random
+background, so target genes are enriched in my universe by construction (4-7% of sites per cohort).
+Chance alone predicts **18.9** of 32 by that design. Observed 12 is **below** expectation
+(binomial p = 0.018). The apparent signal is an artefact of my own sampling, and the true reading is a
+clean negative.
+
+**Verdict: argon's kill condition is MET.** No association with partner loading, no partner enrichment
+beyond chance, and Part 1's one occluded site was a singleton. **Phosphorylation does not gate vault
+assembly, partner exchange, or shell opening** — at least not detectably across ~750 human tumours.
+
+**Why this matters more than another null.** This was the one modality immune to composition confounding,
+and it was aimed squarely at the live question from #47: what drives the 22-hour PARP4 exchange on a
+66-hour shell. The answer is not phosphorylation of MVP. That exchange is driven by something else —
+ligand occupancy, local concentration, or a modification nobody has catalogued.

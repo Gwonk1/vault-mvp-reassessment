@@ -43,3 +43,23 @@ CPTAC site assignments come from peptide mapping and can be ambiguous between ne
 probe is a crude proxy for a kinase active site. 11JB is one conformation of a dynamic particle, so
 "inaccessible in this structure" is not "inaccessible always" — which is precisely the point being
 tested, and means a positive result shows the closed state cannot be the only state.
+
+---
+
+## Deviation recorded before running Part 2 (2026-11-07)
+
+**Site sampling.** The gate as written ("MAPK1 must recover >=3 canonical MAPK sites in its top 25")
+implies ranking against every site in a cohort (~41,000 x 8 cohorts). That is a very large fetch for one
+gate. **Deviation: fetch all sites for a fixed target gene list plus a random background of 1,500 sites
+per cohort (seed 20261107), and rank within that fetched set.** The gate becomes "at least 3 canonical
+MAPK-pathway sites in MAPK1's top 25 of the fetched set", which is strictly harder than ranking against
+the full proteome because the background is random rather than enriched.
+
+**Target genes fixed now:** MVP, PARP4, TEP1, ANXA2, S100A10 (core); PTPN11, SRC, STAT1, PRKCA, PRKCD,
+PRKCE (argon's proposed kinases/phosphatases); MAPK1, MAPK3, MAP2K1, MAP2K2, RPS6KA1, RPS6KA3, BRAF,
+EGFR (gate set).
+
+**Correction to my earlier statement.** I told Graham the coverage gate failed. It does not: MVP has 4-5
+sites in 5 of 7 cohorts, which passes "at least 2 sites in at least 3 cohorts". What failed in Part 1 was
+S585 specifically, the only site resolvable in the structure, which appears in 1 cohort of 7. Part 2 does
+not depend on S585.

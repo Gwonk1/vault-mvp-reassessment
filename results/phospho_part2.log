@@ -1,0 +1,46 @@
+no data brain_cptac_2020
+fetched brca_cptac_2020 (1624, 123) | targets 124
+fetched coad_cptac_2019 (1628, 98) | targets 128
+fetched gbm_cptac_2021 (1752, 100) | targets 252
+fetched luad_cptac_2020 (1656, 111) | targets 156
+fetched lusc_cptac_2021 (1518, 81) | targets 18
+fetched paad_cptac_2021 (1636, 141) | targets 163
+fetched ucec_cptac_2020 (1658, 82) | targets 205
+
+cohorts with phospho: ['brca_cptac_2020', 'coad_cptac_2019', 'gbm_cptac_2021', 'luad_cptac_2020', 'lusc_cptac_2021', 'paad_cptac_2021', 'ucec_cptac_2020']
+  brca_cptac_2020: 1457 residualised sites, 122 samples, loading ['PARP4', 'TEP1']
+  coad_cptac_2019: 712 residualised sites, 97 samples, loading ['PARP4', 'TEP1']
+  gbm_cptac_2021: 1355 residualised sites, 99 samples, loading ['PARP4', 'TEP1']
+  luad_cptac_2020: 1447 residualised sites, 110 samples, loading ['PARP4', 'TEP1']
+  lusc_cptac_2021: 1243 residualised sites, 80 samples, loading ['PARP4', 'TEP1']
+  paad_cptac_2021: 887 residualised sites, 140 samples, loading ['PARP4', 'TEP1']
+  ucec_cptac_2020: 785 residualised sites, 81 samples, loading ['PARP4', 'TEP1']
+GATE brca_cptac_2020: MAPK1 top25 contains ['MAPK1', 'MAPK3', 'RPS6KA1']
+Traceback (most recent call last):
+  File "~/projects/Vault/src/phospho_part2.py", line 75, in <module>
+    rr=T.apply(lambda r: spearmanr(r,base,nan_policy='omit').statistic,axis=1).drop(m1[0]).sort_values(ascending=False)
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/projects/Vault/.venv/lib/python3.12/site-packages/pandas/core/frame.py", line 15427, in apply
+    return op.apply().__finalize__(self, method="apply")
+           ^^^^^^^^^^
+  File "~/projects/Vault/.venv/lib/python3.12/site-packages/pandas/core/apply.py", line 1106, in apply
+    return self.apply_standard()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "~/projects/Vault/.venv/lib/python3.12/site-packages/pandas/core/apply.py", line 1334, in apply_standard
+    results, res_index = self.apply_series_generator()
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/projects/Vault/.venv/lib/python3.12/site-packages/pandas/core/apply.py", line 1350, in apply_series_generator
+    results[i] = self.func(v, *self.args, **self.kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/projects/Vault/src/phospho_part2.py", line 75, in <lambda>
+    rr=T.apply(lambda r: spearmanr(r,base,nan_policy='omit').statistic,axis=1).drop(m1[0]).sort_values(ascending=False)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/projects/Vault/.venv/lib/python3.12/site-packages/scipy/stats/_stats_py.py", line 5428, in spearmanr
+    return mstats_basic.spearmanr(a, axis=axis, nan_policy=nan_policy,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/projects/Vault/.venv/lib/python3.12/site-packages/scipy/stats/_mstats_basic.py", line 704, in spearmanr
+    return _spearmanr_2cols(x)
+           ^^^^^^^^^^^^^^^^^^^
+  File "~/projects/Vault/.venv/lib/python3.12/site-packages/scipy/stats/_mstats_basic.py", line 675, in _spearmanr_2cols
+    raise ValueError("The input must have at least 3 entries!")
+ValueError: The input must have at least 3 entries!
