@@ -1,0 +1,92 @@
+# Vault hypothesis ledger
+
+Every idea raised, with its status, the reason, and the file holding the evidence. Struck entries are
+kept, not deleted — the point is to not re-run a dead idea or re-argue a settled one.
+
+**Discipline used throughout 2026-11-06:** each test was pre-registered in git *before* the relevant data
+was read, with a gate requiring the method to recover a known positive first. Where a gate failed it is
+reported as failed rather than rewritten. `git log --oneline` shows the ordering.
+
+Status key: ~~**STRUCK**~~ eliminated · **WEAKENED** damaged but alive · **STANDING** survives ·
+**PENDING** running · **UNTESTED** never examined.
+
+---
+
+## STRUCK
+
+| # | Idea | Why it's out | Data |
+|---|---|---|---|
+| 1 | ~~MVP belongs to the chronic interferon resistance program (ISG.RS)~~ | Pre-registered prediction. Needed Δ>0 within malignant cells; got −0.11 (CI −0.18,−0.05) in lung, −0.09 (−0.22,+0.04) in melanoma. CHRONIC in no dataset, model or compartment. | `results/sc_kim.json`, `sc_jerby.json`, `bulk.json` |
+| 2 | ~~Vaults suppress cytosolic sensing, so MVP should anti-correlate with interferon~~ | The containment layer's only prediction testable here. MVP *rises* with interferon in malignant cells (ρ +0.23 ISG.RS, +0.29 IFNG.GS, lung). Does not refute containment as a physical function — that needs Trap-and-Seq. | `results/sc_kim.json` |
+| 3 | ~~MVP's membership in Benci's IFNG.GS tells us something about MVP~~ | IFNG.GS is exactly Hallmark IFN-γ minus ISG.RS. MVP landed in the "acute" bucket by subtraction. Nobody tested it. | `data/genesets/genesets.json` |
+| 4 | ~~The contradictory MVP tumour papers resolve as positions on the acute/chronic axis~~ | Thyroid (−1.57), pancreas (−0.82), liver (−0.65) all sit on the *same* side, thyroid furthest from chronic. The contradiction is not an axis artifact. | `results/bulk.json` → `tcga` |
+| 5 | ~~MVP expression predicts checkpoint-inhibitor response~~ | Pooled log odds per SD +0.04 (−0.30, +0.38), 5 cohorts. Two nominal hits in opposite directions, neither surviving correction. | `results/bulk.json` → `resp_meta` |
+| 6 | ~~Mvp carries the chronic program's epigenetic memory mark~~ | Absent from Qiu's strict memory-domain list; nearest domain 730 kb away; promoter accessibility 39th pct where Oas1a is 94th; STAT1-dependence 63rd vs 100th; RNA falls ~13% on STAT1 loss vs 3–5 fold for real targets. | `results/epigenetic.md`, `epigenetic.log` |
+| 7 | ~~MVP loss impairs cell growth~~ | Zero hits across 878 proliferation screens. Only ~4.8% of genes manage that; the median gene has 5. | `results/orcs_final.json` |
+| 8 | ~~A coherent gene module is lost whenever MVP is lost~~ | No GO term reached q<0.05 (best 0.16) across 6,128 families / 472 species, while 45% of matched random families *did* hit something. Method recovers cilia from IFT88 and complex I from NDUFS2. | `results/coloss_final.json` |
+| 9 | ~~MVP marks the drug-tolerant persister state~~ | Needed 90th percentile induction in ≥2 of 3 models; got 80.6 / 82.0 / 81.1. Reproducible but not a core persister gene, and not interferon-driven. | `results/persister_primary.json` |
+| 10 | ~~MVP sequences are "all different" across animals~~ | 60.6% mean pairwise identity over 174 sequences / 134 species — **89.5th percentile** against 400 species- and length-matched groups (matched median 47%). | `results/divergence.json` |
+| 11 | ~~Vaults are developmental scaffolding you build on and discard~~ | Predicted decline across development. MVP *rises*: 94–95th percentile in 6 of 7 organs. Zero organs showed the predicted decline. | `results/development.json` |
+| 12 | ~~MVP is a brake that tells a cell to stop dividing~~ | A brake, deleted, should release growth. 878 growth screens, both selection directions, nothing. | `results/orcs_final.json` |
+| 13 | ~~The CoA-like pocket is a phosphopantetheine tether (a "string")~~ | A covalent arm needs a phosphopantetheinyl transferase (human: AASDHPPT) and a conserved serine; MVP is not among the few known human carrier proteins. The reported *pocket* density reads as a bound ligand, not an arm. Sink reading survives; tether does not. | reasoning from published structure description |
+
+---
+
+## WEAKENED
+
+| # | Idea | What damaged it | Data |
+|---|---|---|---|
+| 14 | Vaults are vestigial | Three things don't fit: the cost (100,000 copies/cell), **sequence conservation at the 89.5th pct**, and missense constraint (mis_z 2.5) alongside LoF tolerance. Vestigial structures drift; this one doesn't. Losses are clean whole-clade events, not ongoing decay. | `results/divergence.json`, `gnomad.json` |
+| 15 | The vault is regulated as one unit (shell + contents) | Four independent lines say no: TEP1/PARP4 not co-lost with MVP; they don't follow MVP across development (MVP 95th pct, TEP1 4–79th, PARP4 6–59th); their groups sit at the 0.8th and 3rd percentile of conservation while MVP is at 89.5th. Protein co-abundance pending. | `coloss_final.json`, `development.json`, `divergence.json` |
+| 16 | MVP marks the non-dividing compartment inside tumours | Pre-registered rule needed 4 of 6 cohorts below the 10th pct; got 3 — but those three are at the genome *floor* (LUSC 0.0, SKCM 0.5, LUAD 0.7) while pancreas runs opposite (86.5). Gate passed cleanly. Tissue-specific, not general. | `results/proliferation.json` |
+| 17 | The chassis framing | Survives every test, but flagged as **nearly unfalsifiable** — every new observation becomes "another customer". Its own prediction (shape conserved, sequence free) failed: the sequence *is* conserved. | `results/divergence.json` |
+
+---
+
+## STANDING
+
+| # | Idea | What supports it | Data |
+|---|---|---|---|
+| 18 | **Sink / absorption, deployed on demand** — best-fitting model so far | Six independent results with no special pleading: no partner module; zero growth phenotype (nothing to absorb in clean media); rises with tissue maturation (accumulated load); interferon-coupled at the 95th pct (deploy on alarm); conserved sequence with tolerated loss (precise site, redundant system); reproducible mild rise under three unrelated drugs. Weakness: **"absorb what?" is unanswered**, and without a ligand it predicts nothing. | §§2,3,8,9,10 of `RESULTS.md` |
+| 19 | MVP is unusually interferon-coupled without belonging to either program | 95th pct (ISG.RS) and 88th (IFNG.GS) in lung malignant cells; 97th/78th in melanoma. The one clearly *positive* finding of the day. | `results/sc_kim.json`, `sc_jerby.json` |
+| 20 | MVP marks finished tissue rather than building tissue | 94–95th pct rise across 6 organs, opposite in direction to proliferation, so not the proliferation confound. | `results/development.json` |
+| 21 | The LRP chemoresistance biomarker has no mechanism | Not the sink model, not a knockout-visible drug mechanism, not the persister state. Thirty-year association now harder to explain, not easier. Naming the gap precisely is the result. | `orcs_final.json`, `persister_primary.json` |
+| 22 | MVP is dispensable but conserved | Two independent scales: across species (89.5th pct identity) and within humans (mis_z 2.5, LOEUF 0.92, pLI 0). Strange, specific, and unexplained. | `divergence.json`, `gnomad.json` |
+
+---
+
+## PENDING
+
+| # | Idea | Test | Status |
+|---|---|---|---|
+| 23 | MVP protein travels with TEP1/PARP4, or with anything | Co-abundance across ~10 CPTAC mass-spec cohorts; TEP1/PARP4 rank is the "is it a unit" question with an independent molecule | fetching |
+| 24 | The business end is the **outside** surface, not the lumen | Per-residue conservation mapped onto the assembled particle (PDB 4V60); lumen-facing vs outward-facing exposed residues, buried residues excluded | pre-registered `86378cc` |
+
+---
+
+## UNTESTED (from the five articles — nothing today touched these)
+
+Lupus / Ro60 autoantigen asymmetry, with La as matched control · anti-MVP serology in banked SSA sera ·
+Aicardi-Goutières and TREX1 · SAVI · pre-eclampsia and placental vault levels · cystic fibrosis
+modifier genetics · C9orf72 repeat RNA in vaults · tauopathy / PSP loaded vaults · Paget's disease ·
+svRNAb → CYP3A4 in human liver · mitoxantrone binding to vault RNA · vault delivery vehicles ·
+Trap-and-Seq (the experiment that decides containment) · TEP1 binding misfolded RNA · progeria falsifier.
+
+**Note on the Trap-and-Seq power argument:** at 100,000 vaults per cell, even 1% carrying a non-vtRNA
+cargo gives ~1,000 molecules per cell — easily detectable by modern sequencing, invisible to 1986 gels
+and a 2001 Northern blot. The cargo need only be rare *per particle*, which makes a clean negative there
+genuinely decisive rather than dismissable.
+
+---
+
+## Method notes worth keeping
+
+- **Pre-register, then gate.** Four of today's tests returned nulls; they only mean something because
+  the method first recovered a known positive (cilia from IFT88, complex I from NDUFS2, proteasome,
+  proliferation genes at the 99th pct). Where a gate failed — development, persister — the formal label
+  is UNINFORMATIVE and is reported that way.
+- **Percentiles, not effect sizes.** Global composition shifts move every gene; MVP's rank against the
+  genome is the interpretable quantity.
+- **Always exclude MVP from any gene set containing it.** `src/scores.py` asserts and aborts.
+- **Two mistakes made and corrected:** a control group ID guessed from memory (`KOG1691` is TMED10, not
+  RPL7) and two results written as prose before being written as data (gnomAD, epigenetic). Both fixed.
