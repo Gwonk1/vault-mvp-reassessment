@@ -1,8 +1,8 @@
-# The vault is a durable shell with an independently turning over enzyme: a pre-registered reassessment of major vault protein across public human and comparative data
+# One assembly, three lifetimes, and a sealed nucleotide pocket: a pre-registered reassessment of major vault protein across public human and comparative data
 
 **Graham W. Syfert.** Analysis performed with Claude (Anthropic) and a second agent ("Argon") in an
 adversarial review loop. All hypotheses were registered in a public git history before the relevant data
-were read; every gate, deviation and failure is recorded in `LEDGER.md` (82 entries) and `RESULTS.md`
+were read; every gate, deviation and failure is recorded in `LEDGER.md` (85 entries) and `RESULTS.md`
 (24 sections). Correspondence welcome, including corrections.
 
 ---
@@ -12,16 +12,20 @@ were read; every gate, deviation and failure is recorded in `LEDGER.md` (82 entr
 The vault ribonucleoprotein has resisted functional assignment for forty years. We subjected the major
 vault protein (MVP) and its partners to nineteen pre-registered tests across public transcriptomic,
 proteomic, genomic, structural and comparative datasets, each gated on recovery of a known positive
-control. Most standing hypotheses failed. MVP is not a member of the chronic interferon resistance
-program; it is not a drug-tolerant persister marker; no gene module is co-lost with it across 472
-eukaryotes; vault RNA does not detectably gate selective autophagy at tissue level; NSUN2 does not
-repress CYP3A4 in human liver; and phosphorylation does not gate vault assembly or partner exchange.
-What survives is narrow and reproducible. MVP, PARP4 and TEP1 form a single assembly detectable by
-protein co-abundance (PARP4 and TEP1 ranked 1 and 2 of 10,924 proteins across thirteen tumour cohorts)
-and by proximity labelling in *Dictyostelium*, yet they share neither fitness coupling nor degradation
-kinetics: PARP4 turns over threefold faster than MVP (22.2 h versus 66.4 h) in four of four non-dividing
-primary human cell types. We resolve the thirty-year LRP chemoresistance biomarker as a passenger
-phenomenon split between ABCB1-mediated efflux and slow division. We confirm, from two independent
+control. **Five of the nineteen returned a formally uninformative verdict because a control gate failed,
+and we mark each one rather than promote it.** Most standing hypotheses nonetheless failed on tests that
+did gate: MVP is not a member of the chronic interferon resistance program; no gene family is co-lost
+with it across 472 eukaryotes; NSUN2 does not repress CYP3A4 in human liver; and phosphorylation does not
+gate vault assembly or partner exchange. Drug-tolerant persistence and tissue-level autophagy gating both
+pointed the same way but failed their gates, so we report them as uninformative.
+
+What survives is narrow. MVP, PARP4 and TEP1 are mutually closest by protein co-abundance - PARP4 and
+TEP1 at ranks 1 and 2 of 10,924 proteins across thirteen tumour cohorts, and PARP4 first with TEP1 third
+after copy-number adjustment - and all three are vault-proximal in *Dictyostelium*. They are not a
+welded complex: the ordering PARP4 < TEP1 < MVP holds in four of four non-dividing primary human cell
+types, with ratios from 1.5- to 8.1-fold, though that test also failed its gate. We resolve the
+thirty-year LRP chemoresistance biomarker as a passenger phenomenon carried by two separate mechanisms,
+ABCB1-mediated efflux and slow division, which do not partition by drug class. We confirm, from two independent
 alignments, that the SPFH shoulder nucleotide pocket is the most conserved structural domain of MVP, with four
 ADP-ribose-contacting residues invariant across 174 eukaryotes, and that this pocket cannot be reached
 radially through the shell wall and must therefore be loaded from the lumen. The emerging picture is a
@@ -48,6 +52,20 @@ We took the opposite approach. Each hypothesis was converted into a pre-register
 a positive-control gate and an explicit kill condition, committed to version control before the relevant
 data were examined. Where a gate failed, the result is reported as uninformative rather than
 reinterpreted. Where our own analysis was wrong, the correction is recorded alongside the original.
+
+**The gate scorecard, stated up front.** Of nineteen tests, twelve returned an informative verdict with
+their positive controls recovered; **five carry a formal verdict of UNINFORMATIVE in their own committed
+output** - co-essentiality (CAV1 fails to recover CAVIN1 or EHD2), developmental trajectory (two of three
+stemness markers absent or above threshold), drug-tolerant persistence (a proliferation control
+undetected in one model), subunit turnover (short-lived controls absent from the pulse-SILAC table
+entirely) and the Vaultrc5 knockout (the transcript is undetected in brain); and two passed partially -
+the CRISPR corpus, where the genotoxic screen class failed its control while viral and immune-killing
+classes passed, and the LRP decomposition, where ABCC1 failed to predict its own substrates.
+
+We say this in the introduction because an earlier draft of this paper asserted four of those five in
+its title and abstract as though they were findings, which is precisely the failure the gate was meant
+to prevent. Where an uninformative test and an informative one point the same way we say so and lean on
+the informative one; where an uninformative test stands alone, it supports nothing.
 
 ## 2. What does not survive
 
@@ -169,8 +187,9 @@ MVP's strongest genome-wide co-essentiality is r = 0.205, with PARP4, TEP1 and A
 does not recover CAVIN1 or EHD2 - so it is reported as uninformative on its own and carries weight only
 alongside the 878-screen result.
 
-We therefore describe the vault as **a durable shell presenting an independently turning over enzymatic
-face**. We are explicit that pulse-SILAC measures irreversible proteolysis, not a binding off-rate: a
+We therefore describe the vault as **a long-lived shell whose enzymatic subunits have their own, shorter
+lifetimes** - and we hold that description loosely, because the test it rests on failed its gate. We are
+explicit that pulse-SILAC measures irreversible proteolysis, not a binding off-rate: a
 22-hour half-life is not fast on a signalling timescale, and what the data establish is that the PARP4
 **population** does not persist for the 66-hour lifetime of the shell. This does **not** establish that
 docked PARP4 leaves the shell, and we drew that inference too quickly: PARP4 is substoichiometric on the
