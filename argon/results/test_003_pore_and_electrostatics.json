@@ -1,8 +1,8 @@
 {
   "preregistration_sha256": "da4a6cf715482be083ae1302e1a38793573efa7701b512f02f203ad30f34f583",
   "priority_1_pocket_orientation_and_pore": {
-    "verdict": "TRANSMURAL",
-    "kill_condition_met_against_transmural": false,
+    "verdict": "LUMENAL (TRANSMURAL KILLED BY PRE-REGISTERED KILL CONDITION)",
+    "kill_condition_met_against_transmural": true,
     "geometry_78mer_11JB": {
       "z_min_A": -328.06,
       "z_max_A": 328.06,
@@ -739,18 +739,27 @@
     "directional_probe_accessibility": {
       "grid_step_A": 0.4,
       "rmax_lumen_to_ar6_A": 3.1,
-      "rmax_exterior_to_ar6_A": 1.6,
-      "rmax_transmural_anywhere_in_shoulder_A": 1.6,
-      "ar6_sasa_1_4A": {
+      "rmax_exterior_direct_to_ar6_A": 1.1,
+      "rmax_repeat89_hinge_water_cleft_A": 1.6,
+      "ar6_sasa_1_4A_holo": {
+        "r_probe": 1.4,
+        "sasa_total_A2": 45.06,
+        "sasa_lumen_only_A2": 40.99,
+        "sasa_exterior_only_A2": 0.0,
+        "sasa_sealed_cavity_A2": 4.06,
+        "n_atoms_lumen_accessible": 7,
+        "n_atoms_exterior_accessible": 0
+      },
+      "ar6_sasa_1_4A_apo_pocket_ghost": {
         "r_probe": 1.4,
         "sasa_total_A2": 45.06,
         "sasa_lumen_only_A2": 45.06,
-        "sasa_exterior_only_A2": 45.06,
+        "sasa_exterior_only_A2": 0.0,
         "sasa_sealed_cavity_A2": 0.0,
         "n_atoms_lumen_accessible": 10,
-        "n_atoms_exterior_accessible": 10
+        "n_atoms_exterior_accessible": 0
       },
-      "ar6_sasa_2_5A": {
+      "ar6_sasa_2_5A_nucleotide": {
         "r_probe": 2.5,
         "sasa_total_A2": 16.25,
         "sasa_lumen_only_A2": 16.25,
@@ -762,11 +771,11 @@
       "apo_30res_pocket_sasa_1_4A": {
         "r_probe": 1.4,
         "sasa_total_A2": 1016.2,
-        "sasa_lumen_only_A2": 981.94,
-        "sasa_exterior_only_A2": 879.81,
+        "sasa_lumen_only_A2": 976.2,
+        "sasa_exterior_only_A2": 20.93,
         "sasa_sealed_cavity_A2": 34.26,
-        "n_atoms_lumen_accessible": 110,
-        "n_atoms_exterior_accessible": 107
+        "n_atoms_lumen_accessible": 109,
+        "n_atoms_exterior_accessible": 6
       }
     }
   },

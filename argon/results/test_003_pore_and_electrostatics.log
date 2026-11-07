@@ -94,3 +94,49 @@ Computing exact van der Waals surface clearance field (apo, holo-neighbor, and h
 Apo Pocket Minimax Bottleneck Sphere Radius (0.4-A 3D EDT):
   Max probe radius reaching AR6 site from LUMEN           (R_max_lumen)    = 3.10 A
   Max probe radius reaching AR6 site DIRECTLY from EXTERIOR (R_max_exterior) = 1.10 A
+  Max probe radius crossing adjacent Repeat-8/9 hinge seam (|z|=155-167 A) = 1.60 A (water/ion micro-cleft; impermeable to NAD+ >=2.5 A)
+
+Bound AR6 Directional SASA (r_probe = 1.4 A water):
+  Total exposed SASA = 45.06 A^2 | LUMEN-accessible = 40.99 A^2 (7/36 atoms) | EXTERIOR-accessible = 0.00 A^2 (0/36 atoms) | Sealed micro-cavity = 4.06 A^2
+Bound AR6 Directional SASA (r_probe = 2.5 A nucleotide/ring):
+  Total exposed SASA = 16.25 A^2 | LUMEN-accessible = 16.25 A^2 | EXTERIOR-accessible = 0.00 A^2
+Apo 30-Residue MVP Pocket Lining Directional SASA (r_probe = 1.4 A):
+  LUMEN-accessible = 976.20 A^2 | EXTERIOR-accessible = 20.93 A^2
+
+>>> FORMAL VERDICT ON LEDGER #34: LUMENAL (TRANSMURAL KILLED BY PRE-REGISTERED KILL CONDITION) <<<
+
+=== PRIORITY 2 (TEST A6): 4V60 Apo vs 11JB Apo vs 11JB+78*AR6 vs 11JB+78*AR6+20*PARP4-MINT Electrostatics ===
+4V60-assembly1 loaded: 78 chains, z range [-330.1, 330.1] A, R_cyl range [0.8, 224.0] A
+Superposed 9BW6 MVP+PARP4-MINT onto 11JB Chain A (n=201 CAs, RMSD=1.16 A)
+Docked PARP4-MINT (136 aa) in 11JB frame: |z| range [41.7, 84.5] A | R_cyl range [139.3, 177.8] A (local wall R_mid=182.9 A -> purely LUMENAL!)
+Point charges extracted: 4V60=18,330 (net=-1513.2 e) | 11JB apo=18,252 (net=-1505.4 e) | 78x AR6=156 P-centers (net=-156.0 e)
+Single PARP4-MINT domain net formal charge (pH 7.4): +0.3 e (20 copies = +6.0 e)
+
+Luminal-Face (Delta_R < 0) Net Formal Charge across Full 78-mer by Domain:
+  Repeats_1_2 (1-112)               : 4V60_apo= -122.8 e | 11JB_apo= +109.2 e | 11JB_holo(+AR6+MINT)= +109.2 e (per-chain: +1.40 -> +1.40 e)
+  Repeats_3_4_MINT_zone (113-222)   : 4V60_apo= -294.8 e | 11JB_apo= -148.2 e | 11JB_holo(+AR6+MINT)= -142.2 e (per-chain: -1.90 -> -1.82 e)
+  Repeats_5_9 (223-498)             : 4V60_apo= -348.4 e | 11JB_apo= -202.8 e | 11JB_holo(+AR6+MINT)= -202.8 e (per-chain: -2.60 -> -2.60 e)
+  SPFH_shoulder_pocket (499-665)    : 4V60_apo= +167.2 e | 11JB_apo=  +23.4 e | 11JB_holo(+AR6+MINT)= -132.6 e (per-chain: +0.30 -> -1.70 e)
+  Cap_helix (666-790)               : 4V60_apo= -183.6 e | 11JB_apo= -226.2 e | 11JB_holo(+AR6+MINT)= -226.2 e (per-chain: -2.90 -> -2.90 e)
+  Cap_disk (791-893)                : 4V60_apo=   +6.0 e | 11JB_apo=  -78.0 e | 11JB_holo(+AR6+MINT)=  -78.0 e (per-chain: -1.00 -> -1.00 e)
+
+Axial Luminal Debye-Huckel Electrostatic Potential Profile (3 A inside inner wall, 150 mM salt, mV):
+ abs_z_A  R_eval_11JB_A  Phi_4V60_apo_mV  Phi_11JB_apo_mV  Phi_11JB_plus_78AR6_mV  Phi_11JB_holo_AR6_20MINT_mV  Delta_Holo_minus_Apo_mV
+      10          164.1            -4.97             9.57                    9.57                         9.62                     0.05
+      30          169.6             0.94            -0.46                   -0.46                         0.22                     0.68
+      50          172.8            -7.86            -6.22                   -6.22                        -4.02                     2.20
+      70          172.5             0.79            25.05                   25.05                        23.79                    -1.26
+      90          171.2           -11.52            -1.02                   -1.02                        -0.78                     0.24
+     110          166.8           -10.57           -15.72                  -15.72                       -15.85                    -0.13
+     130          162.2           -14.28           -35.82                  -35.82                       -35.82                     0.00
+     150          139.4            -3.42           -14.54                  -16.85                       -16.85                    -2.31
+     170          123.3            -5.28            37.60                   20.60                        20.60                   -17.00
+     190           99.2             3.95             0.22                   -0.23                        -0.23                    -0.45
+     210           94.6           -11.97             6.19                    6.19                         6.19                     0.00
+     230           93.8            -9.07           -47.08                  -47.08                       -47.08                     0.00
+     250           87.1           -40.73           -46.09                  -46.09                       -46.09                     0.00
+     270           84.6           -19.68            -0.25                   -0.25                        -0.25                     0.00
+     290           76.5           -15.65            -6.13                   -6.13                        -6.13                     0.00
+     310           65.3            -4.58           -14.42                  -14.42                       -14.42                     0.00
+
+Saved results/test_003_pore_and_electrostatics.json and electrostatics_profile_11jb_vs_4v60.csv successfully.

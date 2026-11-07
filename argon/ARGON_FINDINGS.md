@@ -147,12 +147,13 @@ By pulling **seven 2025–2026 primary manuscripts**, **four cryo-EM atomic stru
 
 ## 5. Index of Argon Files & Reproducible Outputs
 
-- Pre-registration & hash: `PREREGISTRATION_ARGON.md`, `PREREGISTRATION_ARGON.sha256`
+- Pre-registration & hash: `PREREGISTRATION_ARGON.md`, `PREREGISTRATION_ARGON.sha256`, `PREREGISTRATION_ARGON_003.md`, `PREREGISTRATION_ARGON_003.sha256`
 - Scripts:
   - `src/analyze_interactome.py` -> `results/test_a2_interactome.json`, `results/test_a2_interactome.log`
   - `src/analyze_pocket_and_tep1.py` -> `results/test_a3_pocket_and_tep1.json`, `results/test_a3_pocket_and_tep1.log`
   - `src/analyze_cna_and_metabolomics.py` -> `results/test_a4_cna_metab.json`, `results/ccle_metabolomics_mvp.csv`, `results/test_a4_cna_metab.log`
   - `src/confounder_checks.py` -> `results/confounder_checks.json`, `results/confounder_checks.log`
+  - `src/analyze_003_pore_and_electrostatics.py` -> `results/test_003_pore_and_electrostatics.json`, `results/electrostatics_profile_11jb_vs_4v60.csv`, `results/test_003_pore_and_electrostatics.log`
 - Primary 2025–2026 structures & manuscripts in `raw/`:
   - Cryo-EM: `11JB.cif.gz`, `9R86.cif.gz`, `9R87.cif.gz`, `9BW6.cif.gz`
   - `TEP1` `TeTIR`/`NIR` `NADase` papers: `osinski_2026_tir_vault.pdf`, `lemouellic_2026_tep1_nadase.pdf`, `hornebeck_2026_tetir.pdf`
@@ -160,3 +161,19 @@ By pulling **seven 2025–2026 primary manuscripts**, **four cryo-EM atomic stru
   - *Dictyostelium* *in situ* vault & `MVPA-TurboID`: `PMC13100048.xml`, `natcomms_source_data/Source_data_Vault.xlsx`
   - Neuronal Vault RIP-seq: `musgrove_vaultrc5.pdf`, `musgrove_media_6.xlsx`
   - Phage `L05` & prokaryotic `MVP` survey: `anthropic_l05.pdf`
+
+---
+
+## 6. Addendum 003: SPFH Shoulder Tunnel Test (`LEDGER #34`) & Holo-Vault Electrostatics (`Test A5` & `Test A6`)
+
+Pre-registered in `PREREGISTRATION_ARGON_003.md` (`SHA-256: da4a6cf715482be083ae1302e1a38793573efa7701b512f02f203ad30f34f583`).
+
+1. **`Test A5` — `LEDGER #34` Verdict: `LUMENAL` (`TRANSMURAL` Shoulder-Pore Hypothesis Killed by Pre-Registered Kill Condition):**
+   - Across the 78-mer `PDB 11JB` assembly (`z` in `[-328.1, +328.1] Å`, `R_cyl` in `[51.0, 197.6] Å`), **all `36/36` heavy atoms (`100%`) of bound `ADP-ribose` (`AR6`) sit strictly inside the local `Cα` shell midsurface `R_mid(|z|)`** across all axial bin resolutions (`15 Å` bins: `Delta_R = [-14.04, -2.82] Å`, mean `-8.61 Å`; `10 Å` bins: `[-17.85, -1.91] Å`, mean `-8.62 Å`; `2 Å` smooth: `[-16.37, -2.17] Å`, mean `-7.51 Å`). Adenine (`C2/N1/N6`) tucks deepest into the inner wall (`Delta_R_15A = -2.8 to -3.5 Å`), while the pyrophosphate (`PA/PB`, `-12.0 to -12.7 Å`) and keyhole loop (`R504 = -19.3 Å`, `K506 = -16.3 Å`, `R507 = -16.2 Å`) project directly into the vault lumen.
+   - Directional `0.4 Å` 3D Euclidean distance-transform flood-fill and Lee-Richards SASA show **zero direct exterior probe access to `AR6` (`SASA_exterior = 0.00 Å²` at both `r_probe = 1.4 Å` water and `2.5 Å` nucleotide; `R_max_exterior = 1.10 Å < 1.40 Å`)**, versus **wide lumenal access (`SASA_lumen = 40.99 Å²` at `1.4 Å` [`7/36` atoms] and `16.25 Å²` at `2.5 Å`; `R_max_lumen = 3.10 Å`, a `6.2 Å`-diameter lumenal mouth; apo 30-residue pocket lining `976.20 Å²` lumenal vs `20.93 Å²` exterior)**.
+   - *Bonus structural note:* `15 Å` equatorward at the Repeat-8/9-to-shoulder hinge seam (`|z| = 155–167 Å`, lined by `Chain A: 427–464` and `Chain m: 473–497`), the closed shell contains a narrow **`1.60 Å`-radius (`3.2 Å` diameter) inter-chain water/ion micro-cleft** (`R_max_hinge_seam = 1.60 Å`), permitting water/H⁺ equilibration with the lumen while remaining strictly impermeable to `NAD+` or nicotinamide (`>= 2.5 Å`). Cytosolic `NAD+` cannot enter the shoulder pocket through the closed wall; entry requires waist/half-vault breathing (`Collins et al. 2026`).
+
+2. **`Test A6` — Holo (`11JB + 78 AR6²⁻ + 20 PARP4-MINT`) vs Apo (`11JB` / `4V60`) Luminal Electrostatics:**
+   - At the `SPFH` shoulder (`residues 499–665`, `Delta_R < 0` across 78 chains), binding `78 × AR6²⁻` (`-156.0 e`) **reverses the luminal formal charge sign from `+23.4 e` (`+0.30 e`/chain in human `11JB` apo; `+167.2 e` in rat `4V60` apo) to `-132.6 e` (`-1.70 e`/chain)**.
+   - Along the inner lumen wall (`R_inner(|z|) - 3 Å`, `150 mM` Debye-Hückel), apo human `11JB` displays the strongest positive electrostatic beacon in the entire vault right at the `SPFH` shoulder keyhole (`|z| = 170 Å`: **`+37.60 mV`**, missed completely by legacy 3.5-Å `4V60` at **`-5.28 mV`**), electrostatically focusing anionic `NAD+`/`ADP-ribose`/`vtRNA` into the shoulder reaction zone. Occupancy by `78 × AR6²⁻` quenches this peak by **`-17.00 mV`** (to `+20.60 mV`).
+   - Superposing `9BW6` onto `11JB` (`201 Cα`, `RMSD = 1.16 Å`) places `PARP4-MINT` (`|z| = 41.7–84.5 Å`, `R_cyl = 139.3–177.8 Å < R_mid = 182.9 Å`) strictly inside the lumen; because `PARP4-MINT` is nearly charge-neutral overall (`+0.3 e`/copy, `+6.0 e` for 20 copies), it alters mean-field potential at `|z| = 50–70 Å` by only `-1.26 to +2.20 mV`, acting primarily via **steric masking** of Repeats 3–4 rather than monopole shift.

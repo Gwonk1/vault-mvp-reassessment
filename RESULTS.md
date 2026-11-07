@@ -351,8 +351,12 @@ lumen face and outer face, with **26% of the shell's protein mass at that height
 
 "Lumenal" as published is nearly right but imprecise: the pocket is **embedded within the shell wall**,
 about a third out from the lumen surface — on neither face. Whether a solvent channel connects it to
-either side is **not** established here; explicit tunnel detection was not run, so the transmural-pore
-idea stays open, neither supported nor refuted.
+either side was not established by my run. **It has since been settled: LUMENAL.** Directional probe
+analysis on the sealed 78-mer (argon Test A5, pre-registered) gives exterior accessibility of 0.00
+square angstroms at both 1.4 and 2.5 angstrom probe radii, with a maximum exterior channel radius of
+1.10 angstroms - narrower than water. Cytosolic NAD+ cannot cross the shoulder wall. The pocket
+straddles the midsurface (my residues W545 +1.8, F547 +7.8 outward; all ligand atoms inward), but it
+opens only to the lumen.
 
 ### Limits
 
