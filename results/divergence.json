@@ -1,0 +1,34 @@
+{
+ "mvp_identity": 0.6055395116649579,
+ "mvp_nseq": 174,
+ "align_len": 1202,
+ "percentile": 89.5,
+ "label": "TYPICAL",
+ "matched_n": 400,
+ "controls": {
+  "histone H3 (KOG1745)": [
+   0.83,
+   100.0
+  ],
+  "RPL7 (KOG3184)": [
+   0.517,
+   64.8
+  ],
+  "RPS6 (KOG1646)": [
+   0.633,
+   93.2
+  ],
+  "ACTB (KOG0676)": [
+   0.497,
+   59.2
+  ],
+  "TEP1 grp": [
+   0.243,
+   0.8
+  ],
+  "PARP4 grp": [
+   0.28,
+   3.0
+  ]
+ }
+}

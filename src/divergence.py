@@ -43,7 +43,8 @@ print('matched groups used',len(D),'| MVP identity',round(mv[0],4),'| percentile
 print('matched identity quantiles',D.ident.quantile([.1,.25,.5,.75,.9]).round(3).to_dict(),flush=True)
 lab='UNUSUALLY DIVERGENT' if pct<=10 else ('UNUSUALLY CONSERVED' if pct>=90 else 'TYPICAL')
 ctrl={}
-for g,og in [('H3-3A/hist','KOG1745'),('RPL7','KOG1691'),('TEP1','KOG3602'),('PARP4','KOG1037')]:
+D.to_csv('results/divergence_matched.csv',index=False)
+for g,og in [('histone H3 (KOG1745)','KOG1745'),('RPL7 (KOG3184)','KOG3184'),('RPS6 (KOG1646)','KOG1646'),('ACTB (KOG0676)','KOG0676'),('TEP1 grp','KOG3602'),('PARP4 grp','KOG1037')]:
     r=get(og); ctrl[g]=None if not r else (round(r[0],3),round(float((D.ident<r[0]).mean()*100),1))
     print(' ctrl',g,og,ctrl[g],flush=True)
 print('LABEL',lab,flush=True)

@@ -1,0 +1,12 @@
+alignments in tar 121410
+MVP 2QPP0 identity/nseq/len (0.6055395116649579, 174, 1202) species 134
+species-matched candidates 1351
+matched groups used 400 | MVP identity 0.6055 | percentile 89.5
+matched identity quantiles {0.1: 0.327, 0.25: 0.384, 0.5: 0.47, 0.75: 0.551, 0.9: 0.609}
+ ctrl histone H3 (KOG1745) KOG1745 (0.83, 100.0)
+ ctrl RPL7 (KOG3184) KOG3184 (0.517, 64.8)
+ ctrl RPS6 (KOG1646) KOG1646 (0.633, 93.2)
+ ctrl ACTB (KOG0676) KOG0676 (0.497, 59.2)
+ ctrl TEP1 grp KOG3602 (0.243, 0.8)
+ ctrl PARP4 grp KOG1037 (0.28, 3.0)
+LABEL TYPICAL
