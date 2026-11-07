@@ -71,3 +71,37 @@ expectation matters most.**
 The literature appears not to have asked whether MVP is present in **feces, gut lumen contents, or
 mucus itself** (§54b). That is a database query against published fecal and mucus proteomics, not an
 analysis of this pulldown, and it is recorded as a standing item rather than folded into this test.
+
+---
+
+## Addendum, written before running, after §56a invalidated the same control elsewhere
+
+This file was committed before Grok audit 3. §56a has since found that the length-and-charge matching
+specified above is **invalid as applied to translation**, because the donor pool drawn from those decile
+cells is **77% translation-adjacent against a 31% universe baseline — a 2.48x recoding of the label.**
+
+The matching is the primary test here. So **the same check must be run on this test's own terms before
+its result means anything**, and we add it now rather than after seeing the answer:
+
+**Added requirement.** For each term that clears the matched control, enumerate its donor pool and
+compute the fraction belonging to a pre-specified adjacency set for *that* term:
+
+- for `GOBP_DETOXIFICATION`: the union of `GOBP_RESPONSE_TO_XENOBIOTIC_STIMULUS`,
+  `GOBP_RESPONSE_TO_OXIDATIVE_STRESS`, `GOBP_CELLULAR_RESPONSE_TO_CHEMICAL_STRESS` and
+  `GOBP_GLUTATHIONE_METABOLIC_PROCESS`, restricted to those present in this GMT
+- for `GOCC_LATE_ENDOSOME`: the union of `GOCC_ENDOSOME`, `GOCC_EARLY_ENDOSOME`, `GOCC_LYSOSOME` and
+  `GOBP_VESICLE_MEDIATED_TRANSPORT`, restricted to those present
+
+**Same bars as §56a: above 2.0x the control is invalid as applied to that term, below 1.5x it stands,
+between is partial.** A term that clears the matched control on an invalid donor pool is recorded as
+undecided, not as a survivor.
+
+**Gate 2 keeps its registered meaning.** It requires `GOCC_RIBOSOME` to fail under this matching,
+reproducing §51's p = 0.184. That is a **technical reproducibility check on the machinery**, not an
+endorsement of the inference §51 drew from it — §56a bears on what the result means, not on whether the
+code is applying the match correctly. We state the distinction so the gate is not later read as
+contradicting §56a.
+
+**Registered expectation, unchanged from above and now sharper:** we still expect detoxification to die
+on the matched control. If it instead survives *and* its donor pool is clean, that is a stronger result
+than we were prepared for, and it will be the first controlled support for the export hypothesis.
