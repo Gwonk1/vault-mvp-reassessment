@@ -1640,3 +1640,120 @@ reachable — when a better control for the same axis, TAP1-TAP2 at 0.957, was i
 **Gates have to be chosen from the data's own achievable range, not from the hypothesis or from
 memory.** Three tests this session returned no answer for that reason, which is a larger toll than any
 single wrong result.
+
+## 35. Grok audit of §31-34: the container reading dies, the dyad survives reframed, and COAD is a real counterexample
+
+`grok/to-grok/001-*.md` and `grok/from-grok/001r-*.md`. Grok was given the numbers inline with no file
+or tool access, so the exchange is reproducible and it could not touch the repository. It was asked to
+attack two claims. Both verdicts came back **SURVIVES WEAKENED**, and the reasoning cost us more than
+either verdict.
+
+### 35a. Three withdrawals on §33, all correct
+
+1. **"Reciprocal exclusive pair" is a free claim.** CFdb scores are symmetric, so every edge is
+   reciprocal by construction and the assay cannot fail that test. MVP degree 1 and PARP4 degree 1 are
+   **one isolated dyad**, not two independent observations. Withdrawn.
+2. **The GO enrichment at n = 1 had no power.** With MVP having exactly one partner, "0 observed,
+   p = 1.0" is the null output of a one-sided test, not evidence of depletion — the test was only ever
+   asking whether PARP4 carries the annotation. **§33's "well-powered negative" claim is withdrawn.**
+   The ANXA2-has-27-partners observation remains relevant to coverage but does not make the enrichment
+   test powered.
+3. **TEP1's absence is a false negative inside the particle itself.** We now have the number:
+   **precision(MVP-TEP1) = 0.041**, score 0.0125 — at the noise floor, not just below the cut. So
+   sensitivity for known vault subunits in this instrument is **1 of 2**, and "no other neighbours" is
+   produced by the same process that lost TEP1.
+
+### 35b. But the decisive test grok specified comes back a cliff, not a threshold artefact
+
+It identified that thresholding at 0.50 destroyed the only contrast that could separate three worlds,
+and that the diagnostic was the shape of MVP's full precision list. Run on all 10,614 of MVP's scored
+pairs:
+
+| rank | MVP partner | score | precision |
+|---|---|---|---|
+| **1** | **PARP4** | **0.2722** | **0.676** |
+| 2 | ZNF598 | 0.1378 | 0.382 |
+| 3 | RPL8 | 0.1179 | 0.329 |
+| 4 | ZC3HAV1 | 0.1161 | 0.324 |
+| 5 | EIF3A | 0.1148 | 0.320 |
+
+**PARP4 sits at the 99.99th percentile of MVP's 10,614 scores, with twice the score of rank 2 and then
+a smooth plateau.** That is the cliff, and it excludes grok's ramp and flat worlds.
+
+**And the right control was in the same file.** FLOT1, a known obligate heterodimer partner of FLOT2:
+FLOT2 at precision 0.599, then a drop to 0.258. **Identical shape to MVP-PARP4.** Meanwhile PSMA1 has
+ten partners at precision 1.000 with scores of 0.93-0.97.
+
+So the instrument distinguishes three regimes, and MVP is clearly in the second: **a large obligate
+machine (PSMA1), a binary complex (FLOT1-FLOT2, MVP-PARP4), and noise.** MVP-PARP4 behaves like a
+binary complex by this instrument's own standard.
+
+### 35c. The container reading is killed
+
+Grok's closing argument is right and we accept it: a sealed obligate container, an inert homooligomer,
+an RNA-binding particle, a partially occupied vault, a transient interactor, and a protein measured just
+well enough to return its one database edge all produce this graph. The vault loses its only edge one
+threshold up and fails to recover TEP1, which is the wrong shape for the analogy.
+
+**#135 is struck.** What stands is narrower: *MVP has no co-eluting neighbourhood above precision 0.50
+except a mid-precision PARP4 edge, and that edge has the profile of a binary complex rather than a
+multi-subunit machine.*
+
+### 35d. New observation we had thresholded away
+
+MVP's ranks 2-12 are **translation and RNA machinery**: ZNF598 (ribosome quality control), RPL8, RPL30,
+EIF3A, EIF3C, UPF1 (nonsense-mediated decay), GIGYF2, FAM120A, ZC3HAV1 (ZAP). All at precision
+0.30-0.38, below our cut, never seen until grok asked for the list.
+
+Not membrane. Not immune. **Consistent with MVP being templated on polyribosomes and binding vault
+RNA** — a connection the published literature makes and our analysis never touched. Recorded as an
+observation; it has had no test.
+
+### 35e. §31 weakens badly, and COAD is the reason
+
+**brain_cptac and gbm_cptac are both central nervous system.** So the headline "4 of 5 datasets" is
+really **CNS counted twice, plus UCEC, plus cell lines**, with colorectal null. Grok caught this; we
+had treated five datasets as five tissue contexts.
+
+**And COAD is not a dead dataset.** Grok specified the test: seed COAD with PSMA1 and see whether the
+proteasome replicates there. It does — **6 of 7 proteasome terms at q < 0.05, five at q = 0.0000.** The
+method has ample power in COAD and returns **q = 1.000 for every immune term**. Colorectal is also one
+of the tissues where the vault holoenzyme is most abundant (§27a).
+
+**So COAD is a real counterexample and cannot be set aside.** Effective replication is two tissue
+contexts plus cell lines positive, one tissue context with demonstrated power negative.
+
+**Also conceded:** 103 replicating terms are overlapping DAG slices, roughly **two independent
+signals** — an interferon/MHC-I block and a cortical actin block — not 103 results.
+
+### 35f. The test we should have run, and what it shows
+
+Grok: *"'so I deflated it to shared regulation' is not a test. Partial r(MVP, TAP1 | STAT1, IRF9) is the
+test, and it is in the matrices you have."* Correct. Run on CCLE, n = 330, all controlled for N:C and
+proliferation:
+
+| pair | residualised | partial on STAT1 + IRF9 |
+|---|---|---|
+| MVP-B2M | +0.426 | **+0.270** (p < 1e-4) |
+| MVP-AHR | +0.279 | **+0.231** (p < 1e-4) |
+| MVP-TAP1 | +0.380 | **+0.216** (p = 1e-4) |
+| MVP-TAP2 | +0.359 | **+0.204** (p = 2e-4) |
+
+**Neither collapse nor clean survival: roughly 45% of the association is STAT1/IRF9-mediated and the
+remainder is not.** By grok's own framing that makes it partly regulon re-description and partly
+something else. We add the caveat it did not: STAT1 and IRF9 *protein* are imperfect proxies for pathway
+activity, so this under-corrects and the residual 0.20-0.27 may still be regulon.
+
+### 35g. Two further corrections we accept
+
+**The ruffle/actin cluster was selective attention.** `GOCC_RUFFLE` replicates at the same bar as
+inflammatory response (0.001 / 1.000 / 0.012 / 0.032 / 0.010, 4 of 5 including CCLE) and actin filament
+organisation likewise. We set them aside because they did not fit an immune sentence. They are reported
+at equal standing from here, and grok's point stands that the cortical block is the half of the scan
+that interferon inducibility does **not** predict.
+
+**The EZH2 statistic was mis-stated.** 11.5th percentile of 200 nuclear proteins means about 23 are more
+negative, an empirical one-sided p of roughly 0.12. That is the **left tail**, so "inside the bulk of
+the nuclear distribution" was wrong. The correct statement: EZH2 is modestly more negative than typical
+nuclear proteins but nowhere near the 5th percentile registered for a specific-silencing call. Too weak
+to support PRC2 silencing, and not the clean artefact we described.

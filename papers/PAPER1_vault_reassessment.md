@@ -4,7 +4,7 @@
 reviewed the manuscript adversarially against the committed data, in three rounds; between them they
 struck or qualified more than a dozen claims made here, and those reversals are recorded in place
 rather than quietly removed. All hypotheses were committed to a timestamped git history before the
-relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (142 entries)
+relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (154 entries)
 and `RESULTS.md` (24 sections). **That history is currently local and has not been published**, so
 the ordering it establishes is not yet independently verifiable; we state the fact rather than imply
 otherwise, and the repository is available to anyone who asks. Correspondence welcome, including
@@ -198,11 +198,28 @@ discriminator, which makes the pair about as firmly established as anything in t
 ends the broad neighbourhood as a physical claim, on a well-powered negative rather than an
 ambiguous one.
 
-**We think the absence is the result.** A particle whose only stable partner is its own internal
-enzyme, in a method that readily assigns dozens of partners to comparable proteins, is behaving as a
-sealed compartment - which is what the wall geometry above independently indicates. Across five
-instruments no broad neighbourhood exists. The most economical reading is that the vault does not
-have one because it is a container, and containers do not.
+**We drafted a container reading of that absence and an external reviewer killed it, correctly.** A
+sealed obligate container, an inert homooligomer, an RNA-binding particle, a partially occupied
+vault, a transient interactor, and a protein measured just well enough to return its one database
+edge all produce an isolated dyad. Two further objections hold: co-fractionation scores are
+symmetric, so "reciprocal" was free, and an enrichment test against a partner set of size one has no
+power, so the membrane and immune nulls here are uninformative rather than well-powered. All three
+claims are withdrawn.
+
+**What the full score distribution does support is narrower and better controlled.** Across all
+10,614 of MVP's scored pairs, PARP4 sits at the 99.99th percentile with twice the score of rank two,
+then a smooth plateau - a cliff, not an artefact of where we cut. The instrument's own calibration
+places that profile precisely: PSMA1 returns ten partners at precision 1.00, flotillin-1 returns its
+obligate heterodimer partner flotillin-2 at 0.60 followed by a drop, and MVP returns PARP4 at 0.68
+followed by a drop. **MVP-PARP4 has the signature of a binary complex rather than a multi-subunit
+machine.** Against that, TEP1 - a known subunit - scores 0.04, so sensitivity for vault components
+here is one of two and the absence of further partners comes from the same process that lost TEP1.
+
+The honest statement: MVP has no detectable co-eluting neighbourhood beyond a binary-complex-grade
+PARP4 edge, in an instrument that demonstrably misses one of the three subunits we already know
+about. Ranks two to twelve, below our threshold and unexamined until the reviewer asked for them,
+are translation and RNA-handling proteins - ZNF598, RPL8, EIF3A, UPF1, ZC3HAV1 - which is neither of
+the neighbourhoods we had been arguing about and is consistent with polyribosome templating.
 
 **Developmental scaffolding - reported as uninformative.** This test **failed its own gate** and we
 report it accordingly, because our stated rule is that a failed gate is not reinterpreted. The
