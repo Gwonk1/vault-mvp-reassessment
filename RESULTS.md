@@ -1757,3 +1757,76 @@ negative, an empirical one-sided p of roughly 0.12. That is the **left tail**, s
 the nuclear distribution" was wrong. The correct statement: EZH2 is modestly more negative than typical
 nuclear proteins but nowhere near the 5th percentile registered for a specific-silencing call. Too weak
 to support PRC2 silencing, and not the clean artefact we described.
+
+## 36. Removing the interferon axis: the reviewer's prediction was right, and what survives is cortical actin
+
+`IFN_RESIDUAL_PREREGISTRATION.md`. The test grok specified and we registered under its prediction, not
+ours: residualise all five matrices on **STAT1 + IRF9** in addition to the N:C proxy and proliferation,
+then rerun the §31 scan unchanged.
+
+**All three gates pass, including the one that makes it interpretable.** PARP4 remains MVP's rank-1
+correlate in all five datasets; PSMA1 still recovers 12-25 of 25 proteasome subunits and six proteasome
+terms still replicate; and **TAP1 is displaced out of MVP's top 200 in 5 of 5 datasets** — to ranks 558,
+806, 1342, 4238 and 7042. The interferon axis really was removed.
+
+**103 replicating terms fall to 52.** But the count is not the result; the composition is.
+
+### 36a. Disaggregated by tissue, because the raw count repeats the error grok caught
+
+Two of the five datasets are central nervous system (brain and glioblastoma), so we report how many of
+the **three non-CNS datasets** — colorectal, endometrium and cell lines — support each term:
+
+| term | brain | coad | gbm | ucec | **CCLE** | non-CNS |
+|---|---|---|---|---|---|---|
+| `GOCC_RUFFLE` | 0.001 | 0.971 | 0.042 | 0.003 | **0.004** | **2/3** |
+| `GOBP_ACTIN_FILAMENT_ORGANIZATION` | 0.000 | 0.663 | 0.000 | 0.003 | **0.001** | **2/3** |
+| `GOBP_INFLAMMATORY_RESPONSE` | 0.000 | 1.000 | 0.000 | 0.000 | **0.000** | **2/3** |
+| `GOCC_LAMELLIPODIUM` | 0.004 | 1.000 | 0.030 | 0.332 | 0.045 | 1/3 |
+| `GOCC_CELL_LEADING_EDGE` | 0.000 | 1.000 | 0.002 | 0.077 | 0.001 | 1/3 |
+| `GOBP_WOUND_HEALING` | 0.000 | 1.000 | 0.000 | 0.428 | 0.000 | 1/3 |
+| `GOBP_CELL_SUBSTRATE_ADHESION` | 0.003 | 1.000 | 0.001 | 0.889 | 0.000 | 1/3 |
+| `GOBP_RESPONSE_TO_BACTERIUM` | 0.028 | 1.000 | 0.001 | 0.003 | 0.114 | 1/3 |
+| **`GOBP_ANTIGEN_PROCESSING_AND_PRESENTATION`** | 0.000 | 1.000 | 0.000 | 0.596 | **0.617** | **0/3** |
+| **`GOBP_RESPONSE_TO_TYPE_II_INTERFERON`** | 0.000 | 1.000 | 0.019 | 0.219 | **0.476** | **0/3** |
+
+### 36b. The prediction was right, and it was not ours
+
+**The interferon-specific terms are now CNS-only.** Antigen processing and presentation and response to
+type II interferon each hold in brain and glioblastoma and in **neither** colorectal, endometrium nor
+cell lines. Removing STAT1 and IRF9 removed them everywhere it mattered. **§31's interferon and
+antigen-presentation signal was substantially a re-description of the interferon regulon**, exactly as
+grok argued and we had only asserted.
+
+**And the cortical block survives with non-CNS support.** Membrane ruffling and actin filament
+organisation each hold in endometrium *and* cell lines after the axis is gone — and cell lines contain
+no immune system, so neither infiltrate nor interferon tone explains them. They were in §31 at the same
+bar as the immune terms and we set them aside because they did not fit the story we were telling.
+
+### 36c. Where the prediction was only half right
+
+`GOBP_INFLAMMATORY_RESPONSE` also survives at 2 of 3 non-CNS, at q = 0.000 in both endometrium and cell
+lines. So "the immune block dies" is too strong: **the interferon-specific part dies and the broader
+inflammatory part does not.** Inflammatory response is a wider set than the interferon axis and is not
+removed by residualising STAT1 and IRF9. We report that against the registered prediction rather than
+rounding it to a clean win.
+
+### 36d. What this licenses, and the four things it does not
+
+**Licensed:** after removing the interferon axis, MVP's only co-abundance neighbourhood terms with
+support in more than one non-CNS dataset are **membrane ruffling, actin filament organisation and
+inflammatory response.** Everything interferon-specific is confined to one tissue.
+
+**Not licensed, and each of these is live:**
+
+1. **This is co-abundance, not contact.** CFdb found nothing resembling a cortical actin neighbourhood
+   around MVP — MVP's only native co-eluting partner is PARP4. §33 and §36 are measuring different
+   things and only one of them reports physical association.
+2. **COAD is null for every term in the table.** It passed its gates with 12 of 25 proteasome subunits
+   recovered, so this is not a power problem. The colorectal counterexample from §35e stands unchanged.
+3. **The correction under-corrects.** STAT1 and IRF9 *protein* are imperfect proxies for pathway
+   activity, so surviving terms may still be partly regulon.
+4. **A cytoskeletal-abundance confound is untested.** MVP is an abundant cytoplasmic protein and the
+   actin cortex is the most abundant cytoplasmic structure; residualising on a nuclear-to-cytoplasmic
+   ratio does not remove within-cytoplasm composition. **That is the obvious next control and we have
+   not run it**, so the cortical result should be read as the best-surviving candidate rather than as
+   established.

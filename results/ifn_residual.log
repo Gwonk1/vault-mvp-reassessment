@@ -1,0 +1,53 @@
+GO terms loaded: 8634
+  brain_cptac_2020     n=218  proteins=6402  PARP4 rank 1 prot'some 25/25 -> INCLUDED
+  coad_cptac_2019      n=97   proteins=6899  PARP4 rank 1 prot'some 12/25 -> INCLUDED
+  gbm_cptac_2021       n=99   proteins=10498 PARP4 rank 1 prot'some 15/25 -> INCLUDED
+  ucec_cptac_2020      n=95   proteins=10067 PARP4 rank 1 prot'some 13/25 -> INCLUDED
+  ccle_broad_2019      n=330  proteins=9258  PARP4 rank 1 prot'some 19/25 -> INCLUDED
+
+included datasets: 5
+GATE3 TAP1 rank in MVP top-200 after STAT1/IRF9 removal: {'brain_cptac_2020': 806, 'coad_cptac_2019': 1342, 'gbm_cptac_2021': 4238, 'ucec_cptac_2020': 7042, 'ccle_broad_2019': 558}
+       out of top 200 in 5 of 5 -> PASS
+DESIGN GATE: proteasome terms replicating in >=3 datasets: 6 -> PASS
+  brain_cptac_2020: 315 terms at q<0.05
+  coad_cptac_2019: 8 terms at q<0.05
+  gbm_cptac_2021: 307 terms at q<0.05
+  ucec_cptac_2020: 56 terms at q<0.05
+  ccle_broad_2019: 241 terms at q<0.05
+
+majority threshold: 3 of 5
+VERDICT: REPLICATING NEIGHBOURHOOD: 52 term(s)
+
+top terms by replication count:
+GOBP_POSITIVE_REGULATION_OF_RESPONSE_TO_EXTERNAL_STIMULUS    4
+GOCC_RUFFLE                                                  4
+GOBP_INFLAMMATORY_RESPONSE                                   4
+GOBP_ACTIN_FILAMENT_ORGANIZATION                             4
+GOBP_REGULATION_OF_ACTIN_FILAMENT_ORGANIZATION               4
+GOBP_REGULATION_OF_ACTIN_FILAMENT_BASED_PROCESS              4
+GOCC_CELL_LEADING_EDGE                                       3
+GOBP_CYTOKINE_PRODUCTION                                     3
+GOBP_PEPTIDYL_TYROSINE_MODIFICATION                          3
+GOBP_REGULATION_OF_INFLAMMATORY_RESPONSE                     3
+GOBP_REGULATION_OF_DEFENSE_RESPONSE                          3
+GOBP_POSITIVE_REGULATION_OF_DEFENSE_RESPONSE                 3
+GOCC_VESICLE_LUMEN                                           3
+GOBP_CELL_SUBSTRATE_ADHESION                                 3
+GOCC_INTEGRIN_COMPLEX                                        3
+GOBP_HEMOSTASIS                                              3
+GOBP_CELL_ADHESION_MEDIATED_BY_INTEGRIN                      3
+GOBP_POSITIVE_REGULATION_OF_CELL_SUBSTRATE_ADHESION          3
+GOCC_LAMELLIPODIUM                                           3
+GOCC_CELL_SURFACE                                            3
+GOBP_ACTIN_POLYMERIZATION_OR_DEPOLYMERIZATION                3
+GOBP_WOUND_HEALING                                           3
+GOCC_PLASMA_MEMBRANE_SIGNALING_RECEPTOR_COMPLEX              3
+GOBP_POSITIVE_REGULATION_OF_CELL_ADHESION                    3
+GOBP_REGULATION_OF_HYDROLASE_ACTIVITY                        3
+
+previously favoured terms:
+  GOBP_PLASMA_MEMBRANE_REPAIR              replicates in 1 of 5
+  GOCC_CAVEOLA                             replicates in 1 of 5
+  GOBP_PLASMA_MEMBRANE_ORGANIZATION        replicates in 1 of 5
+  GOCC_LATE_ENDOSOME                       replicates in 0 of 5
+  GOBP_ENDOSOMAL_TRANSPORT                 replicates in 0 of 5

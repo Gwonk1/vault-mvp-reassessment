@@ -1,0 +1,79 @@
+{
+ "GOCC_RUFFLE": {
+  "brain_cptac_2020": 0.0008,
+  "coad_cptac_2019": 0.9713,
+  "gbm_cptac_2021": 0.0423,
+  "ucec_cptac_2020": 0.0031,
+  "ccle_broad_2019": 0.0038
+ },
+ "GOBP_ACTIN_FILAMENT_ORGANIZATION": {
+  "brain_cptac_2020": 0.0,
+  "coad_cptac_2019": 0.6629,
+  "gbm_cptac_2021": 0.0,
+  "ucec_cptac_2020": 0.0031,
+  "ccle_broad_2019": 0.0008
+ },
+ "GOCC_LAMELLIPODIUM": {
+  "brain_cptac_2020": 0.0037,
+  "coad_cptac_2019": 0.9996,
+  "gbm_cptac_2021": 0.0304,
+  "ucec_cptac_2020": 0.3322,
+  "ccle_broad_2019": 0.0451
+ },
+ "GOCC_CELL_LEADING_EDGE": {
+  "brain_cptac_2020": 0.0,
+  "coad_cptac_2019": 0.9996,
+  "gbm_cptac_2021": 0.0022,
+  "ucec_cptac_2020": 0.0766,
+  "ccle_broad_2019": 0.0005
+ },
+ "GOCC_INTEGRIN_COMPLEX": {
+  "brain_cptac_2020": 0.0044,
+  "coad_cptac_2019": null,
+  "gbm_cptac_2021": 0.0143,
+  "ucec_cptac_2020": null,
+  "ccle_broad_2019": 0.003
+ },
+ "GOBP_WOUND_HEALING": {
+  "brain_cptac_2020": 0.0001,
+  "coad_cptac_2019": 0.9996,
+  "gbm_cptac_2021": 0.0,
+  "ucec_cptac_2020": 0.4282,
+  "ccle_broad_2019": 0.0
+ },
+ "GOBP_CELL_SUBSTRATE_ADHESION": {
+  "brain_cptac_2020": 0.0033,
+  "coad_cptac_2019": 0.9996,
+  "gbm_cptac_2021": 0.0006,
+  "ucec_cptac_2020": 0.8887,
+  "ccle_broad_2019": 0.0001
+ },
+ "GOBP_INFLAMMATORY_RESPONSE": {
+  "brain_cptac_2020": 0.0,
+  "coad_cptac_2019": 0.9996,
+  "gbm_cptac_2021": 0.0,
+  "ucec_cptac_2020": 0.0001,
+  "ccle_broad_2019": 0.0003
+ },
+ "GOBP_ANTIGEN_PROCESSING_AND_PRESENTATION": {
+  "brain_cptac_2020": 0.0001,
+  "coad_cptac_2019": 0.9996,
+  "gbm_cptac_2021": 0.0002,
+  "ucec_cptac_2020": 0.5962,
+  "ccle_broad_2019": 0.6174
+ },
+ "GOBP_RESPONSE_TO_BACTERIUM": {
+  "brain_cptac_2020": 0.0277,
+  "coad_cptac_2019": 0.9996,
+  "gbm_cptac_2021": 0.0005,
+  "ucec_cptac_2020": 0.0034,
+  "ccle_broad_2019": 0.114
+ },
+ "GOBP_RESPONSE_TO_TYPE_II_INTERFERON": {
+  "brain_cptac_2020": 0.0,
+  "coad_cptac_2019": 0.9996,
+  "gbm_cptac_2021": 0.0186,
+  "ucec_cptac_2020": 0.2186,
+  "ccle_broad_2019": 0.4759
+ }
+}
