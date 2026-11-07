@@ -1,6 +1,11 @@
 .venv/
+__pycache__/
+*.pyc
 data/raw/
 data/processed/
-__pycache__/
+argon/raw/*
+!argon/raw/README.md
+!argon/raw/fetch.sh
+!argon/raw/SHA256SUMS.txt
 # local working notes and source material are kept out of this repository
 *.pdf

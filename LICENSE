@@ -1,0 +1,43 @@
+# Licensing
+
+This repository is dual-licensed, because it contains two different kinds of work.
+
+## Prose, papers, results and documentation — CC BY 4.0
+
+Everything written for human readers is licensed under the
+**Creative Commons Attribution 4.0 International License (CC BY 4.0)**.
+
+That covers: `papers/`, `README.md`, `LEDGER.md`, `RESULTS.md`, every
+`*_PREREGISTRATION.md`, `*_DEVIATIONS.md`, `SURFACE_AMENDMENT.md`,
+`vault-partition-analysis-plan.md`, the review correspondence in `channel/`,
+`grok/` and `argon/` (excluding `argon/src/`), and the contents of `results/`
+and `argon/results/`.
+
+You may share and adapt this material, including commercially, provided you
+give appropriate credit, link to the license, and indicate if changes were
+made. Full text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Suggested citation:
+
+> Syfert, G. W. (2026). *One assembly, three lifetimes, and a sealed nucleotide
+> pocket: a pre-registered reassessment of major vault protein across public
+> human and comparative data.* https://github.com/Gwonk1/vault-mvp-reassessment
+
+## Code — MIT
+
+All analysis code is licensed under the **MIT License**; see `LICENSE-MIT`.
+
+That covers: `src/`, `argon/src/`, `argon/raw/fetch.sh`, `channel/send.sh` and
+`channel/watch.sh`, and any other `*.py` or `*.sh` file in this repository.
+
+## What is NOT covered
+
+Neither license extends to third-party material this project reads but does not
+own. No file in `argon/raw/` is redistributed here for that reason; see
+`argon/raw/README.md`. Published figures, sequences, structures and datasets
+retain the licenses of their original sources, and the obligation to check them
+is the reuser's.
+
+Nothing here is peer reviewed. The licenses grant reuse rights; they are not a
+warranty of correctness, and `LEDGER.md` documents at length where this work was
+wrong before it was right.
