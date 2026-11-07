@@ -3,10 +3,11 @@
 **Graham W. Syfert**, with Claude (Anthropic) and two independent reviewing agents. Companion to
 `PAPER1_vault_reassessment.md`. Written for a group with a working vault purification pipeline.
 
-**Why this document exists.** We ran nineteen pre-registered computational tests against every
-public dataset we could reach. Twelve returned an informative verdict with their positive controls
-recovered, five are formally uninformative because a control gate failed, and two passed partially;
-the companion paper names each one. Between them they eliminated most standing hypotheses and left
+**Why this document exists.** We ran twenty-eight pre-registered computational tests against every
+public dataset we could reach. Eighteen returned an informative verdict with their positive controls
+recovered, eight are formally uninformative because a control gate failed, and two passed partially;
+the companion paper names each one, including the three where the gate was badly designed rather than
+the data uninformative. Between them they eliminated most standing hypotheses and left
 four constraints that no public dataset can resolve further. Everything below requires a bench. Each
 entry states what it decides, the minimal design, the positive control, and the result that would
 kill the idea - including ours.

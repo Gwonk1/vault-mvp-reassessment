@@ -15,15 +15,15 @@ corrections.
 ## Abstract
 
 The vault ribonucleoprotein has resisted functional assignment for forty years. We subjected the
-major vault protein (MVP) and its partners to nineteen pre-registered tests across public
+major vault protein (MVP) and its partners to twenty-eight pre-registered tests across public
 transcriptomic, proteomic, genomic, structural and comparative datasets, each gated on recovery of a
-known positive control. **Five of the nineteen returned a formally uninformative verdict because a
-control gate failed, and we mark each one rather than promote it.** Most standing hypotheses
-nonetheless failed on tests that did gate: MVP is not a member of the chronic interferon resistance
-program; no gene family is co-lost with it across 472 eukaryotes; NSUN2 does not repress CYP3A4 in
-human liver; and phosphorylation does not gate vault assembly or partner exchange. Drug-tolerant
-persistence and tissue-level autophagy gating both pointed the same way but failed their gates, so
-we report them as uninformative.
+known positive control. **Eight of the twenty-eight returned a formally uninformative verdict
+because a control gate failed, and we mark each one rather than promote it.** Most standing
+hypotheses nonetheless failed on tests that did gate: MVP is not a member of the chronic interferon
+resistance program; no gene family is co-lost with it across 472 eukaryotes; NSUN2 does not repress
+CYP3A4 in human liver; and phosphorylation does not gate vault assembly or partner exchange.
+Drug-tolerant persistence and tissue-level autophagy gating both pointed the same way but failed
+their gates, so we report them as uninformative.
 
 What survives is narrow. MVP, PARP4 and TEP1 are mutually closest by protein co-abundance - PARP4
 and TEP1 at ranks 1 and 2 of 10,924 proteins across thirteen tumour cohorts, and PARP4 first with
@@ -32,6 +32,14 @@ are not a welded complex: the ordering PARP4 < TEP1 < MVP holds in four of four 
 human cell types, with ratios from 1.5- to 8.1-fold, though that test also failed its gate. We
 resolve the thirty-year LRP chemoresistance biomarker as a passenger phenomenon carried by two
 separate mechanisms, ABCB1-mediated efflux and slow division, which do not partition by drug class.
+In native co-fractionation across 411 datasets, where symmetric scoring and a size axis replace
+sample covariation, MVP's highest-scoring partner of 10,614 is PARP4 at the 99.99th percentile, with
+a profile matching flotillin-1's obligate heterodimer rather than a multi-subunit machine; TEP1
+scores at the noise floor in the same data, so sensitivity for known vault subunits there is one of
+two. No broad neighbourhood is detectable around MVP by any instrument we applied, but we withdraw
+the stronger readings we first drew from that - an enrichment test against a partner set of size one
+has no power, and a container metaphor is one of six models that produce the same graph.
+
 We confirm, from two independent alignments, that the SPFH shoulder nucleotide pocket is the most
 conserved structural domain of MVP, with four ADP-ribose-contacting residues invariant across 174
 eukaryotes, and that this pocket cannot be reached radially through the shell wall and must
@@ -61,15 +69,26 @@ relevant data were examined. Where a gate failed, the result is reported as unin
 than reinterpreted. Where our own analysis was wrong, the correction is recorded alongside the
 original.
 
-**The gate scorecard, stated up front.** Of nineteen tests, twelve returned an informative verdict
-with their positive controls recovered; **five carry a formal verdict of UNINFORMATIVE in their own
-committed output** - co-essentiality (CAV1 fails to recover CAVIN1 or EHD2), developmental
-trajectory (two of three stemness markers absent or above threshold), drug-tolerant persistence (a
-proliferation control undetected in one model), subunit turnover (short-lived controls absent from
-the pulse-SILAC table entirely) and the Vaultrc5 knockout (the transcript is undetected in brain);
-and two passed partially - the CRISPR corpus, where the genotoxic screen class failed its control
-while viral and immune-killing classes passed, and the LRP decomposition, where ABCC1 failed to
-predict its own substrates.
+**The gate scorecard, stated up front.** Of twenty-eight tests, eighteen returned an informative
+verdict with their positive controls recovered; **eight carry a formal verdict of UNINFORMATIVE in
+their own committed output**; and two passed partially - the CRISPR corpus, where the genotoxic
+screen class failed its control while viral and immune-killing classes passed, and the LRP
+decomposition, where ABCC1 failed to predict its own substrates.
+
+The eight, each with the control that failed: co-essentiality (CAV1 fails to recover CAVIN1 or
+EHD2); developmental trajectory (two of three stemness markers absent or above threshold);
+drug-tolerant persistence (a proliferation control undetected in one model); subunit turnover
+(short-lived controls absent from the pulse-SILAC table entirely); the Vaultrc5 knockout (the
+transcript is undetected in brain); an epithelial-mesenchymal control (we required E-cadherin to
+anti-correlate with an extracellular-matrix-dominated signature at a threshold it does not reach); a
+proximity-labelling contact test (MVP is absent from the relevant bait's run, which is the
+second-shallowest of seventeen); and a transcriptional-licensing test (we adopted a transcript-level
+coherence threshold for protein data without checking it was reachable, and it is not reachable even
+before adjustment).
+
+**Three of those eight failed because we designed the gate badly rather than because the data were
+uninformative**, and we say so because it is the largest single source of wasted effort in this
+work.
 
 We say this in the introduction because an earlier draft of this paper asserted four of those five
 in its title and abstract as though they were findings, which is precisely the failure the gate was
@@ -220,6 +239,34 @@ PARP4 edge, in an instrument that demonstrably misses one of the three subunits 
 about. Ranks two to twelve, below our threshold and unexamined until the reviewer asked for them,
 are translation and RNA-handling proteins - ZNF598, RPL8, EIF3A, UPF1, ZC3HAV1 - which is neither of
 the neighbourhoods we had been arguing about and is consistent with polyribosome templating.
+
+**An unbiased scan, and what it cost us.** Because every co-abundance test to this point had begun
+by nominating a module we already favoured, we inverted the procedure: scan all 8,634 Gene Ontology
+terms against MVP's top 200 correlates in five independent proteomic datasets, each residualised on
+a nuclear-to-cytoplasmic proxy and proliferation, and require replication in a majority. We
+registered a prediction that zero or very few terms would replicate. **One hundred and three did**,
+and the module was innate immune - antigen processing, cytokine production, inflammatory response,
+response to bacterium, membrane ruffling and actin organisation. The design gate passed: the same
+scan seeded with PSMA1 recovers the proteasome.
+
+That result then weakened substantially under external review, and the corrections matter more than
+the finding. The 103 terms are overlapping branches of one ontology, approximately **two**
+independent signals rather than 103. Two of the five datasets are the same tissue - brain and
+glioblastoma - so the apparent four-of-five replication is central nervous system counted twice,
+plus endometrium, plus cell lines. And the colorectal cohort, which we had treated as uninformative
+because it returned q = 1.000 throughout, **recovers six of seven proteasome terms from a PSMA1 seed
+with five at q = 0.0000**: it has ample power, it is the tissue where the vault holoenzyme is most
+abundant, and it is therefore a real counterexample rather than a dead dataset. We were
+cherry-picking around it.
+
+What survives is a reproducible covariation, in cells with no immune system, between MVP abundance
+and a cell-autonomous innate-immune program. Partialling on STAT1 and IRF9 removes roughly 45% of it
+and leaves the rest (MVP-B2M falls from +0.426 to +0.270, MVP-TAP1 from +0.380 to +0.216, both p <
+1e-4), so it is neither a pure re-description of the interferon regulon nor clearly more than one.
+MVP is an interferon-gamma-inducible gene, and correlational data cannot separate effector from
+co-regulated passenger. We also note, having initially set it aside because it did not fit an immune
+reading, that membrane ruffling and actin organisation replicate at exactly the same bar - and that
+unlike the immune terms, they are not predicted by interferon inducibility.
 
 **Developmental scaffolding - reported as uninformative.** This test **failed its own gate** and we
 report it accordingly, because our stated rule is that a failed gate is not reinterpreted. The
@@ -373,7 +420,7 @@ shoulder pocket binds ADP-ribose at 78 copies, which flips the shoulder's lumena
 +23 e in the apo human cage to -133 e in the holo state across the 78-mer shoulder band. This is
 unscreened formal charge, computed before counterions and Mg2+.
 
-**This supplies the constraint our nineteen tests could not, and it is a published measurement
+**This supplies the constraint our twenty-eight tests could not, and it is a published measurement
 rather than an argument of ours.** Hornebeck et al. 2026 expressed the TEP1 TIR domain without its
 STAND regulatory domains in HEK293 cells: cellular NAD+ fell to 30-40% of control by 24 h and the
 cells died from about 20 h, both abolished by the E1008A catalytic mutation. Le Mouellic et al. 2026
@@ -410,8 +457,8 @@ phrasing here: "no co-essentiality with any gene" was wrong, and contradicted by
 previous page. 2,886 of 17,916 genes pass q < 0.05 against MVP, driven by n = 1,178; the defensible
 claim is about the partners, not the genome. That test also failed its own gate, as noted above. A
 latent enzyme held shut by its own regulatory domains should look exactly this inert at rest. The
-autoinhibition was integrated after our nineteen tests were run and scored, not pre-registered
-before them, and we flag that ordering rather than blur it.
+autoinhibition was integrated after our tests were run and scored, not pre-registered before them,
+and we flag that ordering rather than blur it.
 
 It also sharpens what remains unexplained. MVP's 66-hour half-life is ordinary - the 58.6th proteome
 percentile, against a median of 56.5 h - so the expense is not rapid rebuilding but the standing
