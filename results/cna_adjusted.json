@@ -1,0 +1,108 @@
+{
+ "n": 10077,
+ "cohorts": [
+  "brain_cptac_2020",
+  "brca_cptac_2020",
+  "brca_tcga_pan_can_atlas_2018",
+  "coad_cptac_2019",
+  "coadread_tcga_pan_can_atlas_2018",
+  "gbm_cptac_2021",
+  "luad_cptac_2020",
+  "mng_utoronto_2021",
+  "ov_tcga_pan_can_atlas_2018",
+  "ucec_cptac_2020"
+ ],
+ "gate": true,
+ "top40": [
+  "PARP4",
+  "ACTR3",
+  "TEP1",
+  "CLIC1",
+  "CAPNS1",
+  "IQGAP1",
+  "ANXA2",
+  "CAP1",
+  "SULT1A3",
+  "ACTR2",
+  "VWA5A",
+  "SQOR",
+  "SERPINB1",
+  "CAPN2",
+  "ARPC1B",
+  "LGALS4",
+  "LGALS3",
+  "ANXA4",
+  "PLIN3",
+  "FLII",
+  "UGP2",
+  "CORO1B",
+  "CAPG",
+  "RNH1",
+  "EPS8L3",
+  "S100A10",
+  "ARPC2",
+  "PYCARD",
+  "ACTN4",
+  "CAPN1",
+  "NFKB1",
+  "DNM2",
+  "CAPZA1",
+  "PSMB8",
+  "SNX6",
+  "EHD4",
+  "TMBIM1",
+  "SH3GLB1",
+  "COPG1",
+  "CCDC22"
+ ],
+ "ranks": {
+  "PARP4": {
+   "unadj": 1,
+   "cna_adj": 1
+  },
+  "TEP1": {
+   "unadj": 2,
+   "cna_adj": 3
+  },
+  "ANXA2": {
+   "unadj": 12,
+   "cna_adj": 7
+  },
+  "S100A10": {
+   "unadj": 65,
+   "cna_adj": 26
+  },
+  "CAPN2": {
+   "unadj": 9,
+   "cna_adj": 14
+  },
+  "CAPNS1": {
+   "unadj": 7,
+   "cna_adj": 5
+  },
+  "EHD4": {
+   "unadj": 38,
+   "cna_adj": 36
+  },
+  "IQGAP1": {
+   "unadj": 13,
+   "cna_adj": 6
+  },
+  "PYCARD": {
+   "unadj": 37,
+   "cna_adj": 28
+  },
+  "MAPK3": {
+   "unadj": 41,
+   "cna_adj": 152
+  },
+  "SULT1A3": {
+   "unadj": 43,
+   "cna_adj": 9
+  },
+  "ALDOA": {
+   "unadj": 64,
+   "cna_adj": 158
+  }
+ }
+}

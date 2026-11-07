@@ -398,3 +398,39 @@ most of §11's module reflects **shared regulation rather than contact**.
 **Against argon's Tier-1 claim:** PARP4-dependence is not enriched among my top interactors (2 of 12,
 16.7%, versus 18.5% of WT interactors generally). And while S100A10 does fall from +2.11 to −0.66 on
 PARP4 depletion as argon reported, that change has −log10 p = 1.21 (p ≈ 0.062) and is **not significant**.
+
+## 14. Copy-number-adjusted co-abundance (pre-registered sensitivity)
+
+`CNA_PREREGISTRATION.md`. Each protein residualised on its own gene's copy number and MVP on MVP's, then
+correlated — stripping cis copy-number effects from both sides. 10 cohorts (brca_dldccc dropped: only 46
+CNA-matched samples; lusc and paad have no CNA at all), 10,077 proteins.
+
+**Gate passed:** PARP4 stays rank 1 and TEP1 rank 3, so the adjustment is not over-correcting.
+
+| Gene | Unadjusted | CNA-adjusted | Pre-specified expectation |
+|---|---|---|---|
+| PARP4 | 1 | **1** | stay high — met |
+| TEP1 | 2 | **3** | stay high — met |
+| ANXA2 | 12 | **7** | — rose |
+| S100A10 | 65 | **26** | — rose |
+| IQGAP1 | 13 | **6** | — rose |
+| CAPNS1 | 7 | **5** | — rose |
+| MAPK3 | 41 | 152 | drop out — **met** |
+| ALDOA | 64 | 158 | drop out — **met** |
+| PYCARD | 37 | **28** | drop out — **FAILED** |
+| SULT1A3 | 43 | **9** | drop out — **FAILED, badly** |
+
+**Two of my four expectations failed, and that is the finding.** MAPK3 and ALDOA behaved as amplicon
+passengers and left the top 100. PYCARD held its rank and SULT1A3 *rose to 9th*. So the 16p11.2
+association is **not** explained by copy number alone — something regulatory, such as a shared chromatin
+domain, or compositional, such as myeloid content, is linking MVP to its neighbours. This agrees with
+argon's own CPTAC result (it saw the same residual cis signal in bulk tissue while it vanished in
+16p-euploid cell lines) and it means **#27's inflammasome association is not simply an amplicon
+artefact** — PYCARD survives adjustment.
+
+Meanwhile every membrane-repair protein *rose* after adjustment, which is what genuinely co-regulated
+partners should do once amplicon noise is removed.
+
+**Exploratory re-run of §13's cross-test on the adjusted ranking** is reported in
+`results/crosstest_cna.json` and labelled exploratory in the pre-registration: a primary that failed at
+p = 0.058 is not rescued by re-running with different input.

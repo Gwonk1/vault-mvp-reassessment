@@ -1,0 +1,43 @@
+CNA brain_cptac_2020 (18938, 174)
+CNA brca_cptac_2020 (17816, 122)
+CNA brca_dldccc_2022 (18816, 46)
+CNA brca_tcga_pan_can_atlas_2018 (18830, 105)
+CNA coad_cptac_2019 (18002, 95)
+CNA coadread_tcga_pan_can_atlas_2018 (18830, 83)
+CNA gbm_cptac_2021 (19036, 98)
+CNA luad_cptac_2020 (18228, 109)
+no CNA: lusc_cptac_2021
+CNA mng_utoronto_2021 (17855, 96)
+CNA ov_tcga_pan_can_atlas_2018 (18830, 119)
+no CNA: paad_cptac_2021
+CNA ucec_cptac_2020 (19042, 95)
+  adjusted brain_cptac_2020: 6402 proteins, 174 samples
+  adjusted brca_cptac_2020: 9435 proteins, 122 samples
+too few CNA-matched samples brca_dldccc_2022 46
+  adjusted brca_tcga_pan_can_atlas_2018: 9386 proteins, 105 samples
+  adjusted coad_cptac_2019: 6557 proteins, 95 samples
+  adjusted coadread_tcga_pan_can_atlas_2018: 5510 proteins, 83 samples
+  adjusted gbm_cptac_2021: 10343 proteins, 98 samples
+  adjusted luad_cptac_2020: 9815 proteins, 109 samples
+  adjusted mng_utoronto_2021: 6143 proteins, 96 samples
+  adjusted ov_tcga_pan_can_atlas_2018: 7277 proteins, 119 samples
+  adjusted ucec_cptac_2020: 9824 proteins, 95 samples
+
+CNA-adjusted ranking: 10077 proteins, 10 cohorts
+top 25: ['PARP4', 'ACTR3', 'TEP1', 'CLIC1', 'CAPNS1', 'IQGAP1', 'ANXA2', 'CAP1', 'SULT1A3', 'ACTR2', 'VWA5A', 'SQOR', 'SERPINB1', 'CAPN2', 'ARPC1B', 'LGALS4', 'LGALS3', 'ANXA4', 'PLIN3', 'FLII', 'UGP2', 'CORO1B', 'CAPG', 'RNH1', 'EPS8L3']
+
+gene            unadj    CNA-adj
+PARP4               1          1
+TEP1                2          3
+ANXA2              12          7
+S100A10            65         26
+CAPN2               9         14
+CAPNS1              7          5
+EHD4               38         36
+IQGAP1             13          6
+PYCARD             37         28
+MAPK3              41        152
+SULT1A3            43          9
+ALDOA              64        158
+
+GATE PARP4+TEP1 still top 1%: True
