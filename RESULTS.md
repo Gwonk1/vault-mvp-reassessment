@@ -1910,3 +1910,76 @@ Standing objections, none of which this test addresses:
 4. **We expected this to die and said so in advance.** A survival against a registered expectation is
    worth more than a confirmation, but it is one test in one direction and we have reversed ourselves
    six times today.
+
+## 38. The disagreement resolved: cortical actin is co-regulation, and definitely not contact
+
+§37 upgraded #155 on co-abundance. §33 found nothing cortical in native co-fractionation. Those
+instruments flatly contradict each other, and §37d named that as the result's largest problem. This is
+the check that decides whether the co-elution negative is real or a coverage failure.
+
+**CFdb degree at precision >= 0.50 for the cortical actin machinery:**
+
+| protein | degree | MVP-linked |
+|---|---|---|
+| CFL1 | **170** | no |
+| ACTB | **128** | no |
+| ACTG1 | **117** | no |
+| MYH9 | 90 | no |
+| VCL | 85 | no |
+| TLN1 | 80 | no |
+| MSN | 58 | no |
+| EZR | 46 | no |
+| PFN1 | 42 | no |
+| ACTR3 | 38 | no |
+| RDX | 35 | no |
+| ACTR2 | 32 | no |
+| CORO1C | 29 | no |
+| ARPC4 | 27 | no |
+| FLNA | 26 | no |
+| ARPC2 | 25 | no |
+| ARPC1B, ARPC3 | 24 | no |
+| ARPC5, ARPC1A, IQGAP1 | 18-19 | no |
+| MYL6, CAPZB | 15-16 | no |
+| WASF2, TMSB4X | 6-7 | no |
+
+**All 25 of 25 are present with partners. Their degrees total 1,175 edges. Not one connects to MVP.**
+
+For scale: MVP has 1, PARP4 has 1, ANXA2 27, PSMA1 34, PARP1 133.
+
+**This is not a coverage failure.** The cortical actin machinery is among the best-covered material in
+native co-fractionation — CFL1 alone has 170 high-confidence partners. If MVP physically associated with
+the actin cortex at a level this instrument can see, there were 1,175 opportunities for it to show and it
+took none of them. That is the well-powered negative we claimed for the membrane module in §33 and did
+not actually have (#143); here we do.
+
+### 38a. What that leaves
+
+Two gated, replicated results that cannot both be describing contact:
+
+- **Co-abundance** (5 datasets, interferon axis removed, abundance-matched): cortical actin organisation
+  enriched around MVP in 3 of 3 non-CNS datasets, 13 observed against 3.1 expected for ruffling, with
+  mitochondrion as a negative specificity control.
+- **Native co-fractionation** (411 datasets): zero of 1,175 cortical actin edges touch MVP.
+
+**The parsimonious reading, and the one we adopt: the cortical signal is co-regulation, not
+association.** MVP abundance and actin-cortex abundance covary across samples because both track some
+shared cellular state — adhesion, spreading, mechanical or cytoskeletal tone — without the proteins
+being in contact. That is precisely the conclusion #26 reached for the membrane module, arrived at again
+by a different route.
+
+**#155 is therefore downgraded in kind, not in strength.** The covariation is real, replicated, specific
+among abundant compartments and survives removal of the interferon axis. It is **not** evidence of a
+physical neighbourhood, and we withdraw the word "neighbourhood" for it. The defensible claim is: *MVP
+abundance co-varies with cortical actin and adhesion programs across tumours and cell lines,
+independently of interferon tone and of protein abundance, and the two do not physically co-elute.*
+
+### 38b. The consequence for the whole project
+
+Three separate hypotheses have now produced the same pattern — membrane repair (§13, §30, §33), innate
+immunity (§31, §36) and cortical actin (§37, §38): **a reproducible co-abundance signal with no
+corresponding co-elution.** Co-abundance has been run eight times on the neighbourhood question and has
+never once been corroborated by a contact instrument.
+
+The honest generalisation is not about vaults. It is that **MVP's co-abundance correlates report cellular
+state, and this project has repeatedly mistaken state for structure.** The only association that appears
+in both kinds of instrument is MVP-PARP4.
