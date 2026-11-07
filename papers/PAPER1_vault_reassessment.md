@@ -338,6 +338,31 @@ preferentially.
 is 88/6.94 = **12.7x**, so the 18x co-elution figure the kill was supposed to adjudicate was never a
 quantity that test could have returned.
 
+**We then spent two further tests trying to explain away the co-elution result and could not.**
+Co-fractionation separates by apparent mass, and a 13 MDa 78-mer might share fractions with
+polysomes without touching them - so we compared MVP against 35 seeds drawn from seven assemblies of
+known mass.
+**Mass does not order the result and is close to inverting it:** the 110 MDa nuclear pore complex
+sits at the **26th** percentile and the 1.4 MDa dynein complex at the **96th**, with MVP at 98.0.
+The second test asked whether a seed's own size and charge explain its tail, as they explained the
+contact result. **Length does organise these tails** - Spearman ρ = **−0.294**, p = 0.0003, shorter
+seeds having richer ones - **and charge, the property that killed the contact result, is irrelevant
+here** (ρ = +0.077, p = 0.355). Two instruments, two different nuisance axes. Against that trend,
+MVP is **893 residues, longer than 80% of eligible seeds**, and among its thirty nearest neighbours
+in size-and-charge space - median length 768, median charge −17.2 - the neighbours' median fold is
+**1.38x** and their best is **9.84x**, while MVP is **18.49x**. It exceeds every seed that resembles
+it.
+
+**We decline to promote it anyway, and the reason is a rule we wrote badly.** Our registered
+condition for calling this result strengthened required *charge* to correlate with fold; the axis
+that mattered turned out to be length, which we had not anticipated, so the registered verdict is
+that nothing is promoted. Substituting the axis after the fact - immediately after a registered rule
+declined to promote - is the error this work has already made twice. So the status of the one
+translation result still standing is: **five specific alternatives eliminated** (degree, abundance,
+family membership, apparent mass, seed length and charge), **no contact corroboration**, and a
+residual lift in cytoplasmic assemblies to a median 70th percentile whose cause we cannot name. Five
+eliminations and no promotion is the intended output of a method built to make promotion hard.
+
 
 **The actin exclusion has no positive control.** Its load-bearing number was zero high-confidence
 co-elution edges from MVP to twenty-five actin proteins. But TEP1 - a stoichiometric subunit this
