@@ -68,3 +68,36 @@ condensin are absent from this instrument's detected proteome, so the specificit
 distinguish "SMC5/6 specifically" from "nuclear carry-over generally" cannot be built here at all. A
 surviving result would therefore be a lead requiring a different instrument, not a demonstrated
 interaction.
+
+---
+
+## Addendum, written while the test was still running and before any result was seen
+
+A problem with our own method occurred to us after committing the file above, and it is recorded here
+rather than after the answer arrives.
+
+**The normal approximation is anti-conservative for a 6-member set in this data.** We compute
+significance as `norm.sf(z)` from the matched-draw mean and standard deviation. But the `WT_LFC`
+distribution in this pulldown is heavy-tailed — a handful of proteins sit near +8 — so the null
+distribution of a **6-protein mean** is right-skewed and heavy-tailed, not Gaussian. A z of 4.9 under a
+normal tail gives p ≈ 5e-7; under a heavy-tailed empirical null the same z can be one or two orders of
+magnitude less extreme, because draws that happen to include one of the extreme proteins produce large
+null means more often than a Gaussian allows.
+
+SMC5/6's own mean is driven by exactly that structure: four members at +3.93 to +6.79 and two at +0.27
+and +1.08.
+
+**So we pre-commit, before seeing the result, to the following.** If SMC5/6 reaches q < 0.05 on the
+normal approximation, that is **not** accepted as a pass. We additionally require:
+
+1. An **empirical** one-sided p from at least 200,000 matched draws for that term, with the BH family
+   correction applied to the empirical p.
+2. The **count of null draws meeting or exceeding the observed mean** reported as a raw integer, so the
+   resolution limit of the estimate is visible rather than implied.
+3. The same empirical treatment applied to the vault-core gate, so the gate and the claim are judged on
+   the same statistic.
+
+If the empirical p disagrees with the normal approximation, **the empirical p governs and the normal
+figure is reported as the error it was.** This is house rule 8's third check — do not let a
+distributional convenience decide an outcome — applied to ourselves one step late, but before the
+answer rather than after it.
