@@ -7,8 +7,25 @@ cols=list(rows[0]); D=pd.DataFrame(rows[1:],columns=cols)
 fc=[c for c in cols if str(c).startswith('foldchange.log2')][0]
 qv=[c for c in cols if str(c).startswith('qvalue')][0]
 D['fc']=pd.to_numeric(D[fc],errors='coerce'); D['q']=pd.to_numeric(D[qv],errors='coerce')
-D['sym']=D.gene_symbols.astype(str).str.split(';').str[0].str.upper()
-D=D.dropna(subset=['fc','q']).drop_duplicates('sym').set_index('sym')
+# ORTHOLOGY, not name matching: Dicty UniProt -> eggNOG OG -> human symbol
+import gzip,json as _j
+xr=pd.read_csv('data/raw/ortho/dicty_eggnog.tsv',sep='\t').dropna(subset=['eggNOG'])
+acc2og={a:[x for x in str(e).split(';') if x] for a,e in zip(xr.Entry,xr.eggNOG)}
+hum=_j.load(open('data/processed/eggnog_human.json'))
+sym={}
+for l in gzip.open('data/raw/eggnog/gencode.v25.pc_translations.fa.gz','rt'):
+    if l[0]=='>':
+        p=l[1:].split('|'); sym[p[0].split('.')[0]]=p[6]
+og2sym={og:sorted({sym[x] for x in ps if x in sym}) for og,ps in hum.items()}
+D['acc']=D.accessions.astype(str).str.split(';').str[0]
+rows2=[]
+for _,r in D.iterrows():
+    for og in acc2og.get(r.acc,[]):
+        for h in og2sym.get(og,[]):
+            rows2.append((h,r.fc,r.q))
+O=pd.DataFrame(rows2,columns=['sym','fc','q'])
+print('Dicty proteins with eggNOG OG:',D.acc.isin(acc2og).sum(),'| human symbols reached:',O.sym.nunique(),flush=True)
+D=O.sort_values('q').drop_duplicates('sym').set_index('sym')
 prox=set(D.index[(D.fc>0)&(D.q<.05)])
 print(f'Dictyostelium proteins {len(D)} | vault-proximal (log2FC>0, q<0.05): {len(prox)} ({100*len(prox)/len(D):.1f}%)',flush=True)
 arp=['ACTR2','ACTR3','ARPC1A','ARPC1B','ARPC2','ARPC3','ARPC4','ARPC5']

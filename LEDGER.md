@@ -60,6 +60,14 @@ Status key: ~~**STRUCK**~~ eliminated · **WEAKENED** damaged but alive · **STA
 
 ---
 
+## THE CORE THAT SURVIVES EVERYTHING (2026-11-07)
+
+| # | Item | Status | Evidence |
+|---|---|---|---|
+| 40 | **A four-protein core survives every independent test: MVP, PARP4, TEP1, ANXA2** | Co-abundance across 13 human cohorts puts PARP4/TEP1/ANXA2 at ranks 1/3/7 (CNA-adjusted); physical anti-MVP IP-MS confirms all three; *Dictyostelium* proximity labelling finds all three vault-proximal (PARP4 +3.49, TEP1 +1.61, ANXA2 +0.64, all q<1e-4) across >1 Gyr. S100A10 joins at 3 of 3 where it exists. | `prot_final.json`, `crosstest.json`, `crossspecies.json` |
+| 41 | ~~The broad membrane-repair neighbourhood~~ | **STRUCK by two independent tests.** Physical IP-MS p = 0.058; cross-species proximity p = 0.067. Both missed my pre-registered 0.05 and neither is rescued by the CNA-adjusted ranking (p = 0.20). The wide module was shared regulation; the narrow core is real. | `crosstest.json`, `crosstest_cna.json`, `crossspecies.json` |
+| 42 | Method note: name-matching across species is invalid | My first cross-species run matched human symbols to *Dictyostelium* gene names (Arp2 = ARPB, Arp3 = ARPC, MVP = MVPB) and produced a meaningless 62/100 overlap. The pre-registered Arp2/3 gate caught it. Rebuilt via eggNOG orthology; gate then passed 5/8. | `src/crossspecies.py` |
+
 ## NEW FROM THE ARGON CHANNEL (2026-11-06 23:20)
 
 | # | Item | Status | Evidence |

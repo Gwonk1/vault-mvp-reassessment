@@ -434,3 +434,49 @@ partners should do once amplicon noise is removed.
 **Exploratory re-run of §13's cross-test on the adjusted ranking** is reported in
 `results/crosstest_cna.json` and labelled exploratory in the pre-registration: a primary that failed at
 p = 0.058 is not rescued by re-running with different input.
+
+## 15. Cross-species test: is the neighbourhood ancient? NOT CONSERVED — but the core is
+
+`CROSSSPECIES_PREREGISTRATION.md`. MVPA-TurboID proximity labelling in live *Dictyostelium*
+(Geissler et al., Nat Commun 2026), >1 billion years from humans, tested against my CNA-adjusted ranking.
+
+**A bug my own gate caught.** My first run matched on gene symbols and found zero Arp2/3 subunits, failing
+the gate. The reason: those are *Dictyostelium* gene names — Arp2 is `ARPB`, Arp3 is `ARPC`, MVP is
+`MVPB`. The 62/100 "overlap" I got was accidental name collisions on conserved genes like RPL22 and
+EEF1A1, and was meaningless. Rebuilt using real orthology (Dicty UniProt -> eggNOG OG -> human symbol,
+2,842 proteins mapped to 4,646 human symbols). **Gate then passed: 5 of 8 Arp2/3 subunits vault-proximal.**
+
+**Primary: 32 of my top 100 are vault-proximal in the amoeba, against 25.0 expected, p = 0.067.** My
+threshold was 0.05. **Failed.** Global Spearman +0.026 (p = 0.27, n = 3,190).
+
+**But the specific core is ancient:**
+
+| Protein | My rank | *Dictyostelium* log2FC | q | Vault-proximal |
+|---|---|---|---|---|
+| PARP4 | 1 | **+3.49** | <1e-4 | yes |
+| TEP1 | 3 | **+1.61** | <1e-4 | yes |
+| ANXA2 | 7 | **+0.64** | <1e-4 | yes |
+| IQGAP1 | 6 | +1.09 | <1e-4 | yes |
+| ARPC1B | 15 | +1.17 | <1e-4 | yes |
+
+Annexin A7 also appears among my top-25 proximal hits, matching the published report.
+
+### The pattern across three independent methods
+
+| | PARP4 | TEP1 | ANXA2 | Broad module |
+|---|---|---|---|---|
+| Co-abundance, human tumours (§11, §14) | rank 1 | rank 3 | rank 7 | — |
+| Physical IP-MS, human A549 (§13) | yes | yes | yes | **p = 0.058, failed** |
+| Proximity labelling, amoeba (§15) | yes | yes | yes | **p = 0.067, failed** |
+
+**Three methods, two species, a billion years apart, all converge on the same narrow core — and all three
+fail to support the wider neighbourhood.** That is a consistent, repeatable result in both directions.
+
+**One discrepancy with argon:** it reported ACTR3/Arp3 at +1.39. Through orthology I get ACTR3 at **−0.59**
+(depleted), while ARPC1B and ARPC2 are positive. Likely an ortholog-assignment difference at the OG level;
+flagged, not resolved.
+
+### Limits
+Orthology by eggNOG group across a billion years is coarse and can be one-to-many. Proximity labelling
+tags anything within ~10 nm. S100A10, CLIC1, EHD4 and CAPN2 have no amoeba ortholog, so their absence is
+not evidence. Only MVPA was tagged; the amoeba has two MVP genes.

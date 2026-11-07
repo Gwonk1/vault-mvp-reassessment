@@ -1,0 +1,111 @@
+{
+ "verdict": "NOT CONSERVED",
+ "gate": true,
+ "arp_hits": [
+  "ARPC1A",
+  "ARPC1B",
+  "ARPC2",
+  "ARPC3",
+  "ARPC4"
+ ],
+ "shared": 3190,
+ "proximal": 798,
+ "overlap": 32,
+ "expected": 25.015673981191224,
+ "p": 0.06670947949192192,
+ "spearman": 0.02601329000314882,
+ "spearman_p": 0.2738953237885198,
+ "named": [
+  {
+   "gene": "ACTR2",
+   "my_rank": 10,
+   "dicty_log2FC": 0.25,
+   "q": 0.1899,
+   "proximal": false
+  },
+  {
+   "gene": "ACTR3",
+   "my_rank": 2,
+   "dicty_log2FC": -0.59,
+   "q": 0.0,
+   "proximal": false
+  },
+  {
+   "gene": "ARPC1B",
+   "my_rank": 15,
+   "dicty_log2FC": 1.17,
+   "q": 0.0,
+   "proximal": true
+  },
+  {
+   "gene": "CAPNS1",
+   "my_rank": 5,
+   "dicty_log2FC": NaN,
+   "q": NaN,
+   "proximal": false
+  },
+  {
+   "gene": "IQGAP1",
+   "my_rank": 6,
+   "dicty_log2FC": 1.09,
+   "q": 0.0,
+   "proximal": true
+  },
+  {
+   "gene": "CAP1",
+   "my_rank": 8,
+   "dicty_log2FC": -0.71,
+   "q": 0.0,
+   "proximal": false
+  },
+  {
+   "gene": "CLIC1",
+   "my_rank": 4,
+   "dicty_log2FC": NaN,
+   "q": NaN,
+   "proximal": "absent in amoeba"
+  },
+  {
+   "gene": "PARP4",
+   "my_rank": 1,
+   "dicty_log2FC": 3.49,
+   "q": 0.0,
+   "proximal": true
+  },
+  {
+   "gene": "TEP1",
+   "my_rank": 3,
+   "dicty_log2FC": 1.61,
+   "q": 0.0,
+   "proximal": true
+  },
+  {
+   "gene": "ANXA2",
+   "my_rank": 7,
+   "dicty_log2FC": 0.64,
+   "q": 0.0,
+   "proximal": true
+  },
+  {
+   "gene": "S100A10",
+   "my_rank": 26,
+   "dicty_log2FC": NaN,
+   "q": NaN,
+   "proximal": "absent in amoeba"
+  },
+  {
+   "gene": "EHD4",
+   "my_rank": 36,
+   "dicty_log2FC": NaN,
+   "q": NaN,
+   "proximal": "absent in amoeba"
+  },
+  {
+   "gene": "CAPN2",
+   "my_rank": 14,
+   "dicty_log2FC": NaN,
+   "q": NaN,
+   "proximal": "absent in amoeba"
+  }
+ ]
+}
