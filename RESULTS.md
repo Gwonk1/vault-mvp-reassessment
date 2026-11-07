@@ -526,7 +526,7 @@ condition — fired, though softened by the gate failure.
 the thing MVP rides along with.
 
 **Primary: BIOMARKER IS CELL-INTRINSIC.** MVP protein predicts resistance in 8 of 19 cytotoxics at
-q < 0.05. But the *pattern* is the finding — it is concentrated in tubulin agents:
+q < 0.05 (**corrected below to 7 of 18 unique drugs — `Docetaxel` was duplicated in the gene list; see §18**). But the *pattern* is the finding — it is concentrated in tubulin agents:
 
 | Drug | rho | q |
 |---|---|---|
@@ -543,7 +543,10 @@ q < 0.05. But the *pattern* is the finding — it is concentrated in tubulin age
 
 **Model C (vault RNA binds anthracyclines/mitoxantrone) is dead.** vtRNA-binding drugs median rho
 **+0.098** against **+0.099** for non-binders — identical. Mitoxantrone, the canonical vtRNA binder, is
-the *least* associated drug tested.
+the weakest of the three vtRNA-binding drugs measured (+0.064, q 0.43) while the top of the ranking is
+pure tubulin. **Corrected 2026-11-07:** it is *not* the least-associated drug overall — cisplatin is
+lowest (−0.053) and five drugs rank below mitoxantrone. The Model C refutation rests on the
+binder-vs-non-binder medians being identical, which is unaffected.
 
 ### What absorbs the signal
 
@@ -784,7 +787,7 @@ rate dominates the S-phase and DNA-synthesis agents** (methotrexate, etoposide, 
 exactly what the two mechanisms predict, and my aggregated median had hidden it.
 
 **What survives unchanged:** Models A (ABCC1/chr16p) and C (vault RNA drug binding) are still dead —
-ABCC1 failed its gate, and mitoxantrone remains the least-associated drug. MVP is still a passenger, not
+ABCC1 failed its gate, and mitoxantrone remains the weakest vtRNA-binding drug (rank 14 of 19 overall). MVP is still a passenger, not
 a pump. The conclusion for #21 stands; only the ranking of the two passenger mechanisms changes.
 
 ## 15/19-CORRECTED. Two more audit fixes, both verified against source

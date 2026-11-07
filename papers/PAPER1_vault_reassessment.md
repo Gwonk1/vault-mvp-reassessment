@@ -171,8 +171,9 @@ yet held.
 mechanism. Across 292 cell lines with matched proteomics and dose-response, MVP predicts resistance in 7
 of 18 cytotoxics, concentrated in tubulin agents. Two candidate mechanisms die: ABCC1 fails to predict
 its own substrates, and vault-RNA-binding drugs are indistinguishable from non-binders (median rho
-+0.098 against +0.099), with mitoxantrone - the canonical vtRNA ligand - the least associated drug
-tested. On identical complete-case samples, ABCB1 absorbs a median 25.0% of MVP's effect and division
++0.098 against +0.099), and mitoxantrone - the canonical vtRNA ligand - is the
+weakest of the three vtRNA-binding drugs measured (rho +0.064, q = 0.43) while the top of the ranking is
+exclusively tubulin-directed. On identical complete-case samples, ABCB1 absorbs a median 25.0% of MVP's effect and division
 rate 10.6%, split cleanly by class: efflux substrates to ABCB1, S-phase agents to division rate. MVP is
 a passenger on both.
 
