@@ -17,24 +17,37 @@ ours.
 3. The particle is **dispensable for proliferation** (zero hits in 878 growth screens) yet
    **sequence-constrained** at the pocket (four residues invariant across 174 eukaryotes). Whatever
    selects it does not operate in a dish.
+4. **TEP1 is a latent, autoinhibited TIR-family NAD(P)ase (E1008).** At 10^5 copies per cell it *must*
+   be substrate-separated or constitutive NAD+ hydrolysis would be lethal - the same constraint that
+   governs SARM1. Every assay in our computational work sampled the resting state, which is precisely
+   when a latent effector is designed to be invisible. **The experiments below are therefore ordered by
+   how directly they perturb the system out of that resting state.**
 
 ---
 
 ## Tier 1 - decides the most, costs the least
+*(Order revised after adversarial review: perturbation experiments first, since the resting state is
+uninformative by design. Experiment 2 first, then 3, then 1.)*
 
 ### 1. Stressed Trap-and-Seq: what is actually inside a vault?
 **Decides:** the containment hypothesis, and roughly half the candidate disease list.
 **Why now:** the claim that vaults contain a single small RNA rests on a 1986 gel and a 2001 Northern
-blot on unstressed mouse liver. A Northern blot cannot discover an unknown RNA.
+blot on unstressed mouse liver, and a Northern blot cannot discover an unknown RNA. The one modern
+attempt - Musgrove et al. 2026 neuronal MVP:eGFP RIP-seq - recovered Vaultrc5 plus hundreds of mRNAs but
+used 1% formaldehyde crosslinking **without a nuclease shave**, so exterior ribonucleoprotein sticking
+cannot be distinguished from sealed lumenal cargo. That is exactly the gap this design closes.
 **Design:** cells with high native vault expression, wild-type and MVP-null in parallel. Block
 autophagic turnover (bafilomycin A1, 2 h). Four arms: vehicle; a genotoxic agent; UV-C or etoposide;
-transfected nuclear-targeted synthetic dsRNA. 60-120 min, short of death. Reversibly crosslink, lyse,
-then **nuclease-shave with benzonase/RNase/DNase** so only sealed cargo survives. Rapid size-exclusion
-plus anti-MVP capture. Sequence small RNA and DNA at modern depth.
+transfected nuclear-targeted synthetic dsRNA. 60-120 min, short of death. **Do not crosslink whole cells first** - formaldehyde
+tethers cytosolic RNA to the barrel exterior and blocks complete digestion, recreating the artefact
+above. Lyse gently in cold isotonic buffer, isolate intact native particles, **nuclease-shave the
+uncrosslinked shells** with benzonase/RNase/DNase, then lyse the shaved vaults. Rapid size-exclusion plus
+anti-MVP capture. Sequence small RNA and DNA at modern depth.
 **Power argument that has not been made:** at 10^5 vaults per cell, even 1% carrying a non-vtRNA cargo
 yields ~10^3 molecules per cell - comparable to a moderately expressed mRNA, and trivially detectable
 now. The cargo need only be rare **per particle**.
-**Positive control:** vtRNA1-1 must be recovered and must survive the nuclease shave.
+**Positive control:** spiked exogenous RNA must be destroyed by >=99.9% while endogenous vtRNA1-1
+survives the same shave. That single control is what separates cargo from passengers.
 **Kill condition:** a clean nuclease-protected profile under stress, at modern depth, with nothing but
 vtRNA. That would close a question open since 1986 and is publishable as such.
 
@@ -45,9 +58,20 @@ catalytic); no published study tests what activates it in cells. Independently, 
 *Pseudomonas aeruginosa* and the *Listeria* InlK result involves listeriolysin O - **both pore-forming
 toxins** - and MVP co-abundance places it near ANXA2 and S100A10, the canonical membrane-repair
 heterotetramer.
-**Design:** sterile streptolysin-O versus live *Pseudomonas*, in wild-type, PARP4-knockout and
-TEP1-E1008A knock-in cells. Read NAD+ by LC-MS over 0-120 min, with cADPR and nicotinamide as products.
-**Positive control:** SARM1 activation by vacor or CZ-48 in the same assay.
+**Design:** sterile streptolysin-O versus live *Pseudomonas*, in wild-type, **MVP-null**,
+PARP4-knockout and TEP1-E1008A knock-in cells. Targeted LC-MS/MS over 0-120 min against authentic
+standards, monitoring **NAD+, NADP+, linear ADP-ribose, 2'-phospho-ADP-ribose, nicotinamide, and cyclic
+ADPR**.
+**A product-panel warning that would otherwise cause a false negative.** TIR NADases differ in what they
+make. The published characterisations report TEP1 generating **linear ADP-ribose and nicotinamide** (and
+2'-phospho-ADPR from NADP+), whereas **SARM1 - the obvious positive control - does generate cyclic
+ADPR**. Monitoring cADPR alone would therefore miss TEP1 entirely while lighting up the control, and
+injury itself activates SARM1 and CD38. Monitor the full panel and include a SARM1 inhibitor or knockout
+arm so the two enzymes can be separated. (We could not verify the cADPR-negative claim verbatim in the
+primary text available to us; monitoring everything is correct whichever way it falls.)
+**Positive control:** SARM1 activation by vacor or CZ-48 in the same assay, read on the same panel.
+**The discriminating signature:** TEP1 activation predicts a rise in **linear ADPR + 2'-P-ADPR +
+nicotinamide with no cADPR rise**, abolished in TEP1-E1008A.
 **Kill condition:** NAD+ is unperturbed by membrane wounding in wild-type cells while the SARM1 control
 depletes normally. That kills the breach-trigger model cleanly.
 
@@ -56,10 +80,13 @@ depletes normally. That kills the breach-trigger model cleanly.
 **Why now:** cytosolic NAD+ cannot reach the pocket in the closed particle, yet endogenous ADP-ribose is
 present in vaults purified from brain. Something admits it. Separately, pre-formed vaults have been
 shown to take up intact AAV capsids, so the waist does breathe.
-**Design:** reconstituted vaults with a lumenal FRET or fluorogenic NAD+ sensor; titrate pH, calcium,
-ionic strength, mechanical shear and pore-forming toxin. Measure occupancy kinetics. Pair with
-cryo-EM or HS-AFM on the same conditions.
-**Kill condition:** no tested condition increases lumenal occupancy above baseline exchange.
+**Design:** low-pH opening is already published, so test **physiological** triggers: pH 6.0-7.4,
+Ca2+ 0.1-100 uM with and without ANXA2/S100A10, vtRNA, mechanical shear, pore-forming toxin. Measure
+pocket entry directly by **13C-labelled NAD+ uptake with rapid desalting and LC-MS**, in wild-type
+versus pocket mutants (F547A/D566A) rather than with a bulky lumenal sensor that would itself change
+lumenal crowding. Pair with cryo-EM or HS-AFM on the same conditions.
+**Kill condition:** no physiological condition increases labelled-NAD+ occupancy above baseline, and the
+pocket mutant is indistinguishable from wild-type.
 
 ---
 
@@ -80,11 +107,22 @@ residence time?
 suffices for vtRNA and particle association). EMSA against vtRNA (positive), Y RNA, correctly folded 5S
 rRNA, and misfolded 5S precursor - Ro60's known substrate. Competition: does vtRNA block access as Y RNA
 does for Ro60?
-**Kill condition:** binding is restricted to vtRNA. Note this outcome *supports* the buffer model, so
-the experiment advances either way - which is precisely why it should be run by someone with no stake.
+**The addition that makes this worth doing now:** generic TEP1 RNA-binding EMSA was partly done in 2002.
+What is new is (i) misfolded pre-5S rRNA against native 5S, which is Ro60's actual quality-control
+substrate, and (ii) **whether vtRNA or misfolded RNA allosterically gates TEP1 E1008 NAD(P)ase catalysis
+in reconstituted MVP+TEP1 particles.** Run the NADase readout alongside the binding assay; RNA-gated
+activation would connect the TROVE domain to the enzymology directly.
+**Kill condition:** binding is restricted to vtRNA *and* no RNA species modulates NADase rate. Note that
+restricted binding alone *supports* the buffer model, so the experiment advances either way - which is
+precisely why it should be run by someone with no stake.
 
-### 6. The C-terminal phosphorylation cluster
-**Decides:** a regulatory element nobody has characterised.
+### 6. The C-terminal phosphorylation cluster - DEMOTED, and here is why
+**Status: we talked ourselves out of this one.** We verified in our own alignment that the entire human
+862-893 tail is **absent in mouse, rat, chicken, zebrafish and *Dictyostelium*** (0% occupancy) and
+present only in primates (100% in macaque and chimp; S876 is proline even in macaque). A
+primate-restricted, disordered, proline-directed tail that scored 0 of 62 in our own phospho test is a
+poor bet, and it cannot be modelled in rodents. Listed last, and reasonably dropped.
+**If run anyway, it decides:** whether a primate-specific regulatory element exists.
 **New observation from this work:** MVP's reproducible phosphorylation concentrates in a C-terminal
 cluster (S864, S867, S873, S876) present in five of seven CPTAC cohorts and **disordered in every vault
 structure solved**. A flexible, multiply phosphorylated tail is a canonical interaction motif.
@@ -106,6 +144,8 @@ without bafilomycin, and aggregate clearance after puromycin.
 ---
 
 ## Tier 3 - cheap, and each closes a loop
+*(Experiment 11 promoted into Tier 2 on review; experiment 10 is strictly conditional on experiment 1
+returning positive; experiment 6 is last.)*
 
 ### 8. Anti-MVP serology with La as internal control
 **Status change:** we found this partially answered in the literature - Moadab et al. 2023 screened
