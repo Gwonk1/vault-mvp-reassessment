@@ -515,3 +515,66 @@ demonstrated weakness on non-essential complexes means this cannot be pushed fur
 coupling**. The proteins travel together and sit together; deleting MVP does not change what happens when
 you delete them. That is a real constraint on any functional model, and it was my pre-registered kill
 condition — fired, though softened by the gate failure.
+
+## 17. The 30-year LRP chemoresistance biomarker, dissected
+
+`LRP_PREREGISTRATION.md`. 292 cell lines with matched CCLE proteomics and GDSC dose-response.
+
+**Gates:** ABCB1 predicts tubulin-agent resistance strongly (paclitaxel rho +0.32, p = 6e-6; vinorelbine
++0.39, p = 3e-8) — matching works. **ABCC1 fails its own gate** (etoposide rho −0.008, doxorubicin
+−0.001), which already undercuts argon's Model A: a pump that does not predict its own drugs cannot be
+the thing MVP rides along with.
+
+**Primary: BIOMARKER IS CELL-INTRINSIC.** MVP protein predicts resistance in 8 of 19 cytotoxics at
+q < 0.05. But the *pattern* is the finding — it is concentrated in tubulin agents:
+
+| Drug | rho | q |
+|---|---|---|
+| Vinorelbine | +0.249 | 0.0003 |
+| Vinblastine | +0.220 | 0.0015 |
+| Paclitaxel | +0.184 | 0.010 |
+| Methotrexate | +0.171 | 0.016 |
+| Docetaxel | +0.158 | 0.022 |
+| Etoposide | +0.147 | 0.039 |
+| Epirubicin | +0.141 | 0.039 |
+| **Mitoxantrone** | +0.064 | 0.43 |
+| Cisplatin | −0.053 | 0.43 |
+| Gemcitabine | +0.017 | 0.82 |
+
+**Model C (vault RNA binds anthracyclines/mitoxantrone) is dead.** vtRNA-binding drugs median rho
+**+0.098** against **+0.099** for non-binders — identical. Mitoxantrone, the canonical vtRNA binder, is
+the *least* associated drug tested.
+
+### What absorbs the signal
+
+Standardised MVP coefficient on drug AUC, before and after adjustment:
+
+| Drug | MVP alone | + ABCB1 | + doubling time & proliferation | + both |
+|---|---|---|---|---|
+| Vinorelbine | 0.256 | 0.191 | 0.246 | 0.182 |
+| Vinblastine | 0.210 | 0.154 | 0.117 | 0.129 |
+| Paclitaxel | 0.185 | 0.126 | 0.163 | 0.141 |
+| Docetaxel | 0.149 | 0.098 | 0.002 | −0.006 |
+| Methotrexate | 0.189 | 0.138 | 0.098 | 0.019 |
+| Etoposide | 0.161 | 0.147 | 0.054 | 0.017 |
+| Epirubicin | 0.186 | 0.140 | 0.166 | 0.125 |
+
+**ABCB1 absorbs a median 27%. Division rate absorbs a median 44% — more.** Together, only **1 of 7**
+drugs keeps a significant MVP coefficient. MVP and ABCB1 protein correlate only weakly (rho +0.161,
+p = 0.026), so they are not the same thing; MVP is partly riding the same multidrug-resistance program
+and partly riding slow division.
+
+### Answer to #21
+
+**MVP-high tumours are slow-dividing and modestly multidrug-resistant, and MVP is a passenger on both.**
+Not a drug pump, not a vault-RNA sponge, and not a chromosome-16p passenger of ABCC1. This joins §12
+(MVP at the genome floor against proliferation in lung and melanoma) and §10 (modestly up in
+drug-surviving cells without being a persister gene) into one consistent account of a thirty-year
+observation.
+
+### Limits
+Cell lines only — the stromal and immune contributions a biopsy carries cannot appear here. GDSC AUC is
+short-term viability, not clinical response. Doubling time exists for 191 of 292 lines, so the
+proliferation-adjusted models run on fewer samples than the ABCB1-adjusted ones and the absorbed
+percentages are not perfectly matched comparisons. chr16p copy number was not included; ABCC1's gate
+failure made Model A moot before it was needed.

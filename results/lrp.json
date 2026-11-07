@@ -1,0 +1,215 @@
+{
+ "gate1": true,
+ "gate2": false,
+ "gate1_detail": [
+  [
+   "Paclitaxel",
+   0.319,
+   6.417395544742443e-06
+  ],
+  [
+   "Docetaxel",
+   0.164,
+   0.02306742468192188
+  ],
+  [
+   "Vinblastine",
+   0.258,
+   0.0003048260944546477
+  ],
+  [
+   "Vinorelbine",
+   0.387,
+   2.884920532486757e-08
+  ]
+ ],
+ "gate2_detail": [
+  [
+   "Etoposide",
+   -0.008,
+   0.9014457406094287
+  ],
+  [
+   "Doxorubicin",
+   -0.001,
+   0.9893836686800829
+  ]
+ ],
+ "matched_lines": 292,
+ "verdict": "BIOMARKER IS CELL-INTRINSIC",
+ "n_sig": 8,
+ "results": [
+  {
+   "drug": "Vinorelbine",
+   "cls": "tubulin",
+   "rho": 0.24878173108338122,
+   "p": 1.820201310641708e-05,
+   "n": 290,
+   "vtrna": false,
+   "q": 0.00034583824902192456
+  },
+  {
+   "drug": "Vinblastine",
+   "cls": "tubulin",
+   "rho": 0.21947592135241664,
+   "p": 0.00016066289291154147,
+   "n": 291,
+   "vtrna": false,
+   "q": 0.001526297482659644
+  },
+  {
+   "drug": "Paclitaxel",
+   "cls": "tubulin",
+   "rho": 0.18430846614994195,
+   "p": 0.0015905785289924339,
+   "n": 291,
+   "vtrna": false,
+   "q": 0.010073664016952082
+  },
+  {
+   "drug": "Methotrexate",
+   "cls": "antimetabolite",
+   "rho": 0.1713831504860436,
+   "p": 0.0033600336303590194,
+   "n": 291,
+   "vtrna": false,
+   "q": 0.01596015974420534
+  },
+  {
+   "drug": "Docetaxel",
+   "cls": "tubulin",
+   "rho": 0.15750873907841592,
+   "p": 0.007000515652727581,
+   "n": 292,
+   "vtrna": false,
+   "q": 0.02216829956697067
+  },
+  {
+   "drug": "Docetaxel",
+   "cls": "tubulin",
+   "rho": 0.15750873907841592,
+   "p": 0.007000515652727581,
+   "n": 292,
+   "vtrna": false,
+   "q": 0.02216829956697067
+  },
+  {
+   "drug": "Etoposide",
+   "cls": "topoisomerase",
+   "rho": 0.14659762753045075,
+   "p": 0.015342687524889348,
+   "n": 273,
+   "vtrna": false,
+   "q": 0.038971082158439696
+  },
+  {
+   "drug": "Epirubicin",
+   "cls": "anthracycline",
+   "rho": 0.1410631540247712,
+   "p": 0.016408876698290397,
+   "n": 289,
+   "vtrna": true,
+   "q": 0.038971082158439696
+  },
+  {
+   "drug": "SN-38",
+   "cls": "topoisomerase",
+   "rho": 0.10792138263607792,
+   "p": 0.06552877240200161,
+   "n": 292,
+   "vtrna": false,
+   "q": 0.13833851951533674
+  },
+  {
+   "drug": "Doxorubicin",
+   "cls": "anthracycline",
+   "rho": 0.09774681796328247,
+   "p": 0.09548887595549245,
+   "n": 292,
+   "vtrna": true,
+   "q": 0.18142886431543565
+  },
+  {
+   "drug": "Irinotecan",
+   "cls": "topoisomerase",
+   "rho": 0.08929264064900523,
+   "p": 0.12858651895134296,
+   "n": 291,
+   "vtrna": false,
+   "q": 0.22210398727959238
+  },
+  {
+   "drug": "Oxaliplatin",
+   "cls": "platinum",
+   "rho": 0.07399136932524102,
+   "p": 0.2082141054442187,
+   "n": 291,
+   "vtrna": false,
+   "q": 0.32967233362001297
+  },
+  {
+   "drug": "Topotecan",
+   "cls": "topoisomerase",
+   "rho": 0.07679675187745094,
+   "p": 0.2388921748885507,
+   "n": 237,
+   "vtrna": false,
+   "q": 0.34915010176018946
+  },
+  {
+   "drug": "Mitoxantrone",
+   "cls": "anthracycline",
+   "rho": 0.06430575556592229,
+   "p": 0.3242503601677807,
+   "n": 237,
+   "vtrna": true,
+   "q": 0.43185847731524857
+  },
+  {
+   "drug": "Camptothecin",
+   "cls": "topoisomerase",
+   "rho": 0.05423743340299685,
+   "p": 0.35657140941187504,
+   "n": 291,
+   "vtrna": false,
+   "q": 0.43185847731524857
+  },
+  {
+   "drug": "Cisplatin",
+   "cls": "platinum",
+   "rho": -0.05344293214063341,
+   "p": 0.3636702966865251,
+   "n": 291,
+   "vtrna": false,
+   "q": 0.43185847731524857
+  },
+  {
+   "drug": "5-Fluorouracil",
+   "cls": "antimetabolite",
+   "rho": 0.04479350880537871,
+   "p": 0.44652962922621575,
+   "n": 291,
+   "vtrna": false,
+   "q": 0.49906252678224117
+  },
+  {
+   "drug": "Gemcitabine",
+   "cls": "antimetabolite",
+   "rho": 0.01659225948405445,
+   "p": 0.7776889821932375,
+   "n": 292,
+   "vtrna": false,
+   "q": 0.8208939256484173
+  },
+  {
+   "drug": "Cytarabine",
+   "cls": "antimetabolite",
+   "rho": 0.00768503320225649,
+   "p": 0.8963226711412972,
+   "n": 290,
+   "vtrna": false,
+   "q": 0.8963226711412972
+  }
+ ],
+ "median_rho": 0.09774681796328247
+}
