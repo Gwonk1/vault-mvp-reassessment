@@ -1983,3 +1983,61 @@ never once been corroborated by a contact instrument.
 The honest generalisation is not about vaults. It is that **MVP's co-abundance correlates report cellular
 state, and this project has repeatedly mistaken state for structure.** The only association that appears
 in both kinds of instrument is MVP-PARP4.
+
+## 39. MVP's sub-threshold co-elution tail: translation dominates, but the result is NOT SPECIFIC
+
+`CFDB_SUBTHRESHOLD_PREREGISTRATION.md`. The one lead in this project that came from a contact instrument
+rather than from co-abundance (#165), and the only one we never hypothesised: §35d reported that MVP's
+CFdb ranks 2-12 by score are translation, ribosome-quality-control and RNA-handling proteins at precision
+0.30-0.38, below the threshold §33 used.
+
+**Both design gates passed emphatically.** On its own top 200 by score with the same degree matching,
+PSMA1 recovers **42 of 59** proteasome-complex members against 1.0 expected, and RPL7 recovers **77 of
+223** ribosomal proteins against 3.8. Sub-threshold CFdb ranking carries real complex signal.
+
+**Result against 200 degree-matched random sets, MVP's top 200 by score:**
+
+| term | observed | expected | p | fold |
+|---|---|---|---|---|
+| `GOBP_CYTOPLASMIC_TRANSLATION` | 47 | 2.6 | **0.000** | **18x** |
+| `GOBP_TRANSLATION` | 67 | 9.4 | **0.000** | 7.1x |
+| `GOCC_RIBOSOME` | 41 | 3.8 | **0.000** | 10.8x |
+| `GOCC_RIBONUCLEOPROTEIN_COMPLEX` | 59 | 10.8 | **0.000** | 5.5x |
+| `GOBP_RNA_CATABOLIC_PROCESS` | 12 | 4.1 | 0.055 | 2.9x |
+| `GOCC_RUFFLE` | 9 | 2.5 | **0.000** | 3.6x |
+| `GOBP_ACTIN_FILAMENT_ORGANIZATION` | 12 | 6.0 | 0.030 | 2.0x |
+| `GOBP_PLASMA_MEMBRANE_REPAIR` | 2 | 0.4 | 0.075 | — |
+| `GOBP_INFLAMMATORY_RESPONSE` | 4 | 7.8 | 0.710 | depleted |
+| *negative control:* `GOCC_MITOCHONDRION` | 7 | 22.4 | 1.000 | **depleted** |
+
+### 39a. The registered verdict is NOT SPECIFIC, and we report it as registered
+
+The pre-registration fixed this outcome in advance: *"If the actin or immune comparators also clear, the
+result is not specific and we report it as a generic property of MVP's score tail rather than as a
+translation finding."* Ruffle clears at 0.000 and actin organisation at 0.030. **So this is a property of
+the tail, not a translation finding, and the §35d observation does not graduate to a lead.**
+
+### 39b. What is nonetheless true inside that verdict
+
+The tail is **not** indiscriminate, and two numbers show it. `GOCC_MITOCHONDRION` — 1,313 members, the
+largest abundant cytoplasmic compartment — is **depleted** (7 against 22.4 expected, p = 1.0), as is
+inflammatory response. And the effect sizes are not comparable: **cytoplasmic translation is 18-fold
+enriched** against 2.0-fold for actin organisation and 3.6-fold for ruffling.
+
+So an honest description of MVP's sub-threshold co-elution tail is: heavily enriched for ribosomes and
+translation machinery, mildly enriched for cortical actin, and depleted for mitochondria and
+inflammation. **An order-of-magnitude difference between two things that both cleared is not what we
+registered a threshold on, so it stays an observation.**
+
+### 39c. Why it is worth recording anyway
+
+It aligns with the one thing the vault literature is confident about and our analysis never touched:
+**vaults are assembled on polyribosomes and carry a small RNA.** ZNF598 (ribosome quality control), RPL8,
+RPL30, EIF3A, EIF3C, UPF1 (nonsense-mediated decay), GIGYF2 and ZC3HAV1 are the specific proteins at the
+top of that tail.
+
+It also supplies the alternative reading flagged in §38 for the cortical-actin result: if MVP co-elutes
+with translation machinery, a cytoskeletal association may follow from **where the particle is
+synthesised** rather than from what it does. That is now a competing explanation with data behind it
+rather than a bare possibility — though it is itself sub-threshold, and CFdb's authors do not report
+interactions at this precision. We do not call these interactions.

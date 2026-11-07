@@ -1,0 +1,19 @@
+scored partners: PSMA1=11711, RPL7=11157, MVP=10614
+
+GATE PSMA1->proteasome {'n': 59, 'obs': 42, 'exp': 1.0, 'p': 0.0}
+GATE RPL7->ribosome  {'n': 223, 'obs': 77, 'exp': 3.8, 'p': 0.0}
+  => PASS
+
+MVP top-200 by score, degree-matched specificity:
+  TRANSLATION        GOBP_TRANSLATION                             {'n': 551, 'obs': 67, 'exp': 9.4, 'p': 0.0}  CLEARS
+  TRANSLATION        GOCC_RIBOSOME                                {'n': 223, 'obs': 41, 'exp': 3.8, 'p': 0.0}  CLEARS
+  TRANSLATION        GOBP_CYTOPLASMIC_TRANSLATION                 {'n': 150, 'obs': 47, 'exp': 2.6, 'p': 0.0}  CLEARS
+  TRANSLATION        GOCC_RIBONUCLEOPROTEIN_COMPLEX               {'n': 633, 'obs': 59, 'exp': 10.8, 'p': 0.0}  CLEARS
+  TRANSLATION        GOBP_RNA_CATABOLIC_PROCESS                   {'n': 238, 'obs': 12, 'exp': 4.1, 'p': 0.055}  
+  COMPARATOR (dead)  GOBP_ACTIN_FILAMENT_ORGANIZATION             {'n': 352, 'obs': 12, 'exp': 6.0, 'p': 0.03}  CLEARS
+  COMPARATOR (dead)  GOCC_RUFFLE                                  {'n': 148, 'obs': 9, 'exp': 2.5, 'p': 0.0}  CLEARS
+  COMPARATOR (dead)  GOBP_PLASMA_MEMBRANE_REPAIR                  {'n': 24, 'obs': 2, 'exp': 0.4, 'p': 0.075}  
+  COMPARATOR (dead)  GOBP_INFLAMMATORY_RESPONSE                   {'n': 458, 'obs': 4, 'exp': 7.8, 'p': 0.71}  
+  NEG CONTROL        GOCC_MITOCHONDRION                           {'n': 1313, 'obs': 7, 'exp': 22.4, 'p': 1.0}  
+
+VERDICT: NOT SPECIFIC - translation ['GOBP_TRANSLATION', 'GOCC_RIBOSOME', 'GOBP_CYTOPLASMIC_TRANSLATION', 'GOCC_RIBONUCLEOPROTEIN_COMPLEX'] but dead comparators also clear ['GOBP_ACTIN_FILAMENT_ORGANIZATION', 'GOCC_RUFFLE']
