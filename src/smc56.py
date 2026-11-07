@@ -59,11 +59,11 @@ print(f'  -> {nctl}/4 cohesin+condensin members are interactors; control {"PASSE
 want = set(['PARP4', 'TEP1'] + SMC56 + CTRL)
 edges = {}
 with gzip.open('data/raw/cfdb/Homo_sapiens.tsv.gz', 'rt') as fh:
-    hdr = fh.readline().rstrip('\n').split('\t')
-    ia, ib = hdr.index('protein_A'), hdr.index('protein_B')
-    isc = hdr.index('score'); ipr = hdr.index('precision') if 'precision' in hdr else None
+    hdr = [h.strip(chr(34)) for h in fh.readline().rstrip("\n").split("\t")]
+    ia, ib = hdr.index("Protein A"), hdr.index("Protein B")
+    isc = hdr.index("Score"); ipr = hdr.index("Precision")
     for line in fh:
-        p = line.rstrip('\n').split('\t')
+        p = [x.strip('"') for x in line.rstrip('\n').split('\t')]
         a, b = p[ia], p[ib]
         if a == 'MVP' and b in want: g = b
         elif b == 'MVP' and a in want: g = a

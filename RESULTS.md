@@ -2343,3 +2343,75 @@ as remaining work on vault *fate*. In this pulldown:
 So one selective-autophagy receptor associates with the vault and its three closest relatives,
 **including p62, do not**. That is a single protein, not an autophagy module, and it is the same shape
 as everything else here. It does not support a p62-body model and we are not pursuing one.
+
+## 45. SMC5/6 dies on multiple testing, and our specificity control was vacuous
+
+`SMC56_PREREGISTRATION.md`. Registered expectation was that this would die on Threat 2, nuclear
+contamination. **It died on Threat 1 instead** — right outcome, wrong mechanism.
+
+### 45a. Threat 1, multiple testing: the claim dies here
+
+BH-corrected across **every** term with fewer than 10 members in the universe — 4,527 of them, not just
+the ones that happened to hit:
+
+**`GOCC_SMC5_SMC6_COMPLEX`: raw p = 3.567e-04, q = 0.4199.** Not significant.
+
+And the manner of failure is as informative as the fact. The top of that corrected family is a dead
+heat, every term at the identical q = 0.4199:
+
+| term | hits | q |
+|---|---|---|
+| `GOCC_SMC5_SMC6_COMPLEX` | 4/6 | 0.4199 |
+| `GOCC_SUMO_LIGASE_COMPLEX` | 4/6 | 0.4199 |
+| `GOBP_TERTIARY_ALCOHOL_METABOLIC_PROCESS` | 3/4 | 0.4199 |
+| `GOBP_TELOMERE_MAINTENANCE_VIA_RECOMBINATION` | 3/4 | 0.4199 |
+| `GOBP_RETINOL_METABOLIC_PROCESS` | 3/4 | 0.4199 |
+
+**SMC5/6 is tied with tertiary alcohol metabolism.** When 4,527 small terms are tested, a 4-of-6 hit is
+exactly as surprising as a 3-of-4 hit on an alcohol-metabolism annotation, which is the cleanest
+available demonstration that the observation was not special. §44a's flag is closed: **our registered
+design gap cost nothing**, because the thing it excluded does not survive being included.
+
+### 45b. Threat 2: the control passed, and passing meant nothing
+
+This is the part worth recording. The registered rule was that fewer than two of SMC1A, SMC3, SMC2 and
+SMC4 may be interactors. The result was **0 of 4, and the rule therefore recorded PASS.**
+
+**All four are absent from the IP-MS table entirely.** They are not present-and-unenriched; they were
+never detected. A protein that is not in the universe cannot be an interactor, so the control could only
+ever have returned PASS. **It had no power to fail, and a control that cannot fail is not a control.**
+This is the fifth error in the #140 family and the first where the flaw was invisible until the data
+came back — the control proteins were chosen for being abundant, nuclear and chromosomal, which is
+exactly right in principle, without checking that the instrument had detected them.
+
+We note, without using it, that detecting four SMC5/6 members while detecting no cohesin or condensin
+subunit is an odd asymmetry, since cohesin is by far the more abundant complex. **That asymmetry would
+need its own test with its own controls, and Threat 1 has already settled the claim**, so we are not
+pursuing it. Recording it is not reviving it.
+
+### 45c. Threat 3, CFdb: no support, and the gate earned its keep
+
+The lookup worked only after a parse fix, and **the positive control is what caught the error.** The
+first run reported no MVP-PARP4 edge at all — an impossible result for a 0.676 edge — which flagged a
+quoting bug in the parse rather than a biological negative. Had the gate not been registered, "no CFdb
+edges to SMC5/6" would have read as clean confirmation of a null.
+
+After the fix, with MVP-PARP4 at precision **0.6757** as expected:
+
+| edge | precision | |
+|---|---|---|
+| MVP-PARP4 | **0.676** | gate, passes |
+| MVP-SMC2 | 0.177 | *control*, noise floor |
+| MVP-SMC4 | 0.142 | *control*, noise floor |
+| MVP-SMC1A | 0.141 | *control*, noise floor |
+| MVP-SMC3 | 0.051 | *control*, noise floor |
+| MVP-SMC5 | 0.042 | noise floor |
+| MVP-TEP1 | 0.041 | noise floor — the known sensitivity failure (#180) |
+| MVP-SMC6 | 0.011 | noise floor |
+| MVP-NSMCE1 | 0.010 | noise floor |
+| MVP-NSMCE3 | — | no edge |
+
+CFdb gives no support. **And cohesin and condensin members score slightly higher there than the SMC5/6
+members do**, so that instrument does not even rank SMC5/6 above the controls. Per the registration this
+decides nothing on its own — a CFdb negative is weak evidence, and MVP-TEP1 at 0.041 for a protein the
+pulldown confirms at LWTP 3.33 is the standing reason why.

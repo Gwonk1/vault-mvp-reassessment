@@ -32,3 +32,17 @@ papers can be checked without any of this**; the data is only needed to recomput
    anything.
 6. **Corrections go next to the original claim**, struck through, with the reason. Nothing is silently
    amended; `LEDGER.md` is the record of being wrong as much as of being right.
+
+## 7. Verify a control protein is present in the instrument's universe before registering it
+
+Learned by breaking it (#188). We registered a specificity control requiring that fewer than two of
+cohesin and condensin's subunits be vault interactors. All four turned out to be absent from the IP-MS
+table entirely, so the control returned PASS and the PASS meant nothing: a protein outside the universe
+cannot be an interactor, so the rule had no power to fail.
+
+The controls were well chosen in principle — abundant, nuclear, chromosomal, the right contrast for the
+artefact we feared. The error was registering them without checking the instrument had detected them.
+
+**Before a pre-registration is committed, confirm every named control protein appears in the data the
+test will read.** A control that cannot fail is not a control, and it is worse than no control, because
+it launders an untested claim as a checked one.

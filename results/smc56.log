@@ -1,0 +1,45 @@
+universe 1205 | interactors 88
+
+THREAT 1: BH across all 4527 small terms (<10 members in universe)
+  GOCC_SMC5_SMC6_COMPLEX: raw p=3.567e-04  q=0.4199
+  -> q<0.05: False
+  top 8 of the family by q:
+    GOCC_SMC5_SMC6_COMPLEX                                     4/6  q=0.4199
+    GOCC_SUMO_LIGASE_COMPLEX                                   4/6  q=0.4199
+    GOBP_TERTIARY_ALCOHOL_METABOLIC_PROCESS                    3/4  q=0.4199
+    GOBP_TELOMERE_MAINTENANCE_VIA_RECOMBINATION                3/4  q=0.4199
+    GOBP_PROTEIN_PEPTIDYL_PROLYL_ISOMERIZATION                 3/4  q=0.4199
+    GOBP_PRIMARY_ALCOHOL_METABOLIC_PROCESS                     4/7  q=0.4199
+    GOBP_RESPONSE_TO_OSMOTIC_STRESS                            4/6  q=0.4199
+    GOBP_RETINOL_METABOLIC_PROCESS                             3/4  q=0.4199
+
+THREAT 2: SMC5/6 complex vs cohesin+condensin controls
+  SMC5/6  SMC5      {'WT_LFC': 3.931, 'LWTP': 2.981, 'interactor': True}
+  SMC5/6  SMC6      {'WT_LFC': 6.788, 'LWTP': 1.392, 'interactor': True}
+  SMC5/6  NSMCE1    {'WT_LFC': 5.79, 'LWTP': 3.017, 'interactor': True}
+  SMC5/6  NSMCE2    {'WT_LFC': 0.271, 'LWTP': 0.057, 'interactor': False}
+  SMC5/6  NSMCE3    {'WT_LFC': 5.998, 'LWTP': 2.309, 'interactor': True}
+  SMC5/6  NSMCE4A   {'WT_LFC': 1.08, 'LWTP': 0.475, 'interactor': False}
+  CONTROL SMC1A     None
+  CONTROL SMC3      None
+  CONTROL SMC2      None
+  CONTROL SMC4      None
+  -> 0/4 cohesin+condensin members are interactors; control PASSES
+
+THREAT 3: CFdb MVP edges (positive control = PARP4 at precision 0.676)
+  MVP-PARP4     score=0.2722 precision=0.675679035365778
+  MVP-TEP1      score=0.0125 precision=0.0407108414788818
+  MVP-SMC5      score=0.0128 precision=0.0416124758970521
+  MVP-SMC6      score=0.0003 precision=0.0111087812993024
+  MVP-NSMCE1    score=0.0000 precision=0.0103284661738621
+  MVP-NSMCE2    score=0.0017 precision=0.0146795588659366
+  MVP-NSMCE3    no edge found
+  MVP-NSMCE4A   score=0.0024 precision=0.0165630862149081
+  MVP-SMC1A     score=0.0512 precision=0.140579158062166
+  MVP-SMC3      score=0.0167 precision=0.0506666002906504
+  MVP-SMC2      score=0.0641 precision=0.177009273915882
+  MVP-SMC4      score=0.0516 precision=0.141524441208984
+  CFdb lookup gate (PARP4 precision>0.5): True; SMC5/6 members with precision>0.5: none
+  (a CFdb negative is WEAK evidence per #180 - it misses TEP1 at 0.041)
+
+VERDICT: DIES - threat1_q<0.05=False, threat2_control_passes=True
