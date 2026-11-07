@@ -1,0 +1,219 @@
+{
+ "threshold_results": {
+  "0.5": {
+   "gates": true,
+   "psma1_proteasome": 34,
+   "rpl7_ribosomal": 77,
+   "n_proteins": 4934,
+   "mvp_degree": 1,
+   "mvp_parp4": true,
+   "mvp_tep1": false,
+   "named": {
+    "PARP4": true,
+    "TEP1": false,
+    "ANXA2": false,
+    "S100A10": false,
+    "EHD2": false,
+    "EHD4": false,
+    "CAPN2": false,
+    "MYOF": false,
+    "AHNAK": false,
+    "IQGAP1": false,
+    "CD63": false,
+    "OPTN": false,
+    "VPS35": false,
+    "FLOT1": false,
+    "FLOT2": false,
+    "CAVIN1": false
+   },
+   "membrane_terms": {
+    "GOBP_PLASMA_MEMBRANE_REPAIR": {
+     "n": 12,
+     "obs": 0,
+     "p": 1.0
+    },
+    "GOCC_CAVEOLA": {
+     "n": 19,
+     "obs": 0,
+     "p": 1.0
+    },
+    "GOBP_PLASMA_MEMBRANE_ORGANIZATION": {
+     "n": 46,
+     "obs": 0,
+     "p": 1.0
+    },
+    "GOCC_LATE_ENDOSOME": {
+     "n": 90,
+     "obs": 0,
+     "p": 1.0
+    }
+   },
+   "immune_terms": {
+    "GOBP_INFLAMMATORY_RESPONSE": {
+     "n": 160,
+     "obs": 1,
+     "p": 0.05
+    },
+    "GOBP_RESPONSE_TO_BACTERIUM": {
+     "n": 154,
+     "obs": 0,
+     "p": 1.0
+    },
+    "GOCC_RUFFLE": {
+     "n": 73,
+     "obs": 0,
+     "p": 1.0
+    },
+    "GOBP_ANTIGEN_PROCESSING_AND_PRESENTATION": {
+     "n": 37,
+     "obs": 0,
+     "p": 1.0
+    }
+   },
+   "mvp_partners": [
+    "PARP4"
+   ]
+  },
+  "0.75": {
+   "gates": true,
+   "psma1_proteasome": 32,
+   "rpl7_ribosomal": 75,
+   "n_proteins": 3425,
+   "mvp_degree": 0,
+   "mvp_parp4": false,
+   "mvp_tep1": false,
+   "named": {
+    "PARP4": false,
+    "TEP1": false,
+    "ANXA2": false,
+    "S100A10": false,
+    "EHD2": false,
+    "EHD4": false,
+    "CAPN2": false,
+    "MYOF": false,
+    "AHNAK": false,
+    "IQGAP1": false,
+    "CD63": false,
+    "OPTN": false,
+    "VPS35": false,
+    "FLOT1": false,
+    "FLOT2": false,
+    "CAVIN1": false
+   },
+   "membrane_terms": {
+    "GOBP_PLASMA_MEMBRANE_REPAIR": {
+     "n": 9,
+     "obs": 0,
+     "p": 1.0
+    },
+    "GOCC_CAVEOLA": {
+     "n": 10,
+     "obs": 0,
+     "p": 1.0
+    },
+    "GOBP_PLASMA_MEMBRANE_ORGANIZATION": {
+     "n": 33,
+     "obs": 0,
+     "p": 1.0
+    },
+    "GOCC_LATE_ENDOSOME": {
+     "n": 51,
+     "obs": 0,
+     "p": 1.0
+    }
+   },
+   "immune_terms": {
+    "GOBP_INFLAMMATORY_RESPONSE": {
+     "n": 116,
+     "obs": 0,
+     "p": 1.0
+    },
+    "GOBP_RESPONSE_TO_BACTERIUM": {
+     "n": 104,
+     "obs": 0,
+     "p": 1.0
+    },
+    "GOCC_RUFFLE": {
+     "n": 50,
+     "obs": 0,
+     "p": 1.0
+    },
+    "GOBP_ANTIGEN_PROCESSING_AND_PRESENTATION": {
+     "n": 32,
+     "obs": 0,
+     "p": 1.0
+    }
+   },
+   "mvp_partners": []
+  },
+  "0.9": {
+   "gates": true,
+   "psma1_proteasome": 27,
+   "rpl7_ribosomal": 68,
+   "n_proteins": 2029,
+   "mvp_degree": 0,
+   "mvp_parp4": false,
+   "mvp_tep1": false,
+   "named": {
+    "PARP4": false,
+    "TEP1": false,
+    "ANXA2": false,
+    "S100A10": false,
+    "EHD2": false,
+    "EHD4": false,
+    "CAPN2": false,
+    "MYOF": false,
+    "AHNAK": false,
+    "IQGAP1": false,
+    "CD63": false,
+    "OPTN": false,
+    "VPS35": false,
+    "FLOT1": false,
+    "FLOT2": false,
+    "CAVIN1": false
+   },
+   "membrane_terms": {
+    "GOBP_PLASMA_MEMBRANE_REPAIR": {
+     "n": 6,
+     "obs": 0,
+     "p": 1.0
+    },
+    "GOCC_CAVEOLA": null,
+    "GOBP_PLASMA_MEMBRANE_ORGANIZATION": {
+     "n": 13,
+     "obs": 0,
+     "p": 1.0
+    },
+    "GOCC_LATE_ENDOSOME": {
+     "n": 24,
+     "obs": 0,
+     "p": 1.0
+    }
+   },
+   "immune_terms": {
+    "GOBP_INFLAMMATORY_RESPONSE": {
+     "n": 48,
+     "obs": 0,
+     "p": 1.0
+    },
+    "GOBP_RESPONSE_TO_BACTERIUM": {
+     "n": 51,
+     "obs": 0,
+     "p": 1.0
+    },
+    "GOCC_RUFFLE": {
+     "n": 23,
+     "obs": 0,
+     "p": 1.0
+    },
+    "GOBP_ANTIGEN_PROCESSING_AND_PRESENTATION": {
+     "n": 21,
+     "obs": 0,
+     "p": 1.0
+    }
+   },
+   "mvp_partners": []
+  }
+ },
+ "verdict": "MVP-PARP4 RECOVERED | membrane support: False | immune support: False"
+}

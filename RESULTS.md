@@ -1475,3 +1475,87 @@ is secondary to the simpler point that the construct's vault membership is unver
 **What would make this work:** the same analysis on a bait with deeper coverage, or MVP-TurboID rather
 than PARP4-TurboID, or CFdb native co-fractionation (PMID 38102123), where a 13 MDa particle elutes in
 megadalton fractions that soluble monomers cannot reach. That remains the best untried instrument.
+
+## 33. CFdb native co-fractionation: MVP and PARP4 are a reciprocal exclusive pair, and nothing else is there
+
+`CFDB_PREREGISTRATION.md`, threshold in `CFDB_DEVIATIONS.md`. Skinnider, Akinlaja & Foster,
+*Nat Commun* 2023 (PMID 38102123): 411 harmonised co-fractionation MS datasets, 21,703 fractions,
+47,455,274 scored human pairs. Native separations, no detergent IP, no wash-off. 69,120 pairs at the
+conventional precision >= 0.50.
+
+**Gates pass emphatically.** PSMA1 returns **34** proteasome partners and RPL7 returns **77** ribosomal
+partners at precision >= 0.50, and the gates hold at 0.75 and 0.90. The instrument detects real
+complexes.
+
+### 33a. The primary result
+
+**MVP has exactly one high-confidence partner in the entire human proteome, and it is PARP4.**
+**PARP4 has exactly one, and it is MVP.** A reciprocal exclusive pair.
+
+| protein | CFdb degree at precision >= 0.50 |
+|---|---|
+| **MVP** | **1** (PARP4) |
+| **PARP4** | **1** (MVP) |
+| TEP1 | 0 |
+| PARP1 | **133** |
+| ANXA2 | **27** |
+| FLOT1 | 1 |
+| CD63 | 0 |
+
+The two comparisons that matter are in that table. **PARP1 has 133 partners**, so the method is not
+simply failing on PARP-family proteins. **ANXA2 has 27 partners**, so ANXA2 is well measured and well
+connected in this resource — it is simply **not connected to MVP**. That is a well-powered negative, not
+an absence of data.
+
+This is the sixth independent instrument to recover MVP-PARP4: co-abundance across 13 cohorts, CCLE,
+all 8 CPTAC cohorts after confound removal, anti-MVP IP-MS, *Dictyostelium* proximity labelling, and now
+native co-fractionation. **And this one carries size information the others did not** — an intact 13 MDa
+particle cannot co-elute with free monomers by accident.
+
+**Honest caveat on strength:** the MVP-PARP4 edge sits between precision 0.50 and 0.75. At >= 0.75 and
+>= 0.90 MVP drops out entirely (degree 0). So it is high-confidence by the conventional threshold and
+not top-tier. TEP1 has degree 0 at every threshold, which the registration declared uninformative in
+advance given how sparsely TEP1 is measured.
+
+### 33b. Both neighbourhoods get zero contact-level support
+
+Against 200 degree-matched random sets, among MVP's partners:
+
+| term | members in CFdb | observed | p |
+|---|---|---|---|
+| `GOBP_PLASMA_MEMBRANE_REPAIR` | 12 | **0** | 1.0 |
+| `GOCC_CAVEOLA` | 19 | **0** | 1.0 |
+| `GOBP_PLASMA_MEMBRANE_ORGANIZATION` | 46 | **0** | 1.0 |
+| `GOCC_LATE_ENDOSOME` | 90 | **0** | 1.0 |
+| `GOBP_RESPONSE_TO_BACTERIUM` | 154 | **0** | 1.0 |
+| `GOCC_RUFFLE` | 73 | **0** | 1.0 |
+| `GOBP_ANTIGEN_PROCESSING_AND_PRESENTATION` | 37 | **0** | 1.0 |
+| `GOBP_INFLAMMATORY_RESPONSE` | 160 | 1 | 0.05 |
+
+**The single observation in inflammatory response is PARP4 itself**, which is annotated to that term
+(verified: PARP4 is a member, MVP is not). So the nominal p = 0.05 is an artefact of PARP4's own GO
+annotation and there is **zero independent support** for the immune neighbourhood here.
+
+### 33c. Where this leaves both hypotheses
+
+The registration committed in advance: *"Both finished if neither clears while the gates pass. After
+five co-abundance failures and one void contact test, a null in a native size-resolved instrument with
+working gates is the end of the line for both as physical-association claims, and we will say so."*
+
+**We say so.**
+
+- **The membrane-repair neighbourhood is finished as a physical-association claim.** Sixth test, and the
+  first where the negative is well-powered rather than ambiguous: ANXA2 has 27 partners in this resource
+  and MVP is not among them.
+- **The innate-immune neighbourhood from §31 is also finished as a physical claim.** It survives only
+  as what §31c already said it was — a reproducible covariation with a cell-autonomous innate-immune
+  program, most plausibly shared transcriptional regulation of an interferon-inducible gene, not a
+  complex.
+- **MVP-PARP4 is as close to established as anything in this work gets.** Six instruments, including one
+  with a size discriminator, and in the native data it is exclusive on both sides.
+
+**The positive reading of the whole arc.** A particle whose only stable partner is its own internal
+enzyme, in an instrument that happily assigns PARP1 133 partners and ANXA2 27, is behaving exactly like
+a **sealed compartment**. That is consistent with §12's geometry — a wall that admits nothing larger
+than water radially — and with the absence of any broad neighbourhood in five instruments. The vault may
+have no neighbourhood because it is a container, and containers do not have one.

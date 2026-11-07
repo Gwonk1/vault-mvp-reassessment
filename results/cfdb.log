@@ -1,0 +1,46 @@
+edges kept (precision>=0.25): 268115
+
+=== precision >= 0.5 | proteins 4934 | edges 69120
+  GATE PSMA1 -> 34 proteasome partners | RPL7 -> 77 ribosomal  => PASS
+  MVP degree: 1
+  PRIMARY MVP-PARP4: True   SECONDARY MVP-TEP1: False
+  named partners present: ['PARP4']
+  MVP partners: ['PARP4']
+    membrane  GOBP_PLASMA_MEMBRANE_REPAIR                {'n': 12, 'obs': 0, 'p': 1.0}
+    membrane  GOCC_CAVEOLA                               {'n': 19, 'obs': 0, 'p': 1.0}
+    membrane  GOBP_PLASMA_MEMBRANE_ORGANIZATION          {'n': 46, 'obs': 0, 'p': 1.0}
+    membrane  GOCC_LATE_ENDOSOME                         {'n': 90, 'obs': 0, 'p': 1.0}
+    immune    GOBP_INFLAMMATORY_RESPONSE                 {'n': 160, 'obs': 1, 'p': 0.05}
+    immune    GOBP_RESPONSE_TO_BACTERIUM                 {'n': 154, 'obs': 0, 'p': 1.0}
+    immune    GOCC_RUFFLE                                {'n': 73, 'obs': 0, 'p': 1.0}
+    immune    GOBP_ANTIGEN_PROCESSING_AND_PRESENTATION   {'n': 37, 'obs': 0, 'p': 1.0}
+
+=== precision >= 0.75 | proteins 3425 | edges 25262
+  GATE PSMA1 -> 32 proteasome partners | RPL7 -> 75 ribosomal  => PASS
+  MVP degree: 0
+  PRIMARY MVP-PARP4: False   SECONDARY MVP-TEP1: False
+  named partners present: none
+    membrane  GOBP_PLASMA_MEMBRANE_REPAIR                {'n': 9, 'obs': 0, 'p': 1.0}
+    membrane  GOCC_CAVEOLA                               {'n': 10, 'obs': 0, 'p': 1.0}
+    membrane  GOBP_PLASMA_MEMBRANE_ORGANIZATION          {'n': 33, 'obs': 0, 'p': 1.0}
+    membrane  GOCC_LATE_ENDOSOME                         {'n': 51, 'obs': 0, 'p': 1.0}
+    immune    GOBP_INFLAMMATORY_RESPONSE                 {'n': 116, 'obs': 0, 'p': 1.0}
+    immune    GOBP_RESPONSE_TO_BACTERIUM                 {'n': 104, 'obs': 0, 'p': 1.0}
+    immune    GOCC_RUFFLE                                {'n': 50, 'obs': 0, 'p': 1.0}
+    immune    GOBP_ANTIGEN_PROCESSING_AND_PRESENTATION   {'n': 32, 'obs': 0, 'p': 1.0}
+
+=== precision >= 0.9 | proteins 2029 | edges 12343
+  GATE PSMA1 -> 27 proteasome partners | RPL7 -> 68 ribosomal  => PASS
+  MVP degree: 0
+  PRIMARY MVP-PARP4: False   SECONDARY MVP-TEP1: False
+  named partners present: none
+    membrane  GOBP_PLASMA_MEMBRANE_REPAIR                {'n': 6, 'obs': 0, 'p': 1.0}
+    membrane  GOCC_CAVEOLA                               None
+    membrane  GOBP_PLASMA_MEMBRANE_ORGANIZATION          {'n': 13, 'obs': 0, 'p': 1.0}
+    membrane  GOCC_LATE_ENDOSOME                         {'n': 24, 'obs': 0, 'p': 1.0}
+    immune    GOBP_INFLAMMATORY_RESPONSE                 {'n': 48, 'obs': 0, 'p': 1.0}
+    immune    GOBP_RESPONSE_TO_BACTERIUM                 {'n': 51, 'obs': 0, 'p': 1.0}
+    immune    GOCC_RUFFLE                                {'n': 23, 'obs': 0, 'p': 1.0}
+    immune    GOBP_ANTIGEN_PROCESSING_AND_PRESENTATION   {'n': 21, 'obs': 0, 'p': 1.0}
+
+VERDICT (at precision>=0.50): MVP-PARP4 RECOVERED | membrane support: False | immune support: False
