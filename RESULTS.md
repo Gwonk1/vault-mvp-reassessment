@@ -2875,3 +2875,77 @@ difference in the registration before running. It makes this correction *less* s
 factor of 2.4 — and even so, the family-size difference does not explain the reversal, since
 q = 0.0370 × 2.4 = 0.089 would still have beaten q = 0.4199. **The statistic, not the family, is what
 changed.**
+
+## 51. The translation enrichment is what ribosomal proteins are, not what they bind
+
+`RIBOSOME_PROPERTY_PREREGISTRATION.md`. **Registered expectation was that the polysome reading would
+die. It died, on both tests independently.** §49a's upgrade is withdrawn.
+
+### 51a. Compartment discrimination
+
+Mitoribosomes sit inside mitochondria behind two membranes. A cytoplasmic 13 MDa particle cannot be
+bound to them.
+
+| term | n | mean WT_LFC | p (abundance-matched) | median length | charge per 1,000 residues |
+|---|---|---|---|---|---|
+| `GOCC_MITOCHONDRIAL_LARGE_RIBOSOMAL_SUBUNIT` | 23 | **+0.560** | 1.4e-02 | 198 | +54.4 |
+| `GOCC_ORGANELLAR_RIBOSOME` | 45 | **+0.382** | 7.6e-03 | 198 | +54.5 |
+| `GOCC_RIBOSOME` | 134 | +0.314 | 1.1e-04 | 184 | +100.2 |
+| `GOCC_CYTOSOLIC_RIBOSOME` | 82 | **+0.272** | 3.5e-03 | 160 | +130.2 |
+| `GOBP_CYTOPLASMIC_TRANSLATION` | 95 | +0.228 | 3.3e-03 | 179 | +108.1 |
+| whole universe | 1,166 | −0.273 | — | **418** | **+2.94** |
+
+**The mitochondrial ribosome is more enriched than the cytosolic one**, while §49b showed the
+mitochondrial compartment as a whole is flat (−0.145). The enrichment tracks *"is a ribosomal protein"*
+and nothing else.
+
+### 51b. Length and charge matching erases it completely
+
+Ribosomal proteins are **2.6x shorter than the median detected protein (160 vs 418 residues) and 44x
+more basic (+130 vs +2.94 charge units per 1,000 residues)**. That is the profile of a protein that
+sticks to an affinity matrix. Re-testing against randoms matched on length decile and charge decile in
+addition to abundance:
+
+| term | n | observed | matched null | draws ≥ obs | p |
+|---|---|---|---|---|---|
+| `GOCC_CYTOSOLIC_RIBOSOME` | 82 | +0.272 | **+0.229** | 61,764 / 200,000 | **0.309** |
+| `GOBP_CYTOPLASMIC_TRANSLATION` | 95 | +0.228 | **+0.158** | 34,706 / 200,000 | **0.174** |
+| `GOCC_RIBOSOME` | 134 | +0.314 | **+0.256** | 36,886 / 200,000 | **0.184** |
+
+**The matched null essentially reproduces the observation.** Length and charge account for the entire
+effect.
+
+### 51c. The gate passed, which is what makes this readable
+
+A control that erased everything would prove nothing. The vault core — MVP, PARP4, TEP1, **median
+length 1,724 residues, charge −28.5**, the opposite profile — **still clears the fully matched control
+at p = 0.024** (it was 5e-06 on abundance alone, and the matched null rises from −0.29 to +2.00, so the
+matching is doing real work). **The same control that destroys the ribosome signal spares the bait and
+its two known subunits.** That is a discriminating control rather than an over-specified one, and it is
+the reason we treat this as an answer.
+
+### 51d. What this leaves, and the uncomfortable part
+
+**Translation returns to where it was before §48a: a single-instrument finding.** §40's co-elution
+result — MVP's sub-threshold tail at the 98.0th percentile of 150 comparable seeds, with glycolytic
+controls at the 26th-79th and MVP's own SPFH relatives at the 41st-70th — **is not tested here and still
+stands.** It is seed-level specificity, which a generic ribosomal property does not obviously explain:
+if small basic proteins co-migrate promiscuously they should appear in every seed's tail, not MVP's
+preferentially. That remains open and is the right target for the next test.
+
+**But the contact corroboration is gone, and the honest summary of this whole arc is unflattering.**
+The same question, on the same data, has now returned three different answers depending only on the
+statistical treatment:
+
+| treatment | result | §  |
+|---|---|---|
+| dichotomised count at `LWTP > 1.3` | null, p = 0.195 → we recorded a kill | §41 |
+| continuous mean, abundance-matched | positive, top 1.8% of 1,276 terms → we upgraded it | §49a |
+| continuous mean, length- and charge-matched | **null, p = 0.174** → withdrawn | §51b |
+
+**The biology never changed. Each reversal was a methodological choice we had not interrogated, and in
+each case we published the answer before interrogating it.** The first was ours, the second came from an
+adversarial reviewer, and the third we found in our own output — which is the only encouraging thing
+here. The rule that would have prevented all three is the one we keep arriving at from different
+directions: **before reporting an enrichment, ask what property other than the one you are naming could
+produce it, and match on that.**

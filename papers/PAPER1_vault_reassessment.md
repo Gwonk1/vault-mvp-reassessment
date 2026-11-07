@@ -1,10 +1,10 @@
-# One assembly, three lifetimes, a sealed nucleotide pocket, and two gates that could only say no: a pre-registered reassessment of major vault protein across public human and comparative data
+# One assembly, three lifetimes, a sealed nucleotide pocket, and one question that gave three answers: a pre-registered reassessment of major vault protein across public human and comparative data
 
 **Graham W. Syfert.** Analysis performed with Claude (Anthropic). Two further language-model agents
 reviewed the manuscript adversarially against the committed data, in three rounds; between them they
 struck or qualified more than a dozen claims made here, and those reversals are recorded in place
 rather than quietly removed. All hypotheses were committed to a timestamped git history before the
-relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (221 entries)
+relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (225 entries)
 and `RESULTS.md` (24 sections). **That history is currently local and has not been published**, so
 the ordering it establishes is not yet independently verifiable; we state the fact rather than imply
 otherwise, and the repository is available to anyone who asks. Correspondence welcome, including
@@ -38,30 +38,30 @@ a profile matching flotillin-1's obligate heterodimer rather than a multi-subuni
 scores at the noise floor in the same data, so sensitivity for known vault subunits there is one of
 two.
 
-**The most useful result in this work is a negative one about method, and it is not the one we first
-wrote.** We proposed that three candidate neighbourhoods each survived their controls in
-co-abundance and then vanished under physical contact, and an adversarial review dismantled that
-claim.
-**The real error was dichotomisation.** Our contact test for cytoplasmic translation cut a
-continuous measurement at a significance threshold, returned 9 of 95 proteins against 6.94 expected
-(p = 0.195), and we recorded a kill. The continuous signal that cut discarded is strong: the 95
-translation proteins detected in that pulldown average **+0.228 log2 enrichment against -0.316 for
-the other 1,110**, a shift at the **99.8th percentile of abundance-matched draws (p = 0.004)**.
-Translation is therefore enriched in *both* instrument classes - at the 98th percentile of 150
-comparable seeds in native co-elution, and as a continuous shift in physical contact.
+**The most useful result in this work is a negative one about method, and we reached it only after
+publishing two wrong versions of it.** One question - whether cytoplasmic translation machinery is
+physically associated with the vault - returned three different answers from three statistical
+treatments of a single anti-MVP pulldown. Dichotomising at a significance threshold gave a null (9
+of 95 proteins against 6.94 expected, p = 0.195) and we recorded a kill. Taking the continuous mean
+instead, abundance-matched, gave a strong positive (top 1.8% of 1,276 terms) and we withdrew the
+kill. Matching additionally on protein **length and net charge** returned the null again (p =
+0.174), and that one holds: ribosomal proteins are **2.6x shorter and 44x more basic** than the
+median detected protein, their mitochondrial counterparts - behind two membranes, where a
+cytoplasmic particle cannot reach - score **higher** than their cytosolic ones, and a length- and
+charge-matched null reproduces the observed enrichment almost exactly. **The biology never changed;
+each reversal was a methodological choice we had not interrogated.**
 
-Our cortical-actin exclusion fails for a related reason: the "no high-confidence co-elution edges"
-argument rests on a cutoff that **also excludes TEP1**, a stoichiometric vault subunit this pulldown
-recovers at a log-p of 3.33 and which sits at co-elution precision 0.041, where MVP has 1,733
-partners. At the cutoff we used, MVP has **zero** partners of any kind. That exclusion is withdrawn
-and cortical actin is unresolved. What survives is a single clean exclusion: **myoferlin is depleted
-both in the pulldown (-2.23) and in pre-lysis covalent proximity labelling (-3.32, p = 3.4e-4)**,
-where no wash-based artefact can reach it - and myoferlin had been our strongest membrane-repair
-evidence. We also withdraw two readings drawn earlier from the co-fractionation data: an enrichment
-test against a partner set of size one has no power, and a container metaphor is one of six models
-producing the same graph. **The lesson we can defend is that we twice built gates with only one
-reachable answer, on the same day and in opposite directions, and then trusted the gates more than
-the data.**
+That control is discriminating rather than merely destructive, which is why we trust it: the same
+matching that erases the ribosome signal leaves the bait and its two known subunits enriched at p =
+0.024, MVP being 1,724 residues and acidic - the opposite profile. **The single clean positive
+exclusion in this work is myoferlin**, depleted both in the pulldown (-2.23) and in pre-lysis
+covalent proximity labelling (-3.32, p = 3.4e-4), an instrument no wash artefact can reach - and
+myoferlin had been our strongest membrane-repair evidence. Cortical actin is unresolved: our
+exclusion rested on a co-elution cutoff that also excludes TEP1, a real subunit this pulldown
+recovers at log-p 3.33. We also withdraw two earlier readings: an enrichment test against a partner
+set of size one has no power, and a container metaphor is one of six models producing the same
+graph. **What survives unchanged is the particle itself** - a 78-mer shell, PARP4 and TEP1 each
+independently associated, a sealed nucleotide pocket, and three distinct subunit lifetimes.
 
 We confirm, from two independent alignments, that the SPFH shoulder nucleotide pocket is the most
 conserved structural domain of MVP, with four ADP-ribose-contacting residues invariant across 174
@@ -313,14 +313,31 @@ refutation. But the registered rule was applied as written.
 **And then an adversarial review took both of those conclusions apart.** The exchange is in the
 repository (`grok/`), and the computation it demanded is the most consequential in this work.
 
-**The translation null was an artefact of our own threshold.** Asked for the one number our hard cut
-had discarded, we computed the mean enrichment of *all* 95 detected translation proteins instead of
-counting how many crossed a line: **+0.228 log2 against -0.316 for the other 1,110 detected
-proteins, at the 99.8th percentile of 2,000 abundance-matched draws, p = 0.004.** The association is
-in the contact data and always was. Our registered test dichotomised at a significance threshold and
-found 9 of 95 against 6.94 expected; the cut destroyed the effect it existed to detect. A further
-arithmetic point we had missed: the largest fold-enrichment this pulldown can express is 88/6.94 =
-**12.7x**, so the 18x co-elution figure was never a quantity that test could have returned.
+**The translation question took three treatments to settle, and we published the first two.** Asked
+by a reviewer for the number our hard cut had discarded, we computed the mean enrichment of *all* 95
+detected translation proteins rather than counting how many crossed a line: **+0.228 log2 against
+-0.316 for the other 1,110**, at the 99.8th percentile of abundance-matched draws. We withdrew the
+kill. Then, reading our own unbiased scan more carefully, we found that the **mitochondrial** large
+ribosomal subunit scored **+0.560** against the **cytosolic** ribosome's **+0.272**, while the
+mitochondrial compartment as a whole was flat. Mitoribosomes sit behind two membranes; a cytoplasmic
+13 MDa particle cannot be bound to them, so the enrichment was tracking *"is a ribosomal protein"*
+rather than any location.
+
+Ribosomal proteins are **2.6x shorter than the median detected protein (160 against 418 residues)
+and 44x more basic (+130 against +2.94 charge units per 1,000 residues)** - the profile of something
+that sticks to an affinity matrix. Matched on length and charge decile as well as abundance,
+**cytosolic ribosome gives p = 0.309 with a matched null of +0.229 against an observed +0.272**;
+cytoplasmic translation p = 0.174; ribosome p = 0.184. The matched null reproduces the observation.
+**The contact corroboration is withdrawn.** What survives is §40's co-elution result, which this
+does not test: MVP's sub-threshold tail at the 98th percentile of 150 comparable seeds, a
+*seed-level* specificity that a promiscuous physicochemical property does not obviously explain,
+since promiscuous small basic proteins should populate every seed's tail rather than MVP's
+preferentially.
+
+**One arithmetic point we had also missed:** the largest fold-enrichment this pulldown can express
+is 88/6.94 = **12.7x**, so the 18x co-elution figure the kill was supposed to adjudicate was never a
+quantity that test could have returned.
+
 
 **The actin exclusion has no positive control.** Its load-bearing number was zero high-confidence
 co-elution edges from MVP to twenty-five actin proteins. But TEP1 - a stoichiometric subunit this

@@ -1,0 +1,23 @@
+GATE rule 7: sequences for 1166/1205 = 96.8% of the universe -> PASS
+usable: 1166 proteins
+
+whole-universe medians: length 418, charge/kres +2.94
+
+--- TEST 1: compartment discrimination, abundance-matched only ---
+  GOCC_CYTOSOLIC_RIBOSOME                          n=82   obs=+0.272 p=3.47e-03 len=160 chg/kres=+130.2
+  GOCC_ORGANELLAR_RIBOSOME                         n=45   obs=+0.382 p=7.60e-03 len=198 chg/kres=+54.5
+  GOCC_MITOCHONDRIAL_LARGE_RIBOSOMAL_SUBUNIT       n=23   obs=+0.560 p=1.39e-02 len=198 chg/kres=+54.4
+  GOCC_RIBOSOME                                    n=134  obs=+0.314 p=1.05e-04 len=184 chg/kres=+100.2
+  GOBP_CYTOPLASMIC_TRANSLATION                     n=95   obs=+0.228 p=3.30e-03 len=179 chg/kres=+108.1
+
+--- GATE: vault core under length+charge+abundance matching ---
+  abundance only      : {'n': 3, 'obs': 7.516, 'null': -0.2901, 'sd': 1.11, 'ge': 0, 'p': 4.9999750001249995e-06, 'med_len': 1724.0, 'med_chg': -28.47}
+  + length + charge   : {'n': 3, 'obs': 7.516, 'null': 2.0042, 'sd': 2.1246, 'ge': 4746, 'p': 0.02373488132559337, 'med_len': 1724.0, 'med_chg': -28.47}
+  -> core still clears p<0.05 with full matching: True
+
+--- TEST 2: cytosolic ribosome under length+charge+abundance matching ---
+  GOCC_CYTOSOLIC_RIBOSOME                          n=82   obs=+0.272 null=+0.229 ge=61764/200000 p=3.088e-01
+  GOBP_CYTOPLASMIC_TRANSLATION                     n=95   obs=+0.228 null=+0.158 ge=34706/200000 p=1.735e-01
+  GOCC_RIBOSOME                                    n=134  obs=+0.314 null=+0.256 ge=36886/200000 p=1.844e-01
+
+VERDICT: POLYSOME READING DIES: mitochondrial ribosome >= cytosolic (+0.382 vs +0.272) - enrichment tracks 'is a ribosomal protein'

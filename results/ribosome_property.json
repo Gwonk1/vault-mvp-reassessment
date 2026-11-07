@@ -1,0 +1,111 @@
+{
+ "seq_coverage": 0.9676348547717842,
+ "test1": {
+  "GOCC_CYTOSOLIC_RIBOSOME": {
+   "n": 82,
+   "obs": 0.2718,
+   "null": -0.287,
+   "sd": 0.2116,
+   "ge": 693,
+   "p": 0.0034699826500867496,
+   "med_len": 159.5,
+   "med_chg": 130.15
+  },
+  "GOCC_MITOCHONDRIAL_RIBOSOME": null,
+  "GOCC_ORGANELLAR_RIBOSOME": {
+   "n": 45,
+   "obs": 0.3819,
+   "null": -0.2876,
+   "sd": 0.2848,
+   "ge": 1519,
+   "p": 0.007599962000189999,
+   "med_len": 198.0,
+   "med_chg": 54.46
+  },
+  "GOCC_MITOCHONDRIAL_LARGE_RIBOSOMAL_SUBUNIT": {
+   "n": 23,
+   "obs": 0.5596,
+   "null": -0.2866,
+   "sd": 0.3984,
+   "ge": 2789,
+   "p": 0.013949930250348748,
+   "med_len": 198.0,
+   "med_chg": 54.38
+  },
+  "GOCC_RIBOSOME": {
+   "n": 134,
+   "obs": 0.3143,
+   "null": -0.2866,
+   "sd": 0.1659,
+   "ge": 20,
+   "p": 0.00010499947500262499,
+   "med_len": 184.0,
+   "med_chg": 100.25
+  },
+  "GOBP_CYTOPLASMIC_TRANSLATION": {
+   "n": 95,
+   "obs": 0.2284,
+   "null": -0.2865,
+   "sd": 0.1954,
+   "ge": 659,
+   "p": 0.0032999835000824995,
+   "med_len": 179.0,
+   "med_chg": 108.12
+  }
+ },
+ "core_ab": {
+  "n": 3,
+  "obs": 7.516,
+  "null": -0.2901,
+  "sd": 1.11,
+  "ge": 0,
+  "p": 4.9999750001249995e-06,
+  "med_len": 1724.0,
+  "med_chg": -28.47
+ },
+ "core_full": {
+  "n": 3,
+  "obs": 7.516,
+  "null": 2.0042,
+  "sd": 2.1246,
+  "ge": 4746,
+  "p": 0.02373488132559337,
+  "med_len": 1724.0,
+  "med_chg": -28.47
+ },
+ "gate_pass": true,
+ "test2": {
+  "GOCC_CYTOSOLIC_RIBOSOME": {
+   "n": 82,
+   "obs": 0.2718,
+   "null": 0.2285,
+   "sd": 0.0866,
+   "ge": 61764,
+   "p": 0.3088234558827206,
+   "med_len": 159.5,
+   "med_chg": 130.15
+  },
+  "GOBP_CYTOPLASMIC_TRANSLATION": {
+   "n": 95,
+   "obs": 0.2284,
+   "null": 0.1583,
+   "sd": 0.0744,
+   "ge": 34706,
+   "p": 0.17353413232933834,
+   "med_len": 179.0,
+   "med_chg": 108.12
+  },
+  "GOCC_RIBOSOME": {
+   "n": 134,
+   "obs": 0.3143,
+   "null": 0.2563,
+   "sd": 0.0644,
+   "ge": 36886,
+   "p": 0.18443407782961085,
+   "med_len": 184.0,
+   "med_chg": 100.25
+  },
+  "GOCC_MITOCHONDRIAL_RIBOSOME": null
+ },
+ "verdict": "POLYSOME READING DIES: mitochondrial ribosome >= cytosolic (+0.382 vs +0.272) - enrichment tracks 'is a ribosomal protein'"
+}
