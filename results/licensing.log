@@ -1,0 +1,29 @@
+residualised: (8982, 330)
+GATE STAT1 vs TAP1 after residualisation: (0.369, 0.0, 330) -> FAIL
+
+            raw rho vs MVP      residualised rho vs MVP
+  AHR      (0.465, 0.0, 330)      (0.279, 0.0, 330)
+  ARNT     (-0.191, 0.0006, 321)  (-0.021, 0.7099, 321)
+  STAT1    (0.452, 0.0, 330)      (0.351, 0.0, 330)
+  STAT2    (0.317, 0.0, 330)      (0.183, 0.0009, 330)
+  IRF9     (0.288, 0.0, 330)      (0.351, 0.0, 330)
+  TAP1     (0.423, 0.0, 330)      (0.38, 0.0, 330)
+  TAP2     (0.428, 0.0, 330)      (0.359, 0.0, 330)
+  B2M      (0.325, 0.0, 330)      (0.426, 0.0, 330)
+  SP1      (-0.458, 0.0, 330)     (-0.168, 0.0022, 330)
+  EZH2     (-0.498, 0.0, 330)     (-0.256, 0.0, 330)
+  EED      (-0.332, 0.0, 330)     (-0.18, 0.001, 330)
+  SUZ12    (-0.36, 0.0, 330)      (-0.26, 0.0, 330)
+  IRF1     None                   None (low coverage, no threshold)
+  CYP1A1   None                   None (low coverage, no threshold)
+  NLRC5    None                   None (low coverage, no threshold)
+
+TEST A activating arm: rho>0.25 -> ['AHR', 'STAT1', 'TAP1', 'IRF9'] => SURVIVES
+
+TEST B: 200 random GOCC_NUCLEUS proteins vs MVP (residualised)
+  nuclear background rho: mean -0.073  5th pct -0.302  median -0.085
+  EZH2 residualised rho -0.256 sits at the 11.5th percentile of that background
+  PRC2 partners: EED (-0.18, 0.001, 330)  SUZ12 (-0.26, 0.0, 330)
+TEST B verdict: COMPARTMENT ARTEFACT
+
+VERDICT: UNINFORMATIVE (gate failed)

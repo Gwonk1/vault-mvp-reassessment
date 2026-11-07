@@ -1559,3 +1559,84 @@ enzyme, in an instrument that happily assigns PARP1 133 partners and ANXA2 27, i
 a **sealed compartment**. That is consistent with §12's geometry — a wall that admits nothing larger
 than water radially — and with the absence of any broad neighbourhood in five instruments. The vault may
 have no neighbourhood because it is a container, and containers do not have one.
+
+## 34. Argon's licensing model: UNINFORMATIVE on a mis-specified gate, with both predictions confirmed anyway
+
+`LICENSING_PREREGISTRATION.md`, deviation in `LICENSING_DEVIATIONS.md`. Tests argon's H2 (#103) — the
+only mechanism anyone has offered for #19, MVP at the 95th interferon percentile while blood and
+lymphocyte are the lowest lineages — against the N:C confound argon itself found.
+
+**Formal verdict: UNINFORMATIVE. The gate failed.** Argon's own specification required STAT1 to track
+TAP1 at Spearman rho > 0.6. After residualisation it is **0.369**.
+
+**The gate was never achievable, and that is my error not the data's.** STAT1-TAP1 is **0.42 on raw,
+unresidualised protein** — below the threshold before anything was removed. Argon proposed that gate for
+transcript-level data, where interferon-axis correlations are tighter; I applied it to proteomics without
+checking it was reachable. A correctly chosen control for this axis was sitting in the same matrix:
+**TAP1-TAP2 at 0.957** (an obligate heterodimer) and TAP1-B2M at 0.613. The antigen-presentation axis is
+perfectly coherent here. The gate simply asked the wrong pair.
+
+### 34a. What the numbers show, reported but not licensed
+
+| protein | raw rho vs MVP | residualised |
+|---|---|---|
+| B2M | +0.325 | **+0.426** |
+| TAP1 | +0.423 | **+0.380** |
+| TAP2 | +0.428 | **+0.359** |
+| STAT1 | +0.452 | **+0.351** |
+| IRF9 | +0.288 | **+0.351** |
+| AHR | +0.465 | +0.279 |
+| STAT2 | +0.317 | +0.183 |
+| SP1 | −0.458 | −0.168 |
+| **ARNT** | −0.191 | **−0.021** |
+| EZH2 | −0.498 | −0.256 |
+| EED | −0.332 | −0.180 |
+| SUZ12 | −0.360 | −0.260 |
+
+**Both registered predictions were confirmed.**
+
+**The interferon arm is robust to the confound.** STAT1, IRF9, TAP1, TAP2 and B2M all sit at +0.35 to
++0.43 after residualisation, and B2M and IRF9 *strengthen*. This is the expected behaviour of a genuinely
+interferon-inducible gene and it is independent of compartment.
+
+**The AHR arm is weak and has an internal problem.** AHR drops from +0.465 to +0.279, and **ARNT — AHR's
+obligate dimerisation partner — goes to −0.021.** If AHR were acting as a transcription factor on MVP,
+ARNT should track with it. It does not. That is a specific argument against the AHR limb that we did not
+register and are reporting because it cuts against the hypothesis.
+
+### 34b. The EZH2 limb is a compartment artefact, as predicted before testing
+
+The registration stated the reason in advance: the N:C proxy is *cytosolic minus nuclear*, MVP is
+cytoplasmic and EZH2 is nuclear, so the two anti-correlate through it by construction.
+
+Argon's reported **−0.756** becomes **−0.256** after residualisation. Against 200 random
+`GOCC_NUCLEAR_BODY` proteins, whose residualised correlations with MVP have mean −0.073 and 5th
+percentile −0.302, **EZH2 sits at the 11.5th percentile — inside the bulk of the nuclear distribution,
+not below it.** Its PRC2 partners behave identically (EED −0.180, SUZ12 −0.260).
+
+**EZH2 is unremarkable among nuclear proteins.** There is no EZH2-specific silencing signal here, only
+the compartment effect.
+
+### 34c. Status of #103
+
+Not struck, because the kill condition required the activating arm to fail *and* EZH2 to be an artefact,
+and only the second happened. Not supported either, because the gate failed. **#103 remains open with
+its evidence rebalanced:** the interferon/antigen-presentation limb has real correlational support that
+survives the confound, the EZH2/PRC2 limb has none, and the AHR limb is weak and contradicted by its own
+dimerisation partner.
+
+What would decide it is the perturbation arm argon specified and we cannot reach from here: promoter
+H3K27me3 and methylation at the MVP TSS across lineages, MVP response to EZH2 inhibition, and MVP
+response to AHR antagonism. Those need GEO and ENCODE data not held locally.
+
+### 34d. Third gate-design error of the session
+
+This is a pattern worth naming. §29's EMT control failed because I required CDH1 at |r| >= 0.3 from an
+asymmetric signature where that is not expected. §32's TurboID test was voided because I took a
+prerequisite argon stated plainly and made it the primary test instead of a gate. §34 failed because I
+adopted a threshold specified for transcript data and applied it to protein without checking it was
+reachable — when a better control for the same axis, TAP1-TAP2 at 0.957, was in the same file.
+
+**Gates have to be chosen from the data's own achievable range, not from the hypothesis or from
+memory.** Three tests this session returned no answer for that reason, which is a larger toll than any
+single wrong result.
