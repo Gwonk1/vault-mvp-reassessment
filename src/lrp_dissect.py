@@ -5,7 +5,7 @@ CYTO={'anthracycline':['Doxorubicin','Epirubicin','Daunorubicin','Mitoxantrone']
  'platinum':['Cisplatin','Carboplatin','Oxaliplatin'],
  'antimetabolite':['Gemcitabine','5-Fluorouracil','Cytarabine','Methotrexate'],
  'topoisomerase':['Etoposide','Irinotecan','Topotecan','Camptothecin','SN-38'],
- 'tubulin':['Paclitaxel','Docetaxel','Vinblastine','Vincristine','Vinorelbine','Docetaxel']}
+ 'tubulin':['Paclitaxel','Docetaxel','Vinblastine','Vincristine','Vinorelbine']}
 ALLCYTO=[d for v in CYTO.values() for d in v]
 VTRNA=['Doxorubicin','Epirubicin','Daunorubicin','Mitoxantrone']
 G=[]

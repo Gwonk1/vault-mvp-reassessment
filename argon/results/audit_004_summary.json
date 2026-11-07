@@ -1,0 +1,107 @@
+{
+  "re": "004",
+  "timestamp": "2026-11-07T01:31:00-05:00",
+  "s17_lrp_audit": {
+    "docetaxel_duplicate_bug": {
+      "reported_in_results_md": "8 of 19 cytotoxics at q<0.05",
+      "deduplicated_unique_drugs": 18,
+      "deduplicated_sig_q05": 7,
+      "cause": "src/lrp_dissect.py line 8 lists Docetaxel twice in CYTO['tubulin']"
+    },
+    "unmatched_sample_mediation_bug": {
+      "non_null_counts_in_292_shared_lines": {
+        "MVP": 292,
+        "ABCB1": 193,
+        "ABCC1": 292,
+        "DOUBLING_TIME": 191,
+        "prolif_protein": 292,
+        "common_complete_cases_median": 131
+      },
+      "reported_unmatched_medians_pct": {
+        "ABCB1": 26.5,
+        "dt_plus_prolif": 44.5
+      },
+      "matched_common_sample_n131_medians_pct": {
+        "ABCB1": 25.0,
+        "dt_plus_prolif": 10.6
+      },
+      "matched_n2_dt_subcohort_n190_median_pct": {
+        "dt_plus_prolif": 18.7
+      },
+      "matched_n1_abcb1_subcohort_n192_no_dt_drop_medians_pct": {
+        "ABCB1": 24.9,
+        "prolif_protein_only": 10.1
+      },
+      "by_drug_class_pattern_on_common_sample": {
+        "efflux_substrates_ABCB1_vs_dtProlif_pct": {
+          "Vinorelbine": [30.3, 8.0],
+          "Vinblastine": [30.1, 2.8],
+          "Paclitaxel": [24.9, 5.0],
+          "Epirubicin": [19.2, 10.6]
+        },
+        "s_phase_dna_agents_ABCB1_vs_dtProlif_pct": {
+          "Methotrexate": [13.8, 69.6],
+          "Etoposide": [25.0, 61.5],
+          "Docetaxel": [35.1, 67.5]
+        }
+      },
+      "verdict": "Division rate beating ABCB1 (44% vs 27%) DOES NOT HOLD on matched samples — it was an artifact of dividing b2(n=190) by b0(n=290). On common lines (n=131), ABCB1 beats dt+prolif overall (25.0% vs 10.6%) and wins 4/4 vinca/taxane/anthracycline efflux drugs, while division rate dominates S-phase/topoII agents (MTX 70%, etoposide 62%). Combined passenger conclusion (#21) still holds."
+    }
+  },
+  "s19_turnover_audit": {
+    "cell_types_correction": "MOESM4 & MOESM5 contain 4 non-dividing primary human cell types (B cells, NK cells, Hepatocytes, Monocytes) + 1 mouse cell type (Mouse Neurons, where human-symbol MVP/PARP4/TEP1 are NaN), not 5 primary human cell types. Because all 4 human cell types are non-dividing, half-lives reflect pure proteolysis WITHOUT cell-division dilution.",
+    "detectability_abundance_bias": {
+      "spearman_n_meas_vs_median_hl": 0.370,
+      "p_value": 2.17e-284,
+      "n_proteins": 8804,
+      "vault_n_meas_human_replicates": {
+        "MVP": 8,
+        "PARP4": 8,
+        "TEP1": 6,
+        "ANXA2": 10,
+        "S100A10": 5
+      }
+    },
+    "per_cell_type_mean_hl_hours": {
+      "Bcells": {"MVP": 55.9, "TEP1": 33.5, "PARP4": 16.0},
+      "NK_cells": {"MVP": 310.3, "TEP1": 100.6, "PARP4": 38.2},
+      "Monocytes": {"MVP": 77.0, "TEP1": 47.5, "PARP4": 26.0},
+      "Hepatocytes": {"MVP": 29.4, "TEP1": 25.9, "PARP4": 19.4}
+    },
+    "triplet_spread_unmatched_vs_detectability_matched_pct": {
+      "spread_h": 44.20,
+      "unmatched_pct": 29.54,
+      "detectability_matched_pct": 26.81
+    },
+    "verdict": "PARP4 < TEP1 < MVP holds in 4/4 human cell types (8/8 replicates for MVP and PARP4), so abundance bias does NOT create the 3x gap (1.5x in hepatocytes to 8.1x in NK cells)."
+  },
+  "s15_crossspecies_orthology_audit": {
+    "argon_self_correction_on_ACTR3": "Claude is right on P42528 (ARP3_DICDI / GN=ARPC, log2FC = -0.588): Argon previously misread O96624 (ARPC3_DICDI / GN=ARCC, log2FC = +1.387) as Arp3/ACTR3 due to Dictyostelium's ARPC vs ARCC naming.",
+    "paralog_cloning_in_32_of_100": {
+      "human_hits": 32,
+      "distinct_dicty_proteins": 27,
+      "cloned_examples": {
+        "P24639_AnnexinA7": ["ANXA1", "ANXA2", "ANXA4", "ANXA7", "ANXA11"],
+        "Q75JH9_Fimbrin": ["PLS1", "PLS3"]
+      }
+    },
+    "min_q_winners_curse_base_rate_inflation": {
+      "raw_dicty_proximal_pct": 19.4,
+      "claude_min_q_human_projected_pct": 23.0
+    }
+  },
+  "s16_coessentiality_pc_whitening_audit": {
+    "pc30_whitened_CAV1_ranks": {"CAV2": 2, "CAVIN1": 640, "EHD2": 15788},
+    "pc50_whitened_MVP_max_r": 0.130,
+    "verdict": "Argon's H2a gate genuinely fails even after 10/30/50-PC Wainberg whitening; moreover, PC-whitening collapses MVP's max genome-wide r from 0.205 to 0.130, confirming the 2,886 raw q<0.05 hits were screen-PC artifacts."
+  },
+  "s21_s22_tissue_audit": {
+    "literature_agreement": "Izquierdo et al. (Am J Pathol 1996, PMID: 8623910) monoclonal LRP-56 IHC survey explicitly identified adrenal cortex, GI tract epithelium, and bronchial epithelium as the highest-MVP normal human tissues. Bulk lung nTPM (#5) is diluted by ~70% alveolar endothelium/AT1 parenchyma.",
+    "ig_segment_removal_check": {
+      "nad_in_top200_no_ig_tr": 2,
+      "nad_p_no_ig_tr": 0.0324,
+      "non_ig_top_partners_pearson": ["TNFRSF1A", "BCL3", "GSDMD", "NFKB2", "TCIRG1", "TNFRSF10B", "CLIC1"],
+      "core_ranks_spearman_of_15469": {"S100A10": 34, "PARP4": 102, "ANXA2": 431, "TEP1": 510}
+    }
+  }
+}

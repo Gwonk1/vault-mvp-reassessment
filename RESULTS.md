@@ -751,3 +751,38 @@ barrier role from barrier tissue composition.
 n = 51 tissues is small and highly structured; this design is dominated by tissue specificity. A null
 says the NAD link does not appear at tissue resolution — the ligand evidence in §12 is structural and
 stands on its own.
+
+## 17-CORRECTED. The LRP dissection, with my own error fixed
+
+**An external audit caught a real reversal in §17 and I verified it on my own data.**
+
+**The bug.** `src/lrp_mediate.py` computed `1 - beta_adjusted/beta_alone` where the two betas came from
+*different subcohorts*: MVP is measured in all 292 lines, but ABCB1 protein is missing in 99 and
+DOUBLING_TIME in 101 different lines. Dividing a coefficient fitted on n=190 by one fitted on n=290
+inflated the apparent absorption. A second bug: `CYTO['tubulin']` listed `'Docetaxel'` twice, so the
+headline was **7 of 18** unique cytotoxics at q<0.05, not 8 of 19.
+
+**Re-run on 132 complete-case lines, identical samples for every model:**
+
+| Drug | ABCB1 absorbs | Division rate absorbs |
+|---|---|---|
+| Vinorelbine | **30.3%** | 8.0% |
+| Vinblastine | **30.1%** | 2.8% |
+| Paclitaxel | **24.9%** | 5.0% |
+| Epirubicin | **19.2%** | 10.6% |
+| Docetaxel | 35.1% | **67.5%** |
+| Etoposide | 25.0% | **61.5%** |
+| Methotrexate | 13.8% | **69.6%** |
+| **Median** | **25.0%** | **10.6%** |
+
+**The ordering reverses: ABCB1 beats division rate, not the other way round.** My published claim of
+"44% vs 27%" was an artefact of mismatched sample sets.
+
+**And the corrected result is sharper than the wrong one.** The split is mechanistically clean by drug
+class: **ABCB1 dominates every efflux substrate** (the vincas, paclitaxel, epirubicin) while **division
+rate dominates the S-phase and DNA-synthesis agents** (methotrexate, etoposide, docetaxel). That is
+exactly what the two mechanisms predict, and my aggregated median had hidden it.
+
+**What survives unchanged:** Models A (ABCC1/chr16p) and C (vault RNA drug binding) are still dead —
+ABCC1 failed its gate, and mitoxantrone remains the least-associated drug. MVP is still a passenger, not
+a pump. The conclusion for #21 stands; only the ranking of the two passenger mechanisms changes.
