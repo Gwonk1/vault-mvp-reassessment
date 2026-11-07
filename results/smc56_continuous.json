@@ -1,0 +1,130 @@
+{
+ "family_size": 1849,
+ "gate_core": {
+  "mean": 7.515988888888889,
+  "z": 6.747816022697483,
+  "q": 1.387555091932912e-08
+ },
+ "gate_pass": true,
+ "smc56": {
+  "n": 6,
+  "mean": 3.9763,
+  "null": 0.0257,
+  "sd": 0.7897,
+  "z": 5.003,
+  "refined": true,
+  "q": 0.0002609167393184525
+ },
+ "smc56_rank": 2,
+ "top12": {
+  "GOCC_SUMO_LIGASE_COMPLEX": {
+   "n": 6,
+   "mean": 3.9763,
+   "null": 0.0226,
+   "sd": 0.7584,
+   "z": 5.213,
+   "refined": true,
+   "q": 0.0001717821737055922
+  },
+  "GOCC_SMC5_SMC6_COMPLEX": {
+   "n": 6,
+   "mean": 3.9763,
+   "null": 0.0257,
+   "sd": 0.7897,
+   "z": 5.003,
+   "refined": true,
+   "q": 0.0002609167393184525
+  },
+  "GOBP_MITOTIC_RECOMBINATION": {
+   "n": 4,
+   "mean": 4.3145,
+   "null": -0.2203,
+   "sd": 0.934,
+   "z": 4.855,
+   "refined": true,
+   "q": 0.00037099181455257815
+  },
+  "GOBP_TELOMERE_MAINTENANCE_VIA_RECOMBINATION": {
+   "n": 4,
+   "mean": 4.3145,
+   "null": -0.2076,
+   "sd": 0.9687,
+   "z": 4.668,
+   "refined": true,
+   "q": 0.000702957212131493
+  },
+  "GOBP_CHROMATIN_LOOPING": {
+   "n": 7,
+   "mean": 3.3876,
+   "null": 0.062,
+   "sd": 0.7217,
+   "z": 4.608,
+   "refined": true,
+   "q": 0.0007517306668396872
+  },
+  "GOBP_NEGATIVE_REGULATION_BY_HOST_OF_VIRAL_GENOME_REPLICATION": {
+   "n": 3,
+   "mean": 3.9452,
+   "null": -0.2561,
+   "sd": 1.0082,
+   "z": 4.167,
+   "refined": true,
+   "q": 0.004755543220691557
+  },
+  "GOBP_NEGATIVE_REGULATION_BY_HOST_OF_VIRAL_PROCESS": {
+   "n": 4,
+   "mean": 2.9299,
+   "null": -0.3147,
+   "sd": 0.8891,
+   "z": 3.649,
+   "refined": true,
+   "q": 0.030423342465840424
+  },
+  "GOCC_INTERCHROMATIN_GRANULE": {
+   "n": 3,
+   "mean": 3.4321,
+   "null": -0.2385,
+   "sd": 0.9977,
+   "z": 3.679,
+   "refined": true,
+   "q": 0.030423342465840424
+  },
+  "GOBP_POSITIVE_REGULATION_OF_CHROMOSOME_SEGREGATION": {
+   "n": 4,
+   "mean": 2.8528,
+   "null": -0.2115,
+   "sd": 0.8828,
+   "z": 3.471,
+   "refined": true,
+   "q": 0.05326393751000002
+  },
+  "GOBP_NEGATIVE_REGULATION_OF_OSTEOBLAST_DIFFERENTIATION": {
+   "n": 3,
+   "mean": 3.5812,
+   "null": -0.1346,
+   "sd": 1.0963,
+   "z": 3.389,
+   "refined": true,
+   "q": 0.06485183571641957
+  },
+  "GOBP_PROSTANOID_METABOLIC_PROCESS": {
+   "n": 5,
+   "mean": 2.4104,
+   "null": -0.2926,
+   "sd": 0.8222,
+   "z": 3.288,
+   "refined": true,
+   "q": 0.08480340963775286
+  },
+  "GOBP_ICOSANOID_METABOLIC_PROCESS": {
+   "n": 6,
+   "mean": 2.1262,
+   "null": -0.2868,
+   "sd": 0.7505,
+   "z": 3.215,
+   "refined": true,
+   "q": 0.10049663400293164
+  }
+ },
+ "verdict": "SMC5/6 SURVIVES family correction on the continuous statistic (q=0.0003)"
+}

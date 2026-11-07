@@ -2797,3 +2797,81 @@ Claiming it now would be precisely the selective application #203 warns against 
 statistic where it helps and the old family correction where that helps. **The consistent move is to run
 the continuous statistic across all 4,527 small terms with the same correction**, which is registered
 separately in `SMC56_CONTINUOUS_PREREGISTRATION.md` before being run.
+
+## 50. SMC5/6: the normal approximation was doing the work, and then our own gate failed
+
+`SMC56_CONTINUOUS_PREREGISTRATION.md` plus the addendum written while the test was running and before
+any result was seen. **Registered verdict: UNINFORMATIVE.** We expected survival and did not get a
+verdict at all.
+
+### 50a. The addendum was right, by two orders of magnitude
+
+The normal approximation reported SMC5/6 at **q = 0.0003**, rank 2 of 1,849, which under the main
+pre-registration alone would have been a pass. The addendum refused that figure and required an
+empirical null from at least 200,000 matched draws. We ran 400,000:
+
+| | observed mean | raw count of null draws ≥ observed | empirical p | normal-approx p | discrepancy |
+|---|---|---|---|---|---|
+| vault core (n=3) | +7.516 | **2 of 400,000** | 7.50e-06 | 1.28e-11 | **586,825x** |
+| `GOCC_SMC5_SMC6_COMPLEX` (n=6) | +3.976 | **15 of 400,000** | 4.00e-05 | 3.02e-07 | **132x** |
+
+The underlying cause, quantified: the `WT_LFC` distribution has **skew −0.87 and excess kurtosis 6.00**,
+so the null of a small-*n* mean is not Gaussian — the empirical nulls carry positive skew (+0.45 at
+n = 3, +0.30 at n = 6). **A z of 5.0 is worth p ≈ 4e-05 here, not 3e-07.** Had we accepted the normal
+figure we would have published a result inflated 132-fold.
+
+### 50b. And then our own positive control failed
+
+The registered gate required the vault core at **q < 0.01**. On the empirical statistic:
+
+**q_core = 7.50e-06 × 1,849 = 0.0139.** The gate fails. **Per the registration the result is
+UNINFORMATIVE, whatever SMC5/6 did** — and what it did was q_empirical = **0.0370**, which would have
+cleared its own q < 0.05 bar.
+
+So the honest position is that **SMC5/6 is neither alive nor dead.** It passed its own bar in a test
+whose positive control did not pass, and a result whose gate failed is not a result. §45's kill no
+longer stands on a second statistic, but nothing replaces it.
+
+### 50c. Why the gate failed, and the sixth gate-design lesson
+
+Not because the vault core is weakly enriched — it is the bait plus its two subunits at mean +7.52 with
+**2 exceedances in 400,000 draws.** It failed because **a 3-protein set's empirical p is floored by the
+draw count.** With 400,000 draws the smallest achievable p is 2.5e-06 and the smallest achievable
+q_core is 0.0046, so q < 0.01 required **one or fewer exceedances out of 400,000.** We got two.
+
+Our house rule 8 reachability check was performed on the *normal* statistic, where the core's z = 6.75
+gave q = 1.4e-08 and a pass looked trivially reachable. On the statistic the addendum then mandated, the
+same gate sat **a factor of two above the test's resolution floor.**
+
+**Sixth gate-design lesson: a gate threshold must be checked against the resolution of the statistic
+that will decide it, not against the statistic you first wrote down.** Rule 8 told us to check that both
+outcomes were attainable; it did not tell us to re-check after changing the statistic, and changing the
+statistic is exactly what the addendum did.
+
+### 50d. What we are not going to do
+
+The core's empirical p rests on **2 events**, so its Poisson 95% interval is roughly 0.9e-06 to 27e-06,
+which puts **q_core anywhere in [0.0017, 0.050]** — straddling our threshold. Four million draws would
+tighten that estimate and, on the point estimate, would likely land near q ≈ 0.0093, just inside the
+gate.
+
+**We are not running them.** Increasing precision *because the gate failed*, and stopping when it
+passes, is fault #113 — iterating a method until it passes — and it is a standing house rule. Monte
+Carlo precision is a defensible thing to increase, but not in response to the answer. If this is to be
+resolved it requires a **new registration that fixes the draw count in advance**, and we are recording
+the UNINFORMATIVE verdict rather than buying a pass with compute.
+
+### 50e. One more thing to be honest about
+
+The top of that 1,849-term family is coherent — SUMO ligase complex, SMC5/6 complex, mitotic
+recombination, telomere maintenance via recombination and chromatin looping occupy ranks 1 to 5. **That
+coherence is mostly redundancy, not corroboration.** All five annotations describe the same four to six
+proteins; it is one complex appearing under its aliases and its functions, which is a different thing
+from §49a's ribosomal family, where eight terms drew on 95 to 261 distinct detected proteins.
+
+Also recorded: this family has **1,849 terms against §45's 4,527**, because §45 used a <10-member cut
+with no floor and we excluded the **2,678 terms with 1-2 members** as not estimable. We flagged that
+difference in the registration before running. It makes this correction *less* stringent than §45's by a
+factor of 2.4 — and even so, the family-size difference does not explain the reversal, since
+q = 0.0370 × 2.4 = 0.089 would still have beaten q = 0.4199. **The statistic, not the family, is what
+changed.**

@@ -1,0 +1,24 @@
+universe 1205 | WT_LFC skew -0.87 excess kurtosis 6.00
+  so the null of a small-n mean is NOT Gaussian - the addendum concern, quantified
+
+GATE vault core (MVP/PARP4/TEP1):
+  n=3  observed mean = +7.5160
+  empirical null: mean +0.0309 sd 1.1222 skew +0.45 excess kurt +1.72
+  RAW COUNT of null draws >= observed: 2 of 400000
+  empirical one-sided p = 7.500e-06   (resolution limit 2.50e-06)
+  normal-approximation p = 1.278e-11  from z = 6.670
+  => empirical is 586,825x LESS extreme than the normal approximation
+
+GOCC_SMC5_SMC6_COMPLEX:
+  n=6  observed mean = +3.9763
+  empirical null: mean +0.0242 sd 0.7920 skew +0.30 excess kurt +0.83
+  RAW COUNT of null draws >= observed: 15 of 400000
+  empirical one-sided p = 4.000e-05   (resolution limit 2.50e-06)
+  normal-approximation p = 3.022e-07  from z = 4.990
+  => empirical is 132x LESS extreme than the normal approximation
+
+BH over the 1849-term family, SMC5/6 at rank 2:
+  q_empirical = 0.0370   (normal-approximation q was 0.0003)
+  vault-core gate q_empirical = 1.387e-02 -> gate q<0.01: False
+
+VERDICT: UNINFORMATIVE (gate failed on the empirical statistic)

@@ -1,2 +1,24 @@
 family: 1849 terms with 3-9 members in the universe
 (section 45's family used a <10 cut with no floor: 2678 terms with 1-2 members are excluded here)
+
+GATE vault core (MVP/PARP4/TEP1): mean +7.516 null +0.047 sd 1.107 z 6.75
+  BH-equivalent q (best-rank bound) = 1.388e-08 -> q<0.01: True
+
+SMC5/6: {'n': 6, 'mean': 3.9763, 'null': 0.0257, 'sd': 0.7897, 'z': 5.003, 'refined': True, 'q': 0.0002609167393184525}
+  rank 2 of 1849 in the family by q
+
+top 12 of the family by q:
+  GOCC_SUMO_LIGASE_COMPLEX                               n=6   mean=+3.976 z=+5.21 q=0.0002
+  GOCC_SMC5_SMC6_COMPLEX                                 n=6   mean=+3.976 z=+5.00 q=0.0003
+  GOBP_MITOTIC_RECOMBINATION                             n=4   mean=+4.314 z=+4.86 q=0.0004
+  GOBP_TELOMERE_MAINTENANCE_VIA_RECOMBINATION            n=4   mean=+4.314 z=+4.67 q=0.0007
+  GOBP_CHROMATIN_LOOPING                                 n=7   mean=+3.388 z=+4.61 q=0.0008
+  GOBP_NEGATIVE_REGULATION_BY_HOST_OF_VIRAL_GENOME_REP   n=3   mean=+3.945 z=+4.17 q=0.0048
+  GOBP_NEGATIVE_REGULATION_BY_HOST_OF_VIRAL_PROCESS      n=4   mean=+2.930 z=+3.65 q=0.0304
+  GOCC_INTERCHROMATIN_GRANULE                            n=3   mean=+3.432 z=+3.68 q=0.0304
+  GOBP_POSITIVE_REGULATION_OF_CHROMOSOME_SEGREGATION     n=4   mean=+2.853 z=+3.47 q=0.0533
+  GOBP_NEGATIVE_REGULATION_OF_OSTEOBLAST_DIFFERENTIATI   n=3   mean=+3.581 z=+3.39 q=0.0649
+  GOBP_PROSTANOID_METABOLIC_PROCESS                      n=5   mean=+2.410 z=+3.29 q=0.0848
+  GOBP_ICOSANOID_METABOLIC_PROCESS                       n=6   mean=+2.126 z=+3.21 q=0.1005
+
+VERDICT: SMC5/6 SURVIVES family correction on the continuous statistic (q=0.0003)

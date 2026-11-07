@@ -78,3 +78,24 @@ does the opposite: it launders a foregone conclusion as a checked one. We built 
 And when a correction arrives in the direction you wanted, **apply it to every claim it touches,
 including the ones you would rather keep.** Applying a rule in one direction only is the same error as
 having no rule, and it is harder to see because each individual step looks principled.
+
+### 9. If you change the statistic, re-run the reachability check
+
+Learned by breaking it within hours of writing rule 8 (#218).
+
+Rule 8 says check that every registered outcome is attainable before committing. We did that — on the
+normal approximation, where the positive control's z of 6.75 gave q = 1.4e-08 and a pass looked
+trivially reachable. An addendum then replaced that statistic with an empirical null, correctly, and
+**nobody re-ran the check.** On the new statistic the same gate sat a factor of two above the test's
+resolution floor: a 3-protein set's empirical p is bounded below by the draw count, so q < 0.01 demanded
+one or fewer exceedances in 400,000 draws. We got two, the control failed, and a test we had every
+reason to believe in returned no verdict at all.
+
+**A reachability check is a property of the statistic, not of the registration.** Change the statistic —
+parametric to empirical, count to mean, one threshold to another — and the check is void until repeated.
+
+**And when a gate fails narrowly, do not buy a pass with compute.** Our control's p rested on two
+events, so more draws would have tightened a Poisson-limited estimate and probably landed just inside
+the gate. That is still fault #113: iterating a method until it passes. Monte Carlo precision is a fine
+thing to increase, but never in response to the answer. Fix the draw count in a new registration, or
+record the uninformative verdict and move on.
