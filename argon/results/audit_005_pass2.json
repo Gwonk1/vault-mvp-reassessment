@@ -1,0 +1,879 @@
+{
+  "lrp_full_18": {
+    "ordered_by_rho": [
+      {
+        "rank": 1,
+        "drug": "Vinorelbine",
+        "cls": "tubulin",
+        "rho": 0.2488,
+        "p": 2e-05,
+        "q_19": 0.0003,
+        "q_18": 0.0003,
+        "vtrna": false
+      },
+      {
+        "rank": 2,
+        "drug": "Vinblastine",
+        "cls": "tubulin",
+        "rho": 0.2195,
+        "p": 0.00016,
+        "q_19": 0.0015,
+        "q_18": 0.0014,
+        "vtrna": false
+      },
+      {
+        "rank": 3,
+        "drug": "Paclitaxel",
+        "cls": "tubulin",
+        "rho": 0.1843,
+        "p": 0.00159,
+        "q_19": 0.0101,
+        "q_18": 0.0095,
+        "vtrna": false
+      },
+      {
+        "rank": 4,
+        "drug": "Methotrexate",
+        "cls": "antimetabolite",
+        "rho": 0.1714,
+        "p": 0.00336,
+        "q_19": 0.016,
+        "q_18": 0.0151,
+        "vtrna": false
+      },
+      {
+        "rank": 5,
+        "drug": "Docetaxel",
+        "cls": "tubulin",
+        "rho": 0.1575,
+        "p": 0.007,
+        "q_19": 0.0222,
+        "q_18": 0.0252,
+        "vtrna": false
+      },
+      {
+        "rank": 6,
+        "drug": "Etoposide",
+        "cls": "topoisomerase",
+        "rho": 0.1466,
+        "p": 0.01534,
+        "q_19": 0.039,
+        "q_18": 0.0422,
+        "vtrna": false
+      },
+      {
+        "rank": 7,
+        "drug": "Epirubicin",
+        "cls": "anthracycline",
+        "rho": 0.1411,
+        "p": 0.01641,
+        "q_19": 0.039,
+        "q_18": 0.0422,
+        "vtrna": true
+      },
+      {
+        "rank": 8,
+        "drug": "SN-38",
+        "cls": "topoisomerase",
+        "rho": 0.1079,
+        "p": 0.06553,
+        "q_19": 0.1383,
+        "q_18": 0.1474,
+        "vtrna": false
+      },
+      {
+        "rank": 9,
+        "drug": "Doxorubicin",
+        "cls": "anthracycline",
+        "rho": 0.0977,
+        "p": 0.09549,
+        "q_19": 0.1814,
+        "q_18": 0.191,
+        "vtrna": true
+      },
+      {
+        "rank": 10,
+        "drug": "Irinotecan",
+        "cls": "topoisomerase",
+        "rho": 0.0893,
+        "p": 0.12859,
+        "q_19": 0.2221,
+        "q_18": 0.2315,
+        "vtrna": false
+      },
+      {
+        "rank": 11,
+        "drug": "Topotecan",
+        "cls": "topoisomerase",
+        "rho": 0.0768,
+        "p": 0.23889,
+        "q_19": 0.3492,
+        "q_18": 0.3583,
+        "vtrna": false
+      },
+      {
+        "rank": 12,
+        "drug": "Oxaliplatin",
+        "cls": "platinum",
+        "rho": 0.074,
+        "p": 0.20821,
+        "q_19": 0.3297,
+        "q_18": 0.3407,
+        "vtrna": false
+      },
+      {
+        "rank": 13,
+        "drug": "Mitoxantrone",
+        "cls": "anthracycline",
+        "rho": 0.0643,
+        "p": 0.32425,
+        "q_19": 0.4319,
+        "q_18": 0.4364,
+        "vtrna": true
+      },
+      {
+        "rank": 14,
+        "drug": "Camptothecin",
+        "cls": "topoisomerase",
+        "rho": 0.0542,
+        "p": 0.35657,
+        "q_19": 0.4319,
+        "q_18": 0.4364,
+        "vtrna": false
+      },
+      {
+        "rank": 15,
+        "drug": "5-Fluorouracil",
+        "cls": "antimetabolite",
+        "rho": 0.0448,
+        "p": 0.44653,
+        "q_19": 0.4991,
+        "q_18": 0.5023,
+        "vtrna": false
+      },
+      {
+        "rank": 16,
+        "drug": "Gemcitabine",
+        "cls": "antimetabolite",
+        "rho": 0.0166,
+        "p": 0.77769,
+        "q_19": 0.8209,
+        "q_18": 0.8234,
+        "vtrna": false
+      },
+      {
+        "rank": 17,
+        "drug": "Cytarabine",
+        "cls": "antimetabolite",
+        "rho": 0.0077,
+        "p": 0.89632,
+        "q_19": 0.8963,
+        "q_18": 0.8963,
+        "vtrna": false
+      },
+      {
+        "rank": 18,
+        "drug": "Cisplatin",
+        "cls": "platinum",
+        "rho": -0.0534,
+        "p": 0.36367,
+        "q_19": 0.4319,
+        "q_18": 0.4364,
+        "vtrna": false
+      }
+    ],
+    "vtrna_drugs": [
+      {
+        "drug": "Epirubicin",
+        "cls": "anthracycline",
+        "rho": 0.1410631540247712,
+        "p": 0.016408876698290397,
+        "n": 289,
+        "vtrna": true,
+        "q": 0.038971082158439696,
+        "q_18": 0.04219425436703245
+      },
+      {
+        "drug": "Doxorubicin",
+        "cls": "anthracycline",
+        "rho": 0.09774681796328247,
+        "p": 0.09548887595549245,
+        "n": 292,
+        "vtrna": true,
+        "q": 0.18142886431543565,
+        "q_18": 0.1909777519109849
+      },
+      {
+        "drug": "Mitoxantrone",
+        "cls": "anthracycline",
+        "rho": 0.06430575556592229,
+        "p": 0.3242503601677807,
+        "n": 237,
+        "vtrna": true,
+        "q": 0.43185847731524857,
+        "q_18": 0.43640435602383015
+      }
+    ]
+  },
+  "cyp3a4": {
+    "gate": true,
+    "verdict": "NO RELATION",
+    "results": [
+      {
+        "predictor": "NSUN2",
+        "target": "CYP3A4",
+        "partial_rho": -0.05150799968915423,
+        "p": 0.3257611481817488,
+        "n": 366
+      },
+      {
+        "predictor": "NSUN2",
+        "target": "CYP2E1",
+        "partial_rho": -0.125316490551329,
+        "p": 0.016453035281476312,
+        "n": 366
+      },
+      {
+        "predictor": "NSUN2",
+        "target": "CYP1A2",
+        "partial_rho": 0.020493424816628535,
+        "p": 0.6959729998699938,
+        "n": 366
+      },
+      {
+        "predictor": "NSUN2",
+        "target": "ALB",
+        "partial_rho": -0.04145740158641481,
+        "p": 0.42908768759845844,
+        "n": 366
+      },
+      {
+        "predictor": "MVP",
+        "target": "CYP3A4",
+        "partial_rho": -0.05321960947247393,
+        "p": 0.3099208887549799,
+        "n": 366
+      },
+      {
+        "predictor": "DICER1",
+        "target": "CYP3A4",
+        "partial_rho": -0.08969576888739857,
+        "p": 0.08660832613026284,
+        "n": 366
+      }
+    ]
+  },
+  "turnover": {
+    "gate_short": false,
+    "gate_long": true,
+    "verdict": "UNINFORMATIVE",
+    "core": {
+      "MVP": [
+        66.4,
+        58.6
+      ],
+      "PARP4": [
+        22.2,
+        9.8
+      ],
+      "TEP1": [
+        40.6,
+        32.9
+      ],
+      "ANXA2": [
+        82.3,
+        69.7
+      ],
+      "S100A10": [
+        68.3,
+        60.1
+      ]
+    },
+    "n": 8804,
+    "median_proteome_hl": 56.471000000000004,
+    "subunits": {
+      "values": {
+        "MVP": 66.35900000000001,
+        "PARP4": 22.16,
+        "TEP1": 40.564
+      },
+      "spread": 44.19900000000001,
+      "percentile_vs_random": 29.86,
+      "verdict": "NOT A UNIT BY TURNOVER"
+    }
+  },
+  "development": {
+    "per_organ": {
+      "Brain": {
+        "n": 53,
+        "stages": 22,
+        "genes": 15302,
+        "MVP": 94.8,
+        "TEP1": 23.1,
+        "PARP4": 17.0,
+        "LIN28A": null,
+        "LIN28B": 11.8,
+        "IGF2BP1": 0.0,
+        "MKI67": 0.5,
+        "TOP2A": 0.1,
+        "CCNB1": 9.2
+      },
+      "Cerebellum": {
+        "n": 58,
+        "stages": 20,
+        "genes": 15461,
+        "MVP": 95.2,
+        "TEP1": 78.9,
+        "PARP4": 5.8,
+        "LIN28A": null,
+        "LIN28B": 1.9,
+        "IGF2BP1": 0.3,
+        "MKI67": 0.6,
+        "TOP2A": 0.6,
+        "CCNB1": 3.3
+      },
+      "Heart": {
+        "n": 44,
+        "stages": 19,
+        "genes": 14587,
+        "MVP": 94.2,
+        "TEP1": 19.0,
+        "PARP4": 45.7,
+        "LIN28A": null,
+        "LIN28B": null,
+        "IGF2BP1": 0.4,
+        "MKI67": 8.0,
+        "TOP2A": 15.3,
+        "CCNB1": 4.5
+      },
+      "Kidney": {
+        "n": 36,
+        "stages": 18,
+        "genes": 15093,
+        "MVP": 94.8,
+        "TEP1": 36.6,
+        "PARP4": 58.8,
+        "LIN28A": null,
+        "LIN28B": 0.9,
+        "IGF2BP1": 0.0,
+        "MKI67": 4.0,
+        "TOP2A": 6.5,
+        "CCNB1": 3.2
+      },
+      "Liver": {
+        "n": 49,
+        "stages": 22,
+        "genes": 14401,
+        "MVP": 95.0,
+        "TEP1": 30.3,
+        "PARP4": 47.5,
+        "LIN28A": null,
+        "LIN28B": 0.5,
+        "IGF2BP1": 2.9,
+        "MKI67": 32.7,
+        "TOP2A": 22.2,
+        "CCNB1": 25.2
+      },
+      "Ovary": {
+        "n": 18,
+        "stages": 12,
+        "genes": 15144,
+        "MVP": 94.5,
+        "TEP1": 4.0,
+        "PARP4": 54.1,
+        "LIN28A": 57.6,
+        "LIN28B": 32.9,
+        "IGF2BP1": 18.4,
+        "MKI67": 12.1,
+        "TOP2A": 41.8,
+        "CCNB1": 68.3
+      },
+      "Testis": {
+        "n": 39,
+        "stages": 21,
+        "genes": 16333,
+        "MVP": 82.5,
+        "TEP1": 25.4,
+        "PARP4": 34.6,
+        "LIN28A": 55.6,
+        "LIN28B": 51.1,
+        "IGF2BP1": 0.5,
+        "MKI67": 7.5,
+        "TOP2A": 23.8,
+        "CCNB1": 2.7
+      }
+    },
+    "gate_pass": false,
+    "label": "UNINFORMATIVE",
+    "mvp_down": 0,
+    "mvp_up": 6
+  },
+  "tissue_coexpr": {
+    "gate": true,
+    "verdict": "NOT NAD-LINKED",
+    "nad_in_top200": 2,
+    "nad_p": 0.0314282771420643,
+    "go": [
+      {
+        "term": "GOCC_IMMUNOGLOBULIN_COMPLEX",
+        "k": 70,
+        "K": 143,
+        "p": 9.299654488447185e-98,
+        "q": 4.612628626269804e-95
+      },
+      {
+        "term": "GOBP_B_CELL_MEDIATED_IMMUNITY",
+        "k": 41,
+        "K": 181,
+        "p": 4.776012506856231e-40,
+        "q": 1.1844511017003454e-37
+      },
+      {
+        "term": "GOBP_ADAPTIVE_IMMUNE_RESPONSE_BASED_ON_SOMATIC_RECOMBINATION_OF_IMMUNE_RECEPTORS_BUILT_FROM_IMMUNOGLOBULIN_SUPERFAMILY_DOMAINS",
+        "k": 47,
+        "K": 338,
+        "p": 1.372623563256446e-35,
+        "q": 2.269404291250657e-33
+      },
+      {
+        "term": "GOBP_IMMUNOGLOBULIN_PRODUCTION",
+        "k": 37,
+        "K": 176,
+        "p": 7.730225574525526e-35,
+        "q": 9.585479712411652e-33
+      },
+      {
+        "term": "GOBP_LYMPHOCYTE_MEDIATED_IMMUNITY",
+        "k": 44,
+        "K": 321,
+        "p": 5.2792544521905125e-33,
+        "q": 4.970819356615213e-31
+      },
+      {
+        "term": "GOBP_PRODUCTION_OF_MOLECULAR_MEDIATOR_OF_IMMUNE_RESPONSE",
+        "k": 42,
+        "K": 283,
+        "p": 6.0130879313893705e-33,
+        "q": 4.970819356615213e-31
+      },
+      {
+        "term": "GOBP_LEUKOCYTE_MEDIATED_IMMUNITY",
+        "k": 44,
+        "K": 410,
+        "p": 2.073231171448395e-28,
+        "q": 1.4690323729120056e-26
+      },
+      {
+        "term": "GOCC_BLOOD_MICROPARTICLE",
+        "k": 22,
+        "K": 114,
+        "p": 3.991813907108031e-20,
+        "q": 2.474924622406979e-18
+      },
+      {
+        "term": "GOCC_IMMUNOGLOBULIN_COMPLEX_CIRCULATING",
+        "k": 7,
+        "K": 11,
+        "p": 1.5253983152974195e-11,
+        "q": 8.406639604305778e-10
+      },
+      {
+        "term": "GOBP_DEFENSE_RESPONSE_TO_BACTERIUM",
+        "k": 19,
+        "K": 223,
+        "p": 6.498617629533387e-11,
+        "q": 3.2233143442485597e-09
+      },
+      {
+        "term": "GOBP_HUMORAL_IMMUNE_RESPONSE",
+        "k": 18,
+        "K": 209,
+        "p": 1.7720903179956184e-10,
+        "q": 7.990516342962062e-09
+      },
+      {
+        "term": "GOCC_IGG_IMMUNOGLOBULIN_COMPLEX",
+        "k": 6,
+        "K": 11,
+        "p": 1.7143111703500331e-09,
+        "q": 7.08581950411347e-08
+      },
+      {
+        "term": "GOBP_ANTIMICROBIAL_HUMORAL_RESPONSE",
+        "k": 13,
+        "K": 118,
+        "p": 3.305531418994805e-09,
+        "q": 1.2611873721703257e-07
+      },
+      {
+        "term": "GOBP_HUMORAL_IMMUNE_RESPONSE_MEDIATED_BY_CIRCULATING_IMMUNOGLOBULIN",
+        "k": 9,
+        "K": 49,
+        "p": 9.574848185839438e-09,
+        "q": 3.392231928697401e-07
+      },
+      {
+        "term": "GOBP_COMPLEMENT_ACTIVATION_CLASSICAL_PATHWAY",
+        "k": 8,
+        "K": 36,
+        "p": 1.320818937770984e-08,
+        "q": 4.3675079542293876e-07
+      }
+    ]
+  },
+  "sc_kim_keys": {},
+  "corpus_lengths": {
+    "anthropic_l05.txt": 87511,
+    "osinski_2026_tir_vault.txt": 97514,
+    "lemouellic_2026_tep1_nadase.txt": 73781,
+    "hornebeck_2026_tetir.txt": 126795,
+    "musgrove_vaultrc5.txt": 71864,
+    "natcomms_supp_1.txt": 6643,
+    "lodwick_epmc.json": 9935,
+    "geissler_2026_natcomms.html": 86700,
+    "anthropic_supp.html": 5511,
+    "article1.txt": 24495,
+    "article2.txt": 21106,
+    "article3.txt": 10808,
+    "article4.txt": 15954,
+    "article5.txt": 13962
+  },
+  "corpus_search": {
+    "anthropic_l05.txt": {
+      "pocket_access_pore": {
+        "count": 42,
+        "samples": [
+          "Characterized mammalian vaults are built from 78 copies of the major vault protein (MVP), arranged as two half-shells that join at the waist6\u20138 to form a nanocapsule about 67 nm long and 40 nm wide, with a barrel-shaped wall and domed caps4,6,9. Each MVP chain comprises N-terminal repeat domains that stack to form the wall (wall repeats), a sh",
+          ". Negative stain EM of seven homologs showed vault-like particles, while the rest formed only rosettes (flower-like structures of opened vaults50), rings or aggregates indicative of half or malformed particles (Fig. 2e; SI). In contrast, an extract of cells carrying the empty vector, taken through the same procedure, gave a sparse grid with n",
+          "L05, Hmin, and Bc1. Cryo-EM micrographs confirmed that these particles closely resemble human vaults, with two halves joined at a waist and horizontal ridges along the body possibly corresponding to the wall repeats (SI). C0, L05 and Bc1 form more spherical structures, whereas Hmin forms lemon-shaped structures with tapered ends. Bc1 appeared "
+        ]
+      },
+      "cterm_tail_phospho": {
+        "count": 3,
+        "samples": [
+          "9). doi:10.1186/1471-2105-10-421 (63) J. Jumper et al., Highly accurate protein structure prediction with AlphaFold. Nature 596(7873), 583\u2013589 (2021). doi:10.1038/s41586-021-03819-2 (64) M. Mirdita et al., ColabFold: making protein folding accessible to all. Nature Methods 19(6), 679\u2013682 (2022). doi:10.1038/s41592-022-01488-1 (65) Y.",
+          " report (17 September 2026). https://www-cdn.anthropic.com/e96b5807039a88168733d9687afe41dfbbd5de13.pdf (82) P. Eastman et al., OpenMM 8: Molecular dynamics simulation with machine learning potentials. The Journal of Physical Chemistry B ",
+          "An image processing pipeline for electron cryo-tomography in RELION-5. FEBS Open Bio 14(11), 1788\u20131804 (2024). doi:10.1002/2211-5463.13873 (88) J. Zivanov et al., New tools for automated high-resolution cryo-EM structure determination in RELION-3. eLife 7, e42166 (2018). doi:10.7554/eLife.42166 "
+        ]
+      },
+      "tep1_full_length_cells": {
+        "count": 7,
+        "samples": [
+          "l shoulder domain, and a C-terminal cap helix and cap disk (Fig. 1a)7,10,11. Past work focused on homology searches starting from full-length MVP sequences as queries and found a handful of prokaryotic MVP homologs. The shoulder domain, also known as the SPFH domain, is shared with a broader family of proteins called SPFH that form membrane-bound ma",
+          "4(7780), 691\u2013695 (2019). doi:10.1038/s41586-019-1605-5 (30) A. G. Johnson et al., Bacterial gasdermins reveal an ancient mechanism of cell death. Science 375(6577), 221\u2013225 (2022). doi:10.1126/science.abj8432 (31) A. Bernheim et al., Prokaryotic viperins produce diverse antiviral molecules. Nature 589(7840), 120\u2013124 (2021). doi:10.1038/s41586-020",
+          " the 1,064 sequences without predicted structures, the number of repeats was inferred by sequence alignment to the closest of 293 full-length homologs with known counts. Phylogenetic analysis Representative MVP/MVP-like and SPFH outgroup sequences were aligned with MAFFT L-INS-i58, and gappy columns were removed (gap threshold 0.5). The tree"
+        ]
+      }
+    },
+    "osinski_2026_tir_vault.txt": {
+      "turnover_halflife": {
+        "count": 3,
+        "samples": [
+          " Baca, C.F., Majumder, P., Hickling, J.H., Patel, D.J., and Marraffini, L.A. (2025). Cat1 forms filament networks to degrade NAD(+) during the type III CRISPR-Cas 435 antiviral response. Science 388, eadv9045. 10.1126/science.adv9045. 15. Kibby, E.M., Conte, A.N., Burroughs, A.M., Nagy, T.A., Vargas, J.A., Whalen, L",
+          "41467-024-51738-3. 40. Loyo, C.L., and Grossman, A.D. (2025). A phage-encoded counter-defense inhibits an NAD-degrading anti-phage defense system. PLoS Genet 21, e1011551. 10.1371/journal.pgen.1011551. 41. Zhang, T., Lyu, Y., Beck, C.R., Iqbal, N., Barbosa, R., Ghanbarpour, A., and Laub, 530 ",
+          "stal structure of the TEP1TIR (895-1113) is shown as a cartoon representation and colored by B-factors at C\u03b1 atoms. Note the quality degradation towards the flexible regions of the protein around the active site. 885 See also Figure 5 45 bioRxiv preprint doi: https://doi"
+        ]
+      },
+      "pocket_access_pore": {
+        "count": 4,
+        "samples": [
+          "tecture, positioning TEP1 near the central axis at the shoulder while restricting 305 PARP4 to belts close to the shoulder and above the waist. The shoulder region of the vault concentrates the NADase activity of TEP1 and the ADP-ribosyltransferase activity of PARP4 near the MVP nucleotide-binding pocket. This spatial arrangement provides a ",
+          "e, O.B. (2025). The vault particle is enclosed by a C13- symmetric cap with a positively charged exterior. bioRxiv, 2025.2006.2006.658390. 10.1101/2025.06.06.658390. 54. Shi, Y., Zhang, W., Yang, Y., Murzin, A.G., Falcon, B., Kotecha, A., van Beers, M., Tarutani, A., Kametani",
+          "ult particles from a single tomogram. Segmentation was performed using Dragonfly with individual models trained for the vault 765 exterior (grey) and interior (magenta). (C) 5nm-thick central slices of reconstituted, MVP-only vault particles extracted from high contrast tomograms and aligned using PEET. (D-E) Central slice (5 nm, D) "
+        ]
+      },
+      "cterm_tail_phospho": {
+        "count": 2,
+        "samples": [
+          "23). Discovery of phage determinants that confer sensitivity to bacterial immune systems. Cell 186, 1863-1876 e1816. 10.1016/j.cell.2023.02.029. 18 bioRxiv preprint doi: https://doi.org/10.64898/2026.05.01.722283; this version posted May 5, 2026. The",
+          "ion of Apaf- 1/caspase-9 complex initiates an apoptotic protease cascade. Cell 91, 479-489. 10.1016/s0092-8674(00)80434-1. 540 44. Harrington, L., McPhail, T., Mar, V., Zhou, W., Oulton, R., Bass, M.B., Arruda, I., and Robinson, M.O. (1997). A mammalian telomerase-associated protein. Science "
+        ]
+      },
+      "tep1_full_length_cells": {
+        "count": 33,
+        "samples": [
+          "that includes active enzymes7. Enzymatically active TIR domains mediate immunity by either depleting NAD+ to trigger altruistic cell death or generating small-molecule signals that activate downstream defense pathways7,8. TIR domains catalyze diverse reactions that 55 utilize NAD+ as a substrate, including NAD+ hydrolysis9-18, cyclic ADP-ribose ",
+          "production of ADP-ribose derivatives that act as second messengers in bacterial21-24 and plant25-28 immunity. TIR activation requires oligomerization, which aligns multiple TIR domains in the correct orientation to form the NAD+ binding site10,11,16,19,29,30. 60 Here, we identify DUF4062 as a conserved family of TIR-like NADases. In bacteria, ",
+          " consistent with the modular 75 architecture of TIR-containing proteins, which often rely on accessory domains for signal sensing, oligomerization, and TIR activation7. DUF4062 is found in bacterial antiphage defense islands Prokaryotic DUF4062 homologs display a broad but patchy distribution and are found across 26 bacterial phyla where"
+        ]
+      }
+    },
+    "lemouellic_2026_tep1_nadase.txt": {
+      "turnover_halflife": {
+        "count": 12,
+        "samples": [
+          "the human TEP1 protein, a component of the 57 telomerase complex and vault ribonucleoproteins. 58 RESULTS 59 A novel NAD+-degrading effector domain in Avs proteins 60 We reasoned that novel immune effectors could be discovered by searching for variants of 61 defense systems that encode uncharacterized protein domains in place of known ",
+          "olomics analyses revealed an increase in ADP-ribose (ADPR) levels 30 minutes post- 103 infection (Fig. 1I). This suggests that DUF4062 degrades NAD+ into ADPR and nicotinamide, 104 similarly to TIR, SIRim and SEFIR domains in other defense systems7. 105 Phages encode NAD+ reconstitution pathways (NARP) to evade defense systems relying on 106 N",
+          "ns in other defense systems7. 105 Phages encode NAD+ reconstitution pathways (NARP) to evade defense systems relying on 106 NAD+ degradation such as type-I Thoeris, Dsr2 and Nehza12,29,30. Consistent with the NAD+- 107 depleting activity of PsAvs2, co-expression of the NARP1 pathway from phage Sp\u03b2L129 108 impaired PsAvs2-mediated defense (Fig."
+        ]
+      },
+      "pocket_access_pore": {
+        "count": 2,
+        "samples": [
+          "r for 30 s at 6 m/s. After centrifugation (10 371 min x 14,000 g), supernatants were filtered through 3 kDa Amicon filters (Merck Millipore, 372 UFC500396) (45 min x 14,000 g) and stored at -80\u00b0C until analysis. 373 LC-MS analyses were performed by the EMBL Metabolomics Facility as described before54. 374 Briefly, LC-MS/MS analysis was perfo",
+          " PCR & DNA 419 Cleanup Kit (NEB, T1130L) following manufacturer\u2019s instructions. Purified genomes were 420 sequenced by Oxford Nanopore sequencing (MicroSynth). 421 Toxicity assays 422 To test putative phage activators, overnight cultures of E. coli K-12 MG1655 \u0394RM coexpressing 423 PsAvs2, Vulcan or control RFP and corresponding activat"
+        ]
+      },
+      "cterm_tail_phospho": {
+        "count": 6,
+        "samples": [
+          "IR11 producing ADP- 36 ribose (ADPR) and nicotinamide, RES domains generating ADPR-1P and nicotinamide12, and 37 calcineurin-like phosphoesterase domains releasing nicotinamide mononucleotide and 38 adenosine monophosphate13. NAD+-depleting domains are found across diverse defense 39 systems such as Thoeris, CBASS, Argonautes and Metis7, further",
+          " analysis of an 67 Avs protein encoding a putative CMP hydrolase from Pseudomonas chlororaphis (PsAvs2; 68 Refseq protein WP_273864396.1) revealed that the effector domain matches the domain of 69 unknown function DUF4062 (Pfam PF13271) (Fig. 1A). To get insights into its function, we 70 predicted the structure of the PsAvs2 DUF4062 doma",
+          "ading domains involved in 277 bacterial immunity, which notably includes TIR8, SIRim9,10, SEFIR11, RES12 and calcineurin-like 278 phosphoesterases13. The functional convergence of independent protein domains towards a 279 NADase activity suggests that NAD+ depletion is a particularly efficient strategy for antiphage 280 defense. Nevertheless, th"
+        ]
+      },
+      "tep1_full_length_cells": {
+        "count": 15,
+        "samples": [
+          "efense systems are often made of several protein domains, such as 26 sensors which detect phage infection, and effectors which execute cell death or dormancy to 27 stop viral spread2. This architecture enables extensive domain swapping among families of 28 defense systems: for instance, many effector domains are shared across systems, and 29 conver",
+          "ins gathering C- 63 terminal repeats that sense specific viral components, a central STAND NTPase domain that 64 mediates protein oligomerization, and a variable effector domain located at the N-terminus23. bioRxiv preprint doi: https://doi.org/10.64898/2026.09.04.749371; this version posted September 7, 2026. The copyright holder for this ",
+          "imilarity with that of 93 PsAvs2 (Fig. S2B). Accordingly, co-expression of the Bas36 terminase large subunit with 94 PsAvs2 was toxic to E. coli (Fig. 1G), thereby suggesting that phage terminase is an activator 95 of PsAvs2. 96 Because DUF4062 is structurally similar to TIR domains and requires residue E108 for 97 defense, we teste"
+        ]
+      }
+    },
+    "hornebeck_2026_tetir.txt": {
+      "turnover_halflife": {
+        "count": 1,
+        "samples": [
+          "Liu D, Wang X. A metabolic cell death program downstream of SARM1 couples NAD(+) depletion to BAX activation and APAF1 degradation. Proc Natl Acad Sci U S A 122, e2522444122 (2025). 16. Hofmann K. Sensitive protein comparisons with profiles and hidden Markov models. "
+        ]
+      },
+      "pocket_access_pore": {
+        "count": 19,
+        "samples": [
+          "eric, arguing against oligomerization being required for formation of the active conformation. Substrate-induced opening therefore remained a possible explanation, although NAD\u207a was already present during crystallization of the inactive E1008A mutant without producing an apparently open active-",
+          " although NAD\u207a was already present during crystallization of the inactive E1008A mutant without producing an apparently open active-site conformation. We therefore asked whether the catalytic glutamate itself might influence the conformational state of the active-site region. To address this question, we performed mol",
+          "pocket occlusion. In contrast, reintroduction of E1008 resulted in repeated and extended periods in which the pocket adopted an open conformation. Although the RWG-containing loop exhibited comparable conformational flexibility (Supplementary Fig S4A) in the two simulations, it preferentially sampled the open conformation in t"
+        ]
+      },
+      "cterm_tail_phospho": {
+        "count": 1,
+        "samples": [
+          " 18, 19 N-glycosidic bonds between nitrogenous bases and phosphoribose . Moreover, these enzyme 14 families are structurall"
+        ]
+      },
+      "tep1_full_length_cells": {
+        "count": 59,
+        "samples": [
+          " are found in diverse immune signaling proteins and, in several systems, function as NAD+-cleaving enzymes causing or signaling cell death. In plants, TIR domains occur as effector domains in TNL immune receptors, where they are coupled to a central STAND ATPase and a C- terminal repeat domain. Here, we identify TeTIR (TEP1 extended",
+          " catalysis, including features distinct from canonical TIR NADases. Expression of isolated TEP1 TeTIR causes NAD+ depletion and cell death in a catalytic- glutamate-dependent manner. TeTIRs thus define a distinct family of animal TIR-like NADases embedded in NACHT-type STAND architectures. Introduction TIR (",
+          "ging from dimers and trimers to higher-order filament-like structures, thereby providing a signaling platform through regulated oligomerization. In this respect, TIR domains functionally resemble the death-fold domains (DD, death domain; DED, death effector domain; CARD, caspase recruitment domain; and PYD, pyrin domain), which li"
+        ]
+      }
+    },
+    "musgrove_vaultrc5.txt": {
+      "turnover_halflife": {
+        "count": 1,
+        "samples": [
+          "stics are directly 38 associated with the function of intact vaults in neurons is not known. 39 Here, using a targeted RNA degradation platform to knock down Vaultrc5 combined with 40 super resolution microscopy and RNA sequencing, we analysed the functional role of 41 Vaultrc5 in the regulation of vault trafficking and contents in"
+        ]
+      },
+      "pocket_access_pore": {
+        "count": 12,
+        "samples": [
+          " protein (MVP) is the main constituent and is vital for vault structure, with protein structure 20 studies implicating pH as an opening signal thanks to MVP\u2019s EF-hand motif (Paspalas et al., 21 2009; Poderycki et al., 2006; van Zon et al., 2002). Knockout studies have demonstrated 22 that vaults self-assemble completely from MVP, with",
+          "te (1 per image, n = 4) for analysis. The Otsu thresholding 37 algorithm for minimising internal variation was used to process each channel along this 38 neurite (e.g. Bassoon, and MVP separately), and converted to a \u2018mask\u2019. This mask was used 39 as a reference to determine the total staining in each channel. The masks from both 40 c",
+          "ssoon, and MVP separately), and converted to a \u2018mask\u2019. This mask was used 39 as a reference to determine the total staining in each channel. The masks from both 40 channels were combined to create an \u2018overlap mask\u2019, which was measured against each 41 channel to determine the amount of overlapping staining. Overlapping staining was divided "
+        ]
+      },
+      "lrp_chemoresistance": {
+        "count": 1,
+        "samples": [
+          "E., Holzmann, K., Elbling, L., Micksche, M., & Berger, W. (2006). Cellular functions 4 of vaults and their involvement in multidrug resistance. Curr Drug Targets, 7(8), 923- 5 934. https://doi.org/10.2174/138945006778019345 6 Steward, O., & Levy, W. B. (1982). Preferential localization of polyribosomes under the base 7"
+        ]
+      },
+      "cterm_tail_phospho": {
+        "count": 2,
+        "samples": [
+          "formed on a 39 RotoGeneQ (Qiagen) real-time PCR cycler with SensiFAST SYBR master mix (Bioline) and 40 appropriate primers. Phosphoglycerate kinase I was used as an internal control. The 41 threshold cycle for each experiment was chosen from the samples\u2019 linear range, and all 42 samples normalised to the internal control using the \u0394\u0394",
+          "licated in Vault opening (Lin et al., 2021; Querol-Audi et al., 2009). Vaultrc5 activating the 20 MAPK pathway could increase MVP\u2019s phosphorylation levels, providing another trigger for 21 Vault opening other than synaptic transmission. Fewer open Vaults combined with less 22 MAPK/ERK activation, leading to decreased synaptic plasticity (Blu"
+        ]
+      },
+      "tep1_full_length_cells": {
+        "count": 3,
+        "samples": [
+          "Addgene #12251). Plasmids were transfected per manufacturer\u2019s protocols 12 using Lipofectamine 3000 (Thermo Fisher Scientific) into HEK293T cells at 80% confluency 13 in culture medium: DMEM (Thermo Fisher Scientific #11965092), 1% GlutaMAX 14 (#35050061), and 1% Penicillin-Streptomycin (#15140122) (both Gibco). After four hours, 15 ",
+          "B. D., Resau, J., & MacKeigan, J. P. (2013). Cytokine receptor-like factor 1 44 (CRLF1) protects against 6-hydroxydopamine toxicity independent of the gp130/JAK 45 signaling pathway. PLoS One, 8(6), e66548. 46 https://doi.org/10.1371/journal.pone.0066548 47 Ma, K., Guo, L., Xu, A., Cui, S., & Wang, J. H. ",
+          " 17 induced type 2 immunity and secretory cell production in the small intestines of Ptk6- 18 /- male mice. Cell Death Dis, 15(10), 777. https://doi.org/10.1038/s41419-024-07149- 19 9 20 Wakatsuki, S., Takahashi, Y., Shibata, M., Adachi, N., Numakawa, T., Kunugi, H., & Araki, T. 21 (2021). Small"
+        ]
+      }
+    },
+    "lodwick_epmc.json": {
+      "pocket_access_pore": {
+        "count": 3,
+        "samples": [
+          "d\", \"availabilityCode\": \"S\", \"documentStyle\": \"doi\", \"site\": \"DOI\", \"url\": \"https://doi.org/10.1038/s41467-025-61981-x\"}, {\"availability\": \"Open access\", \"availabilityCode\": \"OA\", \"documentStyle\": \"html\", \"site\": \"Europe_PMC\", \"url\": \"https://europepmc.org/articles/PMC12280208\"}, {\"availability\": \"Open access\", \"availabilityCode\": \"OA\", \"documentStyle\": \"pdf\", \"",
+          "labilityCode\": \"OA\", \"documentStyle\": \"html\", \"site\": \"Europe_PMC\", \"url\": \"https://europepmc.org/articles/PMC12280208\"}, {\"availability\": \"Open access\", \"availabilityCode\": \"OA\", \"documentStyle\": \"pdf\", \"site\": \"Europe_PMC\", \"url\": \"https://europepmc.org/articles/PMC12280208?pdf=render\"}]}, \"commentCorrectionList\": {\"commentCorrection\": [{\"source\": \"MED\", \"id\":",
+          "38979142\", \"reference\": \"bioRxiv. 2024 Jun 27:2024.06.27.601040. doi: 10.1101/2024.06.27.601040.\", \"type\": \"Update of\", \"orderIn\": 1}]}, \"isOpenAccess\": \"Y\", \"inEPMC\": \"Y\", \"inPMC\": \"Y\", \"citedByCount\": 9, \"hasReferences\": \"Y\", \"hasTextMinedTerms\": \"Y\", \"hasDbCrossReferences\": \"Y\", \"dbCrossReferenceList\": {\"dbName\": [\"PDB\"]}, \"hasPDF\": \"Y\", \"hasBook\": \"N\", \"hasS"
+        ]
+      },
+      "tep1_full_length_cells": {
+        "count": 1,
+        "samples": [
+          "5\", \"pageInfo\": \"6724\", \"abstractText\": \"Vault is a massive ribonucleoprotein complex found across Eukaryota. The major vault protein (MVP) oligomerizes into an ovular cage, which contains several minor vault components (MVCs) and is thought to transport transiently bound \\\"cargo\\\" molecules. Vertebrate vaults house a poly (ADP-ribose) polymerase (known as PARP4 in "
+        ]
+      }
+    },
+    "geissler_2026_natcomms.html": {
+      "turnover_halflife": {
+        "count": 2,
+        "samples": [
+          "to autophagy. This would be in line with the finding that the vault directly interacts with the autophagy receptor NBR1 and is subsequently degraded by p62-mediated selective autophagy 46 . Future work is inarguably required to decipher the functional context of the vault\u2019s membrane association. Nonetheless, our study now provides distinct clues into which directi",
+          "kens, S. &amp; Wojcikiewicz, R. J. H. An endoplasmic reticulum (ER) membrane complex composed of SPFH1 and SPFH2 mediates the ER-associated degradation of inositol 1,4,5-trisphosphate receptors. J. Biol. Chem. 284 , 10433\u201310445 (2009). Article CAS PubMed PubMed Central Google Scholar Yan, L. et al. Erlin1/2 Complex is a Dynamic Scaffold for Membrane Protein Seques"
+        ]
+      },
+      "pocket_access_pore": {
+        "count": 17,
+        "samples": [
+          "alerts RSS feed nature nature communications articles article The vault associates with membranes in situ Download PDF Download PDF Article Open access Published: 21 April 2026 The vault associates with membranes in situ Katharina Gei\u00dfler ORCID: orcid.org/0009-0000-7875-7052 1 , 2 na1 , Jan Philipp Kreysing ORCID: orcid.org/0000-0002-4770-6313 1 , 2 na1 , Yuning",
+          " endoplasmic reticulum exit sites Article 29 September 2025 Visualizing the translation landscape in human cells at high resolution Article Open access 28 November 2025 Capturing eukaryotic ribosome dynamics in situ at high resolution Article 09 January 2025 Explore related subjects Discover the latest articles and news in related subjects. Biophysics Cryoelectr",
+          "l MVP expression levels in human cells indicate that the vault may be involved in cell-type-specific functions. Descriptions of the vault\u2019s opening mechanisms 20 , 21 , 22 and the hollow, container-like structure furthermore suggest a potential \u2018shuttling\u2019 or \u2018carrier\u2019 function. To the best of our knowledge, such an endogenous function has, however, not yet been"
+        ]
+      },
+      "lrp_chemoresistance": {
+        "count": 1,
+        "samples": [
+          "t in homeostatic conditions. However, vault overexpression promotes survival of cancer cells and constitutes a common phenotype observed in multidrug-resistant cancer cell lines 48 . Therefore, the vault\u2019s function may only become crucial under specific cellular conditions and is thus challenging to address in experimental model systems. In line with this notion, bot"
+        ]
+      },
+      "cterm_tail_phospho": {
+        "count": 1,
+        "samples": [
+          "ng StageTips. Nat. Protoc. 2 , 1896\u20131906 (2007). Article CAS PubMed Google Scholar Skowronek, P. et al. Rapid and In-Depth Coverage of the (Phospho-)Proteome With Deep Libraries and Optimal Window Design for dia-PASEF. Mol. Cell. Proteom. 21 , 100279 (2022). Article CAS Google Scholar Skowronek, P., Wallmann, G., Wahle, M., Willems, S. &amp; Mann, M. An accessible "
+        ]
+      },
+      "tep1_full_length_cells": {
+        "count": 3,
+        "samples": [
+          "cted peptides that were directly modified with biotin. For this, we generated homology models based on the human vault structure 31 for homooligomeric MVPA and MVPB and mapped the sites where TurboID auto-biotinylates the vault shell onto our homology models. As expected, biotinylated lysines on MVPA reside in the cap region (Fig. 5b ), proximal to the C-terminus wh",
+          "gged, was also biotinylated (Fig. 5b ). One may interpret these findings such that the D. discoideum vaults, at least in part, form a heterooligomeric assembly in which MVPA and MVPB laterally interact with each other. This result further underscores that vaults incorporate the ligase into the native particle structure. Fig. 5: Proximity labeling identifies ribosoma",
+          " structural features: The SPFH domain is followed by the alpha-helical domain, and both laterally assemble into giant higher homo- or heterooligomers reminiscent of \u2018half\u2019 cages 11 , 29 , 37 , 38 , 40 , 49 (Fig. 6c ). Fig. 6: Membrane binding mode of the vault in comparison with canonical SPFH family members. Full size image a Representation of the MVP monomer domai"
+        ]
+      }
+    },
+    "anthropic_supp.html": {
+      "tep1_full_length_cells": {
+        "count": 1,
+        "samples": [
+          "Immunology (19174) Microbiology (43476) Molecular Biology (18477) Neuroscience (95825) Paleontology (717) Pathology (3064) Pharmacology and Toxicology (5252) Physiology (8338) Plant Biology (16377) Scientific Communication and Education (2123) Synthetic Biology (4675) Systems Biology (10448) Zoology (2436)"
+        ]
+      }
+    },
+    "article1.txt": {
+      "turnover_halflife": {
+        "count": 1,
+        "samples": [
+          "e in those mice, but autophagic flux is not an obvious phenotype. It isn't something you see by looking at a mouse. LC3 conjugation and p62 turnover, existing line. Is there anti-MVP reactivity in SSA-positive sera, and does anti-La track with it? La and the vault proteins leave in the same fraction. One is an autoantigen, one apparently isn't. Existing sera could "
+        ]
+      },
+      "pocket_access_pore": {
+        "count": 11,
+        "samples": [
+          "el about three times the mass of a ribosome. Roughly 78 copies of one protein (major vault protein, MVP), stacked as two halves joined at a waist. Inside the caps sit telomerase-associated protein 1 (TEP1), a PARP-family enzyme (PARP4), and small untranslated vault RNAs. Everything about that description sounds important. The phenotype doesn't. Knock MVP out of",
+          "e inner membrane. The job is walling proteolysis off from the surrounding membrane. Hit that complex with an antibiotic and it pops into an open, nautilus-shaped conformation. A cage that unlatches under stress. Flotillin-1/2 builds a cone-shaped cage out of about 22 subunits in native membranes. Human stomatin builds 16-mer cages anchored by hydrophobic helice",
+          "ek et al. (ACS Nano 2014) showed MVP assembles co-translationally on polyribosomes, templated, not spontaneously from free folded subunits. Waist mutants produce continuous symmetric rolls that can't pinch off, which they read as trapped assembly intermediates. So \"self-assembling\" is out of this draft, and the viral-capsid analogy that leaned on it is out with i"
+        ]
+      },
+      "cterm_tail_phospho": {
+        "count": 1,
+        "samples": [
+          "eron data doesn't cooperate. MVP is an interferon-gamma inducible gene. STAT1 binds a site in the MVP promoter, and MVP then inhibits STAT1 phosphorylation. Tidy negative feedback. But in other systems MVP induces type I interferon through IRF7 and suppresses viral replication. MVP pushes one interferon arm up and the other down. Any claim that vaults mute the anti"
+        ]
+      },
+      "tep1_full_length_cells": {
+        "count": 5,
+        "samples": [
+          "rokaryotes do this constantly. Encapsulins house peroxidases. Bacterial microcompartments run CO2 fixation inside carboxysomes or fence off toxic aldehyde intermediates. Jumbo phages wrap their whole genome. And in Dictyostelium, vaults were caught with 80S ribosomes inside them. The inner wall. Seventy-eight to ninety-six identical ligand pockets facing one cav",
+          "ed this for me. Y RNAs bind Ro60's outer surface and block access of misfolded RNA to its central cavity. vtRNA1-1 binds p62 and blocks its oligomerization. In both TROVE systems the partner noncoding RNA is an inhibitory ligand, not a delivery tag. Whatever is wrong with the surveillance arm of the Ro60 analogy, this arm is untouched. So the vault's relationship t",
+          "ault's relationship to autophagy may not be transport at all. TEP1 holds vtRNA inside the barrel. Sequestered vtRNA can't reach p62, so p62 oligomerizes and selective autophagy runs. Release it, and free vtRNA1-1 brakes p62. The vault routes nothing anywhere. It sets the free concentration of a regulatory RNA, and p62 availability is the readout. That explains the "
+        ]
+      }
+    },
+    "article2.txt": {
+      "turnover_halflife": {
+        "count": 1,
+        "samples": [
+          " of vault RNA with purified vaults and resulted in a decrease in the levels and stability of the vault RNA. The RNA is not liberated. It is degraded. So a TEP1 knockout gives you less vault RNA overall, not more free vault RNA, and the prediction I attached to it runs backwards. A second constraint from the same literature, which I had also missed: only a small f"
+        ]
+      },
+      "pocket_access_pore": {
+        "count": 8,
+        "samples": [
+          "othesis: the barrel physically sequesters drug and moves it away from the nucleus. Thirty years on, nobody has shown the mechanism. The cap openings are described as passing small molecules and ions. There is no demonstrated regulated uptake. This is the version everybody cites and it is the least supported of the three. 3b. The RNA as a drug target (real, and ",
+          "ough calcineurin-NFATc1. Global and monocyte-specific knockouts give premature bone loss. The therapeutic direction runs the other way too: AAV-delivered MVP overexpression prevented bone loss in ovariectomized and LPS-injected mouse models. That is the only place I have found where more vault is the proposed treatment rather than the problem. Metabolism and v",
+          " Cargo capacity is now an engineering parameter rather than a fixed constraint. A release trigger. A single amino acid change near the cap opened the particle into a rosette. Controlled opening is the thing a delivery vehicle needs and the thing the field has never had. And the speculative one. The unassigned pocket density on the inner wall of every L05 chain"
+        ]
+      },
+      "lrp_chemoresistance": {
+        "count": 6,
+        "samples": [
+          "n study sitting next to it. It is suggestive. It is not causal, and MVP is one of several resistance proteins in the same tissue, alongside P-glycoprotein, MRP1, and BCRP, any of which could be doing the work. Part 3: Three different drug interactions that keep getting called one thing There are at least three separable mechanisms here, operating on different molecules,",
+          "nisms here, operating on different molecules, with different evidence behind them. The literature routinely collapses them into \"vaults and multidrug resistance,\" which is how a field goes thirty years without a mechanism. 3a. The particle as a sink (weakest evidence) The original hypothesis: the barrel physically sequesters drug and moves it away from the nucleus.",
+          "rybody cites and it is the least supported of the three. 3b. The RNA as a drug target (real, and strange) Vault RNAs bind drugs directly. Mitoxantrone resistance in osteosarcoma, glioblastoma, and leukemia has been attributed to direct binding of the drug to vtRNA1-1 and vtRNA1-2. The resistance mechanism there is not a pump and not a shell. It is a short noncoding R"
+        ]
+      },
+      "cterm_tail_phospho": {
+        "count": 1,
+        "samples": [
+          "d will mislead you. MVP is an interferon-gamma inducible gene: STAT1 binds a site in its promoter. MVP then turns around and inhibits STAT1 phosphorylation. So any inflamed tumor shows high MVP because interferon put it there. Correlating MVP expression against an interferon signature cannot tell you the direction of causation, and the literature contradicts itself"
+        ]
+      }
+    },
+    "article3.txt": {
+      "pocket_access_pore": {
+        "count": 1,
+        "samples": [
+          "when he and a postdoctoral researcher, Nancy Kedersha, kept seeing an object they couldn't identify. It was a hollow barrel, pinched at the waist, built out of dozens of copies of a single protein. It looked, as Rome later put it, like a vaulted cathedral ceiling. So they called it a vault. Forty years later, that is still its name, and we still do not know what"
+        ]
+      }
+    },
+    "article4.txt": {
+      "turnover_halflife": {
+        "count": 1,
+        "samples": [
+          " attaches, so free vault RNA should rise. The 2001 paper says the opposite. Losing TEP1 reduces the levels and stability of vault RNA. It's degraded, not liberated. My prediction ran backwards. And a constraint I had missed entirely: only a small fraction of total cellular vault RNA actually sediments with vault particles. Most of it is somewhere else, held up by"
+        ]
+      },
+      "pocket_access_pore": {
+        "count": 4,
+        "samples": [
+          " about half the diseases it might explain. I went and found out how the original experiment was done, and it turns out the question is more open than anyone thinks. Graham W. Syfert, November 5, 2026 Previously in this series: The vault as chassis The dual-capsid synapse Vaults in the clinic Standard disclaimers, which I mean: I'm a lawyer, not a biologist",
+          "Whether placenta is a high-vault tissue is a database lookup nobody has bothered to do. C9orf72 ALS and FTD. The central lesion is nuclear pore dysfunction plus toxic repeat RNA, against a hypothesis about aberrant RNA at the nuclear pore. Ataxia-telangiectasia. Weakest entry on the list. I include it because I proposed it, and because quietly dropping your ow",
+          "2 ALS and FTD. The central lesion is nuclear pore dysfunction plus toxic repeat RNA, against a hypothesis about aberrant RNA at the nuclear pore. Ataxia-telangiectasia. Weakest entry on the list. I include it because I proposed it, and because quietly dropping your own bad entries is how people end up believing their own case. The control Progeria. The nuclea"
+        ]
+      },
+      "tep1_full_length_cells": {
+        "count": 2,
+        "samples": [
+          " been done. What would settle it is not complicated and has never been published as far as I can find. Stress the cells with something genotoxic or a viral RNA mimic. Purify fast, using the ninety-minute method from the new structural work rather than days of sugar-gradient spinning that fragile cargo may not survive. Then sequence with modern small RNA methods ",
+          "high-vault tissue is a database lookup nobody has bothered to do. C9orf72 ALS and FTD. The central lesion is nuclear pore dysfunction plus toxic repeat RNA, against a hypothesis about aberrant RNA at the nuclear pore. Ataxia-telangiectasia. Weakest entry on the list. I include it because I proposed it, and because quietly dropping your own bad entries is how pe"
+        ]
+      }
+    },
+    "article5.txt": {
+      "turnover_halflife": {
+        "count": 3,
+        "samples": [
+          "ckout mice for this earlier today and I was wrong. Losing TEP1 reduces vault RNA levels and stability rather than liberating it. The RNA is degraded, not freed. MVP-null is the right genotype, because there the vault RNA has no barrel to sit in but TEP1 is intact. Step 1. MVP-null versus wild-type cells. Measure free versus particle-associated vault RNA by fracti",
+          "el or crosslinking. The buffer model says MVP-null gives more free vault RNA, therefore less p62 oligomer. Step 3. Autophagic flux. LC3-II turnover with and without bafilomycin, p62 degradation rate. Step 4. Aggregate clearance challenge. Puromycin or proteasome inhibition, then count inclusions. Step 5. Rescue. Re-express MVP and see if flux normalizes. Caveat ",
+          "VP-null gives more free vault RNA, therefore less p62 oligomer. Step 3. Autophagic flux. LC3-II turnover with and without bafilomycin, p62 degradation rate. Step 4. Aggregate clearance challenge. Puromycin or proteasome inhibition, then count inclusions. Step 5. Rescue. Re-express MVP and see if flux normalizes. Caveat that has to be designed around: only a sm"
+        ]
+      },
+      "pocket_access_pore": {
+        "count": 2,
+        "samples": [
+          "tress, with modern sensitivity and fast purification, mechanism four is dead and the field has definitively closed a question that has been open since 1986. Either outcome is publishable. That is what makes it the right experiment. 2. Does MVP dock on membranes like its family does Decides: whether the chassis model is right about what kind of object this is. ",
+          "X1-null, as the comparison. Predicted: progeria is refractory, TREX1-null responds. If MVP overexpression calms progeria inflammation, the pore-docking specificity of this whole model is wrong and I want that on the record in advance rather than explained away afterward. Corrections welcome. If any of these have already been done and I missed it, that is the s"
+        ]
+      },
+      "tep1_full_length_cells": {
+        "count": 4,
+        "samples": [
+          "tep 2. Jam the disposal chute. Bafilomycin A1, two hours, so anything headed for autophagy piles up instead of being recycled. Step 3. Genotoxic pulse. Four arms: vehicle; cisplatin or doxorubicin; UV-C or etoposide; transfected nuclear-targeted synthetic double-stranded RNA. Sixty to 120 minutes, short enough that the cells are not dying. Step 4. Lock the barr",
+          "ault RNAs and with the particle. You do not need the whole 290-kilodalton protein. Step 1. Express the TROVE plus vWA fragment rather than full-length TEP1. Step 2. Electrophoretic mobility shift against a panel: vault RNA as positive control, Y RNA, correctly folded 5S rRNA, and deliberately misfolded 5S precursor, which is Ro60's known substrate. Step 3. Competiti",
+          "-type cells. Measure free versus particle-associated vault RNA by fractionation, to confirm the premise rather than assume it. Step 2. p62 oligomerization assay. Native gel or crosslinking. The buffer model says MVP-null gives more free vault RNA, therefore less p62 oligomer. Step 3. Autophagic flux. LC3-II turnover with and without bafilomycin, p62 degradation ra"
+        ]
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@
 
 **Graham W. Syfert.** Analysis performed with Claude (Anthropic) and a second agent ("Argon") in an
 adversarial review loop. All hypotheses were registered in a public git history before the relevant data
-were read; every gate, deviation and failure is recorded in `LEDGER.md` (61 entries) and `RESULTS.md`
+were read; every gate, deviation and failure is recorded in `LEDGER.md` (63 entries) and `RESULTS.md`
 (24 sections). Correspondence welcome, including corrections.
 
 ---
@@ -22,9 +22,9 @@ and by proximity labelling in *Dictyostelium*, yet they share neither fitness co
 kinetics: PARP4 turns over threefold faster than MVP (22.2 h versus 66.4 h) in four of four non-dividing
 primary human cell types. We resolve the thirty-year LRP chemoresistance biomarker as a passenger
 phenomenon split between ABCB1-mediated efflux and slow division. We confirm, from two independent
-alignments, that the SPFH shoulder nucleotide pocket is the most conserved region of MVP, with four
-ADP-ribose-contacting residues invariant across 174 eukaryotes, and that this pocket is accessible only
-from the lumen. The emerging picture is a long-lived, sequence-constrained shell presenting a
+alignments, that the SPFH shoulder nucleotide pocket is the most conserved structural domain of MVP, with four
+ADP-ribose-contacting residues invariant across 174 eukaryotes, and that this pocket cannot be reached
+radially through the shell wall and must therefore be loaded from the lumen. The emerging picture is a long-lived, sequence-constrained shell presenting a
 dynamically occupied enzymatic face, dispensable for proliferation yet held under purifying selection.
 
 ---
@@ -147,19 +147,36 @@ active extraction of docked PARP4, and the structures place PARP4 at substoichio
 (roughly 8-20 copies per 78-mer), not as a continuous coat.
 This reconciles three otherwise discordant observations: co-abundance and co-localisation, discordant
 degradation kinetics, and the structural placement of PARP4 on the lumenal wall at repeats 3-4 - a patch
-which we find to be **less conserved than the protein average** (mean identity 0.708 against 0.737
-protein-wide mean), as a reversible docking site should be. It is not the least conserved region of the
-protein; repeat 7 and the C-terminal disk are lower.
+which we find to be **less conserved than the protein average** (mean identity 0.711 against 0.730
+protein-wide, both means on the full-length human-indexed alignment). This is consistent with a
+low-constraint docking patch, but equally with co-divergence alongside PARP4 itself, whose orthologous
+group sits at the 3rd conservation percentile; we cannot separate the two. It is not the least conserved
+region of the protein - repeat 7 (mean 0.640) and the C-terminal cap disk (0.647) are both lower.
 
 **A sequence-constrained, lumen-restricted nucleotide pocket.** Recent structures place NAD+ and
 ADP-ribose in the SPFH shoulder. From two independent alignments and pipelines we find the shoulder
-(residues 499-665) to be the **most conserved structural domain** of MVP (median identity 0.839 against
-0.787 protein-wide; individual barrel repeats can exceed it, so the claim is at domain resolution), with F547, D566, F567 and G569 invariant across 174 eukaryotes and K506 at 0.987.
+(residues 499-665) to be the **most conserved structural domain** of MVP. Indexed over all 893 human
+residues of the same 174-sequence alignment, the shoulder has median identity 0.829 against 0.782
+protein-wide (means 0.780 against 0.730); restricted to the residues resolved in the assembled particle
+the same comparison gives 0.859 against 0.796. Individual barrel repeats can exceed the shoulder -
+repeat 8 (377-427) reaches median 0.888 - so the claim holds at domain resolution and not above it.
+F547, D566, F567 and G569 are invariant across 174 eukaryotes and K506 is at 0.987. The conservation of
+this pocket was already noted by Lodwick et al. 2025; what is new here is its rank among MVP's domains
+across eukaryotes.
 Geometric analysis of the assembled 78-mer places all 78 ligand copies within the shell wall at
 fractional depth 0.34, and directional probe analysis gives zero exterior accessibility at 1.4 and
 2.5 Angstrom radii, with a maximum exterior channel radius of 1.10 Angstrom - narrower than water, and
-therefore impassable at any larger probe. Cytosolic NAD+ cannot cross the shoulder wall; substrate access requires the
-particle to open.
+therefore impassable at any larger probe. This kills the transmural shoulder-pore hypothesis: cytosolic
+NAD+ cannot cross the shoulder wall radially, and the pocket must be loaded from the lumen.
+
+It does **not** follow that the particle must open to admit NAD+, and we initially drew that inference in
+error. Lodwick et al. 2025 titrate NAD+ and ADP into 50 uM MVP by ITC and solve ligand-occupied cages,
+and Osinski et al. 2026 show that purified reconstituted MVP+TEP1 particles hydrolyse added NAD(P)+ and
+that an added NAD+ analogue occupies the shoulder pocket, in neutral buffer with no activating trigger.
+The assembled cage has openings at the C-terminal caps, and pre-formed vaults breathe at the waist
+(Collins et al. 2026). Free dinucleotides therefore reach the lumen unaided. What requires opening is
+**macromolecular** traffic - PARP4 (193 kDa), TEP1 (290 kDa), vtRNA, or any ADP-ribosylated target -
+not the 663-Da substrate.
 
 **MVP is dispensable but conserved.** Loss-of-function is tolerated in humans (LOEUF 0.92, pLI 0,
 observed/expected 0.74; one homozygous null against 0.62 expected) while missense is constrained
@@ -172,8 +189,11 @@ mechanism. Across 292 cell lines with matched proteomics and dose-response, MVP 
 of 18 cytotoxics, concentrated in tubulin agents. Two candidate mechanisms die: ABCC1 fails to predict
 its own substrates, and vault-RNA-binding drugs are indistinguishable from non-binders (median rho
 +0.098 against +0.099), and mitoxantrone - the canonical vtRNA ligand - is the
-weakest of the three vtRNA-binding drugs measured (rho +0.064, q = 0.43) while the top of the ranking is
-exclusively tubulin-directed. On identical complete-case samples, ABCB1 absorbs a median 25.0% of MVP's effect and division
+weakest of the three vtRNA-binding drugs measured (rho +0.064, q = 0.43). The top three drugs, and four
+of the top five, are tubulin-directed; rank 4 is methotrexate, an antimetabolite. That MVP is a
+correlate rather than a cause was already established genetically - Mvp-null mice and cells are not
+chemosensitive (Mossink et al. 2002; Kickhoefer et al. 1998) - and vault-RNA drug binding was proposed
+by Gopinath et al.; what is new is the quantitative decomposition. On identical complete-case samples, ABCB1 absorbs a median 25.0% of MVP's effect and division
 rate 10.6%, split cleanly by class: efflux substrates to ABCB1, S-phase agents to division rate. MVP is
 a passenger on both.
 
@@ -184,45 +204,70 @@ Paper-length treatments of the vault routinely describe TEP1 as a structural par
 autoinhibited TIR-family NAD(P)ase** with catalytic glutamate E1008, in a STAND architecture
 (TROVE-TIR-NACHT-WD40) homologous to SARM1 and APAF-1. Isolated TEP1-TIR hydrolyses NAD(P)+ to
 ADP-ribose and nicotinamide; reconstituted MVP+TEP1 particles are catalytically active and the E1008A
-mutant is dead. Activation requires oligomerisation, and the physiological trigger is explicitly unknown.
+mutant is dead. Full-length TEP1 carries a STAND (NACHT-WD40) module expected to gate activation by
+oligomerisation or conformational release, but this is contested between the 2026 preprints - purified
+TeTIR is monomeric by SEC and crystallography, arguing against obligate oligomerisation - and no
+physiological trigger or active oligomeric assembly has yet been demonstrated.
 We did not generate these results and cite them because they reframe ours.
 
 Placed beside our findings, all three ancient core proteins converge on one metabolite class inside one
 sealed chamber. TEP1 cleaves NAD+ to ADP-ribose; PARP4 transfers ADP-ribose; and MVP's invariant shoulder
-pocket binds ADP-ribose at 78 copies, which flips the shoulder's lumenal formal charge from positive in
-the apo state to strongly negative in the holo state.
+pocket binds ADP-ribose at 78 copies, which flips the shoulder's lumenal formal charge from +23 e in the
+apo human cage to -133 e in the holo state across the 78-mer shoulder band. This is unscreened formal
+charge, computed before counterions and Mg2+.
 
-**This supplies the constraint our nineteen tests could not, and it is a physical necessity rather than a
-hypothesis.** A cytoplasmic STAND NADase scaffold present at 10^5 copies per cell *must* be strictly
-autoinhibited and physically separated from cytosolic NAD+, or constitutive hydrolysis would kill the
-cell - the same logic that governs SARM1. That single requirement predicts, rather than merely
-accommodates, the pattern we observed: no proliferation phenotype across 878 CRISPR screens, no
-co-essentiality with any gene, flat basal NAD+ across 370 cell lines, no resting-state pathway coupling
-of any kind, and a ligand pocket reachable only from the lumen. A latent enzyme walled off from its
-substrate should look exactly this inert at rest.
+**This supplies the constraint our nineteen tests could not, and it is a published measurement rather
+than an argument of ours.** Hornebeck et al. 2026 expressed the TEP1 TIR domain without its STAND
+regulatory domains in HEK293 cells: cellular NAD+ fell to 30-40% of control by 24 h and the cells died
+from about 20 h, both abolished by the E1008A catalytic mutation. Le Mouellic et al. 2026 report the
+same in *E. coli*. Full-length TEP1 must therefore be held strictly autoinhibited **in cis** by its STAND
+domains - reinforced by a millimolar unactivated Km, ~6.9 mM for NADP+ and not saturable for NAD+,
+against a free cytosolic NAD+ concentration two orders of magnitude lower - while the vault shoulder
+concentrates the ADP-ribose product inside the lumen.
 
-It also sharpens what remains unexplained. The shell is rebuilt continuously, the enzyme is replaced
-faster still, and the pocket is held invariant across 174 eukaryotes. Those are the maintenance costs of
-a system kept ready, and nothing in public data reveals what it is kept ready *for*.
+We explicitly do **not** claim that physical separation from cytosolic NAD+ is what keeps the cell alive.
+That version of the argument fails on four counts, and we state them because we held it: Mvp-null mice
+and cells are viable with TEP1 protein still present and no cage to hold it; intact vaults do not
+exclude NAD+; SARM1 itself sits naked in the cytosol at comparable abundance and relies entirely on
+intramolecular autoinhibition; and the 10^5 figure counts vault particles, not TEP1, which is present at
+roughly one to two copies per particle and is some fortyfold scarcer than MVP. The brake is allosteric,
+not architectural.
+
+So construed, the enzymology explains from independent measurement - rather than predicts - the pattern
+we observed: no proliferation phenotype across 878 CRISPR screens, no co-essentiality with any gene, no
+basal NAD+ depletion across 370 cell lines (MVP r = +0.077; TEP1 r = +0.098, n = 272; every sign
+slightly positive), no resting-state fitness effect or metabolic perturbation, and a ligand pocket that
+can only be loaded from the lumen. A latent enzyme held shut by its own regulatory domains should look
+exactly this inert at rest. The autoinhibition was integrated after our nineteen tests were run and
+scored, not pre-registered before them, and we flag that ordering rather than blur it.
+
+It also sharpens what remains unexplained. MVP's 66-hour half-life is ordinary - the 58.6th proteome
+percentile, against a median of 56.5 h - so the expense is not rapid rebuilding but the standing cost of
+maintaining up to 10^5 particles of 13 MDa each at ordinary turnover, with PARP4 replaced far faster at
+the 9.8th percentile, and the pocket held invariant across 174 eukaryotes. Nothing in public data reveals
+what the system is held ready *for*.
 
 ## 4. Discussion
 
-Three constraints now bound any functional model. The particle is **not required for proliferation** -
+Four constraints now bound any functional model. The particle is **not required for proliferation** -
 zero hits across 878 growth screens, a property shared by under 5% of genes - yet it is **expensive**,
-at 10^5 copies with a 66-hour half-life, and **sequence-constrained** at a specific nucleotide-binding
-face. Its catalytic partner **exchanges three to eight times faster than the shell**, and its ligand
-site is **reachable only from the lumen**.
+at 10^5 copies of 13 MDa maintained at ordinary turnover, and **sequence-constrained** at a specific
+nucleotide-binding face. Its catalytic partner **turns over three to eight times faster than the shell**,
+and its ligand site is **not reachable radially through the wall, and must be loaded from the lumen**.
 
-A fourth constraint comes from the enzymology rather than from us: **TEP1 is a latent NAD(P)ase that must
-be autoinhibited and substrate-separated to be survivable at this abundance.**
+The fourth constraint comes from the enzymology rather than from us: **uninhibited TEP1 depletes cellular
+NAD+ and kills human cells, so full-length TEP1 must be held autoinhibited in cis until triggered.**
 
 These are the facts a correct model must accommodate. A static container does not fit: the shell is
-rebuilt continuously and its enzyme is replaced faster still. An inert scaffold does not fit either: the
-shoulder pocket is the most conserved part of the protein and binds a metabolite with invariant
-contacts. The combination of dispensability and conservation suggests a system that is redundant under
+continuously replaced and its enzyme is replaced three to eight times faster still. An inert scaffold
+does not fit either: the shoulder pocket is the most conserved structural domain of the protein and binds
+a metabolite with invariant contacts. The combination of dispensability and conservation suggests a system that is redundant under
 laboratory conditions and selected under conditions laboratories do not impose. Under the autoinhibition
 constraint this stops being paradoxical: a latent effector is *supposed* to be invisible until triggered,
-and every assay we ran sampled the resting state.
+and nearly every informative assay we ran sampled unstimulated growth, bulk tissue, or perturbations
+that do not breach a membrane. The exceptions are real but thin - the CRISPR corpus includes 37
+viral-challenge, 28 genotoxic and 9 immune-killing screens, and we tested ten-day kinase-inhibitor
+persisters and eighteen cytotoxics - and none of them applies a pore-forming insult.
 
 A pattern in our own scorecard is worth naming, and it is not the one we first wrote down. It is not
 that protein-level methods succeeded and transcript-level methods failed: phosphoproteomics, the broad
@@ -232,7 +277,8 @@ division is that **every method measuring intrinsic properties of the particle i
 physical proximity, pocket and lumen sequence constraint, subunit proteolysis - **succeeded**, while
 **every method measuring steady-state coupling to an external pathway or growth phenotype in unstimulated
 cells** - CRISPR fitness, co-essentiality, broad pathway modules, resting transcript and metabolite
-readouts - **failed**. That is the signature of a latent system, and it motivates the constraint below.
+readouts - **failed**. That is the signature of a latent system, and it is what the enzymology above
+accounts for.
 
 ## 5. Limits
 
@@ -247,12 +293,20 @@ remains the central unanswered question and is not answerable from public data.
 
 ## 6. Primary structural and enzymological work this analysis depends on
 
-Lodwick et al. 2025 (human vault cage with PARP4; PDB 9BW6); Osinski et al. 2026 (vault with endogenous
-ADP-ribose, PDB 11JB; TEP1 TIR-like NAD(P)ase); Le Mouellic et al. 2026 and Hornebeck et al. 2026 (TeTIR
-NADase characterisation); Geissler et al. 2026 (*Dictyostelium* MVPA proximity labelling and membrane
-association); Collins et al. 2026 (cargo uptake into pre-formed vaults); Anthropic 2026 (bacteriophage
-L05 vault structure); Mathieson et al. 2018 (pulse-SILAC half-lives); Benci et al. 2019 (ISG.RS/IFNG.GS);
-Moadab et al. 2023 (MVP as a lupus autoantigen). We generated none of these and depend on all of them.
+Lodwick et al., *Nature Communications* 2025, PMID 40691181 - human vault cage with PARP4, nucleotide
+ITC and cap openings; PDB 9BW6 and 9MXJ. Osinski et al. 2026, bioRxiv 10.64898/2026.05.01.722283 - TIR-like
+NADases in bacterial immunity and the RNA vault; TEP1 enzymology and kinetics; vault with endogenous
+ADP-ribose, PDB 11JB. Le Mouellic et al. 2026, bioRxiv 10.64898/2026.09.04.749371, and Hornebeck et al.
+2026, bioRxiv 10.64898/2026.09.21.753143 - TeTIR NADase characterisation, product specificity, and the
+HEK293 and *E. coli* lethality of the uninhibited domain. Geissler et al., *Nature Communications* 2026,
+10.1038/s41467-026-71837-x - *Dictyostelium* MVPA proximity labelling and membrane association. Collins
+et al., *ACS Synthetic Biology* 2026;15:3975 - cargo uptake into pre-formed vaults. Anthropic 2026 -
+bacteriophage L05 vault structure. Musgrove et al. 2026, PMID 42031226 - crosslinked neuronal MVP
+RIP-seq. Mossink et al. 2002 and Kickhoefer et al. 1998/2001 - Mvp-null mice and cells, not
+chemosensitive, TEP1 protein retained. Mathieson et al. 2018 - pulse-SILAC half-lives. Benci et al. 2019 -
+ISG.RS and IFNG.GS. Moadab et al. 2023, PMID 37127324 - MVP as a lupus autoantigen. We generated none of
+these and depend on all of them. Where our reading of one of them was wrong - the inference that NAD+
+entry requires the particle to open - the correction is in section 3 and in `LEDGER.md` #61.
 
 ## 6b. Data and reproducibility
 
