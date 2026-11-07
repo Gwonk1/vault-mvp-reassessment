@@ -1410,3 +1410,68 @@ against the membrane neighbourhood and worth more than another co-abundance run.
 (PMID 30021884), already inside our own `intact_MVP.json`, contains an **in-situ MVP-FLOT2 crosslink**.
 Flotillin-2 is an SPFH-family protein. We had that file on disk throughout and never read it — the third
 literature gap of the session after Moadab and Izquierdo.
+
+## 32. The TurboID contact test is UNINFORMATIVE, for a reason argon predicted and we failed to gate on
+
+`TURBOID_PREREGISTRATION.md`. Zheng et al. 2025 (PMID 40058474), `V5-TurboID` across all 17 human PARP
+family members in HEK293T, with 16 matched non-vault baits as specificity background.
+
+**The dataset is excellent and both gates passed emphatically.** PARP4 self-labels at log2 fold-change
+**7.30**, p = 3.2e-4, and **17 of 17 baits enrich their own gene symbol**. There is nothing wrong with
+the experiment.
+
+**MVP is absent from the PARP4 sheet, and the reason is depth.**
+
+| | preys measured | MVP detected |
+|---|---|---|
+| PARP1 | 4,297 | no |
+| **PARP4** | **4,829** | **no** |
+| PARP5B | 5,086 | yes |
+| PARP2, PARP3, PARP9 | 5,502-5,605 | no |
+| PARP11 … PARP8 | 6,100-8,779 | mostly yes |
+
+**PARP4's run is the second-shallowest of seventeen.** MVP is missing from essentially every shallow
+run and appears once depth passes about 5,000 proteins; it is detected in 9 of 17 baits overall. This is
+ordinary data-dependent-acquisition missingness, not evidence about vaults.
+
+By the registered rule, absence is **uninformative on presence** rather than the kill condition, which
+required MVP present-and-not-enriched. The primary test therefore returns no answer.
+
+**For the record, MVP's behaviour where it was measured:** enriched in only 2 of 9 baits (PARP11 fc
++2.13, p = 0.002; PARP15 +1.59, p = 0.009) and significantly *depleted* in PARP12 (−1.95, p = 0.004).
+So MVP is not generically biotinylated by any cytoplasmic bait, which is mildly reassuring about the
+assay but says nothing about PARP4.
+
+### 32a. The tertiary test is void, and we are not reporting its negatives as findings
+
+The tertiary test asked whether the membrane and immune modules appear among PARP4-proximal proteins. It
+returned null for everything — plasma membrane repair 0 observed against 2.3 expected (p = 1.0), caveola
+p = 0.71, late endosome p = 0.57, endosomal transport p = 0.675, inflammatory response p = 0.31, ruffle
+p = 0.575, antigen processing p = 0.94, with response to bacterium alone borderline at p = 0.05.
+
+**We are not calling that a sixth death of the membrane hypothesis, because the premise is unverified.**
+If the PARP4 run is too shallow to detect MVP, we cannot confirm that this `V5-TurboID-PARP4` construct
+was incorporated into vaults at all — and if it was not, its neighbourhood is PARP4's, not the vault's.
+Reporting these nulls as contact-level refutation would be overclaiming in the direction that happens to
+suit us, which is the same error as overclaiming in the other direction.
+
+**One observation recorded without interpretation:** several proteins we championed are not merely
+absent from PARP4's neighbourhood but significantly *depleted* from it — MYOF −3.32 (p = 3.4e-4),
+IQGAP1 −2.82 (p = 1.0e-4), FLOT1 −2.16 (p = 1.2e-4), with AHNAK, S100A10 and CAPN2 negative at marginal
+p. Real numbers in a gate-passing dataset, uninterpretable without MVP present.
+
+### 32b. Argon specified the correct gate and we demoted it to an outcome
+
+Its message read: *"Require MVP to be a top-ranked `V5-TurboID-PARP4` prey first (HEK293T has modest
+endogenous MVP, and lumenally encapsulated PARP4 will only biotinylate external/membrane neighbors via
+open/waisted particles, assembly intermediates, or exchangeable PARP4)."*
+
+**That is exactly the gate this test needed, and we made it the primary test instead.** Had MVP's
+presence been a gate, the analysis would have aborted before producing seven nulls we now cannot
+interpret. The pre-registered sealed-shell asymmetry — that a negative for external membrane proteins is
+expected and must not be read as refutation — was written down in advance and is being honoured, but it
+is secondary to the simpler point that the construct's vault membership is unverified.
+
+**What would make this work:** the same analysis on a bait with deeper coverage, or MVP-TurboID rather
+than PARP4-TurboID, or CFdb native co-fractionation (PMID 38102123), where a 13 MDa particle elutes in
+megadalton fractions that soluble monomers cannot reach. That remains the best untried instrument.

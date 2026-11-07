@@ -1,0 +1,58 @@
+  PARP1    4297 preys
+  PARP2    5502 preys
+  PARP3    5584 preys
+  PARP4    4829 preys
+  PARP5A   7050 preys
+  PARP5B   5086 preys
+  PARP6    6941 preys
+  PARP7    5911 preys
+  PARP8    8779 preys
+  PARP9    5605 preys
+  PARP10   8501 preys
+  PARP11   6100 preys
+  PARP12   5948 preys
+  PARP13   8186 preys
+  PARP14   5418 preys
+  PARP15   8517 preys
+  PARP16   8237 preys
+
+GATE1 PARP4 self-labelling: {'fc': 7.29991333333333, 'p': 0.000324882731498466, 'hit': True} -> PASS
+GATE2 baits enriching own symbol: 17/17 -> PASS
+
+PRIMARY MVP in PARP4: None
+  MVP measured in 9 of 16 other baits; PARP4 fc exceeds 0 of them
+  other-bait MVP fc: {'PARP11': 2.12770333333333, 'PARP5B': 1.94647, 'PARP15': 1.59239333333333, 'PARP14': 1.5488233333333, 'PARP8': 0.478453333333402, 'PARP7': 0.00121812333589943}
+VERDICT: MVP ABSENT from PARP4 sheet (uninformative on presence)
+SECONDARY TEP1 in PARP4: None
+
+PARP4-proximal set: 852 of 4829 measured proteins
+
+TERTIARY - previously favoured (membrane) terms:
+  GOBP_PLASMA_MEMBRANE_REPAIR              {'n': 13, 'obs': 0, 'exp': 2.3, 'p': 1.0}
+  GOCC_CAVEOLA                             {'n': 25, 'obs': 4, 'exp': 4.4, 'p': 0.71}
+  GOBP_PLASMA_MEMBRANE_ORGANIZATION        {'n': 52, 'obs': 9, 'exp': 9.2, 'p': 0.54}
+  GOCC_LATE_ENDOSOME                       {'n': 75, 'obs': 13, 'exp': 13.2, 'p': 0.57}
+  GOBP_ENDOSOMAL_TRANSPORT                 {'n': 113, 'obs': 18, 'exp': 19.9, 'p': 0.675}
+innate-immune terms that replicated in §31:
+  GOBP_INFLAMMATORY_RESPONSE               {'n': 179, 'obs': 34, 'exp': 31.6, 'p': 0.31}
+  GOBP_RESPONSE_TO_BACTERIUM               {'n': 155, 'obs': 35, 'exp': 27.3, 'p': 0.05}
+  GOCC_RUFFLE                              {'n': 82, 'obs': 14, 'exp': 14.5, 'p': 0.575}
+  GOBP_ANTIGEN_PROCESSING_AND_PRESENTATION {'n': 26, 'obs': 2, 'exp': 4.6, 'p': 0.94}
+
+named proteins in PARP4 sheet:
+  MVP       absent   
+  PARP4     HIT      {'fc': 7.29991333333333, 'p': 0.000324882731498466, 'hit': True}
+  TEP1      absent   
+  ANXA2     present  {'fc': -0.328833333333399, 'p': 0.146838265932567, 'hit': False}
+  S100A10   present  {'fc': -0.919751666666702, 'p': 0.0449636765188469, 'hit': False}
+  EHD2      absent   
+  EHD4      present  {'fc': -0.4604966666667, 'p': 0.567523100014468, 'hit': False}
+  CAPN2     present  {'fc': -0.52589, 'p': 0.0753949862324963, 'hit': False}
+  MYOF      present  {'fc': -3.3174366666666, 'p': 0.000344060563288028, 'hit': False}
+  AHNAK     present  {'fc': -0.5808933333333, 'p': 0.0497028555288579, 'hit': False}
+  IQGAP1    present  {'fc': -2.8168233333333, 'p': 0.000101473879590646, 'hit': False}
+  CD63      absent   
+  OPTN      present  {'fc': 0.983093333333301, 'p': 0.35109524148729, 'hit': False}
+  VPS35     absent   
+  FLOT1     present  {'fc': -2.16498, 'p': 0.000122688420087131, 'hit': False}
+  FLOT2     absent   

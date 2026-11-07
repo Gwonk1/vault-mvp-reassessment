@@ -1,0 +1,137 @@
+{
+ "gate_parp4_self": true,
+ "gate_baits_self": 17,
+ "verdict": "MVP ABSENT from PARP4 sheet (uninformative on presence)",
+ "mvp_in_parp4": null,
+ "mvp_other_baits": {
+  "PARP5B": 1.94647,
+  "PARP7": 0.00121812333589943,
+  "PARP8": 0.478453333333402,
+  "PARP10": -0.40119,
+  "PARP11": 2.12770333333333,
+  "PARP12": -1.9506533458014,
+  "PARP13": -0.100093333333302,
+  "PARP14": 1.5488233333333,
+  "PARP15": 1.59239333333333
+ },
+ "mvp_specificity_count": 0,
+ "tep1": null,
+ "proximal_n": 852,
+ "universe_n": 4829,
+ "favoured_terms": {
+  "GOBP_PLASMA_MEMBRANE_REPAIR": {
+   "n": 13,
+   "obs": 0,
+   "exp": 2.3,
+   "p": 1.0
+  },
+  "GOCC_CAVEOLA": {
+   "n": 25,
+   "obs": 4,
+   "exp": 4.4,
+   "p": 0.71
+  },
+  "GOBP_PLASMA_MEMBRANE_ORGANIZATION": {
+   "n": 52,
+   "obs": 9,
+   "exp": 9.2,
+   "p": 0.54
+  },
+  "GOCC_LATE_ENDOSOME": {
+   "n": 75,
+   "obs": 13,
+   "exp": 13.2,
+   "p": 0.57
+  },
+  "GOBP_ENDOSOMAL_TRANSPORT": {
+   "n": 113,
+   "obs": 18,
+   "exp": 19.9,
+   "p": 0.675
+  }
+ },
+ "immune_terms": {
+  "GOBP_INFLAMMATORY_RESPONSE": {
+   "n": 179,
+   "obs": 34,
+   "exp": 31.6,
+   "p": 0.31
+  },
+  "GOBP_RESPONSE_TO_BACTERIUM": {
+   "n": 155,
+   "obs": 35,
+   "exp": 27.3,
+   "p": 0.05
+  },
+  "GOCC_RUFFLE": {
+   "n": 82,
+   "obs": 14,
+   "exp": 14.5,
+   "p": 0.575
+  },
+  "GOBP_ANTIGEN_PROCESSING_AND_PRESENTATION": {
+   "n": 26,
+   "obs": 2,
+   "exp": 4.6,
+   "p": 0.94
+  }
+ },
+ "named": {
+  "MVP": null,
+  "PARP4": {
+   "fc": 7.29991333333333,
+   "p": 0.000324882731498466,
+   "hit": true
+  },
+  "TEP1": null,
+  "ANXA2": {
+   "fc": -0.328833333333399,
+   "p": 0.146838265932567,
+   "hit": false
+  },
+  "S100A10": {
+   "fc": -0.919751666666702,
+   "p": 0.0449636765188469,
+   "hit": false
+  },
+  "EHD2": null,
+  "EHD4": {
+   "fc": -0.4604966666667,
+   "p": 0.567523100014468,
+   "hit": false
+  },
+  "CAPN2": {
+   "fc": -0.52589,
+   "p": 0.0753949862324963,
+   "hit": false
+  },
+  "MYOF": {
+   "fc": -3.3174366666666,
+   "p": 0.000344060563288028,
+   "hit": false
+  },
+  "AHNAK": {
+   "fc": -0.5808933333333,
+   "p": 0.0497028555288579,
+   "hit": false
+  },
+  "IQGAP1": {
+   "fc": -2.8168233333333,
+   "p": 0.000101473879590646,
+   "hit": false
+  },
+  "CD63": null,
+  "OPTN": {
+   "fc": 0.983093333333301,
+   "p": 0.35109524148729,
+   "hit": false
+  },
+  "VPS35": null,
+  "FLOT1": {
+   "fc": -2.16498,
+   "p": 0.000122688420087131,
+   "hit": false
+  },
+  "FLOT2": null
+ }
+}
