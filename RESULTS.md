@@ -2194,3 +2194,37 @@ ribosome partners. Descriptive, and with those counts it means little either way
   Co-abundance, co-fractionation and co-elution tails all report where things are and how they move,
   not what holds them together. **Only MVP-PARP4-TEP1 appears in both kinds of instrument** — and in
   this IP-MS all three come down together at LWTP > 3.3.
+
+## 42. OpenCell is not applicable: MVP is not one of its targets
+
+Recorded because the negative saves effort, and because an external reviewer's advice is what produced
+it cheaply. Grok's recommendation on OpenCell (Cho et al., *Science* 2022, PMID 35271311) was explicit:
+*"Query the published OpenCell prey table before designing anything; do not make it the next
+analysis."*
+
+We queried. **MVP, PARP4 and TEP1 are not among OpenCell's 1,310 CRISPR-tagged target lines.** There is
+no bait-side vault experiment in that resource to analyse. Only 54 of the 1,310 lines expose a saved
+interaction network through the public API, and the pulldown and interaction endpoints we probed return
+404, so there is no prey-side query either. Reaching MVP as a prey would require processing the raw
+mass-spectrometry deposits (PRIDE PXD024909 / PXD029191), which is a different order of work from a
+table query and is not justified by the prior.
+
+**OpenCell is therefore struck from the instrument list rather than attempted.** It was the last
+readily-available contact instrument we had not used, and it does not contain the protein.
+
+### 42a. Instruments used, for the record
+
+| instrument | kind | status |
+|---|---|---|
+| CPTAC / CCLE co-abundance | covariation | used extensively |
+| CFdb native co-fractionation (411 datasets) | co-migration | used (§33, §38, §39, §40) |
+| anti-MVP IP-MS, Lodwick | physical, wash-based | used (§13, §41) |
+| *Dictyostelium* MVPA TurboID | physical, covalent in-cell | used descriptively |
+| BioPlex AP-MS | physical | used descriptively |
+| IntAct aggregate | mixed | used |
+| Zheng PARP4 TurboID (17 PARPs) | physical, covalent | **voided** - MVP absent from a shallow run (§32) |
+| OpenCell endogenous IP-MS | physical, digitonin | **not applicable** - MVP not a target |
+
+Two contact instruments remain unexhausted and both need new data acquisition: the raw OpenCell deposits,
+and Kurusu et al. 2023 (PMID 37192622) particle-sorted p62-body proteomics, which bears on vault *fate*
+rather than vault neighbourhood and connects to the autophagy thread §20 tested at transcript level.
