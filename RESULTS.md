@@ -480,3 +480,38 @@ flagged, not resolved.
 Orthology by eggNOG group across a billion years is coarse and can be one-to-many. Proximity labelling
 tags anything within ~10 nm. S100A10, CLIC1, EHD4 and CAPN2 have no amoeba ortholog, so their absence is
 not evidence. Only MVPA was tagged; the amoeba has two MVP genes.
+
+## 16. DepMap co-essentiality: UNINFORMATIVE — argon's proposed gate failed
+
+`COESSENTIALITY_PREREGISTRATION.md`. Argon's H2a argued my ORCS test (§8) was blind because it used
+binary hit-calls, and that DepMap's **continuous** Chronos scores across ~1,100 lines would recover
+non-essential complexes. Tested on 1,178 cell lines x 17,916 genes.
+
+| Gate | Result |
+|---|---|
+| NDUFS2 recovers complex I | **PASS — 25 of 25** top partners are `NDUF*` |
+| **CAV1 recovers CAVIN1 and EHD2** (argon's gate) | **FAIL — neither in the top 25** |
+
+The method works superbly for an essential complex and fails the non-essential case argon nominated.
+CAV1 did recover **CAV2 at rank 2**, its closest partner, so it is not wholly blind — but the caveolar
+complex argon predicted did not appear. **Per the pre-registration, a null for MVP is therefore reported
+as UNINFORMATIVE, not as a clean negative.**
+
+**MVP's own result, for the record:** 2,886 genes reach q < 0.05, but the strongest correlation in the
+entire genome is **r = 0.205** (PAPPA), and the top 25 is a grab-bag — MYO1F, DRP2, SLC6A5, TAS2R50,
+PRAMEF19 — with no coherent biology. That pattern (thousands "significant", nothing above r ≈ 0.2) is
+what n = 1,178 does to p-values; it is significance without effect size.
+
+The four-protein core is nowhere: **PARP4 rank 9,020 (r = 0.002), TEP1 11,734 (−0.020), ANXA2 14,985
+(−0.052)**, against 17,915 genes tested.
+
+**What this does and does not say.** It does not upgrade §8, because the gate failed. But the contrast in
+magnitude is itself informative: the same pipeline that gives NDUFS2 a perfect 25/25 gives MVP nothing
+above r = 0.2. Combined with §8's zero hits in 878 growth screens, the fair statement is that **MVP has no
+detectable fitness coupling to any gene in 1,178 genetic backgrounds** — while noting the method's
+demonstrated weakness on non-essential complexes means this cannot be pushed further.
+
+**Consequence for #40:** the four-protein core is an abundance and proximity association with **no fitness
+coupling**. The proteins travel together and sit together; deleting MVP does not change what happens when
+you delete them. That is a real constraint on any functional model, and it was my pre-registered kill
+condition — fired, though softened by the gate failure.
