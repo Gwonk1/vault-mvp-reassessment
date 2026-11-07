@@ -1101,3 +1101,76 @@ paper that identified LRP as the major vault protein.
 level, from 1996.** Sugawara et al. 1997 (*Cancer Lett*) reports adrenal independently. This also
 further undercuts the "nobody checked lung" framing already retracted in #60: the 1996 atlas never
 claimed lung was uniquely highest, and listed adrenal cortex alongside it.
+
+## 28. Ledger #41 re-opened and REVERSED: the membrane-repair module survives the confound
+
+`MEMBRANE_MODULE_PREREGISTRATION.md`, with gene sets taken externally and unmodified from MSigDB so the
+test is not circular with the covariate list that prompted it.
+
+### 28a. Transparency about two runs
+
+**Run 1 (`src/membrane_module.py`) formally returned UNINFORMATIVE.** Gate 1 required PARP4 *and* TEP1 to
+stay in MVP's top 50 after residualisation. PARP4 came first; TEP1 was absent entirely — because a
+no-NaN mask had cut the matrix from 12,096 x 375 to 5,063 x 330, and **TEP1 is measured in only 277 of
+375 lines**. The gate failed on a coding choice, not on destroyed signal.
+
+**Run 2 (`src/membrane_module2.py`) fixes that with pairwise-complete handling**, retaining 8,982
+proteins including TEP1. **The gene sets, thresholds, gates and kill condition are identical to the
+registered text; only the missing-data handling changed.** A sceptic may still call this a second bite,
+so both runs and both logs are committed.
+
+### 28b. Result
+
+Residualising every protein on the §27b N:C proxy plus six proliferation markers, at line level:
+
+**Both gates pass.** PARP4 ranks **1st (+0.839)** and TEP1 **2nd (+0.581)** among 8,982 residualised
+correlates — the confirmed physical core survives emphatically. PSMA1 still recovers 20 of 25 proteasome
+subunits.
+
+| gene set (external, unmodified) | members | in MVP top 200 | specificity p |
+|---|---|---|---|
+| `GOBP_PLASMA_MEMBRANE_REPAIR` | 24 | 5 | **0.000** |
+| `GOCC_CAVEOLA` | 52 | 7 | **0.000** |
+| `GOBP_PLASMA_MEMBRANE_ORGANIZATION` | 87 | 9 | **0.000** |
+| `GOCC_LATE_ENDOSOME` | 210 | 11 | **0.005** |
+| `GOBP_ENDOSOMAL_TRANSPORT` | 243 | 6 | 0.49 |
+
+**The last row is the important one.** Generic endosomal transport is *not* enriched while plasma
+membrane repair, caveola and membrane organisation sit at zero of 200 matched-random sets. This is not
+"any cytoplasmic membrane protein covaries with MVP" — that was the confound, and it has been removed.
+It is specifically the repair and caveolar compartment.
+
+### 28c. The module recruits canonical repair proteins we never named
+
+MVP's top 30 residualised correlates include the §11 list — **ANXA2 +0.516, S100A10 +0.516, EHD2 +0.504,
+CAPN2 +0.441, EHD4 +0.438** — and adds proteins absent from our original nomination that are more
+canonical still:
+
+- **MYOF (myoferlin) +0.475** — ferlin family, with dysferlin the defining Ca²⁺-dependent
+  membrane-resealing proteins
+- **AHNAK +0.458 and AHNAK2 +0.485** — the AHNAK scaffold that partners dysferlin in sarcolemmal repair
+- **CD151 +0.443** (tetraspanin), **S100A6 +0.463**, **CAVIN1** (caveolar coat, top 25 in run 1)
+
+We did not propose any of these. They arrived from an externally defined analysis after the confound was
+stripped.
+
+### 28d. Status of #41, and what would still kill it
+
+**#41 is reversed as a co-abundance claim.** The broad membrane-repair neighbourhood is enriched around
+MVP with matched-random specificity, after removing the confound that invalidated the newest evidence,
+with the particle's two confirmed partners as the top two hits.
+
+Three limits, all real:
+
+1. **This is co-abundance, not contact.** §13's anti-MVP IP-MS was the contact test and it missed its
+   bar at p = 0.058. Surviving a confound does not convert co-abundance into physical association. #26's
+   downgrade stands.
+2. **A further confound is plainly visible in the top 30 and is the obvious next control.** LMNA, FHL2,
+   BCAR1, ITGA3, RRAS, ANLN and FOSL1 read as an adhesion / mesenchymal-EMT axis, which is one of the
+   largest axes of variation in CCLE. AHNAK and MYOF are themselves EMT-associated. **If an EMT score
+   absorbs this signature, #41 dies again**, and that test should be pre-registered next.
+3. **Post-hoc, and declared as such in advance:** Fisher's combination of the two earlier independent
+   tests (§13 p = 0.058, amoeba §15 p = 0.067) gives X² = 11.10, **p = 0.0255**. This was **not** the
+   registered rule, which required each to clear 0.05 alone. Combining after seeing both is the
+   flexibility pre-registration exists to prevent, and it is reported as what a meta-analysis would say,
+   not as satisfaction of the original criterion.

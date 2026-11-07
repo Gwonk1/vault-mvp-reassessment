@@ -1,0 +1,42 @@
+proteins 12096 lines 375
+covariates: N:C (88 cyto, 46 nuc) + 6 proliferation
+residualised matrix: (5063, 330)
+GATE1 assembly PARP4/TEP1 ranks {'PARP4': 1, 'TEP1': None} -> FAIL
+GATE2 PSMA1 recovers 20/25 proteasome in top50 -> PASS
+
+PRIMARY GOBP_PLASMA_MEMBRANE_REPAIR: {'n_members': 17, 'observed_in_top200': 5, 'specificity_p': 0.0}
+  GOCC_LYSOSOME: None
+  GOCC_LATE_ENDOSOME: {'n_members': 130, 'observed_in_top200': 10, 'specificity_p': 0.03}
+  GOBP_ENDOSOMAL_TRANSPORT: {'n_members': 161, 'observed_in_top200': 6, 'specificity_p': 0.55}
+  GOCC_CAVEOLA: {'n_members': 26, 'observed_in_top200': 6, 'specificity_p': 0.0}
+  GOCC_MEMBRANE_RAFT: None
+
+VERDICT: UNINFORMATIVE (gate failed)
+POST-HOC (not the registered rule): Fisher of 0.058 and 0.067 -> X2=11.10, p=0.0255
+
+MVP top 25 residualised correlates:
+PARP4       0.839
+NIBAN2      0.527
+ANXA2       0.516
+S100A10     0.516
+EHD2        0.504
+NT5E        0.499
+LMNA        0.485
+AHNAK2      0.485
+MYOF        0.475
+S100A6      0.463
+AHNAK       0.458
+NMI         0.457
+ANLN        0.454
+PSMB8       0.452
+RRAS        0.448
+NCEH1       0.447
+BCAR1       0.444
+IFI35       0.444
+FHL2        0.443
+CAPN2       0.441
+EHD4        0.438
+SEPTIN10    0.426
+CAVIN1      0.426
+B2M         0.426
+MET         0.425

@@ -1,0 +1,75 @@
+{
+ "run": "pairwise-complete (run 2)",
+ "gate1_assembly": true,
+ "gate1_ranks": {
+  "PARP4": 1,
+  "TEP1": 2
+ },
+ "gate2_proteasome": true,
+ "gate2_recovered": 20,
+ "verdict": "MODULE SURVIVES the confound",
+ "primary": {
+  "GOBP_PLASMA_MEMBRANE_REPAIR": {
+   "n_members": 24,
+   "observed_in_top200": 5,
+   "specificity_p": 0.0
+  }
+ },
+ "secondary": {
+  "GOCC_LYSOSOME": null,
+  "GOCC_LATE_ENDOSOME": {
+   "n_members": 210,
+   "observed_in_top200": 11,
+   "specificity_p": 0.005
+  },
+  "GOBP_ENDOSOMAL_TRANSPORT": {
+   "n_members": 243,
+   "observed_in_top200": 6,
+   "specificity_p": 0.49
+  },
+  "GOCC_CAVEOLA": {
+   "n_members": 52,
+   "observed_in_top200": 7,
+   "specificity_p": 0.0
+  },
+  "GOCC_MEMBRANE_RAFT": null,
+  "GOBP_PLASMA_MEMBRANE_ORGANIZATION": {
+   "n_members": 87,
+   "observed_in_top200": 9,
+   "specificity_p": 0.0
+  }
+ },
+ "n_proteins": 8982,
+ "mvp_top30": {
+  "PARP4": 0.8387,
+  "TEP1": 0.5813,
+  "NIBAN2": 0.5274,
+  "ANXA2": 0.5161,
+  "S100A10": 0.5156,
+  "EHD2": 0.5042,
+  "NT5E": 0.4986,
+  "LMNA": 0.4853,
+  "AHNAK2": 0.4853,
+  "HLA-F": 0.4754,
+  "MYOF": 0.4746,
+  "S100A6": 0.4634,
+  "FOSL1": 0.4612,
+  "AHNAK": 0.4584,
+  "MGLL": 0.458,
+  "NMI": 0.4567,
+  "EFCAB7": 0.4542,
+  "ANLN": 0.4537,
+  "PSMB8": 0.4516,
+  "RRAS": 0.4476,
+  "PIK3R3": 0.4475,
+  "NCEH1": 0.4474,
+  "BCAR1": 0.4439,
+  "IFI35": 0.4438,
+  "CD151": 0.4433,
+  "FHL2": 0.443,
+  "CAPN2": 0.4414,
+  "SPATS2L": 0.441,
+  "ITGA3": 0.4405,
+  "EHD4": 0.4376
+ }
+}

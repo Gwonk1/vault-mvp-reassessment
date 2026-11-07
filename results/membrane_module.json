@@ -1,0 +1,64 @@
+{
+ "gate1_assembly": false,
+ "gate1_ranks": {
+  "PARP4": 1,
+  "TEP1": null
+ },
+ "gate2_proteasome": true,
+ "gate2_recovered": 20,
+ "verdict": "UNINFORMATIVE (gate failed)",
+ "primary": {
+  "GOBP_PLASMA_MEMBRANE_REPAIR": {
+   "n_members": 17,
+   "observed_in_top200": 5,
+   "specificity_p": 0.0
+  }
+ },
+ "secondary": {
+  "GOCC_LYSOSOME": null,
+  "GOCC_LATE_ENDOSOME": {
+   "n_members": 130,
+   "observed_in_top200": 10,
+   "specificity_p": 0.03
+  },
+  "GOBP_ENDOSOMAL_TRANSPORT": {
+   "n_members": 161,
+   "observed_in_top200": 6,
+   "specificity_p": 0.55
+  },
+  "GOCC_CAVEOLA": {
+   "n_members": 26,
+   "observed_in_top200": 6,
+   "specificity_p": 0.0
+  },
+  "GOCC_MEMBRANE_RAFT": null
+ },
+ "posthoc_fisher_p": 0.02545,
+ "mvp_top25": {
+  "PARP4": 0.8387,
+  "NIBAN2": 0.5274,
+  "ANXA2": 0.5161,
+  "S100A10": 0.5156,
+  "EHD2": 0.5042,
+  "NT5E": 0.4986,
+  "LMNA": 0.4853,
+  "AHNAK2": 0.4853,
+  "MYOF": 0.4746,
+  "S100A6": 0.4634,
+  "AHNAK": 0.4584,
+  "NMI": 0.4567,
+  "ANLN": 0.4537,
+  "PSMB8": 0.4516,
+  "RRAS": 0.4476,
+  "NCEH1": 0.4474,
+  "BCAR1": 0.4439,
+  "IFI35": 0.4438,
+  "FHL2": 0.443,
+  "CAPN2": 0.4414,
+  "EHD4": 0.4376,
+  "SEPTIN10": 0.4263,
+  "CAVIN1": 0.4256,
+  "B2M": 0.4256,
+  "MET": 0.425
+ }
+}
