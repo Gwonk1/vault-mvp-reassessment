@@ -1,0 +1,21 @@
+{
+ "label": "LUMEN-FACING CONSERVED",
+ "chains": 78,
+ "gate_chains": true,
+ "gate_burial": true,
+ "n_buried": 188,
+ "n_interface": 269,
+ "n_lumen": 156,
+ "n_outward": 196,
+ "cons_lumen": 0.7215202707894506,
+ "cons_outward": 0.6404861830846468,
+ "cons_interface": 0.7727148027477301,
+ "cons_buried": 0.7867582105245251,
+ "diff": -0.0810340877048038,
+ "ci": [
+  -0.13945621515063514,
+  -0.02614263433546461
+ ],
+ "spearman_dr": -0.20639093314931253,
+ "map_identity": 1.0
+}

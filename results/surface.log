@@ -3,3 +3,14 @@ protein chains: 78
 assembly 483912 atoms | z range -331..331 | r range 22..203
 reference chain A | neighbour chains kept: 16
 SASA in context...
+SASA isolated...
+reference chain residues scored: 812
+rat sequences in alignment: ['10116.ENSRNOP00000027360']
+sequence mapping offset 0, identity 1.000
+
+GATE chains>=70: True | buried cons 0.787 > exposed 0.676: True
+counts: buried 188, interface 269, exposed 352 (lumen 156, outward 196)
+
+mean conservation: lumen 0.722 | outward 0.640 | interface 0.773 | buried 0.787
+difference outward-lumen -0.0810 (95% CI -0.1395,-0.0261) -> LUMEN-FACING CONSERVED
+secondary: Spearman cons vs dr among exposed = -0.206 (p=9.6e-05)

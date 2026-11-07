@@ -316,3 +316,46 @@ Consequences:
 Co-abundance is correlation, not interaction. GO terms are heavily nested, so 50 terms is not 50
 independent findings. Tumour tissue and cancer cell lines only. A copy-number-adjusted re-analysis is
 the obvious next step and has not been run.
+
+## 12. Which face is evolution protecting, and where does the ligand actually sit?
+
+Two analyses, pre-registered (`SURFACE_PREREGISTRATION.md` + `SURFACE_AMENDMENT.md`).
+
+### 12a. Surface conservation — LUMEN-FACING CONSERVED
+
+78-chain biological assembly of rat vault (PDB 4V60), per-residue conservation from the eukaryotic
+alignment anchored on the rat sequence (mapping identity 1.000), accessibility computed in the context of
+neighbouring chains, subunit interfaces separated as their own category.
+
+| Category | n residues | Mean conservation |
+|---|---|---|
+| Buried | 188 | 0.787 |
+| Subunit interface | 269 | 0.773 |
+| **Lumen-facing (exposed)** | 156 | **0.722** |
+| **Outward-facing (exposed)** | 196 | **0.640** |
+
+Difference outward − lumen = **−0.081 (95% CI −0.139, −0.026)**, block bootstrap over 20-residue windows.
+Spearman of conservation against transmural offset among exposed residues = **−0.206 (p = 9.6e−5)**.
+Gate passed (78 chains; buried 0.787 > exposed 0.676).
+
+**This answers Graham's "maybe it binds on the outside" directly, and the answer is no.** Evolution
+protects the lumen-facing surface. The field's lumen-first instinct had the right face.
+
+### 12b. Where the ADP-ribose actually sits — inside the wall, not on a surface
+
+PDB 11JB (human vault, endogenous ADP-ribose), 965,562 atoms, 78 AR6 copies, one per MVP chain. All 78
+share |z| = 171.7 Å and r = 134.6 Å, as 39-fold symmetry per half requires.
+
+At that height the shell spans r = 120.4–161.9 Å. The ligand sits at **fractional depth 0.34** between
+lumen face and outer face, with **26% of the shell's protein mass at that height radially inside it**.
+
+"Lumenal" as published is nearly right but imprecise: the pocket is **embedded within the shell wall**,
+about a third out from the lumen surface — on neither face. Whether a solvent channel connects it to
+either side is **not** established here; explicit tunnel detection was not run, so the transmural-pore
+idea stays open, neither supported nor refuted.
+
+### Limits
+
+4V60 is rat and lacks both the bound ADP-ribose and the PARP4 density, so 12a measures the apo shell.
+Shell boundaries in 12b are 2nd/98th percentiles of protein atoms in a ±7.5 Å axial slab — crude.
+Conservation localises constraint, not function.

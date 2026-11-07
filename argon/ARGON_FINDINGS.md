@@ -8,7 +8,7 @@
 
 ## 1. Executive Synthesis: What the Vault Actually Is
 
-Four decades of vault research—and `LEDGER.md` Standing Item `#18` (*"absorb what?"*)—stalled on a missing biochemical substrate: why build a 13 MDa, 78-subunit `SPFH`-superfamily protein shell (`MVP`, 89.5th percentile sequence conservation, `mis_z = 2.5`) to house two proteins (`TEP1`, 0.8th percentile; `PARP4`, 3rd percentile) that evolve as fast as innate immune sensors, yet show zero fitness phenotype (`ORCS` `13/1,393`) in sterile tissue culture?
+Four decades of vault research—and `LEDGER.md` Standing Item `#18` (*"absorb what?"*)—stalled on a missing biochemical substrate: why build a 13 MDa, 78-subunit `SPFH`-superfamily protein shell (`MVP`, 89.5th percentile sequence conservation, `mis_z = 2.5`) to house two proteins (`TEP1`, 0.8th percentile; `PARP4`, 3rd percentile) that evolve as fast as innate immune sensors, yet show zero fitness phenotype (`ORCS` `9/1,340` screens in the pre-registered universe [`results/orcs_final.json`], plus `3` descriptive-only hits in excluded screens [`results/orcs_mvp_excluded.csv`] that are not pooled) in sterile tissue culture?
 
 By pulling **seven 2025–2026 primary manuscripts**, **four cryo-EM atomic structures (`PDB 9R86`, `9R87`, `9BW6`, `11JB`)**, **live-cell *Dictyostelium* `MVPA-TurboID` + endogenous human `A549` anti-`MVP` IP-MS + `BioPlex 3.0`**, **untrimmed eukaryotic alignments (`n = 173` species) + `gnomAD v4` (`~800k` humans)**, and **`CCLE` / `CPTAC` copy-number-adjusted proteomics & 225-metabolite LC-MS**, all four puzzles snap into a single biochemical machine:
 
