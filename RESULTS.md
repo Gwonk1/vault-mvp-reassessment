@@ -2041,3 +2041,85 @@ with translation machinery, a cytoskeletal association may follow from **where t
 synthesised** rather than from what it does. That is now a competing explanation with data behind it
 rather than a bare possibility — though it is itself sub-threshold, and CFdb's authors do not report
 interactions at this precision. We do not call these interactions.
+
+## 40. The translation tail IS specific to MVP, against our registered expectation
+
+`TRANSLATION_SPECIFICITY_PREREGISTRATION.md`. We registered the expectation that MVP would be "high but
+not extreme" and that the glycolytic comparators would "also be elevated", with a kill condition below
+the 75th percentile. **Both halves of that expectation were wrong.**
+
+**Both gates passed.** Ribosomal seeds are extreme as they must be — RPL7 at 30.3x (98.7th percentile),
+RPS6 at 31.9x (98.7th) — and PSMA1 sits at 2.75x (70th), so the measure discriminates rather than
+calling everything extreme.
+
+Random reference distribution over 150 seed proteins with at least 5,000 scored partners each:
+**median 1.57x, 75th percentile 2.75x, 95th percentile 8.09x, maximum 31.87x.**
+
+| seed | role | fold | percentile |
+|---|---|---|---|
+| RPS6 | gate: expect high | 31.9x | 98.7 |
+| RPL7 | gate: expect high | 30.3x | 98.7 |
+| **MVP** | **under test** | **18.5x** | **98.0** |
+| PKM | abundant cytoplasmic | 3.5x | 79.3 |
+| ALDOA | abundant cytoplasmic | 3.2x | 75.3 |
+| PSMA1 | gate: expect low | 2.8x | 70.0 |
+| GAPDH | abundant cytoplasmic | 2.8x | 70.0 |
+| FLOT2 | SPFH family | 2.8x | 70.0 |
+| FLOT1 | SPFH family | 2.4x | 60.0 |
+| ENO1 | abundant cytoplasmic | 2.0x | 52.0 |
+| STOM | SPFH family | 1.6x | 41.3 |
+| LDHA | abundant cytoplasmic | 1.2x | 26.0 |
+
+**Verdict: MVP-SPECIFIC at the 98.0th percentile.**
+
+### 40a. Why the comparators matter more than MVP's number
+
+The premise we set out to test was that translation machinery dominates every abundant cytoplasmic
+protein's co-elution tail. **It does not.** Five abundant glycolytic enzymes span the 26th to 79th
+percentile — GAPDH and ENO1, two of the most abundant proteins in the cytoplasm, sit at 70th and 52nd.
+So a translation-enriched tail is not what abundance buys you in this instrument.
+
+**Nor is it an SPFH-family property.** FLOT1, FLOT2 and STOM land at the 60th, 70th and 41st percentiles.
+MVP's own domain family does not do this, which is the same discrimination §30 found for the membrane
+module and in the same direction: whatever this is, it is about the vault and not about SPFH proteins.
+
+MVP sits with the ribosomal proteins — 18.5x against RPL7's 30.3x and RPS6's 31.9x — and clear of every
+non-translational comparator.
+
+### 40b. This does not overturn §39, and the distinction is worth stating precisely
+
+§39 registered the verdict **NOT SPECIFIC** and that verdict stands. The two tests ask different
+specificity questions:
+
+- **§39, across terms:** within MVP's tail, is translation enriched *and other things not*? Answer: no —
+  ruffle and actin organisation also cleared, so the tail is not exclusively translational.
+- **§40, across seeds:** among comparable proteins, is MVP's translation enrichment unusual? Answer:
+  yes — 98th percentile, with abundant and SPFH controls unremarkable.
+
+Both are true. The tail contains more than translation, **and** the translation component is specific to
+MVP. §39's effect-size observation — 18-fold for translation against 2.0-fold for actin — now has the
+comparison behind it that we said it lacked, and it is the across-seed comparison that supplies it.
+
+### 40c. What it supports, and the four limits that remain
+
+**#168 survives and strengthens.** The competing explanation for #155 — that MVP's cortical-actin
+covariation may follow from where the particle is synthesised rather than from what it does — now rests
+on a specific, gated, control-bearing result rather than on a raw fold-enrichment.
+
+It also aligns with the published claim this project never tested: **vaults are assembled on
+polyribosomes.** We did not discover that. What is new is that it is visible in native co-fractionation
+of 411 datasets, in a measure where MVP sits beside ribosomal proteins and clear of its own domain
+family.
+
+Limits, all live:
+
+1. **Precision 0.30-0.38 is below the level CFdb's authors report interactions at.** These are not
+   interactions and we do not call them that.
+2. **Co-elution is not contact** (§38). A 13 MDa particle assembled on a polyribosome would co-elute with
+   ribosomal material for reasons of shared sedimentation and synthesis, which is a different claim from
+   physical association.
+3. **This is one instrument.** Everything that died tonight died on replication or on a second
+   instrument, and this result has had neither.
+4. **Our expectation was wrong twice over**, which is the correct reason to trust the result more and our
+   judgement about it less. The registered prediction said MVP would be unremarkable and the glycolytic
+   controls elevated; the data said the reverse on both counts.

@@ -1,0 +1,23 @@
+GOBP_CYTOPLASMIC_TRANSLATION: 163 members
+proteins with scored partners: 11805
+eligible seeds (>=5000 partners): 9773
+term members in universe: 150 | expected in a top-200: 2.54
+
+random distribution over 150 seeds: median 1.57x  75th 2.75x  95th 8.09x  max 31.87x
+
+named seeds:
+  MVP     under test             fold 18.49   percentile 98.0
+  RPL7    gate: expect high      fold 30.3    percentile 98.7
+  RPS6    gate: expect high      fold 31.87   percentile 98.7
+  PSMA1   gate: expect low       fold 2.75    percentile 70.0
+  GAPDH   abundant cytoplasmic   fold 2.75    percentile 70.0
+  ENO1    abundant cytoplasmic   fold 1.97    percentile 52.0
+  PKM     abundant cytoplasmic   fold 3.54    percentile 79.3
+  LDHA    abundant cytoplasmic   fold 1.18    percentile 26.0
+  ALDOA   abundant cytoplasmic   fold 3.15    percentile 75.3
+  FLOT1   SPFH family            fold 2.36    percentile 60.0
+  FLOT2   SPFH family            fold 2.75    percentile 70.0
+  STOM    SPFH family            fold 1.57    percentile 41.3
+
+GATE1 RPL7/RPS6 > 95th: True | GATE2 PSMA1 < 90th: True -> PASS
+VERDICT: MVP-SPECIFIC (percentile 98.0)
