@@ -151,6 +151,34 @@ without correction over 1,205 proteins, and CAPN2, EHD4 and IQGAP1 are absent fr
 altogether, so they were never tested. What we can say is that PARP4 and TEP1 are confirmed
 physically and that ANXA2 and S100A10 are the strongest additional human candidates.
 
+**We then reversed that, and then reversed it back, and both moves are instructive.** A blind review
+identified a confound we had not considered: equal-protein-mass proteomics mechanically penalises a
+strictly cytoplasmic complex in nucleus-dominated cells, and a housekeeping nuclear-to-cytoplasmic
+proxy alone explains R-squared = 0.52 of between-lineage MVP variance. Removing it sharpened the
+signal dramatically - plasma membrane repair, caveola and membrane organisation each beat all 200
+size- and abundance-matched random sets (p = 0.000) while generic endosomal transport did not (p =
+0.49), with PARP4 and TEP1 as ranks 1 and 2 of 8,982 proteins, and with myoferlin and the AHNAK
+scaffold appearing unbidden. We recorded that as a reversal.
+
+**It does not replicate.** Across eight independent tumour proteomic cohorts analysed separately,
+the same test with the same unmodified gene sets clears 0.05 in **one of four** cohorts whose
+control gates passed, with three returning p = 1.00. The pre-registered kill condition fired and the
+reversal is withdrawn. One cohort reached p = 0.00 but missed its complex gate by a single
+proteasome subunit, which would have moved the verdict to partial replication; we honour the gate as
+written and state the closeness rather than bury it. A registered specificity test confirms the
+cell-line enrichment was MVP-specific rather than a generic property of SPFH-domain proteins
+(clearing for one of six other SPFH seeds), which makes it a precise result about a non-replicating
+one.
+
+**What replicates instead is the pair, not the neighbourhood.** PARP4 is MVP's rank-one correlate in
+**all eight cohorts** - brain, breast, colon, glioblastoma, lung, pancreas and endometrium - after
+the same residualisation, in addition to cell lines and to the original thirteen-cohort analysis.
+That is the most robust quantitative finding in this work. The broad membrane neighbourhood around
+it is not supported by co-abundance data, and the hypothesis one of us favoured is withdrawn with
+it. Nothing here disproves a membrane association as biology: the SPFH domain, the *Dictyostelium*
+tomography placing vaults on membranes, ANXA2 and S100A10 as confirmed interactors, and the
+published CFTR-raft knockout phenotype all stand. What is dead is the inference from co-abundance.
+
 **Developmental scaffolding - reported as uninformative.** This test **failed its own gate** and we
 report it accordingly, because our stated rule is that a failed gate is not reinterpreted. The
 pre-registration required LIN28A, LIN28B and IGF2BP1 each at or below the 10th percentile in at
