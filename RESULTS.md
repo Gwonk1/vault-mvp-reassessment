@@ -2228,3 +2228,54 @@ readily-available contact instrument we had not used, and it does not contain th
 Two contact instruments remain unexhausted and both need new data acquisition: the raw OpenCell deposits,
 and Kurusu et al. 2023 (PMID 37192622) particle-sorted p62-body proteomics, which bears on vault *fate*
 rather than vault neighbourhood and connects to the autophagy thread §20 tested at transcript level.
+
+## 43. The trimer language stands: TEP1 does not need PARP4
+
+`TRIMER_PREREGISTRATION.md`. No expectation was registered, because the instruments pointed opposite
+ways and we did not know.
+
+**Both gates passed.** MVP is a WT interactor (LWTP 3.80) and is **not** PARP4-dependent
+(WTKD_LFC 0.005, WTKD_P 0.069) — so knocking down PARP4 does not dismantle the particle, and anything
+downstream is interpretable. PARP4 **is** PARP4-dependent (WTKD_LFC 5.51, WTKD_P 2.85) — so the
+knockdown worked and the dependence columns mean what we took them to mean.
+
+| protein | WT_LFC | LWTP | WTKD_LFC | WTKD_P | PARP4-dependent |
+|---|---|---|---|---|---|
+| MVP | 7.62 | 3.80 | 0.005 | 0.069 | no (gate) |
+| PARP4 | 8.66 | 3.32 | 5.51 | 2.85 | **yes** (gate) |
+| **TEP1** | **6.27** | **3.33** | **0.154** | **0.020** | **no** |
+
+**TEP1's vault association is unchanged by PARP4 knockdown.** It is not recruited through PARP4.
+
+### 43a. What this settles, and what it says about CFdb
+
+The trimer language used since §25 is correct: **MVP, PARP4 and TEP1 are three proteins each
+independently associated with the particle**, not a pair plus a passenger. The specific alternative we
+registered — that PARP4's dramatically tighter co-elution score meant TEP1 was recruited through it — is
+wrong.
+
+It also resolves the instrument disagreement in CFdb's disfavour. CFdb scored MVP-TEP1 at precision
+**0.041**, the noise floor, while the same resource gave MVP-PARP4 **0.676**. The pulldown says TEP1 is
+a genuine, PARP4-independent vault interactor at LWTP 3.33. **So CFdb's TEP1 score is a sensitivity
+failure of that instrument, not a statement about the vault** — which is the reading #144 proposed and
+this test confirms, and it strengthens the caution in §33 that sensitivity for known vault subunits
+there is one of two.
+
+### 43b. MYOF is actively excluded, and two instruments now agree
+
+The secondary analysis re-states #39's background from the primary table: **17 of 88 WT interactors
+(19.3%) are PARP4-dependent**, matching the 18.5% figure quoted there.
+
+Among the proteins this project nominated and later withdrew:
+
+- **ANXA2 (+1.74, LWTP 2.62) and S100A10 (+2.11, LWTP 2.69) are confirmed WT vault interactors**, and
+  neither is PARP4-dependent. These two have now survived every instrument we have applied and remain
+  the only members of the old membrane list with any support.
+- **EHD2 is not an interactor** (LWTP 0.54). **AHNAK is not** (LWTP 0.05). **EHD4, CAPN2 and IQGAP1 are
+  absent from the table entirely**, which is the point #75 made: they were never tested rather than
+  refuted.
+- **MYOF is depleted from the vault pulldown: WT_LFC −2.23.** §32 independently found MYOF at **−3.32**
+  (p = 3.4e-4) in the PARP4 TurboID neighbourhood. **Two instruments of different design now agree that
+  myoferlin is actively excluded from the vault's vicinity** — and myoferlin was the single most
+  canonical membrane-repair protein that arrived unbidden in §28 and which we treated as the strongest
+  evidence for that module. It is the opposite of a vault partner.

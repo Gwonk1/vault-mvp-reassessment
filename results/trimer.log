@@ -1,0 +1,21 @@
+core proteins:
+  MVP     {'WT_LFC': 7.622, 'LWTP': 3.798, 'WTKD_LFC': 0.005, 'WTKD_P': 0.069, 'wt_interactor': True, 'parp4_dependent': False}
+  PARP4   {'WT_LFC': 8.657, 'LWTP': 3.32, 'WTKD_LFC': 5.513, 'WTKD_P': 2.848, 'wt_interactor': True, 'parp4_dependent': True}
+  TEP1    {'WT_LFC': 6.268, 'LWTP': 3.334, 'WTKD_LFC': 0.154, 'WTKD_P': 0.02, 'wt_interactor': True, 'parp4_dependent': False}
+
+GATE1 MVP is a WT interactor and NOT PARP4-dependent: True
+GATE2 PARP4 is itself PARP4-dependent: True
+  => PASS
+
+VERDICT: TEP1 is NOT PARP4-dependent - trimer language stands
+
+secondary: 17 of 88 WT interactors are PARP4-dependent (19.3%)
+previously named proteins:
+  ANXA2     WT interactor     WT_LFC +1.74 LWTP 2.62
+  S100A10   WT interactor     WT_LFC +2.11 LWTP 2.69
+  EHD2      not an interactor WT_LFC +0.96 LWTP 0.54
+  EHD4      absent from table
+  CAPN2     absent from table
+  IQGAP1    absent from table
+  MYOF      not an interactor WT_LFC -2.23 LWTP 1.59
+  AHNAK     not an interactor WT_LFC -0.06 LWTP 0.05

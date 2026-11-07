@@ -1,0 +1,79 @@
+{
+ "core": {
+  "MVP": {
+   "WT_LFC": 7.622,
+   "LWTP": 3.798,
+   "WTKD_LFC": 0.005,
+   "WTKD_P": 0.069,
+   "wt_interactor": true,
+   "parp4_dependent": false
+  },
+  "PARP4": {
+   "WT_LFC": 8.657,
+   "LWTP": 3.32,
+   "WTKD_LFC": 5.513,
+   "WTKD_P": 2.848,
+   "wt_interactor": true,
+   "parp4_dependent": true
+  },
+  "TEP1": {
+   "WT_LFC": 6.268,
+   "LWTP": 3.334,
+   "WTKD_LFC": 0.154,
+   "WTKD_P": 0.02,
+   "wt_interactor": true,
+   "parp4_dependent": false
+  }
+ },
+ "gate1_mvp": true,
+ "gate2_parp4": true,
+ "gate": true,
+ "verdict": "TEP1 is NOT PARP4-dependent - trimer language stands",
+ "n_wt_interactors": 88,
+ "n_parp4_dependent": 17,
+ "named": {
+  "ANXA2": {
+   "WT_LFC": 1.741,
+   "LWTP": 2.623,
+   "WTKD_LFC": 0.827,
+   "WTKD_P": 0.728,
+   "wt_interactor": true,
+   "parp4_dependent": false
+  },
+  "S100A10": {
+   "WT_LFC": 2.114,
+   "LWTP": 2.69,
+   "WTKD_LFC": 2.773,
+   "WTKD_P": 1.207,
+   "wt_interactor": true,
+   "parp4_dependent": false
+  },
+  "EHD2": {
+   "WT_LFC": 0.964,
+   "LWTP": 0.539,
+   "WTKD_LFC": 1.001,
+   "WTKD_P": 0.001,
+   "wt_interactor": false,
+   "parp4_dependent": false
+  },
+  "EHD4": null,
+  "CAPN2": null,
+  "IQGAP1": null,
+  "MYOF": {
+   "WT_LFC": -2.235,
+   "LWTP": 1.589,
+   "WTKD_LFC": 2.533,
+   "WTKD_P": 1.459,
+   "wt_interactor": false,
+   "parp4_dependent": false
+  },
+  "AHNAK": {
+   "WT_LFC": -0.064,
+   "LWTP": 0.051,
+   "WTKD_LFC": 1.761,
+   "WTKD_P": 0.993,
+   "wt_interactor": false,
+   "parp4_dependent": false
+  }
+ }
+}
