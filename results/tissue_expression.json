@@ -1,0 +1,48 @@
+{
+ "gate": 3,
+ "mvp_top10": [
+  {
+   "tissue": "adrenal gland",
+   "nTPM": 176.2
+  },
+  {
+   "tissue": "colon",
+   "nTPM": 161.7
+  },
+  {
+   "tissue": "small intestine",
+   "nTPM": 156.7
+  },
+  {
+   "tissue": "duodenum",
+   "nTPM": 145.6
+  },
+  {
+   "tissue": "lung",
+   "nTPM": 119.8
+  },
+  {
+   "tissue": "spleen",
+   "nTPM": 111.9
+  },
+  {
+   "tissue": "kidney",
+   "nTPM": 108.9
+  },
+  {
+   "tissue": "stomach",
+   "nTPM": 101.7
+  },
+  {
+   "tissue": "pancreas",
+   "nTPM": 100.8
+  },
+  {
+   "tissue": "ovary",
+   "nTPM": 100.3
+  }
+ ],
+ "lung_rank": 5,
+ "placenta_rank": 38,
+ "n_tissues": 51
+}

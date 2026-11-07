@@ -694,3 +694,31 @@ Whole tissue, so cell-type effects dilute. **mRNA cannot see what the model actu
 in p62 oligomerisation and turnover, which is a protein-level event. This bounds the tissue-level
 transcriptional consequence of losing vault RNA; it does not refute the biochemistry. The authors' own
 title already says the RNA is dispensable to development.
+
+## 21. Where is MVP actually highest? Not lung — adrenal and gut
+
+Human Protein Atlas consensus, 20,151 genes x 51 tissues. Gate 3/4 (ALB->liver, INS->pancreas,
+SFTPC->lung correct; MYH7->skeletal muscle, expected for beta-myosin in slow fibres).
+
+| Rank | Tissue | nTPM |
+|---|---|---|
+| 1 | Adrenal gland | 176 |
+| 2 | Colon | 162 |
+| 3 | Small intestine | 157 |
+| 4 | Duodenum | 146 |
+| **5** | **Lung** | **120** |
+| 38 | **Placenta** | **36** |
+| 51 | Retina | 6 |
+
+**Correction 1 — lung is fifth, not first.** The claim that lung has the highest vault expression runs
+through the five articles and I repeated it all day without checking. The LRP name came from lung-cancer
+drug resistance, not from lung topping the expression table. The real pattern is **adrenal gland plus the
+whole GI tract** (colon, small intestine, duodenum, stomach, rectum). That relocates the barrier reading
+rather than killing it: this is a gut-and-glandular protein that lung shares.
+
+**Correction 2 — placenta is low (rank 38).** Article 5 experiment 8 set the condition itself: "Is
+placenta a high-vault tissue? If it is not, my pre-eclampsia idea is dead on arrival." It is not.
+**The pre-eclampsia prediction is retired by its own criterion.**
+
+Nuance: MVP sits at the 96th percentile of all genes within lung and the 89th within placenta, so it is
+well expressed nearly everywhere; it is the *relative* enrichment that points at gut and adrenal.
