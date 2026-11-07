@@ -2,7 +2,7 @@
 
 **Graham W. Syfert.** Analysis performed with Claude (Anthropic) and a second agent ("Argon") in an
 adversarial review loop. All hypotheses were registered in a public git history before the relevant data
-were read; every gate, deviation and failure is recorded in `LEDGER.md` (63 entries) and `RESULTS.md`
+were read; every gate, deviation and failure is recorded in `LEDGER.md` (68 entries) and `RESULTS.md`
 (24 sections). Correspondence welcome, including corrections.
 
 ---
