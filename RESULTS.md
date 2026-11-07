@@ -1174,3 +1174,56 @@ Three limits, all real:
    registered rule, which required each to clear 0.05 alone. Combining after seeing both is the
    flexibility pre-registration exists to prevent, and it is reported as what a meta-analysis would say,
    not as satisfaction of the original criterion.
+
+## 29. The EMT control is UNINFORMATIVE — its own validity gate failed, so #109 stays open
+
+`EMT_PREREGISTRATION.md`. This was the control I flagged in §28d as able to kill #41 a third time.
+
+**Formal verdict: UNINFORMATIVE. Gate 3 failed.** The registered validity gate required the EMT score to
+behave like an EMT axis, with VIM, FN1 and CDH1 each at |r| >= 0.3. VIM (+0.595) and FN1 (+0.691) passed
+easily; **CDH1 reached only −0.194**. By the rule as written the score is not a validated EMT axis and
+the test says nothing, so it is reported that way.
+
+In hindsight the gate was badly chosen rather than the data being at fault. `HALLMARK_EMT` is dominated
+by extracellular-matrix and mesenchymal genes, and CDH1 loss is not a reliable *linear* correlate of
+pan-cancer EMT score — many epithelial lines retain CDH1 while scoring mesenchymal. Requiring a
+symmetric epithelial arm from an asymmetric signature was a design error of mine. **That is a lesson
+about gate design, not about vaults.**
+
+**The substantive numbers, reported because the gate failure does not entitle us to hide them, and
+explicitly not as a result:**
+
+| gene set | §28 (N:C + proliferation) | §29 (+ EMT score) |
+|---|---|---|
+| `GOBP_PLASMA_MEMBRANE_REPAIR` | 0.000 | **0.000** |
+| `GOCC_CAVEOLA` | 0.000 | **0.000** |
+| `GOBP_PLASMA_MEMBRANE_ORGANIZATION` | 0.000 | **0.000** |
+| `GOCC_LATE_ENDOSOME` | 0.005 | **0.095** |
+| `GOBP_ENDOSOMAL_TRANSPORT` | 0.49 | 0.115 |
+
+Gates 1 and 2 both passed: PARP4 remains rank 1 (+0.816) and TEP1 rank 2 (+0.583); PSMA1 still recovers
+20 of 25 proteasome subunits. The named repair proteins all **drop substantially in rank but stay
+positive**: S100A10 13th, ANXA2 19th, AHNAK2 24th, MYOF 27th, CAPN2 45th, AHNAK 52nd, EHD4 55th, EHD2
+56th.
+
+So the EMT axis plausibly absorbs *some* of the signal — the rank drops are real and the late-endosome
+term loses significance — while the repair, caveola and membrane-organisation enrichments do not move
+from zero of 200 matched-random sets. **But none of that is licensed, because the score failed its own
+validity check.**
+
+### Where this leaves #41, and why we stop here
+
+**§28's reversal stands on its own gates**, which passed. **#109's EMT concern is neither confirmed nor
+refuted — it remains open and untested.** The correct next step would be a validated bidirectional EMT
+signature with separate epithelial and mesenchymal arms rather than `HALLMARK_EMT`.
+
+**We are not running it.** This test has now been attempted twice with a gate failure each time for
+different mechanical reasons, and continuing to adjust the method until the module passes is exactly the
+behaviour the pre-registration discipline exists to prevent. The honest state of the evidence is:
+
+- The module survives the one confound we have properly controlled (cytoplasmic mass and proliferation).
+- Whether it survives an adhesion/EMT axis is **unknown**, and we flagged it ourselves rather than
+  waiting for a reviewer to.
+- It remains co-abundance, not contact.
+
+That is where it should sit until someone runs it who did not write the hypothesis.

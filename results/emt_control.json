@@ -1,0 +1,76 @@
+{
+ "run": "EMT-adjusted",
+ "gate1_assembly": true,
+ "gate1_ranks": {
+  "PARP4": 1,
+  "TEP1": 2
+ },
+ "gate2_proteasome": true,
+ "gate2_recovered": 20,
+ "gate3_emt_validity": false,
+ "verdict": "UNINFORMATIVE (gate failed)",
+ "primary": {
+  "GOBP_PLASMA_MEMBRANE_REPAIR": {
+   "n_members": 24,
+   "observed_in_top200": 6,
+   "specificity_p": 0.0
+  }
+ },
+ "secondary": {
+  "GOCC_LYSOSOME": null,
+  "GOCC_LATE_ENDOSOME": {
+   "n_members": 210,
+   "observed_in_top200": 8,
+   "specificity_p": 0.095
+  },
+  "GOBP_ENDOSOMAL_TRANSPORT": {
+   "n_members": 243,
+   "observed_in_top200": 9,
+   "specificity_p": 0.115
+  },
+  "GOCC_CAVEOLA": {
+   "n_members": 52,
+   "observed_in_top200": 5,
+   "specificity_p": 0.0
+  },
+  "GOCC_MEMBRANE_RAFT": null,
+  "GOBP_PLASMA_MEMBRANE_ORGANIZATION": {
+   "n_members": 87,
+   "observed_in_top200": 10,
+   "specificity_p": 0.0
+  }
+ },
+ "n_proteins": 8982,
+ "mvp_top30": {
+  "PARP4": 0.8163,
+  "TEP1": 0.5833,
+  "NIBAN2": 0.4619,
+  "SDCBP2": 0.4448,
+  "PSMB8": 0.4437,
+  "ANXA4": 0.4405,
+  "IFI35": 0.4385,
+  "NMI": 0.4335,
+  "GPA33": 0.4284,
+  "S100A6": 0.4269,
+  "MGLL": 0.4237,
+  "LGALS4": 0.4168,
+  "S100A10": 0.4164,
+  "AOC1": 0.4135,
+  "EFCAB7": 0.413,
+  "SQOR": 0.4127,
+  "SLCO4A1": 0.408,
+  "HLA-F": 0.4061,
+  "ANXA2": 0.4052,
+  "NT5E": 0.4045,
+  "BCL2L15": 0.4001,
+  "TMEM238": 0.3972,
+  "S100A11": 0.3932,
+  "AHNAK2": 0.3889,
+  "OASL": 0.3846,
+  "BAIAP2L1": 0.384,
+  "MYOF": 0.382,
+  "ABCC3": 0.3809,
+  "IQGAP1": 0.3793,
+  "GPRC5A": 0.3792
+ }
+}

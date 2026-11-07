@@ -1,0 +1,65 @@
+EMT score from 181 HALLMARK_EMT members (excluded ['COL5A1', 'MVP', 'PARP4', 'RHOB', 'TEP1'])
+  GATE3 VIM vs EMT score r = +0.595
+  GATE3 FN1 vs EMT score r = +0.691
+  GATE3 CDH1 vs EMT score r = -0.194
+GATE3 EMT validity -> FAIL
+proteins 12096  lines with covariates 330
+proteins retained (>=150 lines): 8982  [run 1 retained 5063]
+residualised (pairwise): (8982, 330)  TEP1 present: True
+
+GATE1 PARP4/TEP1 ranks {'PARP4': 1, 'TEP1': 2} -> PASS
+GATE2 PSMA1 recovers 20/25 proteasome -> PASS
+
+PRIMARY GOBP_PLASMA_MEMBRANE_REPAIR: {'n_members': 24, 'observed_in_top200': 6, 'specificity_p': 0.0}
+  GOCC_LYSOSOME: None
+  GOCC_LATE_ENDOSOME: {'n_members': 210, 'observed_in_top200': 8, 'specificity_p': 0.095}
+  GOBP_ENDOSOMAL_TRANSPORT: {'n_members': 243, 'observed_in_top200': 9, 'specificity_p': 0.115}
+  GOCC_CAVEOLA: {'n_members': 52, 'observed_in_top200': 5, 'specificity_p': 0.0}
+  GOCC_MEMBRANE_RAFT: None
+  GOBP_PLASMA_MEMBRANE_ORGANIZATION: {'n_members': 87, 'observed_in_top200': 10, 'specificity_p': 0.0}
+
+VERDICT: UNINFORMATIVE (gate failed)
+
+named protein ranks after EMT adjustment:
+  PARP4     rank 1  r=+0.816
+  TEP1      rank 2  r=+0.583
+  ANXA2     rank 19  r=+0.405
+  S100A10   rank 13  r=+0.416
+  EHD2      rank 56  r=+0.349
+  EHD4      rank 55  r=+0.349
+  CAPN2     rank 45  r=+0.355
+  MYOF      rank 27  r=+0.382
+  AHNAK     rank 52  r=+0.351
+  AHNAK2    rank 24  r=+0.389
+
+MVP top 30 residualised correlates:
+PARP4       0.816
+TEP1        0.583
+NIBAN2      0.462
+SDCBP2      0.445
+PSMB8       0.444
+ANXA4       0.440
+IFI35       0.439
+NMI         0.434
+GPA33       0.428
+S100A6      0.427
+MGLL        0.424
+LGALS4      0.417
+S100A10     0.416
+AOC1        0.414
+EFCAB7      0.413
+SQOR        0.413
+SLCO4A1     0.408
+HLA-F       0.406
+ANXA2       0.405
+NT5E        0.404
+BCL2L15     0.400
+TMEM238     0.397
+S100A11     0.393
+AHNAK2      0.389
+OASL        0.385
+BAIAP2L1    0.384
+MYOF        0.382
+ABCC3       0.381
+IQGAP1      0.379
+GPRC5A      0.379
