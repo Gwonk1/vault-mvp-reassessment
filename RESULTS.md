@@ -3301,3 +3301,99 @@ failed).
 still one instrument, with a nuclear-contamination control that cannot be built in this assay (#217).
 §40 still has the polysome-window artefact unaddressed, which is a *new* alternative, not an eliminated
 one — so the honest count is **five eliminated and one newly identified**, not six eliminated.
+
+## 56. The donor list invalidates §51's control; k behaves ambiguously and our criterion missed it
+
+`DONOR_AND_K_PREREGISTRATION.md`. Both tests Grok named. **Test 1 met our registered expectation.
+Test 2 contradicted it, and then we found our own criterion was the wrong one.**
+
+### 56a. §51's control is INVALID as applied
+
+Grok's condition was that length-and-charge matching fails if the donors drawn from those decile cells
+are *"ribosomal under another name."* Enumerating the actual donor pool for
+`GOBP_CYTOPLASMIC_TRANSLATION`'s 95 members across their 65 occupied cells:
+
+| | value |
+|---|---|
+| donor pool size | **189 proteins** |
+| translation-adjacent fraction, donor pool | **0.772** |
+| translation-adjacent fraction, whole universe (n=1,166) | 0.311 |
+| **enrichment ratio** | **2.48x** |
+
+Registered bars: invalid above 2.0x, stands below 1.5x. **2.48x — invalid as applied.**
+
+**The matched draws were comparing translation proteins against a pool that is 77% translation-adjacent.**
+Length and charge are, in this universe, substantially a recoding of the label. So §51's residual of
++0.070 log2 (upper bound ~1.16x) is **an underestimate by construction**, and the bound we reported in
+§55b cannot stand.
+
+**What this does and does not do.** It does not restore the contact corroboration — it **reopens** the
+question. The abundance-matched class shift (+0.544, p = 0.004, rank 23 of 1,276) is now the
+better-supported statement, since the decomposition that explained it away is invalid. We have no valid
+estimate of the contact-specific residual, and constructing one needs a donor pool that is not already
+the label, which this universe may not contain.
+
+### 56b. k declines monotonically — our registered criterion says complex-like
+
+Gates passed at every k (RPL7 and RPS6 at 98.7-100.0; small-complex negatives' median 0.0-65.0):
+
+| k | MVP fold | MVP percentile | hits | hits/k |
+|---|---|---|---|---|
+| **25** | **37.78x** | **99.3** | 12 | 0.480 |
+| 50 | 31.48x | 98.0 | 20 | 0.400 |
+| 100 | 28.33x | 98.0 | 36 | 0.360 |
+| 200 | 18.49x | 98.0 | 47 | 0.235 |
+| 400 | 13.97x | 98.7 | 71 | 0.177 |
+| 800 | 9.15x | 98.7 | 93 | 0.116 |
+
+Our registered rule — *"maximal at small k and declining monotonically, percentile above 95 at small
+k"* — is satisfied exactly: **the effect is strongest at k = 25 (37.78x, 99.3rd percentile)**, where a
+real co-complex should be most visible, and the percentile is stable at 98-99 throughout. At k = 25 all
+six small-complex negatives have **zero** translation partners, so the statistic discriminates sharply
+there.
+
+**This also removes the polysome-window alternative (#239) on its own terms**: a window artefact was
+registered to produce flat or rising fold, and fold falls 4.1x.
+
+### 56c. But we pre-specified the wrong discriminator, and the right one is ambiguous
+
+**Declining fold is the arithmetic consequence of any finite partner set**, because expectation grows
+linearly in k. The quantity that actually separates a complex from a window is **whether the hit count
+saturates** — and we did not pre-specify it.
+
+**It does not saturate.** k grows **32x** (25 → 800), fold falls only **4.1x**, and **hits grow 7.8x,
+from 12 to 93.** A complex with N true partners would plateau at N with fold falling as fast as k rises.
+Translation proteins keep accumulating through MVP's entire top-800.
+
+So the honest reading is **mixed, and our registered verdict of COMPLEX-LIKE is not wrong so much as
+answering a weaker question than we thought it was.** The 12 hits at k = 25 against 0.32 expected are a
+real, sharp, top-of-list signal that the negatives entirely lack. The continued accumulation to 93 hits
+at k = 800 is what a shared elution window looks like. **Both are present**, which is consistent with a
+small specific association sitting inside a broad co-migration envelope — and we cannot separate them
+with this instrument.
+
+**This is the third time today a registered criterion has failed to capture what it was written to
+capture** (#231 named charge instead of length; #238's look-alike percentile was 55% likely by
+construction; now this). It is becoming the project's characteristic failure, and it is a different
+error from the one-way gate: the bars were reachable and resolvable, but **the statistic was not the one
+that discriminates.**
+
+### 56d. Net effect on §40
+
+| alternative | status |
+|---|---|
+| degree | eliminated |
+| abundance | eliminated |
+| family membership | eliminated |
+| apparent mass | eliminated |
+| seed length and charge | eliminated, though #238 shows our headline number for it was weak |
+| **polysome-window co-elution** | **eliminated on the registered criterion, but the unregistered saturation test leaves it live** |
+
+And the contact-instrument question, which §51 appeared to close and §55b restated as a bound, is
+**reopened** by §56a with no valid estimate available.
+
+**Still unpromoted.** But §40 is now the most-attacked surviving observation in this project — six
+registered alternatives, five cleanly eliminated — and the reason it stays unpromoted is no longer that
+we expect it to fail. It is that one instrument cannot separate a specific association from the
+co-migration envelope it sits inside, and the experiment that could is a bench experiment, not a
+reanalysis.

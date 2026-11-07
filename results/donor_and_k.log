@@ -1,0 +1,19 @@
+TEST 1 donor list, for GOBP_CYTOPLASMIC_TRANSLATION (n=95 members, 65 occupied cells)
+  donor pool size: 189 proteins
+  translation-adjacent in donor pool : 0.772
+  translation-adjacent in universe   : 0.311  (n=1166)
+  ENRICHMENT RATIO = 2.48x
+  -> section 51 control: INVALID as applied
+
+TEST 2 varying k  (expected = |term in CFdb universe| * k / |universe|)
+  k=25   MVP fold  37.78x  pct  99.3 | RPL7 100.0 RPS6 100.0 | negs med   0.0 | gate PASS
+  k=50   MVP fold  31.48x  pct  98.0 | RPL7 100.0 RPS6 100.0 | negs med  60.3 | gate PASS
+  k=100  MVP fold  28.33x  pct  98.0 | RPL7 100.0 RPS6 100.0 | negs med  61.3 | gate PASS
+  k=200  MVP fold  18.49x  pct  98.0 | RPL7  98.7 RPS6  98.7 | negs med  65.0 | gate PASS
+  k=400  MVP fold  13.97x  pct  98.7 | RPL7  98.7 RPS6 100.0 | negs med  56.3 | gate PASS
+  k=800  MVP fold   9.15x  pct  98.7 | RPL7  98.7 RPS6 100.0 | negs med  58.0 | gate PASS
+
+  folds across k: [37.78, 31.48, 28.33, 18.49, 13.97, 9.15]
+  -> COMPLEX-LIKE
+
+VERDICT  test1: INVALID as applied  |  test2: COMPLEX-LIKE

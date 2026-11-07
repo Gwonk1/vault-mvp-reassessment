@@ -1,0 +1,68 @@
+{
+ "donor": {
+  "n_members": 95,
+  "n_cells": 65,
+  "n_donors": 189,
+  "frac_donor": 0.7724867724867724,
+  "frac_universe": 0.3113207547169811,
+  "ratio": 2.481321147987815,
+  "verdict": "INVALID as applied"
+ },
+ "k": {
+  "25": {
+   "mvp_fold": 37.78,
+   "mvp_pct": 99.3,
+   "rpl7": 100.0,
+   "rps6": 100.0,
+   "neg_median": 0.0,
+   "gate": true,
+   "rand_median": 0.0
+  },
+  "50": {
+   "mvp_fold": 31.48,
+   "mvp_pct": 98.0,
+   "rpl7": 100.0,
+   "rps6": 100.0,
+   "neg_median": 60.3,
+   "gate": true,
+   "rand_median": 1.57
+  },
+  "100": {
+   "mvp_fold": 28.33,
+   "mvp_pct": 98.0,
+   "rpl7": 100.0,
+   "rps6": 100.0,
+   "neg_median": 61.3,
+   "gate": true,
+   "rand_median": 1.57
+  },
+  "200": {
+   "mvp_fold": 18.49,
+   "mvp_pct": 98.0,
+   "rpl7": 98.7,
+   "rps6": 98.7,
+   "neg_median": 65.0,
+   "gate": true,
+   "rand_median": 1.57
+  },
+  "400": {
+   "mvp_fold": 13.97,
+   "mvp_pct": 98.7,
+   "rpl7": 98.7,
+   "rps6": 100.0,
+   "neg_median": 56.3,
+   "gate": true,
+   "rand_median": 1.77
+  },
+  "800": {
+   "mvp_fold": 9.15,
+   "mvp_pct": 98.7,
+   "rpl7": 98.7,
+   "rps6": 100.0,
+   "neg_median": 58.0,
+   "gate": true,
+   "rand_median": 2.12
+  }
+ },
+ "k_verdict": "COMPLEX-LIKE"
+}
