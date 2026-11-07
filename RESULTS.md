@@ -2715,3 +2715,85 @@ continuous contact measurement at a significance threshold and destroyed a real 
 the resulting null to a mechanism and from there to a headline.** The error was not mistaking
 co-migration for contact. It was building a gate with one reachable answer — twice in one day, in
 opposite directions — and then trusting the gate more than the data.
+
+## 49. Continuous re-analysis: translation corroborated, ruffling dead, degradation actively excluded
+
+`CONTINUOUS_PREREGISTRATION.md`. Applied uniformly to every term previously tested on the dichotomised
+set, including the ones we would have preferred to see die.
+
+**Both gates passed.** The vault core (MVP, PARP4, TEP1) has mean WT_LFC **+7.516** against a matched
+null of +0.017 — the **100th percentile**, so the statistic sees the bait and its two known subunits.
+The matched-percentile distribution across 1,276 terms has deciles 4.8 / 20.3 / **48.3** / 75.8 / 92.7,
+approximately uniform, so the matching is sound.
+
+### 49a. Translation clears the registered specificity bar, and not alone
+
+| term | n | mean WT_LFC | matched pct | rank of 1,276 |
+|---|---|---|---|---|
+| `GOCC_RIBOSOME` | 134 | **+0.314** | 100.0 | **14 (top 1.10%)** |
+| `GOBP_TRANSLATION` | 191 | **+0.280** | 100.0 | **14 (top 1.10%)** |
+| `GOBP_CYTOPLASMIC_TRANSLATION` | 95 | **+0.228** | 99.85 | **23 (top 1.80%)** |
+
+The registered bar was the top 2%. Translation clears it at **1.80%** — narrowly, and we say so.
+
+**What makes it convincing is not that one term squeaked in, but that the top of the scan is one
+coherent family.** Eight of the top fifteen terms are ribosomal or translational: ribosomal subunit
+(+0.314), ribosome (+0.314), ribonucleoprotein complex (+0.116), large ribosomal subunit (+0.255),
+mitochondrial large ribosomal subunit (+0.560), cytosolic ribosome (+0.272), cytosolic small ribosomal
+subunit (+0.486), translation (+0.280). A thresholding artefact does not produce a nested family of
+eight related annotations at the top of an unbiased 1,276-term scan.
+
+**So the convergence across instrument classes is real**: translation is enriched at the 98.0th
+percentile of 150 seeds in native co-elution (§40) and in the top 1.8% of all terms in physical contact.
+§41's kill is formally withdrawn.
+
+### 49b. Our registered prediction about actin was right, and it resolves nothing
+
+We registered: *"We expect actin filament organisation to clear nominal significance and to fail the
+specificity bar."* It did exactly that — `GOBP_ACTIN_FILAMENT_ORGANIZATION` mean +0.168, p = 0.059,
+**rank 80 of 1,276 = top 6.27%**. That falls between the registered bars (top 2% corroborates, outside
+top 10% weakens), so **cortical actin is formally intermediate and remains unresolved.**
+
+**But ruffling is dead.** `GOCC_RUFFLE` has mean **−0.0709**, below the matched null, **rank 497 of
+1,276 = top 38.95%**, p = 0.791. Membrane ruffling was the *strongest* co-abundance signal in this
+entire project — 13 observed against 3.1 expected, ≈4.2x, replicating across three independent cohorts
+after interferon-axis removal and abundance matching. **In the contact instrument it is flat.** The
+continuous statistic that rescued translation does not rescue ruffling, which is the cleanest
+demonstration available that §48a's correction was not a universal solvent.
+
+`GOCC_MITOCHONDRION` sits at top 24.76%, p = 0.491 — the abundance control behaves.
+
+### 49c. Degradation machinery is actively excluded, and we were wrong about how
+
+We registered that the degradation terms would "stay flat, since §46d's counts were below expectation
+rather than merely unremarkable." **They are not flat. They are the most depleted terms in the entire
+scan.**
+
+| term | n | mean WT_LFC | matched null | pct | rank |
+|---|---|---|---|---|---|
+| `GOBP_PROTEASOMAL_PROTEIN_CATABOLIC_PROCESS` | 75 | **−1.066** | −0.364 | **0.0** | **1,276 of 1,276** |
+| `GOBP_PROTEIN_CATABOLIC_PROCESS` | 111 | **−0.839** | −0.346 | 0.3 | 1,276 of 1,276 |
+| `GOBP_MACROAUTOPHAGY` | 31 | **−1.163** | −0.276 | 0.8 | 1,216 of 1,276 |
+
+**Proteasomal protein catabolism is the single most depleted annotation of 1,276 in an anti-MVP
+pulldown.** That is a stronger statement than §46d's "at or below chance", and it kills the vault-disposal
+reading far more decisively than the counts did: the machinery is not merely absent, it is
+anti-associated. COP1 (+4.74) and NBR1 (+5.09) are individual proteins standing against the trend of
+their own annotation class, which makes the "two degradation proteins therefore a disposal module"
+inference worse than we already judged it.
+
+### 49d. SMC5/6 reappears, and we are not claiming it
+
+`GOCC_SMC5_SMC6_COMPLEX` has mean WT_LFC **+3.976** against a matched null of +0.035, sd 0.80 — roughly
+five sigma, and the 100th percentile of 2,000 draws. `GOCC_SUMO_LIGASE_COMPLEX`, the same six proteins,
+gives the identical figure.
+
+**This is the same 4-of-6 observation restated with a more sensitive statistic, and the more sensitive
+statistic does not fix the multiple-testing problem that killed it.** §45 killed SMC5/6 at q = 0.4199
+across 4,527 small terms using the dichotomised count. The continuous statistic has not been run across
+that family, so **SMC5/6's apparent strength here is uncorrected and means nothing yet.**
+
+Claiming it now would be precisely the selective application #203 warns against — using the new
+statistic where it helps and the old family correction where that helps. **The consistent move is to run
+the continuous statistic across all 4,527 small terms with the same correction**, which is registered
+separately in `SMC56_CONTINUOUS_PREREGISTRATION.md` before being run.

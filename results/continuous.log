@@ -17,3 +17,35 @@ TARGETED (previously dichotomised contact tests):
   GOBP_MACROAUTOPHAGY                                    {'n': 31, 'mean': -1.1626, 'null_mean': -0.2758, 'null_sd': 0.3376, 'pct': 0.8, 'p_two_sided': 0.016}
 
 UNBIASED: 1276 terms, continuous statistic (300 draws each for speed)
+  percentile distribution across terms: deciles [4.8, 20.3, 48.3, 75.8, 92.7]
+  median 48.3 -> calibration gate (35-65): True
+
+SPECIFICITY (the registered question):
+  GOBP_CYTOPLASMIC_TRANSLATION ranks 23 of 1276 = top 1.80%
+  top 15 terms by matched percentile:
+    GOCC_RIBOSOMAL_SUBUNIT                                   n=125  mean=+0.314 pct=100.0
+    GOCC_RIBOSOME                                            n=134  mean=+0.314 pct=100.0
+    GOBP_PHOSPHATIDYLINOSITOL_3_KINASE_PROTEIN_KINASE_B_SI   n=18   mean=+1.044 pct=100.0
+    GOBP_PEPTIDYL_AMINO_ACID_MODIFICATION                    n=56   mean=+0.387 pct=100.0
+    GOCC_RIBONUCLEOPROTEIN_COMPLEX                           n=261  mean=+0.116 pct=100.0
+    GOBP_NEUTROPHIL_MIGRATION                                n=10   mean=+1.022 pct=100.0
+    GOCC_LARGE_RIBOSOMAL_SUBUNIT                             n=69   mean=+0.255 pct=100.0
+    GOCC_MITOCHONDRIAL_LARGE_RIBOSOMAL_SUBUNIT               n=23   mean=+0.560 pct=100.0
+    GOCC_CYTOSOLIC_RIBOSOME                                  n=82   mean=+0.272 pct=100.0
+    GOCC_CYTOSOLIC_SMALL_RIBOSOMAL_SUBUNIT                   n=35   mean=+0.486 pct=100.0
+    GOBP_REGULATION_OF_TELOMERE_MAINTENANCE                  n=24   mean=+1.128 pct=100.0
+    GOBP_TRANSLATION                                         n=191  mean=+0.280 pct=100.0
+    GOBP_GRANULOCYTE_MIGRATION                               n=12   mean=+0.937 pct=100.0
+    GOBP_NEGATIVE_REGULATION_OF_PHOSPHORYLATION              n=24   mean=+0.628 pct=100.0
+    GOBP_NEGATIVE_REGULATION_OF_PROTEIN_METABOLIC_PROCESS    n=74   mean=+0.213 pct=99.7
+  GOBP_CYTOPLASMIC_TRANSLATION                         rank    23 of 1276 (top 1.80%)
+  GOCC_RIBOSOME                                        rank    14 of 1276 (top 1.10%)
+  GOBP_TRANSLATION                                     rank    14 of 1276 (top 1.10%)
+  GOCC_RUFFLE                                          rank   497 of 1276 (top 38.95%)
+  GOBP_ACTIN_FILAMENT_ORGANIZATION                     rank    80 of 1276 (top 6.27%)
+  GOCC_MITOCHONDRION                                   rank   316 of 1276 (top 24.76%)
+  GOBP_PROTEASOMAL_PROTEIN_CATABOLIC_PROCESS           rank  1276 of 1276 (top 100.00%)
+  GOBP_PROTEIN_CATABOLIC_PROCESS                       rank  1276 of 1276 (top 100.00%)
+  GOBP_MACROAUTOPHAGY                                  rank  1216 of 1276 (top 95.30%)
+
+VERDICT: TRANSLATION CONVERGENCE CORROBORATED (top 1.80% of terms)
