@@ -1,0 +1,33 @@
+universe 1205 | WT vault interactors 88
+terms tested: 1276
+
+CALIBRATION 20 random 88-protein subsets: median 0.0 terms at q<0.05, mean 0.00, max 0
+  95th percentile 0.0 -> PASS
+
+real interactor set: 0 terms at q<0.05 (random 95th pct = 0.0)
+
+VERDICT: NO DETECTABLE PHYSICAL NEIGHBOURHOOD - zero terms at q<0.05
+
+top 20 of the 88 physical vault interactors by WT_LFC:
+          WT_LFC   LWTP  WTKD_LFC  WTKD_P  parp4_dependent
+GeneName                                                  
+TRO        8.680  3.553     5.629   1.422             True
+PARP4      8.657  3.320     5.513   2.848             True
+RALGAPB    8.069  1.462     0.823   0.188            False
+MVP        7.622  3.798     0.005   0.069            False
+SMC6       6.788  1.392     1.612   0.460            False
+TCAF1      6.484  3.070     4.597   2.264             True
+TEP1       6.268  3.334     0.154   0.020            False
+NSMCE3     5.998  2.309     2.302   0.916            False
+LMTK2      5.944  2.335    -0.768   0.549            False
+NSMCE1     5.790  3.017    -0.571   0.026            False
+DARS2      5.702  3.792     3.412   1.291            False
+WDR11      5.680  1.612     6.381   1.182            False
+NBR1       5.093  2.357     0.047   0.173            False
+COP1       4.741  2.588     1.560   0.427            False
+IPO7       4.577  1.848    -0.271   0.261            False
+RACK1      4.357  1.851     7.757   0.524            False
+GMPPA      4.217  6.529     0.516   0.071            False
+ACAD11     4.091  1.959     4.062   0.528            False
+HNRNPDL    3.964  3.735     4.320   1.122            False
+SMC5       3.931  2.981    -0.475   0.269            False

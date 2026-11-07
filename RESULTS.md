@@ -2279,3 +2279,67 @@ Among the proteins this project nominated and later withdrew:
   myoferlin is actively excluded from the vault's vicinity** — and myoferlin was the single most
   canonical membrane-repair protein that arrived unbidden in §28 and which we treated as the strongest
   evidence for that module. It is the opposite of a vault partner.
+
+## 44. Unbiased scan of the physical interactome: zero terms, and the registered expectation held
+
+`IPMS_SCAN_PREREGISTRATION.md`. Registered expectation was zero terms, and that is the result.
+
+**The calibration gate passed cleanly.** Twenty random 88-protein subsets of the same universe produced
+**median 0, mean 0.00, maximum 0** terms at q < 0.05 across 1,276 tested terms. The scan generates no
+false positives on this table, so a null is a real null and not a thresholding artefact.
+
+**The real interactor set: 0 terms at q < 0.05.**
+
+So the vault's physical interactome, in the one instrument that recovers all three of its subunits,
+**is describable by no functional module at all.** This is the fourth and most direct statement of the
+same result: there is no vault neighbourhood, and the thing we spent most of this project chasing does
+not exist at the resolution any available instrument can see.
+
+### 44a. The power limit we registered, now with a specific instance
+
+The registration said: *"This scan can find a large, concentrated physical neighbourhood and cannot
+find a diffuse one."* It turns out the registered design has a second blind spot we did not anticipate,
+and it is worth stating plainly because it changes what the null covers.
+
+**The scan tested only terms with 10 to 500 members present in the universe.** That filter excludes
+small defined protein complexes. Inspecting the excluded terms afterwards — a diagnostic, not a test —
+**`GOCC_SMC5_SMC6_COMPLEX` has 6 members in the universe and 4 of them are vault interactors:**
+
+| protein | WT_LFC | LWTP | interactor | PARP4-dependent |
+|---|---|---|---|---|
+| SMC6 | +6.79 | 1.39 | yes | no |
+| NSMCE3 | +6.00 | 2.31 | yes | no |
+| NSMCE1 | +5.79 | 3.02 | yes | no |
+| SMC5 | +3.93 | 2.98 | yes | no |
+| NSMCE4A | +1.08 | 0.48 | **no** | — |
+| NSMCE2 | +0.27 | 0.06 | **no** | — |
+
+Expected is 0.44 of 6; observed is 4. `GOCC_SUMO_LIGASE_COMPLEX` is the same four proteins under a
+second name, and three further small terms that hit — mitotic recombination, telomere maintenance via
+recombination, chromatin looping — are **the SMC5/6 complex's own functions**, so this is one coherent
+complex rather than scattered annotation.
+
+**This is untested, not a finding, and emphatically not a result of this section.** Thirty-four
+excluded small terms hit three or more interactors, and most are clearly nested metabolic annotations
+recycling the same three or four enzymes. Any claim about SMC5/6 requires correction across that whole
+family and a second instrument, which §45 registers before looking. **We are flagging a gap in our own
+registered design, not rescuing a failed test** — the registered test returned exactly what we
+predicted, and this does not change it.
+
+### 44b. The physical interactome as a list, and what it kills
+
+`results/ipms_interactome.csv` holds all 88 with WT_LFC and PARP4-dependence. Top entries by WT_LFC:
+**TRO** (+8.68, PARP4-dependent), PARP4, RALGAPB, **MVP**, SMC6, **TCAF1** (+6.48, PARP4-dependent),
+TEP1, NSMCE3, LMTK2, NSMCE1, DARS2, WDR11, **NBR1** (+5.09), COP1, IPO7, RACK1, GMPPA (LWTP 6.53, the
+highest confidence in the table), ACAD11, HNRNPDL, SMC5.
+
+**This kills the p62-body lead before we spent anything on it.** §42 named Kurusu's p62-body proteomics
+as remaining work on vault *fate*. In this pulldown:
+
+- **NBR1 is a vault interactor** (+5.09, LWTP 2.36)
+- **SQSTM1 — p62 itself — is not** (LWTP 0.48)
+- CALCOCO2 is not (0.38), TAX1BP1 is not (0.09)
+
+So one selective-autophagy receptor associates with the vault and its three closest relatives,
+**including p62, do not**. That is a single protein, not an autophagy module, and it is the same shape
+as everything else here. It does not support a p62-body model and we are not pursuing one.

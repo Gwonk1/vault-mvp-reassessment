@@ -1,0 +1,17 @@
+{
+ "universe": 1205,
+ "n_interactors": 88,
+ "terms_tested": 1276,
+ "calibration": {
+  "n": 20,
+  "median": 0.0,
+  "mean": 0.0,
+  "max": 0,
+  "p95": 0.0
+ },
+ "gate": true,
+ "n_sig": 0,
+ "survivors": {},
+ "kept": [],
+ "verdict": "NO DETECTABLE PHYSICAL NEIGHBOURHOOD - zero terms at q<0.05"
+}
