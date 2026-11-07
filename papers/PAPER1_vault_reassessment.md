@@ -36,9 +36,22 @@ In native co-fractionation across 411 datasets, where symmetric scoring and a si
 sample covariation, MVP's highest-scoring partner of 10,614 is PARP4 at the 99.99th percentile, with
 a profile matching flotillin-1's obligate heterodimer rather than a multi-subunit machine; TEP1
 scores at the noise floor in the same data, so sensitivity for known vault subunits there is one of
-two. No broad neighbourhood is detectable around MVP by any instrument we applied, but we withdraw
-the stronger readings we first drew from that - an enrichment test against a partner set of size one
-has no power, and a container metaphor is one of six models that produce the same graph.
+two.
+
+**The most useful result in this work is a negative one about method.** Three candidate
+neighbourhoods - membrane repair, cortical actin and cytoplasmic translation - each produced a
+specific, reproducible signal that survived its registered controls and then vanished in an
+instrument measuring physical association. Cortical actin replicates across three independent
+cohorts after the interferon axis is removed and after abundance matching, yet of 1,175
+high-confidence co-elution edges among twenty-five cortical actin proteins, **none** reaches MVP.
+Translation enrichment is specific to MVP at the 98th percentile of 150 comparable seeds, with MVP's
+own SPFH-family relatives unremarkable, yet an anti-MVP pulldown that recovers all three vault
+subunits shows no translation enrichment among its interactors. **Co-abundance, co-fractionation and
+co-elution tails report where proteins are and how they move, not what holds them together, and this
+work mistook the former for the latter three times.** We also withdraw two stronger readings drawn
+earlier from the co-fractionation data: an enrichment test against a partner set of size one has no
+power, and a container metaphor is one of six models producing the same graph. The single
+association appearing in both classes of instrument is MVP with PARP4 and TEP1.
 
 We confirm, from two independent alignments, that the SPFH shoulder nucleotide pocket is the most
 conserved structural domain of MVP, with four ADP-ribose-contacting residues invariant across 174
@@ -239,6 +252,45 @@ PARP4 edge, in an instrument that demonstrably misses one of the three subunits 
 about. Ranks two to twelve, below our threshold and unexamined until the reviewer asked for them,
 are translation and RNA-handling proteins - ZNF598, RPL8, EIF3A, UPF1, ZC3HAV1 - which is neither of
 the neighbourhoods we had been arguing about and is consistent with polyribosome templating.
+
+**We then pursued both of those leads to their ends, and the shape of both failures is the paper's
+main result.**
+
+**Cortical actin.** Removing the interferon axis from the co-abundance scan - residualising on STAT1
+and IRF9 until the canonical target TAP1 is displaced out of MVP's top 200 in five of five datasets
+- collapses the immune signal to the central nervous system alone and leaves membrane ruffling and
+actin filament organisation standing in endometrium and in cell lines, which contain no immune
+system. Those two then survive the control we expected to kill them: against 200 size- and
+abundance-matched random sets, actin organisation clears in three of three
+non-central-nervous-system datasets and ruffling in two plus a borderline, with ruffling at 13
+observed against 3.1 expected. Mitochondrion, the largest abundant cytoplasmic compartment, is not
+enriched anywhere, so this is not what abundance buys.
+
+**And it is not physical.** In the native co-fractionation data, all twenty-five cortical actin
+proteins we checked are present with partners - cofilin-1 has 170, beta-actin 128, gamma-actin 117 -
+totalling 1,175 high-confidence edges, and **not one connects to MVP**. That is a well-powered
+negative rather than missing data. The covariation is real and reproducible; the association is not
+there.
+
+**Translation.** MVP's sub-threshold co-elution tail is enriched eighteenfold for cytoplasmic
+translation, and that enrichment is specific to MVP: at the 98th percentile of 150 comparable seed
+proteins, where five abundant glycolytic enzymes span the 26th to 79th percentile and MVP's own
+SPFH-family relatives - flotillin-1, flotillin-2, stomatin - sit at the 60th, 70th and 41st. We
+registered the expectation that this would prove generic and were wrong on both counts.
+
+**And it too is not physical.** An anti-MVP immunoprecipitation that recovers all three vault
+subunits - MVP, PARP4 and TEP1, each at a log-p above 3.3 - shows no enrichment for translation
+among its 88 interactors (9 observed against 6.94 expected, p = 0.195), nor for ribosome, actin or
+mitochondrion. That test is only powered for a large effect and we say so; it is not a clean
+refutation. But the registered rule was applied as written.
+
+**Three times, the same shape.** Membrane repair, cortical actin and cytoplasmic translation each
+produced a specific, reproducible, control-surviving co-abundance or co-elution signal that
+**vanished in an instrument measuring physical association**. The generalisation is not about
+vaults: **co-abundance, co-fractionation and co-elution tails report where proteins are and how they
+move, not what holds them together** - and this work mistook the former for the latter three times
+before noticing. The one association that appears in both kinds of instrument is MVP with PARP4 and
+TEP1, which in that same pulldown come down together.
 
 **An unbiased scan, and what it cost us.** Because every co-abundance test to this point had begun
 by nominating a module we already favoured, we inverted the procedure: scan all 8,634 Gene Ontology
