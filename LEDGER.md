@@ -28,6 +28,7 @@ Status key: ~~**STRUCK**~~ eliminated · **WEAKENED** damaged but alive · **STA
 | 10 | ~~MVP sequences are "all different" across animals~~ | 60.6% mean pairwise identity over 174 sequences / 134 species — **89.5th percentile** against 400 species- and length-matched groups (matched median 47%). | `results/divergence.json` |
 | 11 | ~~Vaults are developmental scaffolding you build on and discard~~ | Predicted decline across development. MVP *rises*: 94–95th percentile in 6 of 7 organs. Zero organs showed the predicted decline. | `results/development.json` |
 | 12 | ~~MVP is a brake that tells a cell to stop dividing~~ | A brake, deleted, should release growth. 878 growth screens, both selection directions, nothing. | `results/orcs_final.json` |
+| 13a | ~~Vaults are immunologically invisible in lupus (the "autoantigen asymmetry" vs Ro60/La)~~ | **Struck by published literature, not by us.** Moadab et al., *J Rheumatol* 2023;50(9):1136 (PMID 37127324) screened >21,000 human proteins with SLE sera: Ro60 was the top hit, and **MVP was in the top 10**, validated by ELISA in two SLE cohorts (n=49, n=46). Article 5 experiment 5 pre-committed: "If anti-MVP shows up... that whole thread collapses." It showed up, three years ago. The *instinct* to put vaults and lupus in one room was right — vaults are targeted alongside Ro60, AGO1-3 and ribosomes. | PMID 37127324 / PMC10524170 |
 | 13 | ~~The CoA-like pocket is a phosphopantetheine tether (a "string")~~ | A covalent arm needs a phosphopantetheinyl transferase (human: AASDHPPT) and a conserved serine; MVP is not among the few known human carrier proteins. The reported *pocket* density reads as a bound ligand, not an arm. Sink reading survives; tether does not. | reasoning from published structure description |
 
 ---
@@ -72,6 +73,8 @@ modifier genetics · C9orf72 repeat RNA in vaults · tauopathy / PSP loaded vaul
 svRNAb → CYP3A4 in human liver · mitoxantrone binding to vault RNA · vault delivery vehicles ·
 Trap-and-Seq (the experiment that decides containment) · TEP1 binding misfolded RNA · progeria falsifier.
 
+**Born-loaded is not absolute.** Collins et al., *ACS Synth Biol* 2026;15:3975 (`sb6c00512.pdf`, in this directory) mixed *pre-formed* empty human vaults with INT-conjugated AAV9 capsids and packaged intact virions into ~23.7% of them, 0% without INT. Polyribosome templating governs *de novo* shell synthesis, not a permanent lock on the lumen — assembled vaults breathe at the waist. This reopens the load-on-demand branch that Article 1 §6 had closed.
+
 **Note on the Trap-and-Seq power argument:** at 100,000 vaults per cell, even 1% carrying a non-vtRNA
 cargo gives ~1,000 molecules per cell — easily detectable by modern sequencing, invisible to 1986 gels
 and a 2001 Northern blot. The cargo need only be rare *per particle*, which makes a clean negative there
@@ -88,5 +91,8 @@ genuinely decisive rather than dismissable.
 - **Percentiles, not effect sizes.** Global composition shifts move every gene; MVP's rank against the
   genome is the interpretable quantity.
 - **Always exclude MVP from any gene set containing it.** `src/scores.py` asserts and aborts.
+- **External audit, 2026-11-06 (`gemini-argon-audit.txt`).** Every claim I could independently check verified: the Moadab citation and its content; TCGA cohort duplication (1,084 / 594 / 585 shared patients); MVP's OG being 70.1% vertebrate (94/134, 0 fungi, 0 plants); the Collins PDF. It caught three real bugs in `src/prot_coabund.py` and a geometric flaw in `SURFACE_PREREGISTRATION.md`. Its weaker sections are the post-hoc causal stories (acinar-to-ductal metaplasia for the PAAD flip; dominant-negative assembly poisoning for mis_z vs pLI) — plausible, testable, but asserted rather than demonstrated.
+- **Three pre-registered checks were never implemented** in `src/prot_coabund.py`: the 200 matched random queries, the 3-PC sensitivity, and the CCLE replication. Test #23 must not be run until they are, or it will not be the test that was registered.
+- **A literature gap of mine:** `LEDGER.md` listed anti-MVP serology as UNTESTED when it had been published in 2023. I never searched for it.
 - **Two mistakes made and corrected:** a control group ID guessed from memory (`KOG1691` is TMED10, not
   RPL7) and two results written as prose before being written as data (gnomAD, epigenetic). Both fixed.
