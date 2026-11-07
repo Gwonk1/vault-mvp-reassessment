@@ -293,6 +293,14 @@ infiltrate — and unchanged after removing 3 principal components.
 
 ### Why this matters beyond the statistics
 
+**CORRECTED 2026-11-07 (ledger #66).** Two of the "facts" below were overstated, and the overstatement
+was load-bearing. Kowalski 2007 reports that MVP-null mice carry ~3.5x more lung bacteria and a hazard
+ratio of 2.96 after an *experimental* intranasal *Pseudomonas* inoculum (n = 15 vs 17) - not that they
+die of *Pseudomonas*; the proposed mechanism was failed epithelial internalisation after CFTR-dependent
+raft recruitment. And the listerial protein that binds MVP is **InlK, a surface protein that evades
+autophagy - not listeriolysin O**. Calling both "pore-forming toxin" links conflated an organism with a
+toxin and InlK with LLO. The convergence as originally written:
+
 It converges with facts nobody connected: MVP-null mice die of *Pseudomonas* lung infection (a
 pore-forming-toxin pathogen); the *Listeria* result (LLO is a pore-forming toxin); a report we could not independently source that
 **loaded vaults are immunogenic through the NLRP3 inflammasome** — and CASP1/CASP4/PYCARD are here; the

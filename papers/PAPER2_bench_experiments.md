@@ -27,7 +27,8 @@ ours.
    in human cells** - expressed without its STAND regulatory domains it drops cellular NAD+ to 30-40% of
    control and kills HEK293 cells, both abolished by E1008A. The brake is **in cis**, allosteric,
    reinforced by a millimolar unactivated Km; it is not the cage. The 10^5 figure counts vault particles,
-   not TEP1, which sits at roughly one to two copies per particle. Nearly every assay in our
+   not TEP1 molecules; a per-particle TEP1 stoichiometry is not established in the texts we rely on, and
+   the conclusion does not need one. Nearly every assay in our
    computational work sampled unstimulated growth or bulk tissue, which is precisely when a latent
    effector is designed to be invisible. **The experiments below are therefore ordered by how directly
    they perturb the system out of that resting state.**
@@ -44,10 +45,21 @@ the recommended running order.)*
 is expected to gate activation, though obligate oligomerisation is contested between the 2026 preprints
 and no physiological trigger has been demonstrated. The published work notes that vaults confer
 resistance to *Pseudomonas aeruginosa* and influenza A and speculates that TEP1 may be an innate-immune
-executioner, but no study connects that to pore-forming toxins or to membrane-wound repair. Independently, MVP-null mice die of
-*Pseudomonas aeruginosa* and the *Listeria* InlK result involves listeriolysin O - **both pore-forming
-toxins** - and MVP co-abundance places it near ANXA2 and S100A10, the canonical membrane-repair
-heterotetramer.
+executioner, but no study connects that to pore-forming toxins or to membrane-wound repair.
+
+**We must be accurate about how weak the priors actually are, because we previously overstated them
+both.** Kowalski et al. (*Science* 2007;317:130) did not show that MVP-null mice "die of *Pseudomonas*":
+after an experimental intranasal inoculum, nulls carried roughly 3.5-fold more lung bacteria and had a
+hazard ratio for death of 2.96 (n = 15 null against 17 wild type, 96 h), and the mechanism they proposed
+was failed epithelial internalisation following CFTR-dependent raft recruitment. The mice are healthy in
+ordinary housing. Nor is the *Listeria* link a pore-forming one: InlK, the listerial protein that binds
+MVP, is a surface protein that coats the bacterium to evade autophagy, and it is **not** listeriolysin O.
+Writing "both pore-forming toxins" conflated an organism with a toxin and InlK with LLO.
+
+What genuinely remains is thinner and still worth a bench: MVP is implicated in two bacterial-defence
+settings by independent groups, its co-abundant neighbours include ANXA2 and S100A10 - the canonical
+membrane-wound-repair heterotetramer - and nobody has tested a pore-forming insult against TEP1 at all.
+The experiment is motivated by the untested gap, not by a published convergence.
 **Design:** sterile streptolysin-O versus live *Pseudomonas*, in wild-type, **MVP-null**,
 PARP4-knockout and TEP1-E1008A knock-in cells. Targeted LC-MS/MS over 0-120 min against authentic
 standards, monitoring **NAD+, NADP+, linear ADP-ribose, 2'-phospho-ADP-ribose, nicotinamide, and cyclic
@@ -67,9 +79,14 @@ depletes normally. That kills the breach-trigger model cleanly.
 
 ### 3. What opens the shell?
 **Decides:** constraint 1 above, and the born-loaded versus loaded-on-demand fork.
-**Why now:** cytosolic NAD+ cannot reach the pocket in the closed particle, yet endogenous ADP-ribose is
-present in vaults purified from brain. Something admits it. Separately, pre-formed vaults have been
-shown to take up intact AAV capsids, so the waist does breathe.
+**Why now:** free NAD+ *does* reach the pocket of intact cages - that is constraint 1, and it is why this
+experiment is no longer about admitting NAD+. What is unknown is the **door and the traffic rule**.
+Published work shows access under the conditions it tested, not the route: the single-particle maps never
+resolved the opening that nucleotides use, and a 663-Da metabolite entering unaided says nothing about
+whether PARP4, TEP1 or vtRNA can follow. Pre-formed vaults do take up intact AAV capsids, which is
+macromolecular traffic and is the size class this experiment is about; we previously cited that result as
+evidence for small-molecule entry, which mixes the two classes the constraint exists to separate. The
+open question is what governs macromolecular exchange and whether pocket occupancy turns over at all.
 **Design:** low-pH opening is already published, so test **physiological** triggers: pH 6.0-7.4,
 Ca2+ 0.1-100 uM with and without ANXA2/S100A10, vtRNA, mechanical shear, pore-forming toxin. Do **not**
 read this out as labelled-NAD+ uptake: free NAD+ already reaches the pocket of intact cages at baseline,
