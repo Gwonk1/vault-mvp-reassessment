@@ -1,0 +1,17 @@
+seeds with fold+sequence: 146 of 150
+MVP fold 18.49x  percentile 97.9  length 893  charge/kres -28.5
+  GATE RPL7: fold pct 98.6 (>95: True) | charge +162.6 top quartile: True | length 248 bottom quartile: True
+  GATE RPS6: fold pct 98.6 (>95: True) | charge +169.3 top quartile: True | length 249 bottom quartile: True
+  -> axis measurable: True
+
+TEST 1: correlation of translation-fold with seed properties
+  Spearman rho(fold, charge/kres) = +0.077  p = 0.3549
+  Spearman rho(fold, length)      = -0.294  p = 0.0003
+
+TEST 2: MVP percentile among its 30 nearest neighbours in (length, charge) space
+  neighbours: median fold 1.38x  max 9.84x
+  their median length 768  median charge/kres -17.2
+  MVP percentile among neighbours = 100.0
+  nearest 8: [(np.str_('STAT2'), np.float64(1.18)), (np.str_('INPP4B'), np.float64(0.79)), (np.str_('ITGB3'), np.float64(0.39)), (np.str_('DIEXF'), np.float64(1.18)), (np.str_('CTAGE4'), np.float64(1.18)), (np.str_('RABL6'), np.float64(1.57)), (np.str_('SSH1'), np.float64(1.57)), (np.str_('LLGL1'), np.float64(1.97))]
+
+VERDICT: NEITHER - axis is not the mechanism; one more alternative eliminated, section 40 unpromoted (MVP 100.0)

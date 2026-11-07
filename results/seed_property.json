@@ -1,0 +1,54 @@
+{
+ "n_seeds": 146,
+ "mvp": {
+  "fold": 18.4945,
+  "pct": 97.94520547945206,
+  "length": 893,
+  "charge": -28.46519576026798
+ },
+ "gate": true,
+ "rho_charge": [
+  0.07711759723299513,
+  0.35486984197099497
+ ],
+ "rho_length": [
+  -0.2939412860147595,
+  0.00031691762332289146
+ ],
+ "knn": 30,
+ "mvp_knn_pct": 100.0,
+ "knn_median_fold": 1.37725,
+ "knn_names": [
+  "STAT2",
+  "INPP4B",
+  "ITGB3",
+  "DIEXF",
+  "CTAGE4",
+  "RABL6",
+  "SSH1",
+  "LLGL1",
+  "XPNPEP1",
+  "SLITRK5",
+  "CMTR2",
+  "FNBP1",
+  "FERMT1",
+  "NPR2",
+  "TP53BP2",
+  "MAN2B2",
+  "SEC23A",
+  "FAM73B",
+  "SUOX",
+  "CARM1",
+  "ATP2B1",
+  "NOMO3",
+  "ACAP1",
+  "PIAS1",
+  "SCARB2",
+  "PRPF6",
+  "ABCB6",
+  "ZNF622",
+  "TUBA1C",
+  "VIM"
+ ],
+ "verdict": "NEITHER - axis is not the mechanism; one more alternative eliminated, section 40 unpromoted (MVP 100.0)"
+}

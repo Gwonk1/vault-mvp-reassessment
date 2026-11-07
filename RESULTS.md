@@ -3012,3 +3012,73 @@ the 95th percentile without being ribosomal, and we cannot say why.
 
 **This is what "eliminate or mark as probable and weigh" looks like when it works.** We eliminated mass.
 We did not buy a promotion with it.
+
+## 53. Seed properties do not explain §40, and our registered rule named the wrong axis
+
+`SEED_PROPERTY_PREREGISTRATION.md`. **Registered verdict: NEITHER** — one more alternative eliminated,
+§40 unpromoted. That was our registered expectation. **But the registered verdict understates the
+numbers, for a reason that is our own fault, and we report both.**
+
+Gate passed: RPL7 (fold pct 98.6, charge top quartile, length bottom quartile) and RPS6 (98.6, same) —
+the axis is measurable. MVP reproduces at fold **18.49x, percentile 97.9** on 146 seeds.
+
+### 53a. Length matters, charge does not
+
+| correlate | Spearman ρ | p |
+|---|---|---|
+| translation-fold vs **charge** per 1,000 residues | +0.077 | **0.355** |
+| translation-fold vs **length** | **−0.294** | **0.0003** |
+
+**Shorter seeds genuinely do have more translation-rich co-elution tails**, and charge — the property
+that killed the contact result in §51 — is irrelevant here. Two instruments, two different nuisance
+axes.
+
+### 53b. MVP beats every seed that resembles it
+
+MVP's 30 nearest neighbours in standardised (length, charge) space have **median length 768 and median
+charge −17.2**, closely matching MVP's 893 and −28.5, so the matching worked. Their folds:
+
+- **neighbour median fold: 1.38x**
+- **neighbour maximum fold: 9.84x**
+- **MVP: 18.49x — the 100.0th percentile of its own look-alikes**
+
+Nearest eight by profile: STAT2 (1.18x), INPP4B (0.79x), ITGB3 (0.39x), DIEXF (1.18x), CTAGE4 (1.18x),
+RABL6 (1.57x), SSH1 (1.57x), LLGL1 (1.97x).
+
+MVP is longer than 80% of seeds, length anti-correlates with fold at p = 0.0003, and **MVP nonetheless
+has a tail 13x richer than the median seed of comparable size and charge, and nearly twice the richest
+of them.** The registered withdrawal bar was MVP below the 75th percentile among neighbours; it is at
+100.
+
+### 53c. Why we are not calling this strengthening
+
+Our registered condition for STRENGTHENED was that **charge** correlate positively *and* MVP stay above
+the 90th percentile among neighbours. The second half is met at 100.0. **The first half named the wrong
+property** — the axis that organises these tails is length, which we did not anticipate, so the rule
+fell through to NEITHER.
+
+Substantively this is the pattern we described in the registration as strengthening: *"MVP would then be
+producing a ribosome-rich tail against the trend its own composition predicts, which is harder to
+explain as an artefact than the raw 98th percentile was."* That is exactly what happened, on length
+rather than charge.
+
+**We are not promoting §40 on it.** Promoting a finding on an axis we did not register, immediately
+after the registered rule declined to promote it, is the post-hoc substitution this project has been
+caught at twice today (#209, and the selective-statistic fork in §49d). **The registered verdict governs:
+one more alternative eliminated, nothing promoted.** The length result is recorded as what it is — an
+unregistered observation pointing the same way — and if it is to count, it counts in a future test
+registered on that axis and preferably in another dataset.
+
+### 53d. The running tally on §40
+
+§40's co-elution result now survives **five** specific alternatives: **degree** (MVP at the 73.8th
+percentile, below every large-assembly comparator), **abundance** (glycolytic seeds 26th-79th), **family
+membership** (SPFH relatives 41st-70th), **apparent mass** (110 MDa nuclear pore at the 26th percentile,
+1.4 MDa dynein at the 96th), and now **seed length and charge** (MVP at the 100th percentile of its own
+physicochemical neighbours).
+
+It remains **unpromoted and single-instrument**, because the mechanism that lifts cytoplasmic assemblies
+to a median of 70 (§52b) is still unnamed, and because the one contact instrument that could corroborate
+it does not (§51). **Five eliminations and no promotion is the correct outcome of a method designed to
+make promotion hard**, and it is worth saying plainly that this is what the project looks like when it
+is working rather than when it is stuck.
