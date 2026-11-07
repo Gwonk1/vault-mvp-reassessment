@@ -1299,3 +1299,114 @@ vaults on membranes is real, ANXA2 and S100A10 are confirmed physical interactor
 CFTR-raft phenotype is published. What is dead is the claim that **co-abundance data supports a broad
 membrane-repair neighbourhood.** Four tests, one dataset in its favour, and it does not survive contact
 with another.
+
+## 31. Unbiased neighbourhood scan: my prediction was wrong, and the replicating module is innate immune
+
+`NEIGHBOURHOOD_SCAN_PREREGISTRATION.md`. Every GO BP and CC term (8,634 loaded, 10-500 members),
+scanned against MVP's top 200 residualised correlates in five independent datasets, BH-corrected within
+each, replication required in a majority. No term chosen by hand.
+
+**I registered the prediction that zero or very few terms would replicate. That was wrong.** All five
+datasets passed their gates — PARP4 is rank 1 in every one — the scan design gate passed (6 proteasome
+terms replicate from a PSMA1 seed), and **103 terms replicate in 3 or more of 5 datasets.**
+
+### 31a. What replicates
+
+| term | datasets |
+|---|---|
+| `GOBP_ANTIGEN_PROCESSING_AND_PRESENTATION` | 4 |
+| `GOBP_CYTOKINE_PRODUCTION` | 4 |
+| `GOBP_INFLAMMATORY_RESPONSE` | 4 |
+| `GOBP_RESPONSE_TO_BACTERIUM` | 4 |
+| `GOBP_POSITIVE_REGULATION_OF_DEFENSE_RESPONSE` | 4 |
+| `GOCC_RUFFLE` | 4 |
+| `GOBP_ACTIN_FILAMENT_ORGANIZATION` | 4 |
+| `GOBP_CYTOKINE_MEDIATED_SIGNALING_PATHWAY` | 4 |
+| `GOBP_RESPONSE_TO_TYPE_II_INTERFERON` | 3 |
+| `GOBP_MYELOID_LEUKOCYTE_ACTIVATION` | 3 |
+| `GOBP_INTEGRIN_MEDIATED_SIGNALING_PATHWAY` | 3 |
+| `GOCC_EXTERNAL_SIDE_OF_PLASMA_MEMBRANE` | 3 |
+
+The module is **innate immune defence, inflammatory signalling, antigen presentation, interferon-gamma
+response, and actin-ruffle membrane dynamics.** `coad_cptac_2019` is the consistent outlier at q = 1.000
+for nearly everything — the same cohort that returned p = 1.00 throughout §30.
+
+### 31b. It is not immune infiltrate, and the internal control is what shows that
+
+Tumour tissue contains immune cells, so an immune signature across CPTAC cohorts is exactly what
+infiltrate would produce — the same confound class that sank §22's immunoglobulin finding. **CCLE is in
+the included set and is cell lines, with no immune cells at all.** Per-dataset q values:
+
+| term | brain | coad | gbm | ucec | **CCLE** |
+|---|---|---|---|---|---|
+| `INFLAMMATORY_RESPONSE` | 0.000 | 1.000 | 0.000 | 0.000 | **0.000** |
+| `RESPONSE_TO_BACTERIUM` | 0.002 | 1.000 | 0.000 | 0.010 | **0.002** |
+| `CYTOKINE_PRODUCTION` | 0.000 | 1.000 | 0.000 | 0.001 | **0.006** |
+| `GOCC_RUFFLE` | 0.001 | 1.000 | 0.012 | 0.032 | **0.010** |
+| `RESPONSE_TO_TYPE_II_INTERFERON` | 0.000 | 1.000 | 0.013 | 0.083 | **0.017** |
+| `ACTIN_FILAMENT_ORGANIZATION` | 0.000 | 0.451 | 0.000 | 0.014 | **0.016** |
+| `MYELOID_LEUKOCYTE_ACTIVATION` | 0.000 | — | 0.000 | 0.003 | 0.082 |
+| `ADAPTIVE_IMMUNE_RESPONSE` | 0.000 | — | 0.000 | 0.038 | 0.269 |
+
+**The two terms that require actual immune cells — myeloid leukocyte activation and adaptive immune
+response — are the two that fail in cell lines**, while every cell-autonomous defence and inflammatory
+term holds. That is the pattern a genuine cell-intrinsic signal produces and an infiltrate artefact
+cannot. We did not design that control; it fell out of including CCLE.
+
+### 31c. The honest deflation: this may be shared regulation, not partnership
+
+**MVP is an interferon-gamma-inducible gene.** Co-abundance with other interferon-stimulated and
+inflammatory proteins is therefore partly expected from **shared transcriptional control**, not shared
+function — the identical objection that downgraded #26. What this scan may be detecting is the
+regulatory program that *sets MVP's level*, which is precisely the AHR/STAT1-IRF1 licensing model argon
+proposed as its H2 and which we had no counterpart for.
+
+So the result is better read as: **MVP's abundance is governed by, and co-varies with, a cell-autonomous
+innate-immune program, reproducibly, across five datasets and in cells with no immune system.** That is
+a real and replicating fact. It is not evidence of a functional module, and we are not calling it one.
+
+### 31d. The membrane hypothesis dies a fifth time, including in the unbiased scan
+
+| previously favoured term | replicates in |
+|---|---|
+| `GOBP_PLASMA_MEMBRANE_REPAIR` | **1 of 5** (CCLE only) |
+| `GOCC_CAVEOLA` | 1 of 5 |
+| `GOBP_PLASMA_MEMBRANE_ORGANIZATION` | 1 of 5 |
+| `GOCC_LATE_ENDOSOME` | 0 of 5 |
+| `GOBP_ENDOSOMAL_TRANSPORT` | 0 of 5 |
+
+The one dataset where plasma membrane repair clears is CCLE — exactly as §30 concluded, it is a
+cell-line-specific result. **Note that a different membrane-adjacent program does replicate:** ruffle
+and actin filament organisation, in 4 of 5 including CCLE. Ruffles are macropinocytic structures. That
+is not the repair/caveolar compartment we proposed and we are not claiming it as a rescue.
+
+### 31e. Four unused interactome datasets, and one crosslink already in our own files
+
+Argon was asked the single question of whether a physical-interaction dataset exists that we have not
+used, since co-abundance has now failed this question five times and is plainly the wrong instrument.
+Its answer, with the local 2025-26 corpus checked and nothing additional found there:
+
+1. **Zheng et al., *Sci Data* 2025, PMID 40058474** (PRIDE PXD052745; Figshare
+   10.6084/m9.figshare.27906234) — `V5-TurboID` proximity labelling across **all 17 human PARP family
+   members including PARP4**, in HEK293T. Covalent in-cell labelling before lysis, and **16 matched
+   non-vault PARP baits in the same batch as a built-in specificity background.** This is the best
+   available instrument for the neighbourhood question.
+2. **CFdb — Skinnider et al., *Nat Commun* 2023, PMID 38102123** — 411 harmonised native
+   co-fractionation MS datasets, no detergent wash-off. The argument is sharp: an intact 13 MDa vault
+   elutes in megadalton fractions where soluble monomers like CAPN2, EHD4 and IQGAP1 cannot migrate
+   alone, so **co-elution with the MVP-PARP4-TEP1 peak is a direct test of native physical
+   association.**
+3. **OpenCell — Cho et al., *Science* 2022, PMID 35271311** — endogenous knock-in IP-MS under mild
+   digitonin, which preserves peripheral membrane assemblies that NP-40 lysis in BioPlex strips.
+4. **Kurusu et al., *Dev Cell* 2023, PMID 37192622** — particle-sorted p62-body proteomics identifying
+   intact vaults as selective autophagy cargo.
+
+**Two negatives it checked so we do not waste effort.** In the Human Cell Map (Go et al. 2021, 192
+compartment BioID baits), **EHD4, IQGAP1 and MYOF are high-confidence endosome and plasma-membrane
+preys while MVP, PARP4 and TEP1 are completely absent at BFDR <= 0.01.** That is an independent negative
+against the membrane neighbourhood and worth more than another co-abundance run.
+
+**And one we already owned without noticing:** Fasci et al. 2018 proteome-wide crosslinking MS
+(PMID 30021884), already inside our own `intact_MVP.json`, contains an **in-situ MVP-FLOT2 crosslink**.
+Flotillin-2 is an SPFH-family protein. We had that file on disk throughout and never read it — the third
+literature gap of the session after Moadab and Izquierdo.

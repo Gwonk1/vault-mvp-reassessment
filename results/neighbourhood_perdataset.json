@@ -1,0 +1,93 @@
+{
+ "GOBP_ANTIGEN_PROCESSING_AND_PRESENTATION": {
+  "brain_cptac_2020": 0.0,
+  "coad_cptac_2019": 0.9999,
+  "gbm_cptac_2021": 0.0007,
+  "ucec_cptac_2020": 0.0363,
+  "ccle_broad_2019": 0.017
+ },
+ "GOBP_CYTOKINE_PRODUCTION": {
+  "brain_cptac_2020": 0.0,
+  "coad_cptac_2019": 0.9999,
+  "gbm_cptac_2021": 0.0002,
+  "ucec_cptac_2020": 0.0005,
+  "ccle_broad_2019": 0.0056
+ },
+ "GOBP_INFLAMMATORY_RESPONSE": {
+  "brain_cptac_2020": 0.0,
+  "coad_cptac_2019": 0.9999,
+  "gbm_cptac_2021": 0.0,
+  "ucec_cptac_2020": 0.0,
+  "ccle_broad_2019": 0.0001
+ },
+ "GOBP_RESPONSE_TO_BACTERIUM": {
+  "brain_cptac_2020": 0.0022,
+  "coad_cptac_2019": 0.9999,
+  "gbm_cptac_2021": 0.0001,
+  "ucec_cptac_2020": 0.0099,
+  "ccle_broad_2019": 0.0019
+ },
+ "GOCC_RUFFLE": {
+  "brain_cptac_2020": 0.0006,
+  "coad_cptac_2019": 0.9999,
+  "gbm_cptac_2021": 0.0123,
+  "ucec_cptac_2020": 0.0319,
+  "ccle_broad_2019": 0.01
+ },
+ "GOBP_ACTIN_FILAMENT_ORGANIZATION": {
+  "brain_cptac_2020": 0.0,
+  "coad_cptac_2019": 0.4507,
+  "gbm_cptac_2021": 0.0,
+  "ucec_cptac_2020": 0.0137,
+  "ccle_broad_2019": 0.0163
+ },
+ "GOBP_RESPONSE_TO_TYPE_II_INTERFERON": {
+  "brain_cptac_2020": 0.0,
+  "coad_cptac_2019": 0.9999,
+  "gbm_cptac_2021": 0.0128,
+  "ucec_cptac_2020": 0.0827,
+  "ccle_broad_2019": 0.017
+ },
+ "GOBP_MYELOID_LEUKOCYTE_ACTIVATION": {
+  "brain_cptac_2020": 0.0,
+  "coad_cptac_2019": null,
+  "gbm_cptac_2021": 0.0,
+  "ucec_cptac_2020": 0.0026,
+  "ccle_broad_2019": 0.0815
+ },
+ "GOBP_LEUKOCYTE_PROLIFERATION": {
+  "brain_cptac_2020": 0.0,
+  "coad_cptac_2019": 0.9999,
+  "gbm_cptac_2021": 0.0002,
+  "ucec_cptac_2020": 0.0013,
+  "ccle_broad_2019": 0.0482
+ },
+ "GOBP_ADAPTIVE_IMMUNE_RESPONSE": {
+  "brain_cptac_2020": 0.0,
+  "coad_cptac_2019": null,
+  "gbm_cptac_2021": 0.0002,
+  "ucec_cptac_2020": 0.0381,
+  "ccle_broad_2019": 0.2688
+ },
+ "GOBP_CYTOKINE_MEDIATED_SIGNALING_PATHWAY": {
+  "brain_cptac_2020": 0.0002,
+  "coad_cptac_2019": 0.9999,
+  "gbm_cptac_2021": 0.0059,
+  "ucec_cptac_2020": 0.0013,
+  "ccle_broad_2019": 0.0192
+ },
+ "GOCC_EXTERNAL_SIDE_OF_PLASMA_MEMBRANE": {
+  "brain_cptac_2020": 0.0,
+  "coad_cptac_2019": null,
+  "gbm_cptac_2021": 0.0,
+  "ucec_cptac_2020": 0.9858,
+  "ccle_broad_2019": 0.0
+ },
+ "GOBP_PLASMA_MEMBRANE_REPAIR": {
+  "brain_cptac_2020": 0.7528,
+  "coad_cptac_2019": null,
+  "gbm_cptac_2021": 0.0623,
+  "ucec_cptac_2020": null,
+  "ccle_broad_2019": 0.0067
+ }
+}

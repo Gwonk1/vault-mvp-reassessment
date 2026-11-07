@@ -1,0 +1,51 @@
+GO terms loaded: 8634
+  brain_cptac_2020     n=218  proteins=6402  PARP4 rank 1 prot'some 24/25 -> INCLUDED
+  coad_cptac_2019      n=97   proteins=6899  PARP4 rank 1 prot'some 11/25 -> INCLUDED
+  gbm_cptac_2021       n=99   proteins=10498 PARP4 rank 1 prot'some 14/25 -> INCLUDED
+  ucec_cptac_2020      n=95   proteins=10067 PARP4 rank 1 prot'some 12/25 -> INCLUDED
+  ccle_broad_2019      n=330  proteins=9258  PARP4 rank 1 prot'some 20/25 -> INCLUDED
+
+included datasets: 5
+DESIGN GATE: proteasome terms replicating in >=3 datasets: 6 -> PASS
+  brain_cptac_2020: 347 terms at q<0.05
+  coad_cptac_2019: 10 terms at q<0.05
+  gbm_cptac_2021: 423 terms at q<0.05
+  ucec_cptac_2020: 108 terms at q<0.05
+  ccle_broad_2019: 197 terms at q<0.05
+
+majority threshold: 3 of 5
+VERDICT: REPLICATING NEIGHBOURHOOD: 103 term(s)
+
+top terms by replication count:
+GOBP_ANTIGEN_PROCESSING_AND_PRESENTATION                     4
+GOBP_CYTOKINE_PRODUCTION                                     4
+GOBP_POSITIVE_REGULATION_OF_DEFENSE_RESPONSE                 4
+GOBP_POSITIVE_REGULATION_OF_RESPONSE_TO_EXTERNAL_STIMULUS    4
+GOBP_LEUKOCYTE_PROLIFERATION                                 4
+GOBP_ACTIN_FILAMENT_ORGANIZATION                             4
+GOBP_INFLAMMATORY_RESPONSE                                   4
+GOBP_RESPONSE_TO_BACTERIUM                                   4
+GOCC_RUFFLE                                                  4
+GOBP_CYTOKINE_MEDIATED_SIGNALING_PATHWAY                     4
+GOBP_RESPONSE_TO_MOLECULE_OF_BACTERIAL_ORIGIN                4
+GOBP_INTEGRIN_MEDIATED_SIGNALING_PATHWAY                     3
+GOCC_EXTERNAL_SIDE_OF_PLASMA_MEMBRANE                        3
+GOBP_ICOSANOID_METABOLIC_PROCESS                             3
+GOBP_POSITIVE_REGULATION_OF_CELL_ADHESION                    3
+GOBP_MYELOID_LEUKOCYTE_ACTIVATION                            3
+GOBP_POSITIVE_REGULATION_OF_IMMUNE_RESPONSE                  3
+GOBP_RESPONSE_TO_TYPE_II_INTERFERON                          3
+GOBP_REGULATION_OF_DEFENSE_RESPONSE                          3
+GOBP_REGULATION_OF_RESPONSE_TO_BIOTIC_STIMULUS               3
+GOBP_ADAPTIVE_IMMUNE_RESPONSE                                3
+GOBP_REGULATION_OF_INFLAMMATORY_RESPONSE                     3
+GOBP_REGULATION_OF_PEPTIDYL_TYROSINE_PHOSPHORYLATION         3
+GOCC_SECRETORY_GRANULE_MEMBRANE                              3
+GOBP_TAXIS                                                   3
+
+previously favoured terms:
+  GOBP_PLASMA_MEMBRANE_REPAIR              replicates in 1 of 5
+  GOCC_CAVEOLA                             replicates in 1 of 5
+  GOBP_PLASMA_MEMBRANE_ORGANIZATION        replicates in 1 of 5
+  GOCC_LATE_ENDOSOME                       replicates in 0 of 5
+  GOBP_ENDOSOMAL_TRANSPORT                 replicates in 0 of 5
