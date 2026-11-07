@@ -1,11 +1,20 @@
+# virtualenv (a symlink here when the single working tree shares one)
+.venv
 .venv/
 __pycache__/
 *.pyc
+
+# large inputs: symlinked to the local data store, never committed
+data/raw
 data/raw/
+data/processed
 data/processed/
+
+# third-party sources: not redistributed, see argon/raw/README.md
 argon/raw/*
 !argon/raw/README.md
 !argon/raw/fetch.sh
 !argon/raw/SHA256SUMS.txt
+
 # local working notes and source material are kept out of this repository
 *.pdf
