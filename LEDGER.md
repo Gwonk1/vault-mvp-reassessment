@@ -102,6 +102,9 @@ Status key: ~~**STRUCK**~~ eliminated · **WEAKENED** damaged but alive · **STA
 
 | # | Item | Status | Evidence |
 |---|---|---|---|
+| 47 | **PARP4 turns over 3x faster than MVP — the core is not welded** | Half-lives: MVP 66.4 h (58.6th pct), PARP4 22.2 h (**9.8th**), TEP1 40.6 h. Triplet spread 44.2 h = 29.9th percentile of random triplets -> NOT A UNIT BY TURNOVER. Constrains argon's orphan-subunit model: PARP4 is not stable only inside the cage. Fits Lodwick (PARP4 docks on the lumenal face) and my own finding that the PARP4-MINT patch is MVP's least-conserved region (0.708). **Picture: a durable shell with a fast-exchanging enzyme on its inner face.** | `results/turnover.json` |
+| 48 | MVP is not structural furniture | 66 h half-life, 58.6th percentile — mid-pack, nowhere near lamins/histones at 1,500-1,700 h. At 100,000 copies/cell the population is continuously rebuilt. Born-loaded fork stays open; turnover does not settle it. | `results/turnover.json` |
+| 49 | Method note: my script was stricter than my own pre-registration | Short-lived gate controls (MYC/FOS/JUN) are absent from pulse-SILAC data entirely. Written rule said "where measured" and "if neither direction separates"; the long direction passed at the 99.9th percentile. Script coded `both` and printed UNINFORMATIVE. Rule as written applied; discrepancy recorded. | `results/turnover.json` |
 | 46 | ~~NSUN2/svRNAb represses CYP3A4 at tissue level~~ | **NO RELATION** in 366 human livers. Partial rho -0.052, p = 0.33, with gate passed (HNF4A +0.48, PXR +0.53). Specificity control inverts the story: the only nominal hit is CYP2E1 (-0.125), a non-target. **Limit: VTRNA1-1 is absent from mRNA data, so only the NSUN2 arm was testable.** Bounds the cell-line mechanism rather than refuting it. | `results/cyp3a4.json` |
 
 ## UNTESTED (from the five articles — nothing today touched these)

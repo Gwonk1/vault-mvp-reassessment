@@ -1,0 +1,39 @@
+{
+ "gate_short": false,
+ "gate_long": true,
+ "verdict": "UNINFORMATIVE",
+ "core": {
+  "MVP": [
+   66.4,
+   58.6
+  ],
+  "PARP4": [
+   22.2,
+   9.8
+  ],
+  "TEP1": [
+   40.6,
+   32.9
+  ],
+  "ANXA2": [
+   82.3,
+   69.7
+  ],
+  "S100A10": [
+   68.3,
+   60.1
+  ]
+ },
+ "n": 8804,
+ "median_proteome_hl": 56.471000000000004,
+ "subunits": {
+  "values": {
+   "MVP": 66.35900000000001,
+   "PARP4": 22.16,
+   "TEP1": 40.564
+  },
+  "spread": 44.19900000000001,
+  "percentile_vs_random": 29.86,
+  "verdict": "NOT A UNIT BY TURNOVER"
+ }
+}

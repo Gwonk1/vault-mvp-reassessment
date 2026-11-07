@@ -608,3 +608,54 @@ that mechanism can matter at tissue level: in 366 human livers, NSUN2 carries no
 once differentiation is accounted for. **Critical limit: VTRNA1-1 itself is absent from the mRNA
 quantification** (a Pol III transcript), so only the NSUN2 arm was testable — the vault RNA was never
 measured. mRNA is also a poor proxy for enzyme activity, and these are tumours, not normal liver.
+
+## 19. Protein turnover: the vault is ordinary, and its subunits do NOT die together
+
+`TURNOVER_PREREGISTRATION.md`. Mathieson 2018 pulse-SILAC half-lives, 8,804 proteins, 5 primary human
+cell types, 2 replicates each. Proteome median half-life 56.5 h (IQR 34.5-92.8).
+
+**Gate, reported honestly.** The long-lived controls separated emphatically — LMNB1 1,481 h and histone
+H4 1,686 h, both 99.9th percentile. The short-lived controls MYC, FOS, JUN and CCND1 are **absent from
+the table**: pulse-SILAC does not capture them. My written rule said "where measured" and "if *neither*
+direction separates, nothing is reported"; my script coded the stricter `both`, and printed
+UNINFORMATIVE. **Applying the rule as written, the test proceeds** — and the discrepancy is recorded
+rather than silently resolved.
+
+| Protein | Median half-life | Proteome percentile |
+|---|---|---|
+| **MVP** | **66.4 h** | **58.6** |
+| PARP4 | **22.2 h** | **9.8** |
+| TEP1 | 40.6 h | 32.9 |
+| ANXA2 | 82.3 h | 69.7 |
+| S100A10 | 68.3 h | 60.1 |
+
+### 19a. MVP is ORDINARY, not furniture
+
+66 h is unremarkable — nowhere near the lamins and histones that define structural permanence
+(1,500-1,700 h). At 100,000 copies per cell with a ~2.7 day half-life, the cell is continuously rebuilding
+its vault population. That argues against "inert furniture", and it does not support rapid consumption on
+a signalling timescale either. The born-loaded fork stays open; turnover does not settle it.
+
+### 19b. The subunits do NOT degrade as a unit — and this is the surprise
+
+**PARP4 turns over three times faster than MVP** (22 h vs 66 h, 9.8th vs 58.6th percentile). The spread
+across MVP/PARP4/TEP1 is 44.2 h, at the **29.9th percentile of random protein triplets** — ordinary, not
+tight. Verdict: **NOT A UNIT BY TURNOVER.**
+
+This constrains argon's orphan-subunit model (H1). If PARP4 were stable *only* inside the MVP cage, it
+should live as long as the cage. It does not — it is among the faster-turning 10% of the proteome while
+MVP sits mid-pack.
+
+**The reconciliation is specific and testable:** MVP is a persistent shell on which **PARP4 docks
+reversibly and is replaced**. That fits three things we already have — Lodwick places PARP4 on the
+lumenal face at repeats 3-4 rather than locked inside; my own conservation scan found the PARP4-MINT
+patch to be the *least* conserved region of MVP (0.708 against 0.787 whole-protein); and co-abundance
+plus proximity say they travel together without fitness coupling (#44).
+
+So across four methods the core is: **one durable shell, with a fast-exchanging enzyme on its inner
+face.** Co-abundance and proximity see the association; turnover shows it is dynamic, not welded.
+
+### Limits
+Primary immune cells and hepatocytes, not the lung epithelium where vaults are most abundant.
+Pulse-SILAC conflates degradation with dilution by division. A stably incorporated protein and one that
+is never degraded are indistinguishable here.
