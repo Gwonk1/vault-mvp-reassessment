@@ -99,3 +99,23 @@ events, so more draws would have tightened a Poisson-limited estimate and probab
 the gate. That is still fault #113: iterating a method until it passes. Monte Carlo precision is a fine
 thing to increase, but never in response to the answer. Fix the draw count in a new registration, or
 record the uninformative verdict and move on.
+
+### 10. A refusal band can be wider than your estimator
+
+Learned three times in one day (#188, #204, #240). Rules 8 and 9 cover whether each outcome is
+*attainable*; this one covers whether your bars are *resolvable*.
+
+Our mass test registered "confirm above 75, clear below 60" on a statistic whose estimate came in at
+70.0 with a standard error near 8.5 percentile points. The confirm bar was 0.6 SE above the estimate
+and the clear bar 1.2 SE below it: **the dead zone was wider than the estimator could resolve, so an
+EQUIVOCAL verdict was close to pre-ordained.** A gate that mostly returns "we cannot say" manufactures
+indecision exactly as a one-way gate manufactures a conclusion.
+
+Related, from the same audit: **register the summary statistic and its weighting, not just the
+threshold.** Our seven assemblies gave a seed-weighted median of 70.0 and an assembly-weighted median of
+75.3 — the second clears the confirm bar the first missed. We had not said which we would use, so the
+verdict was decided after the fact by an unregistered choice.
+
+**Before committing: compute the standard error of the statistic you are about to gate on, and check
+that your bars are at least ~2 SE apart from each other and not inside 1 SE of the value you expect.**
+If they are not, widen the data or narrow the claim — do not register a band you cannot land in.

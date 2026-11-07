@@ -1,0 +1,9 @@
+verification of grok audit 3 arithmetic, run before writing section 55
+0.98^30 = 0.5455
+mito contrast sigma=1.951: diff +0.288 SE 0.460 CI [-0.61,+1.19] p=0.532
+mito contrast sigma=0.75: diff +0.288 SE 0.177 CI [-0.06,+0.63] p=0.104
+organellar gap +0.110
+k=1: q=0.00924
+k=2: q=0.01387
+k=3: q=0.01849
+MLE k=2: q=0.00924

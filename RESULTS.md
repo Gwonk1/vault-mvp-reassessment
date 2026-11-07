@@ -3161,3 +3161,143 @@ One tension worth naming: **`GOBP_RESPONSE_TO_XENOBIOTIC_STIMULUS` is the *lowes
 (16.4th percentile, −0.583) while `GOBP_DETOXIFICATION` is the highest. Those two should move together
 under any simple reading of a drug-efflux role, and they do not. Fifteen proteins against thirty, so
 this may be noise — but it is the first thing a reviewer should attack.
+
+## 55. Third audit: our kill was a sensitivity analysis, and its justification was noise
+
+Grok audit 3 (`grok/to-grok/003-*`, `grok/from-grok/003r-*`). **Its central charge is correct and we
+accept it**: we promoted §51's length-and-charge null *"from a sensitivity analysis to the official
+kill, on the authority of the mitoribosome contrast"* — and that contrast is noise. We verified its
+arithmetic before writing (`results/grok3_checks.log`).
+
+### 55a. The mitoribosome argument fails twice over
+
+We justified applying the physicochemical control by observing that
+`GOCC_MITOCHONDRIAL_LARGE_RIBOSOMAL_SUBUNIT` (+0.560) exceeds `GOCC_CYTOSOLIC_RIBOSOME` (+0.272),
+reasoning that mitoribosomes are unreachable behind two membranes.
+
+**Statistically it is nothing.** The difference is +0.288 on n = 23 against n = 82:
+
+| dispersion used | SE | 95% CI | two-sided p |
+|---|---|---|---|
+| σ = 1.951, implied by our own normal-approximation p-values | 0.460 | **[−0.61, +1.19]** | **0.53** |
+| σ ≈ 0.75, from the 200,000-draw matched nulls | 0.177 | [−0.06, +0.63] | 0.104 |
+
+Excluding zero at two-sided 95% would need σ ≤ 0.62, below both estimates. **And we quoted the more
+extreme of the two mitochondrial terms** — `GOCC_ORGANELLAR_RIBOSOME` gives a gap of only **+0.110** —
+having picked it out of a 1,276-term scan.
+
+**Logically it is worse.** Grok: *"The 23 mt-LSU rows are in the IP-MS matrix, so in this assay they
+were in the tube. Two membranes describe the intact cell. A lysate IP cannot use them as an unreachable
+negative."* That is plainly right, and it is a basic error: lysis destroys the compartment boundary the
+whole argument rested on. **The mitoribosome justification is withdrawn.**
+
+### 55b. What §51 actually established, stated correctly this time
+
+The control itself is legitimate — length and net charge are **pre-treatment sequence features**, so
+they are not on the causal path from contact to enrichment, and "a bound ribosome would still be small
+and basic" does not make the matching illegal. But it answers a **different estimand** than the class
+shift, and both are true at once:
+
+| estimand | value | status |
+|---|---|---|
+| abundance-matched class shift: translation +0.2284 vs −0.3157 for the other 1,110 | **+0.544, p = 0.004, rank 23 of 1,276** | **stands** |
+| residual beyond length and charge: cytosolic ribosome | +0.043, CI [−0.13, +0.21], p = 0.309 | bounded near zero |
+| residual beyond length and charge: cytoplasmic translation | +0.070, CI [−0.08, +0.22], p = 0.174 | bounded near zero |
+| residual beyond length and charge: ribosome | +0.058, CI [−0.07, +0.19], p = 0.184 | bounded near zero |
+
+Those upper bounds are about **1.16x**. So the correct statement is not "withdrawn" but: **the class
+shift is real and has been decomposed; essentially all of it is accounted for by length and charge, and
+any residual contact-specific component is bounded below ~1.16x.** The same procedure spares the core
+(residual +5.5, p = 0.024), so the control discriminates. **Contact corroboration beyond the
+physicochemical profile stays withdrawn; the class shift does not.** §51's headline overstated this and
+is corrected.
+
+Grok also names the condition under which the matching *would* be wrong, and the number we are missing:
+it fails if the proteins drawn from those sparse decile cells are themselves ribosomal under another
+name — translation factors, RBPs, ribosome-biogenesis proteins — making charge and length a recoding of
+the label. With a 44x charge gap and 2.6x length gap the occupied cells are a sparse corner, so this is
+plausible. **The donor list is the missing number and we have not computed it.**
+
+### 55c. §53's best number is 55% likely by construction
+
+We reported MVP at the **100.0th percentile of its 30 nearest look-alikes** as the strongest surviving
+argument for §40. Conditional on MVP already being the 98.0th percentile of 150 seeds,
+**0.98³⁰ = 0.545** — so **a pre-chosen 98th-percentile seed tops all 30 of any random 30-set 55% of the
+time.** Verified. That statistic is very nearly uninformative, and we presented it as the headline.
+
+Worse, grok argues the matching object is wrong: MVP's neighbours were matched on **monomer** length and
+charge, but *"the 30 neighbours do not share a 13 MDa elution peak."* Matching monomer sequence features
+cannot control for particle-scale co-elution. And length's correlation, while real at p = 0.0003, has
+**r² = 0.086** — far too small to generate an 18.49x tail.
+
+### 55d. The artefact none of our five controls touches
+
+**Polysome-window co-elution.** CFdb top-200 lists fill with whichever complex dominates peptide mass in
+the shared heavy fractions, and in a cytoplasmic lysate that complex is the ribosome. MVP at the 98.0th
+percentile sits just under RPL7 and RPS6 at 98.7. Grok's summary is the sharpest sentence in the audit:
+
+> *"A vault that co-elutes like a ribosomal protein and co-precipitates translation proteins at a
+> residual +0.070 log2 (p = 0.174), against a core of +7.516, is co-fractionation without a
+> co-complex."*
+
+And MVP's 98 sits exactly in the high cluster — dynein 96.0, proteasome 92.7, condensin/cohesin 91.3 —
+*"which is where a polysome-overlapping cytoplasmic profile lands."* **Two controls we never ran:
+matching on elution-profile correlation, and varying k, the top-200 cutoff that magnifies the effect.**
+
+### 55e. Our mass gate had a dead zone wider than its own estimator
+
+A third one-way gate, after #188 and #204. The large-assembly median was **70.0** against a random
+median of 50 — that is 2.4 SE, two-sided **p ≈ 0.018**, a real shift. But our confirm bar at 75 sat
+**0.6 SE above** the estimate and our clear bar at 60 sat **1.2 SE below** it: **the pre-registered
+refusal band was wider than the estimator could resolve**, so EQUIVOCAL was close to pre-ordained.
+
+Two further corrections:
+
+- **Weighting decides the verdict.** Equal weight per assembly on the seven medians (26, 26, 72.7, 75.3,
+  91.3, 92.7, 96) gives **75.3 — which clears our >75 confirm bar.** Seed-weighting let NPC (n=7) and
+  the spliceosome (n=5) pull it down. We did not register the weighting.
+- **Mass is exonerated regardless, and more cleanly than we argued.** The informative contrast is
+  large-assembly 70.0 against our own small-complex negatives at **65.0** — a **5-point gap**. We
+  reached the right conclusion by the wrong comparison.
+- **The median was the wrong summary.** Within-assembly ranges (condensin/cohesin 6-94, clathrin 41-98,
+  NPC 6-52) describe a two-cluster distribution, not a central tendency.
+- **We over-applied rule 7 on the compartment test.** We declined it for lack of GO compartment terms —
+  but **assembly identity already labels all 35 seeds**, and condensin/cohesin at a median of 91.3 on
+  n = 5 means at least three of its seeds are ≥ 91, so it genuinely does break a pure cytoplasm rule.
+  Declining to *adopt* compartment was right; declining to *test* it was unnecessary.
+
+### 55f. The SMC5/6 gate failure was a one-count artefact
+
+| exceedances k | add-one p | q (BH × 1,849) |
+|---|---|---|
+| 1 | 5.00e-06 | **0.00924** |
+| **2 (observed)** | 7.50e-06 | **0.01387** |
+| MLE at k=2 | 2/400,000 | 0.00924 |
+
+**Our 0.01 bar sits in the gap between k=1 and k=2.** The miss is the 50% add-one penalty at two
+counts, not a property of the data. Garwood's 95% interval on 2 events gives q ∈ **[0.0011, 0.033]** —
+our quoted [0.0017, 0.050] was too wide on top — and 0.01 is inside either interval, so *"unresolved"*
+survives while our upper endpoint does not.
+
+Grok's charge of manufactured indecision lands: **SMC5/6 is the better-measured quantity**, 15 counts at
+26% relative Poisson error against the control's 2 counts at 71%, and **q_empirical = 0.037 meets 0.05
+on its own.** *"Voiding a 15-count q because a 2-count positive control missed by the continuity
+correction is the manufactured half."* The core, at mean +7.516 with 2 exceedances, is a **detected**
+positive control whose q is merely unidentified — not a failed one.
+
+**But refusing the 4M draws was right**, and grok agrees for a better reason than ours: at the current
+rate 4M draws expect 20 counts, pass about **60%** of the time, and leave SE(q) ≈ 0.002 still straddling
+0.01. *"'Likely just inside' is a coin flip."* Resolving it to 3 SE would take on the order of **3×10⁸
+draws.**
+
+### 55g. What we are changing, and what we are not
+
+Changed: §51's headline (a sensitivity analysis, not a kill), the mitoribosome justification
+(withdrawn), §53's look-alike percentile (55% by construction), §52's gate design (dead zone wider than
+the estimator; weighting unregistered), and §50's verdict framing (the control was detected, not
+failed).
+
+**Not changed: no claim is promoted.** SMC5/6 at q = 0.037 is better measured than we said, and it is
+still one instrument, with a nuclear-contamination control that cannot be built in this assay (#217).
+§40 still has the polysome-window artefact unaddressed, which is a *new* alternative, not an eliminated
+one — so the honest count is **five eliminated and one newly identified**, not six eliminated.
