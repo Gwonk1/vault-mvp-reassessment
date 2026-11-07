@@ -2423,3 +2423,75 @@ CFdb gives no support. **And cohesin and condensin members score slightly higher
 members do**, so that instrument does not even rank SMC5/6 above the controls. Per the registration this
 decides nothing on its own — a CFdb negative is weak evidence, and MVP-TEP1 at 0.041 for a protein the
 pulldown confirms at LWTP 3.33 is the standing reason why.
+
+## 46. COP1 is the only non-subunit vault partner with three independent instruments
+
+Began as a list-level replication test — do any of the 88 physical interactors appear as MVP partners
+elsewhere? — and **house rule 7 stopped it before it was registered.**
+
+### 46a. The test had no power, and the reason is a finding
+
+Rule 7 (added hours ago after #188) requires confirming a control or comparison protein is present in
+the data a test will read, before registering. Applied to BioPlex: **of MVP's 8 BioPlex 293T partners,
+exactly 1 is present in the IP-MS universe at all.** GOPC, GOT1, HCN1, HIST1H4F, PPP2R2B, RCOR3 and
+STX17 were never detected in the IP-MS run, so non-replication would have been guaranteed by
+non-detection rather than by disagreement.
+
+**The two instruments sample nearly disjoint proteomes.** Cross-instrument replication between them is
+impossible in principle for seven of eight partners, which also retroactively bounds §41's use of
+BioPlex as a descriptive check: it was never capable of confirming or denying anything about the IP-MS
+interactome. **The rule earned its keep on first use**, and would have saved the §45b error had it
+existed a day earlier.
+
+### 46b. The #42 synonym error, again
+
+The first pass recorded BioPlex HCT116's partner `RFWD2` as absent from the IP-MS universe. **RFWD2 is
+COP1** — the IP-MS table uses the current symbol, BioPlex the former one. This is the same
+symbol-matching failure as #42, hit for the second time, now within a single analysis. The real overlap
+was larger than naive matching showed.
+
+### 46c. Provenance decides it, and it splits the two candidates apart
+
+IntAct holds **75 distinct human MVP partners, 16 of them detectable in the IP-MS universe**, so unlike
+BioPlex it has real power. Three of those 16 are IP-MS interactors: **PARP4, COP1 and MAP7**.
+
+But IntAct **aggregates published interactions**, so "a third instrument" may be a second copy of the
+first. Checking the record provenance:
+
+| record | source | independent of BioPlex? |
+|---|---|---|
+| MVP-MAP7 | Huttlin 2021, PMID 33961781 | **no — that paper *is* BioPlex 3.0** |
+| MVP-COP1 | Huttlin 2021, PMID 33961781 | no |
+| **MVP-COP1** | **Lu G. et al. 2014, PMID 25117710, TAP** | **yes** |
+| MVP-PARP4 | Huttlin 2017 + Huttlin 2021 | no (both BioPlex) |
+
+So:
+
+- **COP1 has three genuinely independent physical instruments:** the anti-MVP IP-MS (WT_LFC +4.74,
+  LWTP 2.59, not PARP4-dependent), BioPlex AP-MS, and a 2014 tandem-affinity purification. **It is the
+  only non-subunit protein in this entire project with that much cross-instrument support.**
+- **MAP7 does not.** Its IntAct record is the BioPlex record, so it has two instruments, not three — and
+  its IP-MS evidence is marginal at **LWTP 1.319 against a 1.3 threshold**. We are not carrying it as a
+  finding.
+- IntAct adds no independent support for PARP4 either, though PARP4 does not need it (CFdb 0.676, IP-MS
+  LWTP 3.32, co-abundance rank 1 in eight cohorts).
+
+**Caveat on all of them: every IntAct record above is "spoke expansion"** — a binary pair inferred from
+a multi-protein pulldown, not a demonstrated binary contact.
+
+### 46d. And there is still no module, including the tempting one
+
+COP1 is an E3 ubiquitin ligase; NBR1, also an interactor (+5.09), is a selective-autophagy receptor. Two
+degradation-pathway proteins on a particle with a 66-hour half-life is an inviting story about vault
+disposal, and **§44 already excluded it before it could be told.** Those terms were inside the scanned
+window and are flat or below chance:
+
+| term | in universe | hits | expected |
+|---|---|---|---|
+| `GOBP_PROTEASOMAL_PROTEIN_CATABOLIC_PROCESS` | 75 | 4 | 5.48 |
+| `GOBP_PROTEIN_CATABOLIC_PROCESS` | 111 | 7 | 8.11 |
+| `GOBP_MACROAUTOPHAGY` | 31 | 2 | 2.26 |
+
+**Below expectation, not merely unsupported.** COP1 and NBR1 are two individual proteins that happen to
+share an annotation, which is exactly the pattern this project has mistaken for a module five times. The
+finding is COP1, singular, and nothing larger.
