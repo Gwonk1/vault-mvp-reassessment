@@ -1,0 +1,126 @@
+CCLE prot shape: (12096, 375) sample cols: ['22RV1_PROSTATE', '697_HAEMATOPOIETIC_AND_LYMPHOID_TISSUE', '769P_KIDNEY', '786O_KIDNEY', '8305C_THYROID']
+Downloaded CCLE metabolomics: 2098255 B
+Downloaded ccle_data_cna.txt: 49156000 B
+Downloaded luad_cptac_2020_data_cna.txt: 4927884 B
+Downloaded brca_cptac_2020_data_cna.txt: 6730017 B
+Downloaded ucec_cptac_2020_data_cna.txt: 5941700 B
+Downloaded coad_cptac_2019_data_cna.txt: 5814482 B
+Fetched CCLE targeted mRNA: (22, 1156)
+
+=== TEST H1: Post-Translational Orphan-Subunit Stabilization (CCLE n~371) ===
+Shared mRNA + Mass-Spec Proteomics CCLE cell lines: 371
+  PARP4  (n=371): r(mRNA, MVP_mRNA)=+0.381 -> r(Prot, MVP_Prot)=+0.874 | partial r(Prot, MVP_Prot | own_mRNA)=+0.876 (p=6.11e-119) | R2 own_mRNA=0.291 -> +MVP_Prot=0.835
+  TEP1   (n=273): r(mRNA, MVP_mRNA)=+0.172 -> r(Prot, MVP_Prot)=+0.654 | partial r(Prot, MVP_Prot | own_mRNA)=+0.681 (p=1.69e-38) | R2 own_mRNA=0.103 -> +MVP_Prot=0.519
+  ANXA2  (n=371): r(mRNA, MVP_mRNA)=+0.533 -> r(Prot, MVP_Prot)=+0.576 | partial r(Prot, MVP_Prot | own_mRNA)=+0.351 (p=3.61e-12) | R2 own_mRNA=0.652 -> +MVP_Prot=0.695
+  CAPN2  (n=371): r(mRNA, MVP_mRNA)=+0.561 -> r(Prot, MVP_Prot)=+0.599 | partial r(Prot, MVP_Prot | own_mRNA)=+0.382 (p=2.43e-14) | R2 own_mRNA=0.499 -> +MVP_Prot=0.572
+
+=== TEST A4A: Copy-Number-Adjusted MVP Co-Abundance (16p11.2 Confound Dissection) ===
+CPTAC cohorts with matched linear CNA + Mass-Spec Proteomics: 4 (['luad_cptac_2020', 'brca_cptac_2020', 'ucec_cptac_2020', 'coad_cptac_2019'])
+  PARP4      [off-chr16         ] k=4 | r_raw=+0.812 -> r_CNA_adj=+0.801 (-1.3%)
+  TEP1       [off-chr16         ] k=4 | r_raw=+0.509 -> r_CNA_adj=+0.494 (-2.9%)
+  PYCARD     [16p11.2 (29-31Mb) ] k=4 | r_raw=+0.222 -> r_CNA_adj=+0.215 (-3.0%)
+  MAPK3      [16p11.2 (29-31Mb) ] k=4 | r_raw=+0.387 -> r_CNA_adj=+0.327 (-15.4%)
+  ALDOA      [16p11.2 (29-31Mb) ] k=4 | r_raw=+0.382 -> r_CNA_adj=+0.330 (-13.7%)
+  CASP1      [chr11 inflammasome] k=4 | r_raw=+0.130 -> r_CNA_adj=+0.166 (+27.5%)
+  CASP4      [chr11 inflammasome] k=4 | r_raw=+0.197 -> r_CNA_adj=+0.239 (+21.6%)
+  ANXA2      [off-chr16         ] k=4 | r_raw=+0.277 -> r_CNA_adj=+0.311 (+12.4%)
+  S100A10    [off-chr16         ] k=4 | r_raw=+0.250 -> r_CNA_adj=+0.234 (-6.1%)
+  CAPN2      [off-chr16         ] k=4 | r_raw=+0.358 -> r_CNA_adj=+0.338 (-5.6%)
+  CAPNS1     [off-chr16         ] k=4 | r_raw=+0.332 -> r_CNA_adj=+0.324 (-2.2%)
+  EHD2       [off-chr16         ] k=4 | r_raw=+0.024 -> r_CNA_adj=+0.008 (-66.6%)
+  EHD4       [off-chr16         ] k=4 | r_raw=+0.148 -> r_CNA_adj=+0.169 (+14.4%)
+  IQGAP1     [off-chr16         ] k=4 | r_raw=+0.230 -> r_CNA_adj=+0.271 (+17.9%)
+  CLIC1      [off-chr16         ] k=4 | r_raw=+0.288 -> r_CNA_adj=+0.320 (+11.1%)
+
+CCLE CNA (ccle_data_cna.txt) shared samples with proteomics: 366
+  CCLE 16p11.2-euploid cell lines: n=360
+    CCLE PARP4     : r_all=+0.874 -> r_16p_euploid=+0.872
+    CCLE TEP1      : r_all=+0.657 -> r_16p_euploid=+0.659
+    CCLE PYCARD    : r_all=+0.069 -> r_16p_euploid=+0.075
+    CCLE MAPK3     : r_all=+0.333 -> r_16p_euploid=+0.319
+    CCLE ALDOA     : r_all=+0.170 -> r_16p_euploid=+0.159
+    CCLE SULT1A3   : r_all=+0.214 -> r_16p_euploid=+0.218
+    CCLE CASP1     : r_all=+0.152 -> r_16p_euploid=+0.151
+    CCLE CASP4     : r_all=+0.366 -> r_16p_euploid=+0.363
+    CCLE ANXA2     : r_all=+0.576 -> r_16p_euploid=+0.577
+    CCLE S100A10   : r_all=+0.514 -> r_16p_euploid=+0.511
+    CCLE CAPN2     : r_all=+0.592 -> r_16p_euploid=+0.585
+    CCLE CAPNS1    : r_all=+0.463 -> r_16p_euploid=+0.455
+    CCLE EHD2      : r_all=+0.581 -> r_16p_euploid=+0.575
+    CCLE EHD4      : r_all=+0.553 -> r_16p_euploid=+0.549
+    CCLE IQGAP1    : r_all=+0.581 -> r_16p_euploid=+0.580
+    CCLE CLIC1     : r_all=+0.295 -> r_16p_euploid=+0.292
+
+=== TEST A4B: CCLE 225-Metabolite LC-MS Screen (Li et al. 2019) ===
+Metabolomics table shape: (928, 227) first cols: ['CCLE_ID', 'DepMap_ID', '2-aminoadipate', '3-phosphoglycerate', 'alpha-glycerophosphate']
+Shared CCLE cell lines (Mass-Spec Proteomics x 225 Metabolites): n=370, n_metabolites=225
+Metabolites at q_raw < 0.05: 110 | at q_3pc < 0.05: 20
+
+Top 20 Metabolites correlated with MVP protein (raw):
+            metabolite   n     r_raw        q_raw     r_3pc        q_3pc   r_parp4    r_tep1
+  1-methylnicotinamide 370  0.406972 7.690897e-14  0.312677 1.754709e-07  0.314247  0.243911
+                   AMP 370 -0.337552 2.923847e-09 -0.186213 8.905197e-03 -0.262161 -0.234299
+              C20:4 CE 370  0.328851 6.635904e-09  0.149568 4.424487e-02  0.288890  0.271153
+              C20:5 CE 370  0.312618 3.733719e-08  0.143389 5.600976e-02  0.257000  0.230451
+alpha-glycerophosphate 370 -0.312202 3.733719e-08 -0.218292 1.280359e-03 -0.272835 -0.191976
+                   CMP 370 -0.303236 9.818967e-08 -0.153506 3.639361e-02 -0.253654 -0.256900
+   hexoses (HILIC neg) 370  0.291772 3.031944e-07  0.088115 2.829450e-01  0.223690  0.209283
+                   UMP 370 -0.291758 3.031944e-07 -0.125284 9.206598e-02 -0.226414 -0.229195
+             C46:1 TAG 370 -0.278985 1.210939e-06 -0.104020 1.954944e-01 -0.246437 -0.181977
+               leucine 370  0.270754 2.758926e-06  0.052597 5.917673e-01  0.186810  0.242772
+            methionine 370  0.266895 3.797948e-06  0.067420 4.492911e-01  0.184228  0.229302
+         cystathionine 370 -0.266189 3.797948e-06 -0.228516 6.759396e-04 -0.280477 -0.187299
+                   GMP 370 -0.259680 7.057033e-06 -0.128975 8.886007e-02 -0.223205 -0.165301
+              C18:2 CE 370  0.256351 9.305724e-06  0.036889 7.048681e-01  0.224403  0.213806
+  methionine sulfoxide 370  0.253323 1.189776e-05  0.070624 4.332774e-01  0.145048  0.179207
+   hexoses (HILIC pos) 370  0.246172 2.238602e-05  0.077392 3.817271e-01  0.159009  0.140502
+              C22:6 CE 370  0.245290 2.238602e-05  0.091583 2.597845e-01  0.209751  0.219188
+              cytidine 370 -0.244930 2.238602e-05 -0.155746 3.404708e-02 -0.210330 -0.204860
+              C16:0 CE 370  0.244761 2.238602e-05  0.070050 4.372203e-01  0.223309  0.181955
+             C46:2 TAG 370 -0.241103 3.052531e-05 -0.082110 3.400405e-01 -0.223597 -0.137508
+
+Top 15 Metabolites after 3-PC removal:
+                          metabolite     r_raw     r_3pc        q_3pc   r_parp4    r_tep1
+                1-methylnicotinamide  0.406972  0.312677 1.754709e-07  0.314247  0.243911
+                           adenosine  0.226559  0.237145 4.484678e-04  0.190539  0.154847
+                       cystathionine -0.266189 -0.228516 6.759396e-04 -0.280477 -0.187299
+              alpha-glycerophosphate -0.312202 -0.218292 1.280359e-03 -0.272835 -0.191976
+                            C16:0 SM  0.061827  0.206945 2.724365e-03  0.084189  0.047663
+                           C54:2 TAG -0.108892  0.193434 6.802597e-03 -0.044379 -0.162188
+                          C36:4 PC-B -0.207384 -0.187259 8.905197e-03 -0.194591 -0.177230
+                                 AMP -0.337552 -0.186213 8.905197e-03 -0.262161 -0.234299
+                            C16:1 SM  0.159366  0.178559 1.397289e-02  0.125180  0.192142
+                         niacinamide  0.009463 -0.171321 2.108409e-02 -0.012865  0.027249
+butyrylcarnitine/isobutyrylcarnitine -0.204954 -0.166502 2.674213e-02 -0.191518 -0.128590
+                           C52:1 TAG -0.090904  0.164527 2.802759e-02 -0.057371 -0.158870
+                            C14:0 SM  0.110788  0.162987 2.869056e-02  0.101410  0.137276
+                             glycine -0.107811 -0.161320 2.976781e-02 -0.067372 -0.027837
+                            C24:0 SM  0.071927  0.159438 3.145192e-02  0.057161 -0.039330
+
+Targeted check — NAD / NADP / Nicotinamide / Pantothenate / GSH:
+                                                    metabolite     r_raw        q_raw     r_3pc        q_3pc   r_parp4    r_tep1
+                                          1-methylnicotinamide  0.406972 7.690897e-14  0.312677 1.754709e-07  0.314247  0.243911
+                                                     C16:0 LPE -0.207671 3.646628e-04 -0.125214 9.206598e-02 -0.180202 -0.121220
+                          butyrylcarnitine/isobutyrylcarnitine -0.204954 4.021414e-04 -0.166502 2.674213e-02 -0.191518 -0.128590
+                                                     C22:6 LPC  0.198608 6.009280e-04  0.049929 6.087332e-01  0.152734  0.125687
+                                                     C18:1 LPE -0.184333 1.359908e-03 -0.113869 1.434487e-01 -0.147678 -0.099933
+                                                     C14:0 LPC -0.178248 2.009895e-03 -0.134589 7.669510e-02 -0.160395 -0.143498
+                                         arachidonyl_carnitine -0.147030 1.202562e-02 -0.047327 6.348794e-01 -0.119568 -0.094202
+                                                     carnitine  0.144326 1.368544e-02  0.067967 4.492911e-01  0.175600  0.059593
+                                                     C18:1 LPC  0.126706 3.348817e-02  0.012647 9.297955e-01  0.129102  0.027480
+                                              lauroylcarnitine -0.125057 3.515090e-02 -0.045262 6.469926e-01 -0.157657 -0.085005
+                                                     C20:4 LPC  0.118300 4.717840e-02  0.027030 8.120575e-01  0.140035  0.062631
+                                            myristoylcarnitine -0.109173 6.657566e-02 -0.009349 9.420431e-01 -0.156749 -0.064237
+                                          glutathione oxidized  0.105396 7.515223e-02  0.067599 4.492911e-01  0.116149  0.126905
+                                                     C18:0 LPE -0.105157 7.539838e-02 -0.055633 5.641217e-01 -0.031789 -0.067842
+                                                  pantothenate -0.096063 1.081961e-01 -0.098746 2.170498e-01 -0.044057 -0.031432
+                                            heptanoylcarnitine -0.079695 1.885792e-01 -0.007183 9.632610e-01 -0.095854  0.001730
+                                                     C22:6 LPE -0.079571 1.885792e-01 -0.047042 6.350076e-01 -0.084995 -0.084996
+                                                           NAD  0.077095 2.041679e-01  0.139164 6.608916e-02  0.103797  0.098373
+valerylcarnitine/isovalerylcarnitine/2-methylbutyroylcarnitine -0.074747 2.182317e-01 -0.100359 2.103853e-01 -0.038714 -0.107476
+                                            propionylcarnitine -0.066030 2.813675e-01 -0.133335 7.715591e-02 -0.047484 -0.076765
+                                                     C16:1 LPC -0.063661 3.025094e-01 -0.082273 3.400405e-01 -0.051254 -0.027697
+                                             hexanoylcarnitine -0.058453 3.448194e-01 -0.002986 9.811314e-01 -0.095160 -0.020169
+                                                          NADP  0.049295 4.337761e-01  0.041435 6.810826e-01  0.069626  0.060392
+                                                     C20:4 LPE -0.043705 4.887988e-01  0.019974 8.593341e-01 -0.008109 -0.017591
+                                                     C16:0 LPC -0.041169 5.199067e-01 -0.091937 2.597845e-01 -0.067870 -0.085702

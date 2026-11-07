@@ -1,0 +1,77 @@
+1. Full 78-chain Human Brain Vault (11JB): total CA=60450, long axis=dz (span=656.1 A), radial max=197.6 A
+  Chain A nearest neighbors in 11JB: [(4.191151870309572, 'm'), (4.191320794212723, 'B'), (4.3446487775192875, 'w'), (8.077135507096514, 'x')] -> keeping: ['A', 'm', 'B', 'w']
+  PDB 9R86 (Lovestam & Scheres 2025 half-vault): chains=39, modeled residue range=11..802
+  Chain A inter-chain lateral/waist seam residues (<=4.5A): n=355
+  Chain A AR6 (ADP-ribose) contact residues (<=4.5A): n=28 -> [(433, 3.622), (437, 1.988), (438, 4.05), (499, 3.906), (500, 3.227), (501, 3.107), (502, 2.85), (503, 2.32), (504, 3.5), (506, 2.208), (508, 2.629), (509, 2.728), (511, 2.208), (513, 2.129), (515, 2.282), (516, 2.685), (517, 2.252), (521, 2.581), (522, 2.417), (523, 2.057), (524, 2.135), (545, 2.336), (547, 4.439), (565, 2.6), (566, 2.588), (567, 2.671), (568, 2.654), (569, 4.369)]
+
+=== TEST A3A RESULTS (n=380 luminal-face residues across full human vault) ===
+Luminal baseline: median AA identity=0.805, median chemical-class conservation=0.922
+
+[Test A3A-1] Phage L05 Homologous Locus (Human Repeat 1-2 Luminal Inter-Chain Seam, pos <=112):
+  Repeat 1-2 luminal seam (n=15): mean AA ident=0.763 (45.2th luminal pct), mean chem=0.854 (46.2th pct), basic K/R/H frac=0.261
+  All Repeat 1-2 luminal (n=59): mean AA ident=0.734 (46.0th luminal pct), basic K/R/H frac=0.153
+ pos aa  ident_to_human  chem_conservation  luminal_ident_pct  basic_frac
+   9  R        0.918367           0.965986          70.789474    0.965986
+  10  I        0.870748           1.000000          58.947368    0.000000
+  12  P        0.959184           0.959184          80.789474    0.040816
+  13  Y        0.693878           0.775510          30.526316    0.170068
+  21  Q        0.697987           0.885906          31.578947    0.020134
+  38  Q        0.886667           0.893333          62.894737    0.086667
+  39  D        0.820000           0.960000          52.368421    0.000000
+  40  N        0.746667           0.753333          39.210526    0.240000
+  42  R        0.720000           0.873333          34.473684    0.873333
+  49  R        0.462585           0.680272          10.000000    0.680272
+  52  T        0.560811           0.608108          20.789474    0.000000
+  53  V        0.695946           0.993243          30.789474    0.000000
+  54  P        0.959459           0.966216          81.052632    0.000000
+  56  R        0.783784           0.824324          45.789474    0.824324
+  86  A        0.671141           0.671141          27.894737    0.006711
+
+[Test A3A-2] Human SPFH Shoulder NAD+/ADP-Ribose Pocket (PDB 11JB AR6 + Keyhole):
+  Full <=4.5A pocket (n=30): mean AA ident=0.801, mean chemical-class conservation=0.838 (48.1th luminal pct, Mann-Whitney p=6.1755e-01)
+  Direct <=2.7A H-bond/salt-bridge/stacking core (n=19): mean AA ident=0.826, mean chemical-class conservation=0.853 (48.6th luminal pct)
+
+[Test A3A-3] Human MVP PARP4-MINT Docking Interface (PDB 9BW6, Repeats 3-4, n=18):
+  mean AA ident=0.642 (30.7th luminal pct) — SIGNIFICANTLY MORE DIVERGENT than rest of luminal wall (Mann-Whitney less p=2.0154e-03)!
+
+Human gnomAD v4 Canonical PASS Missense Constraint on MVP:
+  SPFH NAD+/ADPR pocket (n=30): zero-missense residues=7/30 (23.3%), median AC=2.5
+  Rest of MVP (n=863): zero-missense residues=246/863 (28.5%), median AC=2.0
+
+MVP Domain-by-Domain Eukaryotic Conservation:
+  Repeats_1_2 (1-112)                       : mean_ident=0.734, median_ident=0.774, mean_chem=0.824
+  Repeats_3_4_PARP4_MINT_zone (113-222)     : mean_ident=0.731, median_ident=0.754, mean_chem=0.819
+  Repeats_5_9 (223-498)                     : mean_ident=0.713, median_ident=0.770, mean_chem=0.803
+  SPFH_shoulder_NAD_pocket_domain (499-665) : mean_ident=0.778, median_ident=0.828, mean_chem=0.855
+  Cap_helix (666-790)                       : mean_ident=0.746, median_ident=0.799, mean_chem=0.819
+  Cap_disk_pore (791-893)                   : mean_ident=0.644, median_ident=0.653, mean_chem=0.750
+
+=== TEP1 Domain Architecture & TeTIR NADase Active-Site Conservation (KOG3602, n=170+ eukaryotes) ===
+  N_term_repeats (1-200)              : mean_ident=0.573, median_ident=0.611, mean_pct=64.9th
+  TROVE_vtRNA_binding (201-698)       : mean_ident=0.576, median_ident=0.584, mean_pct=64.2th
+  vRNA_linker (699-885)               : mean_ident=0.534, median_ident=0.551, mean_pct=60.2th
+  TeTIR_DUF4062_NADase (886-1117)     : mean_ident=0.379, median_ident=0.276, mean_pct=41.9th
+  NACHT_NTPase (1150-1550)            : mean_ident=0.337, median_ident=0.223, mean_pct=36.1th
+  WD40_sensor_propellers (1650-2627)  : mean_ident=0.413, median_ident=0.378, mean_pct=46.6th
+
+TEP1 TeTIR NADase Catalytic & Pocket Residues (F902, R914, R942, W943, C959, R976, E1008):
+  Active-site mean identity = 0.766 (84.2th pct of TEP1) vs rest of TEP1 = 0.448 | Mann-Whitney p = 8.5837e-04
+ pos aa      occ  ident_to_human  chem_conservation  pct_rank
+ 902  F 0.656012        0.832947           0.935035 91.587362
+ 914  R 0.735160        0.935818           0.942029 98.058622
+ 942  R 0.759513        0.705411           0.735471 81.347545
+ 943  W 0.762557        0.920160           0.940120 97.183099
+ 959  C 0.779300        0.689453           0.693359 79.672630
+ 976  R 0.805175        0.396975           0.769376 46.250476
+1008  E 0.158295        0.884615           0.884615 95.241721
+
+gnomAD v4 Canonical PASS Missense Variants at TEP1 TeTIR Active Site:
+  TEP1 F902: PASS missense variants = 0, total PASS allele count = 0
+  TEP1 R914: PASS missense variants = 3, total PASS allele count = 32
+  TEP1 R942: PASS missense variants = 4, total PASS allele count = 65
+  TEP1 W943: PASS missense variants = 0, total PASS allele count = 0
+  TEP1 C959: PASS missense variants = 1, total PASS allele count = 1
+  TEP1 R976: PASS missense variants = 3, total PASS allele count = 226
+  TEP1 E1008: PASS missense variants = 1, total PASS allele count = 2
+
+Saved results/test_a3_pocket_and_tep1.json cleanly.

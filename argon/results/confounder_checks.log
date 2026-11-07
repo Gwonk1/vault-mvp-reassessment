@@ -1,0 +1,78 @@
+=== 1. POPPERIAN CONFOUNDER CHECK ON 1-METHYLNICOTINAMIDE (CCLE n=370) ===
+Present NAD/nicotinamide enzymes in CCLE proteomics: ['MVP', 'PARP4', 'TEP1', 'NNMT', 'NAMPT', 'NMRK1', 'NAPRT', 'CD38', 'BST1', 'PARP1', 'PARP9', 'PARP14', 'SARM1', 'AOX1']
+1-MNA range: [3.33, 7.84] (std=1.33), niacinamide range: [4.25, 6.85]
+  MVP      (n=370): r(1-MNA)=+0.407 (p=3.42e-16) | r(MVP_prot)=+1.000
+  PARP4    (n=370): r(1-MNA)=+0.314 (p=6.35e-10) | r(MVP_prot)=+0.873
+  TEP1     (n=272): r(1-MNA)=+0.244 (p=4.79e-05) | r(MVP_prot)=+0.653
+  NNMT     (n=370): r(1-MNA)=+0.697 (p=4.54e-55) | r(MVP_prot)=+0.478
+  NAMPT    (n=370): r(1-MNA)=+0.205 (p=7.37e-05) | r(MVP_prot)=+0.382
+  NMRK1    (n=156): r(1-MNA)=-0.007 (p=9.29e-01) | r(MVP_prot)=+0.343
+  NAPRT    (n=370): r(1-MNA)=-0.159 (p=2.17e-03) | r(MVP_prot)=+0.081
+  CD38     (n=300): r(1-MNA)=-0.205 (p=3.42e-04) | r(MVP_prot)=-0.226
+  BST1     (n=258): r(1-MNA)=+0.111 (p=7.62e-02) | r(MVP_prot)=+0.137
+  PARP1    (n=370): r(1-MNA)=-0.291 (p=1.19e-08) | r(MVP_prot)=-0.514
+  PARP9    (n=370): r(1-MNA)=+0.153 (p=3.14e-03) | r(MVP_prot)=+0.299
+  PARP14   (n=370): r(1-MNA)=+0.191 (p=2.15e-04) | r(MVP_prot)=+0.352
+  SARM1    (n=370): r(1-MNA)=+0.090 (p=8.32e-02) | r(MVP_prot)=+0.012
+
+Partial correlation dissection of 1-methylnicotinamide (mna) ~ MVP_prot:
+  Raw (no covariates)                                         : n=370 | r=+0.4070 (p=3.418e-16)
+  Controlling for NNMT_rna                                    : n=369 | r=+0.1186 (p=2.268e-02)
+  Controlling for NNMT_prot                                   : n=370 | r=+0.1177 (p=2.360e-02)
+  Controlling for NNMT_prot + NNMT_rna + NAMPT_rna + CD38_rna : n=369 | r=+0.0511 (p=3.272e-01)
+  Controlling for Tissue Lineage fixed effects (24 lineages)  : n=369 | r=+0.2854 (p=2.389e-08)
+  Controlling for Tissue Lineage + NNMT_rna                   : n=369 | r=+0.0380 (p=4.671e-01)
+
+MVP vs NNMT protein correlation across all 11 proteomics cohorts: {'brain_cptac_2020': 0.325, 'brca_cptac_2020': 0.512, 'brca_dldccc_2022': 0.342, 'brca_tcga': 0.452, 'brca_tcga_pan_can_atlas_2018': 0.433, 'ccle_broad_2019': 0.469, 'coad_cptac_2019': -0.273, 'coadread_tcga': 0.152, 'coadread_tcga_pan_can_atlas_2018': 0.133, 'gbm_cptac_2021': 0.566, 'luad_cptac_2020': -0.067, 'lusc_cptac_2021': 0.548, 'mng_utoronto_2021': 0.109, 'ov_tcga': 0.486, 'ov_tcga_pan_can_atlas_2018': 0.492, 'paad_cptac_2021': -0.07, 'ucec_cptac_2020': 0.374} mean= 0.293
+
+=== 2. GENOME-WIDE TOP-100 RANK & CONTINUOUS LINEAR CNA CHECK (16p11.2 vs OFF-CHR16) ===
+Local proteomics cohorts: ['brain_cptac_2020.clin', 'brain_cptac_2020', 'brca_cptac_2020.clin', 'brca_cptac_2020', 'brca_dldccc_2022.clin', 'brca_dldccc_2022', 'brca_tcga.clin', 'brca_tcga', 'brca_tcga_pan_can_atlas_2018.clin', 'brca_tcga_pan_can_atlas_2018', 'brca_tcga_pub2015.clin', 'brca_tcga_pub2015', 'coad_cptac_2019.clin', 'coad_cptac_2019', 'coadread_tcga.clin', 'coadread_tcga', 'coadread_tcga_pan_can_atlas_2018.clin', 'coadread_tcga_pan_can_atlas_2018', 'gbm_cptac_2021.clin', 'gbm_cptac_2021', 'gbm_tcga_pub2013.clin', 'gbm_tcga_pub2013', 'luad_cptac_2020.clin', 'luad_cptac_2020', 'lusc_cptac_2021.clin', 'lusc_cptac_2021', 'mng_utoronto_2021.clin', 'mng_utoronto_2021', 'ov_tcga.clin', 'ov_tcga', 'ov_tcga_pan_can_atlas_2018.clin', 'ov_tcga_pan_can_atlas_2018', 'paad_cptac_2021.clin', 'paad_cptac_2021', 'ucec_cptac_2020.clin', 'ucec_cptac_2020']
+  Found continuous CNA profile on cBioPortal for brca_tcga: brca_tcga_linear_CNA
+  Found continuous CNA profile on cBioPortal for brca_tcga_pub2015: brca_tcga_pub2015_linear_CNA
+  Found continuous CNA profile on cBioPortal for coadread_tcga: coadread_tcga_linear_CNA
+  Found continuous CNA profile on cBioPortal for gbm_tcga_pub2013: gbm_tcga_pub2013_linear_CNA
+  Found continuous CNA profile on cBioPortal for ov_tcga: ov_tcga_linear_CNA
+Fetched continuous MVP linear-CNA for 5 CPTAC cohorts: ['brca_tcga', 'brca_tcga_pub2015', 'coadread_tcga', 'gbm_tcga_pub2013', 'ov_tcga']
+
+Genome-wide Rank across 7 CNA-matched CPTAC cohorts (n_genes=9613):
+  PARP4      [off-16p]: r_raw=+0.803 (Rank #   2) -> r_CNA_adj=+0.792 (Rank #   2) | delta_rank=+0
+  TEP1       [off-16p]: r_raw=+0.490 (Rank #   3) -> r_CNA_adj=+0.478 (Rank #   3) | delta_rank=+0
+  PYCARD     [16p11.2]: r_raw=+0.357 (Rank #  32) -> r_CNA_adj=+0.350 (Rank #  40) | delta_rank=+8
+  MAPK3      [16p11.2]: r_raw=+0.469 (Rank #   4) -> r_CNA_adj=+0.420 (Rank #  10) | delta_rank=+6
+  ALDOA      [16p11.2]: r_raw=+0.448 (Rank #   5) -> r_CNA_adj=+0.400 (Rank #  16) | delta_rank=+11
+  SULT1A3    [16p11.2]: r_raw=+0.438 (Rank #   7) -> r_CNA_adj=+0.415 (Rank #  12) | delta_rank=+5
+  CORO1A     [16p11.2]: r_raw=+0.168 (Rank #1448) -> r_CNA_adj=+0.200 (Rank # 910) | delta_rank=-538
+  PRKCB      [16p11.2]: r_raw=+0.023 (Rank #5384) -> r_CNA_adj=+0.064 (Rank #4145) | delta_rank=-1239
+  CASP1      [chr11  ]: r_raw=+0.237 (Rank # 487) -> r_CNA_adj=+0.269 (Rank # 262) | delta_rank=-225
+  CASP4      [chr11  ]: r_raw=+0.285 (Rank # 182) -> r_CNA_adj=+0.318 (Rank #  96) | delta_rank=-86
+  ANXA2      [off-16p]: r_raw=+0.433 (Rank #   8) -> r_CNA_adj=+0.440 (Rank #   4) | delta_rank=-4
+  S100A10    [off-16p]: r_raw=+0.379 (Rank #  22) -> r_CNA_adj=+0.386 (Rank #  17) | delta_rank=-5
+  CAPN2      [off-16p]: r_raw=+0.432 (Rank #   9) -> r_CNA_adj=+0.428 (Rank #   7) | delta_rank=-2
+  CAPNS1     [off-16p]: r_raw=+0.424 (Rank #  11) -> r_CNA_adj=+0.426 (Rank #   8) | delta_rank=-3
+  EHD2       [off-16p]: r_raw=+0.129 (Rank #2297) -> r_CNA_adj=+0.127 (Rank #2344) | delta_rank=+47
+  EHD4       [off-16p]: r_raw=+0.284 (Rank # 189) -> r_CNA_adj=+0.304 (Rank # 128) | delta_rank=-61
+  IQGAP1     [off-16p]: r_raw=+0.373 (Rank #  26) -> r_CNA_adj=+0.374 (Rank #  25) | delta_rank=-1
+  ACTR3      [off-16p]: r_raw=+0.382 (Rank #  17) -> r_CNA_adj=+0.418 (Rank #  11) | delta_rank=-6
+  ARPC2      [off-16p]: r_raw=+0.317 (Rank #  80) -> r_CNA_adj=+0.352 (Rank #  38) | delta_rank=-42
+
+Top 20 genome-wide MVP protein partners AFTER continuous/GISTIC MVP-CNA regression:
+  # 1: PARP4        r_CNA_adj=+0.792 (was r_raw=+0.803, Rank #2)
+  # 2: TEP1         r_CNA_adj=+0.478 (was r_raw=+0.490, Rank #3)
+  # 3: ANXA2        r_CNA_adj=+0.440 (was r_raw=+0.433, Rank #8)
+  # 4: VWA5A        r_CNA_adj=+0.434 (was r_raw=+0.442, Rank #6)
+  # 5: SERPINB1     r_CNA_adj=+0.433 (was r_raw=+0.425, Rank #10)
+  # 6: CAPN2        r_CNA_adj=+0.428 (was r_raw=+0.432, Rank #9)
+  # 7: CAPNS1       r_CNA_adj=+0.426 (was r_raw=+0.424, Rank #11)
+  # 8: PDZK1IP1     r_CNA_adj=+0.425 (was r_raw=+0.404, Rank #12)
+  # 9: MAPK3        r_CNA_adj=+0.420 (was r_raw=+0.469, Rank #4)
+  #10: ACTR3        r_CNA_adj=+0.418 (was r_raw=+0.382, Rank #17)
+  #11: SULT1A3      r_CNA_adj=+0.415 (was r_raw=+0.438, Rank #7)
+  #12: RNH1         r_CNA_adj=+0.410 (was r_raw=+0.401, Rank #13)
+  #13: PLEC         r_CNA_adj=+0.407 (was r_raw=+0.397, Rank #14)
+  #14: LGALS3       r_CNA_adj=+0.405 (was r_raw=+0.383, Rank #16)
+  #15: ALDOA        r_CNA_adj=+0.400 (was r_raw=+0.448, Rank #5)
+  #16: S100A10      r_CNA_adj=+0.386 (was r_raw=+0.379, Rank #22)
+  #17: PLS1         r_CNA_adj=+0.382 (was r_raw=+0.390, Rank #15)
+  #18: TMOD3        r_CNA_adj=+0.380 (was r_raw=+0.381, Rank #19)
+  #19: MYO1A        r_CNA_adj=+0.380 (was r_raw=+0.367, Rank #28)
+  #20: CLIC1        r_CNA_adj=+0.379 (was r_raw=+0.374, Rank #25)

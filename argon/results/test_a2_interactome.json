@@ -1,0 +1,1612 @@
+{
+  "bioplex_HEK293T": [
+    {
+      "GeneA": 2805,
+      "GeneB": 9961,
+      "UniprotA": "P17174",
+      "UniprotB": "Q14764",
+      "SymbolA": "GOT1",
+      "SymbolB": "MVP",
+      "pW": 6.34662774144711e-10,
+      "pNI": 1.64482872491299e-08,
+      "pInt": 0.99999998291705
+    },
+    {
+      "GeneA": 8361,
+      "GeneB": 9961,
+      "UniprotA": "UNKNOWN",
+      "UniprotB": "Q14764",
+      "SymbolA": "HIST1H4F",
+      "SymbolB": "MVP",
+      "pW": 7.41561462072053e-10,
+      "pNI": 4.89014029144182e-08,
+      "pInt": 0.999999950357036
+    },
+    {
+      "GeneA": 284355,
+      "GeneB": 143,
+      "UniprotA": "Q8N7U7-2",
+      "UniprotB": "Q9UKK3",
+      "SymbolA": "TPRX1",
+      "SymbolB": "PARP4",
+      "pW": 3.04957619644943e-09,
+      "pNI": 6.46666703719017e-08,
+      "pInt": 0.999999932283754
+    },
+    {
+      "GeneA": 2512,
+      "GeneB": 7011,
+      "UniprotA": "P02792",
+      "UniprotB": "Q99973-2",
+      "SymbolA": "FTL",
+      "SymbolB": "TEP1",
+      "pW": 1.89987426541907e-09,
+      "pNI": 1.07533049333763e-07,
+      "pInt": 0.999999890567076
+    },
+    {
+      "GeneA": 55014,
+      "GeneB": 9961,
+      "UniprotA": "P56962",
+      "UniprotB": "Q14764",
+      "SymbolA": "STX17",
+      "SymbolB": "MVP",
+      "pW": 2.05028321936815e-09,
+      "pNI": 1.74012805282574e-07,
+      "pInt": 0.999999823936912
+    },
+    {
+      "GeneA": 266971,
+      "GeneB": 7011,
+      "UniprotA": "A2A3N6",
+      "UniprotB": "Q99973-2",
+      "SymbolA": "PIPSL",
+      "SymbolB": "TEP1",
+      "pW": 7.50462618137901e-08,
+      "pNI": 1.14557278929176e-07,
+      "pInt": 0.999999810396459
+    },
+    {
+      "GeneA": 9961,
+      "GeneB": 143,
+      "UniprotA": "Q14764",
+      "UniprotB": "Q9UKK3",
+      "SymbolA": "MVP",
+      "SymbolB": "PARP4",
+      "pW": 4.98522588369988e-07,
+      "pNI": 1.73866510260923e-07,
+      "pInt": 0.999999327610901
+    },
+    {
+      "GeneA": 10728,
+      "GeneB": 7011,
+      "UniprotA": "Q15185",
+      "UniprotB": "Q99973-2",
+      "SymbolA": "PTGES3",
+      "SymbolB": "TEP1",
+      "pW": 2.27395890583155e-08,
+      "pNI": 9.23397543074341e-07,
+      "pInt": 0.999999053862868
+    },
+    {
+      "GeneA": 5521,
+      "GeneB": 9961,
+      "UniprotA": "Q00005-2",
+      "UniprotB": "Q14764",
+      "SymbolA": "PPP2R2B",
+      "SymbolB": "MVP",
+      "pW": 1.91089181941691e-07,
+      "pNI": 1.30448034230409e-06,
+      "pInt": 0.999998504430476
+    },
+    {
+      "GeneA": 84851,
+      "GeneB": 7011,
+      "UniprotA": "Q96A61",
+      "UniprotB": "Q99973-2",
+      "SymbolA": "TRIM52",
+      "SymbolB": "TEP1",
+      "pW": 4.52242731907991e-08,
+      "pNI": 4.50609019386533e-06,
+      "pInt": 0.999995448685533
+    },
+    {
+      "GeneA": 50674,
+      "GeneB": 7011,
+      "UniprotA": "Q9Y4Z2",
+      "UniprotB": "Q99973-2",
+      "SymbolA": "NEUROG3",
+      "SymbolB": "TEP1",
+      "pW": 2.98351250743098e-06,
+      "pNI": 6.548852926693e-06,
+      "pInt": 0.999990467634566
+    },
+    {
+      "GeneA": 114609,
+      "GeneB": 7011,
+      "UniprotA": "P58753-3",
+      "UniprotB": "Q99973-2",
+      "SymbolA": "TIRAP",
+      "SymbolB": "TEP1",
+      "pW": 0.000468670187512738,
+      "pNI": 1.65032343379064e-06,
+      "pInt": 0.999529679489053
+    },
+    {
+      "GeneA": 348980,
+      "GeneB": 9961,
+      "UniprotA": "O60741",
+      "UniprotB": "Q14764",
+      "SymbolA": "HCN1",
+      "SymbolB": "MVP",
+      "pW": 0.000142867086506374,
+      "pNI": 0.000337659537968526,
+      "pInt": 0.999519473375525
+    },
+    {
+      "GeneA": 9961,
+      "GeneB": 57120,
+      "UniprotA": "Q14764",
+      "UniprotB": "Q9HD26-2",
+      "SymbolA": "MVP",
+      "SymbolB": "GOPC",
+      "pW": 2.74703400492356e-10,
+      "pNI": 0.00606200324892376,
+      "pInt": 0.993937996476373
+    },
+    {
+      "GeneA": 9961,
+      "GeneB": 55758,
+      "UniprotA": "Q14764",
+      "UniprotB": "Q9P2K3-3",
+      "SymbolA": "MVP",
+      "SymbolB": "RCOR3",
+      "pW": 5.99196848259804e-14,
+      "pNI": 0.136815839807976,
+      "pInt": 0.863184160191964
+    }
+  ],
+  "bioplex_HCT116": [
+    {
+      "GeneA": 9053,
+      "GeneB": 7011,
+      "UniprotA": "Q14244",
+      "UniprotB": "Q99973-2",
+      "SymbolA": "MAP7",
+      "SymbolB": "TEP1",
+      "pW": 1.45678575003365e-13,
+      "pNI": 8.97363432994041e-10,
+      "pInt": 0.999999999102491
+    },
+    {
+      "GeneA": 64326,
+      "GeneB": 7011,
+      "UniprotA": "Q8NHY2-3",
+      "UniprotB": "Q99973-2",
+      "SymbolA": "RFWD2",
+      "SymbolB": "TEP1",
+      "pW": 7.14313583743589e-08,
+      "pNI": 4.65401220571669e-06,
+      "pInt": 0.999995274556436
+    },
+    {
+      "GeneA": 9053,
+      "GeneB": 143,
+      "UniprotA": "Q14244",
+      "UniprotB": "Q9UKK3",
+      "SymbolA": "MAP7",
+      "SymbolB": "PARP4",
+      "pW": 2.61044272289502e-11,
+      "pNI": 1.28299831083466e-05,
+      "pInt": 0.999987169990787
+    },
+    {
+      "GeneA": 8292,
+      "GeneB": 7011,
+      "UniprotA": "Q9Y215-2",
+      "UniprotB": "Q99973-2",
+      "SymbolA": "COLQ",
+      "SymbolB": "TEP1",
+      "pW": 2.81942579862831e-12,
+      "pNI": 2.4562077601964e-05,
+      "pInt": 0.999975437919579
+    },
+    {
+      "GeneA": 2512,
+      "GeneB": 7011,
+      "UniprotA": "P02792",
+      "UniprotB": "Q99973-2",
+      "SymbolA": "FTL",
+      "SymbolB": "TEP1",
+      "pW": 9.14524218854551e-10,
+      "pNI": 3.07991125138614e-05,
+      "pInt": 0.999969199972962
+    },
+    {
+      "GeneA": 114898,
+      "GeneB": 7011,
+      "UniprotA": "Q9BXJ5",
+      "UniprotB": "Q99973-2",
+      "SymbolA": "C1QTNF2",
+      "SymbolB": "TEP1",
+      "pW": 1.66459762326446e-11,
+      "pNI": 6.09345799822872e-05,
+      "pInt": 0.999939065403372
+    },
+    {
+      "GeneA": 9053,
+      "GeneB": 9961,
+      "UniprotA": "Q14244",
+      "UniprotB": "Q14764",
+      "SymbolA": "MAP7",
+      "SymbolB": "MVP",
+      "pW": 6.86947492559e-14,
+      "pNI": 6.10759838601871e-05,
+      "pInt": 0.999938924016071
+    },
+    {
+      "GeneA": 57018,
+      "GeneB": 7011,
+      "UniprotA": "Q9UK58",
+      "UniprotB": "Q99973-2",
+      "SymbolA": "CCNL1",
+      "SymbolB": "TEP1",
+      "pW": 5.30317039312131e-10,
+      "pNI": 0.00170195425352535,
+      "pInt": 0.998298045216158
+    },
+    {
+      "GeneA": 64326,
+      "GeneB": 143,
+      "UniprotA": "Q8NHY2-3",
+      "UniprotB": "Q9UKK3",
+      "SymbolA": "RFWD2",
+      "SymbolB": "PARP4",
+      "pW": 3.45419306255609e-14,
+      "pNI": 0.00215107843277069,
+      "pInt": 0.997848921567195
+    },
+    {
+      "GeneA": 9529,
+      "GeneB": 7011,
+      "UniprotA": "Q9UL15-2",
+      "UniprotB": "Q99973-2",
+      "SymbolA": "BAG5",
+      "SymbolB": "TEP1",
+      "pW": 9.6196013639599e-11,
+      "pNI": 0.00225788593473828,
+      "pInt": 0.997742113969066
+    },
+    {
+      "GeneA": 29997,
+      "GeneB": 7011,
+      "UniprotA": "Q9NZM5",
+      "UniprotB": "Q99973-2",
+      "SymbolA": "GLTSCR2",
+      "SymbolB": "TEP1",
+      "pW": 8.72703163630089e-06,
+      "pNI": 0.00325160077030382,
+      "pInt": 0.99673967219806
+    },
+    {
+      "GeneA": 9532,
+      "GeneB": 7011,
+      "UniprotA": "O95816",
+      "UniprotB": "Q99973-2",
+      "SymbolA": "BAG2",
+      "SymbolB": "TEP1",
+      "pW": 4.50545761210426e-08,
+      "pNI": 0.009480212309487,
+      "pInt": 0.990519742635937
+    },
+    {
+      "GeneA": 10728,
+      "GeneB": 7011,
+      "UniprotA": "Q15185",
+      "UniprotB": "Q99973-2",
+      "SymbolA": "PTGES3",
+      "SymbolB": "TEP1",
+      "pW": 2.50154669282119e-09,
+      "pNI": 0.0161081828648149,
+      "pInt": 0.983891814633638
+    },
+    {
+      "GeneA": 57565,
+      "GeneB": 7011,
+      "UniprotA": "Q9P2G3-2",
+      "UniprotB": "Q99973-2",
+      "SymbolA": "KLHL14",
+      "SymbolB": "TEP1",
+      "pW": 4.34074142771827e-07,
+      "pNI": 0.0167879322909951,
+      "pInt": 0.983211633634862
+    },
+    {
+      "GeneA": 8292,
+      "GeneB": 143,
+      "UniprotA": "Q9Y215-2",
+      "UniprotB": "Q9UKK3",
+      "SymbolA": "COLQ",
+      "SymbolB": "PARP4",
+      "pW": 1.59892316637746e-10,
+      "pNI": 0.0306230362890988,
+      "pInt": 0.969376963551009
+    },
+    {
+      "GeneA": 10518,
+      "GeneB": 7011,
+      "UniprotA": "O75838",
+      "UniprotB": "Q99973-2",
+      "SymbolA": "CIB2",
+      "SymbolB": "TEP1",
+      "pW": 0.000206844228616785,
+      "pNI": 0.0315938345193283,
+      "pInt": 0.968199321252055
+    },
+    {
+      "GeneA": 64326,
+      "GeneB": 9961,
+      "UniprotA": "Q8NHY2-3",
+      "UniprotB": "Q14764",
+      "SymbolA": "RFWD2",
+      "SymbolB": "MVP",
+      "pW": 7.91114340091519e-15,
+      "pNI": 0.0344119821484511,
+      "pInt": 0.965588017851541
+    },
+    {
+      "GeneA": 23450,
+      "GeneB": 7011,
+      "UniprotA": "Q15393",
+      "UniprotB": "Q99973-2",
+      "SymbolA": "SF3B3",
+      "SymbolB": "TEP1",
+      "pW": 0.000216803076827771,
+      "pNI": 0.0344031299537046,
+      "pInt": 0.965380066969468
+    },
+    {
+      "GeneA": 51412,
+      "GeneB": 7011,
+      "UniprotA": "O94805",
+      "UniprotB": "Q99973-2",
+      "SymbolA": "ACTL6B",
+      "SymbolB": "TEP1",
+      "pW": 0.000440742474020975,
+      "pNI": 0.0401843782790807,
+      "pInt": 0.959374879246898
+    },
+    {
+      "GeneA": 91689,
+      "GeneB": 7011,
+      "UniprotA": "Q9H4I9",
+      "UniprotB": "Q99973-2",
+      "SymbolA": "C22orf32",
+      "SymbolB": "TEP1",
+      "pW": 2.0933705223364e-06,
+      "pNI": 0.0528775661876362,
+      "pInt": 0.947120340441841
+    },
+    {
+      "GeneA": 57018,
+      "GeneB": 143,
+      "UniprotA": "Q9UK58",
+      "UniprotB": "Q9UKK3",
+      "SymbolA": "CCNL1",
+      "SymbolB": "PARP4",
+      "pW": 3.11454853724366e-11,
+      "pNI": 0.0916503363157522,
+      "pInt": 0.908349663653102
+    },
+    {
+      "GeneA": 2161,
+      "GeneB": 7011,
+      "UniprotA": "P00748",
+      "UniprotB": "Q99973-2",
+      "SymbolA": "F12",
+      "SymbolB": "TEP1",
+      "pW": 1.3440785427759e-05,
+      "pNI": 0.101948604353657,
+      "pInt": 0.898037954860916
+    },
+    {
+      "GeneA": 387032,
+      "GeneB": 143,
+      "UniprotA": "Q969J2",
+      "UniprotB": "Q9UKK3",
+      "SymbolA": "ZKSCAN4",
+      "SymbolB": "PARP4",
+      "pW": 6.85656433269029e-14,
+      "pNI": 0.156986307642092,
+      "pInt": 0.843013692357839
+    },
+    {
+      "GeneA": 114898,
+      "GeneB": 143,
+      "UniprotA": "Q9BXJ5",
+      "UniprotB": "Q9UKK3",
+      "SymbolA": "C1QTNF2",
+      "SymbolB": "PARP4",
+      "pW": 1.15753221622239e-11,
+      "pNI": 0.166994633432174,
+      "pInt": 0.833005366556251
+    },
+    {
+      "GeneA": 8292,
+      "GeneB": 9961,
+      "UniprotA": "Q9Y215-2",
+      "UniprotB": "Q14764",
+      "SymbolA": "COLQ",
+      "SymbolB": "MVP",
+      "pW": 5.71941483862516e-16,
+      "pNI": 0.205029248249413,
+      "pInt": 0.794970751750587
+    },
+    {
+      "GeneA": 1296,
+      "GeneB": 9961,
+      "UniprotA": "E9PP49",
+      "UniprotB": "Q14764",
+      "SymbolA": "COL8A2",
+      "SymbolB": "MVP",
+      "pW": 1.25353186425475e-15,
+      "pNI": 0.216407970581285,
+      "pInt": 0.783592029418713
+    },
+    {
+      "GeneA": 1296,
+      "GeneB": 143,
+      "UniprotA": "E9PP49",
+      "UniprotB": "Q9UKK3",
+      "SymbolA": "COL8A2",
+      "SymbolB": "PARP4",
+      "pW": 1.29668310521676e-14,
+      "pNI": 0.240659665964733,
+      "pInt": 0.759340334035254
+    },
+    {
+      "GeneA": 91689,
+      "GeneB": 143,
+      "UniprotA": "Q9H4I9",
+      "UniprotB": "Q9UKK3",
+      "SymbolA": "C22orf32",
+      "SymbolB": "PARP4",
+      "pW": 2.26729021055423e-14,
+      "pNI": 0.244382001679456,
+      "pInt": 0.755617998320522
+    }
+  ],
+  "dicty_mvpa_top60": [
+    {
+      "protein_id": "X00001",
+      "gene_symbols_or_id": "FUS01",
+      "log2fc": 8.82283043378949,
+      "qval": 4.1043127647226e-15,
+      "fasta_headers": ">tr|X00001|X00001_DICDI MVPA-GS-TurboID OS=Dictyostelium discoideum OX=44689 GN=fus01 PE=4 SV=1"
+    },
+    {
+      "protein_id": "P54659",
+      "gene_symbols_or_id": "MVPB",
+      "log2fc": 7.48789296993961,
+      "qval": 4.1043127647226e-15,
+      "fasta_headers": ">sp|P54659|MVPB_DICDI Major vault protein beta OS=Dictyostelium discoideum OX=44689 GN=mvpB PE=1 SV=1"
+    },
+    {
+      "protein_id": "Q54HY5",
+      "gene_symbols_or_id": "DDB_G0289141",
+      "log2fc": 3.49117258622955,
+      "qval": 4.45148659069534e-11,
+      "fasta_headers": ">tr|Q54HY5|Q54HY5_DICDI Poly [ADP-ribose] polymerase OS=Dictyostelium discoideum OX=44689 GN=DDB_G0289141 PE=3 SV=2"
+    },
+    {
+      "protein_id": "P54661",
+      "gene_symbols_or_id": "SMLA",
+      "log2fc": 2.9946217599645,
+      "qval": 5.62629767730498e-11,
+      "fasta_headers": ">sp|P54661|SMLA_DICDI Small aggregate formation protein OS=Dictyostelium discoideum OX=44689 GN=smlA PE=2 SV=2"
+    },
+    {
+      "protein_id": "Q8I7C6",
+      "gene_symbols_or_id": "ADPRT2",
+      "log2fc": 2.8253285033738,
+      "qval": 5.87591502670004e-09,
+      "fasta_headers": ">tr|Q8I7C6|Q8I7C6_DICDI Poly [ADP-ribose] polymerase OS=Dictyostelium discoideum OX=44689 GN=adprt2 PE=2 SV=1"
+    },
+    {
+      "protein_id": "Q55GU8",
+      "gene_symbols_or_id": "ADPRT4",
+      "log2fc": 2.32362050178882,
+      "qval": 1.53720504222374e-10,
+      "fasta_headers": ">tr|Q55GU8|Q55GU8_DICDI Poly [ADP-ribose] polymerase OS=Dictyostelium discoideum OX=44689 GN=adprt4 PE=4 SV=1"
+    },
+    {
+      "protein_id": "Q54BW8",
+      "gene_symbols_or_id": "DDB_G0293370",
+      "log2fc": 2.04368553716347,
+      "qval": 2.4989386680987e-08,
+      "fasta_headers": ">tr|Q54BW8|Q54BW8_DICDI NGG1p interacting factor NIF3 OS=Dictyostelium discoideum OX=44689 GN=DDB_G0293370 PE=4 SV=1"
+    },
+    {
+      "protein_id": "Q86IC0",
+      "gene_symbols_or_id": "DDB_G0275513",
+      "log2fc": 1.94462365592676,
+      "qval": 2.50404846217509e-09,
+      "fasta_headers": ">tr|Q86IC0|Q86IC0_DICDI DUF962 domain-containing protein OS=Dictyostelium discoideum OX=44689 GN=DDB_G0275513 PE=4 SV=1"
+    },
+    {
+      "protein_id": "Q55GJ7",
+      "gene_symbols_or_id": "RPL38",
+      "log2fc": 1.87824055850137,
+      "qval": 9.89904712741717e-08,
+      "fasta_headers": ">sp|Q55GJ7|RL38_DICDI Large ribosomal subunit protein eL38 OS=Dictyostelium discoideum OX=44689 GN=rpl38 PE=3 SV=1"
+    },
+    {
+      "protein_id": "Q54QQ0",
+      "gene_symbols_or_id": "IMPDH",
+      "log2fc": 1.84714423120865,
+      "qval": 4.51012659159547e-09,
+      "fasta_headers": ">sp|Q54QQ0|IMDH_DICDI Inosine-5'-monophosphate dehydrogenase OS=Dictyostelium discoideum OX=44689 GN=impdh PE=1 SV=1"
+    },
+    {
+      "protein_id": "Q54FF8",
+      "gene_symbols_or_id": "DDB_G0290885",
+      "log2fc": 1.83469481219446,
+      "qval": 2.11800366991514e-08,
+      "fasta_headers": ">tr|Q54FF8|Q54FF8_DICDI Uncharacterized protein OS=Dictyostelium discoideum OX=44689 GN=DDB_G0290885 PE=4 SV=1"
+    },
+    {
+      "protein_id": "P34093",
+      "gene_symbols_or_id": "NDKM",
+      "log2fc": 1.81146284482413,
+      "qval": 6.41206796575062e-09,
+      "fasta_headers": ">sp|P34093|NDKM_DICDI Nucleoside diphosphate kinase, mitochondrial OS=Dictyostelium discoideum OX=44689 GN=ndkM PE=1 SV=2"
+    },
+    {
+      "protein_id": "P26310",
+      "gene_symbols_or_id": "CXFA",
+      "log2fc": 1.73610722890178,
+      "qval": 4.61877375870456e-08,
+      "fasta_headers": ">sp|P26310|COX6_DICDI Cytochrome c oxidase polypeptide 6, mitochondrial OS=Dictyostelium discoideum OX=44689 GN=cxfA PE=1 SV=2"
+    },
+    {
+      "protein_id": "Q55DV9",
+      "gene_symbols_or_id": "CYSA",
+      "log2fc": 1.72862785571948,
+      "qval": 2.4382374928245e-09,
+      "fasta_headers": ">sp|Q55DV9|CGL_DICDI Cystathionine gamma-lyase OS=Dictyostelium discoideum OX=44689 GN=cysA PE=1 SV=1"
+    },
+    {
+      "protein_id": "Q86L05",
+      "gene_symbols_or_id": "RPL10A",
+      "log2fc": 1.72666757477294,
+      "qval": 6.19529510233351e-08,
+      "fasta_headers": ">sp|Q86L05|RL10A_DICDI Large ribosomal subunit protein uL1 OS=Dictyostelium discoideum OX=44689 GN=rpl10a PE=1 SV=1"
+    },
+    {
+      "protein_id": "Q23921",
+      "gene_symbols_or_id": "PKIA",
+      "log2fc": 1.68950505786545,
+      "qval": 8.83057113564041e-10,
+      "fasta_headers": ">sp|Q23921|PKIA_DICDI Protein pkiA OS=Dictyostelium discoideum OX=44689 GN=pkiA PE=1 SV=2"
+    },
+    {
+      "protein_id": "Q54EW2",
+      "gene_symbols_or_id": "DDB_G0291301",
+      "log2fc": 1.61582797650648,
+      "qval": 5.09101658075257e-08,
+      "fasta_headers": ">sp|Q54EW2|Y9130_DICDI Putative bifunctional amine oxidase DDB_G0291301 OS=Dictyostelium discoideum OX=44689 GN=DDB_G0291301 PE=1 SV=1"
+    },
+    {
+      "protein_id": "Q54CB5",
+      "gene_symbols_or_id": "DDB_G0293070",
+      "log2fc": 1.61127593758195,
+      "qval": 1.89425847177722e-09,
+      "fasta_headers": ">tr|Q54CB5|Q54CB5_DICDI WD40 repeat-containing protein OS=Dictyostelium discoideum OX=44689 GN=DDB_G0293070 PE=4 SV=1"
+    },
+    {
+      "protein_id": "A9CLV8",
+      "gene_symbols_or_id": "ATP4",
+      "log2fc": 1.60625993003902,
+      "qval": 5.87591502670004e-09,
+      "fasta_headers": ">tr|A9CLV8|A9CLV8_DICDI ATPase subunit 4 OS=Dictyostelium discoideum OX=44689 GN=atp4 PE=4 SV=1"
+    },
+    {
+      "protein_id": "P54641",
+      "gene_symbols_or_id": "VATD-1",
+      "log2fc": 1.57539334319912,
+      "qval": 3.14004213983444e-09,
+      "fasta_headers": ">sp|P54641|VA0D_DICDI V-type proton ATPase subunit d OS=Dictyostelium discoideum OX=44689 GN=vatD-1 PE=1 SV=2"
+    },
+    {
+      "protein_id": "Q54II1",
+      "gene_symbols_or_id": "DDB_G0288735",
+      "log2fc": 1.5741870151628,
+      "qval": 5.57759485985065e-07,
+      "fasta_headers": ">tr|Q54II1|Q54II1_DICDI Acyl-coenzyme A oxidase OS=Dictyostelium discoideum OX=44689 GN=DDB_G0288735 PE=3 SV=1"
+    },
+    {
+      "protein_id": "Q54BY8",
+      "gene_symbols_or_id": "DDB_G0293328",
+      "log2fc": 1.55561547349809,
+      "qval": 8.67201490272636e-07,
+      "fasta_headers": ">tr|Q54BY8|Q54BY8_DICDI CCHC-type domain-containing protein OS=Dictyostelium discoideum OX=44689 GN=DDB_G0293328 PE=4 SV=1"
+    },
+    {
+      "protein_id": "P13466",
+      "gene_symbols_or_id": "ABPC",
+      "log2fc": 1.52319017913095,
+      "qval": 4.6227853901147e-06,
+      "fasta_headers": ">sp|P13466|GELA_DICDI Gelation factor OS=Dictyostelium discoideum OX=44689 GN=abpC PE=1 SV=1"
+    },
+    {
+      "protein_id": "A9CLV7",
+      "gene_symbols_or_id": "ATP8",
+      "log2fc": 1.51499187261657,
+      "qval": 5.52214109778423e-07,
+      "fasta_headers": ">tr|A9CLV7|A9CLV7_DICDI ATPase subunit 8 OS=Dictyostelium discoideum OX=44689 GN=atp8 PE=4 SV=1"
+    },
+    {
+      "protein_id": "Q54Z09",
+      "gene_symbols_or_id": "RPL14",
+      "log2fc": 1.50533710378666,
+      "qval": 3.7249263713998e-08,
+      "fasta_headers": ">sp|Q54Z09|RL14_DICDI Large ribosomal subunit protein eL14 OS=Dictyostelium discoideum OX=44689 GN=rpl14 PE=3 SV=1"
+    },
+    {
+      "protein_id": "Q86L14",
+      "gene_symbols_or_id": "PURH",
+      "log2fc": 1.50294583878805,
+      "qval": 3.46898422764911e-07,
+      "fasta_headers": ">sp|Q86L14|PUR9_DICDI Bifunctional purine biosynthesis protein purH OS=Dictyostelium discoideum OX=44689 GN=purH PE=1 SV=1"
+    },
+    {
+      "protein_id": "Q54X53",
+      "gene_symbols_or_id": "RPL21",
+      "log2fc": 1.50070417852622,
+      "qval": 4.79324231610055e-09,
+      "fasta_headers": ">sp|Q54X53|RL21_DICDI Large ribosomal subunit protein eL21 OS=Dictyostelium discoideum OX=44689 GN=rpl21 PE=3 SV=1"
+    },
+    {
+      "protein_id": "Q556J0",
+      "gene_symbols_or_id": "TKT-1",
+      "log2fc": 1.49645054054457,
+      "qval": 2.35238702039291e-07,
+      "fasta_headers": ">sp|Q556J0|TKT_DICDI Transketolase OS=Dictyostelium discoideum OX=44689 GN=tkt-1 PE=1 SV=1"
+    },
+    {
+      "protein_id": "Q8T2T5",
+      "gene_symbols_or_id": "SDHC",
+      "log2fc": 1.4960365622392,
+      "qval": 1.73954828503122e-09,
+      "fasta_headers": ">sp|Q8T2T5|C560_DICDI Succinate dehydrogenase cytochrome b560 subunit, mitochondrial OS=Dictyostelium discoideum OX=44689 GN=sdhC PE=3 SV=1"
+    },
+    {
+      "protein_id": "O21038",
+      "gene_symbols_or_id": "MRPS13",
+      "log2fc": 1.48518388867202,
+      "qval": 7.67883665009165e-07,
+      "fasta_headers": ">sp|O21038|RT13_DICDI Small ribosomal subunit protein uS13m OS=Dictyostelium discoideum OX=44689 GN=mrps13 PE=3 SV=1"
+    },
+    {
+      "protein_id": "P22683",
+      "gene_symbols_or_id": "RPLP2",
+      "log2fc": 1.47634497944719,
+      "qval": 7.61952525472854e-09,
+      "fasta_headers": ">sp|P22683|RLA2_DICDI Large ribosomal subunit protein P2 OS=Dictyostelium discoideum OX=44689 GN=rplp2 PE=1 SV=3"
+    },
+    {
+      "protein_id": "Q94469",
+      "gene_symbols_or_id": "GPDA",
+      "log2fc": 1.46526503304739,
+      "qval": 5.40508473514283e-08,
+      "fasta_headers": ">sp|Q94469|G3P_DICDI Glyceraldehyde-3-phosphate dehydrogenase OS=Dictyostelium discoideum OX=44689 GN=gpdA PE=1 SV=2"
+    },
+    {
+      "protein_id": "P36408",
+      "gene_symbols_or_id": "GPBA",
+      "log2fc": 1.46062305289348,
+      "qval": 1.34290662784881e-06,
+      "fasta_headers": ">sp|P36408|GBB_DICDI Guanine nucleotide-binding protein subunit beta OS=Dictyostelium discoideum OX=44689 GN=gpbA PE=1 SV=1"
+    },
+    {
+      "protein_id": "Q54KB7",
+      "gene_symbols_or_id": "GLUD",
+      "log2fc": 1.4576329341186,
+      "qval": 1.66312161358372e-07,
+      "fasta_headers": ">sp|Q54KB7|DHE3_DICDI Glutamate dehydrogenase, mitochondrial OS=Dictyostelium discoideum OX=44689 GN=gluD PE=1 SV=1"
+    },
+    {
+      "protein_id": "Q54K74",
+      "gene_symbols_or_id": "DDB_G0287543",
+      "log2fc": 1.43145322553454,
+      "qval": 2.02640950319616e-08,
+      "fasta_headers": ">sp|Q54K74|YETL_DICDI Endoplasmic reticulum transmembrane protein YET-like OS=Dictyostelium discoideum OX=44689 GN=DDB_G0287543 PE=3 SV=2"
+    },
+    {
+      "protein_id": "Q54CD7",
+      "gene_symbols_or_id": "DDB_G0293034",
+      "log2fc": 1.43106006309473,
+      "qval": 2.39008635720132e-06,
+      "fasta_headers": ">tr|Q54CD7|Q54CD7_DICDI Uncharacterized protein OS=Dictyostelium discoideum OX=44689 GN=DDB_G0293034 PE=4 SV=1"
+    },
+    {
+      "protein_id": "P20609",
+      "gene_symbols_or_id": "CXGE",
+      "log2fc": 1.42585054718029,
+      "qval": 5.00814327150207e-07,
+      "fasta_headers": ">sp|P20609|COXE_DICDI Cytochrome c oxidase subunit 7e OS=Dictyostelium discoideum OX=44689 GN=cxgE PE=1 SV=3"
+    },
+    {
+      "protein_id": "O77082",
+      "gene_symbols_or_id": "RPS10",
+      "log2fc": 1.41402266055712,
+      "qval": 1.61740620483635e-06,
+      "fasta_headers": ">sp|O77082|RS10_DICDI Small ribosomal subunit protein eS10 OS=Dictyostelium discoideum OX=44689 GN=rps10 PE=1 SV=3"
+    },
+    {
+      "protein_id": "Q54XS2",
+      "gene_symbols_or_id": "ACO2",
+      "log2fc": 1.39564451180176,
+      "qval": 1.22305700766561e-08,
+      "fasta_headers": ">sp|Q54XS2|ACON_DICDI Probable aconitate hydratase, mitochondrial OS=Dictyostelium discoideum OX=44689 GN=aco2 PE=3 SV=1"
+    },
+    {
+      "protein_id": "O96624",
+      "gene_symbols_or_id": "ARCC",
+      "log2fc": 1.38699962042554,
+      "qval": 1.39838611785365e-07,
+      "fasta_headers": ">sp|O96624|ARPC3_DICDI Actin-related protein 2/3 complex subunit 3 OS=Dictyostelium discoideum OX=44689 GN=arcC PE=1 SV=1"
+    },
+    {
+      "protein_id": "Q54CE3",
+      "gene_symbols_or_id": "DDB_G0293032",
+      "log2fc": 1.37829194895823,
+      "qval": 5.59249413815984e-08,
+      "fasta_headers": ">tr|Q54CE3|Q54CE3_DICDI NACHT domain-containing protein OS=Dictyostelium discoideum OX=44689 GN=DDB_G0293032 PE=4 SV=1"
+    },
+    {
+      "protein_id": "Q54J50",
+      "gene_symbols_or_id": "RPL12",
+      "log2fc": 1.37726375774253,
+      "qval": 9.63944317315841e-09,
+      "fasta_headers": ">sp|Q54J50|RL12_DICDI Large ribosomal subunit protein uL11 OS=Dictyostelium discoideum OX=44689 GN=rpl12 PE=1 SV=1"
+    },
+    {
+      "protein_id": "Q54CN9",
+      "gene_symbols_or_id": "DDB_G0292836",
+      "log2fc": 1.37288259138992,
+      "qval": 3.13114055958564e-06,
+      "fasta_headers": ">tr|Q54CN9|Q54CN9_DICDI Peptidase A22B family protein OS=Dictyostelium discoideum OX=44689 GN=DDB_G0292836 PE=3 SV=1"
+    },
+    {
+      "protein_id": "Q55BS9",
+      "gene_symbols_or_id": "RPL30",
+      "log2fc": 1.37282662597593,
+      "qval": 2.29013144477828e-06,
+      "fasta_headers": ">sp|Q55BS9|RL30_DICDI Large ribosomal subunit protein eL30 OS=Dictyostelium discoideum OX=44689 GN=rpl30 PE=3 SV=1"
+    },
+    {
+      "protein_id": "Q76P36",
+      "gene_symbols_or_id": "RPS29",
+      "log2fc": 1.37073530009104,
+      "qval": 7.29242964008633e-08,
+      "fasta_headers": ">sp|Q76P36|RS29_DICDI Small ribosomal subunit protein uS14 OS=Dictyostelium discoideum OX=44689 GN=rps29 PE=3 SV=1"
+    },
+    {
+      "protein_id": "Q54X84",
+      "gene_symbols_or_id": "DDB_G0279137",
+      "log2fc": 1.36956945204818,
+      "qval": 1.16609759448723e-08,
+      "fasta_headers": ">tr|Q54X84|Q54X84_DICDI methylenetetrahydrofolate reductase (NADH) OS=Dictyostelium discoideum OX=44689 GN=DDB_G0279137 PE=3 SV=1"
+    },
+    {
+      "protein_id": "Q54LJ4",
+      "gene_symbols_or_id": "DDB_G0286613",
+      "log2fc": 1.3690410552347,
+      "qval": 1.07336949881313e-08,
+      "fasta_headers": ">tr|Q54LJ4|Q54LJ4_DICDI Poly [ADP-ribose] polymerase OS=Dictyostelium discoideum OX=44689 GN=DDB_G0286613 PE=3 SV=1"
+    },
+    {
+      "protein_id": "Q54CR8",
+      "gene_symbols_or_id": "MOBB",
+      "log2fc": 1.36817209776774,
+      "qval": 0.00015406892441293,
+      "fasta_headers": ">sp|Q54CR8|MOB1B_DICDI MOB kinase activator-like 1 homolog B OS=Dictyostelium discoideum OX=44689 GN=mobB PE=3 SV=1"
+    },
+    {
+      "protein_id": "Q54BJ7",
+      "gene_symbols_or_id": "DDB_G0293714",
+      "log2fc": 1.36385823850616,
+      "qval": 3.25303046406585e-07,
+      "fasta_headers": ">tr|Q54BJ7|Q54BJ7_DICDI Glutathione transferase OS=Dictyostelium discoideum OX=44689 GN=DDB_G0293714 PE=4 SV=1"
+    },
+    {
+      "protein_id": "Q55FP0",
+      "gene_symbols_or_id": "PHG1A",
+      "log2fc": 1.34244582122518,
+      "qval": 5.81392031175859e-08,
+      "fasta_headers": ">sp|Q55FP0|PHG1A_DICDI Putative phagocytic receptor 1a OS=Dictyostelium discoideum OX=44689 GN=phg1a PE=2 SV=1"
+    },
+    {
+      "protein_id": "P51405",
+      "gene_symbols_or_id": "RPS4",
+      "log2fc": 1.3413190430535,
+      "qval": 2.26215113928511e-08,
+      "fasta_headers": ">sp|P51405|RS4_DICDI Small ribosomal subunit protein eS4 OS=Dictyostelium discoideum OX=44689 GN=rps4 PE=1 SV=3"
+    },
+    {
+      "protein_id": "Q37315",
+      "gene_symbols_or_id": "ATP9",
+      "log2fc": 1.33761099219034,
+      "qval": 1.124035201727e-06,
+      "fasta_headers": ">sp|Q37315|ATP9_DICDI ATP synthase subunit 9, mitochondrial OS=Dictyostelium discoideum OX=44689 GN=atp9 PE=3 SV=1"
+    },
+    {
+      "protein_id": "Q86L51",
+      "gene_symbols_or_id": "RAPB",
+      "log2fc": 1.33264450875993,
+      "qval": 1.15174944376872e-07,
+      "fasta_headers": ">sp|Q86L51|RAPB_DICDI Ras-related protein rapB OS=Dictyostelium discoideum OX=44689 GN=rapB PE=3 SV=1"
+    },
+    {
+      "protein_id": "Q54GD8",
+      "gene_symbols_or_id": "DDB_G0290223",
+      "log2fc": 1.33082577032442,
+      "qval": 6.19069061705802e-06,
+      "fasta_headers": ">sp|Q54GD8|PX24C_DICDI PXMP2/4 family protein 3 OS=Dictyostelium discoideum OX=44689 GN=DDB_G0290223 PE=3 SV=1"
+    },
+    {
+      "protein_id": "Q553P4",
+      "gene_symbols_or_id": "DDB_G0275383",
+      "log2fc": 1.32788687059895,
+      "qval": 3.57106446741558e-07,
+      "fasta_headers": ">tr|Q553P4|Q553P4_DICDI Transmembrane protein OS=Dictyostelium discoideum OX=44689 GN=DDB_G0275383 PE=4 SV=1"
+    },
+    {
+      "protein_id": "Q557C7",
+      "gene_symbols_or_id": "DDB_G0273247",
+      "log2fc": 1.306320326028,
+      "qval": 4.51012659159547e-09,
+      "fasta_headers": ">tr|Q557C7|Q557C7_DICDI Uncharacterized protein OS=Dictyostelium discoideum OX=44689 GN=DDB_G0273247 PE=4 SV=1"
+    },
+    {
+      "protein_id": "Q54V76",
+      "gene_symbols_or_id": "DDB_G0280569",
+      "log2fc": 1.30538656528004,
+      "qval": 5.12199175947488e-08,
+      "fasta_headers": ">sp|Q54V76|QCR8_DICDI Probable cytochrome b-c1 complex subunit 8 OS=Dictyostelium discoideum OX=44689 GN=DDB_G0280569 PE=3 SV=1"
+    },
+    {
+      "protein_id": "Q54J23",
+      "gene_symbols_or_id": "RPL35",
+      "log2fc": 1.30299534328933,
+      "qval": 9.21761230931953e-09,
+      "fasta_headers": ">sp|Q54J23|RL35_DICDI Large ribosomal subunit protein uL29 OS=Dictyostelium discoideum OX=44689 GN=rpl35 PE=3 SV=1"
+    },
+    {
+      "protein_id": "P52922",
+      "gene_symbols_or_id": "LKHA",
+      "log2fc": 1.30159553437156,
+      "qval": 1.54315457383817e-07,
+      "fasta_headers": ">sp|P52922|LKHA4_DICDI Leucine aminopeptidase OS=Dictyostelium discoideum OX=44689 GN=lkhA PE=2 SV=2"
+    },
+    {
+      "protein_id": "Q75JI5",
+      "gene_symbols_or_id": "DDB_G0276099",
+      "log2fc": 1.29944643679287,
+      "qval": 3.00246610020732e-05,
+      "fasta_headers": ">tr|Q75JI5|Q75JI5_DICDI Uncharacterized protein OS=Dictyostelium discoideum OX=44689 GN=DDB_G0276099 PE=4 SV=1"
+    }
+  ],
+  "lodwick_wt_hits": [
+    {
+      "GeneName": "TRO",
+      "wt_log2fc": 8.679766666666662,
+      "wt_p": 0.00022787694553179423,
+      "kd_log2fc": 3.0503000000000036,
+      "kd_p": 0.018273777777152594
+    },
+    {
+      "GeneName": "PARP4",
+      "wt_log2fc": 8.65733333333333,
+      "wt_p": 6.112476649560078e-07,
+      "kd_log2fc": 3.1441333333333397,
+      "kd_p": 0.0003024978698925483
+    },
+    {
+      "GeneName": "RALGAPB",
+      "wt_log2fc": 8.068999999999997,
+      "wt_p": 0.0003476701050699762,
+      "kd_log2fc": 7.245633333333336,
+      "kd_p": 0.002270354229857543
+    },
+    {
+      "GeneName": "MVP",
+      "wt_log2fc": 7.622433333333337,
+      "wt_p": 8.522226315605591e-06,
+      "kd_log2fc": 7.617566666666672,
+      "kd_p": 1.0598036724678397e-05
+    },
+    {
+      "GeneName": "SMC6",
+      "wt_log2fc": 6.7883999999999975,
+      "wt_p": 0.003586101557212034,
+      "kd_log2fc": 5.176566666666668,
+      "kd_p": 0.008449575618346736
+    },
+    {
+      "GeneName": "TCAF1",
+      "wt_log2fc": 6.484399999999999,
+      "wt_p": 3.621765228711345e-05,
+      "kd_log2fc": 1.8878000000000021,
+      "kd_p": 0.1401904923346471
+    },
+    {
+      "GeneName": "TEP1",
+      "wt_log2fc": 6.268199999999997,
+      "wt_p": 0.00013562679334811219,
+      "kd_log2fc": 6.114066666666666,
+      "kd_p": 0.0002692369216362435
+    },
+    {
+      "GeneName": "NSMCE3",
+      "wt_log2fc": 5.997700000000002,
+      "wt_p": 0.0026924101540403813,
+      "kd_log2fc": 3.696033333333336,
+      "kd_p": 0.004670422138471203
+    },
+    {
+      "GeneName": "LMTK2",
+      "wt_log2fc": 5.944099999999997,
+      "wt_p": 0.0012413738979630514,
+      "kd_log2fc": 6.7124666666666695,
+      "kd_p": 0.005829648075881874
+    },
+    {
+      "GeneName": "NSMCE1",
+      "wt_log2fc": 5.789999999999999,
+      "wt_p": 0.01795821733345273,
+      "kd_log2fc": 6.361033333333337,
+      "kd_p": 0.0006537630684357501
+    },
+    {
+      "GeneName": "DARS2",
+      "wt_log2fc": 5.701533333333336,
+      "wt_p": 2.436636418547928e-05,
+      "kd_log2fc": 2.2899333333333303,
+      "kd_p": 0.11657423972070505
+    },
+    {
+      "GeneName": "WDR11",
+      "wt_log2fc": 5.679499999999999,
+      "wt_p": 0.0010770678986080134,
+      "kd_log2fc": -0.7018000000000004,
+      "kd_p": 0.13246760918548062
+    },
+    {
+      "GeneName": "NBR1",
+      "wt_log2fc": 5.0930000000000035,
+      "wt_p": 0.0001002290101583312,
+      "kd_log2fc": 5.046000000000001,
+      "kd_p": 0.004247701949005301
+    },
+    {
+      "GeneName": "COP1",
+      "wt_log2fc": 4.740866666666669,
+      "wt_p": 0.02157918717825957,
+      "kd_log2fc": 3.1812000000000005,
+      "kd_p": 0.0005029804135544436
+    },
+    {
+      "GeneName": "IPO7",
+      "wt_log2fc": 4.576966666666664,
+      "wt_p": 0.005042020065685758,
+      "kd_log2fc": 4.8482333333333365,
+      "kd_p": 0.012619603667604808
+    },
+    {
+      "GeneName": "RACK1",
+      "wt_log2fc": 4.357499999999995,
+      "wt_p": 0.04496104504843277,
+      "kd_log2fc": -3.399700000000001,
+      "kd_p": 0.02895025715148042
+    },
+    {
+      "GeneName": "GMPPA",
+      "wt_log2fc": 4.217433333333332,
+      "wt_p": 2.832872222664734e-05,
+      "kd_log2fc": 3.7013000000000016,
+      "kd_p": 0.033590012886624054
+    },
+    {
+      "GeneName": "ACAD11",
+      "wt_log2fc": 4.091166666666668,
+      "wt_p": 0.007335801848409064,
+      "kd_log2fc": 0.029266666666670105,
+      "kd_p": 0.9901621621866228
+    },
+    {
+      "GeneName": "HNRNPDL",
+      "wt_log2fc": 3.9639000000000006,
+      "wt_p": 0.002960069879887058,
+      "kd_log2fc": -0.3563666666666663,
+      "kd_p": 0.7884638418539304
+    },
+    {
+      "GeneName": "SMC5",
+      "wt_log2fc": 3.9309999999999974,
+      "wt_p": 0.0037625499558096367,
+      "kd_log2fc": 4.405533333333338,
+      "kd_p": 0.01606227941206027
+    },
+    {
+      "GeneName": "TXN",
+      "wt_log2fc": 3.620366666666669,
+      "wt_p": 0.010604789109152876,
+      "kd_log2fc": 2.650733333333335,
+      "kd_p": 0.07927167895934525
+    },
+    {
+      "GeneName": "AKR1C3",
+      "wt_log2fc": 3.4519666666666637,
+      "wt_p": 0.0029854042396200145,
+      "kd_log2fc": 1.3391999999999982,
+      "kd_p": 0.3978830945823572
+    },
+    {
+      "GeneName": "AKR1B1",
+      "wt_log2fc": 3.287099999999999,
+      "wt_p": 3.6288585911549145e-05,
+      "kd_log2fc": 1.1021,
+      "kd_p": 0.01148814036838293
+    },
+    {
+      "GeneName": "ALDH1A1",
+      "wt_log2fc": 3.1608333333333327,
+      "wt_p": 0.012692155666135593,
+      "kd_log2fc": 1.8514333333333326,
+      "kd_p": 0.0031772185601548057
+    },
+    {
+      "GeneName": "HIST1H3A;HIST1H3B;HIST1H3C;HIST1H3D;HIST1H3E;HIST1H3F;HIST1H3G;HIST1H3H;HIST1H3I;HIST1H3J",
+      "wt_log2fc": 3.0440333333333367,
+      "wt_p": 0.008947334368134979,
+      "kd_log2fc": -0.5440333333333367,
+      "kd_p": 0.6870205576440118
+    },
+    {
+      "GeneName": "MICAL2",
+      "wt_log2fc": 2.875866666666667,
+      "wt_p": 0.004959242847050952,
+      "kd_log2fc": -0.9606000000000012,
+      "kd_p": 0.4643885730653952
+    },
+    {
+      "GeneName": "TAGLN2",
+      "wt_log2fc": 2.7117666666666675,
+      "wt_p": 0.010973194075746194,
+      "kd_log2fc": 0.32830000000000226,
+      "kd_p": 0.29828691125507606
+    },
+    {
+      "GeneName": "KPNB1",
+      "wt_log2fc": 2.6523666666666657,
+      "wt_p": 0.0019687794669909814,
+      "kd_log2fc": 1.8301666666666634,
+      "kd_p": 0.022417038710804853
+    },
+    {
+      "GeneName": "RUVBL2",
+      "wt_log2fc": 2.564799999999998,
+      "wt_p": 0.00490875064549539,
+      "kd_log2fc": 0.34969999999999857,
+      "kd_p": 0.2838074961496308
+    },
+    {
+      "GeneName": "PPIA",
+      "wt_log2fc": 2.5079666666666682,
+      "wt_p": 0.004287168585645761,
+      "kd_log2fc": 0.4485333333333372,
+      "kd_p": 0.22154409429498176
+    },
+    {
+      "GeneName": "CEP295",
+      "wt_log2fc": 2.491133333333334,
+      "wt_p": 0.01384650542428658,
+      "kd_log2fc": 2.8908000000000023,
+      "kd_p": 0.02893378196491458
+    },
+    {
+      "GeneName": "NSA2",
+      "wt_log2fc": 2.443333333333337,
+      "wt_p": 0.04535051254898502,
+      "kd_log2fc": -1.8803999999999998,
+      "kd_p": 0.23740414432673435
+    },
+    {
+      "GeneName": "AKR1C2",
+      "wt_log2fc": 2.4151333333333334,
+      "wt_p": 0.0004324472788144679,
+      "kd_log2fc": 0.020933333333331916,
+      "kd_p": 0.9899154459501538
+    },
+    {
+      "GeneName": "PUM1",
+      "wt_log2fc": 2.1783,
+      "wt_p": 0.027864498581542142,
+      "kd_log2fc": 3.3562333333333356,
+      "kd_p": 0.0007688122767977213
+    },
+    {
+      "GeneName": "NME4",
+      "wt_log2fc": 2.121133333333331,
+      "wt_p": 0.01019606984748441,
+      "kd_log2fc": 1.163800000000002,
+      "kd_p": 0.1539946653316351
+    },
+    {
+      "GeneName": "S100A10",
+      "wt_log2fc": 2.1139666666666663,
+      "wt_p": 0.013648561654579682,
+      "kd_log2fc": -0.6594999999999978,
+      "kd_p": 0.4611349224694443
+    },
+    {
+      "GeneName": "UBAP2L",
+      "wt_log2fc": 1.9641666666666655,
+      "wt_p": 0.0027486977836894935,
+      "kd_log2fc": -0.8763000000000005,
+      "kd_p": 0.35842027437408497
+    },
+    {
+      "GeneName": "CFAP20",
+      "wt_log2fc": 1.9238,
+      "wt_p": 0.0018206851979857182,
+      "kd_log2fc": 1.4983333333333348,
+      "kd_p": 0.03834832170863677
+    },
+    {
+      "GeneName": "ZNF629",
+      "wt_log2fc": 1.8715666666666682,
+      "wt_p": 0.03245744941417339,
+      "kd_log2fc": -0.2585333333333324,
+      "kd_p": 0.8107880394782071
+    },
+    {
+      "GeneName": "HSP90AB1",
+      "wt_log2fc": 1.8385333333333342,
+      "wt_p": 0.021978413775055508,
+      "kd_log2fc": 0.91726666666667,
+      "kd_p": 0.08873486514264746
+    },
+    {
+      "GeneName": "HSP90AA1",
+      "wt_log2fc": 1.8011000000000017,
+      "wt_p": 0.04421330478374999,
+      "kd_log2fc": 1.9651333333333305,
+      "kd_p": 0.002156582842031845
+    },
+    {
+      "GeneName": "TIMM13",
+      "wt_log2fc": 1.7420333333333353,
+      "wt_p": 0.032462474283583634,
+      "kd_log2fc": 1.5874666666666677,
+      "kd_p": 0.3586693893453218
+    },
+    {
+      "GeneName": "ANXA2",
+      "wt_log2fc": 1.7407333333333312,
+      "wt_p": 0.0017799516639315069,
+      "kd_log2fc": 0.9134333333333338,
+      "kd_p": 0.07063797276801316
+    },
+    {
+      "GeneName": "ANXA1",
+      "wt_log2fc": 1.6584666666666656,
+      "wt_p": 0.0020429137600383256,
+      "kd_log2fc": 1.4846999999999966,
+      "kd_p": 0.10318373681037485
+    },
+    {
+      "GeneName": "PRDX1",
+      "wt_log2fc": 1.5166666666666657,
+      "wt_p": 0.010224018228661777,
+      "kd_log2fc": 0.24989999999999668,
+      "kd_p": 0.6547835288562193
+    },
+    {
+      "GeneName": "EIF1B",
+      "wt_log2fc": 1.513966666666665,
+      "wt_p": 0.01820596290293313,
+      "kd_log2fc": 2.0477666666666643,
+      "kd_p": 0.09322772669123597
+    },
+    {
+      "GeneName": "MMTAG2",
+      "wt_log2fc": 1.4980999999999973,
+      "wt_p": 0.030879627944713047,
+      "kd_log2fc": 0.2783666666666669,
+      "kd_p": 0.7055302111490069
+    },
+    {
+      "GeneName": "HTRA1",
+      "wt_log2fc": 1.4309000000000012,
+      "wt_p": 0.02410068708553963,
+      "kd_log2fc": -0.9624999999999968,
+      "kd_p": 0.10691711016326842
+    },
+    {
+      "GeneName": "VCP",
+      "wt_log2fc": 1.414200000000001,
+      "wt_p": 0.04022559788807592,
+      "kd_log2fc": 1.5884333333333345,
+      "kd_p": 0.00037498971444374174
+    },
+    {
+      "GeneName": "RPL9;RPL9P7;RPL9P8;RPL9P9",
+      "wt_log2fc": 1.3603333333333332,
+      "wt_p": 0.02399833550463445,
+      "kd_log2fc": 0.6313999999999993,
+      "kd_p": 0.31951644449966377
+    },
+    {
+      "GeneName": "GDI2",
+      "wt_log2fc": 1.3568000000000016,
+      "wt_p": 0.046718912254757716,
+      "kd_log2fc": 1.7955666666666694,
+      "kd_p": 0.055142981632110746
+    },
+    {
+      "GeneName": "CACYBP",
+      "wt_log2fc": 1.3447666666666667,
+      "wt_p": 0.015864556036743967,
+      "kd_log2fc": -0.9427666666666674,
+      "kd_p": 0.2114406380608645
+    },
+    {
+      "GeneName": "ARID2",
+      "wt_log2fc": 1.3341333333333338,
+      "wt_p": 0.0015541567697637398,
+      "kd_log2fc": -0.2668999999999997,
+      "kd_p": 0.5700411802588561
+    },
+    {
+      "GeneName": "MRPL10",
+      "wt_log2fc": 1.2386666666666688,
+      "wt_p": 0.024065900209245768,
+      "kd_log2fc": -0.5600333333333314,
+      "kd_p": 0.51344968080603
+    },
+    {
+      "GeneName": "EIF4A1",
+      "wt_log2fc": 1.2182999999999993,
+      "wt_p": 0.004932637385030635,
+      "kd_log2fc": 0.5924333333333323,
+      "kd_p": 0.13450280754172014
+    },
+    {
+      "GeneName": "LRRC59",
+      "wt_log2fc": 1.1666999999999987,
+      "wt_p": 0.003139715177980827,
+      "kd_log2fc": -0.18010000000000304,
+      "kd_p": 0.7592068291056678
+    },
+    {
+      "GeneName": "NIPSNAP1",
+      "wt_log2fc": 1.1274333333333324,
+      "wt_p": 0.004937396413565725,
+      "kd_log2fc": 0.01286666666666747,
+      "kd_p": 0.9742452975842558
+    },
+    {
+      "GeneName": "PPIB",
+      "wt_log2fc": 1.127333333333329,
+      "wt_p": 0.0017808554114656266,
+      "kd_log2fc": 0.046800000000004616,
+      "kd_p": 0.8976310273904471
+    },
+    {
+      "GeneName": "RBM39",
+      "wt_log2fc": 1.0886999999999993,
+      "wt_p": 0.04170706550301828,
+      "kd_log2fc": 0.26943333333333186,
+      "kd_p": 0.3569522141860583
+    },
+    {
+      "GeneName": "DDX3X",
+      "wt_log2fc": 1.0427666666666653,
+      "wt_p": 0.0038806103138054175,
+      "kd_log2fc": 1.4842000000000013,
+      "kd_p": 0.036915869573622806
+    },
+    {
+      "GeneName": "RPS9",
+      "wt_log2fc": 1.0273666666666657,
+      "wt_p": 0.010364807210707065,
+      "kd_log2fc": 0.7221000000000011,
+      "kd_p": 0.09906222197700287
+    }
+  ],
+  "lodwick_kd_hits": [
+    {
+      "GeneName": "MVP",
+      "wt_log2fc": 7.622433333333337,
+      "wt_p": 8.522226315605591e-06,
+      "kd_log2fc": 7.617566666666672,
+      "kd_p": 1.0598036724678397e-05
+    },
+    {
+      "GeneName": "RALGAPB",
+      "wt_log2fc": 8.068999999999997,
+      "wt_p": 0.0003476701050699762,
+      "kd_log2fc": 7.245633333333336,
+      "kd_p": 0.002270354229857543
+    },
+    {
+      "GeneName": "LMTK2",
+      "wt_log2fc": 5.944099999999997,
+      "wt_p": 0.0012413738979630514,
+      "kd_log2fc": 6.7124666666666695,
+      "kd_p": 0.005829648075881874
+    },
+    {
+      "GeneName": "NSMCE1",
+      "wt_log2fc": 5.789999999999999,
+      "wt_p": 0.01795821733345273,
+      "kd_log2fc": 6.361033333333337,
+      "kd_p": 0.0006537630684357501
+    },
+    {
+      "GeneName": "ZNF45",
+      "wt_log2fc": -2.224933333333336,
+      "wt_p": 0.29592006615099403,
+      "kd_log2fc": 6.332500000000001,
+      "kd_p": 2.3962427473492315e-05
+    },
+    {
+      "GeneName": "TEP1",
+      "wt_log2fc": 6.268199999999997,
+      "wt_p": 0.00013562679334811219,
+      "kd_log2fc": 6.114066666666666,
+      "kd_p": 0.0002692369216362435
+    },
+    {
+      "GeneName": "SMC6",
+      "wt_log2fc": 6.7883999999999975,
+      "wt_p": 0.003586101557212034,
+      "kd_log2fc": 5.176566666666668,
+      "kd_p": 0.008449575618346736
+    },
+    {
+      "GeneName": "NBR1",
+      "wt_log2fc": 5.0930000000000035,
+      "wt_p": 0.0001002290101583312,
+      "kd_log2fc": 5.046000000000001,
+      "kd_p": 0.004247701949005301
+    },
+    {
+      "GeneName": "IPO7",
+      "wt_log2fc": 4.576966666666664,
+      "wt_p": 0.005042020065685758,
+      "kd_log2fc": 4.8482333333333365,
+      "kd_p": 0.012619603667604808
+    },
+    {
+      "GeneName": "SMC5",
+      "wt_log2fc": 3.9309999999999974,
+      "wt_p": 0.0037625499558096367,
+      "kd_log2fc": 4.405533333333338,
+      "kd_p": 0.01606227941206027
+    },
+    {
+      "GeneName": "ZNF420",
+      "wt_log2fc": -1.4810333333333343,
+      "wt_p": 0.20431641552862267,
+      "kd_log2fc": 3.8046000000000006,
+      "kd_p": 0.0004877972854997535
+    },
+    {
+      "GeneName": "GMPPA",
+      "wt_log2fc": 4.217433333333332,
+      "wt_p": 2.832872222664734e-05,
+      "kd_log2fc": 3.7013000000000016,
+      "kd_p": 0.033590012886624054
+    },
+    {
+      "GeneName": "NSMCE3",
+      "wt_log2fc": 5.997700000000002,
+      "wt_p": 0.0026924101540403813,
+      "kd_log2fc": 3.696033333333336,
+      "kd_p": 0.004670422138471203
+    },
+    {
+      "GeneName": "DAZAP1",
+      "wt_log2fc": 1.0178666666666665,
+      "wt_p": 0.5583054006742862,
+      "kd_log2fc": 3.607633333333329,
+      "kd_p": 0.004722703804817852
+    },
+    {
+      "GeneName": "PUM1",
+      "wt_log2fc": 2.1783,
+      "wt_p": 0.027864498581542142,
+      "kd_log2fc": 3.3562333333333356,
+      "kd_p": 0.0007688122767977213
+    },
+    {
+      "GeneName": "TRIM7",
+      "wt_log2fc": 0.5257333333333367,
+      "wt_p": 0.6963284498460623,
+      "kd_log2fc": 3.238299999999999,
+      "kd_p": 0.0073765002575777155
+    },
+    {
+      "GeneName": "COP1",
+      "wt_log2fc": 4.740866666666669,
+      "wt_p": 0.02157918717825957,
+      "kd_log2fc": 3.1812000000000005,
+      "kd_p": 0.0005029804135544436
+    },
+    {
+      "GeneName": "PARP4",
+      "wt_log2fc": 8.65733333333333,
+      "wt_p": 6.112476649560078e-07,
+      "kd_log2fc": 3.1441333333333397,
+      "kd_p": 0.0003024978698925483
+    },
+    {
+      "GeneName": "TRO",
+      "wt_log2fc": 8.679766666666662,
+      "wt_p": 0.00022787694553179423,
+      "kd_log2fc": 3.0503000000000036,
+      "kd_p": 0.018273777777152594
+    },
+    {
+      "GeneName": "PIP",
+      "wt_log2fc": 2.1259666666666703,
+      "wt_p": 0.1842696408767726,
+      "kd_log2fc": 3.0129666666666655,
+      "kd_p": 0.041962198778274125
+    },
+    {
+      "GeneName": "SPEG",
+      "wt_log2fc": 0.5693333333333328,
+      "wt_p": 0.6145365520477883,
+      "kd_log2fc": 3.002466666666665,
+      "kd_p": 0.01777498435432545
+    },
+    {
+      "GeneName": "CEP295",
+      "wt_log2fc": 2.491133333333334,
+      "wt_p": 0.01384650542428658,
+      "kd_log2fc": 2.8908000000000023,
+      "kd_p": 0.02893378196491458
+    },
+    {
+      "GeneName": "TFPI2",
+      "wt_log2fc": 2.18106666666667,
+      "wt_p": 0.199802811060799,
+      "kd_log2fc": 2.887533333333332,
+      "kd_p": 0.0035334348862660564
+    },
+    {
+      "GeneName": "KRT78",
+      "wt_log2fc": 3.1191333333333375,
+      "wt_p": 0.11242983939773886,
+      "kd_log2fc": 2.85263333333333,
+      "kd_p": 0.00927011661223878
+    },
+    {
+      "GeneName": "ZNF268",
+      "wt_log2fc": 0.33993333333333453,
+      "wt_p": 0.7143357521869098,
+      "kd_log2fc": 2.3170666666666655,
+      "kd_p": 0.006316293137928459
+    },
+    {
+      "GeneName": "HSP90AA1",
+      "wt_log2fc": 1.8011000000000017,
+      "wt_p": 0.04421330478374999,
+      "kd_log2fc": 1.9651333333333305,
+      "kd_p": 0.002156582842031845
+    },
+    {
+      "GeneName": "MRPL15",
+      "wt_log2fc": 2.9117000000000015,
+      "wt_p": 0.15909254380151147,
+      "kd_log2fc": 1.8794999999999984,
+      "kd_p": 0.034879621657244224
+    },
+    {
+      "GeneName": "ALDH1A1",
+      "wt_log2fc": 3.1608333333333327,
+      "wt_p": 0.012692155666135593,
+      "kd_log2fc": 1.8514333333333326,
+      "kd_p": 0.0031772185601548057
+    },
+    {
+      "GeneName": "KPNB1",
+      "wt_log2fc": 2.6523666666666657,
+      "wt_p": 0.0019687794669909814,
+      "kd_log2fc": 1.8301666666666634,
+      "kd_p": 0.022417038710804853
+    },
+    {
+      "GeneName": "RANBP10",
+      "wt_log2fc": -2.086799999999993,
+      "wt_p": 0.09598571213382791,
+      "kd_log2fc": 1.8280666666666647,
+      "kd_p": 0.03394467101787462
+    },
+    {
+      "GeneName": "TPI1",
+      "wt_log2fc": 1.0835999999999988,
+      "wt_p": 0.29419686509873116,
+      "kd_log2fc": 1.761166666666666,
+      "kd_p": 0.0062803290498264315
+    },
+    {
+      "GeneName": "VCP",
+      "wt_log2fc": 1.414200000000001,
+      "wt_p": 0.04022559788807592,
+      "kd_log2fc": 1.5884333333333345,
+      "kd_p": 0.00037498971444374174
+    },
+    {
+      "GeneName": "MED18",
+      "wt_log2fc": 0.9147999999999996,
+      "wt_p": 0.06425717814117582,
+      "kd_log2fc": 1.5313000000000017,
+      "kd_p": 0.02357672883015814
+    },
+    {
+      "GeneName": "CFAP20",
+      "wt_log2fc": 1.9238,
+      "wt_p": 0.0018206851979857182,
+      "kd_log2fc": 1.4983333333333348,
+      "kd_p": 0.03834832170863677
+    },
+    {
+      "GeneName": "DDX3X",
+      "wt_log2fc": 1.0427666666666653,
+      "wt_p": 0.0038806103138054175,
+      "kd_log2fc": 1.4842000000000013,
+      "kd_p": 0.036915869573622806
+    },
+    {
+      "GeneName": "FLG",
+      "wt_log2fc": -0.5871999999999993,
+      "wt_p": 0.3340618405484238,
+      "kd_log2fc": 1.3782000000000014,
+      "kd_p": 0.009093402824452727
+    },
+    {
+      "GeneName": "PKM",
+      "wt_log2fc": 0.9099000000000039,
+      "wt_p": 0.03979885368358897,
+      "kd_log2fc": 1.1913000000000018,
+      "kd_p": 0.04971721122802258
+    },
+    {
+      "GeneName": "AKR1B1",
+      "wt_log2fc": 3.287099999999999,
+      "wt_p": 3.6288585911549145e-05,
+      "kd_log2fc": 1.1021,
+      "kd_p": 0.01148814036838293
+    },
+    {
+      "GeneName": "SFRP1",
+      "wt_log2fc": 1.073599999999999,
+      "wt_p": 0.057946699345603196,
+      "kd_log2fc": 1.1000333333333323,
+      "kd_p": 0.02133647604781542
+    },
+    {
+      "GeneName": "CETN2",
+      "wt_log2fc": -0.05643333333333089,
+      "wt_p": 0.9309837495471551,
+      "kd_log2fc": 1.0897000000000006,
+      "kd_p": 0.005750802641660779
+    }
+  ]
+}

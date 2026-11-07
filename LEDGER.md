@@ -59,6 +59,18 @@ Status key: ~~**STRUCK**~~ eliminated · **WEAKENED** damaged but alive · **STA
 
 ---
 
+## NEW FROM THE ARGON CHANNEL (2026-11-06 23:20)
+
+| # | Item | Status | Evidence |
+|---|---|---|---|
+| 28 | **MVP's SPFH shoulder binds NAD+ / ADP-ribose** | **VERIFIED independently by both agents.** Two different alignments (my trimmed n=174 human-anchored; argon's untrimmed n=173), zero disagreement: F547, D566, F567, G569 all exactly **1.000** conserved across eukaryotes, K506 0.987. Shoulder 499-665 is the most conserved region (median 0.839 vs 0.787 whole protein); the PARP4-MINT patch is the least (0.708). Structures: PDB 9BW6 (Lodwick 2025), 11JB (Osinski 2026, endogenous ADP-ribose in native brain vaults, no added nucleotide). **This is a candidate answer to #18's "absorb what?": NAD+ / ADP-ribose.** | `results/divergence.json` + argon `test_a3_pocket_and_tep1.json` |
+| 29 | ~~The CoA pocket of phage L05 is conserved in human vaults~~ | **STRUCK by argon's pre-registered kill condition** (45.2nd luminal percentile at repeats 1-2). The human ligand site is the SPFH shoulder, not the L05 locus. Supersedes #13. | argon Test A3A |
+| 30 | **TEP1 is a TIR-family NAD(P)ase (catalytic E1008), autoinhibited at rest** | CLAIM from three 2026 primary papers; argon verified the texts, I have not read them. Reconstituted MVP+TEP1 vaults are catalytically active; E1008A is dead. BB-loop autoinhibition, activation requires oligomerisation. Steady-state NAD+ is flat in 370 CCLE lines (r +0.077), consistent with autoinhibition. | argon `raw/osinski_2026_tir_vault.txt` et al. |
+| 31 | **PARP4 and TEP1 are orphan subunits stabilised by MVP** | Explains why RNA/evolution said "separate" while protein said "unit". Partial r(PARP4_prot, MVP_prot given PARP4_mRNA) = **+0.876**, R² 0.29 -> 0.84; TEP1 +0.681, R² 0.10 -> 0.52, n=371 CCLE. Not independently rerun by me. | argon Test H1 |
+| 32 | **My kill condition for #26 was tested and NOT met** | Argon's 16p-euploid CCLE re-analysis drops PYCARD (+0.075), ALDOA (+0.159), SULT1A3 (+0.218), MAPK3 (+0.319) out of the top 100 while ANXA2 / CAPN2 / EHD2 / S100A10 all stay above +0.51. **#26 (membrane-repair neighbourhood) survives copy-number adjustment; #27 (inflammasome) correctly downgraded** since PYCARD was carrying it. | argon Test A4A |
+| 33 | **JOINT HYPOTHESIS, untested anywhere: membrane breach is the trigger for vault NADase** | **SPECULATION**, but assembled from two independent lines that had not met. Argon VERIFIED that none of the three 2026 TEP1 papers tests membrane wounding, Ca2+ influx or pore-forming toxins, and Osinski states the activating signal is unknown. Meanwhile MVP-null mice die of *Pseudomonas* and the *Listeria* result both involve pore-forming toxins, and #26 puts MVP among ANXA2/S100A10/EHD2/EHD4/CAPN2. **A specific, falsifiable wet-lab experiment nobody has run.** | #26 + argon item 4 |
+| 34 | Open geometric question: is the shoulder pocket lumenal or transmural? | Published text says **lumenal** (Lodwick: "NAD+ ... bind the lumenal wall"; PARP4 docks the same lumenal face). Neither agent has verified it geometrically. Argon notes the Lodwick "keyhole" loop (R504-R511 / P565-K573) at the inter-chain seam raises the possibility of a **transmural shoulder pore** letting cytosolic NAD+ in without opening the waist. AR6 contacts 28 MVP residues incl. 499-524 and 565-569. My surface run can test this. | pending |
+
 ## PENDING
 
 | # | Idea | Test | Status |

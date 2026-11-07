@@ -56,7 +56,7 @@ for r in ref:
     if r.id[0]!=' ': continue
     k=(ref.id,r.id[1])
     if k not in ctx or k not in iso: continue
-    aa=T31.get(r.get_resname().capitalize(),'X') if isinstance(T31,dict) else 'X'
+    aa=T31.get(r.get_resname().strip().upper(),'X')
     if aa not in MAXASA: continue
     P=np.array([at.coord for at in r])
     zz,rr=proj(P)

@@ -1,0 +1,341 @@
+{
+  "mna_nnmt_confounder_audit": {
+    "r_mna_mvp_raw": 0.4069719639369664,
+    "r_mna_nnmt_prot": 0.6968340908395386,
+    "r_mna_nnmt_rna": 0.790205051312043,
+    "r_mvp_nnmt_prot_ccle": 0.4776273429394768,
+    "partial_r_mna_mvp_given_nnmt_rna": 0.1186147962080501,
+    "partial_p_mna_mvp_given_nnmt_rna": 0.022676834291892174,
+    "partial_r_mna_mvp_given_nnmt_prot": 0.1176654659534803,
+    "partial_p_mna_mvp_given_nnmt_prot": 0.023601771847846287,
+    "partial_r_mna_mvp_given_lineage": 0.28544513520431003,
+    "partial_r_mna_mvp_given_lineage_and_nnmt": 0.037972387113500344,
+    "partial_p_mna_mvp_given_lineage_and_nnmt": 0.46709534052564655,
+    "mvp_nnmt_prot_across_11_cohorts": {
+      "brain_cptac_2020": 0.32525575397553097,
+      "brca_cptac_2020": 0.5119603717970945,
+      "brca_dldccc_2022": 0.34229273161526935,
+      "brca_tcga": 0.4522881219258424,
+      "brca_tcga_pan_can_atlas_2018": 0.4325344014530687,
+      "ccle_broad_2019": 0.4693743501953263,
+      "coad_cptac_2019": -0.2727354228274641,
+      "coadread_tcga": 0.1520474841392863,
+      "coadread_tcga_pan_can_atlas_2018": 0.13316278456445235,
+      "gbm_cptac_2021": 0.566056463254917,
+      "luad_cptac_2020": -0.06697755261770559,
+      "lusc_cptac_2021": 0.5479022258343645,
+      "mng_utoronto_2021": 0.10912946356803654,
+      "ov_tcga": 0.48575635236672887,
+      "ov_tcga_pan_can_atlas_2018": 0.4919363765062565,
+      "paad_cptac_2021": -0.07021361937021266,
+      "ucec_cptac_2020": 0.3740754312522562
+    }
+  },
+  "cptac_cna_genomewide_ranks": {
+    "cohorts_used": [
+      "brca_tcga",
+      "coadread_tcga",
+      "ov_tcga",
+      "luad_cptac_2020",
+      "brca_cptac_2020",
+      "ucec_cptac_2020",
+      "coad_cptac_2019"
+    ],
+    "n_genes_scored": 9613,
+    "watch_genes": [
+      {
+        "gene": "PARP4",
+        "locus": "off-16p",
+        "r_raw": 0.8032253782268975,
+        "rank_raw": 2,
+        "r_cna_adj": 0.7921293047963454,
+        "rank_cna_adj": 2,
+        "delta_rank": 0
+      },
+      {
+        "gene": "TEP1",
+        "locus": "off-16p",
+        "r_raw": 0.48997310878651007,
+        "rank_raw": 3,
+        "r_cna_adj": 0.47804691704131097,
+        "rank_cna_adj": 3,
+        "delta_rank": 0
+      },
+      {
+        "gene": "PYCARD",
+        "locus": "16p11.2",
+        "r_raw": 0.3573740693177653,
+        "rank_raw": 32,
+        "r_cna_adj": 0.34969040844244825,
+        "rank_cna_adj": 40,
+        "delta_rank": 8
+      },
+      {
+        "gene": "MAPK3",
+        "locus": "16p11.2",
+        "r_raw": 0.468825664810545,
+        "rank_raw": 4,
+        "r_cna_adj": 0.4204502905105702,
+        "rank_cna_adj": 10,
+        "delta_rank": 6
+      },
+      {
+        "gene": "ALDOA",
+        "locus": "16p11.2",
+        "r_raw": 0.44848891615385134,
+        "rank_raw": 5,
+        "r_cna_adj": 0.399619485565101,
+        "rank_cna_adj": 16,
+        "delta_rank": 11
+      },
+      {
+        "gene": "SULT1A3",
+        "locus": "16p11.2",
+        "r_raw": 0.4381413704431538,
+        "rank_raw": 7,
+        "r_cna_adj": 0.4151644418464428,
+        "rank_cna_adj": 12,
+        "delta_rank": 5
+      },
+      {
+        "gene": "CORO1A",
+        "locus": "16p11.2",
+        "r_raw": 0.1675023708560996,
+        "rank_raw": 1448,
+        "r_cna_adj": 0.20040876960037687,
+        "rank_cna_adj": 910,
+        "delta_rank": -538
+      },
+      {
+        "gene": "PRKCB",
+        "locus": "16p11.2",
+        "r_raw": 0.023079914194834922,
+        "rank_raw": 5384,
+        "r_cna_adj": 0.06440652335154666,
+        "rank_cna_adj": 4145,
+        "delta_rank": -1239
+      },
+      {
+        "gene": "CASP1",
+        "locus": "chr11",
+        "r_raw": 0.23705926209446163,
+        "rank_raw": 487,
+        "r_cna_adj": 0.2689169875304112,
+        "rank_cna_adj": 262,
+        "delta_rank": -225
+      },
+      {
+        "gene": "CASP4",
+        "locus": "chr11",
+        "r_raw": 0.2850194074011254,
+        "rank_raw": 182,
+        "r_cna_adj": 0.31762645094572706,
+        "rank_cna_adj": 96,
+        "delta_rank": -86
+      },
+      {
+        "gene": "ANXA2",
+        "locus": "off-16p",
+        "r_raw": 0.4333176367726982,
+        "rank_raw": 8,
+        "r_cna_adj": 0.43987130408213543,
+        "rank_cna_adj": 4,
+        "delta_rank": -4
+      },
+      {
+        "gene": "S100A10",
+        "locus": "off-16p",
+        "r_raw": 0.3785193451551909,
+        "rank_raw": 22,
+        "r_cna_adj": 0.38635821037907453,
+        "rank_cna_adj": 17,
+        "delta_rank": -5
+      },
+      {
+        "gene": "CAPN2",
+        "locus": "off-16p",
+        "r_raw": 0.4317898164952222,
+        "rank_raw": 9,
+        "r_cna_adj": 0.4276396799227181,
+        "rank_cna_adj": 7,
+        "delta_rank": -2
+      },
+      {
+        "gene": "CAPNS1",
+        "locus": "off-16p",
+        "r_raw": 0.4237592108198454,
+        "rank_raw": 11,
+        "r_cna_adj": 0.4263804536679432,
+        "rank_cna_adj": 8,
+        "delta_rank": -3
+      },
+      {
+        "gene": "EHD2",
+        "locus": "off-16p",
+        "r_raw": 0.12862294732726282,
+        "rank_raw": 2297,
+        "r_cna_adj": 0.12731515197769974,
+        "rank_cna_adj": 2344,
+        "delta_rank": 47
+      },
+      {
+        "gene": "EHD4",
+        "locus": "off-16p",
+        "r_raw": 0.28404033160830783,
+        "rank_raw": 189,
+        "r_cna_adj": 0.3044107990511905,
+        "rank_cna_adj": 128,
+        "delta_rank": -61
+      },
+      {
+        "gene": "IQGAP1",
+        "locus": "off-16p",
+        "r_raw": 0.37251447094679724,
+        "rank_raw": 26,
+        "r_cna_adj": 0.3741579448142988,
+        "rank_cna_adj": 25,
+        "delta_rank": -1
+      },
+      {
+        "gene": "ACTR3",
+        "locus": "off-16p",
+        "r_raw": 0.38163945714302333,
+        "rank_raw": 17,
+        "r_cna_adj": 0.4179789926477566,
+        "rank_cna_adj": 11,
+        "delta_rank": -6
+      },
+      {
+        "gene": "ARPC2",
+        "locus": "off-16p",
+        "r_raw": 0.3170191786069848,
+        "rank_raw": 80,
+        "r_cna_adj": 0.3517514430373345,
+        "rank_cna_adj": 38,
+        "delta_rank": -42
+      }
+    ],
+    "top20_after_cna_adj": [
+      {
+        "rank": 1,
+        "gene": "PARP4",
+        "r_cna_adj": 0.7921293047963454,
+        "r_raw": 0.8032253782268975
+      },
+      {
+        "rank": 2,
+        "gene": "TEP1",
+        "r_cna_adj": 0.47804691704131097,
+        "r_raw": 0.48997310878651007
+      },
+      {
+        "rank": 3,
+        "gene": "ANXA2",
+        "r_cna_adj": 0.43987130408213543,
+        "r_raw": 0.4333176367726982
+      },
+      {
+        "rank": 4,
+        "gene": "VWA5A",
+        "r_cna_adj": 0.4339886890242788,
+        "r_raw": 0.44239314164229376
+      },
+      {
+        "rank": 5,
+        "gene": "SERPINB1",
+        "r_cna_adj": 0.4327239834850866,
+        "r_raw": 0.4252105029244829
+      },
+      {
+        "rank": 6,
+        "gene": "CAPN2",
+        "r_cna_adj": 0.4276396799227181,
+        "r_raw": 0.4317898164952222
+      },
+      {
+        "rank": 7,
+        "gene": "CAPNS1",
+        "r_cna_adj": 0.4263804536679432,
+        "r_raw": 0.4237592108198454
+      },
+      {
+        "rank": 8,
+        "gene": "PDZK1IP1",
+        "r_cna_adj": 0.4246269550290261,
+        "r_raw": 0.4038526444593415
+      },
+      {
+        "rank": 9,
+        "gene": "MAPK3",
+        "r_cna_adj": 0.4204502905105702,
+        "r_raw": 0.468825664810545
+      },
+      {
+        "rank": 10,
+        "gene": "ACTR3",
+        "r_cna_adj": 0.4179789926477566,
+        "r_raw": 0.38163945714302333
+      },
+      {
+        "rank": 11,
+        "gene": "SULT1A3",
+        "r_cna_adj": 0.4151644418464428,
+        "r_raw": 0.4381413704431538
+      },
+      {
+        "rank": 12,
+        "gene": "RNH1",
+        "r_cna_adj": 0.41012493765811214,
+        "r_raw": 0.4014360686326958
+      },
+      {
+        "rank": 13,
+        "gene": "PLEC",
+        "r_cna_adj": 0.4066172984877108,
+        "r_raw": 0.39736630361659475
+      },
+      {
+        "rank": 14,
+        "gene": "LGALS3",
+        "r_cna_adj": 0.4045833540162139,
+        "r_raw": 0.3830634409631754
+      },
+      {
+        "rank": 15,
+        "gene": "ALDOA",
+        "r_cna_adj": 0.399619485565101,
+        "r_raw": 0.44848891615385134
+      },
+      {
+        "rank": 16,
+        "gene": "S100A10",
+        "r_cna_adj": 0.38635821037907453,
+        "r_raw": 0.3785193451551909
+      },
+      {
+        "rank": 17,
+        "gene": "PLS1",
+        "r_cna_adj": 0.3820479028897892,
+        "r_raw": 0.3896749708937625
+      },
+      {
+        "rank": 18,
+        "gene": "TMOD3",
+        "r_cna_adj": 0.3804877488481159,
+        "r_raw": 0.38117890239656643
+      },
+      {
+        "rank": 19,
+        "gene": "MYO1A",
+        "r_cna_adj": 0.379843794331263,
+        "r_raw": 0.3666053826164164
+      },
+      {
+        "rank": 20,
+        "gene": "CLIC1",
+        "r_cna_adj": 0.3786256682290349,
+        "r_raw": 0.37427903977896737
+      }
+    ]
+  }
+}

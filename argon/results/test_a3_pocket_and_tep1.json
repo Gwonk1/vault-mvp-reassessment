@@ -1,0 +1,647 @@
+{
+  "test_a3a1_phage_l05_homologous_repeat12_seam": {
+    "n_seam_residues": 15,
+    "mean_aa_ident": 0.7631481836582507,
+    "mean_luminal_ident_pct": 45.19298245614035,
+    "mean_chem_cons": 0.8539927501806697,
+    "mean_basic_frac": 0.2605541879367383,
+    "all_r12_luminal_mean_ident": 0.7341766421537894,
+    "all_r12_luminal_pct": 45.95450490633363,
+    "seam_residues": [
+      {
+        "pos": 9,
+        "aa": "R",
+        "ident_to_human": 0.9183673469387755,
+        "chem_conservation": 0.9659863945578231,
+        "luminal_ident_pct": 70.78947368421052,
+        "basic_frac": 0.9659863945578231
+      },
+      {
+        "pos": 10,
+        "aa": "I",
+        "ident_to_human": 0.8707482993197279,
+        "chem_conservation": 1.0,
+        "luminal_ident_pct": 58.94736842105262,
+        "basic_frac": 0.0
+      },
+      {
+        "pos": 12,
+        "aa": "P",
+        "ident_to_human": 0.9591836734693877,
+        "chem_conservation": 0.9591836734693877,
+        "luminal_ident_pct": 80.78947368421052,
+        "basic_frac": 0.04081632653061224
+      },
+      {
+        "pos": 13,
+        "aa": "Y",
+        "ident_to_human": 0.6938775510204082,
+        "chem_conservation": 0.7755102040816326,
+        "luminal_ident_pct": 30.526315789473685,
+        "basic_frac": 0.17006802721088435
+      },
+      {
+        "pos": 21,
+        "aa": "Q",
+        "ident_to_human": 0.697986577181208,
+        "chem_conservation": 0.8859060402684564,
+        "luminal_ident_pct": 31.57894736842105,
+        "basic_frac": 0.020134228187919462
+      },
+      {
+        "pos": 38,
+        "aa": "Q",
+        "ident_to_human": 0.8866666666666667,
+        "chem_conservation": 0.8933333333333333,
+        "luminal_ident_pct": 62.89473684210526,
+        "basic_frac": 0.08666666666666667
+      },
+      {
+        "pos": 39,
+        "aa": "D",
+        "ident_to_human": 0.82,
+        "chem_conservation": 0.96,
+        "luminal_ident_pct": 52.368421052631575,
+        "basic_frac": 0.0
+      },
+      {
+        "pos": 40,
+        "aa": "N",
+        "ident_to_human": 0.7466666666666667,
+        "chem_conservation": 0.7533333333333333,
+        "luminal_ident_pct": 39.21052631578947,
+        "basic_frac": 0.24
+      },
+      {
+        "pos": 42,
+        "aa": "R",
+        "ident_to_human": 0.72,
+        "chem_conservation": 0.8733333333333333,
+        "luminal_ident_pct": 34.473684210526315,
+        "basic_frac": 0.8733333333333333
+      },
+      {
+        "pos": 49,
+        "aa": "R",
+        "ident_to_human": 0.46258503401360546,
+        "chem_conservation": 0.6802721088435374,
+        "luminal_ident_pct": 10.0,
+        "basic_frac": 0.6802721088435374
+      },
+      {
+        "pos": 52,
+        "aa": "T",
+        "ident_to_human": 0.5608108108108109,
+        "chem_conservation": 0.6081081081081081,
+        "luminal_ident_pct": 20.789473684210527,
+        "basic_frac": 0.0
+      },
+      {
+        "pos": 53,
+        "aa": "V",
+        "ident_to_human": 0.6959459459459459,
+        "chem_conservation": 0.9932432432432432,
+        "luminal_ident_pct": 30.789473684210527,
+        "basic_frac": 0.0
+      },
+      {
+        "pos": 54,
+        "aa": "P",
+        "ident_to_human": 0.9594594594594594,
+        "chem_conservation": 0.9662162162162162,
+        "luminal_ident_pct": 81.05263157894737,
+        "basic_frac": 0.0
+      },
+      {
+        "pos": 56,
+        "aa": "R",
+        "ident_to_human": 0.7837837837837838,
+        "chem_conservation": 0.8243243243243243,
+        "luminal_ident_pct": 45.78947368421053,
+        "basic_frac": 0.8243243243243243
+      },
+      {
+        "pos": 86,
+        "aa": "A",
+        "ident_to_human": 0.6711409395973155,
+        "chem_conservation": 0.6711409395973155,
+        "luminal_ident_pct": 27.89473684210526,
+        "basic_frac": 0.006711409395973154
+      }
+    ]
+  },
+  "test_a3a2_human_spfh_nad_adpr_pocket": {
+    "ar6_contacts_11jb": {
+      "433": 3.622,
+      "437": 1.988,
+      "438": 4.05,
+      "499": 3.906,
+      "500": 3.227,
+      "501": 3.107,
+      "502": 2.85,
+      "503": 2.32,
+      "504": 3.5,
+      "506": 2.208,
+      "508": 2.629,
+      "509": 2.728,
+      "511": 2.208,
+      "513": 2.129,
+      "515": 2.282,
+      "516": 2.685,
+      "517": 2.252,
+      "521": 2.581,
+      "522": 2.417,
+      "523": 2.057,
+      "524": 2.135,
+      "545": 2.336,
+      "547": 4.439,
+      "565": 2.6,
+      "566": 2.588,
+      "567": 2.671,
+      "568": 2.654,
+      "569": 4.369
+    },
+    "lodwick_keyhole_residues": [
+      504,
+      506,
+      507,
+      508,
+      509,
+      511,
+      565,
+      573
+    ],
+    "n_pocket_residues": 30,
+    "mean_aa_ident": 0.8009004733348261,
+    "mean_chem_cons": 0.8378500035643134,
+    "mean_luminal_chem_pct": 48.10526315789472,
+    "mannwhitney_chem_p": 0.6175516770928187,
+    "core_2_7A_mean_ident": 0.8256179460531049,
+    "core_2_7A_mean_chem": 0.8533508690719337,
+    "gnomad_zero_missense_frac": 0.23333333333333334,
+    "gnomad_rest_zero_missense_frac": 0.2850521436848204,
+    "residues": [
+      {
+        "pos": 433,
+        "aa": "P",
+        "ident_to_human": 0.7482993197278912,
+        "chem_conservation": 0.7619047619047619,
+        "luminal_ident_pct": 40.26315789473684,
+        "luminal_chem_pct": 23.157894736842106,
+        "basic_frac": 0.04081632653061224,
+        "gnomad_pass_ac": 27
+      },
+      {
+        "pos": 437,
+        "aa": "R",
+        "ident_to_human": 0.875,
+        "chem_conservation": 0.875,
+        "luminal_ident_pct": 61.31578947368421,
+        "luminal_chem_pct": 39.73684210526316,
+        "basic_frac": 0.875,
+        "gnomad_pass_ac": 2
+      },
+      {
+        "pos": 438,
+        "aa": "G",
+        "ident_to_human": 0.5522388059701493,
+        "chem_conservation": 0.5970149253731343,
+        "luminal_ident_pct": 20.263157894736842,
+        "luminal_chem_pct": 11.31578947368421,
+        "basic_frac": 0.08208955223880597,
+        "gnomad_pass_ac": 8
+      },
+      {
+        "pos": 499,
+        "aa": "S",
+        "ident_to_human": 0.8874172185430463,
+        "chem_conservation": 0.8874172185430463,
+        "luminal_ident_pct": 63.1578947368421,
+        "luminal_chem_pct": 42.10526315789473,
+        "basic_frac": 0.08609271523178808,
+        "gnomad_pass_ac": 3
+      },
+      {
+        "pos": 500,
+        "aa": "L",
+        "ident_to_human": 0.9668874172185431,
+        "chem_conservation": 1.0,
+        "luminal_ident_pct": 84.21052631578947,
+        "luminal_chem_pct": 95.78947368421052,
+        "basic_frac": 0.0,
+        "gnomad_pass_ac": 19
+      },
+      {
+        "pos": 501,
+        "aa": "S",
+        "ident_to_human": 0.9801324503311258,
+        "chem_conservation": 0.9801324503311258,
+        "luminal_ident_pct": 90.78947368421053,
+        "luminal_chem_pct": 77.63157894736842,
+        "basic_frac": 0.0,
+        "gnomad_pass_ac": 0
+      },
+      {
+        "pos": 502,
+        "aa": "A",
+        "ident_to_human": 0.5033112582781457,
+        "chem_conservation": 0.5033112582781457,
+        "luminal_ident_pct": 14.736842105263156,
+        "luminal_chem_pct": 5.7894736842105265,
+        "basic_frac": 0.006622516556291391,
+        "gnomad_pass_ac": 11
+      },
+      {
+        "pos": 503,
+        "aa": "G",
+        "ident_to_human": 0.8013245033112583,
+        "chem_conservation": 0.8013245033112583,
+        "luminal_ident_pct": 48.68421052631579,
+        "luminal_chem_pct": 28.68421052631579,
+        "basic_frac": 0.033112582781456956,
+        "gnomad_pass_ac": 0
+      },
+      {
+        "pos": 504,
+        "aa": "R",
+        "ident_to_human": 0.48344370860927155,
+        "chem_conservation": 0.8543046357615894,
+        "luminal_ident_pct": 12.631578947368421,
+        "luminal_chem_pct": 35.78947368421053,
+        "basic_frac": 0.8543046357615894,
+        "gnomad_pass_ac": 10
+      },
+      {
+        "pos": 506,
+        "aa": "K",
+        "ident_to_human": 0.9867549668874173,
+        "chem_conservation": 0.9867549668874173,
+        "luminal_ident_pct": 94.73684210526315,
+        "luminal_chem_pct": 85.0,
+        "basic_frac": 0.9867549668874173,
+        "gnomad_pass_ac": 1
+      },
+      {
+        "pos": 507,
+        "aa": "R",
+        "ident_to_human": 0.7284768211920529,
+        "chem_conservation": 0.8211920529801324,
+        "luminal_ident_pct": 36.31578947368421,
+        "luminal_chem_pct": 30.789473684210527,
+        "basic_frac": 0.8211920529801324,
+        "gnomad_pass_ac": 2946
+      },
+      {
+        "pos": 508,
+        "aa": "P",
+        "ident_to_human": 0.7748344370860927,
+        "chem_conservation": 0.7748344370860927,
+        "luminal_ident_pct": 44.473684210526315,
+        "luminal_chem_pct": 24.210526315789473,
+        "basic_frac": 0.0,
+        "gnomad_pass_ac": 5
+      },
+      {
+        "pos": 509,
+        "aa": "H",
+        "ident_to_human": 0.4900662251655629,
+        "chem_conservation": 0.5165562913907285,
+        "luminal_ident_pct": 12.894736842105264,
+        "luminal_chem_pct": 6.578947368421052,
+        "basic_frac": 0.5165562913907285,
+        "gnomad_pass_ac": 5
+      },
+      {
+        "pos": 511,
+        "aa": "R",
+        "ident_to_human": 0.46357615894039733,
+        "chem_conservation": 0.46357615894039733,
+        "luminal_ident_pct": 10.263157894736842,
+        "luminal_chem_pct": 4.736842105263158,
+        "basic_frac": 0.46357615894039733,
+        "gnomad_pass_ac": 181
+      },
+      {
+        "pos": 513,
+        "aa": "A",
+        "ident_to_human": 0.5695364238410596,
+        "chem_conservation": 0.6225165562913907,
+        "luminal_ident_pct": 21.052631578947366,
+        "luminal_chem_pct": 13.157894736842104,
+        "basic_frac": 0.0,
+        "gnomad_pass_ac": 44
+      },
+      {
+        "pos": 515,
+        "aa": "C",
+        "ident_to_human": 0.825503355704698,
+        "chem_conservation": 0.8322147651006712,
+        "luminal_ident_pct": 53.1578947368421,
+        "luminal_chem_pct": 32.36842105263158,
+        "basic_frac": 0.020134228187919462,
+        "gnomad_pass_ac": 1
+      },
+      {
+        "pos": 516,
+        "aa": "L",
+        "ident_to_human": 0.9463087248322147,
+        "chem_conservation": 0.9798657718120806,
+        "luminal_ident_pct": 78.15789473684211,
+        "luminal_chem_pct": 76.31578947368422,
+        "basic_frac": 0.006711409395973154,
+        "gnomad_pass_ac": 1
+      },
+      {
+        "pos": 517,
+        "aa": "L",
+        "ident_to_human": 0.7364864864864865,
+        "chem_conservation": 0.8108108108108109,
+        "luminal_ident_pct": 37.631578947368425,
+        "luminal_chem_pct": 29.47368421052631,
+        "basic_frac": 0.006756756756756757,
+        "gnomad_pass_ac": 0
+      },
+      {
+        "pos": 521,
+        "aa": "D",
+        "ident_to_human": 0.9319727891156463,
+        "chem_conservation": 0.9387755102040817,
+        "luminal_ident_pct": 75.52631578947368,
+        "luminal_chem_pct": 55.26315789473685,
+        "basic_frac": 0.047619047619047616,
+        "gnomad_pass_ac": 1
+      },
+      {
+        "pos": 522,
+        "aa": "F",
+        "ident_to_human": 0.9731543624161074,
+        "chem_conservation": 0.9798657718120806,
+        "luminal_ident_pct": 87.10526315789474,
+        "luminal_chem_pct": 76.31578947368422,
+        "basic_frac": 0.0,
+        "gnomad_pass_ac": 0
+      },
+      {
+        "pos": 523,
+        "aa": "F",
+        "ident_to_human": 0.5405405405405406,
+        "chem_conservation": 0.5472972972972973,
+        "luminal_ident_pct": 19.210526315789473,
+        "luminal_chem_pct": 8.421052631578947,
+        "basic_frac": 0.0,
+        "gnomad_pass_ac": 1
+      },
+      {
+        "pos": 524,
+        "aa": "T",
+        "ident_to_human": 0.7986577181208053,
+        "chem_conservation": 0.8993288590604027,
+        "luminal_ident_pct": 48.1578947368421,
+        "luminal_chem_pct": 44.21052631578947,
+        "basic_frac": 0.0738255033557047,
+        "gnomad_pass_ac": 0
+      },
+      {
+        "pos": 545,
+        "aa": "W",
+        "ident_to_human": 0.9266666666666666,
+        "chem_conservation": 0.9266666666666666,
+        "luminal_ident_pct": 74.47368421052632,
+        "luminal_chem_pct": 51.05263157894737,
+        "basic_frac": 0.006666666666666667,
+        "gnomad_pass_ac": 1
+      },
+      {
+        "pos": 547,
+        "aa": "F",
+        "ident_to_human": 1.0,
+        "chem_conservation": 1.0,
+        "luminal_ident_pct": 98.94736842105263,
+        "luminal_chem_pct": 95.78947368421052,
+        "basic_frac": 0.0,
+        "gnomad_pass_ac": 16
+      },
+      {
+        "pos": 565,
+        "aa": "P",
+        "ident_to_human": 0.8675496688741722,
+        "chem_conservation": 0.8741721854304636,
+        "luminal_ident_pct": 58.15789473684211,
+        "luminal_chem_pct": 39.473684210526315,
+        "basic_frac": 0.09271523178807947,
+        "gnomad_pass_ac": 9
+      },
+      {
+        "pos": 566,
+        "aa": "D",
+        "ident_to_human": 1.0,
+        "chem_conservation": 1.0,
+        "luminal_ident_pct": 98.94736842105263,
+        "luminal_chem_pct": 95.78947368421052,
+        "basic_frac": 0.0,
+        "gnomad_pass_ac": 1
+      },
+      {
+        "pos": 567,
+        "aa": "F",
+        "ident_to_human": 1.0,
+        "chem_conservation": 1.0,
+        "luminal_ident_pct": 98.94736842105263,
+        "luminal_chem_pct": 95.78947368421052,
+        "basic_frac": 0.0,
+        "gnomad_pass_ac": 6
+      },
+      {
+        "pos": 568,
+        "aa": "V",
+        "ident_to_human": 0.7483443708609272,
+        "chem_conservation": 0.9337748344370861,
+        "luminal_ident_pct": 40.526315789473685,
+        "luminal_chem_pct": 54.473684210526315,
+        "basic_frac": 0.0,
+        "gnomad_pass_ac": 0
+      },
+      {
+        "pos": 569,
+        "aa": "G",
+        "ident_to_human": 1.0,
+        "chem_conservation": 1.0,
+        "luminal_ident_pct": 98.94736842105263,
+        "luminal_chem_pct": 95.78947368421052,
+        "basic_frac": 0.0,
+        "gnomad_pass_ac": 5
+      },
+      {
+        "pos": 573,
+        "aa": "K",
+        "ident_to_human": 0.9205298013245033,
+        "chem_conservation": 0.9668874172185431,
+        "luminal_ident_pct": 71.57894736842105,
+        "luminal_chem_pct": 68.15789473684211,
+        "basic_frac": 0.9668874172185431,
+        "gnomad_pass_ac": 0
+      }
+    ]
+  },
+  "test_a3a3_mvp_parp4_mint_interface": {
+    "contacts_4_5A": {
+      "116": 3.241,
+      "117": 3.342,
+      "118": 2.535,
+      "119": 3.277,
+      "161": 4.285,
+      "162": 2.917,
+      "163": 3.439,
+      "164": 3.009,
+      "165": 3.037,
+      "166": 3.759,
+      "167": 2.402,
+      "169": 2.587,
+      "172": 3.592,
+      "206": 4.24,
+      "212": 2.786,
+      "213": 3.743,
+      "214": 3.095,
+      "215": 3.23
+    },
+    "mean_aa_ident": 0.6423639480737324,
+    "mean_luminal_ident_pct": 30.687134502923975,
+    "mannwhitney_less_p": 0.0020154200831643517
+  },
+  "mvp_domain_conservation": {
+    "Repeats_1_2 (1-112)": {
+      "mean_ident": 0.734204419824135,
+      "median_ident": 0.7743968801015781,
+      "mean_chem": 0.823895436052854
+    },
+    "Repeats_3_4_PARP4_MINT_zone (113-222)": {
+      "mean_ident": 0.7314678610228584,
+      "median_ident": 0.7541064671482628,
+      "mean_chem": 0.8190291836083267
+    },
+    "Repeats_5_9 (223-498)": {
+      "mean_ident": 0.7126429701419812,
+      "median_ident": 0.7702346041055719,
+      "mean_chem": 0.8028668014450916
+    },
+    "SPFH_shoulder_NAD_pocket_domain (499-665)": {
+      "mean_ident": 0.778040598910764,
+      "median_ident": 0.8278145695364238,
+      "mean_chem": 0.8549770535053867
+    },
+    "Cap_helix (666-790)": {
+      "mean_ident": 0.7455190412501512,
+      "median_ident": 0.7986577181208053,
+      "mean_chem": 0.8194741624598786
+    },
+    "Cap_disk_pore (791-893)": {
+      "mean_ident": 0.6435246532152074,
+      "median_ident": 0.6527777777777778,
+      "mean_chem": 0.7504380947393422
+    }
+  },
+  "tep1_domain_conservation": {
+    "N_term_repeats (1-200)": {
+      "mean_ident": 0.5732478251924951,
+      "median_ident": 0.6108187134502925,
+      "mean_pct": 64.86724400456795
+    },
+    "TROVE_vtRNA_binding (201-698)": {
+      "mean_ident": 0.5764633756208961,
+      "median_ident": 0.5837458745874587,
+      "mean_pct": 64.22905172268824
+    },
+    "vRNA_linker (699-885)": {
+      "mean_ident": 0.5338132100655621,
+      "median_ident": 0.5508474576271186,
+      "mean_pct": 60.15197995313985
+    },
+    "TeTIR_DUF4062_NADase (886-1117)": {
+      "mean_ident": 0.37875235520025763,
+      "median_ident": 0.2763898714774201,
+      "mean_pct": 41.917159996324635
+    },
+    "NACHT_NTPase (1150-1550)": {
+      "mean_ident": 0.33723756990201453,
+      "median_ident": 0.22334004024144868,
+      "mean_pct": 36.126376103897094
+    },
+    "WD40_sensor_propellers (1650-2627)": {
+      "mean_ident": 0.41341734385719353,
+      "median_ident": 0.3781655671419451,
+      "mean_pct": 46.5731241480831
+    }
+  },
+  "tep1_tetir_active_site": {
+    "mean_aa_ident": 0.7664826969060125,
+    "rest_tep1_mean_ident": 0.44753876459337943,
+    "mannwhitney_greater_p": 0.0008583740100349146,
+    "residues": [
+      {
+        "pos": 902,
+        "aa": "F",
+        "occ": 0.6560121765601218,
+        "ident_to_human": 0.8329466357308585,
+        "chem_conservation": 0.9350348027842227,
+        "pct_rank": 91.58736200989722
+      },
+      {
+        "pos": 914,
+        "aa": "R",
+        "occ": 0.7351598173515982,
+        "ident_to_human": 0.9358178053830227,
+        "chem_conservation": 0.9420289855072463,
+        "pct_rank": 98.05862200228398
+      },
+      {
+        "pos": 942,
+        "aa": "R",
+        "occ": 0.7595129375951294,
+        "ident_to_human": 0.7054108216432866,
+        "chem_conservation": 0.7354709418837675,
+        "pct_rank": 81.34754472782642
+      },
+      {
+        "pos": 943,
+        "aa": "W",
+        "occ": 0.7625570776255708,
+        "ident_to_human": 0.9201596806387226,
+        "chem_conservation": 0.9401197604790419,
+        "pct_rank": 97.1830985915493
+      },
+      {
+        "pos": 959,
+        "aa": "C",
+        "occ": 0.7792998477929984,
+        "ident_to_human": 0.689453125,
+        "chem_conservation": 0.693359375,
+        "pct_rank": 79.67263037685572
+      },
+      {
+        "pos": 976,
+        "aa": "R",
+        "occ": 0.8051750380517504,
+        "ident_to_human": 0.39697542533081287,
+        "chem_conservation": 0.7693761814744802,
+        "pct_rank": 46.25047582794062
+      },
+      {
+        "pos": 1008,
+        "aa": "E",
+        "occ": 0.1582952815829528,
+        "ident_to_human": 0.8846153846153846,
+        "chem_conservation": 0.8846153846153846,
+        "pct_rank": 95.24172059383326
+      }
+    ],
+    "gnomad_pass_ac": {
+      "F902": 0,
+      "R914": 32,
+      "R942": 65,
+      "W943": 0,
+      "C959": 1,
+      "R976": 226,
+      "E1008": 2
+    }
+  }
+}
