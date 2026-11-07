@@ -1,0 +1,53 @@
+=== coad_cptac_2019  n=97 proteins=6899
+  GATE proteasome (PSMA1 seed): PROTEASOME_COMPLEX p=0.0, PROTEASOME_CORE_COMPLE p=0.0
+  UNDER TEST     GOCC_RUFFLE                                    {'n': 120, 'obs': 7, 'exp': 3.5, 'p': 0.05}
+  UNDER TEST     GOBP_ACTIN_FILAMENT_ORGANIZATION               {'n': 285, 'obs': 15, 'exp': 8.3, 'p': 0.015}
+  UNDER TEST     GOBP_INFLAMMATORY_RESPONSE                     {'n': 337, 'obs': 7, 'exp': 9.8, 'p': 0.855}
+  NEG CONTROL    GOBP_ANTIGEN_PROCESSING_AND_PRESENTATION       {'n': 76, 'obs': 2, 'exp': 2.2, 'p': 0.715}
+  NEG CONTROL    GOBP_RESPONSE_TO_TYPE_II_INTERFERON            {'n': 66, 'obs': 2, 'exp': 1.9, 'p': 0.585}
+  abundance ref  GOCC_MITOCHONDRION                             {'n': 1086, 'obs': 34, 'exp': 31.5, 'p': 0.465}
+  abundance ref  GOCC_GOLGI_APPARATUS                           {'n': 783, 'obs': 31, 'exp': 22.7, 'p': 0.065}
+  abundance ref  GOCC_ENDOSOME                                  {'n': 575, 'obs': 15, 'exp': 16.7, 'p': 0.795}
+=== ucec_cptac_2020  n=95 proteins=10067
+  GATE proteasome (PSMA1 seed): PROTEASOME_COMPLEX p=0.0, PROTEASOME_CORE_COMPLE p=0.0
+  UNDER TEST     GOCC_RUFFLE                                    {'n': 155, 'obs': 13, 'exp': 3.1, 'p': 0.0}
+  UNDER TEST     GOBP_ACTIN_FILAMENT_ORGANIZATION               {'n': 358, 'obs': 21, 'exp': 7.1, 'p': 0.0}
+  UNDER TEST     GOBP_INFLAMMATORY_RESPONSE                     {'n': 462, 'obs': 28, 'exp': 9.2, 'p': 0.0}
+  NEG CONTROL    GOBP_ANTIGEN_PROCESSING_AND_PRESENTATION       {'n': 84, 'obs': 3, 'exp': 1.7, 'p': 0.385}
+  NEG CONTROL    GOBP_RESPONSE_TO_TYPE_II_INTERFERON            {'n': 82, 'obs': 5, 'exp': 1.6, 'p': 0.035}
+  abundance ref  GOCC_MITOCHONDRION                             {'n': 1308, 'obs': 24, 'exp': 26.0, 'p': 0.88}
+  abundance ref  GOCC_GOLGI_APPARATUS                           {'n': 1034, 'obs': 14, 'exp': 20.5, 'p': 0.99}
+  abundance ref  GOCC_ENDOSOME                                  {'n': 728, 'obs': 16, 'exp': 14.5, 'p': 0.295}
+=== ccle_broad_2019  n=330 proteins=9258
+  GATE proteasome (PSMA1 seed): PROTEASOME_COMPLEX p=0.0, PROTEASOME_CORE_COMPLE p=0.0
+  UNDER TEST     GOCC_RUFFLE                                    {'n': 147, 'obs': 12, 'exp': 3.2, 'p': 0.0}
+  UNDER TEST     GOBP_ACTIN_FILAMENT_ORGANIZATION               {'n': 329, 'obs': 21, 'exp': 7.1, 'p': 0.0}
+  UNDER TEST     GOBP_INFLAMMATORY_RESPONSE                     {'n': 356, 'obs': 23, 'exp': 7.7, 'p': 0.0}
+  NEG CONTROL    GOBP_ANTIGEN_PROCESSING_AND_PRESENTATION       {'n': 71, 'obs': 2, 'exp': 1.5, 'p': 0.435}
+  NEG CONTROL    GOBP_RESPONSE_TO_TYPE_II_INTERFERON            {'n': 71, 'obs': 3, 'exp': 1.5, 'p': 0.08}
+  abundance ref  GOCC_MITOCHONDRION                             {'n': 1297, 'obs': 9, 'exp': 28.0, 'p': 1.0}
+  abundance ref  GOCC_GOLGI_APPARATUS                           {'n': 992, 'obs': 32, 'exp': 21.4, 'p': 0.01}
+  abundance ref  GOCC_ENDOSOME                                  {'n': 712, 'obs': 30, 'exp': 15.4, 'p': 0.005}
+=== brain_cptac_2020  n=218 proteins=6402
+  GATE proteasome (PSMA1 seed): PROTEASOME_COMPLEX p=0.0, PROTEASOME_CORE_COMPLE p=0.0
+  UNDER TEST     GOCC_RUFFLE                                    {'n': 124, 'obs': 14, 'exp': 3.9, 'p': 0.0}
+  UNDER TEST     GOBP_ACTIN_FILAMENT_ORGANIZATION               {'n': 283, 'obs': 29, 'exp': 8.8, 'p': 0.0}
+  UNDER TEST     GOBP_INFLAMMATORY_RESPONSE                     {'n': 298, 'obs': 35, 'exp': 9.3, 'p': 0.0}
+  NEG CONTROL    GOBP_ANTIGEN_PROCESSING_AND_PRESENTATION       {'n': 62, 'obs': 11, 'exp': 1.9, 'p': 0.0}
+  NEG CONTROL    GOBP_RESPONSE_TO_TYPE_II_INTERFERON            {'n': 61, 'obs': 13, 'exp': 1.9, 'p': 0.0}
+  abundance ref  GOCC_MITOCHONDRION                             {'n': 928, 'obs': 19, 'exp': 29.0, 'p': 0.985}
+  abundance ref  GOCC_GOLGI_APPARATUS                           {'n': 683, 'obs': 23, 'exp': 21.3, 'p': 0.555}
+  abundance ref  GOCC_ENDOSOME                                  {'n': 555, 'obs': 23, 'exp': 17.3, 'p': 0.4}
+=== gbm_cptac_2021  n=99 proteins=10498
+  GATE proteasome (PSMA1 seed): PROTEASOME_COMPLEX p=0.0, PROTEASOME_CORE_COMPLE p=0.0
+  UNDER TEST     GOCC_RUFFLE                                    {'n': 164, 'obs': 9, 'exp': 3.1, 'p': 0.015}
+  UNDER TEST     GOBP_ACTIN_FILAMENT_ORGANIZATION               {'n': 359, 'obs': 25, 'exp': 6.8, 'p': 0.0}
+  UNDER TEST     GOBP_INFLAMMATORY_RESPONSE                     {'n': 488, 'obs': 38, 'exp': 9.3, 'p': 0.0}
+  NEG CONTROL    GOBP_ANTIGEN_PROCESSING_AND_PRESENTATION       {'n': 84, 'obs': 10, 'exp': 1.6, 'p': 0.0}
+  NEG CONTROL    GOBP_RESPONSE_TO_TYPE_II_INTERFERON            {'n': 86, 'obs': 7, 'exp': 1.6, 'p': 0.015}
+  abundance ref  GOCC_MITOCHONDRION                             {'n': 1328, 'obs': 14, 'exp': 25.3, 'p': 0.495}
+  abundance ref  GOCC_GOLGI_APPARATUS                           {'n': 1101, 'obs': 23, 'exp': 21.0, 'p': 0.315}
+  abundance ref  GOCC_ENDOSOME                                  {'n': 799, 'obs': 22, 'exp': 15.2, 'p': 0.005}
+
+GATE: proteasome clears abundance matching in 3/3 non-CNS -> PASS
+VERDICT: #155 SURVIVES abundance matching: ['GOCC_RUFFLE', 'GOBP_ACTIN_FILAMENT_ORGANIZATION']

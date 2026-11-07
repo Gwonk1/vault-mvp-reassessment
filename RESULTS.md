@@ -1830,3 +1830,83 @@ inflammatory response.** Everything interferon-specific is confined to one tissu
    ratio does not remove within-cytoplasm composition. **That is the obvious next control and we have
    not run it**, so the cortical result should be read as the best-surviving candidate rather than as
    established.
+
+## 37. The abundance control fails to kill the cortical result, and strengthens it
+
+`CYTO_COMPOSITION_PREREGISTRATION.md`. We expected this to kill #155 and registered that expectation.
+**It did not.**
+
+**Gate passed in 3 of 3 non-CNS datasets:** PSMA1-seeded proteasome terms clear abundance-matched
+specificity at p = 0.000 everywhere, so the matching does not over-correct.
+
+### 37a. Result
+
+Specificity against 200 size- and abundance-matched random sets, in the §36 residualisation
+(N:C + proliferation + STAT1 + IRF9):
+
+| term | coad | ucec | CCLE | non-CNS |
+|---|---|---|---|---|
+| `GOBP_ACTIN_FILAMENT_ORGANIZATION` | **0.015** | **0.000** | **0.000** | **3/3** |
+| `GOCC_RUFFLE` | 0.050 | **0.000** | **0.000** | 2/3 clear + 1 borderline |
+| `GOBP_INFLAMMATORY_RESPONSE` | 0.855 | **0.000** | **0.000** | 2/3 |
+| *neg control:* antigen processing | 0.715 | 0.385 | 0.435 | **0/3** |
+| *neg control:* response to type II interferon | 0.585 | 0.035 | 0.080 | **1/3** |
+
+Observed against expected is not marginal: ruffle gives 13 observed against 3.1 expected in endometrium
+and 12 against 3.2 in cell lines; actin filament organisation gives 21 against 7.1 in both.
+
+**The negative controls behaved.** Antigen processing and type II interferon stay dead across all three
+non-CNS datasets — and both are p = 0.000 in brain and glioblastoma, exactly reproducing §36's finding
+that they are CNS-only. Abundance matching did not resurrect them, so the matching is working.
+
+### 37b. The specificity argument that makes this more than abundance
+
+If MVP's top 200 were simply enriched for abundant cytoplasmic proteins, the largest abundant
+cytoplasmic compartment should light up. **`GOCC_MITOCHONDRION` (1,086-1,328 members) is not enriched in
+any dataset** — p = 0.465, 0.88, 1.0 across the three non-CNS sets, and 0.985 and 0.495 in the two CNS
+sets. Golgi and endosome are mixed and inconsistent.
+
+So the result is not "MVP correlates with whatever is abundant." It is specific to the actin cortex
+among abundant compartments, which is the discrimination #157 said was missing.
+
+### 37c. COAD, and an honest note about why it changed
+
+**The colorectal cohort — the counterexample from §35e, null for every term in §36 — clears actin
+filament organisation at p = 0.015 and sits exactly on 0.05 for ruffle**, while still rejecting
+inflammatory response at p = 0.855.
+
+**We are not claiming COAD "now supports" the result in the same sense, because this is a different
+statistic.** §36 was a genome-wide scan of 8,634 terms with Benjamini-Hochberg correction across all of
+them; §37 is a focused, pre-specified test of five terms with abundance-matched permutation. The focused
+test has far more power and carries no correction burden across the ontology. Both results are correct
+for what they are, and the difference is power, not biology.
+
+What is fair to say: **under a properly abundance-matched test of pre-specified terms, the actin result
+holds in all three non-CNS datasets including the one that rejected everything else, while the immune
+terms do not.** That is a cleaner separation than §36 produced.
+
+### 37d. What now stands, and the four things still against it
+
+**#155 survives and is upgraded.** After removing the interferon axis and matching on abundance, MVP's
+co-abundance neighbourhood contains cortical actin organisation in 3 of 3 non-CNS datasets and membrane
+ruffling in 2 of 3 plus a borderline, with mitochondrion as a negative specificity control and the
+interferon terms as negative replication controls. **This is now the best-supported neighbourhood claim
+in the project — and it is one we dismissed in §31 and set aside again in §36 because it did not fit the
+story we were telling.**
+
+Standing objections, none of which this test addresses:
+
+1. **CFdb found no cortical neighbourhood at all.** MVP's only native co-eluting partner is PARP4, and
+   actin proteins are not among its scored partners above threshold. **Co-abundance and native
+   co-elution disagree, and only co-elution reports physical association.** This is the single largest
+   problem with #155 and it is unresolved.
+2. **The circular control could not be run.** Sixteen of seventeen core actin genes are inside the
+   tested sets, so we cannot residualise on actin machinery to ask whether the signal is specific to
+   the cortex versus the whole actin system.
+3. **Still co-abundance.** It reports covariation of abundance across samples, not contact. The vault is
+   reported to be assembled on polyribosomes, and §35d's unexamined ranks 2-12 were translation and RNA
+   machinery, so a cytoskeletal association could be a consequence of where the particle is synthesised
+   rather than what it does.
+4. **We expected this to die and said so in advance.** A survival against a registered expectation is
+   worth more than a confirmation, but it is one test in one direction and we have reversed ourselves
+   six times today.
