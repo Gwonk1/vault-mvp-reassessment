@@ -2576,3 +2576,142 @@ nowhere near the standard the trimer (#179) or COP1's own replication (#194) met
 data.** Its role needs an experiment, not another reanalysis, and it is added to Paper 2 as
 Experiment 12. This is the honest terminus of the computational thread: the instruments can establish
 that COP1 is there and cannot establish what it is doing.
+
+## 48. Grok's audit reverses §41: the translation kill was a dichotomisation artefact
+
+Second Grok audit (`grok/to-grok/002-*`, `grok/from-grok/002r-*`), which named one decisive computation.
+We ran it. **It overturns the largest claim we made tonight.**
+
+### 48a. Translation IS in the contact instrument. We threw it away with a threshold.
+
+Grok's deliverable 5: *"The number already sitting in the IP-MS table that would decide the biology,
+and that the hard cut discarded, is the mean WT_LFC of all 95 GOBP_CYTOPLASMIC_TRANSLATION proteins in
+the universe... A systematic positive shift of a few tenths of a log2 across 95 detected proteins would
+show the dichotomization manufactured the mechanism."*
+
+`src/grok_audit_checks.py`:
+
+| set | n | mean WT_LFC | median |
+|---|---|---|---|
+| `GOBP_CYTOPLASMIC_TRANSLATION` in universe | 95 | **+0.2284** | +0.2624 |
+| all other detected proteins | 1,110 | **−0.3157** | −0.1135 |
+| **difference** | | **+0.5441 log2** | |
+
+Against 2,000 abundance-matched draws (null mean −0.1187, sd 0.1215), the observed mean sits at the
+**99.8th percentile, two-sided p = 0.004**.
+
+**Translation proteins are systematically enriched in the anti-MVP pulldown.** The signal is continuous
+and strong; our registered test dichotomised it at `LWTP > 1.3` and found 9 of 95 against 6.94 expected,
+p = 0.195. **The hard cut discarded the effect it was built to detect.**
+
+So §41's verdict is withdrawn. **The translation association appears in both instrument classes** — at
+the 98.0th percentile of 150 seeds in co-elution, and at p = 0.004 as a continuous shift in physical
+contact. #173's "kill condition fired" was a thresholding artefact, not a biological null.
+
+Grok also identified the structural defect before we computed anything: *"A gate whose plausible
+mild-to-moderate alternatives mostly return 'kill' is a one-way gate. They already logged one of
+those."* That is #188's vacuous control in mirror image — a gate with only one reachable answer — and we
+committed both on the same day, in opposite directions. The additional ceiling argument is also correct:
+**the maximum fold this IP can express is 88/6.94 = 12.7x**, so §40's 18x *"was not a number §41 could
+have returned."*
+
+### 48b. The actin exclusion has no positive control either
+
+The load-bearing number for the cortical-actin exclusion was *"0 of 1,175 high-confidence co-elution
+edges among 25 actin proteins reach MVP."* Grok: TEP1 is a stoichiometric subunit, recovered in this IP
+at LWTP 3.33, and sits at CFdb precision **0.0407** — the same floor as MVP-SMC5 at 0.042. So:
+
+| cutoff | MVP's CFdb degree | TEP1 retained? |
+|---|---|---|
+| ≥0.676 | **0** | no |
+| ≥0.5 | 1 | no |
+| ≥0.25 | 29 | no |
+| ≥0.1 | 357 | no |
+| ≥0.0407 | **1,733** | **yes** |
+
+**Any cutoff that retains a known vault subunit retains 1,733 partners — the entire noise floor.** The
+actin zero is therefore **not a powered negative**: it is a statement about a cutoff that excludes TEP1.
+And the IP half never carried the leg either — ruffle 1 vs 1.97 (below the null), actin filament
+organisation 7 vs 4.75 at the same p = 0.195, with 80% power only near 2.4x.
+
+**Cortical actin is unresolved, not excluded.** Its co-abundance evidence (ruffling 13 vs 3.1, ≈4.2x,
+three independent cohorts, surviving interferon-axis removal and abundance matching) still does not
+establish complex membership — but we no longer claim a contact instrument refuted it.
+
+### 48c. COP1 is one instrument class counted three times
+
+Grok turns our own taxonomy against the claim: *"TAP, BioPlex AP-MS, and this anti-MVP IP-MS are one
+instrument class — lysis, affinity matrix, MS. In the taxonomy of this project... these three are one
+class counted three times."* Correct. **Dataset independence is real; method independence is absent.**
+An orthogonal instrument would be pre-lysis covalent labelling, crosslinking or reconstitution, and
+none is in the COP1 claim. #194 is corrected accordingly.
+
+Two further corrections to our own argument:
+
+- **IntAct is at chance once PARP4 is set aside.** 15 non-PARP4 detectable partners, expected
+  15 × 87/1204 = **1.08**, observed 2 (COP1 + MAP7), P(X≥2) ≈ 0.30. After MAP7's demotion: one hit
+  against one expected.
+- **We used "spoke expansion" as a stronger insult than it is.** It undermines MVP-COP1 only if the bait
+  was a third protein or the score never cleared the study's cutoff, and we never established Lu 2014's
+  bait or score. Our independence claim was incomplete in both directions.
+
+**What survives is the in-house enrichment**: COP1 at WT_LFC +4.74 — **27-fold** — and LWTP 2.59, not a
+threshold scrape. That is one well-measured observation in one instrument class.
+
+**And DDB1 should carry more weight than we gave it.** DDB1 is *present* in the universe, so rule 7's
+vacuity does not apply, and it is not an interactor (LWTP 0.71) while COP1 is at 27-fold. DDB1 is the
+obligate adaptor of CRL4-COP1. **That pair is positive evidence for free COP1 and against the assembled
+holocomplex.** Citing DET1, CUL4A/B and RBX1 absences, as §47b did, repeats gate-design error five.
+
+### 48d. Where Grok is wrong, and it matters
+
+Grok inferred that COP1 cannot be a BioPlex MVP partner: *"Of MVP's 8 BioPlex 293T partners, only PARP4
+is present in the 1,205-protein universe. COP1 is present in that universe. Therefore COP1 is not among
+the 8."* The inference is sound but **it conflates two cell lines.**
+
+**COP1 (as RFWD2) is a BioPlex MVP partner in HCT116, not 293T.** Verified: 293T partners are GOPC,
+GOT1, HCN1, HIST1H4F, PARP4, PPP2R2B, RCOR3, STX17; HCT116 partners are COL8A2, COLQ, MAP7, **RFWD2**.
+
+**But the conclusion survives on different grounds, and worse ones.** The vault-recovery gate passes in
+293T (PARP4 present) and **fails in HCT116** (neither PARP4 nor TEP1 among its four partners). So the
+BioPlex leg of the COP1 claim comes from **the one cell line that does not recover the vault at all**.
+Grok reached the right verdict by the wrong route, and the right route is more damaging.
+
+### 48e. The amoeba decline: right call, wrong reasons
+
+Grok: *"Refusing to promote 11/60 to a confirmatory p-value is the correct half. Keeping it out of the
+evidence that constrains the kill sentence is the bias... Applying the commitment in only that direction
+is a second fork."* Granted — and §48a now makes it moot, since the kill sentence is withdrawn.
+
+More useful, Grok supplied three reasons to discount that list which are better than the one we used:
+
+1. **No denominator.** We never established the ribosomal base rate in the TurboID proteome, so 18% is
+   unloaded — it could neither reinstate §40 nor be treated as checked and found null.
+2. **RPL/RPS symbols are exactly the names that survive a bad orthology join**, so an 11-name list
+   drawn from that join is enriched for the ribosome's mapping success before any biology. This is #42's
+   failure mode predicting its own recurrence.
+3. **Ribosomal proteins are a standard lysine-rich TurboID contaminant class.**
+
+*"'We pre-registered descriptive-only' does not [belong in the decline]."* Accepted. The decline stands
+on 1-3; the procedural reason was the weakest one available.
+
+### 48f. What is left of the headline
+
+The generalisation we promoted to Paper 1's abstract hours ago — *three candidate neighbourhoods each
+survived their controls and then vanished in a contact instrument* — **does not survive this audit.**
+
+| module | co-abundance / co-elution | contact instrument | status now |
+|---|---|---|---|
+| **MYOF** | — | **−2.23 in IP; −3.32 (p=3.4e-4) in pre-lysis covalent TurboID** | **excluded, and the wash objection cannot reach it** |
+| translation | 98.0th pct of 150 seeds | **+0.544 log2, p = 0.004** | **corroborated, not refuted** |
+| cortical actin | ruffling 13 vs 3.1, 3 cohorts | IP underpowered; co-elution cutoff excludes TEP1 | **unresolved** |
+| membrane repair | died six times | ANXA2/S100A10 confirmed; MYOF excluded | mixed, as before |
+
+**"Three times" is unsupported. One exclusion is solid (MYOF), one claim is now corroborated across
+both classes (translation), and one is unresolved (actin).**
+
+The methodological lesson is still there and it is sharper than the one we claimed: **we dichotomised a
+continuous contact measurement at a significance threshold and destroyed a real signal, then promoted
+the resulting null to a mechanism and from there to a headline.** The error was not mistaking
+co-migration for contact. It was building a gate with one reachable answer — twice in one day, in
+opposite directions — and then trusting the gate more than the data.

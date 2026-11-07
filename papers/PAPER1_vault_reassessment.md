@@ -1,10 +1,10 @@
-# One assembly, three lifetimes, and a sealed nucleotide pocket: a pre-registered reassessment of major vault protein across public human and comparative data
+# One assembly, three lifetimes, a sealed nucleotide pocket, and two gates that could only say no: a pre-registered reassessment of major vault protein across public human and comparative data
 
 **Graham W. Syfert.** Analysis performed with Claude (Anthropic). Two further language-model agents
 reviewed the manuscript adversarially against the committed data, in three rounds; between them they
 struck or qualified more than a dozen claims made here, and those reversals are recorded in place
 rather than quietly removed. All hypotheses were committed to a timestamped git history before the
-relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (203 entries)
+relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (211 entries)
 and `RESULTS.md` (24 sections). **That history is currently local and has not been published**, so
 the ordering it establishes is not yet independently verifiable; we state the fact rather than imply
 otherwise, and the repository is available to anyone who asks. Correspondence welcome, including
@@ -38,20 +38,30 @@ a profile matching flotillin-1's obligate heterodimer rather than a multi-subuni
 scores at the noise floor in the same data, so sensitivity for known vault subunits there is one of
 two.
 
-**The most useful result in this work is a negative one about method.** Three candidate
-neighbourhoods - membrane repair, cortical actin and cytoplasmic translation - each produced a
-specific, reproducible signal that survived its registered controls and then vanished in an
-instrument measuring physical association. Cortical actin replicates across three independent
-cohorts after the interferon axis is removed and after abundance matching, yet of 1,175
-high-confidence co-elution edges among twenty-five cortical actin proteins, **none** reaches MVP.
-Translation enrichment is specific to MVP at the 98th percentile of 150 comparable seeds, with MVP's
-own SPFH-family relatives unremarkable, yet an anti-MVP pulldown that recovers all three vault
-subunits shows no translation enrichment among its interactors. **Co-abundance, co-fractionation and
-co-elution tails report where proteins are and how they move, not what holds them together, and this
-work mistook the former for the latter three times.** We also withdraw two stronger readings drawn
-earlier from the co-fractionation data: an enrichment test against a partner set of size one has no
-power, and a container metaphor is one of six models producing the same graph. The single
-association appearing in both classes of instrument is MVP with PARP4 and TEP1.
+**The most useful result in this work is a negative one about method, and it is not the one we first
+wrote.** We proposed that three candidate neighbourhoods each survived their controls in
+co-abundance and then vanished under physical contact, and an adversarial review dismantled that
+claim.
+**The real error was dichotomisation.** Our contact test for cytoplasmic translation cut a
+continuous measurement at a significance threshold, returned 9 of 95 proteins against 6.94 expected
+(p = 0.195), and we recorded a kill. The continuous signal that cut discarded is strong: the 95
+translation proteins detected in that pulldown average **+0.228 log2 enrichment against -0.316 for
+the other 1,110**, a shift at the **99.8th percentile of abundance-matched draws (p = 0.004)**.
+Translation is therefore enriched in *both* instrument classes - at the 98th percentile of 150
+comparable seeds in native co-elution, and as a continuous shift in physical contact.
+
+Our cortical-actin exclusion fails for a related reason: the "no high-confidence co-elution edges"
+argument rests on a cutoff that **also excludes TEP1**, a stoichiometric vault subunit this pulldown
+recovers at a log-p of 3.33 and which sits at co-elution precision 0.041, where MVP has 1,733
+partners. At the cutoff we used, MVP has **zero** partners of any kind. That exclusion is withdrawn
+and cortical actin is unresolved. What survives is a single clean exclusion: **myoferlin is depleted
+both in the pulldown (-2.23) and in pre-lysis covalent proximity labelling (-3.32, p = 3.4e-4)**,
+where no wash-based artefact can reach it - and myoferlin had been our strongest membrane-repair
+evidence. We also withdraw two readings drawn earlier from the co-fractionation data: an enrichment
+test against a partner set of size one has no power, and a container metaphor is one of six models
+producing the same graph. **The lesson we can defend is that we twice built gates with only one
+reachable answer, on the same day and in opposite directions, and then trusted the gates more than
+the data.**
 
 We confirm, from two independent alignments, that the SPFH shoulder nucleotide pocket is the most
 conserved structural domain of MVP, with four ADP-ribose-contacting residues invariant across 174
@@ -82,11 +92,21 @@ relevant data were examined. Where a gate failed, the result is reported as unin
 than reinterpreted. Where our own analysis was wrong, the correction is recorded alongside the
 original.
 
-**The gate scorecard, stated up front.** Of twenty-eight tests, eighteen returned an informative
+**The gate scorecard, stated up front.** Of thirty-three tests, twenty-two returned an informative
 verdict with their positive controls recovered; **eight carry a formal verdict of UNINFORMATIVE in
-their own committed output**; and two passed partially - the CRISPR corpus, where the genotoxic
-screen class failed its control while viral and immune-killing classes passed, and the LRP
-decomposition, where ABCC1 failed to predict its own substrates.
+their own committed output**; and three passed partially - the CRISPR corpus, where the genotoxic
+screen class failed its control while viral and immune-killing classes passed; the LRP
+decomposition, where ABCC1 failed to predict its own substrates; and the SMC5/6 test, whose primary
+multiple-testing arm was informative while its specificity control turned out to have no power to
+fail (see below).
+
+**Three further tests were declined before registration rather than run**, because a presence check
+showed they could not discriminate: a BioPlex replication of the physical interactome (seven of
+MVP's eight partners there were never detected in our IP-MS, so non-replication would have been
+guaranteed by non-detection); a CRL4 assembly test for COP1 (four of six complex components
+undetected); and a sequence scan of MVP for a COP1 VP degron (the motif is sequence-divergent with
+no per-position consensus, and known substrates lack it entirely). We count these separately from
+the thirty-three because nothing was computed.
 
 The eight, each with the control that failed: co-essentiality (CAV1 fails to recover CAVIN1 or
 EHD2); developmental trajectory (two of three stemness markers absent or above threshold);
@@ -101,7 +121,13 @@ before adjustment).
 
 **Three of those eight failed because we designed the gate badly rather than because the data were
 uninformative**, and we say so because it is the largest single source of wasted effort in this
-work.
+work. A fourth gate-design error is recorded in the partial column: in the SMC5/6 test we required
+that fewer than two of cohesin and condensin's subunits be vault interactors, and all four turned
+out to be absent from that instrument's detected proteome, so the control returned PASS and the PASS
+carried no information. **A control that cannot fail is worse than no control, because it launders
+an untested claim as a checked one.** The house rule added in response - confirm every named control
+protein is present in the data a test will read, before committing the registration - immediately
+stopped the three declined tests above.
 
 We say this in the introduction because an earlier draft of this paper asserted four of those five
 in its title and abstract as though they were findings, which is precisely the failure the gate was
@@ -284,13 +310,39 @@ among its 88 interactors (9 observed against 6.94 expected, p = 0.195), nor for 
 mitochondrion. That test is only powered for a large effect and we say so; it is not a clean
 refutation. But the registered rule was applied as written.
 
-**Three times, the same shape.** Membrane repair, cortical actin and cytoplasmic translation each
-produced a specific, reproducible, control-surviving co-abundance or co-elution signal that
-**vanished in an instrument measuring physical association**. The generalisation is not about
-vaults: **co-abundance, co-fractionation and co-elution tails report where proteins are and how they
-move, not what holds them together** - and this work mistook the former for the latter three times
-before noticing. The one association that appears in both kinds of instrument is MVP with PARP4 and
-TEP1, which in that same pulldown come down together.
+**And then an adversarial review took both of those conclusions apart.** The exchange is in the
+repository (`grok/`), and the computation it demanded is the most consequential in this work.
+
+**The translation null was an artefact of our own threshold.** Asked for the one number our hard cut
+had discarded, we computed the mean enrichment of *all* 95 detected translation proteins instead of
+counting how many crossed a line: **+0.228 log2 against -0.316 for the other 1,110 detected
+proteins, at the 99.8th percentile of 2,000 abundance-matched draws, p = 0.004.** The association is
+in the contact data and always was. Our registered test dichotomised at a significance threshold and
+found 9 of 95 against 6.94 expected; the cut destroyed the effect it existed to detect. A further
+arithmetic point we had missed: the largest fold-enrichment this pulldown can express is 88/6.94 =
+**12.7x**, so the 18x co-elution figure was never a quantity that test could have returned.
+
+**The actin exclusion has no positive control.** Its load-bearing number was zero high-confidence
+co-elution edges from MVP to twenty-five actin proteins. But TEP1 - a stoichiometric subunit this
+same pulldown recovers at log-p 3.33 - sits at co-elution precision **0.041**, and any cutoff
+retaining TEP1 retains **1,733** MVP partners, the entire noise floor. At the cutoff we used, MVP
+has **zero** partners of any kind. The zero describes our threshold, not the vault. Cortical actin
+is **unresolved**.
+
+**What survives is one exclusion, and it is a good one.** Myoferlin is depleted in the pulldown
+(-2.23) *and* in pre-lysis covalent proximity labelling around PARP4 (-3.32, p = 3.4e-4), an
+instrument no wash artefact can reach - and §43 establishes that PARP4 is on the particle, its
+knockdown leaving MVP untouched, so proximity to PARP4 is proximity to the vault. Myoferlin was the
+single most canonical membrane-repair protein that arrived unbidden in our scan, and two instruments
+of different physics agree it is excluded.
+
+**So the honest generalisation is narrower and more uncomfortable than the one we published this
+morning.** It is not that co-migration was mistaken for contact three times. It is that **we twice
+built a gate with only one reachable answer - a specificity control whose proteins were absent from
+the instrument, and a kill condition that returned "kill" for every plausible moderate effect - on
+the same day, in opposite directions, and then believed the gates over the data.** The one
+association appearing in both instrument classes remains MVP with PARP4 and TEP1, which come down
+together in that pulldown.
 
 **An unbiased scan, and what it cost us.** Because every co-abundance test to this point had begun
 by nominating a module we already favoured, we inverted the procedure: scan all 8,634 Gene Ontology

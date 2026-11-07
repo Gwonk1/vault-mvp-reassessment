@@ -1,0 +1,40 @@
+========================================================================
+CHECK 1 (Grok deliverable 5): mean WT_LFC of ALL 95 translation proteins
+  "A mean at or below the matched background would show the kill was
+   biologically right for a reason p=0.195 did not supply."
+========================================================================
+  translation proteins in universe: n=95
+    mean WT_LFC = +0.2284   median = +0.2624   sd = 0.815
+  all other proteins: n=1110
+    mean WT_LFC = -0.3157   median = -0.1135
+  difference in means = +0.5441 log2
+  abundance-matched null: mean -0.1187, sd 0.1215
+  observed mean sits at the 99.8th percentile of 2000 matched draws
+  two-sided p = 0.004
+  VERDICT: positive shift -> dichotomisation may have manufactured the kill
+
+========================================================================
+CHECK 2: the actin positive-control hole. Does the 'high-confidence' CFdb
+         cutoff retain a TEP1-class true edge? What is MVP's degree?
+========================================================================
+  MVP has 10614 scored partners in CFdb
+    precision>=0.9    : MVP degree = 0     | TEP1 retained: no
+    precision>=0.8    : MVP degree = 0     | TEP1 retained: no
+    precision>=0.7    : MVP degree = 0     | TEP1 retained: no
+    precision>=0.676  : MVP degree = 0     | TEP1 retained: no
+    precision>=0.5    : MVP degree = 1     | TEP1 retained: no
+    precision>=0.25   : MVP degree = 29    | TEP1 retained: no
+    precision>=0.1    : MVP degree = 357   | TEP1 retained: no
+    precision>=0.0407 : MVP degree = 1733  | TEP1 retained: YES
+  TEP1 precision = 0.0407108414788818  PARP4 = 0.675679035365778
+  => any cutoff that retains TEP1 also retains the entire noise floor,
+     so "0 of 1,175 actin edges reach MVP" cannot be read as a powered
+     negative unless a TEP1-class edge survives the same cutoff.
+
+========================================================================
+CHECK 3: Grok claims COP1 cannot be a BioPlex MVP partner. Verify.
+========================================================================
+  BioPlex 293T: MVP partners = ['GOPC', 'GOT1', 'HCN1', 'HIST1H4F', 'PARP4', 'PPP2R2B', 'RCOR3', 'STX17']
+    COP1/RFWD2 present: False | vault gate (PARP4 or TEP1 present): True
+  BioPlex HCT116: MVP partners = ['COL8A2', 'COLQ', 'MAP7', 'RFWD2']
+    COP1/RFWD2 present: True | vault gate (PARP4 or TEP1 present): False
