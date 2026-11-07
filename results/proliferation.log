@@ -1,0 +1,10 @@
+proliferation set 327 genes; MVP in raw set: False
+luad {'n': 510, 'genes': 16494, 'kept_prolif': 325, 'MVP': {'adj': 0.7, 'unadj': 1.1}, 'TEP1': {'adj': 18.6, 'unadj': 21.4}, 'PARP4': {'adj': 8.6, 'unadj': 9.7}, 'MKI67': {'adj': 99.4, 'unadj': 99.3}, 'TOP2A': {'adj': 100.0, 'unadj': 99.9}, 'CCNB1': {'adj': 99.5, 'unadj': 99.6}}
+lusc {'n': 484, 'genes': 16699, 'kept_prolif': 325, 'MVP': {'adj': 0.0, 'unadj': 0.0}, 'TEP1': {'adj': 12.7, 'unadj': 6.7}, 'PARP4': {'adj': 50.0, 'unadj': 29.7}, 'MKI67': {'adj': 99.4, 'unadj': 98.6}, 'TOP2A': {'adj': 100.0, 'unadj': 100.0}, 'CCNB1': {'adj': 99.1, 'unadj': 99.1}}
+skcm {'n': 76, 'genes': 16114, 'kept_prolif': 325, 'MVP': {'adj': 0.5, 'unadj': 0.1}, 'TEP1': {'adj': 59.7, 'unadj': 51.8}, 'PARP4': {'adj': 76.1, 'unadj': 69.0}, 'MKI67': {'adj': 92.4, 'unadj': 96.9}, 'TOP2A': {'adj': 100.0, 'unadj': 100.0}, 'CCNB1': {'adj': 95.6, 'unadj': 98.6}}
+paad {'n': 177, 'genes': 16712, 'kept_prolif': 325, 'MVP': {'adj': 86.5, 'unadj': 64.0}, 'TEP1': {'adj': 78.9, 'unadj': 75.6}, 'PARP4': {'adj': 91.5, 'unadj': 86.5}, 'MKI67': {'adj': 99.6, 'unadj': 99.6}, 'TOP2A': {'adj': 99.9, 'unadj': 100.0}, 'CCNB1': {'adj': 99.5, 'unadj': 99.4}}
+lihc {'n': 366, 'genes': 15804, 'kept_prolif': 324, 'MVP': {'adj': 28.7, 'unadj': 31.5}, 'TEP1': {'adj': 72.4, 'unadj': 73.7}, 'PARP4': {'adj': 49.7, 'unadj': 44.5}, 'MKI67': {'adj': 99.6, 'unadj': 99.6}, 'TOP2A': {'adj': 100.0, 'unadj': 100.0}, 'CCNB1': {'adj': 99.3, 'unadj': 99.4}}
+thca {'n': 497, 'genes': 16208, 'kept_prolif': 325, 'MVP': {'adj': 39.0, 'unadj': 73.8}, 'TEP1': {'adj': 87.0, 'unadj': 96.9}, 'PARP4': {'adj': 86.8, 'unadj': 94.5}, 'MKI67': {'adj': 99.3, 'unadj': 99.9}, 'TOP2A': {'adj': 100.0, 'unadj': 100.0}, 'CCNB1': {'adj': 99.2, 'unadj': 95.8}}
+
+GATE {'MKI67': 6, 'TOP2A': 6, 'CCNB1': 6} -> PASS (need 4/6 for 2 of 3)
+LABEL NO RELATION | MVP low in 3 cohorts, high in 0 | unadjusted low 3 high 0
