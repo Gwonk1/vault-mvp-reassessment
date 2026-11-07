@@ -179,28 +179,30 @@ it. Nothing here disproves a membrane association as biology: the SPFH domain, t
 tomography placing vaults on membranes, ANXA2 and S100A10 as confirmed interactors, and the
 published CFTR-raft knockout phenotype all stand. What is dead is the inference from co-abundance.
 
-**And a native instrument settles it.** Because co-abundance cannot separate physical association from
-shared regulation, we turned to co-fractionation mass spectrometry: 411 harmonised native separations
-across 21,703 fractions, no detergent immunoprecipitation and no wash-off step, and critically a method
-in which an intact 13 MDa particle cannot co-elute with free monomers by accident. Its controls recover
-34 proteasome subunits from PSMA1 and 77 ribosomal proteins from RPL7.
+**And a native instrument settles it.** Because co-abundance cannot separate physical association
+from shared regulation, we turned to co-fractionation mass spectrometry: 411 harmonised native
+separations across 21,703 fractions, no detergent immunoprecipitation and no wash-off step, and
+critically a method in which an intact 13 MDa particle cannot co-elute with free monomers by
+accident. Its controls recover 34 proteasome subunits from PSMA1 and 77 ribosomal proteins from
+RPL7.
 
-**In that resource MVP has exactly one high-confidence partner in the human proteome, and it is PARP4.
-PARP4 has exactly one, and it is MVP.** The two are reciprocally exclusive. For scale, the same data
-assign PARP1 133 partners and ANXA2 27 - so ANXA2 is well measured and well connected there, and simply
-not connected to MVP. Every membrane and innate-immune gene set returns **zero** MVP partners against
-degree-matched random sets. The one apparent exception, a single hit in inflammatory response, is PARP4
-itself, which carries that annotation while MVP does not.
+**In that resource MVP has exactly one high-confidence partner in the human proteome, and it is
+PARP4. PARP4 has exactly one, and it is MVP.** The two are reciprocally exclusive. For scale, the
+same data assign PARP1 133 partners and ANXA2 27 - so ANXA2 is well measured and well connected
+there, and simply not connected to MVP. Every membrane and innate-immune gene set returns **zero**
+MVP partners against degree-matched random sets. The one apparent exception, a single hit in
+inflammatory response, is PARP4 itself, which carries that annotation while MVP does not.
 
-This is the sixth independent instrument to recover MVP-PARP4 and the first with a size discriminator,
-which makes the pair about as firmly established as anything in this work. It also ends the broad
-neighbourhood as a physical claim, on a well-powered negative rather than an ambiguous one.
+This is the sixth independent instrument to recover MVP-PARP4 and the first with a size
+discriminator, which makes the pair about as firmly established as anything in this work. It also
+ends the broad neighbourhood as a physical claim, on a well-powered negative rather than an
+ambiguous one.
 
-**We think the absence is the result.** A particle whose only stable partner is its own internal enzyme,
-in a method that readily assigns dozens of partners to comparable proteins, is behaving as a sealed
-compartment - which is what the wall geometry above independently indicates. Across five instruments no
-broad neighbourhood exists. The most economical reading is that the vault does not have one because it
-is a container, and containers do not.
+**We think the absence is the result.** A particle whose only stable partner is its own internal
+enzyme, in a method that readily assigns dozens of partners to comparable proteins, is behaving as a
+sealed compartment - which is what the wall geometry above independently indicates. Across five
+instruments no broad neighbourhood exists. The most economical reading is that the vault does not
+have one because it is a container, and containers do not.
 
 **Developmental scaffolding - reported as uninformative.** This test **failed its own gate** and we
 report it accordingly, because our stated rule is that a failed gate is not reinterpreted. The
