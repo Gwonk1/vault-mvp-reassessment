@@ -1,0 +1,23 @@
+independent cohorts found: 8
+  brain_cptac_2020       n=218 PARP4 rank 1 prot'some 24/25 -> ok  GOBP_PLASMA_MEMBRANE_REPAIR p=0.6
+  brca_cptac_2020        n=122 PARP4 rank 1 prot'some 0/25 -> UNINFORMATIVE (gate failed)  GOBP_PLASMA_MEMBRANE_REPAIR p=0.06
+  coad_cptac_2019        n=97 PARP4 rank 1 prot'some 11/25 -> ok  GOBP_PLASMA_MEMBRANE_REPAIR p=1.0
+  gbm_cptac_2021         n=99 PARP4 rank 1 prot'some 14/25 -> ok  GOBP_PLASMA_MEMBRANE_REPAIR p=0.0
+  luad_cptac_2020        n=110 PARP4 rank 1 prot'some 0/25 -> UNINFORMATIVE (gate failed)  GOBP_PLASMA_MEMBRANE_REPAIR p=1.0
+  lusc_cptac_2021        n=None PARP4 rank None prot'some None/25 -> only 35 usable samples  GOBP_PLASMA_MEMBRANE_REPAIR p=None
+  paad_cptac_2021        n=124 PARP4 rank 1 prot'some 7/25 -> UNINFORMATIVE (gate failed)  GOBP_PLASMA_MEMBRANE_REPAIR p=0.0
+  ucec_cptac_2020        n=95 PARP4 rank 1 prot'some 12/25 -> ok  GOBP_PLASMA_MEMBRANE_REPAIR p=1.0
+
+replication: 1 of 4 gate-passing cohorts clear p<0.05
+VERDICT: DOES NOT REPLICATE - #41 struck a third time on independent data
+
+SPFH specificity in CCLE:
+  MVP      GOBP_PLASMA_MEMBRANE_REPAIR p=0.0  CLEARS
+  FLOT1    GOBP_PLASMA_MEMBRANE_REPAIR p=0.035  CLEARS
+  FLOT2    GOBP_PLASMA_MEMBRANE_REPAIR p=1.0  no
+  STOM     GOBP_PLASMA_MEMBRANE_REPAIR p=0.45  no
+  PHB      GOBP_PLASMA_MEMBRANE_REPAIR p=None  no
+  PHB2     GOBP_PLASMA_MEMBRANE_REPAIR p=1.0  no
+  ERLIN1   GOBP_PLASMA_MEMBRANE_REPAIR p=0.46  no
+  ERLIN2   GOBP_PLASMA_MEMBRANE_REPAIR p=1.0  no
+SPFH seeds clearing: 1 of 6 -> MVP-SPECIFIC

@@ -1,0 +1,485 @@
+{
+ "replication": {
+  "verdict": "DOES NOT REPLICATE - #41 struck a third time on independent data",
+  "n_gate_passing": 4,
+  "n_clearing": 1,
+  "cohorts": [
+   {
+    "cohort": "brain_cptac_2020",
+    "n_samples": 218,
+    "n_proteins": 6402,
+    "parp4_rank": 1,
+    "gate_assembly": true,
+    "proteasome_recovered": 24,
+    "gate_complex": true,
+    "status": "ok",
+    "seeds": {
+     "MVP": {
+      "GOBP_PLASMA_MEMBRANE_REPAIR": {
+       "n": 24,
+       "obs": 1,
+       "p": 0.6
+      },
+      "GOCC_CAVEOLA": {
+       "n": 40,
+       "obs": 1,
+       "p": 0.81
+      },
+      "GOBP_PLASMA_MEMBRANE_ORGANIZATION": {
+       "n": 83,
+       "obs": 2,
+       "p": 0.71
+      },
+      "GOCC_LATE_ENDOSOME": {
+       "n": 166,
+       "obs": 10,
+       "p": 0.1
+      },
+      "GOBP_ENDOSOMAL_TRANSPORT": {
+       "n": 207,
+       "obs": 6,
+       "p": 0.915
+      }
+     }
+    }
+   },
+   {
+    "cohort": "brca_cptac_2020",
+    "n_samples": 122,
+    "n_proteins": 9606,
+    "parp4_rank": 1,
+    "gate_assembly": true,
+    "proteasome_recovered": 0,
+    "gate_complex": false,
+    "status": "UNINFORMATIVE (gate failed)",
+    "seeds": {
+     "MVP": {
+      "GOBP_PLASMA_MEMBRANE_REPAIR": {
+       "n": 26,
+       "obs": 2,
+       "p": 0.06
+      },
+      "GOCC_CAVEOLA": {
+       "n": 47,
+       "obs": 2,
+       "p": 0.425
+      },
+      "GOBP_PLASMA_MEMBRANE_ORGANIZATION": {
+       "n": 97,
+       "obs": 5,
+       "p": 0.07
+      },
+      "GOCC_LATE_ENDOSOME": {
+       "n": 208,
+       "obs": 8,
+       "p": 0.075
+      },
+      "GOBP_ENDOSOMAL_TRANSPORT": {
+       "n": 243,
+       "obs": 10,
+       "p": 0.11
+      }
+     }
+    }
+   },
+   {
+    "cohort": "coad_cptac_2019",
+    "n_samples": 97,
+    "n_proteins": 6899,
+    "parp4_rank": 1,
+    "gate_assembly": true,
+    "proteasome_recovered": 11,
+    "gate_complex": true,
+    "status": "ok",
+    "seeds": {
+     "MVP": {
+      "GOBP_PLASMA_MEMBRANE_REPAIR": {
+       "n": 22,
+       "obs": 0,
+       "p": 1.0
+      },
+      "GOCC_CAVEOLA": {
+       "n": 40,
+       "obs": 3,
+       "p": 0.11
+      },
+      "GOBP_PLASMA_MEMBRANE_ORGANIZATION": {
+       "n": 87,
+       "obs": 1,
+       "p": 0.92
+      },
+      "GOCC_LATE_ENDOSOME": {
+       "n": 176,
+       "obs": 4,
+       "p": 0.77
+      },
+      "GOBP_ENDOSOMAL_TRANSPORT": {
+       "n": 209,
+       "obs": 4,
+       "p": 0.92
+      }
+     }
+    }
+   },
+   {
+    "cohort": "gbm_cptac_2021",
+    "n_samples": 99,
+    "n_proteins": 10498,
+    "parp4_rank": 1,
+    "gate_assembly": true,
+    "proteasome_recovered": 14,
+    "gate_complex": true,
+    "status": "ok",
+    "seeds": {
+     "MVP": {
+      "GOBP_PLASMA_MEMBRANE_REPAIR": {
+       "n": 24,
+       "obs": 3,
+       "p": 0.0
+      },
+      "GOCC_CAVEOLA": {
+       "n": 61,
+       "obs": 3,
+       "p": 0.095
+      },
+      "GOBP_PLASMA_MEMBRANE_ORGANIZATION": {
+       "n": 97,
+       "obs": 6,
+       "p": 0.005
+      },
+      "GOCC_LATE_ENDOSOME": {
+       "n": 239,
+       "obs": 4,
+       "p": 0.69
+      },
+      "GOBP_ENDOSOMAL_TRANSPORT": {
+       "n": 262,
+       "obs": 4,
+       "p": 0.34
+      }
+     }
+    }
+   },
+   {
+    "cohort": "luad_cptac_2020",
+    "n_samples": 110,
+    "n_proteins": 10083,
+    "parp4_rank": 1,
+    "gate_assembly": true,
+    "proteasome_recovered": 0,
+    "gate_complex": false,
+    "status": "UNINFORMATIVE (gate failed)",
+    "seeds": {
+     "MVP": {
+      "GOBP_PLASMA_MEMBRANE_REPAIR": {
+       "n": 23,
+       "obs": 0,
+       "p": 1.0
+      },
+      "GOCC_CAVEOLA": {
+       "n": 54,
+       "obs": 0,
+       "p": 1.0
+      },
+      "GOBP_PLASMA_MEMBRANE_ORGANIZATION": {
+       "n": 106,
+       "obs": 3,
+       "p": 0.235
+      },
+      "GOCC_LATE_ENDOSOME": {
+       "n": 232,
+       "obs": 8,
+       "p": 0.095
+      },
+      "GOBP_ENDOSOMAL_TRANSPORT": {
+       "n": 239,
+       "obs": 1,
+       "p": 0.985
+      }
+     }
+    }
+   },
+   {
+    "cohort": "lusc_cptac_2021",
+    "status": "only 35 usable samples"
+   },
+   {
+    "cohort": "paad_cptac_2021",
+    "n_samples": 124,
+    "n_proteins": 9237,
+    "parp4_rank": 1,
+    "gate_assembly": true,
+    "proteasome_recovered": 7,
+    "gate_complex": false,
+    "status": "UNINFORMATIVE (gate failed)",
+    "seeds": {
+     "MVP": {
+      "GOBP_PLASMA_MEMBRANE_REPAIR": {
+       "n": 24,
+       "obs": 6,
+       "p": 0.0
+      },
+      "GOCC_CAVEOLA": {
+       "n": 45,
+       "obs": 1,
+       "p": 0.745
+      },
+      "GOBP_PLASMA_MEMBRANE_ORGANIZATION": {
+       "n": 93,
+       "obs": 9,
+       "p": 0.005
+      },
+      "GOCC_LATE_ENDOSOME": {
+       "n": 206,
+       "obs": 11,
+       "p": 0.0
+      },
+      "GOBP_ENDOSOMAL_TRANSPORT": {
+       "n": 250,
+       "obs": 9,
+       "p": 0.235
+      }
+     }
+    }
+   },
+   {
+    "cohort": "ucec_cptac_2020",
+    "n_samples": 95,
+    "n_proteins": 10067,
+    "parp4_rank": 1,
+    "gate_assembly": true,
+    "proteasome_recovered": 12,
+    "gate_complex": true,
+    "status": "ok",
+    "seeds": {
+     "MVP": {
+      "GOBP_PLASMA_MEMBRANE_REPAIR": {
+       "n": 24,
+       "obs": 0,
+       "p": 1.0
+      },
+      "GOCC_CAVEOLA": {
+       "n": 49,
+       "obs": 0,
+       "p": 1.0
+      },
+      "GOBP_PLASMA_MEMBRANE_ORGANIZATION": {
+       "n": 99,
+       "obs": 4,
+       "p": 0.075
+      },
+      "GOCC_LATE_ENDOSOME": {
+       "n": 216,
+       "obs": 4,
+       "p": 0.67
+      },
+      "GOBP_ENDOSOMAL_TRANSPORT": {
+       "n": 257,
+       "obs": 5,
+       "p": 0.385
+      }
+     }
+    }
+   }
+  ]
+ },
+ "spfh_specificity": {
+  "verdict": "MVP-SPECIFIC",
+  "seeds_clearing": [
+   "FLOT1"
+  ],
+  "n_tested": 6,
+  "detail": {
+   "MVP": {
+    "GOBP_PLASMA_MEMBRANE_REPAIR": {
+     "n": 25,
+     "obs": 5,
+     "p": 0.0
+    },
+    "GOCC_CAVEOLA": {
+     "n": 52,
+     "obs": 7,
+     "p": 0.0
+    },
+    "GOBP_PLASMA_MEMBRANE_ORGANIZATION": {
+     "n": 88,
+     "obs": 9,
+     "p": 0.0
+    },
+    "GOCC_LATE_ENDOSOME": {
+     "n": 215,
+     "obs": 10,
+     "p": 0.02
+    },
+    "GOBP_ENDOSOMAL_TRANSPORT": {
+     "n": 248,
+     "obs": 6,
+     "p": 0.405
+    }
+   },
+   "FLOT1": {
+    "GOBP_PLASMA_MEMBRANE_REPAIR": {
+     "n": 25,
+     "obs": 3,
+     "p": 0.035
+    },
+    "GOCC_CAVEOLA": {
+     "n": 52,
+     "obs": 5,
+     "p": 0.0
+    },
+    "GOBP_PLASMA_MEMBRANE_ORGANIZATION": {
+     "n": 88,
+     "obs": 8,
+     "p": 0.0
+    },
+    "GOCC_LATE_ENDOSOME": {
+     "n": 215,
+     "obs": 3,
+     "p": 0.86
+    },
+    "GOBP_ENDOSOMAL_TRANSPORT": {
+     "n": 248,
+     "obs": 8,
+     "p": 0.16
+    }
+   },
+   "FLOT2": {
+    "GOBP_PLASMA_MEMBRANE_REPAIR": {
+     "n": 25,
+     "obs": 0,
+     "p": 1.0
+    },
+    "GOCC_CAVEOLA": {
+     "n": 52,
+     "obs": 3,
+     "p": 0.1
+    },
+    "GOBP_PLASMA_MEMBRANE_ORGANIZATION": {
+     "n": 88,
+     "obs": 5,
+     "p": 0.075
+    },
+    "GOCC_LATE_ENDOSOME": {
+     "n": 215,
+     "obs": 1,
+     "p": 0.995
+    },
+    "GOBP_ENDOSOMAL_TRANSPORT": {
+     "n": 248,
+     "obs": 9,
+     "p": 0.13
+    }
+   },
+   "STOM": {
+    "GOBP_PLASMA_MEMBRANE_REPAIR": {
+     "n": 25,
+     "obs": 1,
+     "p": 0.45
+    },
+    "GOCC_CAVEOLA": {
+     "n": 52,
+     "obs": 1,
+     "p": 0.68
+    },
+    "GOBP_PLASMA_MEMBRANE_ORGANIZATION": {
+     "n": 88,
+     "obs": 4,
+     "p": 0.13
+    },
+    "GOCC_LATE_ENDOSOME": {
+     "n": 215,
+     "obs": 13,
+     "p": 0.0
+    },
+    "GOBP_ENDOSOMAL_TRANSPORT": {
+     "n": 248,
+     "obs": 10,
+     "p": 0.015
+    }
+   },
+   "PHB": null,
+   "PHB2": {
+    "GOBP_PLASMA_MEMBRANE_REPAIR": {
+     "n": 25,
+     "obs": 0,
+     "p": 1.0
+    },
+    "GOCC_CAVEOLA": {
+     "n": 52,
+     "obs": 0,
+     "p": 1.0
+    },
+    "GOBP_PLASMA_MEMBRANE_ORGANIZATION": {
+     "n": 88,
+     "obs": 0,
+     "p": 1.0
+    },
+    "GOCC_LATE_ENDOSOME": {
+     "n": 215,
+     "obs": 0,
+     "p": 1.0
+    },
+    "GOBP_ENDOSOMAL_TRANSPORT": {
+     "n": 248,
+     "obs": 0,
+     "p": 1.0
+    }
+   },
+   "ERLIN1": {
+    "GOBP_PLASMA_MEMBRANE_REPAIR": {
+     "n": 25,
+     "obs": 1,
+     "p": 0.46
+    },
+    "GOCC_CAVEOLA": {
+     "n": 52,
+     "obs": 1,
+     "p": 0.695
+    },
+    "GOBP_PLASMA_MEMBRANE_ORGANIZATION": {
+     "n": 88,
+     "obs": 4,
+     "p": 0.17
+    },
+    "GOCC_LATE_ENDOSOME": {
+     "n": 215,
+     "obs": 3,
+     "p": 0.82
+    },
+    "GOBP_ENDOSOMAL_TRANSPORT": {
+     "n": 248,
+     "obs": 4,
+     "p": 0.835
+    }
+   },
+   "ERLIN2": {
+    "GOBP_PLASMA_MEMBRANE_REPAIR": {
+     "n": 25,
+     "obs": 0,
+     "p": 1.0
+    },
+    "GOCC_CAVEOLA": {
+     "n": 52,
+     "obs": 0,
+     "p": 1.0
+    },
+    "GOBP_PLASMA_MEMBRANE_ORGANIZATION": {
+     "n": 88,
+     "obs": 2,
+     "p": 0.58
+    },
+    "GOCC_LATE_ENDOSOME": {
+     "n": 215,
+     "obs": 8,
+     "p": 0.07
+    },
+    "GOBP_ENDOSOMAL_TRANSPORT": {
+     "n": 248,
+     "obs": 4,
+     "p": 0.8
+    }
+   }
+  }
+ }
+}

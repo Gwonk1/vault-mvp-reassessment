@@ -1227,3 +1227,75 @@ behaviour the pre-registration discipline exists to prevent. The honest state of
 - It remains co-abundance, not contact.
 
 That is where it should sit until someone runs it who did not write the hypothesis.
+
+## 30. The membrane-repair module does NOT replicate in independent tumour proteomics
+
+`MODULE_REPLICATION_PREREGISTRATION.md`. The registered kill condition fired, and §28's reversal of
+ledger #41 is withdrawn.
+
+### 30a. Replication
+
+Eight CPTAC cohorts, analysed separately and never pooled. Same method as §28, same externally defined
+gene sets, unmodified.
+
+| cohort | n | PARP4 rank | proteasome | gate | `PLASMA_MEMBRANE_REPAIR` p |
+|---|---|---|---|---|---|
+| brain_cptac_2020 | 218 | **1** | 24/25 | pass | 0.60 |
+| coad_cptac_2019 | 97 | **1** | 11/25 | pass | 1.00 |
+| gbm_cptac_2021 | 99 | **1** | 14/25 | pass | **0.00** |
+| ucec_cptac_2020 | 95 | **1** | 12/25 | pass | 1.00 |
+| brca_cptac_2020 | 122 | 1 | 0/25 | **fail** | (0.06) |
+| luad_cptac_2020 | 110 | 1 | 0/25 | **fail** | (1.00) |
+| paad_cptac_2021 | 124 | 1 | 7/25 | **fail** | (0.00) |
+| lusc_cptac_2021 | 35 | — | — | excluded | — |
+
+**1 of 4 gate-passing cohorts clears p < 0.05.** That is 0.25, below the registered one-third threshold,
+so the verdict is **DOES NOT REPLICATE**.
+
+**The borderline, stated rather than buried.** `paad_cptac_2021` reached p = 0.00 but failed its
+complex gate by a single subunit (7 of 25 against a registered 8). Had it passed, the count would be 2
+of 5 = 0.40, which falls in the **partial replication** band. The verdict therefore turns on one
+proteasome subunit in one cohort. We are honouring the gate as written — that is the rule that made
+§28's run 1 uninformative too — but a reader should know the result is not far from partial.
+
+**The pre-stated caveat, which we are not leaning on.** The registration said in advance that a failure
+to replicate is also consistent with tumour cohorts being noisier than cell lines, since they carry
+stromal and immune content. That was written down precisely so it could not be invoked selectively now.
+We note it and do not rest on it: three cohorts returned p = 1.00, which is not noise around a real
+effect.
+
+### 30b. What replicates perfectly, and it is not the module
+
+**PARP4 is MVP's rank-1 residualised correlate in all eight cohorts**, gate-passing or not, across
+brain, breast, colon, glioblastoma, lung, pancreas and endometrium. The MVP-PARP4 association is the
+most robust quantitative finding in this entire project. The *broad neighbourhood* around it is not.
+
+### 30c. The module was MVP-specific, for whatever that is now worth
+
+Secondary registered test, seeding CCLE with other SPFH-domain proteins: `GOBP_PLASMA_MEMBRANE_REPAIR`
+clears 0.05 for MVP (0.000) and for **1 of 6** SPFH seeds tested — FLOT1 at 0.035, which is coherent
+since flotillin-1 is a canonical lipid-raft protein. FLOT2, STOM, PHB2, ERLIN1 and ERLIN2 do not clear.
+
+By the registered rule that is **MVP-specific**, not a generic SPFH artefact. But it is specificity about
+a cell-line-only result, so it rescues nothing.
+
+### 30d. Ledger #41, final
+
+**Struck for the third time.** The sequence, with nothing hidden:
+
+1. §11 nominated it from co-abundance GO enrichment with matched-query specificity.
+2. §13 physical IP-MS missed at p = 0.058; §15 amoeba proximity missed at p = 0.067. Struck as #41.
+3. §28 reversed it after removing a cytoplasmic-mass confound: repair and caveolar sets at p = 0.000,
+   with PARP4 and TEP1 as ranks 1 and 2.
+4. §29's EMT control failed its own validity gate and resolved nothing.
+5. **§30: it does not replicate in independent tumour proteomics.**
+
+**My own favoured hypothesis from this afternoon — H2, vaults as sterol-rich membrane-microdomain
+residents — goes with it as a co-abundance claim**, exactly as the registration required. What survives
+is narrower and was never in dispute: MVP and PARP4 travel together, everywhere we look.
+
+The membrane idea is not disproven as *biology* — the SPFH domain is real, the amoeba tomography showing
+vaults on membranes is real, ANXA2 and S100A10 are confirmed physical interactors, and Kowalski's
+CFTR-raft phenotype is published. What is dead is the claim that **co-abundance data supports a broad
+membrane-repair neighbourhood.** Four tests, one dataset in its favour, and it does not survive contact
+with another.
