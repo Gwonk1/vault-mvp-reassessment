@@ -49,13 +49,13 @@ sequestration 0.05 · tissue pattern tracks xenobiotic flux 0.05 · **furniture 
 
 ## Part B — Ten candidate novel findings, with check status
 
-**Three literature checks have been run and all three found prior art.** These are **candidates, not
+**Four literature checks have been run and all four found prior art.** These are **candidates, not
 findings**. A probability on an unchecked row is an opinion about data, not a claim about the
 literature, and the base rate says expect attrition.
 
 | # | candidate | P | checked | type |
 |---|---|---|---|---|
-| **1** | **Published stool proteomics cannot see a vault** — the canonical workflow discards the 35,000 x g pellet, the range vaults are purified in; and the one dataset retaining it recovers a lumenal secretome with no beta-actin, GAPDH or HSC70 | **0.65** | no | methods argument |
+| **1** | **Published stool proteomics cannot see a vault** — the canonical workflow discards the 35,000 x g pellet, the range vaults are purified in; and the one dataset retaining it recovers a lumenal secretome with no beta-actin, GAPDH or HSC70 | ~~0.65~~ **0.35** | **yes — splits** | **the general principle is published** (see below); the vault application is not |
 | 2 | **CFdb scores MVP-TEP1 at the noise floor** (0.041 against PARP4's 0.676) — a sensitivity failure of a public resource on a known subunit; any cutoff retaining TEP1 admits 1,733 partners | 0.60 | no | new observation |
 | 3 | **The interferon co-abundance block is a STAT1/IRF9 regulon** — residualising until TAP1 leaves MVP's top 200 collapses it to CNS only | 0.60 | no | new reading |
 | 4 | **MVP is present in human colonic and ileal mucus** — 52 unique peptides, 94.4th and 94.8th percentiles | 0.55 | no | new reading |
@@ -65,6 +65,16 @@ literature, and the base rate says expect attrition.
 | 8 | The three subunit half-lives were never tested for mutual compatibility — spread at the 29.86th percentile of random triplets | 0.40 | no | new reading |
 | 9 | ANXA2 and S100A10 are the only confirmed survivors of the classical membrane list, and the shape of that list matters | 0.30 | partial | new reading |
 | 10 | Myoferlin is actively excluded — depleted in the pulldown and in pre-lysis covalent proximity labelling | 0.25 | partial | new reading |
+
+**#1 splits on checking.** The general methods principle is published: a 2021 *J. Proteomics* study is
+titled around the finding that *"metaproteomic sample preparation methods bias the recovery of host and
+microbial proteins according to taxa and **cellular compartment**"*, and Tanca et al. 2015 — whose
+companion paper is called *"Enrichment or depletion? The impact of stool pretreatment on metaproteomic
+characterization of the human gut microbiota"* — established that differential centrifugation
+significantly changes what is recovered. **What we could not find published is any source quantifying
+the loss of host *cytoplasmic* protein to lumen degradation, or applying the bias to a megadalton
+particle.** So the methods insight is known and the vault application is ours, which is a narrower
+claim than we made.
 
 **The pattern is the most useful row in the table: every candidate that reads a published interactor
 list has fallen, and every candidate resting on a methods argument or an unremarked row in someone
