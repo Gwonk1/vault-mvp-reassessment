@@ -43,7 +43,7 @@ struck the strong version — a substoichiometric protein has an expected free p
 the measurement — and §61 shows the three rates were never tested for compatibility. **Decides it:**
 the 2-df Wald test Grok specified, on pulse-SILAC fit covariance.
 
-### A5. The vault is furniture: an abundant structural protein with no acute function. **~12%**
+### A5. The vault is furniture: an abundant structural protein with no acute function. ~~**~12%**~~ **DOWNGRADED to ~7% — see §69c**
 The least interesting hypothesis and not the least likely. **For:** no fitness coupling in CRISPR
 screens; MVP sits mid-pack in turnover at the 58.6th percentile; this project eliminated every
 functional neighbourhood it tested. **Against:** furniture is usually long-lived, and 66.4 h with
@@ -227,7 +227,7 @@ the inter-alpha-trypsin inhibitor family, so the census cannot distinguish a vau
 relative. **What survives is the complete absence in well-sampled clades — Insecta 0/30, Nematoda 0/10
 — against Vertebrata 104/104.]**
 
-### A11. The vault is a tolerated extravagance — near-neutral, not functional. **~14%**
+### A11. The vault is a tolerated extravagance — near-neutral, not functional. ~~**~14%**~~ **DOWNGRADED to ~6% — see §69c**
 
 Ranked above A5 (furniture, 12%), A6 (COP1, 10%), A7 (vtRNA chaperone, 8%), A8 (mechanical, 6%),
 A9 (export, 6%) and A10 (xenobiotic flux, 5%).
@@ -282,3 +282,25 @@ tests contradicts it.** Against it: lung is 5th of 51 despite the protein's name
 transporter is among the 88 interactors, and MVP-null mice are viable without a clean drug-sensitivity
 phenotype. **Decides it:** steady-state doxorubicin, nuclear versus vault-associated, MVP-null against
 wild type at matched uptake.
+
+
+---
+
+## Addendum 3 — the literature closes on both non-functional hypotheses (§69)
+
+***Dictyostelium* MVP knockouts show reduced survival under stressful nutrient conditions.** Direct
+knockout evidence, in a retaining organism, of a conditional phenotype.
+
+**A5 → ~7%. A11 → ~6%.** A knockout with a survival defect is not furniture, and near-neutrality
+predicts no phenotype in any condition.
+
+**Why we missed it:** our "no fitness coupling" came from CRISPR screens in **rich-medium cancer
+lines**. The *Dictyostelium* phenotype appears under **nutrient stress** — a condition nothing in our
+evidence base tested. We read *no function in the one environment we looked at* as *no function*.
+
+**Graham's instinct was right in a way we got wrong.** He said *"there's some benefit to dropping it in
+certain conditions, environmental"* — the environmental clause is where the signal is, but it points
+the opposite way: the phenotype shows up **under stress**, so the vault looks like a conditional-stress
+asset rather than a tolerated cost. That also rehabilitates the environmental framing of A10 and makes
+**A12 (bare shell) and A1 (nucleotide buffer)** the top two, both of which are compatible with a
+stress-conditional function.

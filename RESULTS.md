@@ -4391,3 +4391,69 @@ The non-animal retainers are heavily weighted toward **pathogens and parasites**
 has been wrong about repeatedly. **Oomycetes and kinetoplastids are also simply well-sequenced because
 they are pathogens**, which is sufficient to produce the appearance without any biology. Recorded as an
 observation with an obvious confound, not a lead.
+
+## 69. §68 is a rediscovery of Daly 2013, and the literature corrects it in three ways
+
+Before treating §68 as a finding we checked whether it was known. **It is**, and checking also found
+three errors in it plus one piece of functional evidence that changes two hypothesis ratings.
+
+### 69a. The core conclusion is published
+
+**Daly et al. 2013, *"In silico resurrection of the major vault protein suggests it is ancestral in
+modern eukaryotes"*** reconstructed ancestral MVP sequences to search across eukaryotes and concluded
+**MVP was present in the last eukaryotic common ancestor with later loss in some lineages.** A
+commentary on that work states the losses as *"at least in fungi, plants, and Ecdysozoa."*
+
+**That is §68a and §68b verbatim.** Our clade census reproduced a twelve-year-old result. The census is
+correct and it is not news — and this is the **second time today**: #289 demoted our top novelty claim
+to twenty-five-year-old literature on the same grounds.
+
+### 69b. Three corrections to §68 from the literature
+
+1. **"0 of 42 Ecdysozoa" is too strong.** The commentary records that **one arthropod is known to carry
+   MVP — the velvet spider *Stegodyphus*.** Our Arachnida cell was 0/1 and it was the wrong arachnid.
+   A documented retention inside the lost clade matters: it weakens "one clean basal loss event" and
+   raises either patchy loss or a regain.
+2. **There is a competing hypothesis we did not mention.** A thesis on MVP distribution argues for **an
+   independent horizontal gene transfer into eukaryotes**, noting that **only lophotrochozoan
+   protostomes carry MVP among protostomes.** That conflicts with ancestral origin, so the field has
+   **two live hypotheses** and §68b asserted one as settled. Our own data cannot separate them.
+3. **MVP has bacterial and viral homologs.** A 2023 preprint reports the **first viral MVPs, in human
+   gut bacteriophages, closely related to bacterial MVP homologs.** We had the phage result in #234 as
+   a curiosity about the gut; it is in fact direct evidence bearing on the HGT hypothesis, and we
+   filed it under the wrong question.
+
+### 69c. The functional evidence that changes two ratings
+
+The same search surfaced something no amount of reanalysis here would have produced:
+***Dictyostelium* MVP knockouts show reduced survival under stressful nutrient conditions.**
+
+**That is direct functional evidence, from a knockout, in a retaining organism** — and it is the
+strongest single argument against the two non-functional hypotheses on our list:
+
+- **A5 (furniture, no acute function): 0.12 → 0.07.** A knockout with a conditional survival defect is
+  not furniture.
+- **A11 (near-neutral tolerated extravagance): 0.14 → 0.06.** Near-neutrality predicts no phenotype in
+  any condition. A nutrient-stress phenotype is what a real function looks like when the assay finally
+  matches the condition.
+
+**Graham's Vonnegut hypothesis therefore does worse on the literature than it did on our data**, and the
+reason is instructive: our CRISPR-screen null came from rich-medium cancer lines. **The *Dictyostelium*
+result says the phenotype appears under nutrient stress** — a condition no screen in our evidence base
+tested. We read "no fitness coupling" as "no function" when it was "no function in the one environment
+we looked at."
+
+A12 (bare shell is the investment) and A1 (nucleotide buffer) are now the top two unchallenged, and
+both are compatible with a conditional stress phenotype.
+
+### 69d. The pattern worth naming
+
+**Twice today a clean result of ours turned out to be published**, once at twenty-five years and once at
+twelve. Both times it was Grok's habit — check whether it is known before ranking it — that caught the
+first and prompted the check that caught the second.
+
+**Vault biology is a small, old field with a long literature and few workers**, which makes it unusually
+easy to rediscover. For a project whose whole method is registered tests against public data, the
+missing gate is obvious in hindsight and is now stated: **a novelty claim needs a literature check
+registered as its own gate, with the same standing as a positive control.** We ran forty tests against
+data and none against the literature until an external reviewer made us.
