@@ -1,14 +1,18 @@
-# pattern	retracted_by	note
-p = 0.309	§63	three-way matched; degenerate cells
-p = 0.174	§63	three-way matched; degenerate cells
-p = 0.184	§63	three-way matched; degenerate cells
-p = 0.0526	§63	three-way matched; degenerate cells
-p = 0.0101	§63	three-way matched; degenerate cells
-2.48x	§64b	buggy frame order; correct value 2.86x
-three independent physical instruments	§55c	one instrument class counted three times
-three genuinely independent	§55c	one instrument class counted three times
-appears in BOTH instrument classes	§63c	contact half withdrawn
-convergence across instrument classes is real	§63c	contact half withdrawn
-100.0th percentile of its own look-alikes	§55c	0.98^30 = 0.545, 55% by construction
-mistook the former for the latter	§55	slogan withdrawn
-three distinct subunit lifetimes	§61b	compatibility never tested
+# Patterns are REGEXES, not literal substrings. Written deliberately loose after five trivial
+# rewordings escaped the literal version (ledger #327): p=0.309 without spaces, a bare 0.309,
+# "three independent instruments" with "physical" dropped, "three distinct lifetimes" with "subunit"
+# dropped, and 2.48-fold instead of 2.48x. A gate whose vocabulary assumes one phrasing is a gate
+# that passes on a paraphrase.
+# regex	retracted_by	note
+0\.309	§63	three-way matched residual; degenerate cells
+0\.174	§63	three-way matched residual; degenerate cells
+0\.184	§63	three-way matched residual; degenerate cells
+0\.0526	§63	export test, degenerate matching
+0\.0101	§63	export test, degenerate matching
+2\.48\s*(?:x|-fold|fold)	§64b	buggy frame order; correct value 2.86x
+three\s+(?:genuinely\s+)?independent\s+(?:physical\s+)?instruments	§55c	one instrument class counted three times
+(?:appears|enriched)\s+in\s+(?:BOTH|both)\s+instrument\s+classes	§63c	contact half withdrawn
+convergence\s+across\s+instrument\s+classes\s+is\s+real	§63c	contact half withdrawn
+100\.0th\s+percentile\s+of\s+(?:its\s+own\s+)?(?:30\s+)?look-alikes	§55c	0.98^30 = 0.545, 55% by construction
+mistook\s+the\s+former\s+for\s+the\s+latter	§55	slogan withdrawn
+three\s+(?:distinct\s+)?(?:subunit\s+)?lifetimes	§61b	compatibility never tested

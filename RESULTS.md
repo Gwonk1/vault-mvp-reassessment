@@ -2547,7 +2547,8 @@ finding is COP1, singular, and nothing larger.
 
 ## 47. Two COP1 follow-ups declined, and the reasons are the content
 
-COP1 is the project's newest survivor (§46c, three independent instruments), so the mechanistic question
+COP1 is the project's newest survivor (§46c — **corrected in §55c: three datasets but one instrument
+class, not three independent instruments**), so the mechanistic question
 is obvious: **is MVP a COP1 substrate?** Two tests suggested themselves and **neither was run.** Both
 declines are recorded because the reasoning is reusable and the alternative was a number that
 discriminated nothing.
@@ -4668,3 +4669,89 @@ the propagation.
 Two mechanisms now, against twelve rules of judgement: one that a retraction stays visible at the line,
 one that a qualification reaches every document. **Both exist because the same failure recurred after we
 wrote the rule for it.**
+
+## 73. The nucleotide pocket is published, it is not sealed, and the answer was in our own data directory
+
+An agent was asked whether the SPFH-shoulder assignment and the sealed nucleotide pocket are already
+published. **Both halves of hypothesis A1 fall, and the fifth literature check is the worst of the
+five.**
+
+### 73a. The SPFH assignment: published in 2009, and we had the structure
+
+**Tanaka et al., "The structure of rat liver vault at 3.5 angstrom resolution", *Science* 2009,
+PMID 19150846 — PDB 4V60.** It reports the shoulder domain as structurally similar to the SPFH domain,
+with DALI hits to **stomatin** and the **flotillin-2 band-7 domain**. **Our relatives list —
+flotillin-1, flotillin-2, stomatin — reproduces the published DALI hits exactly.**
+
+It is also a live database annotation on **UniProt Q14764**: a *"MVP shoulder"* domain feature at
+residues 519-646, cross-referenced to **InterPro IPR036013 "Band 7/SPFH domain superfamily"**, **CATH
+G3DSA:3.30.479.30 "Band 7 domain"** and **NCBI CDD cl19107 "SPFH_like"** at 480-604. Four 2025-2026
+structure papers use "MVP's SPFH domain" as routine nomenclature. Grok's suspicion in audit 4 — that
+the SPFH label was probably already in the structural literature — was correct.
+
+One real distinction the agent drew: the homology is **structural (DALI/CATH), not sequence-detectable**
+in human MVP. The single published attempt on sequence grounds (a 2019 bioRxiv preprint) found the
+Band-7 signal in *bacterial* MVPs and reported **its absence in eukaryotic ones.**
+
+### 73b. The pocket: published July 2025, by the authors of the dataset we spent the day on
+
+**Lodwick JE, Shen R, Erramilli S, Xie Y, Roganowicz K, Ritchey S, Kossiakoff AA, Zhao M. "Structural
+insights into the roles of PARP4 and NAD+ binding in the human vault cage." *Nature Communications*
+2025;16:6724. PMID 40691181.**
+
+Abstract: *"The structures reveal atomic-level details of the protein-binding interface, as well as
+**unexpected binding sites for NAD+ and related nucleotides within the interior of the vault cage**."*
+The pocket sits in MVP's SPFH domain behind a *"keyhole loop"*, is formed **between the SPFH domains of
+two adjacent MVP monomers**, and **NAD+ and ADP are modelled in deposited coordinates** (9MXH, 9MXV).
+Pocket residues are named: R504, K506, P508, H509, R511, L517, F522, P565, R437.
+
+**This is the same group whose supplementary table we have been analysing all day** — the VM1/H6
+synthetic antigen binding reagents of PXD052802 (§71). So the interactome we read and the structure we
+hypothesised about are **one published paper**.
+
+### 73c. "Sealed" is not just unpublished, it is contradicted
+
+The agent searched Europe PMC and grep'd the full texts of five recent vault structure papers for
+*occluded, sealed, buried, enclosed, inaccessible, cryptic* and **found no source describing the pocket
+as sealed.** Three published statements run the other way:
+
+1. It **opens into the lumen** — *"the binding site of NAD+ is a recessed pocket lined by basic
+   residues"* on the interior wall.
+2. A second group reads it as **solvent-accessible**: *"consistent with the idea that vault-associated
+   components may require solvent access for activity."*
+3. **The directionality is inverted.** An inter-subunit pocket between two MVP monomers **exists
+   because the shell is assembled** — it is created by assembly, not sealed by it.
+
+The nearest published occlusion element is **loop gating, not shell sealing**: NAD+ sits "behind the
+keyhole loop", which is displaced on binding.
+
+### 73d. The answer was in `data/raw/struct/` the whole time
+
+| file | title in the mmCIF | deposited |
+|---|---|---|
+| `4V60.cif.gz` | *"The structure of rat liver vault at 3.5 angstrom resolution"* | **2008-10-24** |
+| `9BW6.cif.gz` | *"Human Vault Cage in complex with PARP4"* | **2024-05-20** |
+| **`11JB.cif.gz`** | ***"RNA Vault with ADPR bound (MVP/PARP4/TEP1 NADP sample)"*** | **2026-02-26** |
+
+**4V60 is the Tanaka structure that established the SPFH assignment. 9BW6 is one of the Lodwick 2025
+structures. And 11JB is a vault with ADP-ribose bound — 4,446 `AR6` HETATM records in the file.**
+
+**We hypothesised an undiscovered nucleotide pocket while holding a nucleotide-bound vault structure
+whose own title says so.** Every literature gate this project built looks for a control in the data;
+the one check never run was reading the titles of the files already downloaded.
+
+### 73e. What this does to the hypothesis list
+
+- **A1 (nucleotide-sequestering buffer, 0.20) is withdrawn.** The pocket is published and the "sealed"
+  premise is contradicted. What survives is **not a hypothesis but a published fact**: MVP binds NAD+,
+  and *"PARP4 is not necessary for the interaction."*
+- **A8 (sealed pocket as a ligand-gated waist latch, 0.12) is withdrawn** on the same grounds, though
+  the published keyhole-loop gating is a real and adjacent mechanism.
+- **A12 (the bare shell is the functional unit) is strengthened to ~0.45 and is now the clear leader.**
+  The shell binds NAD+ **without PARP4** — a published, structurally-resolved function of MVP itself,
+  which is precisely what A12 predicts and the strongest single piece of evidence for it.
+- **A2 (TEP1 as a TIR NAD(P)ase) gains context rather than losing it.** The vault demonstrably
+  concentrates NAD+ in its lumen; an NAD(P)-consuming enzyme on the same particle is a more coherent
+  proposition with a published NAD+ reservoir than without one. Raised to ~0.25.
+- **Five literature checks, five prior-art hits**, and this one found the prior art **inside our own
+  `data/raw/` directory.**

@@ -30,14 +30,14 @@ What remains untested is which mechanism, and whether it is the shell's or the c
 
 | # | hypothesis | P | strongest point for | strongest point against | decided by |
 |---|---|---|---|---|---|
-| **1** | **The bare MVP shell is the functional unit**; PARP4 and TEP1 are optional, independently docked passengers | **0.35** | adrenal ranks first for the shell alone while the armed holoenzyme peaks in gut mucosa; MVP transcript at the 96th-97th percentile against PARP4's 78-89 and TEP1's 58-85; MVP alone forms vaults in Sf9 cells | "what the cell invests in" relocates the question rather than answering it | cap occupancy per particle by cryo-ET, adrenal vs gut mucosa |
+| **1** | **The bare MVP shell is the functional unit**; PARP4 and TEP1 are optional, independently docked passengers | **0.45** | **MVP binds NAD+ with PARP4 unnecessary for the interaction, structurally resolved (§73b)** — a published function of the shell itself; adrenal ranks first for the shell alone while the armed holoenzyme peaks in gut mucosa; MVP transcript at the 96th-97th percentile against PARP4's 78-89 and TEP1's 58-85; MVP alone forms vaults in Sf9 cells | "what the cell invests in" relocates the question rather than answering it | cap occupancy per particle by cryo-ET, adrenal vs gut mucosa |
 | **2** | **The published signalling function is the shell's, not the caps'** | **0.30** | every published functional result uses MVP knockout, which removes shell and particle together, so none separates them | no direct evidence either way yet | Experiment 15: PARP4/TEP1 double-null retains a bare shell |
 | 3 | **Multi-client sequestration cage**, free COP1 the one supported client | 0.24 | COP1 at +4.74 (~27-fold), not PARP4-dependent; 0 of 1,276 GO terms enriched is what unrelated clients look like | one instrument class; DDB1 detected and not an interactor | MVP point mutant losing COP1, with in-cell crosslinking |
-| 4 | **TEP1 is an oligomerisation-activated TIR NAD(P)ase** (E1008) | 0.22 | TIR fold with the catalytic glutamate; NAD(P) consumption is itself a signalling mechanism, which fits the published pathway work | no activity measurement exists; most shells lack the enzyme | NAD+ consumption, monomer vs forced oligomer, E1008 control |
-| 5 | **Nucleotide-sequestering buffer** — 78 sealed SPFH-shoulder pockets | 0.20 | pocket recovered from two independent alignments and sealed in the assembled shoulder | nothing shown to bind it; **the SPFH assignment may already be published — under check** | nucleotide-soak cryo-EM plus a pocket mutant |
+| 4 | **TEP1 is an oligomerisation-activated TIR NAD(P)ase** (E1008) | **0.25** | TIR fold with the catalytic glutamate; NAD(P) consumption is itself a signalling mechanism, which fits the published pathway work | no activity measurement exists; most shells lack the enzyme | NAD+ consumption, monomer vs forced oligomer, E1008 control |
+| ~~5~~ | ~~**Nucleotide-sequestering buffer** — 78 sealed SPFH-shoulder pockets~~ **WITHDRAWN, §73** | ~~0.20~~ | — | **the pocket is published (Lodwick et al., *Nat Commun* 2025, PMID 40691181, NAD+ and ADP modelled in 9MXH/9MXV) and "sealed" is contradicted: it is lumen-facing, read as solvent-accessible, and formed *between* two monomers, so assembly creates it rather than closing it** | already done |
 | 6 | Polyribosome assembly or quality-control platform | 0.15 | co-elution tail translation-enriched at the 98.0th percentile of 150 seeds, surviving degree, abundance, family and mass controls | no CFdb-only statistic separates this from a shared hydrodynamic window | Experiment 14: puromycin dissociation |
 | 7 | ANXA2-S100A10 heterotetramer membrane dock | 0.12 | an obligate heterotetramer is harder to dismiss than either hit alone; ATP7A points the same way | the surrounding membrane module is positively absent | S100A10 knockout then MVP-ANXA2 crosslinking |
-| 8 | The sealed pocket is a ligand-gated latch for waist opening | 0.12 | a barrel that splits at the waist can make the required conformational change | no ligand, no occupancy, no activity | pocket mutation that seals or opens without blocking assembly |
+| ~~8~~ | ~~The sealed pocket is a ligand-gated latch for waist opening~~ **WITHDRAWN, §73** | ~~0.12~~ | — | same grounds; the published **keyhole-loop gating** is a real adjacent mechanism, but it is loop gating, not shell sealing | — |
 | 9 | Cargo turnover rather than transport | 0.12 | PARP4 at 22.2 h against the shell's 66.4 h | a substoichiometric protein has an expected free pool that can dominate | 2-df Wald test on pulse-SILAC fit covariance |
 | 10 | vtRNA chaperone — the shell exists for the RNA | 0.08 | vtRNAs are otherwise hard to account for; a 13 MDa shell is a plausible RNase shelter | never tested; §20's transcript-level test found nothing | vtRNA stability in MVP-null cells |
 
@@ -49,7 +49,8 @@ sequestration 0.05 · tissue pattern tracks xenobiotic flux 0.05 · **furniture 
 
 ## Part B — Ten candidate novel findings, with check status
 
-**Four literature checks have been run and all four found prior art.** These are **candidates, not
+**Five literature checks have been run and all five found prior art** — the fifth inside our own
+`data/raw/struct/` directory (§73d). These are **candidates, not
 findings**. A probability on an unchecked row is an opinion about data, not a claim about the
 literature, and the base rate says expect attrition.
 

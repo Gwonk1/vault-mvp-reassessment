@@ -9,18 +9,23 @@ touches RESULTS.md, LEDGER.md or papers/.
 """
 import re, sys, pathlib
 
-WINDOW = 6          # lines either side that may carry the marker
+WINDOW = 12         # lines either side that may carry the marker. Widened from 6 after the regex
+                    # broadening (#328) showed a VOID banner sitting 8 lines above its own table rows
+                    # — a marker immediately above a table must cover that table (#329).
 MARKERS = re.compile(
     r'VOID|SUPERSEDED|WITHDRAWN|RETRACTED|STRUCK|\[FIXED\]|~~|corrected to|'
     r'wrong;|not valid|no longer|was wrong|overreach|degenerate|does not support|'
     r'but see|uninformative|by construction|we led with it|invalid|'
     # meta-discussion: text ABOUT the retraction machinery necessarily quotes the patterns
-    r'planted|self-test|RETRACTIONS\.tsv|check_retractions|caught at the line',
+    r'planted|self-test|RETRACTIONS\.tsv|check_retractions|caught at the line|'
+    # marking phrases found by the regex broadening itself (ledger #328)
+    r'corrected|narrower than|first claimed|we first wrote|no support|overturn',
     re.I)
 TARGETS = ['RESULTS.md', 'LEDGER.md', 'README.md',
            'papers/PAPER1_vault_reassessment.md', 'papers/PAPER2_bench_experiments.md']
 
 def load_patterns(path='RETRACTIONS.tsv'):
+    """Patterns are regexes. See the header of RETRACTIONS.tsv for why."""
     out = []
     for line in open(path):
         if line.startswith('#') or not line.strip(): continue
@@ -83,7 +88,11 @@ def main():
         lines = p.read_text().split('\n')
         for i, line in enumerate(lines):
             for pat, by, note in pats:
-                if pat not in line: continue
+                # patterns are REGEXES (ledger #327: five literal rewordings escaped the old version)
+                try:
+                    if not re.search(pat, line, re.I): continue
+                except re.error:
+                    if pat not in line: continue
                 lo, hi = max(0, i - WINDOW), min(len(lines), i + WINDOW + 1)
                 if not MARKERS.search('\n'.join(lines[lo:hi])):
                     violations.append((t, i + 1, pat, by, note, line.strip()[:90]))
