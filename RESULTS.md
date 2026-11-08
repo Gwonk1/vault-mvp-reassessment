@@ -3774,9 +3774,13 @@ random protein triples.** They fail the demanding 5th-percentile bar for unity, 
 near unusually spread either. *"Three lifetimes"* asserts a distinctness that the dispersion statistic
 does not support — three values that differ, drawn from a spread that is unremarkable.
 
-**The title is corrected.** It now reads *"One assembly, a sealed nucleotide pocket, and one question
-that gave three answers."* The three half-lives remain reported, with their percentile against random
-triplets alongside them, which is how they should have appeared from the start.
+**The title is corrected.** It was changed here to *"One assembly, a sealed nucleotide pocket, and one
+question that gave three answers"* - **and changed again at §78d, because "sealed" was itself withdrawn
+at §73 and we had not registered it.** The current title is *"One assembly, no stoichiometric
+neighbourhood, and an instrument that cannot see a known subunit."* The three half-lives remain
+reported, with their percentile against random triplets alongside them, which is how they should have
+appeared from the start - though §75 notes their three decimals are false precision against a 22.6% CV
+bar, roughly +/-15 h on the MVP estimate.
 
 ### 61c. What still stands from the turnover work
 
