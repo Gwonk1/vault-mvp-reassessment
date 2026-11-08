@@ -92,19 +92,27 @@ versus shell ratio against measured xenobiotic exposure per tissue.
 Each carries what kind of claim it is: **[new observation]** (we measured something nobody has),
 **[new reading]** (the data are published, the observation is not), or **[uncertain novelty]**.
 
-### B1. TEP1 binds the vault independently of PARP4. **~75%** — [new reading]
+### B1. TEP1 binds the vault independently of PARP4. ~~**~75%**~~ **DEMOTED to ~20% — see §66b** — [new reading]
+
+> **[The conclusion is published and has been for ~25 years.** Grok declined to rank this and was
+> right. MVP-only recombinant vaults assemble in Sf9 insect cells from ~96 copies of a single protein;
+> TEP1-knockout mice contain structurally intact vault-like particles with reduced cap density;
+> VPARP/PARP4-knockout mice are viable without major phenotype; and **"VPARP and TEP1 are able to
+> incorporate into vaults even after the formation of the MVP vault particle shell is complete"** —
+> independent incorporation, explicitly in print. What survives is only the quantitative human-cell
+> demonstration below. **I ranked this first of ten.]**
 PARP4 knockdown leaves TEP1 untouched (**WTKD_LFC 0.154, WTKD_P 0.020**) while PARP4 itself is
 strongly dependent (5.51, 2.85), and MVP is unaffected, so the particle survives the knockdown. Both
 registered gates passed. The knockdown columns are published; this reading of them is not one I can
 find. **Why it matters:** the trimer is three independent associations, not a pair plus a passenger.
 
-### B2. Myoferlin is actively excluded from the vault's vicinity. **~70%** — [new observation]
+### B2. Myoferlin is actively excluded from the vault's vicinity. **~70%** — [new **reading**, corrected §66b]
 **−2.23** in the anti-MVP pulldown and **−3.32 (p = 3.4e-4)** in pre-lysis covalent proximity
 labelling around PARP4 — two instruments of different physics agreeing on a depletion. Negative
 results of this specificity are rarely published, and MYOF had been this project's strongest
 membrane-repair evidence.
 
-### B3. Degradation machinery is the most depleted annotation in an anti-MVP pulldown. **~65%** — [new observation]
+### B3. Degradation machinery is the most depleted annotation in an anti-MVP pulldown. **~65%** — [new **reading**, corrected §66b]
 Proteasomal protein catabolism at mean **−1.066**, the **0.0 percentile of 1,276 terms**; protein
 catabolic process −0.839; macroautophagy −1.163. **Anti-associated, not merely absent.** Constrains
 every disposal model, including A6 and A9.
@@ -136,7 +144,7 @@ MVP, PARP4 and TEP1 do not co-rank across tissues, so **"vault abundance" is not
 reframes a distribution that has been in the literature since 1996 and is routinely quoted as if the
 particle were uniform.
 
-### B9. ANXA2 and S100A10 are the only confirmed non-subunit interactors of the classical membrane list. **~40%** — [new observation]
+### B9. ANXA2 and S100A10 are the only confirmed non-subunit interactors of the classical membrane list. **~40%** — [new **reading**, corrected §66b]
 ANXA2 **+1.74 (LWTP 2.62)** and S100A10 **+2.11 (2.69)**, neither PARP4-dependent, surviving every
 instrument applied — while EHD2, AHNAK and MYOF fail and EHD4, CAPN2 and IQGAP1 were never tested at
 all. The *shape* of the list matters as much as its members.
@@ -235,3 +243,33 @@ counter-evidence, and they do not cancel — they point at a third possibility, 
 selection for *capacity* rather than *activity*, which is A1's buffer hypothesis arriving from the
 other direction. **A1 and A11 are the two hypotheses this project's evidence actually favours, and
 both predict exactly the absence of partners that we spent forty tests confirming.**
+
+
+---
+
+## Addendum 2 — three hypotheses I missed, added after Grok's independent list (§66a)
+
+**A12. The bare MVP shell is what the cell invests in; PARP4 and TEP1 are optional, independently
+docked passengers. ~35%** — Grok's top item at 0.40, and **it would now rank first on my list too.**
+I held every piece and never assembled it: adrenal ranks first for the shell alone, the holoenzyme
+peaks in gut mucosa, TEP1 is PARP4-independent, CFdb splits them, and **my own A11 test found MVP's
+transcript at the 96-97th percentile while PARP4 sits at 78-89 and TEP1 at 58-85.** The literature
+checked in §66b supports it further: MVP alone forms the shell, and caps add afterwards. I rate it
+slightly below Grok because "what the cell invests in" is not yet a function — it relocates the
+question to the shell rather than answering it. **Decides it:** cap occupancy per particle by cryo-ET,
+adrenal versus gut mucosa; under 10% in both keeps the bare shell as the object of investment.
+
+**A13. ANXA2-S100A10 heterotetramer as a membrane dock. ~12%** — I had both in the novelty list and
+never made them a hypothesis. They are an obligate heterotetramer, which is harder to dismiss than
+either hit alone, and ATP7A at +2.38 points the same way. **Against:** the surrounding membrane module
+is positively absent — MYOF excluded twice, EHD2 and AHNAK failing, ruffle below its matched null.
+**Decides it:** S100A10 knockout, then in-cell crosslinking of MVP to ANXA2; dies if the crosslink
+survives S100A10 loss, and dies if it appears only after lysis.
+
+**A14. Multidrug sequestration, taken seriously rather than dismissed. ~5%** — I had folded this into
+a tissue-flux framing (A10) and missed Grok's sharper point: **nothing in this project measures a
+drug**, so a small-molecule sequestration model leaves no proteomic trace and **none of our forty
+tests contradicts it.** Against it: lung is 5th of 51 despite the protein's name, no xenobiotic
+transporter is among the 88 interactors, and MVP-null mice are viable without a clean drug-sensitivity
+phenotype. **Decides it:** steady-state doxorubicin, nuclear versus vault-associated, MVP-null against
+wild type at matched uptake.

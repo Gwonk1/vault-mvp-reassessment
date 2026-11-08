@@ -20,7 +20,7 @@ grok -p "$BODY" \
      --reasoning-effort high \
      --disable-web-search \
      --no-subagents \
-     --max-turns 12 \
+     --max-turns 4 \
      --tools "" \
      --system-prompt-override "You are an adversarial scientific reviewer. You have NO tools and NO file access in this session: every number you need is in the prompt, so answer from the prompt alone and never attempt to read a file. Do not restate the prompt back. Be specific and quantitative, attack rather than summarise, and say plainly when a claim survives. Output the five numbered deliverables requested, nothing else." \
      > "$REPLY" 2>&1 || true

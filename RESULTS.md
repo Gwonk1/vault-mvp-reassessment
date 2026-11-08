@@ -4118,3 +4118,109 @@ agent install a self-executing hook on its own authority.
 
 That boundary is worth recording as a feature rather than an obstacle: the gate now exists because
 someone who could evaluate it chose to turn it on.
+
+## 66. The two independent top-ten lists, compared — and my top novelty claim does not survive
+
+Claude's lists were committed at **20:24:07** (`HYPOTHESES_AND_NOVELTY.md`, commit `005f309`); Grok's
+were requested afterwards with the evidence and none of the rankings
+(`grok/to-grok/005-*`, `grok/from-grok/006r-*`). The independence is checkable from `git log`.
+
+### 66a. The hypothesis lists barely overlap at the top
+
+| rank | **Claude** | P | **Grok** | P |
+|---|---|---|---|---|
+| 1 | nucleotide-sequestering buffer | 0.20 | **bare MVP shell is the investment; caps optional** | **0.40** |
+| 2 | TEP1 latent TIR NAD(P)ase | 0.18 | multi-client sequestration cage, free COP1 the one client | 0.24 |
+| 3 | polyribosome assembly platform | 0.15 | **ANXA2-S100A10 heterotetramer membrane dock** | 0.14 |
+| 4 | **near-neutral tolerated extravagance** | **0.14** | sealed pocket as ligand-gated waist latch | 0.12 |
+| 5 | cargo turnover, not transport | 0.12 | cap chemistry: TEP1 NADase on the shell platform | 0.10 |
+| 6 | **furniture, no acute function** | **0.12** | ribosome-adjacent translation buffer | 0.09 |
+| 7 | COP1 makes abundance regulated | 0.10 | extracellular deployment of shells | 0.07 |
+| 8 | vtRNA chaperone | 0.08 | multidrug sequestration (LRP model) | 0.05 |
+| 9 | mechanical/crowding buffer | 0.06 | innate-immune sensor | 0.05 |
+| 10 | export with altered cargo | 0.06 | NBR1-selective autophagy adaptor | 0.04 |
+
+**Three things I missed entirely**, and the first is the one that matters:
+
+- **Grok's #1 at P = 0.40 — "the bare MVP shell is what cells invest in; PARP4 and TEP1 are optional,
+  independently docked passengers, and the armed triple particle is a minor state."** I had every
+  component of that argument — adrenal ranks first for the shell only, the holoenzyme peaks in gut
+  mucosa, TEP1 is PARP4-independent, CFdb splits them, and my own A11 test found **MVP's transcript at
+  the 96-97th percentile while PARP4 sits at 78-89 and TEP1 at 58-85** — and never assembled them into
+  a hypothesis. Grok rates it double my top item. Its experiment is the right one: count cap occupancy
+  per particle by cryo-ET in adrenal versus gut.
+- **ANXA2-S100A10 as a membrane dock (0.14).** I had both proteins in my *novelty* list and never
+  turned them into a function. They are a known obligate heterotetramer, which is harder to dismiss
+  than either hit alone.
+- **Innate-immune (0.05) and NBR1 autophagy (0.04).** I had written both off; Grok ranks them low but
+  gives each a real kill experiment, which is more useful than omission.
+
+**And one thing Grok missed.** Its ten are all functional. **Neither near-neutrality nor furniture
+appears anywhere on its list** — the Vonnegut hypothesis is absent. Given repeated phylum-level loss,
+I think that is a gap in its list rather than mine, and I am keeping A11 at 0.14.
+
+Where we agree, Grok is consistently harsher and usually right: on translation it notes **1.4 MDa
+dynein sits at the 96th percentile, two points below MVP**, so a large cytoplasmic particle reproduces
+the enrichment — a sharper kill than anything I had.
+
+### 66b. My top novelty claim is not novel, and the literature says so
+
+Grok declined to rank one item and explained why: *"An MVP shell can exist without TEP1 or PARP4...
+The independence claim survives. Its novelty does not."* I checked rather than take it on faith, and
+**it is right**:
+
+- **MVP-only recombinant vaults assemble in Sf9 insect cells** — ~96 copies of a single protein are
+  *"sufficient to form the minimal structure and entire exterior shell."*
+- **TEP1-knockout mice contain structurally intact vault-like particles** with reduced cap density.
+- **VPARP (= PARP4) knockout mice are viable with no major phenotypic alterations.**
+- Decisively: **"VPARP and TEP1 are able to incorporate into vaults even after the formation of the MVP
+  vault particle shell is complete."** Independent incorporation is *explicitly published*.
+
+**So B1 drops from P = 0.75 to about 0.20.** What survives is narrow: the quantitative demonstration in
+a human-cell pulldown (TEP1 at WTKD_P **0.020** while PARP4 is at **2.85**, with the particle intact)
+may be unreported, but **the conclusion it supports has been in print for roughly twenty-five years.**
+I ranked it first of ten.
+
+**And it corrects my labels.** I marked B2, B3 and B9 **[new observation]**. They rest on the published
+Lodwick IP-MS and Zheng TurboID tables. **They are new readings, not new measurements** — Grok flagged
+the same risk about its own #4 (*"assuming this IP-MS is unpublished... if this pulldown is already in
+a preprint, the novelty call is wrong"*). It is published. Every claim of mine that rests on it is a
+reading.
+
+### 66c. Where Grok's novelty list beats mine
+
+| Grok | P | my treatment |
+|---|---|---|
+| turnover triplet test never run | **0.76** | I had it **last at 0.35** |
+| CFdb MVP-TEP1 is noise | 0.74 | mine at 0.60 |
+| **the immune block is a STAT1/IRF9 regulon** | **0.72** | **absent from my list** |
+| no enriched function + degradation most depleted | 0.70 | mine at 0.65 |
+| MYOF excluded by two physical methods | 0.68 | mine at 0.70 — agreement |
+| COP1 is free, not CRL4 | 0.64 | folded into my #5, under-weighted |
+| three subunits do not co-rank across tissues | 0.60 | mine at 0.45 |
+| **ruffle signal dies at contact** | **0.58** | **absent from my list** |
+| mucus cannot be read as secretion | 0.55 | mine at 0.55 — exact agreement |
+| TEP1 TIR/E1008 + sealed pocket | 0.42 | **I built hypothesis A1 on it without questioning novelty** |
+
+Two misses of mine worth naming: **the interferon regulon** — the single cleanest piece of negative
+work in this project, and I left it off a list of unremarked findings — and **the ruffle collapse**,
+which I treated as a defeat rather than a result.
+
+And Grok's #10 is the warning I needed: it suspects **the SPFH shoulder assignment is already in the
+structural literature** and could name no paper for the TEP1 TIR glutamate either way. **My top-ranked
+hypothesis A1 rests on that pocket**, so its novelty, and part of its force, is less secure than I
+presented.
+
+### 66d. What this exchange cost and bought
+
+**Cost:** my first-ranked novelty claim, demoted from 0.75 to 0.20 by twenty-five-year-old literature;
+three mislabelled claim types; and the admission that the hypothesis I ranked first rests on a
+structural call Grok thinks is probably published.
+
+**Bought:** a hypothesis at P = 0.40 that is better supported than anything on my list and which my own
+A11 test supplied the evidence for; two novelty items I had omitted; and confirmation on the one place
+we agreed exactly — the mucus reading, independently at 0.55 both times.
+
+**The pattern across five audits is stable and worth stating plainly: Grok is better than me at
+noticing when a result is already known, and better at refusing to let a negative become a story. I am
+better at finding the negatives in the first place.** Four of today's twelve house rules came from it.
