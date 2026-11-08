@@ -4812,3 +4812,75 @@ partner complex beyond PARP4 and TEP1, across every instrument available, with c
 passing. §70 relocated what that means — it is consistent with the published transient-signalling
 function rather than evidence against function — but the result itself still stands, and it is the one
 piece of biology here that was produced rather than rediscovered.
+
+## 76. The "signalling modulator" evidence is one group's programme, not convergent independent work
+
+Verified citations were fetched for the six papers behind E1. **Both of our framings of that evidence
+were wrong, and the authorship count is the reason.**
+
+### 76a. Verified citations
+
+| mechanism | citation |
+|---|---|
+| IKK-NF-kB, obesity & atherosclerosis | **Ben J, Jiang B, Wang D, … Wiemer EAC, Xu Y, Chen Q.** *Nat Commun* 2019;**10**(1):1801. PMID 30996248 · PMC6470148 · 10.1038/s41467-019-09588-x |
+| calcineurin-NFATc1, osteoclastogenesis | **Yuan L, Zhao N, Wang J, … Wiemer EAC, Chen Q, Mao Y, Ben J, Ma J.** *Theranostics* 2021;**11**(15):7247-7261. PMID 34158848 · PMC8210610 · 10.7150/thno.58468 |
+| Fas-mediated apoptosis, bone loss | **Wang R, Yang Y, Zhang Z, Zhao N, Wiemer EAC, Ben J, Ma J, Yuan L.** *Cell Death Dis* 2023;**14**(9):604. PMID 37704623 · PMC10500014 · 10.1038/s41419-023-05928-4 |
+| **adaptive immunity, influenza A** | **Ma C, Luo C, Deng F, … Zeng X, Zhu Y, Liu S.** *Biochim Biophys Acta Mol Basis Dis* 2024;**1870**(7):167441. PMID 39069011 · **no PMCID** · 10.1016/j.bbadis.2024.167441 |
+| Parkin-mediated mitophagy, vascular | **Jiang B, Bai F, Hu Y, … Yang Q, Ben J, Chen Q.** *Nat Commun* 2025;**16**(1):4365. PMID 40348769 · PMC12065841 · 10.1038/s41467-025-59644-y |
+| STAT3, lung cancer | **Bai H, Wang C, Qi Y, … Xu Y, Ben J, Chen Q.** *BMC Cancer* 2019;**19**(1):454. PMID 31092229 · PMC6521381 · 10.1186/s12885-019-5665-6 |
+
+### 76b. It is one group, not six
+
+Counting shared authorship across the six:
+
+| author | papers |
+|---|---|
+| **Jingjing Ben** | **5 of 6** |
+| Junqing Ma | 4 of 6 |
+| Qi Chen | 4 of 6 |
+| Qing Yang, **Erik A C Wiemer**, Hanwen Zhang, Xiaoyu Li, Bin Jiang, Xudong Zhu, Hui Bai | 3 of 6 each |
+
+Pairwise overlap is extreme: *Nat Commun* 2019 and *BMC Cancer* 2019 share **twelve** authors;
+*Nat Commun* 2019 and *Nat Commun* 2025 share **nine**; *Nat Commun* 2025 and *BMC Cancer* 2019 share
+**eight**; *Theranostics* 2021 and *Cell Death Dis* 2023 share **five**.
+
+**Exactly one paper shares no author with any other: the influenza study** (Ma, …, Liu — a different
+institution entirely).
+
+**So E1 rests on one research programme spanning five papers — metabolism, bone twice, vascular, lung
+cancer — plus one genuinely independent replication in a sixth tissue.** Erik Wiemer, a long-standing
+vault researcher, appears on three as a collaborator.
+
+**This retracts a claim we made explicitly**: that the evidence was *"six-plus independent groups…
+harder to dismiss than one result."* It is not. **One group's multi-tissue programme can share a mouse
+line** — `Mvp-/-` and `Mvp f/f Lyz2-Cre` recur across the papers — **reagents, antibodies, analytical
+habits, and a systematic error.** The convergence we were impressed by is largely internal.
+
+**What survives:** the influenza paper is an independent group reaching a compatible conclusion in an
+unrelated tissue, which is real but is **one replication, not five.**
+
+### 76c. And "every phenotype is conditional" has a counterexample
+
+The agent flagged it rather than letting it pass. ***Theranostics* 2021 reports an osteoporosis-like
+phenotype in unchallenged knockouts**: *"Mvp-/- and Mvp f/f Lyz2-Cre mice both exhibited
+osteoporosis-like phenotypes."* The challenge models in that paper — ovariectomy and calvaria-adjacent
+LPS — are used for the **overexpression** arm, not the knockout.
+
+So the correct statement is **five of six, not all six.** And whether the bone phenotype is genuinely
+unconditional turns on the age at which the baseline micro-CT was done, which needs the figures rather
+than the abstract.
+
+**One further distinction:** the lung-cancer paper is **shRNA knockdown plus xenograft**, not a knockout
+mouse — *"knockdown of MVP in LLC cells promoted xenografted lung cancer formation"* — so it is a
+different class of evidence from papers 1-5 and should not be counted alongside them.
+
+### 76d. What this does to E1
+
+**Downgraded from "established by convergent independent evidence" to "one group's programme with one
+independent replication."** That is still real evidence — five papers in *Nat Commun*, *Theranostics*,
+*Cell Death Dis* and *BMC Cancer* are not nothing — but it is a different epistemic object, and anyone
+citing "MVP is established as a signalling modulator" should know the convergence is mostly one lab's.
+
+**And the error is ours in a familiar shape.** We asserted independence without checking authorship —
+the same move as asserting novelty without checking the literature, five times. **The check costs one
+author-list fetch.**
