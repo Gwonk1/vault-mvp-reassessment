@@ -86,3 +86,20 @@ NG86 assumes equal codon usage and no transition/transversion bias; it is conser
 divergence and biased at high. One estimator, no bootstrap over sites, pairwise rather than a codon
 model on a tree. **This can distinguish "like an essential gene" from "like a drifting gene." It
 cannot locate selection on particular sites or branches, and nothing below will claim it does.**
+
+---
+
+## Amendment, committed before the run
+
+Two things the registration above did not specify, fixed here rather than decided after seeing numbers:
+
+1. **Alignment source.** Ensembl Compara's homology endpoint with `sequence=cds` returns a
+   **codon-aligned CDS** for both members (verified: 2,679 columns for human-mouse MVP = 893 codons,
+   MVP's exact length). Compara aligns proteins and threads the CDS through, which **is** the
+   protein-guided codon alignment registered above, produced by the resource rather than by us. We use
+   it. `dn_ds` comes back `null`, so the estimate is ours.
+2. **Orthologue tie-break.** Where a species returns more than one homology, take the
+   **`ortholog_one2one`** if present; otherwise the one with the **highest `perc_id`**. Ties broken by
+   the lexicographically first stable id, so the choice is deterministic and not ours to make later.
+3. **Codon filtering.** Drop any codon column where either sequence has a gap, an ambiguity, or a stop.
+   Report how many codons survive per pair, because a pair that keeps very few is not evidence.
