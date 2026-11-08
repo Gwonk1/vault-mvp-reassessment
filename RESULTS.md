@@ -5043,3 +5043,66 @@ adjacent cell reads *"the SPFH assignment is Tanaka et al., Science 2009."* None
 **Broadening the marker list makes every future bare claim easier to excuse**, which is the
 vacuous-pass direction (#325, #327). **A narrow marker list produces false alarms you fix by
 annotating, which is safe.** Prefer the gate that cries wolf.
+
+## 79. The last test produced exactly the number predicted, and the gate forbids using it
+
+The dN/dS test registered at commit `e8997c8` (22:32:04, before any value existed) **failed its own
+positive-control gate.** Per the registration, *"if any of the three fails, the result is UNINFORMATIVE
+and MVP's value is not interpreted."*
+
+### 79a. The gate, evaluated mechanically
+
+| clause | result | detail |
+|---|---|---|
+| 1. all four essential controls median dN/dS < 0.20 | **FAIL** | **RPL7 returned no unsaturated pair at all**, so it has no median to test |
+| 2. lowest relaxed control > highest essential control | PASS | relaxed min **0.2398** (MX1) vs essential max **0.0740** (GAPDH) |
+| 3. >= 3 unsaturated pairs for every gene reported | **FAIL** | **eight of ten genes fell short**; TEP1 and APOBEC3G returned nothing |
+
+### 79b. And this is the part that matters
+
+**MVP was the only gene in the panel that satisfied clause 3.** Three of three pairs unsaturated -
+mouse (dS 0.586), chicken (dS 1.141), *Xenopus* (dS 1.457) - with a median
+
+**dN/dS = 0.1431**
+
+The registered primary prediction was *"below 0.15 and inside the range of the essential-gene
+controls."* **0.1431 is below 0.15.** It is the cleanest-looking number the project has produced, it
+lands inside the prediction written before the data existed, and it is the one result we were most
+hoping for.
+
+**It is uninformative and we are not interpreting it.** The controls that would tell us whether the
+pipeline can distinguish an essential gene from a drifting one **did not return enough data to say**,
+and a subject value is worth nothing without them. A number that agrees with your prediction while its
+controls are missing is **exactly** the situation every rule in `CONTRIBUTING.md` exists to govern.
+
+### 79c. Why it failed - diagnosis, not interpretation
+
+Three distinct causes, none of them about MVP:
+
+- **16 "no orthologue".** *Ciona* accounts for 10 - **it is served by Ensembl Metazoa, not the main
+  REST endpoint we queried**, so the one non-vertebrate retainer in the design returned nothing for any
+  gene. A registry error, ours. **APOBEC3G accounts for 5, and that one is real biology**: APOBEC3G is
+  primate-restricted, so there is no mouse, chicken or fish orthologue to find. **We registered a
+  control that cannot exist in the species set** - which is house rule 7, the vacuous control, committed
+  again in the very registration that cites the rule.
+- **9 "dS unusable"** - NG86 returns -1 where it cannot solve, at the deep pairs.
+- **5 timeouts** - transient, recoverable.
+
+### 79d. The design fault underneath
+
+**The species set was too deep for the control genes.** At mouse distance every gene computed cleanly
+(dS 0.45-0.92, all unsaturated). The controls are short - RPL7 246 codons, GAPDH 333, TUBB 445 - and
+short genes saturate at synonymous sites by chicken and *Xenopus*, while **MVP at 861 codons did not**.
+
+So the registration chose a depth that answers the question we care about ("the lineages that kept it",
+~600 My) and a saturation rule honest enough to refuse saturated pairs, **and those two choices are
+incompatible for short genes.** Nothing noticed until the gate was evaluated. The question survives;
+this instrument, as specified, cannot reach it.
+
+### 79e. What this costs, stated now
+
+**MVP's value has been seen.** Any repair run is therefore **not blind**, and must be labelled that way
+permanently, however the numbers land. House rule 5 forbids iterating a method until it passes; fixing
+orthologue coverage is not the same as tuning a result, but **the distinction does not restore
+blindness**, and no later run gets to be described as a registered test of a prediction whose answer
+was already on the screen.

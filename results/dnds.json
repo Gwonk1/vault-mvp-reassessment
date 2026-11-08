@@ -1,0 +1,451 @@
+[
+ {
+  "gene": "MVP",
+  "cls": "subject",
+  "sp": "mus_musculus",
+  "status": "ok",
+  "n_codons": 861,
+  "dn": 0.0484,
+  "ds": 0.5864,
+  "w": 0.0826,
+  "sat": false,
+  "htype": "ortholog_one2one",
+  "perc_id": 91.4053
+ },
+ {
+  "gene": "MVP",
+  "cls": "subject",
+  "sp": "gallus_gallus",
+  "status": "ok",
+  "n_codons": 841,
+  "dn": 0.2237,
+  "ds": 1.1412,
+  "w": 0.196,
+  "sat": false,
+  "htype": "ortholog_one2many",
+  "perc_id": 69.4935
+ },
+ {
+  "gene": "MVP",
+  "cls": "subject",
+  "sp": "xenopus_tropicalis",
+  "status": "ok",
+  "n_codons": 845,
+  "dn": 0.2086,
+  "ds": 1.4574,
+  "w": 0.1431,
+  "sat": false,
+  "htype": "ortholog_one2one",
+  "perc_id": 71.1316
+ },
+ {
+  "gene": "MVP",
+  "cls": "subject",
+  "sp": "danio_rerio",
+  "status": "TimeoutError: The read operation timed out"
+ },
+ {
+  "gene": "MVP",
+  "cls": "subject",
+  "sp": "ciona_intestinalis",
+  "status": "dS=-1 unusable",
+  "dn": 0.2843381279639402
+ },
+ {
+  "gene": "TEP1",
+  "cls": "comparator",
+  "sp": "mus_musculus",
+  "status": "TimeoutError: The read operation timed out"
+ },
+ {
+  "gene": "TEP1",
+  "cls": "comparator",
+  "sp": "gallus_gallus",
+  "status": "TimeoutError: The read operation timed out"
+ },
+ {
+  "gene": "TEP1",
+  "cls": "comparator",
+  "sp": "xenopus_tropicalis",
+  "status": "TimeoutError: The read operation timed out"
+ },
+ {
+  "gene": "TEP1",
+  "cls": "comparator",
+  "sp": "danio_rerio",
+  "status": "dS=-1 unusable",
+  "dn": 0.07283297345386558
+ },
+ {
+  "gene": "TEP1",
+  "cls": "comparator",
+  "sp": "ciona_intestinalis",
+  "status": "TimeoutError: The read operation timed out"
+ },
+ {
+  "gene": "PARP4",
+  "cls": "comparator",
+  "sp": "mus_musculus",
+  "status": "ok",
+  "n_codons": 1705,
+  "dn": 0.2546,
+  "ds": 0.9181,
+  "w": 0.2773,
+  "sat": false,
+  "htype": "ortholog_one2one",
+  "perc_id": 56.323
+ },
+ {
+  "gene": "PARP4",
+  "cls": "comparator",
+  "sp": "gallus_gallus",
+  "status": "ok",
+  "n_codons": 1578,
+  "dn": 0.4183,
+  "ds": 1.8661,
+  "w": 0.2242,
+  "sat": true,
+  "htype": "ortholog_one2one",
+  "perc_id": 50
+ },
+ {
+  "gene": "PARP4",
+  "cls": "comparator",
+  "sp": "xenopus_tropicalis",
+  "status": "dS=-1 unusable",
+  "dn": 0.5514316872952545
+ },
+ {
+  "gene": "PARP4",
+  "cls": "comparator",
+  "sp": "danio_rerio",
+  "status": "dS=-1 unusable",
+  "dn": 0.6125402313535055
+ },
+ {
+  "gene": "PARP4",
+  "cls": "comparator",
+  "sp": "ciona_intestinalis",
+  "status": "dS=-1 unusable",
+  "dn": 0.5757536447479498
+ },
+ {
+  "gene": "RPL7",
+  "cls": "essential",
+  "sp": "mus_musculus",
+  "status": "no orthologue"
+ },
+ {
+  "gene": "RPL7",
+  "cls": "essential",
+  "sp": "gallus_gallus",
+  "status": "ok",
+  "n_codons": 246,
+  "dn": 0.1101,
+  "ds": 3.0107,
+  "w": 0.0366,
+  "sat": true,
+  "htype": "ortholog_one2one",
+  "perc_id": 83.7398
+ },
+ {
+  "gene": "RPL7",
+  "cls": "essential",
+  "sp": "xenopus_tropicalis",
+  "status": "ok",
+  "n_codons": 246,
+  "dn": 0.1451,
+  "ds": 1.8104,
+  "w": 0.0802,
+  "sat": true,
+  "htype": "ortholog_one2one",
+  "perc_id": 72.6592
+ },
+ {
+  "gene": "RPL7",
+  "cls": "essential",
+  "sp": "danio_rerio",
+  "status": "ok",
+  "n_codons": 244,
+  "dn": 0.1414,
+  "ds": 2.7893,
+  "w": 0.0507,
+  "sat": true,
+  "htype": "ortholog_one2one",
+  "perc_id": 78.8618
+ },
+ {
+  "gene": "RPL7",
+  "cls": "essential",
+  "sp": "ciona_intestinalis",
+  "status": "dS=-1 unusable",
+  "dn": 0.287519267133912
+ },
+ {
+  "gene": "ACTB",
+  "cls": "essential",
+  "sp": "mus_musculus",
+  "status": "ok",
+  "n_codons": 375,
+  "dn": 0.0023,
+  "ds": 0.4572,
+  "w": 0.0051,
+  "sat": false,
+  "htype": "ortholog_one2one",
+  "perc_id": 100
+ },
+ {
+  "gene": "ACTB",
+  "cls": "essential",
+  "sp": "gallus_gallus",
+  "status": "no orthologue"
+ },
+ {
+  "gene": "ACTB",
+  "cls": "essential",
+  "sp": "xenopus_tropicalis",
+  "status": "ok",
+  "n_codons": 375,
+  "dn": 0.0128,
+  "ds": 1.7567,
+  "w": 0.0073,
+  "sat": true,
+  "htype": "ortholog_one2one",
+  "perc_id": 88.1517
+ },
+ {
+  "gene": "ACTB",
+  "cls": "essential",
+  "sp": "danio_rerio",
+  "status": "ok",
+  "n_codons": 375,
+  "dn": 0.0116,
+  "ds": 0.7589,
+  "w": 0.0153,
+  "sat": false,
+  "htype": "ortholog_one2many",
+  "perc_id": 99.2
+ },
+ {
+  "gene": "ACTB",
+  "cls": "essential",
+  "sp": "ciona_intestinalis",
+  "status": "no orthologue"
+ },
+ {
+  "gene": "GAPDH",
+  "cls": "essential",
+  "sp": "mus_musculus",
+  "status": "ok",
+  "n_codons": 333,
+  "dn": 0.0353,
+  "ds": 0.4526,
+  "w": 0.078,
+  "sat": false,
+  "htype": "ortholog_one2many",
+  "perc_id": 93.994
+ },
+ {
+  "gene": "GAPDH",
+  "cls": "essential",
+  "sp": "gallus_gallus",
+  "status": "ok",
+  "n_codons": 333,
+  "dn": 0.0584,
+  "ds": 0.8693,
+  "w": 0.0671,
+  "sat": false,
+  "htype": "ortholog_one2one",
+  "perc_id": 91.8919
+ },
+ {
+  "gene": "GAPDH",
+  "cls": "essential",
+  "sp": "xenopus_tropicalis",
+  "status": "ok",
+  "n_codons": 334,
+  "dn": 0.1179,
+  "ds": 1.0772,
+  "w": 0.1094,
+  "sat": false,
+  "htype": "ortholog_one2one",
+  "perc_id": 84.1317
+ },
+ {
+  "gene": "GAPDH",
+  "cls": "essential",
+  "sp": "danio_rerio",
+  "status": "ok",
+  "n_codons": 333,
+  "dn": 0.101,
+  "ds": 1.4434,
+  "w": 0.07,
+  "sat": false,
+  "htype": "ortholog_one2one",
+  "perc_id": 86.1862
+ },
+ {
+  "gene": "GAPDH",
+  "cls": "essential",
+  "sp": "ciona_intestinalis",
+  "status": "dS=-1 unusable",
+  "dn": 0.1791420781947794
+ },
+ {
+  "gene": "TUBB",
+  "cls": "essential",
+  "sp": "mus_musculus",
+  "status": "ok",
+  "n_codons": 445,
+  "dn": 0.0,
+  "ds": 0.514,
+  "w": 0.0,
+  "sat": false,
+  "htype": "ortholog_one2one",
+  "perc_id": 100
+ },
+ {
+  "gene": "TUBB",
+  "cls": "essential",
+  "sp": "gallus_gallus",
+  "status": "no orthologue"
+ },
+ {
+  "gene": "TUBB",
+  "cls": "essential",
+  "sp": "xenopus_tropicalis",
+  "status": "ok",
+  "n_codons": 440,
+  "dn": 0.0336,
+  "ds": 2.4719,
+  "w": 0.0136,
+  "sat": true,
+  "htype": "ortholog_one2one",
+  "perc_id": 95.3333
+ },
+ {
+  "gene": "TUBB",
+  "cls": "essential",
+  "sp": "danio_rerio",
+  "status": "ok",
+  "n_codons": 444,
+  "dn": 0.0166,
+  "ds": 2.006,
+  "w": 0.0083,
+  "sat": true,
+  "htype": "ortholog_one2one",
+  "perc_id": 98.6487
+ },
+ {
+  "gene": "TUBB",
+  "cls": "essential",
+  "sp": "ciona_intestinalis",
+  "status": "no orthologue"
+ },
+ {
+  "gene": "TRIM5",
+  "cls": "relaxed",
+  "sp": "mus_musculus",
+  "status": "ok",
+  "n_codons": 295,
+  "dn": 0.3219,
+  "ds": 0.8963,
+  "w": 0.3591,
+  "sat": false,
+  "htype": "ortholog_one2many",
+  "perc_id": 52.862
+ },
+ {
+  "gene": "TRIM5",
+  "cls": "relaxed",
+  "sp": "gallus_gallus",
+  "status": "no orthologue"
+ },
+ {
+  "gene": "TRIM5",
+  "cls": "relaxed",
+  "sp": "xenopus_tropicalis",
+  "status": "no orthologue"
+ },
+ {
+  "gene": "TRIM5",
+  "cls": "relaxed",
+  "sp": "danio_rerio",
+  "status": "no orthologue"
+ },
+ {
+  "gene": "TRIM5",
+  "cls": "relaxed",
+  "sp": "ciona_intestinalis",
+  "status": "no orthologue"
+ },
+ {
+  "gene": "MX1",
+  "cls": "relaxed",
+  "sp": "mus_musculus",
+  "status": "ok",
+  "n_codons": 390,
+  "dn": 0.2123,
+  "ds": 0.8853,
+  "w": 0.2398,
+  "sat": false,
+  "htype": "ortholog_one2many",
+  "perc_id": 67.5063
+ },
+ {
+  "gene": "MX1",
+  "cls": "relaxed",
+  "sp": "gallus_gallus",
+  "status": "no orthologue"
+ },
+ {
+  "gene": "MX1",
+  "cls": "relaxed",
+  "sp": "xenopus_tropicalis",
+  "status": "dS=-1 unusable",
+  "dn": 0.36459191797669327
+ },
+ {
+  "gene": "MX1",
+  "cls": "relaxed",
+  "sp": "danio_rerio",
+  "status": "no orthologue"
+ },
+ {
+  "gene": "MX1",
+  "cls": "relaxed",
+  "sp": "ciona_intestinalis",
+  "status": "no orthologue"
+ },
+ {
+  "gene": "APOBEC3G",
+  "cls": "relaxed",
+  "sp": "mus_musculus",
+  "status": "no orthologue"
+ },
+ {
+  "gene": "APOBEC3G",
+  "cls": "relaxed",
+  "sp": "gallus_gallus",
+  "status": "no orthologue"
+ },
+ {
+  "gene": "APOBEC3G",
+  "cls": "relaxed",
+  "sp": "xenopus_tropicalis",
+  "status": "dS=-1 unusable",
+  "dn": 0.7543279627968019
+ },
+ {
+  "gene": "APOBEC3G",
+  "cls": "relaxed",
+  "sp": "danio_rerio",
+  "status": "no orthologue"
+ },
+ {
+  "gene": "APOBEC3G",
+  "cls": "relaxed",
+  "sp": "ciona_intestinalis",
+  "status": "no orthologue"
+ }
+]
