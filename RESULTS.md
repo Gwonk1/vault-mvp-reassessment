@@ -4307,3 +4307,87 @@ tell.**
 MVP-specific shoulder and cap domains, not the shared VIT domain — across the sequenced Pancrustacea,
 then ask whether loss coincides with any ecological variable. Hexapoda against Crustacea is the natural
 contrast and both are densely sequenced.
+
+## 68. The real MVP orthogroup: the loss is Ecdysozoa, and tunicates never lost it
+
+§67 flagged that the five "vault protein inter-alpha-trypsin domain" orthogroups censused the **VIT
+domain**, shared between MVP and the inter-alpha-trypsin inhibitor family, and that the analysis was
+correspondingly weak. **It was worse than weak: those were the wrong orthogroups entirely.**
+
+Locating human MVP's own protein IDs in GENCODE and finding which eggNOG group contains them returns
+**exactly one: OG 2QPP0 — and it is none of the five.** The five were ITIH-family groups. MVP's
+orthogroup was never examined.
+
+### 68a. Within animals, the loss is a single clade
+
+| clade | carry | total | |
+|---|---|---|---|
+| Vertebrata | 94 | 104 | 90% |
+| **Tunicata** | **2** | **2** | **100%** |
+| Cephalochordata | 1 | 1 | 100% |
+| Platyhelminthes | 2 | 2 | 100% |
+| Mollusca, Annelida, Porifera, Echinodermata, Placozoa | 1 each | 1 each | 100% |
+| Cnidaria | 2 | 2 | 100% |
+| **Insecta** | **0** | **30** | **0%** |
+| **Nematoda** | **0** | **10** | **0%** |
+| **Crustacea** | **0** | **1** | **0%** |
+| **Arachnida** | **0** | **1** | **0%** |
+
+**The losers are Ecdysozoa — 0 of 42 sampled genomes — and nothing else.** Every other animal phylum
+sampled retains it, including sponges and placozoans at the base of the tree.
+
+**Both of my previous claims were wrong.** *Ciona* does have MVP: **Tunicata is 2/2, not 0/2**, so
+tunicates are not losers at all. And **crustaceans are 0/1, not 1/1** — so §67d's "the loss is in
+Hexapoda specifically, after the split from crustaceans" is wrong. There is no split to explain. The
+loss is **one event at the base of Ecdysozoa**, covering insects, crustaceans, arachnids and nematodes
+together.
+
+**So the answer to "what do insects, nematodes and tunicates have in common" is that the premise was
+mine and it was false.** Insects and nematodes share Ecdysozoa. Tunicates were never in the set.
+
+### 68b. And it is unambiguously loss, not failure to acquire
+
+The 25 non-metazoan carriers span nearly every eukaryotic supergroup:
+
+- **Amoebozoa** — *Dictyostelium discoideum*, *D. purpureum*
+- **Stramenopiles** — eleven oomycetes: *Phytophthora* ×5, *Pythium* ×4, *Saprolegnia diclina*,
+  *Aphanomyces invadans*
+- **Euglenozoa** — *Trypanosoma brucei*, *T. cruzi*, *Leishmania* ×3
+- **Opisthokonta outside animals** — *Monosiga brevicollis*, *Salpingoeca rosetta* (choanoflagellates),
+  *Capsaspora owczarzaki*, *Fonticula alba*
+- **Heterolobosea** — *Naegleria gruberi*
+- **Alveolata** — *Paramecium tetraurelia*
+- **Apusozoa** — *Thecamonas trahens*
+
+**That distribution puts MVP in the last eukaryotic common ancestor**, and makes every absence a loss:
+Ecdysozoa, land plants, apicomplexans — and **fungi, which carry zero**. My "46% of fungi" in §67b was
+the ITIH confound precisely as suspected, and it is now withdrawn: **no fungus in this release carries
+MVP.** *Capsaspora*, *Fonticula* and the choanoflagellates are Opisthokonta but not fungi, so the
+fungal loss happened after their divergence.
+
+### 68c. What this does to A11
+
+**It strengthens the dispensability half and sharpens it.** A single basal loss across Ecdysozoa — the
+most speciose animal clade on Earth, including every insect — plus independent losses in fungi, plants
+and apicomplexans, is a gene that whole kingdoms discard. **And the loss is clean:** 0 of 42
+ecdysozoans, not a patchy scatter that might be annotation failure.
+
+**But it also undercuts the Vonnegut reading.** A protein retained from LECA through *Dictyostelium*,
+oomycetes, trypanosomes, choanoflagellates, sponges, cnidarians, flatworms, molluscs, echinoderms,
+amphioxus, tunicates and vertebrates — and sitting at the 96th-97th percentile of transcripts where
+retained — is not drifting. **Near-neutral genes do not survive a billion years of purifying selection
+in a dozen lineages and then sit in the top 3% of expression.** A11 stays on the list, but the
+distribution reads much more like **a real function that Ecdysozoa, fungi and plants each found a way
+to do without** than like a tolerated extravagance.
+
+**The Vertebrata figure of 90% rather than 100% is most likely annotation gaps** in ten draft genomes
+rather than ten real losses, and we are not reading anything into it.
+
+### 68d. One observation we are deliberately not building on
+
+The non-animal retainers are heavily weighted toward **pathogens and parasites**: eleven oomycetes
+(*Phytophthora*, the potato-blight genus), five kinetoplastids (*Trypanosoma*, *Leishmania*),
+*Naegleria*, *Aphanomyces*. That is a striking list and it is exactly the kind of pattern this project
+has been wrong about repeatedly. **Oomycetes and kinetoplastids are also simply well-sequenced because
+they are pathogens**, which is sufficient to produce the appearance without any biology. Recorded as an
+observation with an obvious confound, not a lead.

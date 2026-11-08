@@ -193,6 +193,12 @@ MVP transcript abundance, HPA consensus, 20,162 genes across 51 tissues:
 sustain that. Note also that **the shell is the expensive part and the catalytic subunits are not** —
 PARP4 and TEP1 sit 10-40 percentile points lower throughout.
 
+> **[SUPERSEDED BY §68 — we censused the wrong orthogroups.** The five groups used below carry the
+> **VIT domain**, shared between MVP and the inter-alpha-trypsin inhibitor family. **MVP's own
+> orthogroup is OG 2QPP0**, which is none of them. On the correct group: **Tunicata is 2/2 (Ciona has
+> MVP), Crustacea is 0/1, and fungi carry zero.** The animal loss is **one basal event in Ecdysozoa,
+> 0 of 42**, not a scatter across insects, nematodes and tunicates. See §68.]**
+
 ### Test 2 — the dispensability, which argues strongly for it
 
 eggNOG v5 eukaryotes, the five orthogroups carrying a vault inter-alpha-trypsin domain:
