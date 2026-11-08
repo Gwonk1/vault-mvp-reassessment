@@ -4457,3 +4457,80 @@ easy to rediscover. For a project whose whole method is registered tests against
 missing gate is obvious in hindsight and is now stated: **a novelty claim needs a literature check
 registered as its own gate, with the same standing as a positive control.** We ran forty tests against
 data and none against the literature until an external reviewer made us.
+
+## 70. The published functional literature, which this project never engaged — and which reframes its central negative
+
+Applying §69d's gate properly meant asking what the field actually claims about vault function before
+ranking hypotheses against it. **The answer invalidates the framing of §66's hypothesis list.**
+
+### 70a. What is established, from knockouts, in good journals
+
+| finding | model |
+|---|---|
+| **MVP knockout mice are healthy; mice lacking all three vault proteins are phenotypically normal** with subtle immune issues | mouse, triple KO |
+| **MVP KO mice: attenuated antibody responses and reduced survival after influenza A rechallenge** | mouse, 2024 |
+| **Global and myeloid MVP KO aggravates high-fat-diet obesity, insulin resistance, hepatic steatosis and atherosclerosis** — via IKK-NF-κB | mouse, *Nat Commun* 2019 |
+| **MVP negatively regulates osteoclastogenesis via calcineurin-NFATc1**; KO inhibits osteoclast apoptosis, contributing to age- and OVX-related bone loss | mouse, 2021/2023 |
+| **Endothelial MVP promotes Parkin-mediated mitophagy**, alleviating vascular remodelling | mouse, *Nat Commun* 2025 |
+| **MVP suppresses lung cancer proliferation by inhibiting STAT3** | cell |
+| **MVP KO zebrafish: organ regeneration preserved, but cell death enhanced after injury** | zebrafish, 22 kb coding deletion |
+
+**There is a substantial published literature treating MVP as a signalling modulator** — NF-κB, STAT3,
+NFATc1, Fas/apoptosis, mitophagy — with knockout support across four independent systems and multiple
+*Nature Communications* papers. **None of it appears anywhere in this project's forty tests, and none of
+my ten hypotheses was "MVP modulates signalling."**
+
+### 70b. The pattern across every knockout is the one §69c found
+
+**Baseline: normal. Under challenge: phenotype.** Healthy mice, normal triple-knockouts, preserved
+zebrafish regeneration — but defects on **influenza rechallenge, high-fat diet, injury, ageing and
+oestrogen withdrawal**, plus the *Dictyostelium* nutrient-stress survival defect from §69c. **Five
+independent systems, same shape.**
+
+That is exactly the error §69c diagnosed, now confirmed at scale: our "no fitness coupling" came from
+**CRISPR screens in rich medium**, which is the one condition in which every published model is also
+normal.
+
+### 70c. It reframes this project's central negative result
+
+Forty registered tests found **no physical interaction neighbourhood around MVP by any instrument**. I
+have been treating that as the project's main finding and as evidence against function.
+
+**The published function is signalling modulation.** NF-κB, STAT3 and NFATc1 interactions are
+**transient, low-stoichiometry and regulatory** — precisely the class that co-abundance, co-elution and
+wash-based immunoprecipitation are worst at recovering. **So the absence of a stable neighbourhood is
+consistent with the published function rather than evidence against it**, and the instruments were
+wrong for the question the field is actually asking.
+
+That does not retract any of the forty tests. **It relocates them**: they are a well-controlled
+demonstration that MVP has no **stoichiometric partner complex** beyond PARP4 and TEP1 — which is a
+real and useful negative — and they say nothing about transient regulatory interaction, which is where
+the published evidence sits.
+
+### 70d. And it corrects my immune dismissal
+
+§36 concluded the immune co-abundance block is a **STAT1/IRF9 regulon, not a physical neighbourhood**,
+and Grok ranked that observation at 0.72 as likely unremarked. **The observation stands. The inference
+I drew from it does not.** I treated "the co-abundance signature is transcriptional" as "there is no
+immune function" — and MVP KO mice have attenuated antibody responses and reduced influenza survival.
+
+**Two different claims, and I collapsed them.** A transcriptionally-driven co-abundance block is not
+evidence against an immune role; it is evidence that co-abundance was the wrong instrument to find one.
+
+### 70e. What this does to the hypothesis list
+
+**The list was built in ignorance of the tested hypotheses, which makes its ratings unreliable.** A
+signalling-modulator hypothesis belongs at the top of any ranking of what vaults are *for* — and it
+does not belong on a list of **untested** hypotheses, because it has knockout support in five systems.
+Graham asked for untested ideas; I supplied ten without establishing what was already tested.
+
+The ratings that move:
+
+- **A5 (furniture) → ~0.04** and **A11 (near-neutral) → ~0.03.** Five systems with conditional
+  phenotypes, and a documented NF-κB mechanism, leave very little room.
+- **A1 (nucleotide buffer, 0.20) and A12 (bare shell, 0.35) survive best**, because both are agnostic
+  about what the shell then does and are compatible with signalling modulation.
+- **A2 (TEP1 NADase) gains**, since NAD(P) consumption is a signalling mechanism and would sit
+  naturally beside the published pathway work.
+- **The innate-immune hypothesis, which I omitted entirely and Grok ranked at 0.05, should have been
+  near the top.** It has direct knockout evidence and I dismissed it on a co-abundance artefact.

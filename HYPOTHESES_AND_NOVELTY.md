@@ -1,5 +1,14 @@
 # Untested functional hypotheses, and what we learned that appears unnoted
 
+> **[READ §70 FIRST. This list was written without first establishing what the field has already
+> tested, and that makes its ratings unreliable.** There is a substantial published functional
+> literature treating MVP as a signalling modulator — NF-kB, STAT3, NFATc1, Fas, mitophagy — with
+> knockout support in five systems, none of which appears in this project's forty tests or in the ten
+> hypotheses below. **A5 falls to ~0.04 and A11 to ~0.03; the innate-immune hypothesis, omitted here
+> entirely, should have been near the top.** §70 also reframes the project's central negative: the
+> absence of a stable neighbourhood is consistent with a transient signalling function rather than
+> evidence against function.]**
+
 **Claude's lists, written 2026-11-07 and committed before Grok was asked the same two questions**, so
 the independence is checkable from `git log` rather than asserted. Grok's answers go in
 `grok/from-grok/005r-*` and the comparison follows in RESULTS §66.
