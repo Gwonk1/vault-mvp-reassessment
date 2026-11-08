@@ -15,15 +15,36 @@ corrections.
 ## Abstract
 
 The vault ribonucleoprotein has resisted functional assignment for forty years. We subjected the
-major vault protein (MVP) and its partners to twenty-eight pre-registered tests across public
+major vault protein (MVP) and its partners to forty-odd pre-registered tests across public
 transcriptomic, proteomic, genomic, structural and comparative datasets, each gated on recovery of a
-known positive control. **Eight of the twenty-eight returned a formally uninformative verdict
-because a control gate failed, and we mark each one rather than promote it.** Most standing
-hypotheses nonetheless failed on tests that did gate: MVP is not a member of the chronic interferon
-resistance program; no gene family is co-lost with it across 472 eukaryotes; NSUN2 does not repress
-CYP3A4 in human liver; and phosphorylation does not gate vault assembly or partner exchange.
-Drug-tolerant persistence and tissue-level autophagy gating both pointed the same way but failed
-their gates, so we report them as uninformative.
+known positive control.
+
+**One framing correction belongs at the front, because it changes what every negative result below
+means.** We set out to find MVP's physical interaction neighbourhood and did not find one, by any
+instrument. We then discovered a substantial published literature — knockout work in five
+independent systems, several papers in *Nature Communications* — establishing MVP as a **modulator
+of signalling**: IKK-NF-kB in diet-induced obesity and atherosclerosis, calcineurin-NFATc1 in
+osteoclastogenesis, STAT3 in lung cancer, Parkin-mediated mitophagy in endothelium, and adaptive
+immunity on influenza rechallenge. **Those interactions are transient, low-stoichiometry and
+regulatory — the class that co-abundance, native co-fractionation and wash-based immunoprecipitation
+recover worst.** So the absence we document is not evidence against function. It is a
+well-controlled demonstration that **MVP has no stoichiometric partner complex beyond PARP4 and
+TEP1**, which is a real and narrower result, obtained with instruments that were wrong for the
+question the field is actually asking.
+
+**A second correction follows from the same literature.** Every published vault phenotype is
+conditional: MVP-knockout mice are healthy, mice lacking all three vault proteins are phenotypically
+normal, and knockout zebrafish regenerate normally — with defects appearing only under influenza
+rechallenge, high-fat diet, injury, ageing, oestrogen withdrawal, or *Dictyostelium* nutrient
+starvation. **Our own "no fitness coupling" came from CRISPR screens in rich medium, which is the
+one condition in which every published model is also normal.** We read *no function in the single
+environment we examined* as *no function*. **Eight of the twenty-eight returned a formally
+uninformative verdict because a control gate failed, and we mark each one rather than promote it.**
+Most standing hypotheses nonetheless failed on tests that did gate: MVP is not a member of the
+chronic interferon resistance program; no gene family is co-lost with it across 472 eukaryotes;
+NSUN2 does not repress CYP3A4 in human liver; and phosphorylation does not gate vault assembly or
+partner exchange. Drug-tolerant persistence and tissue-level autophagy gating both pointed the same
+way but failed their gates, so we report them as uninformative.
 
 What survives is narrow. MVP, PARP4 and TEP1 are mutually closest by protein co-abundance - PARP4
 and TEP1 at ranks 1 and 2 of 10,924 proteins across thirteen tumour cohorts, and PARP4 first with

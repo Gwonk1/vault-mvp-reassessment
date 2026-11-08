@@ -44,6 +44,21 @@ check invalidated the third control as well. The biology never changed. RESULTS 
 | `*_PREREGISTRATION.md` | 44 files: the predictions, gates and kill conditions, as written before the data |
 | `grok/`, `argon/`, `channel/` | Adversarial review correspondence, verbatim |
 
+## The correction that reframes everything below
+
+We set out to find MVP's physical interaction neighbourhood and did not find one, by any instrument,
+across forty-odd gated tests. We then found a substantial published literature — knockout work in five
+systems, several *Nature Communications* papers — establishing MVP as a **signalling modulator**:
+IKK-NF-kB, calcineurin-NFATc1, STAT3, Parkin-mediated mitophagy, and adaptive immunity on influenza
+rechallenge. **Those interactions are transient and low-stoichiometry — exactly what our instruments
+recover worst.** The absence we document is therefore not evidence against function; it shows MVP has
+**no stoichiometric partner complex beyond PARP4 and TEP1**, which is narrower and still useful.
+
+**And every published vault phenotype is conditional** — knockout mice healthy, triple-knockout mice
+normal, knockout zebrafish regenerating — with defects only under challenge. **Our "no fitness
+coupling" came from CRISPR screens in rich medium, the one condition where every published model is
+also normal.** See RESULTS §70.
+
 ## What survives
 
 A short list, deliberately: the **MVP-PARP4-TEP1 trimer**, with TEP1 shown independent of
