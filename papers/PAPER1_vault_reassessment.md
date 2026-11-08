@@ -4,7 +4,7 @@
 reviewed the manuscript adversarially against the committed data, in three rounds; between them they
 struck or qualified more than a dozen claims made here, and those reversals are recorded in place
 rather than quietly removed. All hypotheses were committed to a timestamped git history before the
-relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (332 entries)
+relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (335 entries)
 and `RESULTS.md` (24 sections). **That history is currently local and has not been published**, so
 the ordering it establishes is not yet independently verifiable; we state the fact rather than imply
 otherwise, and the repository is available to anyone who asks. Correspondence welcome, including
@@ -14,10 +14,15 @@ corrections.
 
 ## Abstract
 
-The vault ribonucleoprotein has resisted functional assignment for forty years. We subjected the
-major vault protein (MVP) and its partners to forty-odd pre-registered tests across public
-transcriptomic, proteomic, genomic, structural and comparative datasets, each gated on recovery of a
-known positive control.
+The vault ribonucleoprotein has resisted *consensus* functional assignment for forty years — a
+framing we used, wrongly, as licence to assume a thin literature.
+**It is not thin.** Four structure papers appeared in 2025-2026 alone, alongside a functional
+literature of knockout studies running from 2019 to 2025, and an active structural group is
+publishing on the same questions asked here. **All five literature checks this project eventually
+ran found prior art**, including one whose answer sat unexamined in our own downloaded structure
+files (§73d, §74). We subjected the major vault protein (MVP) and its partners to forty-odd
+pre-registered tests across public transcriptomic, proteomic, genomic, structural and comparative
+datasets, each gated on recovery of a known positive control.
 
 **One framing correction belongs at the front, because it changes what every negative result below
 means.** We set out to find MVP's physical interaction neighbourhood and did not find one, by any

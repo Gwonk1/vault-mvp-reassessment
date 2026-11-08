@@ -4755,3 +4755,60 @@ the one check never run was reading the titles of the files already downloaded.
   proposition with a published NAD+ reservoir than without one. Raised to ~0.25.
 - **Five literature checks, five prior-art hits**, and this one found the prior art **inside our own
   `data/raw/` directory.**
+
+## 74. Five checks, five hits: the project's founding premise was wrong
+
+**Every literature check this project ran found prior art.** Not "most" — all five, and the ones we
+were most confident about failed hardest:
+
+| check | our claim | what was already there |
+|---|---|---|
+| 1 | TEP1 associates independently of PARP4 — **our top novelty item at 0.75** | ~25 years: MVP-only Sf9 vaults, TEP1-KO vaults intact, caps joining preformed shells |
+| 2 | MVP ancestral in eukaryotes, lost in fungi/plants/Ecdysozoa | **Daly et al. 2013**, verbatim |
+| 3 | the interactor readings | the pulldown is a **public deposit with its own analysis** of our comparison |
+| 4 | stool proteomics cannot recover a vault — **our best-standing claim at 0.65** | the methods principle is published; only the vault application is ours |
+| 5 | a sealed SPFH nucleotide pocket — **the foundation of our top-ranked hypothesis** | **Tanaka 2009** for SPFH, **Lodwick 2025** for the pocket, and the premise "sealed" is contradicted |
+
+### 74a. The premise was the error, not the individual claims
+
+Paper 1 opens: *"The vault ribonucleoprotein has resisted functional assignment for forty years."* We
+built forty registered tests on the assumption that we were working a neglected problem with a thin
+literature.
+
+**The literature is not thin.** In the last two years alone the agent surfaced **four 2025-2026
+structure papers** — Lodwick's PARP4/NAD+ cryo-EM series, a membrane-association cryo-ET study, a
+flexibility study with MD, and a *Sci Adv* paper on the cap — plus a vault structure from human brain,
+and a functional literature running from *Nat Commun* 2019 on obesity through 2024 influenza work to
+*Nat Commun* 2025 on mitophagy. **An active structural group is publishing on exactly the questions we
+were asking, in exactly the window we were asking them.**
+
+So the forty-year framing is true about *consensus* and false about *activity*, and we used it as
+licence to stop looking. **Every one of the five hits follows from that single misjudgement**, which is
+a more useful diagnosis than five separate oversights.
+
+### 74b. What the honest contribution looks like
+
+Of the five checked claims, the surviving fragments share a shape: **the general principle was always
+already known, and only the vault-specific application was new.** Stool-prep bias by cellular
+compartment is published; nobody applied it to a megadalton particle. Co-fractionation sensitivity
+limits are known; the MVP-TEP1 noise-floor comparison may not be. That is a real but modest kind of
+contribution, and it is the accurate description of what two days of reanalysis against an active
+forty-year literature can produce.
+
+**The six unchecked candidates should now be read as probably-known rather than provisional.** On a
+five-for-five base rate that is the correct prior, and stating it is more useful than leaving ten
+numbers in a table.
+
+### 74c. What survives all of it
+
+The methodological record. **Thirteen house rules and two enforced mechanisms, every one of them
+written because the project broke the thing it describes** — one-way gates, a control with no power to
+fail, a refusal band wider than its estimator, three criteria that measured the wrong quantity, a
+degenerate matching scheme read for two sections, the same indexing bug three times, one correction
+propagated through four documents one at a time, and two gates that passed vacuously on paraphrase.
+
+**And one well-controlled negative that no literature check has touched:** MVP has no stoichiometric
+partner complex beyond PARP4 and TEP1, across every instrument available, with calibration gates
+passing. §70 relocated what that means — it is consistent with the published transient-signalling
+function rather than evidence against function — but the result itself still stands, and it is the one
+piece of biology here that was produced rather than rediscovered.
