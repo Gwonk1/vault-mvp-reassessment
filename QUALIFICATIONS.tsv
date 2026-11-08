@@ -1,0 +1,9 @@
+# A claim that is NOT retracted but now requires standing context wherever it appears.
+# Unlike RETRACTIONS.tsv, the context may sit anywhere in the file - a banner at the top counts -
+# because these qualify a whole document rather than a single line.
+# pattern	required_context_regex	established_in	note
+WT_LFC	PXD052802|A549	71	pulldown provenance: VM1/H6 co-IP, WT vs PARP4-KO A549, deposit analyses the same contrast
+LWTP	PXD052802|A549	71	same dataset; interactor numbers are readings of public data, possibly line-specific
+not PARP4-dependent	PXD052802|A549	71	means "still present when PARP4 is removed in A549", not independence in general
+no stoichiometric partner	signalling modulat|NF-kB|transient, low-stoichiometry	70	the published function is signalling modulation; transient interactions are what these instruments recover worst
+no fitness coupling	conditional|rich medium|under challenge	70	every published vault phenotype is conditional; our screens were rich-medium only

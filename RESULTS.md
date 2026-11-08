@@ -4621,3 +4621,50 @@ against data and none against the literature, then ranked ten findings for novel
 of them. The gate we built for everything else — *recover a known positive control before believing the
 result* — has an exact analogue we never built: **recover the existing literature before believing the
 finding is yours.**
+
+## 72. A mechanism for the failure that happened four times
+
+#262, #283, #319 and #320 are one error in four documents: **a correction landing in one place while
+every other document asserting what it changed stays unqualified.** Three of the four were found only
+because the previous one had just been found, which is not a learning curve — it is the same error
+propagating one document at a time, because each fix was scoped to the file in front of us rather than
+to the class.
+
+The preventive step is obvious in hindsight: **when a reframe lands, ask which documents assert what it
+changed, and fix all of them in one pass.** We had the grep for that — written for the retraction
+checker — and used it once, on the narrow case, instead of on the reframe.
+
+### 72a. Qualifications, as distinct from retractions
+
+`src/check_retractions.py` now runs a second check against `QUALIFICATIONS.tsv`. The distinction
+matters:
+
+- a **retraction** must be marked **at the line**, because the claim is dead and a reader meeting it
+  needs to know immediately. Window: six lines.
+- a **qualification** qualifies a **whole document**, so a standing banner anywhere in the file
+  satisfies it. The claim is still true; it needs context.
+
+Five qualifications are registered: `WT_LFC`, `LWTP` and `not PARP4-dependent` each require
+**PXD052802 or A549** somewhere in any file that uses them; `no stoichiometric partner` requires the
+**signalling-modulation** context from §70; `no fitness coupling` requires the **conditional
+phenotype** context.
+
+### 72b. Tested both ways
+
+Clean tree: **`OK: 5 qualified claims checked; every document asserting one carries its standing
+context.`**
+
+Planting a stray line — *"ANXA2 at WT_LFC +1.74, not PARP4-dependent"* — into a file with no
+provenance is caught on **three patterns at once**, each naming what the document needs and which
+section established it, and the checker **exits 1**. Restored, it exits 0.
+
+### 72c. What this does and does not fix
+
+It cannot tell that a reframe has happened, or decide what context a claim needs — both are judgement,
+and both stay with the ledger. **It enforces that once a qualification is registered, no document can
+assert the claim without it.** That is precisely the step that failed four times: not the thinking, but
+the propagation.
+
+Two mechanisms now, against twelve rules of judgement: one that a retraction stays visible at the line,
+one that a qualification reaches every document. **Both exist because the same failure recurred after we
+wrote the rule for it.**
