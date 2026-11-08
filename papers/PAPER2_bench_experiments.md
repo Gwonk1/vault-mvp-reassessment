@@ -322,12 +322,19 @@ search turned up **no report of MVP in the human fecal proteome or in gut mucus*
 independently documented in exosome preparations, released from cells by a non-exosomal route, and -
 in the Atlantic salmon louse - present in extracellular cement.
 
-**Design:** immunoblot and targeted MS for MVP, PARP4 and TEP1 in (a) conditioned medium from a
-high-vault epithelial line, cleared of cells and debris, (b) human stool supernatant, and (c) airway
-or intestinal mucus. Compare particle-containing fractions from a sucrose cushion against the
-soluble fraction, so that intact vaults are distinguished from free MVP monomer. Where a vault is
-recovered, sequence its contents - vtRNA by RT-PCR, protein by MS - and ask whether what is inside
-differs from vaults purified from the same cells' cytoplasm.
+**Design, with the one point that decides the whole experiment: interrogate the 35,000 x g PELLET,
+not the supernatant.** Section 58a establishes that the canonical host-centric stool proteomics
+workflow (Lichtman et al., PMID 23982161) spins stool at 2,500 x g and then 35,000 x g, **discards
+the pellet**, and analyses only soluble secreted protein - and a 13 MDa 78-mer sediments in exactly
+that range, since differential centrifugation there is how vaults are purified. **Every published
+stool proteome we could reach throws away the fraction this experiment needs**, which is the
+likeliest reason the literature is silent. So run immunoblot and targeted MS for MVP, PARP4 and TEP1
+on **both fractions separately** in (a) conditioned medium from a high-vault epithelial line,
+cleared of cells and debris, (b) human stool, and (c) airway or intestinal mucus. Compare
+particle-containing fractions from a sucrose cushion against the soluble fraction, so that intact
+vaults are distinguished from free MVP monomer. Where a vault is recovered, sequence its contents -
+vtRNA by RT-PCR, protein by MS - and ask whether what is inside differs from vaults purified from
+the same cells' cytoplasm.
 
 **Positive control:** a known secreted protein in each matrix, and cytoplasmic vaults from the same
 cells as the particle standard. **The three subunits must co-sediment**; MVP alone could be
