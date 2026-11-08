@@ -4,7 +4,7 @@
 reviewed the manuscript adversarially against the committed data, in three rounds; between them they
 struck or qualified more than a dozen claims made here, and those reversals are recorded in place
 rather than quietly removed. All hypotheses were committed to a timestamped git history before the
-relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (272 entries)
+relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (279 entries)
 and `RESULTS.md` (24 sections). **That history is currently local and has not been published**, so
 the ordering it establishes is not yet independently verifiable; we state the fact rather than imply
 otherwise, and the repository is available to anyone who asks. Correspondence welcome, including
@@ -39,32 +39,33 @@ scores at the noise floor in the same data, so sensitivity for known vault subun
 two.
 
 **The most useful result in this work is a negative one about method, and we reached it only after
-publishing two wrong versions of it.** One question - whether cytoplasmic translation machinery is
-physically associated with the vault - returned three different answers from three statistical
-treatments of a single anti-MVP pulldown. Dichotomising at a significance threshold gave a null (9
-of 95 proteins against 6.94 expected, p = 0.195) and we recorded a kill. Taking the continuous mean
-instead, abundance-matched, gave a strong positive (top 1.8% of 1,276 terms) and we withdrew the
-kill. Matching additionally on protein **length and net charge** returned the null again (p =
-0.174), and that one holds: ribosomal proteins are **2.6x shorter and 44x more basic** than the
-median detected protein, their mitochondrial counterparts - behind two membranes, where a
-cytoplasmic particle cannot reach - score **higher** than their cytosolic ones, and a length- and
-charge-matched null reproduces the observed enrichment almost exactly. **The biology never changed;
-each reversal was a methodological choice we had not interrogated.**
+publishing three wrong versions of it.** One question - whether cytoplasmic translation machinery is
+physically associated with the vault - returned a different answer from every statistical treatment
+we tried. Dichotomising at a significance threshold gave a null (9 of 95 proteins against 6.94
+expected, p = 0.195) and we recorded a kill. The continuous mean the cut had discarded gave a strong
+positive: the 95 translation proteins detected in that pulldown average **+0.228 log2 against -0.316
+for the other 1,110**, a shift at the **99.8th percentile of abundance-matched draws, p = 0.004**,
+ranking **23rd of 1,276 terms**. We withdrew the kill. Then a matched control on protein **length
+and net charge** returned the null again, and we withdrew the positive.
 
-That control is discriminating rather than merely destructive, which is why we trust it: the same
-matching that erases the ribosome signal leaves the bait and its two known subunits enriched at p =
-0.024, MVP being 1,724 residues and acidic - the opposite profile. **The single clean positive
-exclusion in this work is myoferlin**, depleted both in the pulldown (-2.23) and in pre-lysis
-covalent proximity labelling (-3.32, p = 3.4e-4), an instrument no wash artefact can reach - and
-myoferlin had been our strongest membrane-repair evidence. Cortical actin is unresolved: our
-exclusion rested on a co-elution cutoff that also excludes TEP1, a real subunit this pulldown
-recovers at log-p 3.33. We also withdraw two earlier readings: an enrichment test against a partner
-set of size one has no power, and a container metaphor is one of six models producing the same
-graph. **What survives unchanged is the particle itself** - a 78-mer shell, PARP4 and TEP1 each
-independently associated, a sealed nucleotide pocket, and subunit half-lives of 22.2 h for PARP4,
-40.6 h for TEP1 and 66.4 h for MVP - values that differ, but whose spread sits at only the 29.86th
-percentile of abundance-matched random protein triplets, so they are less dispersed than 70% of
-random triples and do not support a claim of distinct lifetimes.
+**That third control was degenerate, and we did not notice for two sections.** Matching on three
+decile axes at once divides 1,166 proteins among up to 1,000 cells: **578 cells are occupied, 49% of
+them hold exactly one protein, and the median is two.** The "matched random draw" was sampling pools
+of one to three proteins that routinely included the term's own members. **MVP's own cell contains
+MVP and one other protein**, so the control we cited as proof the matching discriminated was drawing
+the test subject into its own null. Every p-value from that machinery is void. **What survives is
+the one-way abundance-matched comparison, where ten cells hold about 117 proteins each** - so the
++0.544 log2 class shift stands, and never depended on the broken control.
+
+The single clean positive exclusion in this work is **myoferlin**, depleted both in the pulldown
+(-2.23) and in pre-lysis covalent proximity labelling (-3.32, p = 3.4e-4), an instrument no wash
+artefact can reach - and myoferlin had been our strongest membrane-repair evidence. Cortical actin
+is unresolved: our exclusion rested on a co-elution cutoff that also excludes TEP1, a real subunit
+this pulldown recovers at log-p 3.33. We also withdraw two earlier readings: an enrichment test
+against a partner set of size one has no power, and a container metaphor is one of six models
+producing the same graph. **What survives unchanged is the particle itself** - a 78-mer shell, PARP4
+and TEP1 each independently associated, a sealed nucleotide pocket, and subunit half-lives of 22.2,
+40.6 and 66.4 h whose mutual compatibility we never tested and do not claim.
 
 We confirm, from two independent alignments, that the SPFH shoulder nucleotide pocket is the most
 conserved structural domain of MVP, with four ADP-ribose-contacting residues invariant across 174
@@ -378,6 +379,18 @@ same pulldown recovers at log-p 3.33 - sits at co-elution precision **0.041**, a
 retaining TEP1 retains **1,733** MVP partners, the entire noise floor. At the cutoff we used, MVP
 has **zero** partners of any kind. The zero describes our threshold, not the vault. Cortical actin
 is **unresolved**.
+
+**And the length-and-charge control that appeared to settle the translation question was
+degenerate.** An adversarial reviewer accepted the control in principle, on the condition that the
+proteins drawn from those decile cells were not the label under another name. Testing that condition
+revealed a more basic failure: the three-way decile cross divides 1,166 proteins among up to 1,000
+cells, leaving **578 occupied cells at a mean of 2.02 proteins, 49% of them singletons.**
+Restricting donors properly
+- removing the term's own members and their annotation neighbours, and requiring thirty usable donors
+per cell - returns **NON-IDENTIFIABLE for all three terms tested, with a median of zero usable
+donors.** The control never had a population to draw from, and the gate we cited in its defence had
+**MVP sharing a cell with exactly one other protein.** Every p-value from that analysis is
+withdrawn; the one-way abundance-matched result, with about 117 proteins per cell, is unaffected.
 
 **What survives is one exclusion, and it is a good one.** Myoferlin is depleted in the pulldown
 (-2.23) *and* in pre-lysis covalent proximity labelling around PARP4 (-3.32, p = 3.4e-4), an

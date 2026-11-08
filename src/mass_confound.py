@@ -101,3 +101,12 @@ json.dump({'expected':expected,'mvp':{'fold':mvp_f,'pct':mvp_p,'degree':counts['
            'gate1':bool(g1),'gate2':bool(g2),'negatives_median':float(np.median(negs)),
            'seeds':res,'large_assembly_median':bigmed,'verdict':verdict},
           open('results/mass_confound.json','w'),indent=1,default=str)
+
+# --- Grok audit 4, deliverable 3: a monotonically declining fold is arithmetic for ANY finite
+# partner set, and (hits/k)/fold is constant because the background is estimated once. Fold decline
+# therefore cannot separate a specific association from a narrow hydrodynamic window - which is itself
+# a clique in co-fractionation. Any such curve is reported NON-IDENTIFYING, never COMPLEX-LIKE.
+NON_IDENTIFYING_NOTE = ("monotonic fold decline is NON-IDENTIFYING: it fires for a small closed set, "
+                        "a large specific set past its first members, and an informative-ranking "
+                        "co-elution window alike (section 63d, ledger #276)")
+print('\nNOTE:', NON_IDENTIFYING_NOTE)

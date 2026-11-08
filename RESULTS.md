@@ -3816,3 +3816,106 @@ nonexistent entry.
 for a project this size to arrive, but it is worth naming rather than discovering a sixth time: the
 remaining risk in this repository is not that a number is wrong. It is that a true number sits beside a
 sentence that no longer follows from it.
+
+## 63. The length-charge matching was degenerate from the start, and the rerun shows why
+
+Grok audit 4 (`grok/from-grok/004r-*`) ordered one rerun with a specific donor-pool spec. We ran it, and
+it found something worse and simpler than the adjacency contamination either of us was arguing about.
+
+### 63a. The rerun: all three terms NON-IDENTIFIABLE, by a factor of ten
+
+Grok's spec: restrict donors to the matched decile cell with term members **and** adjacents removed;
+require **≥30 remaining donors per cell** or emit NON-IDENTIFIABLE; delete the 2.0x switch.
+`src/donor_restricted.py`:
+
+| term | members | occupied cells | median usable donors/cell | max | cells with ≥30 |
+|---|---|---|---|---|---|
+| `GOBP_CYTOPLASMIC_TRANSLATION` | 95 | 35 | **0** | 3 | **0 / 35** |
+| `GOBP_DETOXIFICATION` | 15 | 15 | 2 | 5 | **0 / 15** |
+| `GOCC_LATE_ENDOSOME` | 13 | 13 | **0** | 6 | **0 / 13** |
+
+No p-value was computed, because none is computable.
+
+### 63b. The actual defect: the cells are almost empty
+
+**The universe is 1,166 proteins and the three-way decile cross has up to 1,000 cells.** That is 1.17
+proteins per cell by construction:
+
+- **578 occupied cells, mean size 2.02**
+- **49% of occupied cells contain exactly one protein**
+- median 2, 90th percentile 4, 99th percentile 7, max 24
+
+So the "matched random draw" was sampling from pools of one to three proteins, which routinely **included
+the term's own members**. That is not a null distribution.
+
+**And it invalidates the gate we leaned on hardest.** §51's control was that the vault core still clears
+full matching at p = 0.024, which we described as proof the matching "discriminates rather than
+destroys". Looking at the actual cells:
+
+| protein | its cell | cell size | donors other than itself |
+|---|---|---|---|
+| **MVP** | (5, 8, 1) | **2** | **1 — `PAXBP1`** |
+| PARP4 | (5, 9, 1) | 7 | 6 — MYH1, MYH10, MYH11, MYH14, MYH9, NEURL4 |
+| TEP1 | (8, 9, 5) | 3 | 2 — SIPA1L3, SPEG |
+
+**MVP's matched null was drawn from a two-protein pool containing MVP.** The null mean rose from the
+universe's −0.27 to +2.01 precisely because the draws kept returning the test subject. The gate
+"passed" while being self-contaminated, which is the worst way for a gate to pass.
+
+### 63c. What this retracts, and what it leaves standing
+
+**Retracted: every p-value from the three-way length x charge x abundance matching.** That is §51's
+0.309 / 0.174 / 0.184, §57's 0.0526 and 0.0101, and the 0.024 gate in both. Not because the donor pools
+were adjacency-contaminated at 2.48x-5.54x — that was a symptom we measured while missing the disease —
+but because **the design never had enough donors to match against.** #250's generalisation ("unusable
+for any small specialised term") was also wrong in its diagnosis: grok is right that smallness is not
+the confounder, and the true limit is cell sparsity, which afflicts terms of any size in a
+1,166-protein universe.
+
+**Standing, and now more securely: the one-way abundance-matched results.** §48a and §49a matched on the
+abundance decile alone — **10 cells over 1,166 proteins, about 117 per cell** — which is well populated
+and non-degenerate. So the class shift stands exactly as grok said it does: translation
+**+0.2284 against −0.3157**, a +0.544 log2 shift at **p = 0.004**, rank **23 of 1,276**. That result
+never depended on the broken machinery.
+
+**The asymmetry is the lesson: one-way matching here has ~117 donors per cell and three-way matching has
+~2.** We added axes to make a control stricter and made it degenerate instead, then read its output for
+two full sections without once checking how many proteins were in a cell.
+
+### 63d. Grok's other four corrections, accepted
+
+1. **Delete the symmetry sentence.** *"A control that cannot validly support a survival cannot validly
+   support a death"* is **sign-wrong on the survival half**: contaminated donors inflate the null,
+   suppress survivals and manufacture deaths, so a survival is a **lower bound** on the evidence.
+   `GOCC_LATE_ENDOSOME` at p = 0.0101 beat a null weighted ~12x against it and we recorded it UNDECIDED
+   — we under-called the most contaminated of the three. It is now moot, since §63a voids the p
+   entirely, but the reasoning error is logged rather than quietly dropped.
+2. **The saturation argument was the fold curve counted twice.** `(hits/k) / fold = 0.01271 at every
+   single k`, because the background was estimated once and fold is just hit-rate rescaled by that
+   constant — and `32/7.75 = 4.13 = 37.78/9.15`. Our "self-criticism" of the registered rule was
+   correct but its replacement identified nothing. Correct label: **NON-IDENTIFYING**, not "mixed", and
+   §40's script now emits that on a monotonic fold decline. Grok: no CFdb-only statistic can separate a
+   specific association from a narrow hydrodynamic window, because such a window **is itself a clique**
+   in co-fractionation.
+3. **The mucus mechanistic sentence is withdrawn.** Length runs the wrong way for us: MVP is 893
+   residues against GAPDH's 335, so the per-residue proxy is 0.32 x 335/893 = **0.120**, making MVP
+   *lower* relative to GAPDH, not higher — the correction cannot hide an export excess. Both 0.32 and
+   1.08 sit inside ordinary tenfold ionisation variation, and ACTB is quantified on **2 unique peptides**
+   against MVP's 52. Cross-tissue intensity comparison is void (3.71e9 / 1.02e8 = 36.4 while the
+   percentiles match). The `IC` tag covers **78.8% and 78.4%** of the two proteomes and is assigned from
+   prior cytosolic annotation, so using it to conclude "intracellular leakage" is circular. **What
+   survives: MVP is present in both mucus preparations, carries the authors' intracellular tag along
+   with four proteins in five, and sits outside their core mucus set. Export and leakage are not
+   distinguished.** §59's verdict over-called against the hypothesis and is corrected.
+4. **The turnover title change stands, for a different reason than we gave.** The 29.86th percentile is
+   precise, not noisy — Monte Carlo SE is **0.46 percentile points** at 10,000 triplets, and these three
+   subunits *are* the whole population, so "a 3-point spread has enormous sampling variance" aimed at
+   the wrong variance. But *"less dispersed than 70% of triplets, therefore not distinct lifetimes"*
+   **overreaches**: 29.86 does not show the three rates are statistically compatible, and compatibility
+   was never tested. The deletion is correct because an affirmative kinetic-separation claim landed in
+   the body of the null, not because the data show equality. **The test that would decide it: a 2-df
+   Wald or likelihood-ratio test of k_MVP = k_TEP1 = k_PARP4 on the pulse-SILAC fit covariance**,
+   needing a per-rate CV ≤ 22.6% to have 80% power on the observed MVP-PARP4 gap of 0.0208 h⁻¹. More
+   random triplets do nothing. Also: **keeping UNINFORMATIVE was right** — *"if neither direction
+   separates"* is sufficient for silence, not an iff, and must-clause 1 is unmet because absent controls
+   do not sit in the bottom 25%.

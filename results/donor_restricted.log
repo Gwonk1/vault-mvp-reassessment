@@ -1,0 +1,13 @@
+universe 1166; occupied cells 578; mean cell size 2.02
+
+=== GOBP_CYTOPLASMIC_TRANSLATION ===
+  members in universe 95 | occupied cells 35 | donors/cell after removal: median 0, max 3, cells with >=30: 0/35
+  -> NON-IDENTIFIABLE (35 of 35 cells have <30 usable donors; the covariates determine the label there)
+=== GOBP_DETOXIFICATION ===
+  members in universe 15 | occupied cells 15 | donors/cell after removal: median 2, max 5, cells with >=30: 0/15
+  -> NON-IDENTIFIABLE (15 of 15 cells have <30 usable donors; the covariates determine the label there)
+=== GOCC_LATE_ENDOSOME ===
+  members in universe 13 | occupied cells 13 | donors/cell after removal: median 0, max 6, cells with >=30: 0/13
+  -> NON-IDENTIFIABLE (13 of 13 cells have <30 usable donors; the covariates determine the label there)
+
+NOTE: the cell-size census above is the headline, not any p-value.

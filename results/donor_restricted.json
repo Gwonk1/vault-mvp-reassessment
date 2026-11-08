@@ -1,0 +1,31 @@
+{
+ "min_donors": 30,
+ "universe": 1166,
+ "occupied_cells": 578,
+ "results": {
+  "GOBP_CYTOPLASMIC_TRANSLATION": {
+   "members": 95,
+   "cells": 35,
+   "cells_ok": 0,
+   "median_donors": 0.0,
+   "verdict": "NON-IDENTIFIABLE",
+   "obs": 0.2284
+  },
+  "GOBP_DETOXIFICATION": {
+   "members": 15,
+   "cells": 15,
+   "cells_ok": 0,
+   "median_donors": 2.0,
+   "verdict": "NON-IDENTIFIABLE",
+   "obs": 0.9695
+  },
+  "GOCC_LATE_ENDOSOME": {
+   "members": 13,
+   "cells": 13,
+   "cells_ok": 0,
+   "median_donors": 0.0,
+   "verdict": "NON-IDENTIFIABLE",
+   "obs": 0.7395
+  }
+ }
+}
