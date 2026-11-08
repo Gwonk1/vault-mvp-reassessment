@@ -3971,3 +3971,22 @@ Three corrections stand regardless of the arithmetic: §63's degeneracy finding 
 correctly-ordered `donor_restricted.py`), the retraction of every three-way-matched p-value, and the
 one-way abundance-matched class shift at p = 0.004 (ten cells, ~117 proteins each, and no sequence
 axis at all, so untouched by any of this).
+
+### 64d. Rule 12 applied immediately, and the damage is bounded
+
+Having written house rule 12, we applied it to its own bug class rather than only recording it. Three
+checks across all 73 scripts in `src/`:
+
+1. **Every abundance-decile construction** (10 scripts) indexes on `D.index` — table order — or on a
+   `G` frame built from `D.index`. The four `G`-building scripts were each inspected individually:
+   `ribosome_property.py` and `donor_restricted.py` were correct, `export_test.py` was fixed before
+   publication, `donor_and_k.py` is fixed now.
+2. **No remaining `index=list(...)` construction anywhere**, except the comment recording the fix.
+3. **No script reorders `D` before computing its decile.** Thirty-five scripts contain a sort, reindex
+   or sort_values, and in the ten that also build an abundance decile, every one of those operations
+   acts on an *output* object — a q-value series, a ranked term list, a display table — never on the
+   frame whose row order carries the abundance proxy.
+
+**So the bug class is contained to the two scripts already named.** That is a more useful statement
+than "we fixed two instances", because it is the difference between a repair and a bound. It took one
+command, which is the point rule 12 is making.
