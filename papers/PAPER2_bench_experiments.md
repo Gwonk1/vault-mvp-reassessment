@@ -336,6 +336,13 @@ vaults are distinguished from free MVP monomer. Where a vault is recovered, sequ
 vtRNA by RT-PCR, protein by MS - and ask whether what is inside differs from vaults purified from
 the same cells' cytoplasm.
 
+**Use targeted detection, not a shotgun survey.** Section 60 shows why: the one public stool dataset
+that retains the pellet *and* searched a human database recovered 232 human proteins that are a
+lumenal and brush-border secretome with **no beta-actin, no GAPDH and no HSC70** - so shotgun stool
+proteomics cannot see cytoplasmic protein at all, and could not see a vault whether or not one is
+there. Immunoblot and targeted MS against MVP, PARP4 and TEP1 are therefore the methods, and a
+shotgun result would be uninterpretable.
+
 **Positive control:** a known secreted protein in each matrix, and cytoplasmic vaults from the same
 cells as the particle standard. **The three subunits must co-sediment**; MVP alone could be
 degradation product rather than a particle.

@@ -1,0 +1,54 @@
+columns: ['Accession', 'Description', 'ΣCoverage', 'Σ# Proteins', 'Σ# Unique Peptides', 'Σ# Peptides', 'Σ# PSMs', 'A5: Area', 'B5: Area', 'C5: Area', 'D5: Area', 'E5: Area']
+
+232 human rows. Listing accession + description + unique peptides:
+
+  Q9Y6R7                 uniq=57    cov=25.99  IgGFc-binding protein OS=Homo sapiens GN=FCGBP PE=1 SV=3 - [FCGBP_HUMAN]
+  E7ER45                 uniq=49    cov=29.82  Maltase-glucoamylase, intestinal OS=Homo sapiens GN=MGAM PE=4 SV=2 - [E7ER45_H
+  P12883                 uniq=24    cov=19.48  Myosin-7 OS=Homo sapiens GN=MYH7 PE=1 SV=5 - [MYH7_HUMAN]
+  P01009                 uniq=23    cov=51.44  Alpha-1-antitrypsin OS=Homo sapiens GN=SERPINA1 PE=1 SV=3 - [A1AT_HUMAN]
+  P28838                 uniq=21    cov=50.48  Cytosol aminopeptidase OS=Homo sapiens GN=LAP3 PE=1 SV=3 - [AMPL_HUMAN]
+  C9JFW8                 uniq=20    cov=39.57  N-acetylated-alpha-linked acidic dipeptidase-like protein OS=Homo sapiens GN=N
+  P35237                 uniq=19    cov=61.97  Serpin B6 OS=Homo sapiens GN=SERPINB6 PE=1 SV=3 - [SPB6_HUMAN]
+  A8K7I4                 uniq=17    cov=25.82  Calcium-activated chloride channel regulator 1 OS=Homo sapiens GN=CLCA1 PE=1 S
+  Q9BYE9                 uniq=17    cov=14.73  Cadherin-related family member 2 OS=Homo sapiens GN=CDHR2 PE=1 SV=2 - [CDHR2_H
+  Q9UGM3                 uniq=16    cov=29.09  Deleted in malignant brain tumors 1 protein OS=Homo sapiens GN=DMBT1 PE=1 SV=2
+  P27487                 uniq=16    cov=25.07  Dipeptidyl peptidase 4 OS=Homo sapiens GN=DPP4 PE=1 SV=2 - [DPP4_HUMAN]
+  Q8WZ42                 uniq=16    cov=0.55   Titin OS=Homo sapiens GN=TTN PE=1 SV=4 - [TITIN_HUMAN]
+  Q16819                 uniq=15    cov=27.88  Meprin A subunit alpha OS=Homo sapiens GN=MEP1A PE=1 SV=2 - [MEP1A_HUMAN]
+  P09093                 uniq=14    cov=89.63  Chymotrypsin-like elastase family member 3A OS=Homo sapiens GN=CELA3A PE=1 SV=
+  Q8WWU7                 uniq=14    cov=67.08  Intelectin-2 OS=Homo sapiens GN=ITLN2 PE=2 SV=1 - [ITLN2_HUMAN]
+  Q99895                 uniq=14    cov=55.22  Chymotrypsin-C OS=Homo sapiens GN=CTRC PE=1 SV=2 - [CTRC_HUMAN]
+  J3QKX5                 uniq=14    cov=26.86  Meprin A subunit beta OS=Homo sapiens GN=MEP1B PE=3 SV=1 - [J3QKX5_HUMAN]
+  P01833                 uniq=14    cov=23.82  Polymeric immunoglobulin receptor OS=Homo sapiens GN=PIGR PE=1 SV=4 - [PIGR_HU
+  P02766                 uniq=13    cov=73.47  Transthyretin OS=Homo sapiens GN=TTR PE=1 SV=1 - [TTHY_HUMAN]
+  P16233                 uniq=13    cov=51.83  Pancreatic triacylglycerol lipase OS=Homo sapiens GN=PNLIP PE=1 SV=1 - [LIPP_H
+  P16444                 uniq=13    cov=51.82  Dipeptidase 1 OS=Homo sapiens GN=DPEP1 PE=1 SV=3 - [DPEP1_HUMAN]
+  Q6UWV6                 uniq=13    cov=36.24  Ectonucleotide pyrophosphatase/phosphodiesterase family member 7 OS=Homo sapie
+  P08473                 uniq=13    cov=20.13  Neprilysin OS=Homo sapiens GN=MME PE=1 SV=2 - [NEP_HUMAN]
+  P09923                 uniq=12    cov=35.8   Intestinal-type alkaline phosphatase OS=Homo sapiens GN=ALPI PE=1 SV=2 - [PPBI
+  P30740                 uniq=12    cov=35.09  Leukocyte elastase inhibitor OS=Homo sapiens GN=SERPINB1 PE=1 SV=1 - [ILEU_HUM
+  Q08380                 uniq=12    cov=30.43  Galectin-3-binding protein OS=Homo sapiens GN=LGALS3BP PE=1 SV=1 - [LG3BP_HUMA
+  P01011                 uniq=12    cov=29.08  Alpha-1-antichymotrypsin OS=Homo sapiens GN=SERPINA3 PE=1 SV=2 - [AACT_HUMAN]
+  O43895                 uniq=12    cov=25.82  Xaa-Pro aminopeptidase 2 OS=Homo sapiens GN=XPNPEP2 PE=1 SV=3 - [XPP2_HUMAN]
+  Q9NR71                 uniq=12    cov=20.9   Neutral ceramidase OS=Homo sapiens GN=ASAH2 PE=1 SV=2 - [ASAH2_HUMAN]
+  Q6GPI1                 uniq=11    cov=60.84  Chymotrypsinogen B2 OS=Homo sapiens GN=CTRB2 PE=2 SV=2 - [CTRB2_HUMAN]
+  P15086                 uniq=11    cov=42.45  Carboxypeptidase B OS=Homo sapiens GN=CPB1 PE=1 SV=4 - [CBPB1_HUMAN]
+  P11217                 uniq=11    cov=13.78  Glycogen phosphorylase, muscle form OS=Homo sapiens GN=PYGM PE=1 SV=6 - [PYGM_
+  Q8WWA0                 uniq=10    cov=46.96  Intelectin-1 OS=Homo sapiens GN=ITLN1 PE=1 SV=1 - [ITLN1_HUMAN]
+  P12882                 uniq=10    cov=26.56  Myosin-1 OS=Homo sapiens GN=MYH1 PE=1 SV=3 - [MYH1_HUMAN]
+  P98073                 uniq=10    cov=13.64  Enteropeptidase OS=Homo sapiens GN=TMPRSS15 PE=1 SV=3 - [ENTK_HUMAN]
+  C9JUF9                 uniq=9     cov=37.46  Carboxypeptidase A1 OS=Homo sapiens GN=CPA1 PE=2 SV=1 - [C9JUF9_HUMAN]
+  Q03154                 uniq=9     cov=31.37  Aminoacylase-1 OS=Homo sapiens GN=ACY1 PE=1 SV=1 - [ACY1_HUMAN]
+  P35609                 uniq=9     cov=14.43  Alpha-actinin-2 OS=Homo sapiens GN=ACTN2 PE=1 SV=1 - [ACTN2_HUMAN]
+  P08861                 uniq=8     cov=62.59  Chymotrypsin-like elastase family member 3B OS=Homo sapiens GN=CELA3B PE=1 SV=
+  P12532                 uniq=8     cov=24.94  Creatine kinase U-type, mitochondrial OS=Homo sapiens GN=CKMT1A PE=1 SV=1 - [K
+  P11678                 uniq=8     cov=12.31  Eosinophil peroxidase OS=Homo sapiens GN=EPX PE=1 SV=2 - [PERE_HUMAN]
+  P14410                 uniq=8     cov=7.77   Sucrase-isomaltase, intestinal OS=Homo sapiens GN=SI PE=1 SV=6 - [SUIS_HUMAN]
+  O60844                 uniq=7     cov=50.9   Zymogen granule membrane protein 16 OS=Homo sapiens GN=ZG16 PE=1 SV=2 - [ZG16_
+  P68133                 uniq=7     cov=48.01  Actin, alpha skeletal muscle OS=Homo sapiens GN=ACTA1 PE=1 SV=1 - [ACTS_HUMAN]
+  P05976                 uniq=7     cov=24.23  Myosin light chain 1/3, skeletal muscle isoform OS=Homo sapiens GN=MYL1 PE=1 S
+
+  ... 232 total human rows
+
+=== explicit search for vault / MVP across ALL rows ===
+  (no output above means absent)

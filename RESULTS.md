@@ -3610,3 +3610,71 @@ Two things it does **not** settle:
 - **A loaded-versus-empty question is untouched.** Graham's hypothesis was not only that vaults get out
   but that *what is inside them* differs when they do. Nothing in a bulk mucus proteome addresses
   cargo, and Paper 2's Experiment 13 remains the way to ask it.
+
+## 60. Stool: MVP is absent, and the gate says that means nothing — for a deeper reason than §58
+
+`FECAL_MUCUS_PROTOCOL.md`. **Registered outcome for stool: NO QUALIFYING DATASET.** Both candidate
+studies fail, for different reasons, and the second reason is more fundamental than the first.
+
+### 60a. The dataset that should have worked
+
+Tanca et al., *"A human gut metaproteomic dataset from stool samples pretreated or not by differential
+centrifugation"*, Data in Brief 2015; **PMID 26306325, PMC4536287, DOI 10.1016/j.dib.2015.07.014**,
+PRIDE **PXD001573**. This addresses §58's objection directly:
+
+- **Five of its ten aliquots are NOT pretreated by differential centrifugation** — whole stool, pellet
+  included, so the fraction a 13 MDa particle sediments into is retained.
+- **The search database included human sequences**: *"sequences from 298 detected microbial genera ...
+  were appended to the Homo sapiens sequences retrieved from SwissProt"*, a 5,990,075-sequence
+  host-microbiome database.
+- Over 5,800 proteins identified, with the paper advertising *"deep information about gut microbiota and
+  host proteins in the same experiment."*
+
+And unlike every other dataset in this search, **its processed identification table is public**:
+`DC_5repl_vs_NC_5repl_host-microbiome_identified_proteins.xlsx`, 2.4 MB, downloaded from the PRIDE FTP
+archive. 5,859 rows, of which **232 carry human identifiers.**
+
+### 60b. MVP is absent, and the gate fails 0 of 3
+
+Searching all 5,859 rows for `MVP`, `MVP_HUMAN`, `Q14764` or "vault": **nothing.**
+
+But the registered gate — at least two of ACTB, GAPDH, HSPA8 — returns **0 of 3**. None of the three is
+present. Nor are ALB, LTF, LCN2 or MUC2 by symbol. **So the dataset does not qualify and MVP's absence
+is uninformative**, which is precisely the determination the gate existed to make.
+
+### 60c. Why, and it is a better answer than §58's
+
+The reason is visible in the 232 human proteins. The top of that list by unique peptides:
+
+FCGBP (57), maltase-glucoamylase (49), myosin-7 (24), alpha-1-antitrypsin (23), cytosol aminopeptidase
+(21), NAALADL (20), serpin B6 (19), CLCA1 (17), CDHR2 (17), DMBT1 (16), DPP4 (16), meprin A alpha (15),
+elastase 3A (14), intelectin-2 (14), chymotrypsin-C (14), meprin A beta (14), polymeric Ig receptor
+(14), transthyretin (13), pancreatic lipase (13), dipeptidase 1 (13), neprilysin (13), intestinal
+alkaline phosphatase (12), ZG16, intelectins, enteropeptidase, sucrase-isomaltase...
+
+**That is a lumenal and brush-border secretome, essentially without cytoplasm.** Digestive proteases,
+glycosidases, peptidases, mucus and barrier proteins, serpins. **No beta-actin, no GAPDH, no HSC70** —
+the three most abundant cytoplasmic proteins in most cells. The one actin present is **ACTA1, skeletal
+muscle actin**, which alongside titin, myosin-1, myosin-7, muscle glycogen phosphorylase and myosin
+light chain is far more likely **dietary** than host (the study ran a separate food database for exactly
+this reason).
+
+So §58 concluded the stool workflow *discards* vaults by centrifugation. **This is stronger: even when
+nothing is discarded, cytoplasmic protein does not survive the colon.** The lumen is a proteolytic
+environment, and shotgun stool proteomics recovers what is built to survive it. A 13 MDa cytoplasmic
+particle would have to survive both the gut and the sample prep to appear here, and the absence of
+GAPDH says the first hurdle alone is enough.
+
+### 60d. Closing the protocol
+
+| matrix | outcome | basis |
+|---|---|---|
+| **gut mucus** | **MVP PRESENT** (§59) — 52 unique peptides, 94th-95th percentile — **but at cell-leakage level**, annotated `IC`, not in the core mucus proteome | van der Post 2019, qualifying |
+| **stool** | **NO QUALIFYING DATASET** | Lichtman discards the pellet (§58); Tanca retains it but recovers no cytoplasmic protein at all |
+
+**The registered expectation for stool — "MVP absent or the datasets fail to qualify" — is met, by the
+second clause.** We will not be answering the stool question from public proteomics, and we now have a
+specific reason rather than a shrug: **shotgun stool proteomics cannot see cytoplasmic protein, so it
+cannot see a vault whether or not one is there.** Paper 2's Experiment 13 therefore needs targeted
+detection — immunoblot and targeted MS against MVP, PARP4 and TEP1 — rather than a shotgun survey, and
+that is now also stated in the experiment.
