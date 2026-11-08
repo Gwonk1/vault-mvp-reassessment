@@ -2911,6 +2911,12 @@ more basic (+130 vs +2.94 charge units per 1,000 residues)**. That is the profil
 sticks to an affinity matrix. Re-testing against randoms matched on length decile and charge decile in
 addition to abundance:
 
+> **[VOID — see §63. Every p-value in this section comes from the three-way length x charge x
+> abundance matching, which is degenerate: 1,166 proteins over up to 1,000 cells, 49% of occupied
+> cells holding one protein, and MVP's own cell holding MVP plus one other. The null was drawing the
+> test subject. The one-way abundance-matched result is unaffected.]**
+
+
 | term | n | observed | matched null | draws ≥ obs | p |
 |---|---|---|---|---|---|
 | `GOCC_CYTOSOLIC_RIBOSOME` | 82 | +0.272 | **+0.229** | 61,764 / 200,000 | **0.309** |
@@ -3206,6 +3212,12 @@ they are not on the causal path from contact to enrichment, and "a bound ribosom
 and basic" does not make the matching illegal. But it answers a **different estimand** than the class
 shift, and both are true at once:
 
+> **[VOID — see §63. Every p-value in this section comes from the three-way length x charge x
+> abundance matching, which is degenerate: 1,166 proteins over up to 1,000 cells, 49% of occupied
+> cells holding one protein, and MVP's own cell holding MVP plus one other. The null was drawing the
+> test subject. The one-way abundance-matched result is unaffected.]**
+
+
 | estimand | value | status |
 |---|---|---|
 | abundance-matched class shift: translation +0.2284 vs −0.3157 for the other 1,110 | **+0.544, p = 0.004, rank 23 of 1,276** | **stands** |
@@ -3326,7 +3338,7 @@ are *"ribosomal under another name."* Enumerating the actual donor pool for
 | donor pool size | **189 proteins** |
 | translation-adjacent fraction, donor pool | **0.772** |
 | translation-adjacent fraction, whole universe (n=1,166) | 0.311 |
-| **enrichment ratio** | **2.48x** |
+| **enrichment ratio** | **2.48x** — *wrong; the correct frame gives 2.86x, see §64b* |
 
 Registered bars: invalid above 2.0x, stands below 1.5x. **2.48x — invalid as applied.**
 
@@ -3424,6 +3436,12 @@ would otherwise have read as a biological null.
 
 ### 57b. The results, and why neither counts
 
+> **[VOID — see §63. Every p-value in this section comes from the three-way length x charge x
+> abundance matching, which is degenerate: 1,166 proteins over up to 1,000 cells, 49% of occupied
+> cells holding one protein, and MVP's own cell holding MVP plus one other. The null was drawing the
+> test subject. The one-way abundance-matched result is unaffected.]**
+
+
 | term | n | observed | matched null | p (matched) | donor-pool ratio | verdict |
 |---|---|---|---|---|---|---|
 | `GOBP_DETOXIFICATION` | 15 | +0.970 | +0.426 | **0.0526** | **4.07x** | UNDECIDED |
@@ -3444,7 +3462,7 @@ Three independent applications now:
 
 | term | donor-pool enrichment |
 |---|---|
-| `GOBP_CYTOPLASMIC_TRANSLATION` (§56a) | 2.48x |
+| `GOBP_CYTOPLASMIC_TRANSLATION` (§56a) | 2.48x (**corrected to 2.86x**, §64b) |
 | `GOBP_DETOXIFICATION` | **4.07x** |
 | `GOCC_LATE_ENDOSOME` | **5.54x** |
 
