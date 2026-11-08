@@ -14,7 +14,10 @@ addenda — nothing is deleted, but the current state should be readable first.
 > discoveries of this work, and may be line-specific. **"Not PARP4-dependent" everywhere means "still
 > present when PARP4 is removed in A549."** We did not establish the cell line until §71.
 >
-> **The published function.** Knockouts in five systems establish MVP as a **signalling modulator** —
+> **The published function.** Knockout work establishes MVP as a **signalling modulator** — but the
+> convergence is **mostly one group's**: Jingjing Ben appears on 5 of the 6 papers and only the
+> influenza study shares no author with any other (§76b). Read it as **one programme plus one
+> independent replication**, not six independent results —
 > IKK-NF-kB, calcineurin-NFATc1, STAT3, Parkin-mediated mitophagy, adaptive immunity on influenza
 > rechallenge — and **every published phenotype is conditional**, absent at baseline. Those
 > interactions are transient and low-stoichiometry: what co-abundance, co-fractionation and wash-based

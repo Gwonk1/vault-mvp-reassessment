@@ -13,7 +13,9 @@
 >
 > **Relocation (established in §70).** The published vault function is **signalling modulation** —
 > IKK-NF-kB, calcineurin-NFATc1, STAT3, Parkin-mediated mitophagy, adaptive immunity on influenza
-> rechallenge — from knockouts in five systems, and every published phenotype is **conditional**, absent
+> rechallenge. **The convergence is mostly one group's** (Ben on 5 of 6 papers; only the influenza
+> study is authorially independent — §76b), and **five of six** published phenotypes are
+> **conditional**, absent
 > at baseline. Those interactions are transient and low-stoichiometry: the class these instruments
 > recover worst. **So no negative result in this file is evidence against vault function.** What the
 > negatives establish is narrower and still useful: **MVP has no stoichiometric partner complex beyond
@@ -4546,7 +4548,9 @@ evidence against an immune role; it is evidence that co-abundance was the wrong 
 
 **The list was built in ignorance of the tested hypotheses, which makes its ratings unreliable.** A
 signalling-modulator hypothesis belongs at the top of any ranking of what vaults are *for* — and it
-does not belong on a list of **untested** hypotheses, because it has knockout support in five systems.
+does not belong on a list of **untested** hypotheses, because it has knockout support across six
+papers — though §76b shows that support is **one group's programme plus one independent replication**,
+not six independent results.
 Graham asked for untested ideas; I supplied ten without establishing what was already tested.
 
 The ratings that move:

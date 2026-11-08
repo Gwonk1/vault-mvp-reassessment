@@ -4,7 +4,7 @@
 reviewed the manuscript adversarially against the committed data, in three rounds; between them they
 struck or qualified more than a dozen claims made here, and those reversals are recorded in place
 rather than quietly removed. All hypotheses were committed to a timestamped git history before the
-relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (346 entries)
+relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (347 entries)
 and `RESULTS.md` (24 sections). **That history is currently local and has not been published**, so
 the ordering it establishes is not yet independently verifiable; we state the fact rather than imply
 otherwise, and the repository is available to anyone who asks. Correspondence welcome, including
@@ -495,9 +495,11 @@ is removed in A549"** rather than as independence in general.
 
 **Second, what the absence of a neighbourhood does and does not mean.** The published vault function
 is **signalling modulation** — IKK-NF-kB, calcineurin-NFATc1, STAT3, Parkin-mediated mitophagy,
-adaptive immunity on influenza rechallenge — established by knockouts in five systems. Those
-interactions are **transient, low-stoichiometry and regulatory**, which is the class co-abundance,
-native co-fractionation and wash-based immunoprecipitation recover worst.
+adaptive immunity on influenza rechallenge. **The convergence is mostly one group's** — Jingjing Ben
+appears on five of the six papers, and only the influenza study shares no author with any other, so
+this is one programme plus one independent replication rather than six independent results (§76b).
+Those interactions are **transient, low-stoichiometry and regulatory**, which is the class
+co-abundance, native co-fractionation and wash-based immunoprecipitation recover worst.
 **So nothing below is evidence against vault function.** What survives is the narrower and still
 useful claim that
 **MVP has no stoichiometric partner complex beyond PARP4 and TEP1.** Section 70 sets this out in
