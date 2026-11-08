@@ -87,7 +87,7 @@ not establish the cell line until late in the work.
 | MVP ancestral in eukaryotes, lost in fungi/plants/Ecdysozoa | **Daly et al. 2013 reached it verbatim**; we had also censused the wrong orthogroups (VIT-domain, not MVP's) |
 | the interactor readings generally | the pulldown is a **public deposit with its own analysis** of our comparison |
 | stool proteomics cannot recover a vault | **the methods principle is published** — prep bias by cellular compartment, and Tanca 2015 on differential centrifugation; only the vault application is ours |
-| **a sealed nucleotide pocket in MVP's SPFH shoulder** — the foundation of our top-ranked hypothesis | **the SPFH assignment is Tanaka et al., *Science* 2009 (PDB 4V60); the pocket is Lodwick et al., *Nat Commun* 2025 with NAD+ and ADP in deposited coordinates — and "sealed" is contradicted, since the site is lumen-facing and formed *between* two monomers, so assembly creates it rather than closing it.** The answer sat in our own `data/raw/struct/`, including a file titled *"RNA Vault with ADPR bound"* |
+| ~~**a sealed nucleotide pocket in MVP's SPFH shoulder**~~ **WITHDRAWN §73** — the foundation of our top-ranked hypothesis | **the SPFH assignment is Tanaka et al., *Science* 2009 (PDB 4V60); the pocket is Lodwick et al., *Nat Commun* 2025 with NAD+ and ADP in deposited coordinates — and "sealed" is contradicted, since the site is lumen-facing and formed *between* two monomers, so assembly creates it rather than closing it.** The answer sat in our own `data/raw/struct/`, including a file titled *"RNA Vault with ADPR bound"* |
 
 **One misjudgement produced all five hits.** This work assumed the vault literature was thin because
 consensus on function is absent. **It is not thin:** four structure papers appeared in 2025-2026
@@ -111,7 +111,7 @@ PARP4 by knockdown; **ANXA2 and S100A10** as the only confirmed non-subunit inte
 the old membrane list; **COP1** at 27-fold in one instrument class; **myoferlin actively
 excluded**, in a wash-based pulldown and in pre-lysis covalent proximity labelling;
 **degradation machinery the most depleted annotation of 1,276** in an anti-MVP pulldown;
-a **sealed SPFH-shoulder nucleotide pocket**; and subunit half-lives whose spread sits at only the 29.86th percentile of random triplets.
+and subunit half-lives whose spread sits at only the 29.86th percentile of random triplets.
 
 One observation has survived six registered attacks and is **still not promoted**: MVP's
 sub-threshold co-elution tail is translation-enriched at the 98th percentile of 150

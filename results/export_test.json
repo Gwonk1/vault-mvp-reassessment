@@ -1,4 +1,5 @@
 {
+ "_superseded": "SUPERSEDED OUTPUT: every \"matched\"/\"full matching\" p-value came from the degenerate three-way decile matcher (section 63: 49% singleton cells; MVP matched against itself). The gate1 flag could not have failed - same scheme computed it.",
  "core": {
   "n": 3,
   "obs": 7.516,

@@ -101,6 +101,11 @@ def check_qualifications():
 SUPERSEDED_LOGS = {
     'results/donor_and_k.log': '#243 frame-order index bug; TEST 2 also superseded by §64c',
     'results/export_test.log': '§63 degenerate three-way matcher voids every matched p-value',
+    # JSON twins of the two logs above. JSON takes no comment, so the banner lives
+    # in a '_superseded' key whose value opens with the same marker text. Found only
+    # because the logs' fix prompted a sweep of every tracked non-document file (§78).
+    'results/donor_and_k.json': 'machine-readable twin: ratio 2.4813 / 65 cells / 189 donors, all pre-fix',
+    'results/export_test.json': 'machine-readable twin: p=0.18352908 and gate1=true from the degenerate matcher',
 }
 BANNER = 'SUPERSEDED OUTPUT'
 

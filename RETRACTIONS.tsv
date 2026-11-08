@@ -16,3 +16,5 @@ convergence\s+across\s+instrument\s+classes\s+is\s+real	§63c	contact half withd
 100\.0th\s+percentile\s+of\s+(?:its\s+own\s+)?(?:30\s+)?look-alikes	§55c	0.98^30 = 0.545, 55% by construction
 mistook\s+the\s+former\s+for\s+the\s+latter	§55	slogan withdrawn
 three\s+(?:distinct\s+)?(?:subunit\s+)?lifetimes	§61b	compatibility never tested
+sealed\s+(?:SPFH[- ]shoulder\s+)?(?:nucleotide\s+)?pocket	§73	pocket is lumen-facing, inter-subunit, created by assembly; also published by Lodwick 2025
+sealed\s+SPFH	§73	same; the 78 'sealed' pockets were never sealed

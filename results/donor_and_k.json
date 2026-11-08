@@ -1,4 +1,5 @@
 {
+ "_superseded": "SUPERSEDED OUTPUT: pre-fix run, GENCODE frame-order index bug (#243). n_cells 65->35, n_donors 189->129, frac_donor 0.772->0.891, ratio 2.48->2.86. TEST 1 verdict survives (bias larger); the k-sweep's COMPLEX-LIKE does not (section 64c).",
  "donor": {
   "n_members": 95,
   "n_cells": 65,

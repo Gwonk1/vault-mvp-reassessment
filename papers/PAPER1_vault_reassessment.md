@@ -1,10 +1,16 @@
-# One assembly, a sealed nucleotide pocket, and one question that gave three answers: a pre-registered reassessment of major vault protein across public human and comparative data
+# One assembly, no stoichiometric neighbourhood, and an instrument that cannot see a known subunit: a pre-registered reassessment of major vault protein across public human and comparative data
+
+> **Title history.** The first title claimed *"three lifetimes"* (removed, §61b: compatibility
+> never tested). The second claimed *"a sealed nucleotide pocket"* — removed here, because §73 found
+> that pocket **published** (Lodwick et al. 2025) and **not sealed**: it is lumen-facing,
+> inter-subunit, and created by assembly. **Twice the title headlined something that was not ours or
+> not true.** This one headlines the well-controlled negative and the calibration finding, which are.
 
 **Graham W. Syfert.** Analysis performed with Claude (Anthropic). Two further language-model agents
 reviewed the manuscript adversarially against the committed data, in three rounds; between them they
 struck or qualified more than a dozen claims made here, and those reversals are recorded in place
 rather than quietly removed. All hypotheses were committed to a timestamped git history before the
-relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (351 entries)
+relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (356 entries)
 and `RESULTS.md` (24 sections). **That history is currently local and has not been published**, so
 the ordering it establishes is not yet independently verifiable; we state the fact rather than imply
 otherwise, and the repository is available to anyone who asks. Correspondence welcome, including
@@ -90,8 +96,11 @@ is unresolved: our exclusion rested on a co-elution cutoff that also excludes TE
 this pulldown recovers at log-p 3.33. We also withdraw two earlier readings: an enrichment test
 against a partner set of size one has no power, and a container metaphor is one of six models
 producing the same graph. **What survives unchanged is the particle itself** - a 78-mer shell, PARP4
-and TEP1 each independently associated, a sealed nucleotide pocket, and subunit half-lives of 22.2,
-40.6 and 66.4 h whose mutual compatibility we never tested and do not claim.
+and TEP1 each independently associated, and subunit half-lives of 22.2, 40.6 and 66.4 h whose
+mutual compatibility we never tested and do not claim — figures whose three decimals are false
+precision against their own 22.6% CV bar, about +/-15 h on the MVP estimate (§75). **The nucleotide
+pocket is NOT on this list:** it is published (Lodwick et al. 2025, *Nat Commun* 16:6724) and it is
+**not sealed** — lumen-facing, inter-subunit, created by assembly (§73).
 
 We confirm, from two independent alignments, that the SPFH shoulder nucleotide pocket is the most
 conserved structural domain of MVP, with four ADP-ribose-contacting residues invariant across 174

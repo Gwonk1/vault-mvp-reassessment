@@ -4159,7 +4159,7 @@ were requested afterwards with the evidence and none of the rankings
 | 1 | nucleotide-sequestering buffer | 0.20 | **bare MVP shell is the investment; caps optional** | **0.40** |
 | 2 | TEP1 latent TIR NAD(P)ase | 0.18 | multi-client sequestration cage, free COP1 the one client | 0.24 |
 | 3 | polyribosome assembly platform | 0.15 | **ANXA2-S100A10 heterotetramer membrane dock** | 0.14 |
-| 4 | **near-neutral tolerated extravagance** | **0.14** | sealed pocket as ligand-gated waist latch | 0.12 |
+| 4 | **near-neutral tolerated extravagance** | **0.14** | ~~sealed pocket as ligand-gated waist latch~~ **WITHDRAWN §73** | ~~0.12~~ |
 | 5 | cargo turnover, not transport | 0.12 | cap chemistry: TEP1 NADase on the shell platform | 0.10 |
 | 6 | **furniture, no acute function** | **0.12** | ribosome-adjacent translation buffer | 0.09 |
 | 7 | COP1 makes abundance regulated | 0.10 | extracellular deployment of shells | 0.07 |
@@ -4227,7 +4227,7 @@ reading.
 | three subunits do not co-rank across tissues | 0.60 | mine at 0.45 |
 | **ruffle signal dies at contact** | **0.58** | **absent from my list** |
 | mucus cannot be read as secretion | 0.55 | mine at 0.55 — exact agreement |
-| TEP1 TIR/E1008 + sealed pocket | 0.42 | **I built hypothesis A1 on it without questioning novelty** |
+| TEP1 TIR/E1008 + ~~sealed pocket~~ (**WITHDRAWN §73**) | 0.42 | **I built hypothesis A1 on it without questioning novelty** |
 
 Two misses of mine worth naming: **the interferon regulon** — the single cleanest piece of negative
 work in this project, and I left it off a list of unremarked findings — and **the ruffle collapse**,
@@ -4676,7 +4676,8 @@ wrote the rule for it.**
 
 ## 73. The nucleotide pocket is published, it is not sealed, and the answer was in our own data directory
 
-An agent was asked whether the SPFH-shoulder assignment and the sealed nucleotide pocket are already
+An agent was asked whether the SPFH-shoulder assignment and the ~~sealed~~ nucleotide pocket (**the
+"sealed" characterisation is WITHDRAWN** - see 73b) are already
 published. **Both halves of hypothesis A1 fall, and the fifth literature check is the worst of the
 five.**
 
@@ -4941,3 +4942,77 @@ banner, exit 1; name a log that does not exist, exit 1.
 reported `tail`'s status and printed `exit=0` for a run that had crashed with a `NameError`. **That is
 the vacuous-pass shape occurring inside the test of a gate built to catch vacuous passes** - caught only
 because the traceback was visible above it.
+
+## 78. The sweep that followed §77 found the worst-placed error in the repository
+
+Having stamped two logs, the obvious next question was whether other file classes carried retracted
+values. Sweeping **every tracked non-document file** returned **145 hits** - and the distribution is
+§77b's prediction confirmed at scale.
+
+### 78a. 145 hits, four real
+
+**Nearly all are coincidence.** `results/surface_residues.csv` matched four times on solvent-accessible
+fractions; `prot_enrichment_*.csv` and `coloss_mvp_enrichment.csv` on other GO terms' q-values;
+`ccle_metabolomics_mvp.csv` on metabolite correlations; `kim_*.csv` on per-patient fractions. **The
+funniest false positive is `src/check_retractions.py` itself**, whose new comment explaining that
+`0.184`, `0.0526` and `0.174` collide in numeric files **contains those three literals and matches its
+own patterns** - as does house rule 14's text in `CONTRIBUTING.md`.
+
+**And a large class is legitimately immutable.** `grok/` and `channel/` transcripts carry retracted
+values because that is **where they were retracted**; the two pre-registrations carry them because a
+pre-registration written before the data **must not be edited afterwards**. Annotating either would
+falsify the record.
+
+**Confirming rule 14 from the other side:** a sweep of 145 hits yielded **four** actionable items. Had
+we extended the gate to these files, it would have fired constantly and been switched off.
+
+### 78b. The two machine-readable twins
+
+`results/donor_and_k.json` holds `"ratio": 2.481321147987815`, `"n_cells": 65`, `"n_donors": 189` -
+the pre-fix values in machine-readable form, **and the `2.48x` pattern never matched it because JSON
+has no `x` suffix.** `results/export_test.json` holds `"p": 0.18352908235458823` and `"gate1": true`,
+the latter being the control that could not have failed. **We stamped the logs and left their twins**,
+which is the propagation failure one file over. Both now carry a `_superseded` key, and the check
+covers all four files, self-tested by deletion.
+
+### 78c. The `LICENSE` suggested citation carried two withdrawn claims
+
+> *Syfert, G. W. (2026).* **One assembly, three lifetimes, and a sealed nucleotide pocket:** *a
+> pre-registered reassessment…*
+
+**"Three lifetimes"** was retracted at §61b - the compatibility was never tested - and the paper's own
+title was corrected for it. **"Sealed"** was contradicted at §73 - the pocket is lumen-facing,
+inter-subunit, and created by assembly. **The `LICENSE` was never updated for either**, so the single
+most copy-pasted line in the repository carried both.
+
+### 78d. And `sealed` was never registered, so it survived in the paper's own title
+
+§73 withdrew hypotheses A1 and A8 on the ground that the pocket **is not sealed**, and **never added
+`sealed` to `RETRACTIONS.tsv`** (the file had zero matches for it). The word therefore survived in:
+
+- **the title of Paper 1** - *"One assembly, a sealed nucleotide pocket, and one question…"*;
+- **Paper 1's "what survives unchanged" list**, the strongest claim-position in the paper;
+- the README's findings list;
+- three RESULTS tables and the README's prior-art table, **unmarked**.
+
+Both patterns are now registered, and the title is changed a second time:
+
+> **One assembly, no stoichiometric neighbourhood, and an instrument that cannot see a known subunit**
+
+**Twice the title headlined something that was either not ours or not true** - "three lifetimes"
+(untested) and "a sealed nucleotide pocket" (published by Lodwick 2025, and not sealed). This one
+headlines the well-controlled negative and the calibration finding, **which are both ours and both
+survive.** Paper 1 now carries a standing "Title history" note saying exactly that, and the `LICENSE`
+citation matches.
+
+### 78e. A tight marker vocabulary fails safe; a loose one fails open
+
+Registering `sealed` made the gate fire on **four occurrences whose surrounding text genuinely does
+retract it** - §73's own opening sentence, two ranking tables, and the README's prior-art row whose
+adjacent cell reads *"the SPFH assignment is Tanaka et al., Science 2009."* None used vocabulary in
+`MARKERS`.
+
+**The fix was to annotate the four, not to broaden `MARKERS`** - and that choice is the whole lesson.
+**Broadening the marker list makes every future bare claim easier to excuse**, which is the
+vacuous-pass direction (#325, #327). **A narrow marker list produces false alarms you fix by
+annotating, which is safe.** Prefer the gate that cries wolf.
