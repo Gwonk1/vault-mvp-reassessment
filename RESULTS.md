@@ -5158,3 +5158,77 @@ registrations.
 Two genuine absences are worth keeping, since clause 4 vouches for them: **TEP1 has no one-to-one
 mouse orthologue in Compara**, and **RPL7 none in mouse or rat** - which is why RPL7 failed clause 1 in
 the first run. Those are facts about the resource, not about vaults.
+
+## 81. Three runs, three gate failures. The question is recorded as unreachable and we stop.
+
+The third attempt was capped in advance: *"If the gate fails again, the question is recorded as
+UNREACHABLE WITH THIS INSTRUMENT and the project stops asking it."* **It failed. We stop.**
+
+### 81a. Two clauses passed decisively, two failed
+
+| clause | result |
+|---|---|
+| 1. four essential controls, >=3 pairs, median < 0.20 | **PASS** - RPL7 0.0449, ACTB 0.0073, GAPDH 0.0771, TUBB 0.0031 |
+| 2. three relaxed controls, >=3 pairs, lowest > highest essential | **PASS** - **0.2166 > 0.0771**, clean separation |
+| 3. **every** reported gene >= 3 unsaturated mammal pairs | **FAIL** - TEP1 returned 2 |
+| 4. no absence inferred from a non-200 | **FAIL** - 14 errored calls |
+
+**The one thing that is now established, and it is about the controls, not about MVP:** NG86 on
+Compara CDS alignments **does** separate essential genes from rapidly evolving ones across mammals -
+**0.003 to 0.077** for ACTB, TUBB, RPL7, GAPDH against **0.217 to 0.558** for MX1, CD4, FCGR2B. The
+instrument works. That is a statement about ten control pairs and it stands on its own.
+
+### 81b. What failed, precisely
+
+**Clause 3 failed on TEP1 alone.** TEP1 is a 290 kDa protein, and the Compara `sequence=cds` query for
+it **failed on 11 of 13 species** - seven timeouts, one 503, two 500s. A large CDS appears to exceed
+what that endpoint will serve. Not biology; an endpoint limit.
+
+**Clause 4 failed on 14 errored calls**, 11 of them TEP1's and **3 of them MVP's** (mouse, macaque,
+pig - all timeouts).
+
+### 81c. The number, recorded and not interpreted
+
+MVP returned **7 unsaturated mammal pairs, every one `ortholog_one2one`**, 839-890 codons each:
+
+| species | dN | dS | dN/dS |
+|---|---|---|---|
+| rat | 0.0512 | 0.6025 | 0.0850 |
+| rabbit | 0.0523 | 0.5007 | 0.1045 |
+| dog | 0.0492 | 0.4569 | 0.1077 |
+| opossum | 0.1285 | 1.1489 | 0.1118 |
+| horse | 0.0441 | 0.3690 | 0.1195 |
+| sheep | 0.0571 | 0.4714 | 0.1211 |
+| cow | 0.0581 | 0.4671 | 0.1244 |
+
+**Median 0.1118, range 0.0850-0.1244.** Seven species, one-to-one orthologues, a spread of 0.04.
+
+**It is not interpreted. It does not enter the hypothesis ranking. Nothing above it changes.**
+
+### 81d. Why we are refusing a number this clean, stated plainly because it is the whole point
+
+**Strip TEP1 out and the gate passes.** The two clauses that test whether the instrument can tell an
+essential gene from a drifting one **both passed**. MVP's own seven pairs are one-to-one, long, and
+tight. Clause 3 failed on a different gene's server errors, and clause 4 counted errored calls rather
+than actual inferred absences - and we are not, in fact, inferring that MVP is absent from mouse.
+
+**A reasonable person would report 0.1118 with caveats. That is exactly what house rule 5 forbids.**
+
+The clause was written by us, the check was implemented by us, and the check says FAIL. Arguing *now*
+that clause 4 "really meant" something narrower - having seen which clauses failed and having seen that
+the subject's number looks good - is **the same move as §41's reinterpretation of a failed kill**, which
+cost this project a withdrawn section and a house rule. **A gate you renegotiate after reading the
+result is not a gate.** Three runs were registered, three failed, the cap was set before the third, and
+the honest outcome is that **we do not get to know this.**
+
+### 81e. What a real version of this test needs
+
+Stated so the next person does not repeat it: a **local Ensembl/Compara dump or mirror**, because the
+public endpoint will not serve a large CDS reliably; **TEP1's CDS fetched directly** rather than through
+homology-with-sequence; and for the question that actually matters - selection across the ~600 My of
+lineages that kept MVP - **a codon model on a phylogeny, not pairwise NG86**, which saturates exactly
+where the interesting comparisons live.
+
+**The conservation paradox is where the article series left it.** Forty-odd gated tests, three
+registered attempts at the one question both Rome's rubric and the series named, and the answer is still
+*"I don't have an answer."*
