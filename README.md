@@ -59,7 +59,7 @@ normal, knockout zebrafish regenerating — with defects only under challenge. *
 coupling" came from CRISPR screens in rich medium, the one condition where every published model is
 also normal.** See RESULTS §70.
 
-## Provenance, and what four literature checks found
+## Provenance, and what five literature checks found
 
 **Every interactor claim below comes from one public dataset, not from us.** The anti-MVP pulldown is
 **PRIDE PXD052802** — co-IP with the synthetic antigen binding reagent VM1 against control H6, in
@@ -68,7 +68,7 @@ description analyses the same contrast we used. So these are readings of public 
 line-specific. **"Independent of PARP4" means "still present when PARP4 is removed in A549."** We did
 not establish the cell line until late in the work.
 
-**Four literature checks were run on our ten candidate novel findings. All four found prior art:**
+**Five literature checks were run on our ten candidate novel findings. All five found prior art:**
 
 | checked claim | outcome |
 |---|---|
@@ -76,12 +76,22 @@ not establish the cell line until late in the work.
 | MVP ancestral in eukaryotes, lost in fungi/plants/Ecdysozoa | **Daly et al. 2013 reached it verbatim**; we had also censused the wrong orthogroups (VIT-domain, not MVP's) |
 | the interactor readings generally | the pulldown is a **public deposit with its own analysis** of our comparison |
 | stool proteomics cannot recover a vault | **the methods principle is published** — prep bias by cellular compartment, and Tanca 2015 on differential centrifugation; only the vault application is ours |
+| **a sealed nucleotide pocket in MVP's SPFH shoulder** — the foundation of our top-ranked hypothesis | **the SPFH assignment is Tanaka et al., *Science* 2009 (PDB 4V60); the pocket is Lodwick et al., *Nat Commun* 2025 with NAD+ and ADP in deposited coordinates — and "sealed" is contradicted, since the site is lumen-facing and formed *between* two monomers, so assembly creates it rather than closing it.** The answer sat in our own `data/raw/struct/`, including a file titled *"RNA Vault with ADPR bound"* |
 
-**The pattern that emerges is the honest description of this work.** In four checks, the general version
-of each observation was already known and only the **vault-specific application** was new. That is a
-more modest contribution than "novel findings", and it is probably what two days of reanalysis against
-a forty-year-old literature can be expected to produce. The six unchecked candidates in
-[`HYPOTHESES_AND_NOVELTY.md`](HYPOTHESES_AND_NOVELTY.md) should be read on that base rate.
+**One misjudgement produced all five hits.** This work assumed the vault literature was thin because
+consensus on function is absent. **It is not thin:** four structure papers appeared in 2025-2026
+alone, an active structural group is publishing on the same questions asked here, and a functional
+knockout literature runs from 2019 to 2025. We treated the absence of consensus as licence to stop
+looking.
+
+**So the honest description of the contribution is narrow.** In every check, the general version of
+the observation was already known and only the **vault-specific application** was new. **The six
+unchecked candidates in [`HYPOTHESES_AND_NOVELTY.md`](HYPOTHESES_AND_NOVELTY.md) should be read as
+probably-known rather than provisional** — on a five-for-five base rate, that is the correct prior.
+
+**What was produced rather than rediscovered is one well-controlled negative:** MVP has no
+stoichiometric partner complex beyond PARP4 and TEP1, across every instrument available, with
+calibration gates passing. No literature check has touched it.
 
 ## What survives
 
