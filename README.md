@@ -1,53 +1,94 @@
 # A pre-registered reassessment of the vault particle (major vault protein)
 
-Nineteen pre-registered computational tests of standing hypotheses about the vault
+Forty-odd pre-registered computational tests of standing hypotheses about the vault
 ribonucleoprotein and major vault protein (MVP), run against public transcriptomic,
-proteomic, genomic, structural and comparative data. Each test carried a
-positive-control gate and an explicit kill condition written down before the
-relevant data were read.
+proteomic, genomic, structural and comparative data. Each test carried a positive-control
+gate and an explicit kill condition written down and committed before the relevant data
+were read.
 
-**Most of the hypotheses failed, including ours.** That is the result.
+**Most of the hypotheses failed, including ours. That is the result.** Of 264 ledger
+entries, **64 are struck through** — claims withdrawn, usually by us, sometimes by an
+adversarial reviewer.
+
+## The most useful thing here is not about vaults
+
+It is a worked record of **how pre-registered gates fail**. We built, and then had to
+diagnose, four distinct failure modes in a single two-day run:
+
+| failure | what happened |
+|---|---|
+| **a control that could only pass** | A specificity control required fewer than two of cohesin/condensin's subunits to be vault interactors. All four were absent from the instrument's detected proteome, so the rule could not have failed. |
+| **a kill condition that could only kill** | A replication test dichotomised a continuous measurement at a significance threshold, had 19% power at the effect actually present, and returned "kill" at p = 0.195. The continuous statistic it discarded was a +0.544 log2 shift at p = 0.004. |
+| **a refusal band wider than its estimator** | A gate registered "confirm above 75, clear below 60" on a statistic that landed at 70.0 with an SE near 8.5, making EQUIVOCAL close to pre-ordained. |
+| **the wrong statistic entirely** | Three registered criteria were reachable and resolvable but did not discriminate what they were written to discriminate — one named charge when the axis was length; one reported a percentile that was 55% likely by construction; one used fold-decline to separate a complex from a co-migration window, when the quantity that separates them is whether hit counts saturate. |
+
+The ten house rules in [`CONTRIBUTING.md`](CONTRIBUTING.md) exist because we broke each
+of them. Four were written on the second day, each after breaking the one before.
+
+One sequence is worth reading end to end as a cautionary tale: **the same question, on
+the same data, returned three different answers depending only on the statistical
+treatment** — a dichotomised null (we recorded a kill), a continuous positive (we
+upgraded it), and a physicochemically-matched null (we withdrew it) — before a donor-pool
+check invalidated the third control as well. The biology never changed. RESULTS §41,
+§49, §51, §55, §56.
 
 ## Start here
 
 | File | What it is |
 |---|---|
 | [`papers/PAPER1_vault_reassessment.md`](papers/PAPER1_vault_reassessment.md) | The reassessment: what survived, what did not, and the gate scorecard |
-| [`papers/PAPER2_bench_experiments.md`](papers/PAPER2_bench_experiments.md) | Eleven wet-lab experiments, ranked by what they decide |
-| [`LEDGER.md`](LEDGER.md) | Every idea raised, struck, or still standing — 91 entries, with the reason and the file that settled it |
-| [`RESULTS.md`](RESULTS.md) | Full per-test results and corrections |
-| `*_PREREGISTRATION.md` | The predictions, gates and kill conditions, as written before the data |
+| [`papers/PAPER2_bench_experiments.md`](papers/PAPER2_bench_experiments.md) | **Fourteen** wet-lab experiments, ranked by what they decide, each with a positive control and a kill condition |
+| [`LEDGER.md`](LEDGER.md) | Every idea raised, struck, or still standing — **264 entries**, with the reason and the file that settled it |
+| [`RESULTS.md`](RESULTS.md) | Full per-test results and corrections — 63 sections |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | The ten house rules, and the fault that produced each |
+| `*_PREREGISTRATION.md` | 44 files: the predictions, gates and kill conditions, as written before the data |
+| `grok/`, `argon/`, `channel/` | Adversarial review correspondence, verbatim |
+
+## What survives
+
+A short list, deliberately: the **MVP-PARP4-TEP1 trimer**, with TEP1 shown independent of
+PARP4 by knockdown; **ANXA2 and S100A10** as the only confirmed non-subunit interactors of
+the old membrane list; **COP1** at 27-fold in one instrument class; **myoferlin actively
+excluded**, in a wash-based pulldown and in pre-lysis covalent proximity labelling;
+**degradation machinery the most depleted annotation of 1,276** in an anti-MVP pulldown;
+a **sealed SPFH-shoulder nucleotide pocket**; and **three distinct subunit lifetimes**.
+
+One observation has survived six registered attacks and is **still not promoted**: MVP's
+sub-threshold co-elution tail is translation-enriched at the 98th percentile of 150
+comparable seeds, and not explained by degree, abundance, family membership, apparent mass,
+or seed length and charge. It stays unpromoted because one instrument cannot separate a
+specific association from the co-migration envelope it sits inside. That is what Paper 2's
+Experiment 14 is for.
 
 ## What this repository is honest about
 
-The ledger is the point of the project. Roughly twenty of its entries are the
-authors catching themselves — a mediation analysis that divided coefficients fitted
-on different subcohorts and reversed a conclusion, a cross-species comparison that
-matched human gene symbols to amoeba gene names, a result described from the bottom
-slice of a sorted table, a claim that the paper's own committed JSON contradicted on
-the facing page. Each correction sits next to the original claim rather than
-replacing it.
+Roughly a quarter of the ledger is the authors catching themselves — a mediation analysis
+that divided coefficients fitted on different subcohorts, a cross-species comparison that
+matched human gene symbols to amoeba gene names, a result described from the bottom slice
+of a sorted table, a claim the project's own committed JSON contradicted on the facing
+page, a frame indexed in the wrong order so that one matching axis was silently scrambled.
+Each correction sits next to the original claim rather than replacing it, and superseded
+entries are struck with a pointer to what overturned them.
 
-Two further language-model agents reviewed the manuscripts adversarially against the
-committed data, over three rounds. Between them they struck or qualified more than a
-dozen claims. The review correspondence is in `channel/` and `argon/`.
+Three language-model agents reviewed the manuscripts adversarially against the committed
+data, over six rounds. Between them they struck or qualified more than twenty claims. The
+sharpest single intervention asked for one number the authors' own threshold had discarded,
+and overturned the largest claim of that day.
 
-**On pre-registration.** The full development history is published here, 62 commits
-with their original timestamps, so the ordering is checkable rather than merely
-asserted. `git log --reverse` shows each prediction committed before the data it
-tested were read.
+**On pre-registration.** The full development history is published, 130 commits with their
+original timestamps, so the ordering is checkable rather than merely asserted.
+`git log --reverse` shows each prediction committed before the data it tested were read.
 
-Three redactions were made to that history, deliberately, and the final commit
-records them: references sourcing a hypothesis and an NLRP3 immunogenicity report to
-private correspondence are replaced with neutral phrasing and now marked as claims we
-could not independently source; the filenames of gitignored source transcripts are
-generalised; and local filesystem paths are made relative. Published citations are
-untouched. Nothing else about the development record has been altered, including the
+Redactions were made to that history, deliberately, and are recorded: references sourcing a
+hypothesis and an NLRP3 immunogenicity report to private correspondence are replaced with
+neutral phrasing and marked as claims we could not independently source; the filenames of
+gitignored source transcripts are generalised; and local filesystem paths are made
+relative. Published citations are untouched. Nothing else has been altered, including the
 parts where we were wrong.
 
-**Five of the nineteen tests are formally uninformative** because a control gate
-failed, and they are marked as such rather than promoted. The scorecard is in the
-introduction of paper 1.
+**Formally uninformative results are marked, not promoted.** Several tests failed their own
+gates, including two we had designed badly enough that the gate could only return one
+answer. They are reported as uninformative with the control that failed named.
 
 ## Reproducing it
 
@@ -57,19 +98,21 @@ cd argon/raw && ./fetch.sh && sha256sum -c SHA256SUMS.txt            # third-par
 ```
 
 `results/` is committed in full, so every number in the papers can be checked without
-refetching anything. `argon/raw/` is only needed to recompute from scratch; it is
-excluded because several files are publisher-hosted with licences we did not verify.
-See [`argon/raw/README.md`](argon/raw/README.md).
+refetching anything. `argon/raw/` is only needed to recompute from scratch; it is excluded
+because several files are publisher-hosted with licences we did not verify. See
+[`argon/raw/README.md`](argon/raw/README.md).
 
-Analysis scripts are in `src/` (and `argon/src/` for the second agent's tests).
+Analysis scripts are in `src/` — 73 of them — and `argon/src/` for the second agent's tests.
 
 ## Licence
 
-Dual-licensed: prose, papers and results under **CC BY 4.0**, code under **MIT**.
-See [`LICENSE`](LICENSE) for which applies to what, and for the citation. Third-party
-material read by this project is not relicensed — see [`argon/raw/README.md`](argon/raw/README.md).
+Dual-licensed: prose, papers and results under **CC BY 4.0**, code under **MIT**. See
+[`LICENSE`](LICENSE) for which applies to what, and for the citation. Third-party material
+read by this project is not relicensed — see [`argon/raw/README.md`](argon/raw/README.md).
 
 ## Status
 
-Not peer reviewed. Not submitted. Corrections are welcome and will be recorded in the
-ledger like every other correction.
+Not peer reviewed. Not submitted. No wet-lab work has been done; Paper 2 is a proposal, and
+the two experiments added last exist specifically because reanalysis provably cannot answer
+them. Corrections are welcome and will be recorded in the ledger like every other
+correction.
