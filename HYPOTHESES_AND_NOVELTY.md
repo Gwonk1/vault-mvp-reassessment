@@ -98,6 +98,32 @@ versus shell ratio against measured xenobiotic exposure per tissue.
 
 ## Part B — Top 10 things we learned about vaults that appear unnoted elsewhere
 
+### Literature-check status — read this before any probability below
+
+**Three checks have been run and all three found prior art.** The remaining claims are **provisional,
+not ranked**, and the table says which is which. A probability on an unchecked row is an opinion about
+data, not a claim about the literature.
+
+| # | claim | lit-checked | prior art found | P now |
+|---|---|---|---|---|
+| B1 | TEP1 binds independently of PARP4 | **yes** | **yes** — MVP-only Sf9 vaults; TEP1-KO vaults intact; caps add to preformed shells (~25 yr); and the dataset's own PARP4-KO analysis | **0.08** |
+| B2 | MYOF actively excluded | partial | dataset provenance (§71) | 0.25 |
+| B3 | degradation machinery most depleted | partial | dataset provenance (§71) | 0.25 |
+| B4 | stool proteomics cannot see a vault | **no** | — | 0.65 *(best-standing)* |
+| B5 | CFdb misses MVP-TEP1 at the noise floor | **no** | — | 0.60 |
+| B6 | MVP present in human gut mucus | **no** | — | 0.55 |
+| B7 | co-elution tail translation-enriched | **no** | — | 0.50 |
+| B8 | adrenal ranks first for the shell only | **no** | — | 0.45 |
+| B9 | ANXA2/S100A10 the only survivors | partial | dataset provenance (§71) | 0.30 |
+| B10 | MVP half-life ordinary; compatibility untested | **no** | — | 0.35 |
+| — | **MVP ancestral in eukaryotes, lost in fungi/plants/Ecdysozoa** | **yes** | **yes** — Daly et al. 2013 (§69a) | **withdrawn** |
+
+**The pattern: every claim that reads a published interactor list has fallen, and every claim that
+rests on a methods argument or an unremarked row in someone else's table still stands.** B4 is the
+best-standing precisely because it is about other people's protocols rather than a careful read of
+their data.
+
+
 Each carries what kind of claim it is: **[new observation]** (we measured something nobody has),
 **[new reading]** (the data are published, the observation is not), or **[uncertain novelty]**.
 

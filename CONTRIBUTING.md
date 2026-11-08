@@ -149,3 +149,30 @@ and 2.86x.
 **A bug found in one file is a hypothesis about every file.** Before moving on: grep the exact
 construction across `src/`, and re-run anything that shares it. The cost is one command; the cost of not
 doing it was a published number and a diagnosis that pointed at the wrong cause for two sections.
+
+### 13. Recover the literature before believing the finding is yours
+
+Learned by not doing it forty times (#306, #316). Every test in this project was gated on recovering a
+known positive control before the result was believed. **No test was ever gated on recovering the
+existing literature before the result was called new.**
+
+Three checks were eventually run and **all three found prior art**: a top-ranked novelty claim turned
+out to be twenty-five years old; an entire phylogenetic argument reproduced a 2013 paper's conclusion;
+and the pulldown we had analysed all day turned out to be a public deposit whose own description
+analyses the same comparison we used. We also discovered, only at that point, a substantial published
+functional literature on the protein — knockout work in five systems — that none of our forty tests had
+touched, and which reframed our central negative result.
+
+**A novelty claim needs a literature check registered as its own gate, with the same standing as a
+positive control.** Before ranking anything as unremarked:
+
+1. **Search for the claim itself**, not just the topic.
+2. **Establish the provenance of every dataset you used** — who deposited it, under what accession,
+   with what analysis already described, in what cell line. We analysed a lung-cancer line for a day
+   without knowing it was one.
+3. **Ask what the field's established view is**, so a hypothesis list is not written in ignorance of
+   the tested hypotheses.
+4. **Record the check status beside the claim**, so an unchecked claim cannot be read as a ranked one.
+
+The cheapest version of this rule is one search per claim. We ran forty tests and avoided that search,
+and it cost four withdrawn claims and one reframed paper.
