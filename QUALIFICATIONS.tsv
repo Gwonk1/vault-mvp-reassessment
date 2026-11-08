@@ -7,3 +7,6 @@ LWTP	PXD052802|A549	71	same dataset; interactor numbers are readings of public d
 not PARP4-dependent	PXD052802|A549	71	means "still present when PARP4 is removed in A549", not independence in general
 no stoichiometric partner	signalling modulat|NF-kB|transient, low-stoichiometry	70	the published function is signalling modulation; transient interactions are what these instruments recover worst
 no fitness coupling	conditional|rich medium|under challenge	70	every published vault phenotype is conditional; our screens were rich-medium only
+27-fold	PXD052802|A549	71	COP1's enrichment is from the A549 pulldown; prose forms were escaping the column-name patterns
+only confirmed non-subunit interactors	PXD052802|A549	71	ANXA2/S100A10 claim is A549-derived
+myoferlin actively excluded	PXD052802|A549	71	one arm is the A549 pulldown; the other is an independent TurboID dataset

@@ -59,6 +59,30 @@ normal, knockout zebrafish regenerating — with defects only under challenge. *
 coupling" came from CRISPR screens in rich medium, the one condition where every published model is
 also normal.** See RESULTS §70.
 
+## Provenance, and what four literature checks found
+
+**Every interactor claim below comes from one public dataset, not from us.** The anti-MVP pulldown is
+**PRIDE PXD052802** — co-IP with the synthetic antigen binding reagent VM1 against control H6, in
+**wild-type versus PARP4-knockout A549 cells**, a lung adenocarcinoma line — and the deposit's own
+description analyses the same contrast we used. So these are readings of public data, possibly
+line-specific. **"Independent of PARP4" means "still present when PARP4 is removed in A549."** We did
+not establish the cell line until late in the work.
+
+**Four literature checks were run on our ten candidate novel findings. All four found prior art:**
+
+| checked claim | outcome |
+|---|---|
+| TEP1 associates independently of PARP4 | **~25 years old** — MVP alone forms vaults in Sf9 cells, TEP1-knockout vaults stay intact, and caps incorporate into preformed shells |
+| MVP ancestral in eukaryotes, lost in fungi/plants/Ecdysozoa | **Daly et al. 2013 reached it verbatim**; we had also censused the wrong orthogroups (VIT-domain, not MVP's) |
+| the interactor readings generally | the pulldown is a **public deposit with its own analysis** of our comparison |
+| stool proteomics cannot recover a vault | **the methods principle is published** — prep bias by cellular compartment, and Tanca 2015 on differential centrifugation; only the vault application is ours |
+
+**The pattern that emerges is the honest description of this work.** In four checks, the general version
+of each observation was already known and only the **vault-specific application** was new. That is a
+more modest contribution than "novel findings", and it is probably what two days of reanalysis against
+a forty-year-old literature can be expected to produce. The six unchecked candidates in
+[`HYPOTHESES_AND_NOVELTY.md`](HYPOTHESES_AND_NOVELTY.md) should be read on that base rate.
+
 ## What survives
 
 A short list, deliberately: the **MVP-PARP4-TEP1 trimer**, with TEP1 shown independent of
