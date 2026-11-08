@@ -155,3 +155,83 @@ equality was never tested either.
 The methodological findings — degenerate matching, one-way gates, the three-answer sequence — are the
 most transferable things this project produced and are **not** on either list, because the question was
 about vaults. They are in `CONTRIBUTING.md` and RESULTS §41-§65.
+
+---
+
+## Addendum — A11, added after a user remark, and it outranks three of the original ten
+
+Graham, on hearing that furniture is "usually long-lived" and "expensive": *"maybe it makes furniture
+for the same reason that humans fart around - like Vonnegut. Maybe it just wants something else to do.
+Doubtful, but maybe."*
+
+That is **not** A5. Furniture implies a structural role. What this describes is **near-neutrality** —
+constructive neutral evolution, a spandrel, something the cell keeps building because nothing stops
+it. It is a distinct hypothesis and it deserved a test rather than a nod. Two were available in data
+already here.
+
+### Test 1 — the cost, which argues against it
+
+MVP transcript abundance, HPA consensus, 20,162 genes across 51 tissues:
+
+| tissue | MVP nTPM | percentile | PARP4 | TEP1 |
+|---|---|---|---|---|
+| adrenal gland | 176.2 | **97.5th** | 78.5th | 57.7th |
+| duodenum | 145.6 | **97.3rd** | 88.8th | 84.5th |
+| small intestine | 156.7 | **97.0th** | 86.2nd | 68.3rd |
+| colon | 161.7 | **96.6th** | 84.2nd | 69.0th |
+| lung | 119.8 | **96.3rd** | 82.5th | 62.5th |
+
+**MVP is in the top 3-4% of all transcripts wherever vaults matter.** Pure drift does not usually
+sustain that. Note also that **the shell is the expensive part and the catalytic subunits are not** —
+PARP4 and TEP1 sit 10-40 percentile points lower throughout.
+
+### Test 2 — the dispensability, which argues strongly for it
+
+eggNOG v5 eukaryotes, the five orthogroups carrying a vault inter-alpha-trypsin domain:
+
+| present | absent |
+|---|---|
+| human, mouse, chicken, *Xenopus*, zebrafish | ***Drosophila melanogaster*** |
+| ***Dictyostelium discoideum*** | ***Caenorhabditis elegans*** |
+| *Daphnia pulex*, *Nematostella vectensis* | *Saccharomyces cerevisiae*, *Arabidopsis thaliana* |
+| | *Plasmodium falciparum*, *Leishmania major*, ***Ciona intestinalis*** |
+
+**The pattern is repeated independent loss, which is the signature of a gene you can live without:**
+
+- Present in *Dictyostelium* **and** animals, so it predates their divergence — the gene is ancient.
+- **Crustaceans keep it (*Daphnia*) while insects lost it (*Drosophila*)** — lost within arthropods.
+- ***Ciona*, a chordate, lacks it while every vertebrate checked has it** — lost within chordates.
+- Absent from fungi, land plants and apicomplexans entirely.
+
+An essential machine does not get discarded independently by insects, nematodes and tunicates.
+
+**One caveat, stated because the raw number is the weak part:** only 210 of 5,090 eggNOG eukaryote
+species carry the domain, which is **4.1%** — but genome databases are heavily over-weighted toward
+fungi, all of which lack it, so that percentage is mostly a sampling artefact. **The reference-organism
+loss pattern is the real evidence; the 4.1% is not.**
+
+### A11. The vault is a tolerated extravagance — near-neutral, not functional. **~14%**
+
+Ranked above A5 (furniture, 12%), A6 (COP1, 10%), A7 (vtRNA chaperone, 8%), A8 (mechanical, 6%),
+A9 (export, 6%) and A10 (xenobiotic flux, 5%).
+
+**For:** repeated independent loss by whole phyla; no fitness coupling in CRISPR screens; and the
+single largest result of this project — ~40 registered tests finding **no functional neighbourhood of
+any kind** — is exactly what near-neutrality predicts and what every functional hypothesis has failed
+to deliver.
+
+**Against:** the 96-97th percentile expression. Constructive neutral evolution explains *retention*
+cheaply but explains *high expression* poorly; drift does not usually hold a gene in the top 3% of the
+transcriptome across five tissues.
+
+**What would decide it:** dN/dS across the lineages that retained it, against paralogues and against
+genes of matched expression. Near-neutrality predicts dN/dS approaching 1 and no detectable purifying
+selection on the SPFH pocket; a quantitative function predicts strong purifying selection on the
+pocket specifically while the shell's bulk drifts. **That is a computable test on sequence data and it
+has not been run here.**
+
+**Why it ranks where it does:** the loss pattern is strong evidence and the expression level is strong
+counter-evidence, and they do not cancel — they point at a third possibility, that the vault is under
+selection for *capacity* rather than *activity*, which is A1's buffer hypothesis arriving from the
+other direction. **A1 and A11 are the two hypotheses this project's evidence actually favours, and
+both predict exactly the absence of partners that we spent forty tests confirming.**
