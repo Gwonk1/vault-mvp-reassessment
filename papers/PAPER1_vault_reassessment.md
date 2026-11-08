@@ -4,7 +4,7 @@
 reviewed the manuscript adversarially against the committed data, in three rounds; between them they
 struck or qualified more than a dozen claims made here, and those reversals are recorded in place
 rather than quietly removed. All hypotheses were committed to a timestamped git history before the
-relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (319 entries)
+relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (320 entries)
 and `RESULTS.md` (24 sections). **That history is currently local and has not been published**, so
 the ordering it establishes is not yet independently verifiable; we state the fact rather than imply
 otherwise, and the repository is available to anyone who asks. Correspondence welcome, including
@@ -476,6 +476,28 @@ adrenal gland and the colon-small intestine-duodenum axis. Placenta ranks 38th, 
 pre-eclampsia prediction by its originator's own stated criterion.
 
 ## 3. What survives
+
+### Two standing qualifications on everything in this section
+
+**First, the provenance of every interactor number below.** They come from one dataset: **PRIDE
+PXD052802**, co-immunoprecipitation of MVP with the synthetic antigen binding reagent **VM1**
+against control **H6**, in **wild-type versus PARP4-knockout A549 cells** — a lung adenocarcinoma
+line, for a protein historically named lung resistance-related protein. **The deposit's own
+description analyses the same WT-versus-knockout contrast we use**, so the enrichments reported here
+are readings of a public dataset rather than discoveries of this work, and they may be specific to
+that cell line. "Not PARP4-dependent" below should everywhere be read as **"still present when PARP4
+is removed in A549"** rather than as independence in general.
+
+**Second, what the absence of a neighbourhood does and does not mean.** The published vault function
+is **signalling modulation** — IKK-NF-kB, calcineurin-NFATc1, STAT3, Parkin-mediated mitophagy,
+adaptive immunity on influenza rechallenge — established by knockouts in five systems. Those
+interactions are **transient, low-stoichiometry and regulatory**, which is the class co-abundance,
+native co-fractionation and wash-based immunoprecipitation recover worst.
+**So nothing below is evidence against vault function.** What survives is the narrower and still
+useful claim that
+**MVP has no stoichiometric partner complex beyond PARP4 and TEP1.** Section 70 sets this out in
+full; it is repeated here because a reader meeting the interactor tables for the first time needs it
+at that point, not sixty sections earlier.
 
 **One assembly by abundance and proximity; not by turnover or fitness.** Across thirteen
 mass-spectrometry cohorts, MVP's two closest co-abundant proteins out of 10,924 are PARP4 (r = 0.82)
