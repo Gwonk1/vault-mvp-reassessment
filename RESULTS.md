@@ -4066,9 +4066,10 @@ recorded here and in the file's own header:
 ln -sf ../../hooks/pre-commit .git/hooks/pre-commit
 ```
 
-**Until someone runs that, the gate is advisory and the failure mode remains live.** That is the honest
-state: §65's argument is that judgement degrades and scripts do not, and this project has an uninstalled
-script and a twelve-rule list, which is one step short of the point it was making.
+**Until someone runs that, the gate is advisory and the failure mode remains live.** That was the honest
+state when this section was written: §65's argument is that judgement degrades and scripts do not, and
+the project had an uninstalled script and a twelve-rule list, one step short of its own point.
+**[CLOSED — the hook was installed by the user; verified end to end in §65c.]**
 
 ### 65b. The checker fired on §65a, and we committed anyway
 
@@ -4090,5 +4091,30 @@ Two things happened at once, and both are worth recording:
    the most direct evidence available that the uninstalled hook is a live gap rather than a tidy
    footnote.
 
-The checker now reports OK, and the thing that would have stopped the commit is still sitting in
-`hooks/` uninstalled.
+The checker now reports OK. **And the hook is installed as of this commit**, so the gap §65a and §65b
+described is closed — see §65c.
+
+### 65c. Installed, and verified in both directions
+
+The hook is installed — `.git/hooks/pre-commit -> ../../hooks/pre-commit` — and tested through the
+installed path rather than by running the checker directly:
+
+| test | staged | result |
+|---|---|---|
+| **A** | clean tree, a watched document staged | **exit 0** — passes, does not obstruct ordinary work |
+| **B** | a planted `p = 0.0101` presented as a finding | **exit 1**, with the reason, the three prior occurrences, and the `--no-verify` override |
+| **restore** | violation reverted | **exit 0**, working tree matches HEAD |
+
+Test B is the one that matters: the planted line said *"the residual was p = 0.0101 and we treat it as
+a finding"* — the exact sentence shape of the error this project committed three times — and the commit
+path refused it.
+
+**So the sequence closes properly.** §62 diagnosed the failure and wrote a rule. §63-§64 committed it
+again anyway, on the retraction that diagnosed it. §65 replaced the rule with a script. §65a admitted
+the script was not installed and therefore not a mechanism. §65b watched that admission come true one
+commit later. **§65c is the first point at which the thing is actually load-bearing**, and it took a
+human running one command, because the session's own permission boundary correctly would not let an
+agent install a self-executing hook on its own authority.
+
+That boundary is worth recording as a feature rather than an obstacle: the gate now exists because
+someone who could evaluate it chose to turn it on.
