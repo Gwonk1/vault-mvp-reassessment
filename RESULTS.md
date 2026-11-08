@@ -1,5 +1,29 @@
 # Results: MVP does not belong to the chronic interferon resistance program
 
+> ### Two standing notes that qualify every pulldown section in this file
+>
+> **Provenance (established late, in §71).** Every `WT_LFC`, `LWTP` and `WTKD_*` number in §13 and
+> §41-§57 — 75 interactor terms across eight sections — comes from **one dataset: PRIDE PXD052802**,
+> co-IP of MVP with the synthetic antigen binding reagent **VM1** against control **H6**, in
+> **wild-type versus PARP4-knockout A549 cells**, a lung adenocarcinoma line. **The deposit's own
+> description analyses the same WT-versus-knockout contrast we use**, so these are readings of public
+> data rather than discoveries of this work, and may be specific to that line. Everywhere below, **"not
+> PARP4-dependent" means "still present when PARP4 is removed in A549"**, not independence in general.
+> We did not establish the cell line until §71, having analysed it for a full session.
+>
+> **Relocation (established in §70).** The published vault function is **signalling modulation** —
+> IKK-NF-kB, calcineurin-NFATc1, STAT3, Parkin-mediated mitophagy, adaptive immunity on influenza
+> rechallenge — from knockouts in five systems, and every published phenotype is **conditional**, absent
+> at baseline. Those interactions are transient and low-stoichiometry: the class these instruments
+> recover worst. **So no negative result in this file is evidence against vault function.** What the
+> negatives establish is narrower and still useful: **MVP has no stoichiometric partner complex beyond
+> PARP4 and TEP1.**
+>
+> Both notes are repeated here because this file is read in fragments and the sections they qualify were
+> written before either was known. This is the fourth place the same failure was found — a correction
+> appended at the end while the claims it qualifies stay live where a reader meets them (#262, #283,
+> #319, here).
+
 Run 2026-11-06 on public data. Predictions committed first (`PREREGISTRATION.md`, commit 837a38c); gene
 sets and acquisition code frozen second (c6a7888); deviations in `DEVIATIONS.md`.
 
