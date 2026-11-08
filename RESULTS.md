@@ -4044,3 +4044,28 @@ end of a long session, whereas a script that exits non-zero does not get tired.
 
 Run it before any commit touching those five files. Twelve rules and one check is a better ratio than
 thirteen rules.
+
+### 65a. The mechanism is shipped but not installed, and that is a real gap
+
+§65 built the checker and then told the reader to *"run it before any commit touching those five
+files"* — which is a house rule about remembering to run the mechanism, and therefore the same
+judgement-dependence §65 was written to remove. A mechanism that needs remembering is not installed.
+
+`hooks/pre-commit` is committed: it fires only when `RESULTS.md`, `LEDGER.md`, `README.md`,
+`RETRACTIONS.tsv` or a paper is staged, runs the checker, and blocks the commit with the reason and an
+explicit `--no-verify` override. **Self-tested both ways** without installing it — a planted
+`p = 0.309` is caught at the line it was planted on, and the restored tree reports OK.
+
+**It is deliberately not installed.** Installing a git hook means writing an automatically-executing
+script into `.git/hooks`, and this session's permission classifier declined that as unauthorised
+persistence — correctly, on the general principle rather than anything about this script. So the hook
+sits in the repository where it can be read before it is trusted, and installing it is one command,
+recorded here and in the file's own header:
+
+```bash
+ln -sf ../../hooks/pre-commit .git/hooks/pre-commit
+```
+
+**Until someone runs that, the gate is advisory and the failure mode remains live.** That is the honest
+state: §65's argument is that judgement degrades and scripts do not, and this project has an uninstalled
+script and a twelve-rule list, which is one step short of the point it was making.

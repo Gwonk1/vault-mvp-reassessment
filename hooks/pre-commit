@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# Retraction-consistency gate. See RESULTS.md section 65 and ledger #284-#286.
+#
+# NOT INSTALLED BY DEFAULT. This file is committed so it is visible and reviewable;
+# installing it is a separate, deliberate act:
+#
+#     ln -sf ../../hooks/pre-commit .git/hooks/pre-commit
+#
+# Fires only when a document that can carry a retracted claim is staged. Checks that
+# every pattern in RETRACTIONS.tsv appears with a retraction marker within six lines,
+# so a retraction made once stays visible wherever the retracted figure is stated.
+#
+# Bypass a single commit with:  git commit --no-verify   (and say why in the message)
+set -u
+REPO="$(git rev-parse --show-toplevel)" || exit 0
+cd "$REPO" || exit 0
+WATCHED='^(RESULTS\.md|LEDGER\.md|README\.md|RETRACTIONS\.tsv|papers/.*\.md)$'
+git diff --cached --name-only | grep -qE "$WATCHED" || exit 0
+PY=".venv/bin/python"
+[ -x "$PY" ] || PY="$(command -v python3 || true)"
+[ -n "$PY" ] || { echo "pre-commit: no python found; skipping retraction check" >&2; exit 0; }
+if ! "$PY" -I src/check_retractions.py; then
+  cat >&2 <<'MSG'
+
+pre-commit: BLOCKED by the retraction-consistency check.
+
+A retracted claim is stated somewhere without a retraction marker within six lines.
+Either annotate it where a reader meets it, or - if the claim is no longer retracted -
+remove its row from RETRACTIONS.tsv and record that in the ledger.
+
+This is the failure the project repeated three times (#262, #283, section 65).
+Override with: git commit --no-verify
+MSG
+  exit 1
+fi
