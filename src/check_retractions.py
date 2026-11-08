@@ -13,7 +13,9 @@ WINDOW = 6          # lines either side that may carry the marker
 MARKERS = re.compile(
     r'VOID|SUPERSEDED|WITHDRAWN|RETRACTED|STRUCK|\[FIXED\]|~~|corrected to|'
     r'wrong;|not valid|no longer|was wrong|overreach|degenerate|does not support|'
-    r'but see|uninformative|by construction|we led with it|invalid',
+    r'but see|uninformative|by construction|we led with it|invalid|'
+    # meta-discussion: text ABOUT the retraction machinery necessarily quotes the patterns
+    r'planted|self-test|RETRACTIONS\.tsv|check_retractions|caught at the line',
     re.I)
 TARGETS = ['RESULTS.md', 'LEDGER.md', 'README.md',
            'papers/PAPER1_vault_reassessment.md', 'papers/PAPER2_bench_experiments.md']

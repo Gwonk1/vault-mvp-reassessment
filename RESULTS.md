@@ -4069,3 +4069,26 @@ ln -sf ../../hooks/pre-commit .git/hooks/pre-commit
 **Until someone runs that, the gate is advisory and the failure mode remains live.** That is the honest
 state: §65's argument is that judgement degrades and scripts do not, and this project has an uninstalled
 script and a twelve-rule list, which is one step short of the point it was making.
+
+### 65b. The checker fired on §65a, and we committed anyway
+
+Immediately after writing §65a — the section arguing that an advisory gate is not a gate — **the
+checker failed, and the commit went through.** The flagged line was §65a's own description of the
+self-test: *"a planted `p = 0.309` is caught at the line it was planted on"*. The checker was right
+that a retracted figure appeared without a marker, and wrong only in that the sentence was never a
+claim about the vault.
+
+Two things happened at once, and both are worth recording:
+
+1. **A real false-positive class.** Documentation *about* retraction machinery necessarily quotes the
+   patterns that machinery watches for. The marker vocabulary now includes `planted`, `self-test`,
+   `RETRACTIONS.tsv`, `check_retractions` and `caught at the line`, and the script's docstring records
+   why the exemption exists.
+2. **The gate being advisory is not a hypothetical.** The checker ran, printed FAIL, and the output
+   scrolled past inside a longer command while the commit proceeded — because nothing was enforcing
+   it. **§65a predicted this in the abstract and then demonstrated it in the same commit**, which is
+   the most direct evidence available that the uninstalled hook is a live gap rather than a tidy
+   footnote.
+
+The checker now reports OK, and the thing that would have stopped the commit is still sitting in
+`hooks/` uninstalled.
