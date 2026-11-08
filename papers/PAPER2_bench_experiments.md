@@ -286,11 +286,18 @@ established 14-3-3 or WW-domain partner from the same lysate.
 
 ### 12. Is MVP a COP1 substrate, or is COP1 a passenger?
 
-**Decides:** whether the only well-replicated non-subunit vault partner (three independent
-instruments,
-#194) is there as a ubiquitin ligase acting on the vault, or is present for some other
-reason. This is the one new partner this analysis earned, and we cannot interpret it computationally
-(§47).
+**Decides:** whether the best-replicated non-subunit vault partner is there as a ubiquitin ligase
+acting on the vault, or is present for some other reason.
+**The replication is narrower than we first claimed:** #194 called it three independent instruments,
+and #206 corrected that - the anti-MVP IP-MS, BioPlex AP-MS and a 2014 TAP are three *datasets* but
+**one instrument class**, all lysis plus affinity matrix plus MS, so dataset independence is real
+and method independence is absent. What stands is COP1 at **WT_LFC +4.74, about 27-fold, LWTP 2.59,
+and not PARP4-dependent** in the pulldown, with the supporting IntAct evidence at chance once PARP4
+is set aside (#206). An orthogonal instrument - pre-lysis covalent labelling, crosslinking or
+reconstitution - has never been applied to this pair, which is part of what makes the bench the
+right next step. We cannot interpret it computationally (§47), and §48c records why DDB1's absence
+(present in the universe, not an interactor at LWTP 0.71) is positive evidence for free COP1 over an
+assembled CRL4 holocomplex.
 
 **Design:** co-immunoprecipitate COP1 and MVP reciprocally in a cell line where both are expressed,
 then (a) ask whether endogenous MVP carries ubiquitin by immunoblot after COP1 knockdown versus
