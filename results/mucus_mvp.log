@@ -1,0 +1,25 @@
+==============================================================================
+gutjnl-2018-317571supp002.xlsx  (853 quantified proteins, 672 annotated IC)
+  MVP       median intensity    102,410,968  ann=IC  core=None  uniq_pep=52   pct_all= 94.4 pct_IC= 95.1
+  ACTB      not quantified in this table
+  GAPDH     median intensity    161,870,316  ann=IC  core=None  uniq_pep=31;1;1 pct_all= 96.0 pct_IC= 96.6
+  HSPA8     median intensity    164,531,597  ann=IC  core=None  uniq_pep=32   pct_all= 96.4 pct_IC= 97.0
+  ANXA2     median intensity    283,505,895  ann=S   core=Yes   uniq_pep=52;40 pct_all= 97.2 pct_IC= 97.9
+  MUC2      median intensity    327,595,151  ann=S   core=Yes   uniq_pep=85;0 pct_all= 97.9 pct_IC= 98.1
+  ALB       median intensity  1,173,505,176  ann=P   core=None  uniq_pep=90;90 pct_all= 99.9 pct_IC=100.0
+  S100A10   not quantified in this table
+  LGALS3    median intensity     95,231,088  ann=S   core=Yes   uniq_pep=15   pct_all= 94.1 pct_IC= 94.9
+  --> MVP / GAPDH intensity ratio = 0.63
+==============================================================================
+gutjnl-2018-317571supp004.xlsx  (1457 quantified proteins, 1143 annotated IC)
+  MVP       median intensity  3,713,988,260  ann=IC  core=None  uniq_pep=52   pct_all= 94.8 pct_IC= 94.9
+  ACTB      median intensity  3,431,965,454  ann=IC  core=None  uniq_pep=2;2;0;0;0;0;0 pct_all= 94.4 pct_IC= 94.6
+  GAPDH     median intensity 11,588,514,266  ann=IC  core=None  uniq_pep=30;1 pct_all= 98.0 pct_IC= 98.3
+  HSPA8     median intensity  7,864,763,387  ann=IC  core=None  uniq_pep=32   pct_all= 97.5 pct_IC= 97.7
+  ANXA2     median intensity 11,710,395,677  ann=S   core=Yes   uniq_pep=51;40 pct_all= 98.1 pct_IC= 98.4
+  MUC2      median intensity 60,582,507,664  ann=S   core=Yes   uniq_pep=99;1;1 pct_all= 99.7 pct_IC= 99.7
+  ALB       median intensity 175,311,044,850  ann=P   core=None  uniq_pep=94;94 pct_all= 99.9 pct_IC=100.0
+  S100A10   median intensity     61,932,928  ann=IC  core=None  uniq_pep=4    pct_all= 32.1 pct_IC= 32.6
+  LGALS3    median intensity  3,011,785,751  ann=S   core=Yes   uniq_pep=16   pct_all= 93.8 pct_IC= 94.1
+  --> MVP / GAPDH intensity ratio = 0.32
+  --> MVP / ACTB  intensity ratio = 1.08

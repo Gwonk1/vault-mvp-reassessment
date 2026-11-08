@@ -3535,3 +3535,78 @@ reason the protocol separated the two.
   important design point, and it is the kind of detail that decides whether a negative means anything.
 - **Mucus remains entirely unexamined.** We have no accession and found no human mucus proteome with a
   protein list, and we are not substituting a related matrix for it.
+
+## 59. MVP *is* in human gut mucus — and it is exactly where cell leakage would put it
+
+`FECAL_MUCUS_PROTOCOL.md`. **Registered outcome: MVP REPORTED in qualifying datasets.** Our registered
+expectation was that MVP would be absent or that the datasets would fail to qualify. **That was wrong,
+and #235 is corrected: the mucus half of our literature claim was simply mistaken.**
+
+Source: van der Post et al., *"Structural weakening of the colonic mucus barrier is an early event in
+ulcerative colitis pathogenesis"*, **Gut 2019; PMID 30914450, PMC6872445, DOI
+10.1136/gutjnl-2018-317571**, PRIDE PXD012632. Open access, supplementary tables retrieved via Europe
+PMC's `supplementaryFiles` API — the route that failed for the stool paper.
+
+### 59a. The identification is solid
+
+| | colon mucus (Table S5) | ileal mucus (Table S6) |
+|---|---|---|
+| UniProt | Q14764, "Major vault protein" | Q14764 |
+| **unique peptides** | **52** | **52** |
+| median normalised intensity | 1.02e8 | 3.71e9 |
+| **percentile of all quantified proteins** | **94.4** (of 853) | **94.8** (of 1,457) |
+
+**Fifty-two unique peptides** for an 893-residue protein is deep coverage, and MVP sits in the **top 6%
+of the mucus proteome by intensity in both tissues.** This is not a trace hit. Gate passed in all three
+tables (colon: GAPDH + HSPA8; ileum: ACTB + GAPDH + HSPA8; secreted controls ALB, LTF, MUC2 present).
+
+### 59b. And the comparison that matters says leakage
+
+Leakage of cytoplasmic protein into mucus should scale with cellular abundance, and ACTB, GAPDH and
+HSPA8 are all far more abundant in cells than MVP. So if MVP were being *exported* rather than spilled,
+it should stand **above** them. It does not:
+
+| protein | colon pct | ileum pct | MVP ratio (ileum) | authors' annotation |
+|---|---|---|---|---|
+| GAPDH | 96.0 | 98.0 | **MVP/GAPDH = 0.32** | IC |
+| HSPA8 | 96.4 | 97.5 | — | IC |
+| ACTB | — | 94.4 | **MVP/ACTB = 1.08** | IC |
+| **MVP** | **94.4** | **94.8** | — | **IC** |
+| ANXA2 | 97.2 | 98.1 | — | **S**, core=Yes |
+| MUC2 | 97.9 | 99.7 | — | **S**, core=Yes |
+
+Four things point the same way:
+
+1. **MVP is below GAPDH and HSPA8 and level with ACTB** — precisely the ordering cellular abundance
+   predicts, with no excess.
+2. **The authors annotate MVP as `IC` (intracellular)**, not `S` (secreted) or `P` (plasma).
+3. **MVP is not in their "core mucus proteome"** — ANXA2, MUC2 and LGALS3 carry `core=Yes`; MVP's field
+   is empty.
+4. **672 of 853 colon proteins and 1,143 of 1,457 ileal proteins are annotated `IC`.** Roughly 79% of
+   these mucus proteomes is intracellular protein, so the dataset as a whole is dominated by shed and
+   lysed cells. MVP's presence is unremarkable within that.
+
+**And PARP4 and TEP1 are absent from all three tables**, so there is no evidence of an intact particle —
+only of MVP. That is weak evidence against a particle, since both are substoichiometric and far harder
+to detect than a protein contributing ~75% of vault mass, but it is the evidence available.
+
+### 59c. What this does to the export hypothesis
+
+**It is found and it does not support the hypothesis.** MVP reaches gut mucus in quantity, which the
+literature already records and we had wrongly said it did not. But the hypothesis predicted MVP would
+be *exported* — and in the one dataset able to test it, MVP's abundance is what spillage from dying
+epithelium predicts, it is classified intracellular by the people who generated it, it is excluded from
+their core secreted set, and it sits in a proteome that is four-fifths intracellular protein.
+
+**This is the cleanest possible outcome for the question as asked.** The prediction was specific, the
+data existed, we found it, and the answer is no — not "underpowered", not "uninformative", not
+"equivocal". After a day of gates that could only say one thing, a test that simply answers is worth
+noting.
+
+Two things it does **not** settle:
+
+- **Stool is still unexamined** (§58): the one workflow we could evaluate discards the fraction a vault
+  would sediment into, so nothing here speaks to the lumen.
+- **A loaded-versus-empty question is untouched.** Graham's hypothesis was not only that vaults get out
+  but that *what is inside them* differs when they do. Nothing in a bulk mucus proteome addresses
+  cargo, and Paper 2's Experiment 13 remains the way to ask it.
