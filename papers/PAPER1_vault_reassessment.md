@@ -4,7 +4,7 @@
 reviewed the manuscript adversarially against the committed data, in three rounds; between them they
 struck or qualified more than a dozen claims made here, and those reversals are recorded in place
 rather than quietly removed. All hypotheses were committed to a timestamped git history before the
-relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (262 entries)
+relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (264 entries)
 and `RESULTS.md` (24 sections). **That history is currently local and has not been published**, so
 the ordering it establishes is not yet independently verifiable; we state the fact rather than imply
 otherwise, and the repository is available to anyone who asks. Correspondence welcome, including
@@ -92,13 +92,18 @@ relevant data were examined. Where a gate failed, the result is reported as unin
 than reinterpreted. Where our own analysis was wrong, the correction is recorded alongside the
 original.
 
-**The gate scorecard, stated up front.** Of thirty-three tests, twenty-two returned an informative
-verdict with their positive controls recovered; **eight carry a formal verdict of UNINFORMATIVE in
-their own committed output**; and three passed partially - the CRISPR corpus, where the genotoxic
-screen class failed its control while viral and immune-killing classes passed; the LRP
-decomposition, where ABCC1 failed to predict its own substrates; and the SMC5/6 test, whose primary
-multiple-testing arm was informative while its specificity control turned out to have no power to
-fail (see below).
+**The gate scorecard, stated up front.** The enumeration in this section covers the first
+thirty-three registered tests. A further nine were registered and run afterwards and are itemised
+individually in the ledger with their own verdicts, including two that returned EQUIVOCAL or
+UNINFORMATIVE on gates we had designed badly and one whose control we later invalidated ourselves;
+we do not restate a running total here, because every later verdict is tabulated at its own ledger
+entry and a summary figure would go stale faster than it informs. Of those first thirty-three tests,
+twenty-two returned an informative verdict with their positive controls recovered; **eight carry a
+formal verdict of UNINFORMATIVE in their own committed output**; and three passed partially - the
+CRISPR corpus, where the genotoxic screen class failed its control while viral and immune-killing
+classes passed; the LRP decomposition, where ABCC1 failed to predict its own substrates; and the
+SMC5/6 test, whose primary multiple-testing arm was informative while its specificity control turned
+out to have no power to fail (see below).
 
 **Three further tests were declined before registration rather than run**, because a presence check
 showed they could not discriminate: a BioPlex replication of the physical interactome (seven of

@@ -2490,7 +2490,9 @@ first. Checking the record provenance:
 
 So:
 
-- **COP1 has three genuinely independent physical instruments:** the anti-MVP IP-MS (WT_LFC +4.74,
+- **COP1 has three genuinely independent physical instruments** — **[SUPERSEDED, see §55c: these are
+  three datasets but ONE instrument class, since TAP, BioPlex AP-MS and this IP-MS are all lysis plus
+  affinity matrix plus MS]** — the anti-MVP IP-MS (WT_LFC +4.74,
   LWTP 2.59, not PARP4-dependent), BioPlex AP-MS, and a 2014 tandem-affinity purification. **It is the
   only non-subunit protein in this entire project with that much cross-instrument support.**
 - **MAP7 does not.** Its IntAct record is the BioPlex record, so it has two instruments, not three — and
@@ -2743,7 +2745,10 @@ mitochondrial large ribosomal subunit (+0.560), cytosolic ribosome (+0.272), cyt
 subunit (+0.486), translation (+0.280). A thresholding artefact does not produce a nested family of
 eight related annotations at the top of an unbiased 1,276-term scan.
 
-**So the convergence across instrument classes is real**: translation is enriched at the 98.0th
+**[SUPERSEDED - see §51, §55b and §56a. The contact half of this convergence was withdrawn, restated
+as a residual bound, and that bound then invalidated because the matching donor pool is 77%
+translation-adjacent. The co-elution result stands alone.]** ~~So the convergence across instrument
+classes is real~~: translation is enriched at the 98.0th
 percentile of 150 seeds in native co-elution (§40) and in the top 1.8% of all terms in physical contact.
 §41's kill is formally withdrawn.
 
@@ -3040,7 +3045,10 @@ charge −17.2**, closely matching MVP's 893 and −28.5, so the matching worked
 
 - **neighbour median fold: 1.38x**
 - **neighbour maximum fold: 9.84x**
-- **MVP: 18.49x — the 100.0th percentile of its own look-alikes**
+- **MVP: 18.49x — the 100.0th percentile of its own look-alikes** **[but see §55c: conditional on MVP
+  already being the 98.0th percentile of 150 seeds, 0.98^30 = 0.545, so a pre-chosen 98th-percentile
+  seed tops all 30 of a random 30-set 55% of the time. This number is nearly uninformative and we led
+  with it.]**
 
 Nearest eight by profile: STAT2 (1.18x), INPP4B (0.79x), ITGB3 (0.39x), DIEXF (1.18x), CTAGE4 (1.18x),
 RABL6 (1.57x), SSH1 (1.57x), LLGL1 (1.97x).
