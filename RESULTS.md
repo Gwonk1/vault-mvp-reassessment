@@ -3258,7 +3258,11 @@ percentile sits just under RPL7 and RPS6 at 98.7. Grok's summary is the sharpest
 
 > *"A vault that co-elutes like a ribosomal protein and co-precipitates translation proteins at a
 > residual +0.070 log2 (p = 0.174), against a core of +7.516, is co-fractionation without a
-> co-complex."*
+> co-complex."
+
+**[The quoted residual and its p = 0.174 are VOID — §63 shows they came from the degenerate three-way
+matching. Grok's point about co-fractionation versus co-complex does not depend on them; the numbers
+it was handed do.]**"*
 
 And MVP's 98 sits exactly in the high cluster — dynein 96.0, proteasome 92.7, condensin/cohesin 91.3 —
 *"which is where a polysome-overlapping cytoplasmic profile lands."* **Two controls we never ran:
@@ -4008,3 +4012,35 @@ checks across all 73 scripts in `src/`:
 **So the bug class is contained to the two scripts already named.** That is a more useful statement
 than "we fixed two instances", because it is the difference between a repair and a bound. It took one
 command, which is the point rule 12 is making.
+
+## 65. A mechanism instead of a thirteenth house rule
+
+Three occurrences of one documentation failure — a retraction appended at the end while the original
+number stays stated as live where a reader meets it (#262, then #283 on the very retraction that
+diagnosed it) — is enough to establish that writing the lesson down does not install it. So this one
+gets a mechanism.
+
+`RETRACTIONS.tsv` lists every retracted claim as a literal pattern, what retracted it, and why.
+`src/check_retractions.py` fails if any pattern appears in `RESULTS.md`, `LEDGER.md`, `README.md` or
+either paper **without a retraction marker within six lines.**
+
+**It found two violations on its first run**, which is the only honest advertisement a checker needs:
+
+1. **A false positive** — §53b's look-alike figure *does* carry an inline note, but the note's wording
+   (*"but see §55c"*, *"nearly uninformative"*, *"by construction"*) was absent from the marker
+   vocabulary. The marker list was the thing at fault, and it is extended.
+2. **A genuine miss** — §55d quotes Grok's sharpest sentence, which contains *"a residual +0.070 log2
+   (p = 0.174)"*. That p is void by §63, and a reader meets it inside a quotation presented
+   approvingly. **Grok's argument about co-fractionation versus co-complex does not depend on the
+   number; the number it was handed does.** Annotated.
+
+The checker now reports `OK: 13 retracted claims checked across 5 documents`.
+
+**What this is and is not.** It cannot tell whether a claim *should* be retracted — that judgement stays
+with the ledger. It only enforces that a retraction, once made, is visible wherever the retracted figure
+appears. That is the narrow failure this project kept repeating, and it is the kind of failure a grep can
+hold and a house rule cannot: rules 1-12 all describe judgement, and judgement is what degrades at the
+end of a long session, whereas a script that exits non-zero does not get tired.
+
+Run it before any commit touching those five files. Twelve rules and one check is a better ratio than
+thirteen rules.

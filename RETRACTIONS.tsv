@@ -1,0 +1,14 @@
+# pattern	retracted_by	note
+p = 0.309	§63	three-way matched; degenerate cells
+p = 0.174	§63	three-way matched; degenerate cells
+p = 0.184	§63	three-way matched; degenerate cells
+p = 0.0526	§63	three-way matched; degenerate cells
+p = 0.0101	§63	three-way matched; degenerate cells
+2.48x	§64b	buggy frame order; correct value 2.86x
+three independent physical instruments	§55c	one instrument class counted three times
+three genuinely independent	§55c	one instrument class counted three times
+appears in BOTH instrument classes	§63c	contact half withdrawn
+convergence across instrument classes is real	§63c	contact half withdrawn
+100.0th percentile of its own look-alikes	§55c	0.98^30 = 0.545, 55% by construction
+mistook the former for the latter	§55	slogan withdrawn
+three distinct subunit lifetimes	§61b	compatibility never tested
