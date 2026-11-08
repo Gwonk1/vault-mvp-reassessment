@@ -40,7 +40,13 @@ with gzip.open('data/raw/eggnog/gencode.v25.pc_translations.fa.gz','rt') as fh:
     if name and name in uni:
         s=''.join(buf)
         if name not in seq or len(s)>len(seq[name]): seq[name]=s
-G=pd.DataFrame({'len':[len(seq[g]) for g in seq],'chg':[chgk(seq[g]) for g in seq]},index=list(seq))
+# FIXED (section 64): was index=list(seq), i.e. GENCODE FILE ORDER, which silently scrambles the
+# abundance proxy - section 41 established the proxy IS table order, there being no intensity column.
+# The published #243 figures (65 cells, 189 donors, 2.48x) came from the broken frame.
+G=pd.DataFrame({'WT_LFC':D['WT_LFC']})
+G['len']=[len(seq[g]) if g in seq else np.nan for g in G.index]
+G['chg']=[chgk(seq[g]) if g in seq else np.nan for g in G.index]
+G=G.dropna()
 G['ab']=pd.qcut(pd.Series(np.arange(len(G)),index=G.index).rank(method='first'),10,labels=False,duplicates='drop')
 G['ld']=pd.qcut(G['len'].rank(method='first'),10,labels=False,duplicates='drop')
 G['cd']=pd.qcut(G['chg'].rank(method='first'),10,labels=False,duplicates='drop')

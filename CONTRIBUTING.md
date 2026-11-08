@@ -136,3 +136,16 @@ eventually hide a live problem.** From here, a remediated-but-true entry is mark
 pointer to the fix. We are not retro-editing the 64 existing struck entries, because corrections in this
 repository sit next to claims rather than replacing them — the convention change applies going forward
 and #80 carries the annotation in place.
+
+### 12. When you find a bug in one script, grep the idiom across all of them
+
+Learned by missing it twice (#280). We found a frame built in GENCODE FASTA order rather than table
+order in `export_test.py`, where it silently scrambled one of three matching axes. A registered gate
+caught it before publication, we wrote that up approvingly, and we did not look at the other scripts
+using the same idiom. One of them, `donor_and_k.py`, had already been run, so its figures went into the
+ledger and stayed there — 65 cells, 189 donors, a 2.48x ratio, where the correct frame gives 35, 129
+and 2.86x.
+
+**A bug found in one file is a hypothesis about every file.** Before moving on: grep the exact
+construction across `src/`, and re-run anything that shares it. The cost is one command; the cost of not
+doing it was a published number and a diagnosis that pointed at the wrong cause for two sections.

@@ -3919,3 +3919,55 @@ two full sections without once checking how many proteins were in a cell.
    random triplets do nothing. Also: **keeping UNINFORMATIVE was right** — *"if neither direction
    separates"* is sufficient for silence, not an iff, and must-clause 1 is unmet because absent controls
    do not sit in the bottom 25%.
+
+## 64. The same indexing bug, a third time — and this one was published
+
+Following §63's retraction, we audited every script for multi-axis matching. Four use the three-way
+decile cross; fifteen use the single abundance axis alone and are unaffected. **But two of the four
+built their analysis frame in the wrong order, and one of those numbers is in the published ledger.**
+
+### 64a. The audit
+
+| script | section | matching axes | frame order | status |
+|---|---|---|---|---|
+| `ribosome_property.py` | §51 | ab × ld × cd | **table (correct)** | p-values void by degeneracy (§63) |
+| `export_test.py` | §57 | ab × ld × cd | **was GENCODE — caught before publishing** | p-values void by degeneracy (§63) |
+| `donor_and_k.py` | §56a | ab × ld × cd | **GENCODE — PUBLISHED as #243** | **figures wrong, corrected below** |
+| `donor_restricted.py` | §63 | ab × ld × cd | table (correct) | the rerun; correctly NON-IDENTIFIABLE |
+| 15 others | — | `ab` only | — | **unaffected; ~117 proteins per cell** |
+
+The bug is always the same line: building the frame with `index=list(seq)`, which is **GENCODE FASTA
+file order**, when §41 established that the abundance proxy **is table order** because the IP-MS table
+has no intensity column. It silently scrambles one of three matching axes.
+
+### 64b. #243's figures were all wrong, and the correct ones are worse for us
+
+Recomputed on both orderings for `GOBP_CYTOPLASMIC_TRANSLATION`:
+
+| | cells | donors | adjacent fraction | universe | **ratio** |
+|---|---|---|---|---|---|
+| GENCODE order — **what #243 published** | 65 | 189 | 0.772 | 0.311 | **2.48x** |
+| table order — **correct** | **35** | **129** | **0.891** | 0.311 | **2.86x** |
+
+Fewer cells, fewer donors, **89.1% of available donors translation-adjacent rather than 77.2%**, and a
+higher ratio. **The direction of #243's conclusion was right and every number in it was wrong.**
+
+It also explains §63 exactly: 129 donors across 35 cells is 3.7 per cell, and at 89.1% adjacency that
+leaves roughly **0.4 non-adjacent donors per cell** — which is why the restricted rerun found a median
+of **zero**.
+
+### 64c. Why this one stings
+
+This is the **third** appearance of one bug. We found it in `export_test.py` before publishing, said so
+in §57a, and praised the gate for catching it — and then did not check the other scripts that shared
+the idiom. The script carrying it into the ledger had already been written and run **before** we found
+the bug elsewhere, so the fix went forward and never went back.
+
+**House rule 12: when a bug is found in one script, grep the idiom across all of them before moving
+on.** The gate caught it once. Nothing caught it twice, because we treated a class of error as an
+incident.
+
+Three corrections stand regardless of the arithmetic: §63's degeneracy finding (which rests on the
+correctly-ordered `donor_restricted.py`), the retraction of every three-way-matched p-value, and the
+one-way abundance-matched class shift at p = 0.004 (ten cells, ~117 proteins each, and no sequence
+axis at all, so untouched by any of this).
