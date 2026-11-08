@@ -42,11 +42,74 @@ out of that resting state.**
 
 ---
 
+## Provenance of every interactor-derived premise — read before designing anything
+
+**Every experiment below that names a vault interactor inherits one dataset, and it is not ours.**
+
+The anti-MVP pulldown is **PRIDE PXD052802**: co-immunoprecipitation with the synthetic antigen
+binding reagent **VM1** against control **H6**, in **wild-type versus PARP4-knockout A549 cells** —
+a **lung adenocarcinoma line.** The deposit's own description reports that PARP4 and other proteins
+were significantly enriched in the WT-versus-KO comparison, which is the comparison we used.
+**Three consequences bear on experimental design:**
+
+1. **The interactor enrichments are not a discovery of this project.** Experiments premised on COP1,
+ANXA2, S100A10, NBR1, ATP7A or the absence of myoferlin are following up someone else's analysis,
+and should be designed and credited as such.
+2. **They may be A549-specific.** Every interactor number quoted below comes from one cancer cell line
+of one tissue, for a protein historically named *lung resistance-related protein*. **Any experiment
+using these premises should confirm the interaction in a second, non-lung, non-transformed
+background before building on it.**
+3. **The knockout background matters.** The contrast is WT against **PARP4-knockout**, so "not
+PARP4-dependent" means "still present when PARP4 is gone in A549" — not "independent of PARP4 in
+general."
+
+Section 70 adds the framing point: **the published vault function is signalling modulation under
+challenge**, and transient regulatory interactions are what this pulldown recovers worst. **An
+experiment that sets out to confirm a stable physical partner is testing the hypothesis the
+instruments were already poorly suited to.**
+
 ## Tier 1 - decides the most, costs the least
+
+### 15. Is the published signalling function the shell's or the caps'?
+
+**Decides:** the one question section 70's literature leaves wide open, and the experiment this
+project's own evidence points at most directly. **Every published functional result uses MVP
+knockout** — NF-kB and high-fat-diet metabolic phenotypes, calcineurin-NFATc1 osteoclastogenesis,
+STAT3 suppression, Parkin-mediated mitophagy, influenza antibody responses. Deleting MVP removes the
+shell *and* abolishes the particle, so no published result distinguishes a function of the 78-mer
+from a function of PARP4 or TEP1 riding on it.
+
+**Why this project makes it the obvious next experiment.** Section 43 shows **TEP1 associates
+independently of PARP4**; A12 argues the **bare shell is what the cell invests in**, with MVP's
+transcript at the 96th-97th percentile while PARP4 sits at 78-89 and TEP1 at 58-85; section 97 shows
+**adrenal ranks first for the shell alone while the armed holoenzyme peaks in gut mucosa.** If the
+shell and the caps are separably abundant, they may be separably functional — and nothing in the
+literature has asked.
+
+**Design:** in a single cell background, compare **MVP-null**, **PARP4-null**, **TEP1-null** and
+**PARP4/TEP1 double-null** (the last retaining a bare shell, which is known to assemble — MVP alone
+forms vaults in Sf9 cells) against wild type, on two published readouts with the clearest
+mechanisms: **NF-kB reporter activity after an inflammatory stimulus**, and **mitophagy flux**. Run
+at rest and under challenge, since every published phenotype is conditional.
+
+**Positive control:** the MVP-null must reproduce the published direction on at least one readout.
+If it does not, the cell background cannot support the assay and nothing else is interpretable.
+
+**Kill condition and what each outcome means:** if the **PARP4/TEP1 double-null behaves like wild
+type** while MVP-null does not, the function is the **shell's**, and A12 is promoted from a ranking
+exercise to a result. If the double-null behaves like the **MVP-null**, the function requires the
+caps and the bare shell is a scaffold — which would make the adrenal shell-only tissue pattern a
+puzzle worth its own experiment.
+**Either answer is publishable and neither has been obtained.**
+
 *(Order revised after adversarial review: perturbation experiments first, since the resting state is
 uninformative by design. Experiment numbers are retained as stable identifiers; the sequence below
 is the recommended running order.)*
 ### 2. Does membrane breach trigger TEP1 NADase activity?
+
+**Premise caveat:** the ANXA2 and S100A10 enrichments cited here are from PXD052802 in A549 cells
+and are not this project's finding (see Provenance above, and ledger B9 at ~0.30). Confirm both in a
+second background before treating them as the membrane link.
 **Decides:** our single most specific joint hypothesis, assembled from two literatures that had not
 met.
 **The convergence:** TEP1 is an autoinhibited TIR-family NAD(P)ase (E1008 catalytic) whose STAND
@@ -90,6 +153,8 @@ nicotinamide with no cADPR rise**, abolished in TEP1-E1008A.
 control depletes normally. That kills the breach-trigger model cleanly.
 
 ### 3. What opens the shell?
+
+**Premise caveat:** as Experiment 2 — the ANXA2/S100A10 premise is A549-derived and not ours.
 **Decides:** constraint 1 above, and the born-loaded versus loaded-on-demand fork.
 **Why now:** free NAD+ *does* reach the pocket of intact cages - that is constraint 1, and it is why
 this experiment is no longer about admitting NAD+. What is unknown is the **door and the traffic
@@ -295,6 +360,10 @@ established 14-3-3 or WW-domain partner from the same lysate.
 
 ### 12. Is MVP a COP1 substrate, or is COP1 a passenger?
 
+**Premise caveat:** COP1's +4.74 enrichment is from PXD052802 in A549 cells, and the deposit's own
+description analyses the same WT-versus-PARP4-KO contrast, so the enrichment is not ours to claim.
+The experiment remains worth doing; the credit and the cell-line caveat both change.
+
 **Decides:** whether the best-replicated non-subunit vault partner is there as a ubiquitin ligase
 acting on the vault, or is present for some other reason.
 **The replication is narrower than we first claimed:** #194 called it three independent instruments,
@@ -401,37 +470,6 @@ treatments, since they are the particle.
 persist, §40 is the co-migration artefact grok's audit describes, and the translation thread closes
 for good.
 
-### 15. Is the published signalling function the shell's or the caps'?
-
-**Decides:** the one question section 70's literature leaves wide open, and the experiment this
-project's own evidence points at most directly. **Every published functional result uses MVP
-knockout** — NF-kB and high-fat-diet metabolic phenotypes, calcineurin-NFATc1 osteoclastogenesis,
-STAT3 suppression, Parkin-mediated mitophagy, influenza antibody responses. Deleting MVP removes the
-shell *and* abolishes the particle, so no published result distinguishes a function of the 78-mer
-from a function of PARP4 or TEP1 riding on it.
-
-**Why this project makes it the obvious next experiment.** Section 43 shows **TEP1 associates
-independently of PARP4**; A12 argues the **bare shell is what the cell invests in**, with MVP's
-transcript at the 96th-97th percentile while PARP4 sits at 78-89 and TEP1 at 58-85; section 97 shows
-**adrenal ranks first for the shell alone while the armed holoenzyme peaks in gut mucosa.** If the
-shell and the caps are separably abundant, they may be separably functional — and nothing in the
-literature has asked.
-
-**Design:** in a single cell background, compare **MVP-null**, **PARP4-null**, **TEP1-null** and
-**PARP4/TEP1 double-null** (the last retaining a bare shell, which is known to assemble — MVP alone
-forms vaults in Sf9 cells) against wild type, on two published readouts with the clearest
-mechanisms: **NF-kB reporter activity after an inflammatory stimulus**, and **mitophagy flux**. Run
-at rest and under challenge, since every published phenotype is conditional.
-
-**Positive control:** the MVP-null must reproduce the published direction on at least one readout.
-If it does not, the cell background cannot support the assay and nothing else is interpretable.
-
-**Kill condition and what each outcome means:** if the **PARP4/TEP1 double-null behaves like wild
-type** while MVP-null does not, the function is the **shell's**, and A12 is promoted from a ranking
-exercise to a result. If the double-null behaves like the **MVP-null**, the function requires the
-caps and the bare shell is a scaffold — which would make the adrenal shell-only tissue pattern a
-puzzle worth its own experiment.
-**Either answer is publishable and neither has been obtained.**
 
 ## What a home run looks like
 
