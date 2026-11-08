@@ -79,6 +79,47 @@ def check_qualifications():
     return len(bad), len(quals)
 
 
+
+# ---------------------------------------------------------------------------
+# Check 3: superseded result logs must carry a banner.
+#
+# We do NOT run the retraction patterns over results/*.log. Those patterns are
+# bare decimals (0.184, 0.0526, 0.174) and logs are dense with unrelated floats,
+# so they cannot discriminate: of six hits in results/, three were genuine void
+# values and three were coincidences (a null_sd that happens to equal 0.174, a
+# model CI bound of 0.0526, a Spearman rho of 0.1842505...).
+#
+# And the obvious fix INVERTS the outcome. Adding (?!\d) so a pattern stops
+# matching the prefix of a longer float would suppress the two GENUINE hits
+# (p=0.18352908..., p=0.05261473...) while keeping both coincidental short
+# floats. A prose instrument does not become a numeric one by tightening it.
+#
+# So logs are gated on a tractable property instead: a log known to be
+# superseded must say so at the top. Add to SUPERSEDED_LOGS when a rerun
+# invalidates a stored log, and stamp the file.
+# ---------------------------------------------------------------------------
+SUPERSEDED_LOGS = {
+    'results/donor_and_k.log': '#243 frame-order index bug; TEST 2 also superseded by §64c',
+    'results/export_test.log': '§63 degenerate three-way matcher voids every matched p-value',
+}
+BANNER = 'SUPERSEDED OUTPUT'
+
+def check_superseded_logs():
+    missing = []
+    for path, why in sorted(SUPERSEDED_LOGS.items()):
+        fp = pathlib.Path(path)
+        if not fp.exists():
+            missing.append((path, why, 'FILE MISSING'))
+        elif BANNER not in fp.read_text(errors='replace'):
+            missing.append((path, why, f'no {BANNER!r} banner'))
+    if missing:
+        print(f'FAIL: {len(missing)} superseded result log(s) not stamped\n')
+        for path, why, problem in missing:
+            print(f'  {path}')
+            print(f'    reason   : {why}')
+            print(f'    problem  : {problem}')
+    return len(missing), len(SUPERSEDED_LOGS)
+
 def main():
     pats = load_patterns()
     violations = []
@@ -97,13 +138,16 @@ def main():
                 if not MARKERS.search('\n'.join(lines[lo:hi])):
                     violations.append((t, i + 1, pat, by, note, line.strip()[:90]))
     nq, qtot = check_qualifications()
-    if not violations and not nq:
+    ns, stot = check_superseded_logs()
+    if not violations and not nq and not ns:
         print(f'OK: {len(pats)} retracted claims checked across {len(TARGETS)} documents; '
               f'every occurrence carries a retraction marker within {WINDOW} lines.')
         print(f'OK: {qtot} qualified claims checked; every document asserting one carries its '
               f'standing context.')
+        print(f'OK: {stot} superseded result log(s) checked; each carries its '
+              f'{BANNER!r} banner.')
         return 0
-    if nq and not violations:
+    if (nq or ns) and not violations:
         return 1
     print(f'FAIL: {len(violations)} occurrence(s) of a retracted claim with no nearby marker\n')
     for t, ln, pat, by, note, txt in violations:

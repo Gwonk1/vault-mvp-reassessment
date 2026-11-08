@@ -176,3 +176,21 @@ positive control.** Before ranking anything as unremarked:
 
 The cheapest version of this rule is one search per claim. We ran forty tests and avoided that search,
 and it cost four withdrawn claims and one reframed paper.
+
+## 14. A gate's instrument class must match the file class it is pointed at
+
+The retraction gate is a **prose** instrument: its patterns are bare decimals and short phrases, which
+discriminate in documents because documents contain few numbers. Pointed at `results/*.log`, the same
+patterns scored **three genuine void values and three coincidences** out of six hits - a `null_sd` that
+happened to equal `0.174`, a model CI bound of `0.0526`, and the prefix of a Spearman rho.
+
+**And tightening it inverts the outcome.** Adding `(?!\d)` to stop a pattern matching the prefix of a
+longer float suppresses the two genuine hits (`p=0.18352908…`, `p=0.05261473…`) while keeping both
+coincidental short floats.
+
+So: **do not extend a gate to a new file class by widening its patterns.** Gate the new class on a
+property that is actually decidable there. For logs that is a banner - `SUPERSEDED_LOGS` in
+`src/check_retractions.py` lists each superseded log and the check asserts the file says so at the top.
+
+**Enumerate the cases before shipping the tightening.** We would have shipped `(?!\d)` as an
+improvement otherwise. See §77.

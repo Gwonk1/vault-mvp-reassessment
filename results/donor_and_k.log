@@ -1,3 +1,26 @@
+################################################################################
+# SUPERSEDED OUTPUT - RETAINED DELIBERATELY, DO NOT CITE THESE NUMBERS
+#
+# This log is the PRE-FIX run of donor_and_k.py, produced with the GENCODE
+# frame-order indexing bug (ledger #243, house rule 12). Every TEST 1 figure
+# below is wrong:
+#
+#     printed here        corrected (#243)
+#     65 occupied cells   35 cells
+#     189 donor proteins  129 donors
+#     adjacency 0.772     0.891
+#     ratio 2.48x         2.86x
+#
+# The TEST 1 VERDICT ("section 51 control: INVALID as applied") SURVIVES the
+# correction - the bias is larger, not smaller, so the control is still invalid.
+#
+# TEST 2's "COMPLEX-LIKE" verdict is ALSO superseded, on different grounds:
+# (hits/k)/fold is constant across the k sweep, so the fold decline is the fold
+# curve counted twice and cannot separate a complex from a window (section 64c).
+#
+# Kept because the project's discipline is that a corrected number sits beside
+# the original, never in place of it.
+################################################################################
 TEST 1 donor list, for GOBP_CYTOPLASMIC_TRANSLATION (n=95 members, 65 occupied cells)
   donor pool size: 189 proteins
   translation-adjacent in donor pool : 0.772

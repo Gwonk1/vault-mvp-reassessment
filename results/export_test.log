@@ -1,3 +1,25 @@
+################################################################################
+# SUPERSEDED OUTPUT - RETAINED DELIBERATELY, DO NOT CITE THESE NUMBERS
+#
+# Every p-value below labelled "full matching" or "abundance+length+charge
+# matched" came from the THREE-WAY DECILE MATCHER, which section 63 found
+# DEGENERATE: a 3-way abundance x length x charge cross over 1,166 proteins is
+# 49% singleton cells, and MVP's own cell contains only MVP and PAXBP1 - the
+# bait is matched against itself.
+#
+# That voids these, among others:
+#   GOCC_RIBOSOME        p = 0.1835  (and the "section 51 gave p=0.184" it cites)
+#   GOBP_DETOXIFICATION  p = 0.0526
+#   GOCC_LATE_ENDOSOME   p = 0.0101
+#
+# It also voids the gate on the line "gate1 core clears: True" - the positive
+# control we had cited as proof the matcher worked was computed by the same
+# degenerate scheme, so it could not have failed.
+#
+# This file was the catch, not the casualty: the indexing bug of #243 was found
+# HERE, pre-publication, by rerunning it. Kept because a corrected number sits
+# beside the original, never in place of it.
+################################################################################
 usable universe: 1166
 
 GATES

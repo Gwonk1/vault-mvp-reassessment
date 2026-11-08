@@ -4888,3 +4888,56 @@ citing "MVP is established as a signalling modulator" should know the convergenc
 **And the error is ours in a familiar shape.** We asserted independence without checking authorship —
 the same move as asserting novelty without checking the literature, five times. **The check costs one
 author-list fetch.**
+
+## 77. The retraction gate did not cover `results/`, and the obvious fix inverts the outcome
+
+Reading four stored logs surfaced **`ENRICHMENT RATIO = 2.48x`** in `results/donor_and_k.log` - a
+**registered retraction pattern** (§64b: buggy frame order, correct value 2.86x). The gate scans five
+documents. It never looked at `results/*.log`, which are **in the public repository**.
+
+### 77a. Six hits, three of them real
+
+Running the registered patterns over `results/` by hand:
+
+| file:line | pattern | verdict |
+|---|---|---|
+| `donor_and_k.log:5` | `2.48x` | **GENUINE** - the pre-fix TEST 1 value |
+| `export_test.log:5` | `0.184` | **GENUINE** - `GOCC_RIBOSOME, full matching, p=0.1835`, which the line itself cross-checks against "§51 gave p=0.184" |
+| `export_test.log:9` | `0.0526` | **GENUINE** - under the header `PRIMARY, abundance+length+charge matched`, i.e. the degenerate matcher |
+| `continuous.log:16` | `0.174` | coincidence - a `null_sd` that happens to equal 0.174 |
+| `models.log:29` | `0.0526` | coincidence - a confidence bound in a model coefficient array |
+| `sc_kim.log:38` | `0.184` | coincidence - the prefix of a Spearman rho, `0.1842505648549325` |
+
+**Half the hits are noise**, because the patterns are bare decimals and logs are dense with unrelated
+floats.
+
+### 77b. The obvious fix makes it worse, and this is the point
+
+Add `(?!\d)` so a pattern stops matching the prefix of a longer float. Then:
+
+- `0.184` no longer matches `0.1842505…` — **kills the coincidence**, good;
+- but `0.0526` no longer matches `p=0.05261473…` — **kills a GENUINE hit**;
+- and `0.0526` still matches `[…, 0.0526, 6]` — **keeps the other coincidence**.
+
+**The tightening inverts the outcome: it suppresses the real violations and retains the false ones.**
+A prose instrument does not become a numeric instrument by tightening it, and we would have shipped the
+change believing it an improvement had we not enumerated the six cases first.
+
+### 77c. What we did instead
+
+**The two superseded logs are stamped**, originals preserved verbatim below the banner - 19 and 24
+lines intact, `ENRICHMENT RATIO = 2.48x` still on the page at its new line 28. `donor_and_k.log` names
+all four corrected figures (65→35 cells, 189→129 donors, 0.772→0.891, 2.48x→2.86x) and records that
+**TEST 1's verdict survives the correction while TEST 2's does not** - the bias is larger, not smaller,
+so §51's control is still invalid, but the `COMPLEX-LIKE` call dies to §64c's `(hits/k)/fold`
+constancy. `export_test.log` names the three voided p-values **and the gate on its own line 6**, the
+positive control that could not have failed because the same degenerate scheme computed it.
+
+**And the gate now checks a tractable property instead of an intractable one:** a log known to be
+superseded must say so at the top (`SUPERSEDED_LOGS` → banner). **Self-tested both ways** - strip the
+banner, exit 1; name a log that does not exist, exit 1.
+
+**One further note on the testing.** The first negative test read `$?` after piping to `tail`, so it
+reported `tail`'s status and printed `exit=0` for a run that had crashed with a `NameError`. **That is
+the vacuous-pass shape occurring inside the test of a gate built to catch vacuous passes** - caught only
+because the traceback was visible above it.
