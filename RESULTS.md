@@ -4822,6 +4822,29 @@ passing. §70 relocated what that means — it is consistent with the published 
 function rather than evidence against function — but the result itself still stands, and it is the one
 piece of biology here that was produced rather than rediscovered.
 
+## 75. Usefulness to a stranger: ours against Grok's, and Grok wins most of it
+
+**This section lives in [`USEFULNESS.md`](USEFULNESS.md), not here.** It was written there and numbered
+§75 in the ledger (#336-340) and cited as "RESULTS.md §75" from `CALIBRATION.md`, which left **§75 as
+the only hole in this file's numbering** and nine dangling references pointing into it. The stub exists
+so the numbering is contiguous and the citations resolve.
+
+**What is there, in one paragraph.** Both assessments were written independently, ours committed at
+21:36:01 before Grok was asked. **Finding 1 (CFdb MVP-TEP1) is rank 1 for both; the interferon regulon
+is top-three for both; those are the only two items both call useful unqualified.** Grok returned **six
+zeros**, including our rank 2 (stool proteomics - *"nobody running standard stool proteomics is trying
+to recover vaults; they discard that pellet on purpose"*, i.e. **the finding has no actor**) and our
+rank 4 (whose safe reading is ordinary multi-subunit practice and whose interesting reading invites a
+tissue swap that co-ranking cannot license). It caught that **three-decimal half-lives are false
+precision against a 22.6% CV bar**, about +/-15 h on the MVP estimate. It **won the argument we most
+wanted to win** - the house rules are not the most useful output, because *"finding 1 is a number a
+stranger can put in a test harness; the rules, as specified here, are not."* It found two exports we
+missed (van der Post's intracellular tag classifies nothing at 79% of both proteomes; the unrun 2-df
+Wald design ports to proteasome, ribosome and nuclear-pore turnover groups) and a better generalisation
+of finding 1 as a **discordant edge** for interactome integrators. Its strongest argument was that
+**usefulness of a reanalysis is zero while the numbers are incredible** - conceded conditionally on
+findings 1 and 3 having been computed after the gates, which was checked and holds.
+
 ## 76. The "signalling modulator" evidence is one group's programme, not convergent independent work
 
 Verified citations were fetched for the six papers behind E1. **Both of our framings of that evidence

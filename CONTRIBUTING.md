@@ -27,7 +27,7 @@ papers can be checked without any of this**; the data is only needed to recomput
    the title a day after #80 fixed it**, because every audit compared prose to data and nothing ever
    re-checked the title. **Audit the title.**
 3. **Read the table, do not describe it.** Faults #59, #60, #64, #70 and #90 are all the same mistake
-   (**#90 is a dangling citation — the ledger has no entry 90; the rule stands on the other four, and
+   (**#90 is a dangling citation — the ledger has no entry 90, and none has 89 either; the rule stands on the other four, and
    we leave the number visible rather than tidy away the provenance**):
    summarising a sorted file from memory instead of opening it. Check the top *and* the bottom.
 4. **Verify a collaborator's number against their data file, not their prose.** Fault #64.
