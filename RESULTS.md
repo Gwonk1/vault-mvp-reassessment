@@ -5124,3 +5124,37 @@ tell the two apart.**
 and the merged category was then read as the informative one. The repair below classifies HTTP status,
 empty-but-valid responses, and true absences separately, because a diagnosis that cannot fail is not a
 diagnosis.
+
+## 80. The repair failed too, on four clauses, and two of the causes were mine again
+
+| clause | result |
+|---|---|
+| 1. four essential controls, >=3 pairs, median < 0.20 | **FAIL** - GAPDH had 2 mammal pairs |
+| 2. three relaxed controls, >=3 pairs, lowest > highest essential | **FAIL** - ZP3 returned nothing at all |
+| 3. every gene >= 3 unsaturated mammal pairs | **FAIL** - MVP, TEP1, PARP4, GAPDH, ZP3 short |
+| 4. no absence inferred from a non-200 | **FAIL** - **MVP lost rat, dog, cow, macaque, opossum and chicken to HTTP errors** |
+
+### 80a. Clause 4 earned its place
+
+It was added in the repair after §79f found the first script merging server failures into
+`"no orthologue"`. It immediately caught **36 HTTP failures across 90 calls** - and every one of MVP's
+missing mammals was one of them. **Without clause 4 this run would have reported MVP as absent from
+five mammals and been believed.**
+
+### 80b. All 36 were HTTP 500, and the retry logic skipped exactly that code
+
+`src/dnds2.py` retried on `(429, 503, 504)`. **Every failure was a 500**, which fell through to an
+immediate give-up with **no retry at all**. So the run that was built to survive throttling was felled
+by a code it did not list, and the sleep-and-backoff machinery never fired once.
+
+### 80c. And TRIM5 was a second vacuous control
+
+The valid-but-empty results - the ones clause 4 certifies as genuine absences - include **TRIM5 absent
+from dog, opossum, chicken, *Xenopus* and zebrafish.** That is correct biology: TRIM5alpha is
+primate-restricted. **Having dropped APOBEC3G for exactly this reason (#360), we replaced it with
+another primate-restricted gene and did not check.** House rule 7, third occurrence, in consecutive
+registrations.
+
+Two genuine absences are worth keeping, since clause 4 vouches for them: **TEP1 has no one-to-one
+mouse orthologue in Compara**, and **RPL7 none in mouse or rat** - which is why RPL7 failed clause 1 in
+the first run. Those are facts about the resource, not about vaults.

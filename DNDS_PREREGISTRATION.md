@@ -143,3 +143,30 @@ is reported precisely so the gap is visible rather than glossed.**
 4. **No gene's absence is inferred from a non-200 response.**
 
 If any clause fails, the repair is uninformative too, and that gets written down the same way.
+
+---
+
+# Third and FINAL attempt - the cap is registered before the run
+
+**Two runs, two gate failures.** House rule 5 forbids iterating a method until it passes, so the stop
+condition is fixed here, in advance:
+
+> **One more attempt. Three diagnosed instrument fixes, no change to any threshold, no change to the
+> gate, nothing touching MVP. If the gate fails again, the question is recorded as UNREACHABLE WITH
+> THIS INSTRUMENT and the project stops asking it.**
+
+## The three fixes, each tied to a diagnosed fault
+
+1. **Retry on HTTP 500.** All 36 failures were 500s and the retry list was `(429,503,504)`, so backoff
+   never fired (§80b). Retry on 5xx generally, and send a named `User-Agent`, which some APIs require.
+2. **Relaxed controls that are not primate-restricted.** APOBEC3G went for this reason and **TRIM5 has
+   the same defect** (§80c). Replacements: **CD4** and **FCGR2B**, both mammal-wide; **MX1 retained**,
+   which returned 3 clean mammal pairs.
+3. **A deeper mammal panel** so a single 500 cannot starve a gene: add **sus_scrofa**,
+   **oryctolagus_cuniculus**, **equus_caballus**, **ovis_aries** to the existing six.
+
+## What does NOT change
+
+The saturation rule (`dS > 1.5`), the four gate clauses, the primary prediction, the kill condition and
+the secondary shell-versus-caps direction are **all exactly as registered**. This run remains
+**NOT BLIND** and is labelled so wherever its numbers appear.

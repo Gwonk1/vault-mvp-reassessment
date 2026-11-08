@@ -1,0 +1,42 @@
+  MVP     mus_musculus               mammal n= 861 dN=0.0484 dS=0.5864 w=0.0826
+  MVP     danio_rerio                deep   n= 838 dN=0.2472 dS=1.6882 w=0.1464  [SAT]
+  TEP1    rattus_norvegicus          mammal n=2615 dN=0.1492 dS=0.5830 w=0.2559
+  PARP4   bos_taurus                 mammal n=1706 dN=0.2811 dS=0.7878 w=0.3568
+  PARP4   macaca_mulatta             mammal n=1717 dN=0.0368 dS=0.0796 w=0.4623
+  PARP4   gallus_gallus              deep   n=1578 dN=0.4183 dS=1.8661 w=0.2242  [SAT]
+  RPL7    canis_lupus_familiaris     mammal n= 188 dN=0.0230 dS=0.5588 w=0.0411
+  RPL7    bos_taurus                 mammal n= 227 dN=0.0132 dS=0.3498 w=0.0378
+  RPL7    macaca_mulatta             mammal n= 248 dN=0.0150 dS=0.1166 w=0.1287
+  RPL7    monodelphis_domestica      mammal n= 247 dN=0.0691 dS=0.9308 w=0.0743
+  RPL7    gallus_gallus              deep   n= 246 dN=0.1101 dS=3.0107 w=0.0366  [SAT]
+  RPL7    xenopus_tropicalis         deep   n= 246 dN=0.1451 dS=1.8104 w=0.0802  [SAT]
+  RPL7    danio_rerio                deep   n= 244 dN=0.1414 dS=2.7893 w=0.0507  [SAT]
+  ACTB    mus_musculus               mammal n= 375 dN=0.0023 dS=0.4572 w=0.0051
+  ACTB    rattus_norvegicus          mammal n= 375 dN=0.0023 dS=0.4162 w=0.0056
+  ACTB    canis_lupus_familiaris     mammal n= 253 dN=0.0061 dS=0.3925 w=0.0154
+  ACTB    bos_taurus                 mammal n= 375 dN=0.0000 dS=0.3341 w=0.0000
+  ACTB    macaca_mulatta             mammal n= 371 dN=0.0000 dS=0.1260 w=0.0000
+  ACTB    monodelphis_domestica      mammal n= 153 dN=0.0085 dS=1.1738 w=0.0072
+  ACTB    xenopus_tropicalis         deep   n= 375 dN=0.0128 dS=1.7567 w=0.0073  [SAT]
+  ACTB    danio_rerio                deep   n= 375 dN=0.0116 dS=0.7589 w=0.0153
+  GAPDH   mus_musculus               mammal n= 333 dN=0.0353 dS=0.4526 w=0.0780
+  GAPDH   monodelphis_domestica      mammal n= 120 dN=0.0774 dS=0.8211 w=0.0943
+  GAPDH   gallus_gallus              deep   n= 333 dN=0.0584 dS=0.8693 w=0.0671
+  GAPDH   xenopus_tropicalis         deep   n= 334 dN=0.1179 dS=1.0772 w=0.1094
+  GAPDH   danio_rerio                deep   n= 333 dN=0.1010 dS=1.4434 w=0.0700
+  TUBB    mus_musculus               mammal n= 445 dN=0.0000 dS=0.5140 w=0.0000
+  TUBB    rattus_norvegicus          mammal n= 444 dN=0.0000 dS=0.6117 w=0.0000
+  TUBB    canis_lupus_familiaris     mammal n= 444 dN=0.0107 dS=0.4710 w=0.0227
+  TUBB    bos_taurus                 mammal n= 445 dN=0.0000 dS=0.2320 w=0.0000
+  TUBB    macaca_mulatta             mammal n= 444 dN=0.0189 dS=0.1263 w=0.1500
+  TUBB    monodelphis_domestica      mammal n= 445 dN=0.0029 dS=0.7761 w=0.0037
+  TUBB    danio_rerio                deep   n= 445 dN=0.0247 dS=1.9398 w=0.0127  [SAT]
+  TRIM5   mus_musculus               mammal n= 295 dN=0.3219 dS=0.8963 w=0.3591
+  TRIM5   rattus_norvegicus          mammal n= 477 dN=0.3584 dS=0.8466 w=0.4233
+  TRIM5   bos_taurus                 mammal n= 478 dN=0.2830 dS=0.5262 w=0.5378
+  TRIM5   macaca_mulatta             mammal n= 492 dN=0.0643 dS=0.0996 w=0.6461
+  MX1     mus_musculus               mammal n= 390 dN=0.2123 dS=0.8853 w=0.2398
+  MX1     rattus_norvegicus          mammal n= 653 dN=0.1926 dS=0.9913 w=0.1943
+  MX1     bos_taurus                 mammal n= 638 dN=0.1457 dS=0.7111 w=0.2048
+
+  wrote results/dnds2.json (90 rows)
