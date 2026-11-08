@@ -1,0 +1,12 @@
+# Discordant and concordant true edges for interactome-pipeline regression testing.
+# See CALIBRATION.md. Both edges are genuine vault-particle subunit relationships.
+#
+# MVP-TEP1  is the DISCORDANT edge: noise floor in co-fractionation, solid in affinity pulldown.
+#           A pipeline that requires co-fractionation support, or treats channels as equal voters,
+#           will drop it. That is the failure mode this file exists to detect.
+# MVP-PARP4 is the CONCORDANT control: the same database ranks it at the 99.99th percentile,
+#           proving the miss is subunit-specific rather than a property of the seed.
+#
+# protein_a	protein_b	relationship	cfdb_precision	cfdb_percentile	affinity_support	expected_pipeline_behaviour
+MVP	TEP1	stoichiometric subunit	0.041	noise floor	yes (anti-MVP IP-MS; TEP1-KO mice retain vaults with reduced cap density)	MUST be retained; dropping it indicates low-abundance-subunit recall failure
+MVP	PARP4	stoichiometric subunit	0.676	99.99th of 10614	yes (anti-MVP IP-MS; BioPlex; 2014 TAP)	retained by any working pipeline; use as the positive control

@@ -59,6 +59,16 @@ normal, knockout zebrafish regenerating — with defects only under challenge. *
 coupling" came from CRISPR screens in rich medium, the one condition where every published model is
 also normal.** See RESULTS §70.
 
+## If you only read one file
+
+**[`CALIBRATION.md`](CALIBRATION.md)** — the two findings here that are useful to someone who does not
+work on vaults. Both are instrument calibration: native co-fractionation cannot retain a known
+stoichiometric subunit without admitting 1,733 partners, and there is a pre-registerable stopping rule
+for telling co-regulation from co-complex in any co-abundance dataset. Two independent assessments,
+each written before seeing the other, ranked these the same two out of ten candidates and zeroed most
+of the rest. **[`calibration_edges.tsv`](calibration_edges.tsv)** holds the test case in
+machine-readable form.
+
 ## Provenance, and what five literature checks found
 
 **Every interactor claim below comes from one public dataset, not from us.** The anti-MVP pulldown is
