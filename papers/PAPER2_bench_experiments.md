@@ -1,4 +1,4 @@
-# What a wet lab should do next with vaults: fourteen experiments, ranked by what they decide
+# What a wet lab should do next with vaults: fifteen experiments, ranked by what they decide
 
 **Graham W. Syfert**, with Claude (Anthropic) and two independent reviewing agents. Companion to
 `PAPER1_vault_reassessment.md`. Written for a group with a working vault purification pipeline.
@@ -144,6 +144,11 @@ but vtRNA. That would close a question open since 1986 and is publishable as suc
 
 ## Tier 2 - resolves a specific published contradiction
 ### 4. What drives PARP4 exchange?
+
+**Run every arm at rest and under challenge** (nutrient starvation plus one inflammatory stimulus).
+Section 70: PARP4's 22.2 h half-life against the shell's 66.4 h was measured in unstressed primary
+cells, and if exchange is what the particle does in response to stress then a resting measurement is
+the least informative one available.
 **Decides:** the mechanism behind constraint 2, which we could not touch computationally.
 **What we ruled out:** MVP phosphorylation. Across six phospho-bearing CPTAC cohorts, no MVP
 phosphosite predicts per-vault PARP4 loading: 0 of 62 tests reach q < 0.05, and the strongest raw
@@ -158,6 +163,10 @@ exchange, which is exactly the ambiguity it exists to resolve.
 **Kill condition:** PARP4 residence is invariant to lumenal occupancy.
 
 ### 5. Does TEP1 bind misfolded noncoding RNA, as its only paralog does?
+
+**Include a stress arm.** Misfolded noncoding RNA accumulates under heat and oxidative stress, so a
+binding assay run only on resting-cell RNA tests the hypothesis in the condition where its substrate
+is rarest (section 70).
 **Decides:** whether the TROVE domain means anything functional, and the Ro60 comparison.
 **Design:** express the TROVE-vWA fragment rather than full-length TEP1 (the p80 homology region
 suffices for vtRNA and particle association). EMSA against vtRNA (positive), Y RNA, correctly folded
@@ -350,6 +359,14 @@ proteomics cannot see cytoplasmic protein at all, and could not see a vault whet
 there. Immunoblot and targeted MS against MVP, PARP4 and TEP1 are therefore the methods, and a
 shotgun result would be uninterpretable.
 
+**Add a challenge arm — section 70 makes baseline the wrong place to look.** Every published vault
+phenotype is conditional: normal mice, normal triple-knockouts and preserved zebrafish regeneration
+at baseline, with defects only on influenza rechallenge, high-fat diet, injury, ageing, oestrogen
+withdrawal, or *Dictyostelium* nutrient starvation. **If export is stress-induced, a resting culture
+will show nothing and the experiment will read as a clean negative.** So collect conditioned medium
+from the epithelial line under nutrient starvation and under an inflammatory stimulus as well as at
+rest, and compare the pellet fraction across conditions rather than against zero.
+
 **Positive control:** a known secreted protein in each matrix, and cytoplasmic vaults from the same
 cells as the particle standard. **The three subunits must co-sediment**; MVP alone could be
 degradation product rather than a particle.
@@ -383,6 +400,38 @@ treatments, since they are the particle.
 **Kill condition:** if ribosomal signal disappears on polysome dissociation while PARP4 and TEP1
 persist, §40 is the co-migration artefact grok's audit describes, and the translation thread closes
 for good.
+
+### 15. Is the published signalling function the shell's or the caps'?
+
+**Decides:** the one question section 70's literature leaves wide open, and the experiment this
+project's own evidence points at most directly. **Every published functional result uses MVP
+knockout** — NF-kB and high-fat-diet metabolic phenotypes, calcineurin-NFATc1 osteoclastogenesis,
+STAT3 suppression, Parkin-mediated mitophagy, influenza antibody responses. Deleting MVP removes the
+shell *and* abolishes the particle, so no published result distinguishes a function of the 78-mer
+from a function of PARP4 or TEP1 riding on it.
+
+**Why this project makes it the obvious next experiment.** Section 43 shows **TEP1 associates
+independently of PARP4**; A12 argues the **bare shell is what the cell invests in**, with MVP's
+transcript at the 96th-97th percentile while PARP4 sits at 78-89 and TEP1 at 58-85; section 97 shows
+**adrenal ranks first for the shell alone while the armed holoenzyme peaks in gut mucosa.** If the
+shell and the caps are separably abundant, they may be separably functional — and nothing in the
+literature has asked.
+
+**Design:** in a single cell background, compare **MVP-null**, **PARP4-null**, **TEP1-null** and
+**PARP4/TEP1 double-null** (the last retaining a bare shell, which is known to assemble — MVP alone
+forms vaults in Sf9 cells) against wild type, on two published readouts with the clearest
+mechanisms: **NF-kB reporter activity after an inflammatory stimulus**, and **mitophagy flux**. Run
+at rest and under challenge, since every published phenotype is conditional.
+
+**Positive control:** the MVP-null must reproduce the published direction on at least one readout.
+If it does not, the cell background cannot support the assay and nothing else is interpretable.
+
+**Kill condition and what each outcome means:** if the **PARP4/TEP1 double-null behaves like wild
+type** while MVP-null does not, the function is the **shell's**, and A12 is promoted from a ranking
+exercise to a result. If the double-null behaves like the **MVP-null**, the function requires the
+caps and the bare shell is a scaffold — which would make the adrenal shell-only tissue pattern a
+puzzle worth its own experiment.
+**Either answer is publishable and neither has been obtained.**
 
 ## What a home run looks like
 
