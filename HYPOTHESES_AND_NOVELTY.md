@@ -101,7 +101,7 @@ versus shell ratio against measured xenobiotic exposure per tissue.
 Each carries what kind of claim it is: **[new observation]** (we measured something nobody has),
 **[new reading]** (the data are published, the observation is not), or **[uncertain novelty]**.
 
-### B1. TEP1 binds the vault independently of PARP4. ~~**~75%**~~ **DEMOTED to ~20% — see §66b** — [new reading]
+### B1. TEP1 binds the vault independently of PARP4. ~~**~75%**~~ **DEMOTED to ~20% (§66b), then to ~8% (§71c)** — [new reading]
 
 > **[The conclusion is published and has been for ~25 years.** Grok declined to rank this and was
 > right. MVP-only recombinant vaults assemble in Sf9 insect cells from ~96 copies of a single protein;
@@ -115,13 +115,13 @@ strongly dependent (5.51, 2.85), and MVP is unaffected, so the particle survives
 registered gates passed. The knockdown columns are published; this reading of them is not one I can
 find. **Why it matters:** the trimer is three independent associations, not a pair plus a passenger.
 
-### B2. Myoferlin is actively excluded from the vault's vicinity. **~70%** — [new **reading**, corrected §66b]
+### B2. Myoferlin is actively excluded from the vault's vicinity. ~~**~70%**~~ **→ ~25%, see §71c** — [new **reading**, corrected §66b]
 **−2.23** in the anti-MVP pulldown and **−3.32 (p = 3.4e-4)** in pre-lysis covalent proximity
 labelling around PARP4 — two instruments of different physics agreeing on a depletion. Negative
 results of this specificity are rarely published, and MYOF had been this project's strongest
 membrane-repair evidence.
 
-### B3. Degradation machinery is the most depleted annotation in an anti-MVP pulldown. **~65%** — [new **reading**, corrected §66b]
+### B3. Degradation machinery is the most depleted annotation in an anti-MVP pulldown. ~~**~65%**~~ **→ ~25%, see §71c** — [new **reading**, corrected §66b]
 Proteasomal protein catabolism at mean **−1.066**, the **0.0 percentile of 1,276 terms**; protein
 catabolic process −0.839; macroautophagy −1.163. **Anti-associated, not merely absent.** Constrains
 every disposal model, including A6 and A9.
@@ -313,3 +313,23 @@ the opposite way: the phenotype shows up **under stress**, so the vault looks li
 asset rather than a tolerated cost. That also rehabilitates the environmental framing of A10 and makes
 **A12 (bare shell) and A1 (nucleotide buffer)** the top two, both of which are compatible with a
 stress-conditional function.
+
+
+---
+
+## Addendum 4 — the dataset has a name, and four claims fall with it (§71)
+
+The anti-MVP pulldown is **PRIDE PXD052802**: co-IP of human MVP with the synthetic antigen binding
+reagent **VM1** against control **H6**, in **wild-type versus PARP4-knockout A549 cells**. Our table's
+columns *are* those reagent and genotype names. **We analysed it all day without establishing the cell
+line — A549, a lung adenocarcinoma — for a protein whose other name is lung resistance-related
+protein.**
+
+A deposit describing an analysis of the same WT-versus-PARP4-KO contrast means **any claim of ours that
+reads this interactor list cannot be called novel**: B1 → ~0.08, B2 → ~0.25, B3 → ~0.25.
+
+**Three literature checks have now found prior art three times.** The eight unchecked claims should be
+read as provisional, not ranked. What survives best rests on nobody's interactor table: **B4** (stool
+workflows cannot see a vault — a methods argument about other people's protocols), **B5** (a
+sensitivity failure in a public resource), **B6** (an unremarked row in a published mucus table) and
+**B7** (a CFdb co-elution statistic).

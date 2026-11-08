@@ -4,7 +4,7 @@
 reviewed the manuscript adversarially against the committed data, in three rounds; between them they
 struck or qualified more than a dozen claims made here, and those reversals are recorded in place
 rather than quietly removed. All hypotheses were committed to a timestamped git history before the
-relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (314 entries)
+relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (317 entries)
 and `RESULTS.md` (24 sections). **That history is currently local and has not been published**, so
 the ordering it establishes is not yet independently verifiable; we state the fact rather than imply
 otherwise, and the repository is available to anyone who asks. Correspondence welcome, including

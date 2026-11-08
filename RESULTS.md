@@ -4534,3 +4534,66 @@ The ratings that move:
   naturally beside the published pathway work.
 - **The innate-immune hypothesis, which I omitted entirely and Grok ranked at 0.05, should have been
   near the top.** It has direct knockout evidence and I dismissed it on a co-abundance artefact.
+
+## 71. The pulldown is a deposited dataset with its own PARP4-knockout analysis, and four novelty claims fall
+
+Applying §69d's literature gate to the remaining novelty claims produced one search that settles most
+of them, and not in our favour.
+
+### 71a. It is PXD052802, and the match is exact
+
+A PRIDE deposit describes **co-immunoprecipitation of human MVP using a synthetic antigen binding
+reagent (sAB) called VM1, with a control reagent called H6, comparing wild-type against PARP4-knockout
+A549 cells**, reporting that *"PARP4, as well as a number of other proteins, were significantly
+enriched in the experimental co-IP from the WT versus PARP4 KO cells."*
+
+**That is the dataset we have been analysing all day.** Our table's columns are literally `WT-H6-1/2/3`,
+`WT-VM1-1/2/3`, `KD-H6-*` and `KD-VM1-*`. **VM1 and H6 are the reagent names; WT and KD are the
+genotypes.** We had been treating this as a generic human anti-MVP IP-MS and never established the cell
+line: **it is A549, a lung adenocarcinoma line** — which is worth knowing given that this protein's other
+name is lung resistance-related protein, and which we should have known before drawing a single tissue
+inference from it.
+
+### 71b. Grok predicted this exact failure
+
+In audit 3 it wrote, of its own equivalent claim: *"New observation, **assuming this IP-MS is
+unpublished**... **If this pulldown is already in a preprint, the novelty call is wrong.**"* We quoted
+that caveat approvingly in §63d and **did not then go and check.** The deposit exists, with a described
+analysis of the same WT-versus-PARP4-KO contrast we used.
+
+### 71c. The claims that fall
+
+**Four of ten novelty claims rest on this dataset, and a paper depositing it would have analysed its own
+interactor list.** We cannot verify publication status from the deposit alone, and we are not going to
+assert it either way — but a described analysis of the identical comparison is enough that these
+probabilities cannot stand:
+
+| claim | was | now | why |
+|---|---|---|---|
+| **B1** TEP1 PARP4-independent | 0.75 → 0.20 (#289) | **→ 0.08** | the depositors ran WT vs PARP4-KO; TEP1's behaviour in that contrast is the first thing their analysis would show |
+| **B2** MYOF actively excluded | 0.70 | **→ 0.25** | depletion in their own WT-vs-KO comparison; survives partly because the TurboID arm is a second dataset |
+| **B3** degradation most depleted | 0.65 | **→ 0.25** | a term-level read of their interactor list |
+| **B7** translation-enriched co-elution tail | 0.50 | **0.50, unchanged** | rests on CFdb, not on this pulldown |
+
+**B5 (CFdb noise floor) and B6 (mucus) are unaffected** — different datasets. **B4 (stool workflows
+cannot see a vault) is unaffected** and is now our best-standing novelty claim, because it is a
+methodological argument about other people's protocols rather than a reading of anyone's table.
+
+### 71d. The honest tally on novelty
+
+**Three literature checks, three prior-art hits:** B1 at twenty-five years (#289), the whole
+phylogenetic argument at twelve (§69a), and now the pulldown's own provenance. **Every check we have
+run has found something**, which is the strongest possible argument that the eight unchecked claims
+should be read as provisional rather than ranked.
+
+**What survives best is what rests on nobody's table:** B4, a methods argument about stool
+proteomics; B5, a sensitivity failure of a public resource; B6, an unremarked row in a published mucus
+table; B7, a co-elution statistic on CFdb. **What falls is everything that reads a single published
+interactor list more carefully than its depositors did** — which was, in hindsight, always the weakest
+kind of novelty to claim.
+
+**And the sharpest lesson of the two days is in §70 and here together.** We ran forty registered tests
+against data and none against the literature, then ranked ten findings for novelty without checking any
+of them. The gate we built for everything else — *recover a known positive control before believing the
+result* — has an exact analogue we never built: **recover the existing literature before believing the
+finding is yours.**
