@@ -3746,3 +3746,73 @@ triplets alongside them, which is how they should have appeared from the start.
 **The lesson is narrow and worth stating: we audited the prose against the data repeatedly today and
 never once audited the title.** It had carried an overstatement through every revision, including three
 rewrites of the abstract directly beneath it.
+
+## 62. §61 rediscovered a fault the ledger had already recorded and fixed
+
+Auditing `CONTRIBUTING.md`'s own citations — the last un-audited surface — turned up the most
+uncomfortable finding of the day. It is about the record-keeping system, which is this project's main
+artefact.
+
+### 62a. The title fault is a repeat, not a discovery
+
+Ledger **#80** reads, in part:
+
+> *"Four conclusions asserted in the title and abstract were backed by tests whose own verdict is
+> UNINFORMATIVE... `turnover.json` verdict UNINFORMATIVE... yet the **title** asserted 'an independently
+> turning over enzyme'... **The paper violated its own central methodological promise in its first
+> sentence.** Title changed, abstract rewritten, and a gate scorecard added."*
+
+**That is §61.** Same test, same file, same failure: a title asserting a turnover result whose committed
+verdict is UNINFORMATIVE. It was found, the title was changed, a scorecard was added — and then a
+turnover claim went back into the title as *"three lifetimes"*, survived every subsequent revision, and
+was rediscovered from scratch a day later.
+
+**So §61 was not a new finding. It was a regression.** We had a house rule (2), a ledger entry
+documenting the violation, and a fix, and the fault returned anyway. That is worse than a first
+occurrence, and the reason is visible: **nothing in the workflow re-checked the title.** Every audit we
+ran compared prose to data. The title is prose that no section owns.
+
+### 62b. The ledger's strikethrough notation is ambiguous, and it hid this
+
+`~~strikethrough~~` is used for two different things across 64 struck entries:
+
+- **refuted** — 23 say "STRUCK", 10 say "WITHDRAWN" or "SUPERSEDED"
+- **remediated** — at least #80, where the body says *"Title changed, abstract rewritten"*. The claim
+  was **true and acted on**, not refuted.
+
+Reading #80 today, the strikethrough made it look like a claim that had been disproved. It had not — it
+had been *fixed*, and the strike recorded the fixing. **A notation that marks "this was wrong" and "this
+was right and we dealt with it" identically will eventually hide a live problem**, and here it did:
+had #80 read as a standing warning, the title would have been on the audit list.
+
+Unresolved on purpose: we are **not** retro-editing 64 entries to split the notation. That would be a
+large rewrite of a historical record for a readability gain, and this repository's whole premise is that
+corrections sit next to claims rather than replacing them. Instead the convention is stated here and in
+`CONTRIBUTING.md`: **from now on a remediated-but-true entry is marked `[FIXED]` rather than struck**,
+and #80 gets that annotation in place.
+
+### 62c. House rule 3 cites a ledger entry that does not exist
+
+> *"3. Read the table, do not describe it. Faults #59, #60, #64, #70, **#90** are all the same
+> mistake."*
+
+**There is no #90.** The ledger numbering runs ...#88, then jumps to #91. Confirmed by enumerating every
+id: the only other gaps are the deliberate sub-entries (13→13a, 26→26b, 34→34b), and 268 entries carry a
+maximum id of 267, so the count is otherwise consistent.
+
+So one of the five citations backing a house rule points at nothing. The other four exist and say what
+the rule claims. **We are leaving the number in place and annotating it as dangling**, because deleting
+it would make the rule look cleaner than its provenance actually is — and the rule stands on four
+verified instances without it.
+
+### 62d. What this says about the project
+
+Today produced five consecutive findings that were **not about vaults**: a stale README, a title
+overstating a denied result, a bench experiment premised on a retraction, three ledger entries
+asserting superseded claims, and now a fixed fault that regressed plus a house rule citing a
+nonexistent entry.
+
+**The analysis is finished and the documentation is now the failure surface.** That is a normal place
+for a project this size to arrive, but it is worth naming rather than discovering a sixth time: the
+remaining risk in this repository is not that a number is wrong. It is that a true number sits beside a
+sentence that no longer follows from it.

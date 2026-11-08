@@ -23,8 +23,12 @@ papers can be checked without any of this**; the data is only needed to recomput
    condition into a `*_PREREGISTRATION.md`, commit it, *then* run the test. The git timestamp is the
    evidence.
 2. **A failed gate means UNINFORMATIVE.** It does not mean reinterpret. Ledger #80 records this paper
-   breaking that rule in its own title and abstract.
-3. **Read the table, do not describe it.** Faults #59, #60, #64, #70, #90 are all the same mistake:
+   breaking that rule in its own title and abstract — and **§62a records the same fault regressing into
+   the title a day after #80 fixed it**, because every audit compared prose to data and nothing ever
+   re-checked the title. **Audit the title.**
+3. **Read the table, do not describe it.** Faults #59, #60, #64, #70 and #90 are all the same mistake
+   (**#90 is a dangling citation — the ledger has no entry 90; the rule stands on the other four, and
+   we leave the number visible rather than tidy away the provenance**):
    summarising a sorted file from memory instead of opening it. Check the top *and* the bottom.
 4. **Verify a collaborator's number against their data file, not their prose.** Fault #64.
 5. **Do not iterate a method until it passes.** Fault #113 is the decision to stop re-opening a finding
@@ -119,3 +123,16 @@ verdict was decided after the fact by an unregistered choice.
 **Before committing: compute the standard error of the statistic you are about to gate on, and check
 that your bars are at least ~2 SE apart from each other and not inside 1 SE of the value you expect.**
 If they are not, widen the data or narrow the claim — do not register a band you cannot land in.
+
+### 11. Mark a remediated entry `[FIXED]`, not struck
+
+`~~strikethrough~~` was used for two different things: a claim that was **refuted**, and a claim that
+was **true and acted on**. Entry #80 is the second kind — its body says "Title changed, abstract
+rewritten" — but the strike made it read as disproved, so a standing warning looked like a closed error
+and the fault it warned about regressed unnoticed (§62b).
+
+**A notation that marks "this was wrong" and "this was right and we dealt with it" identically will
+eventually hide a live problem.** From here, a remediated-but-true entry is marked `[FIXED]` with a
+pointer to the fix. We are not retro-editing the 64 existing struck entries, because corrections in this
+repository sit next to claims rather than replacing them — the convention change applies going forward
+and #80 carries the annotation in place.
