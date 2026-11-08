@@ -213,10 +213,13 @@ eggNOG v5 eukaryotes, the five orthogroups carrying a vault inter-alpha-trypsin 
 
 An essential machine does not get discarded independently by insects, nematodes and tunicates.
 
-**One caveat, stated because the raw number is the weak part:** only 210 of 5,090 eggNOG eukaryote
-species carry the domain, which is **4.1%** — but genome databases are heavily over-weighted toward
-fungi, all of which lack it, so that percentage is mostly a sampling artefact. **The reference-organism
-loss pattern is the real evidence; the 4.1% is not.**
+**[CORRECTED — see §67. This paragraph was wrong twice.** The denominator 5,090 was every taxon in the
+file including bacteria; the eukaryote count is **477**, so the figure is **210/477 = 44%**, not 4.1%.
+And "fungi, all of which lack it" is false: **46% of sampled fungi carry the domain** — that claim came
+from *S. cerevisiae* alone. Worse, the orthogroups are **VIT-domain** groups, a domain MVP shares with
+the inter-alpha-trypsin inhibitor family, so the census cannot distinguish a vault from an ITIH
+relative. **What survives is the complete absence in well-sampled clades — Insecta 0/30, Nematoda 0/10
+— against Vertebrata 104/104.]**
 
 ### A11. The vault is a tolerated extravagance — near-neutral, not functional. **~14%**
 

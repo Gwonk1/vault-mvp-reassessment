@@ -4224,3 +4224,86 @@ we agreed exactly — the mucus reading, independently at 0.55 both times.
 **The pattern across five audits is stable and worth stating plainly: Grok is better than me at
 noticing when a result is already known, and better at refusing to let a negative become a story. I am
 better at finding the negatives in the first place.** Four of today's twelve house rules came from it.
+
+## 67. The phylogenetic argument, done properly — and my 4.1% was wrong by an order of magnitude
+
+Graham asked two questions about §66's addendum: what do insects, nematodes and tunicates share, and
+**could plants, fungi and apicomplexans never have had vaults rather than having discarded them?** The
+second is the rigorous one, and answering it exposed a mistake of mine first.
+
+### 67a. My own denominator was wrong
+
+I reported *"210 of 5,090 eggNOG eukaryote species = 4.1%"*. **The 5,090 was every taxon in the file,
+bacteria included.** The eukaryote count in this release is **477**. So the real figure is
+**210 / 477 = 44%**, not 4.1% — wrong by a factor of ten, and wrong in the direction that made my
+"repeated loss" story look stronger than the data supported. I flagged the percentage as the weak part
+of that argument; I did not notice it was also arithmetically wrong.
+
+### 67b. The clade distribution answers Graham's question, and reverses it
+
+| clade | carry | total | % |
+|---|---|---|---|
+| **Vertebrata** | **104** | **104** | **100%** |
+| Metazoa overall | 114 | 161 | 71% |
+| **Fungi** | **83** | **179** | **46%** |
+| Amoebozoa | 4 | 4 | 100% |
+| Alveolata | 2 | 20 | 10% |
+| Viridiplantae | 2 | 76 | 3% |
+| Stramenopiles | 0 | 18 | 0% |
+
+**So the answer to the question as asked is no — they did not fail to acquire it, they lost it.** The
+domain is present in Amoebozoa, Metazoa, Fungi, Alveolata (ciliates), Rhizaria, Viridiplantae (moss and
+*Chlamydomonas*) and **Parabasalia (*Trichomonas vaginalis*)**. That spans essentially the whole
+eukaryote tree, including lineages outside Amorphea, which means the domain is most parsimoniously
+**ancestral to eukaryotes** and the pattern is pervasive loss.
+
+**And it corrects two things I told you.** Yeast is not representative: **46% of sampled fungi carry
+the domain**, so "absent from fungi entirely" was wrong, drawn from *S. cerevisiae* alone. Land plants
+mostly lost it rather than never having it — a moss and a green alga retain it.
+
+### 67c. But the domain is not vault-specific, which weakens all of this
+
+The five orthogroups are annotated **"Vault protein inter-alpha-trypsin domain"** — the **VIT domain**,
+which MVP shares with the **inter-alpha-trypsin inhibitor (ITIH) family**. A VIT hit is therefore *not*
+evidence of a vault.
+
+That almost certainly explains the scattered presences: 46% of fungi, two ciliates, a moss and
+*Trichomonas* are far more likely to be **ITIH-like VIT proteins than vault particles**, and the
+established vault literature places vaults in animals, *Dictyostelium* and some protists, not in fungi
+or plants. **So §66's phylogenetic argument rests on a domain census that cannot distinguish MVP from
+its relatives, and the A11 near-neutrality case is correspondingly weaker than I presented it.**
+
+**What survives the confound** — because absence of even the shared domain is a stronger signal than
+presence of it:
+
+- **Insecta: 0 of 30 genomes.** Thirty independent insect genomes, not one carrying even a VIT domain.
+- **Nematoda: 0 of 10.**
+- **Arachnida 0/1, Tunicata 0/2, Placozoa 0/1, Mollusca 0/1.**
+- Against **Vertebrata 104/104**, and retention in Crustacea, Cephalochordata, Annelida, Porifera,
+  Echinodermata, Platyhelminthes and Cnidaria.
+
+Those zeros in well-sampled clades are real.
+
+### 67d. What insects, nematodes and tunicates share — the honest answer
+
+**Two of the three are Ecdysozoa**, and the losses cluster there: insects 0/30, arachnids 0/1,
+nematodes 0/10. **Crustaceans break it** at 1/1 — and since crustaceans and insects are both
+Pancrustacea, the loss is in **Hexapoda specifically, after their split from crustaceans.** Tunicates
+are chordates and sit outside that story entirely.
+
+So the clean statement is: **the losses are Ecdysozoa-heavy with crustaceans excepted, plus an
+independent tunicate loss.** That is a clade pattern rather than a random assortment, which is worth
+something.
+
+**What I will not do is name a shared environment or mechanism.** Graham's instinct — *"my heart says
+there's some benefit to dropping it in certain conditions, environmental"* — is a real hypothesis, and
+this dataset cannot test it: the retainers and losers do not separate by habitat (soil nematode lost,
+soil amoeba retained; marine tunicate lost, marine cnidarian retained), several groups rest on a single
+genome, and the VIT confound sits over all of it. **A correlation I could draw from n=1 clades against a
+non-specific domain would be exactly the kind of story this project has spent two days learning not to
+tell.**
+
+**The test that would settle it:** build proper MVP orthologs — reciprocal best hits plus the
+MVP-specific shoulder and cap domains, not the shared VIT domain — across the sequenced Pancrustacea,
+then ask whether loss coincides with any ecological variable. Hexapoda against Crustacea is the natural
+contrast and both are densely sequenced.
