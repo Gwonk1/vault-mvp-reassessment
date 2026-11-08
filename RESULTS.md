@@ -3686,3 +3686,63 @@ specific reason rather than a shrug: **shotgun stool proteomics cannot see cytop
 cannot see a vault whether or not one is there.** Paper 2's Experiment 13 therefore needs targeted
 detection — immunoblot and targeted MS against MVP, PARP4 and TEP1 — rather than a shotgun survey, and
 that is now also stated in the experiment.
+
+## 61. The paper's own title overstated a result, and the gate it rests on failed
+
+Found by auditing the title against the scorecard rather than against the prose. **Two separate
+problems, and we are fixing the one that is ours to fix.**
+
+### 61a. The turnover test's committed verdict is UNINFORMATIVE, and we are keeping it
+
+`results/turnover.json` records `"gate_short": false, "gate_long": true, "verdict": "UNINFORMATIVE"`.
+The short-lived controls (MYC, FOS, JUN) are absent from pulse-SILAC data entirely; the long-lived
+controls separated.
+
+The registered text says: *"**If neither direction separates**, the table is not being read correctly
+and nothing is reported."* One direction did separate. **So the registered rule would have passed this
+test, and the script that printed UNINFORMATIVE imposed `both` where the registration said `neither`** —
+which is exactly what #49 and #51 recorded at the time, as a code fault rather than a data problem.
+
+**We are not reclassifying it.** House rule 2 says a failed gate means UNINFORMATIVE and does not mean
+reinterpret, and a committed output file saying UNINFORMATIVE is the kind of thing this project treats
+as binding even when a later reading of our own registration is more permissive. Rescuing a verdict by
+re-reading our own rule, a day later, in the direction that helps, is the move we have refused four
+times today. The conservative label stands.
+
+### 61b. But the title asserted what the secondary test denied
+
+The registered secondary test was explicit:
+
+> **DEGRADE AS A UNIT:** spread below the 5th percentile of random triplets.
+> **NOT A UNIT BY TURNOVER:** otherwise.
+
+Observed: MVP **66.4 h** (58.6th percentile), TEP1 **40.6 h** (32.9th), PARP4 **22.2 h** (9.8th), spread
+44.2 h at the **29.86th percentile of 10,000 abundance-matched random triplets.** The script applied the
+registered bar correctly and returned `"NOT A UNIT BY TURNOVER"`.
+
+**And that 29.86 is the number the title ignored.** The three subunits are **less dispersed than 70% of
+random protein triples.** They fail the demanding 5th-percentile bar for unity, but they are nowhere
+near unusually spread either. *"Three lifetimes"* asserts a distinctness that the dispersion statistic
+does not support — three values that differ, drawn from a spread that is unremarkable.
+
+**The title is corrected.** It now reads *"One assembly, a sealed nucleotide pocket, and one question
+that gave three answers."* The three half-lives remain reported, with their percentile against random
+triplets alongside them, which is how they should have appeared from the start.
+
+### 61c. What still stands from the turnover work
+
+- **MVP is not structural furniture.** 66.4 h, 58.6th percentile of 8,804 proteins, median proteome
+  half-life 56.5 h — mid-pack, and nowhere near lamins and histones at 1,500-1,700 h. At ~100,000
+  copies per cell the population is continuously rebuilt. That was the registered primary outcome
+  (**ORDINARY**, between the 25th and 75th percentiles) and it is unaffected by either problem above.
+- **PARP4 is the fastest-turning-over subunit** at 22.2 h, 9.8th percentile, and #47 records this
+  holding in 4 of 4 human cell types. But #70 already flagged that the headline 22.2-against-66.4 pair
+  comes from the **proteome-table summary**, not the per-cell-type measure, and #76 struck the inference
+  that a fast PARP4 requires active extraction, since a substoichiometric protein has an expected free
+  cytoplasmic pool that can dominate the measurement.
+- **ANXA2 at 82.3 h (69.7th) and S100A10 at 68.3 h (60.1st)** sit above MVP, which is worth noting
+  only because they are the two confirmed non-subunit interactors.
+
+**The lesson is narrow and worth stating: we audited the prose against the data repeatedly today and
+never once audited the title.** It had carried an overstatement through every revision, including three
+rewrites of the abstract directly beneath it.

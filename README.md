@@ -51,7 +51,7 @@ PARP4 by knockdown; **ANXA2 and S100A10** as the only confirmed non-subunit inte
 the old membrane list; **COP1** at 27-fold in one instrument class; **myoferlin actively
 excluded**, in a wash-based pulldown and in pre-lysis covalent proximity labelling;
 **degradation machinery the most depleted annotation of 1,276** in an anti-MVP pulldown;
-a **sealed SPFH-shoulder nucleotide pocket**; and **three distinct subunit lifetimes**.
+a **sealed SPFH-shoulder nucleotide pocket**; and subunit half-lives whose spread sits at only the 29.86th percentile of random triplets.
 
 One observation has survived six registered attacks and is **still not promoted**: MVP's
 sub-threshold co-elution tail is translation-enriched at the 98th percentile of 150

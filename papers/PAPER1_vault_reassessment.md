@@ -1,10 +1,10 @@
-# One assembly, three lifetimes, a sealed nucleotide pocket, and one question that gave three answers: a pre-registered reassessment of major vault protein across public human and comparative data
+# One assembly, a sealed nucleotide pocket, and one question that gave three answers: a pre-registered reassessment of major vault protein across public human and comparative data
 
 **Graham W. Syfert.** Analysis performed with Claude (Anthropic). Two further language-model agents
 reviewed the manuscript adversarially against the committed data, in three rounds; between them they
 struck or qualified more than a dozen claims made here, and those reversals are recorded in place
 rather than quietly removed. All hypotheses were committed to a timestamped git history before the
-relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (264 entries)
+relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (267 entries)
 and `RESULTS.md` (24 sections). **That history is currently local and has not been published**, so
 the ordering it establishes is not yet independently verifiable; we state the fact rather than imply
 otherwise, and the repository is available to anyone who asks. Correspondence welcome, including
@@ -61,7 +61,10 @@ exclusion rested on a co-elution cutoff that also excludes TEP1, a real subunit 
 recovers at log-p 3.33. We also withdraw two earlier readings: an enrichment test against a partner
 set of size one has no power, and a container metaphor is one of six models producing the same
 graph. **What survives unchanged is the particle itself** - a 78-mer shell, PARP4 and TEP1 each
-independently associated, a sealed nucleotide pocket, and three distinct subunit lifetimes.
+independently associated, a sealed nucleotide pocket, and subunit half-lives of 22.2 h for PARP4,
+40.6 h for TEP1 and 66.4 h for MVP - values that differ, but whose spread sits at only the 29.86th
+percentile of abundance-matched random protein triplets, so they are less dispersed than 70% of
+random triples and do not support a claim of distinct lifetimes.
 
 We confirm, from two independent alignments, that the SPFH shoulder nucleotide pocket is the most
 conserved structural domain of MVP, with four ADP-ribose-contacting residues invariant across 174
