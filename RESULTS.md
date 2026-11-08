@@ -5106,3 +5106,21 @@ permanently, however the numbers land. House rule 5 forbids iterating a method u
 orthologue coverage is not the same as tuning a result, but **the distinction does not restore
 blindness**, and no later run gets to be described as a registered test of a prediction whose answer
 was already on the screen.
+
+### 79f. Correction to 79c: the diagnosis was itself unverified
+
+Ensembl began returning **503 Service Unavailable** when the failures were being diagnosed - the API
+rate-limits under sustained load, and the run had just made fifty calls. That matters backwards:
+**`src/dnds.py` recorded any response lacking the expected structure as `"no orthologue"`**, which
+**conflates a true biological absence with a server that did not answer.**
+
+So §79c's breakdown - *"Ciona accounts for 10, a registry error of ours"* - is **asserted, not
+established.** The APOBEC3G claim stands on independent grounds (it is primate-restricted as a matter
+of published biology, which needs no API call). The *Ciona* claim and the sixteen-count do not: both
+are consistent with a rate-limited endpoint, and **the instrument that produced the diagnosis cannot
+tell the two apart.**
+
+**This is the fourth time in this project that an error-handling branch quietly merged two outcomes**
+and the merged category was then read as the informative one. The repair below classifies HTTP status,
+empty-but-valid responses, and true absences separately, because a diagnosis that cannot fail is not a
+diagnosis.

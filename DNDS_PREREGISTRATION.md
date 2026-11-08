@@ -103,3 +103,43 @@ Two things the registration above did not specify, fixed here rather than decide
    the lexicographically first stable id, so the choice is deterministic and not ours to make later.
 3. **Codon filtering.** Drop any codon column where either sequence has a gap, an ambiguity, or a stop.
    Report how many codons survive per pair, because a pair that keeps very few is not evidence.
+
+---
+
+# Repair run: NOT BLIND, and labelled so permanently
+
+**MVP's value (0.1431) was on the screen before this was written.** Nothing below is a registered test
+of the primary prediction; that test ran, failed its gate, and is closed as UNINFORMATIVE (§79). This
+is a **coverage repair**, and any result it produces carries that label for good.
+
+## What changes, and why - each tied to a diagnosed failure
+
+1. **A mammal primary panel**, because short control genes saturate past *Xenopus* (§79d): mouse, rat,
+   dog, cow, macaque, **opossum** (marsupial, ~160 My). Chicken, *Xenopus* and zebrafish are retained
+   as a **deep tier that is reported but does not count toward the gate.**
+2. **APOBEC3G is dropped and replaced by ZP3.** APOBEC3G is primate-restricted, so registering it
+   across mouse-to-fish was house rule 7's vacuous control (#360). ZP3 is mammal-wide and documented
+   as rapidly evolving.
+3. **Error classification.** HTTP status, valid-but-empty responses, and genuine absence of an
+   orthologue are recorded as **three distinct outcomes**, never merged (§79f). A gene is only called
+   absent from a species on a 200 response that contains an empty homology list.
+4. **Rate limiting.** One request per second with exponential backoff on 429/503, because the first
+   run was throttled and some of its "absences" may have been the throttle.
+
+## The narrowed question, stated plainly
+
+A mammal panel can establish whether **MVP is under purifying selection among mammals**. It **cannot**
+establish it "in the lineages that kept it" across ~600 My, which is what the conservation paradox
+actually asks. **The original question is only partly reachable with this instrument, and the deep tier
+is reported precisely so the gap is visible rather than glossed.**
+
+## Gate for the repair run - four clauses, each failable
+
+1. **All four** essential controls return **>= 3 unsaturated pairs in the mammal panel** and median
+   dN/dS **< 0.20**.
+2. **All three** relaxed controls return **>= 3 unsaturated pairs**, and the **lowest** relaxed median
+   exceeds the **highest** essential median.
+3. **Every** reported gene has **>= 3 unsaturated mammal pairs**.
+4. **No gene's absence is inferred from a non-200 response.**
+
+If any clause fails, the repair is uninformative too, and that gets written down the same way.
