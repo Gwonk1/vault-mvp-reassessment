@@ -29,11 +29,15 @@ degradation, not off-rate, so a free cytoplasmic pool may dominate the number wh
 persist. Experiment 4 below is what would settle it.
 3. The particle is **dispensable for proliferation** (zero hits in 878 growth screens) yet
 **sequence-constrained** at the pocket (four residues invariant across 174 eukaryotes). Whatever
-selects it does not operate in a dish. **This is now measured rather than inferred:** dN/dS =
-**0.1118** across seven mammalian orthologues sits **above all four essential-gene controls and below
-all three rapidly-evolving controls** (§84b) - **strong purifying selection, roughly 90% of
-amino-acid substitutions removed.** Design accordingly: **the phenotype you are looking for is one
-selection can see and a growth screen cannot.**
+selects it does not operate in a dish. **This is now measured rather than inferred:** a codon model
+(`codeml` M0, F3x4, fixed topology) gives **omega = 0.06 across 11 vertebrate orthologues**, with an
+essential control at **0.05** and a relaxed control at **0.42** (§90) - **strong purifying selection.**
+Report it to **one significant figure**: our own reruns span 0.0608-0.0635 (§102b). The earlier
+pairwise NG86 figure of 0.1118 (§84b) **understated** the constraint and is superseded. **Two limits
+travel with it:** there is **no standard error or interval on any of these estimates**, so no equality
+with the essential control is established; and the panel is **keeper-only by construction** - every
+alignable sequence comes from a lineage that retained the gene (§102e). Design accordingly: **the
+phenotype you are looking for is one selection can see and a growth screen cannot.**
 4. **TEP1 is a latent, autoinhibited TIR-family NAD(P)ase (E1008), and the uninhibited domain is
 lethal in human cells** - expressed without its STAND regulatory domains it drops cellular NAD+ to
 30-40% of control and kills HEK293 cells, both abolished by E1008A. The brake is **in cis**,
@@ -79,12 +83,23 @@ is now fully specified**. A lab that runs these first will design better bench w
 
 ### 0a. The selection estimate, done properly
 
-**Why.** Our pairwise estimate (§84b) puts MVP under **strong purifying selection** where it is
-retained - dN/dS **0.1118**, above all four essential-gene controls and below all three
-rapidly-evolving ones. **That is the only positive measurement in this project**, and it was produced
-by the wrong tool: **NG86 pairwise against a single reference**, which biases the ratio **upward**,
-treats seven correlated comparisons as if they were independent, and **saturates exactly where the
-interesting deep comparisons live.** It deserves a real number.
+**Why. This one is now RUN** (§90, §98b, §102b), and the instruction below is what we would tell the
+next person. The pairwise NG86 estimate (§84b, dN/dS 0.1118) was produced by the wrong tool - it
+biases the ratio **upward**, treats seven correlated comparisons as independent, and **saturates
+exactly where the interesting deep comparisons live.** The codon model gives **omega = 0.06 across 11
+vertebrates, with an essential control at 0.05 and a relaxed control at 0.42.** So the pairwise figure
+**understated** the constraint.
+
+**Three things we got wrong in reporting it, which cost more than the computation did:**
+- **We quoted three digits.** Our own reruns span 0.0608-0.0635. **Report one significant figure**
+  unless you have an interval.
+- **We wrote "indistinguishable from a housekeeping gene"** - **since RETRACTED, §102b.** We had
+  **no standard error and ran no
+  test of equality**, and the gap was 18% of the control's own value. **Non-rejection you never
+  computed is not equality.** Fit the interval (step 3) or do not use the word.
+- **We headlined the panel that contained our weakest sequence.** The 13-taxon estimate (0.0608)
+  carries an unverified invertebrate gene model; the 11-taxon one (0.0635) contains no invertebrate
+  sequence at all, and **sat one row above it in our own table.** Report the clean panel and name it.
 
 **Do this.**
 1. **Work from a local Ensembl/Compara dump or mirror.** The public REST endpoint returned HTTP 500 on
@@ -92,9 +107,20 @@ interesting deep comparisons live.** It deserves a real number.
    reason three registered attempts failed.
 2. **Fetch TEP1's CDS directly** rather than through homology-with-sequence, which is what broke.
 3. **Fit a codon model on the species phylogeny** (PAML `codeml`, or HyPhy) rather than pairwise
-   estimates. Report one omega with a likelihood interval, not a median of correlated pairs. **Collapse
-   or model the cow/sheep clade**, which we double-counted; effective independent clades in our panel
-   were **four or five, not seven.**
+   estimates. **Report one omega with a likelihood interval** - we did not, and it is the single
+   omission that cost us the most, because without an interval you cannot say anything about equality
+   with a control. **Collapse or model the cow/sheep clade**, which we double-counted; effective
+   independent clades in our panel were **four or five, not seven.**
+   **Check `ntime` in the output against the arithmetic before reading any result.** For *n* taxa a
+   rooted tree has **2n-2** branches and an unrooted tree has **2n-3**. codeml also prints
+   `This is a rooted tree.  Please check!`. We missed both, in a file we never opened, and it
+   invalidated a branch test (step 6). **An M0 estimate is nearly insensitive to this; a
+   likelihood-ratio test is not** - rooting moved our LRT by 12 points while M0 moved under 3%.
+   **Verify every invertebrate or distant sequence as a gene model, not just as a match.** Ours scored
+   0.752 on 5-mer Jaccard, which is strong homology evidence and **says nothing about annotation
+   quality**. Reading the file afterwards: **two ambiguity codes, each at the junction of a near-tandem
+   repeat**, both surviving into the analysed alignment under `cleandata = 0`. **Read the sequence, not
+   only the score** (§102c).
 4. **Use `dS > 1.0` as the saturation bound, not 1.5**, and publish a 0.5 / 1.0 / 1.5 sensitivity line.
 5. **Extend beyond mammals.** The question that matters is selection across the ~600 My of lineages
    that **kept** MVP, including the tunicates (*Ciona* carries it, 2/2 in the §68 census). A mammal
@@ -105,6 +131,17 @@ interesting deep comparisons live.** It deserves a real number.
    measurable version is **relaxation among retainers**: fit a two-ratio branch model and ask whether
    omega is uniform across the retained tree, or elevated in some retained lineages. We wrote the
    wrong test into our own instruction and caught it only when installing the tools to run it.
+
+   **We then ran the corrected version, and it came back uninformative** (§98c, §101, §102a). **Three
+   failure modes to design around, because each one is cheap to avoid and expensive to discover:**
+   **(i)** the tree was **rooted** and codeml said so twice in output we did not read - check `ntime`;
+   **(ii)** our foreground was **"the invertebrate branches,"** which is a *label*, not a category:
+   decomposed tip by tip, **one terminal carried the entire effect and the other showed nothing.**
+   **Never report a multi-branch foreground without the per-branch decomposition**; **(iii)** the
+   surviving tip's omega sat **at the parameter boundary** (essentially no non-synonymous change pins
+   the MLE against zero), where **a chi-squared-on-1-df p-value does not apply** - a large LRT there is
+   what a boundary case looks like, not a significance. **If you want this test to mean anything, you
+   need more than two deep taxa**, and each one verified as a gene model.
 
 **What it decides.** Whether "actively conserved wherever it survives" holds at the depth that makes it
 interesting, and whether relaxation precedes loss.

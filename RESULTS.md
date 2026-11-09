@@ -5877,7 +5877,7 @@ relocated:** the place to look for a second vault protein is a genome that has o
 lineage published as having an **expanded** vault family, is **absent from OG 2QPP0 entirely** - so
 eggNOG did not place those copies here, and the profile was never trained on them.
 
-## 90. TIER 0a RUN PROPERLY: under a codon model, MVP's constraint is at housekeeping-gene level
+## 90. TIER 0a RUN PROPERLY: under a codon model, MVP's omega is 0.06, between the two controls and near the lower one
 
 Registered at `06dd589`. `codeml` 4.9j, M0 (one omega), F3x4 codon frequencies, MAFFT protein alignment
 threaded to codons, gap-free columns only, fixed topology, **two starting omegas as the registered
@@ -5912,12 +5912,35 @@ same topology.
 housekeeping control** - 0.0119 above GAPDH against a 0.3788 span to CD4.
 
 **So §84b understated the constraint.** The reversal grok forced there - that MVP is under strong
-purifying selection - **holds and gets stronger**: the honest statement is now that **MVP's selective
-constraint is not distinguishable from a housekeeping gene's** on this panel.
+purifying selection - **holds.**
 
-**This sharpens the paradox as far as it can be sharpened by sequence alone.** A gene that is deletable
-from a mouse with no obvious phenotype, discarded outright by two major clades, and absent from
-proliferation screens in 878 cell lines, is **as constrained as GAPDH** wherever it is retained.
+> ### How this number may be reported (grok audit 011, §102b)
+>
+> **Report omega = 0.06, to one significant figure.** Our own runs of the same gene span
+> **0.0608-0.0635** - the 11-taxon panel here, the 13-taxon panel in §98b, and a topology variant at
+> 0.0617. That is a **4.4% spread**, so **the third digit is noise across our own runs** and the five
+> decimal places the gate agrees to are reproducibility of one optimisation, not precision of the
+> estimate.
+>
+> **The claim that survives is the bracket, at one significant figure: MVP 0.06, with the essential
+> control at 0.05 and the relaxed control at 0.42.** The ratio MVP/GAPDH moves 1.23 to 1.18 across
+> variants; CD4/MVP stays near 7. **The support the bracket actually has is CD4 at 0.42** - it shows
+> the estimator still has range under this code and pipeline, which is what makes 0.06 mean low
+> rather than mean broken.
+>
+> ~~**MVP's selective constraint is not distinguishable from a housekeeping gene's.**~~ **WITHDRAWN,
+> §102b.** There is **no standard error on any of these estimates, and no test of equality was
+> registered or run.** Non-rejection was never computed, let alone established - and the gap to GAPDH
+> is **18%** of GAPDH's own value. *"Indistinguishable"* is a claim about a test; we ran none. The
+> defensible statement is **nearer the essential control than the relaxed one, on a panel of two.**
+
+**And the panel is keeper-only by construction.** Every sequence in it comes from a lineage that
+retained MVP - that is what makes it alignable. **GAPDH is retained almost everywhere, so its panel is
+nearly unconditioned; MVP's is heavily conditioned,** and the two are not sampled the same way even
+though they ran through the same code. So the statement carries its frame: **among extant orthologues
+that remain alignable, MVP's omega is 0.06.** What happens on the branches where the gene was lost is
+not measured here and **cannot be**, which is a limit on the loss contrast, not on this estimate
+(§102e).
 
 ### 90c. Limits, stated rather than buried
 
@@ -6422,7 +6445,7 @@ support. The two structures agree on *where* and disagree on *which*.
 Checking it cost one alignment, and I only ran it because §96e made me write down what I was declining
 to check - which is **house rule 16 working in the direction it was written for.**
 
-## 98. The registered branch test, delivered: constraint is NOT uniform, and the deep branches are MORE constrained
+## 98. The registered branch test, delivered and uninformative (VOID, §101; closed §102)
 
 The corrected version of the ill-posed test (§86/#400) - **relaxation among retainers** - registered in
 `TIER0_PREREGISTRATION.md` and listed by §90c as *"only partly delivered."* Delivered here.
@@ -6446,7 +6469,7 @@ protein we already hold, translate every CDS in the species' dump, and match on 
   *B. floridae* and Ensembl serves *B. lanceolatum*, so a cross-species match at 0.75 is plausible
   **and is not proof it is the orthologue rather than a paralogue.** Flagged.
 
-### 98b. M0 across the chordates barely moves
+### 98b. M0 on 13 taxa gives the same figure as on 11, which is the expected behaviour and not a confirmation
 
 | panel | taxa | codons | **omega** | reproducible |
 |---|---|---|---|---|
@@ -6454,7 +6477,21 @@ protein we already hold, translate every CDS in the species' dump, and match on 
 | **+ *Ciona* + *Branchiostoma*** | **13** | **785** | **0.0608** | **yes, both starts** |
 
 Adding ~600 My of chordate outgroup moves the tree-wide estimate by **0.003**. **GATE PASS** on
-reproducibility.
+reproducibility from both starts.
+
+> **Two corrections to how this was read, grok audit 011 (§102b, §102d).**
+>
+> **It is not independent confirmation.** M0 fits **one omega averaged over every site and every
+> branch.** A tree-wide average that moves a few percent when the topology changes at this scale is
+> **what the model does**, not evidence that the estimate is right. We presented insensitivity as
+> corroboration; it is neither corroboration nor a surprise.
+>
+> **And the 13-taxon figure is the one carrying the unverified sequence.** The 11-taxon panel is
+> **entirely vertebrate** - human, rat, rabbit, dog, horse, cow, sheep, opossum, chicken, *Xenopus*,
+> zebrafish - so **the 0.0635 estimate does not contain the flagged *Branchiostoma* gene model at
+> all.** The 0.0608 figure does. Since **0.0608 is the number §98e quoted in prose**, the headline we
+> wrote was the one resting on the weaker input, while a cleaner estimate sat one row above it.
+> **Report 0.06 and state the panel as vertebrate** (§102c).
 
 ### 98c. The branch test is positive, and the direction is the opposite of "relaxation"
 
@@ -6466,14 +6503,22 @@ Two-ratio model, the two invertebrate branches as foreground:
 | **foreground (*Ciona* + *Branchiostoma* branches)** | **0.0025** |
 
 ~~**LRT = 28.33 on 1 df, p = 1.0e-07.** Constraint is not uniform and the deep branches are ~27x MORE
-constrained.~~ **VOID TWICE OVER, §101.** The tree was **rooted** (codeml printed `This is a rooted
-tree. Please check!` and `ntime: 24` where unrooted 13-taxon is 23); unrooted gives **0.0247, LRT
-16.50**. And the foreground was never a category: ***Ciona* alone 0.0024, p = 1.2e-07; *Branchiostoma*
-alone 0.0415, p = 0.275 - not significant.* **The entire effect is one branch.**
+constrained.~~ **VOID TWICE OVER, §101.**
+
+**Fault one, the tree was rooted.** codeml printed `This is a rooted tree.  Please check!` and
+`ntime: 24` in output never opened. **The arithmetic is fixed and worth stating once:** for *n* taxa a
+**rooted** tree has **2n-2** branches and an **unrooted** tree has **2n-3**. For n = 13 that is **24
+and 23**. Printing `ntime: 24` therefore *announced* the rooted tree a second time, independently of
+the warning line. Unrooting moves the shared foreground omega **tenfold, 0.0025 to 0.0247.**
+
+**Fault two, the foreground was never a category** - ***Ciona* alone 0.0024; *Branchiostoma* alone
+0.0415, nothing detected.** **The entire effect is one branch,** as a description of the table in
+§101b.
 
 **The registered framing expected the opposite.** "Relaxation among retainers" was built to look for
-lineages where constraint had loosened, possibly presaging loss. **It found the deep chordate branches
-to be the most constrained part of the tree.**
+lineages where constraint had loosened, possibly presaging loss. It did not find that. **It did not
+find the reverse either** - what it returned was a difference in fit on one tunicate terminal, which
+is **not a statement about deep branches** (§100b) and **not a statement about a category** (§101b).
 
 ### 98d. Why the magnitude must not be quoted as a selection coefficient
 
@@ -6481,27 +6526,48 @@ to be the most constrained part of the tree.**
 that is exactly where **synonymous saturation makes dS unreliable**: a saturated dS is a large dS, and a
 large denominator makes omega small **whether or not selection did it.** So:
 
-- **The direction is probably real** - MVP's protein is strongly conserved across the chordates while
-  synonymous sites have churned.
+- ~~**The direction is probably real**~~ **WITHDRAWN, §102a.** With the foreground reduced to one
+  terminal, "the direction" is a property of one tunicate lineage, and the estimate sits **at the
+  boundary** of the parameter space (see below).
 - **The number is not a selection coefficient.** 0.0025 should be read as "dN is near zero on these
   branches relative to a saturated dS", not as 99.75% of substitutions removed.
-- **Two foreground branches against twenty background**, 785 codons, 1 df: **p = 1e-07 is cheap under
-  those conditions** and the effect rests on two branches, one of which (*Branchiostoma*) has a
-  0.752 protein match.
+- **And an omega pinned near zero is a boundary estimate.** When a terminal carries essentially no
+  non-synonymous change, the MLE **sits against the floor at 0**, and a chi-squared-on-1-df p-value
+  **does not apply there**. The large LRT is what a boundary case looks like, not a measured
+  significance. **No p-value from these runs is quoted anywhere in this file any longer** (§102a).
 - A **dS-per-branch report and a saturation-aware model (or a closer outgroup)** are what would make
-  the magnitude meaningful, and neither was registered or run.
+  the magnitude meaningful, and **none of them will be run** - the test they would repair has a
+  foreground of one branch, so **the measurement would characterise one tunicate terminal and nothing
+  more** (§102a).
 
-### 98e. What this adds to the conservation story
+### 98e. What this adds to the conservation story: less than it said, and the wording was wrong twice
 
-§90b established MVP's constraint as indistinguishable from a housekeeping gene's **among mammals.**
+~~§90b established MVP's constraint as indistinguishable from a housekeeping gene's **among mammals.**
 This extends the measurement to **~600 My of chordates and finds the same answer tree-wide (0.0608)**,
-with the deep branches contributing the least amino-acid change of all.
+with the deep branches contributing the least amino-acid change of all.~~
 
-**So the paradox does not soften with depth. It hardens.** A gene deletable from a mouse, absent from
+~~**So the paradox does not soften with depth. It hardens.** A gene deletable from a mouse, absent from
 878 proliferation screens, and discarded outright by two major clades, is **conserved at
-housekeeping-gene level across the chordates.** ~~and most strongly conserved on the deepest branches
-we can measure~~ **WITHDRAWN, §100b: those are two extant TIPS, not deep branches -** *"a tip omega is
-an average over the whole terminal; it is not a Cambrian coefficient."*
+housekeeping-gene level across the chordates.**~~ ~~and most strongly conserved on the deepest branches
+we can measure~~
+
+**WITHDRAWN IN FULL. Four separate faults in one paragraph:**
+
+1. **"the deepest branches"** - those are two extant **tips**, not deep branches (§100b). *"A tip omega
+   is an average over the whole terminal; it is not a Cambrian coefficient."*
+2. **"indistinguishable from a housekeeping gene's"** - no standard error, no test of equality, an 18%
+   gap (§102b).
+3. **"finds the same answer"** presented as corroboration - a tree-wide M0 average moving a few
+   percent under a topology change is the model's expected behaviour (§102d).
+4. **0.0608 as the headline** - it is the estimate that **contains** the flagged *Branchiostoma* gene
+   model, where the 11-taxon 0.0635 does not (§102c).
+
+**What is left, stated with its frame:** among extant orthologues that remain alignable, **MVP's M0
+omega is 0.06 across 11 vertebrates, with GAPDH at 0.05 and CD4 at 0.42.** The paradox is real and
+unchanged in substance - **a gene deletable from a mouse, absent from 878 proliferation screens and
+discarded outright by two major clades is strongly constrained wherever it is retained** - but it is a
+**vertebrate** measurement, **it does not sharpen with depth**, and the word "housekeeping" describes
+the neighbouring control, not a demonstrated equality.
 
 ## 99. Grok audit 010: the general form of the error, and it fires three times inside my own correction
 
@@ -6701,18 +6767,31 @@ access to the file that states it twice.
 
 Unrooting the tree and then decomposing the foreground tip by tip:
 
-| run | ntime | foreground omega | LRT | p |
-|---|---|---|---|---|
-| 13 taxa, **rooted**, both tips share omega - **as published §98c** | **24** | **0.0025** | 28.33 | 1.0e-07 |
-| 13 taxa, unrooted, both tips share omega | 23 | **0.0247** | 16.50 | 4.9e-05 |
-| 13 taxa, unrooted, ***Branchiostoma* alone** | 23 | **0.0415** | **1.19** | **0.275 - NOT SIGNIFICANT** |
-| 13 taxa, unrooted, ***Ciona* alone** | 23 | **0.0024** | **28.00** | **1.2e-07** |
-| 12 taxa, unrooted, *Ciona* (*Branchiostoma* removed) | 21 | 0.0027 | 25.40 | 4.7e-07 |
+| run | ntime | foreground omega | LRT |
+|---|---|---|---|
+| 13 taxa, **rooted**, both tips share omega - **as published §98c** | **24** | **0.0025** | 28.33 |
+| 13 taxa, unrooted, both tips share omega | 23 | **0.0247** | 16.50 |
+| 13 taxa, unrooted, ***Branchiostoma* alone** | 23 | **0.0415** | **1.19** |
+| 13 taxa, unrooted, ***Ciona* alone** | 23 | **0.0024** | **28.00** |
+| 12 taxa, unrooted, *Ciona* (*Branchiostoma* removed) | 21 | 0.0027 | 25.40 |
 
-**The entire effect is one branch.** *Branchiostoma*'s terminal is **indistinguishable from the
-vertebrate background (p = 0.275)**; *Ciona*'s carries all of it. Forcing them to share one omega
-produced 0.0247 - **an average of a real outlier and a null** - and the rooted tree then pushed that
-average to 0.0025.
+> **The p-value column has been deleted, grok audit 011 (§102a).** It held 1.0e-07, 4.9e-05, 0.275,
+> 1.2e-07 and 4.7e-07. **None of them may be quoted.** *Ciona*'s omega sits **at the boundary** of the
+> parameter space - a terminal with essentially no non-synonymous change pins the MLE against zero -
+> and **a chi-squared-on-1-df p-value does not apply at a boundary.** The *Branchiostoma* figure fails
+> for the opposite reason: **0.275 is a non-rejection with no confidence interval and n = 1 branch**,
+> which supports *"nothing detected, test unpowered"* and nothing else. The **LRTs are kept as
+> differences in fit**, which is all they ever were.
+
+**The entire effect is one branch** - as a description of this table. ***Branchiostoma*'s terminal
+shows nothing detectable against the vertebrate background**; *Ciona*'s carries all of it. Forcing them
+to share one omega produced 0.0247 - **an average of an outlier and a nothing** - and the rooted tree
+then pushed that average to 0.0025.
+
+**The word "indistinguishable" has been removed from this paragraph too** (§102b). It appeared here
+about *Branchiostoma*'s p = 0.275 - **itself now WITHDRAWN as a quotable number, §102a** - and in §90b
+about MVP versus GAPDH, and in **both** places it converted *"we did not detect a difference"* into *"we established there is none."* **Twice, in the
+same pair of sections, on the same mistake.**
 
 **"Invertebrate branches" was two unrelated terminals sharing a label.** That is **house rule 17's Type
 II**, and I committed it **in the analysis I was running while writing rule 17 up.**
@@ -6729,21 +6808,194 @@ them as the same thing.
 
 ### 101d. What replaces §98c
 
-> **One terminal branch - *Ciona intestinalis* - prefers a markedly lower omega than the vertebrate
-> background (0.0024 against 0.0664, LRT 28.0, p = 1.2e-07). *Branchiostoma*'s does not (p = 0.275).
-> That is n = 1 lineage.**
+> **One terminal branch - *Ciona intestinalis* - fits a markedly lower omega than the vertebrate
+> background (0.0024 against 0.0664, LRT 28.0). *Branchiostoma*'s shows nothing detectable. That is
+> n = 1 lineage, the estimate is at the parameter boundary, and no p-value applies.**
 
 And every caveat from §100 survives intact and now applies to a single branch:
 - **A tip omega is an average over the whole terminal.** *Ciona* is far from the vertebrates because the
   tip is distant, not because the model isolated deep time. **It is not a Cambrian coefficient.**
 - **A ridge is reproducibly a ridge** - the saturated denominator is unaddressed.
 - ***Ciona* is compositionally extreme** relative to the vertebrate-dominated F3x4 vector, and that
-  misfit is absorbed by **exactly the parameter being reported**. With the foreground now a single
-  *Ciona* branch, **this generator and the result are the same object**, and nothing here separates
-  them.
+  misfit is absorbed by **exactly the parameter being reported**. **Whether the misfit and the 0.0024
+  are the same object is an assertion, not a finding** - the amino-acid counts, per-branch dS and GC3
+  that could support it **were not computed and will not be** (§102a). What is established is weaker
+  and sufficient: **nothing here separates the generator from the result.**
 - **785 gap-free columns** are the sites that stayed alignable at that distance.
 - **Every branch is a retention branch by ascertainment.** The loss question is untouched.
 
 **The registered branch test is therefore delivered and uninformative.** It returns a difference in fit
-on one terminal, with a magnitude that is unidentified and a composition confound that is
-indistinguishable from the signal.
+on one terminal, with a magnitude that is unidentified and a composition confound **that nothing here
+separates from the signal.** House rule 16 requires naming the informative outcome we are giving up:
+**the statistic not computed is per-branch dS, GC3 and amino-acid counts on the *Ciona* terminal, and
+the outcome that would have been informative is a *Ciona* dS comparable to the vertebrate terminals -
+which would have left the low omega needing an explanation other than a saturated denominator.** It is
+not being computed, because with a foreground of one branch the result would describe one tunicate
+lineage, and **a number whose only audience is a void section becomes a number somebody cites**
+(§102a).
+
+## 102. Grok audit 011: stop. And the one question it asked back has a two-part answer.
+
+Audit 011 was a **stopping question**, not an analysis request: is anything left worth doing, am I
+overvaluing process by considering house rule 17 and check 4 for `CALIBRATION.md`, and what have I not
+worried about. The reply was **"Stop. No further codeml, no EMPIAR chase, no second structure"** - and
+then a punchlist of claims to cut before stopping, plus one empirical question I was not allowed to
+stop without answering.
+
+### 102a. The declined measurement stays declined, but the sentence it propped up comes off
+
+I had decided **not** to run the per-branch dS / GC3 / amino-acid-count report on *Ciona*, and recorded
+that decision under house rule 16. **Audit 011 agreed with the decision and rejected the sentence I
+had written on top of it.**
+
+I wrote that the composition warning was *"now fatal rather than a caveat"* - that the vertebrate-
+dominated F3x4 misfit and omega = 0.0024 are **the same object.** That identity is **an assertion.**
+The only measurement that could support it is the one I declined to run. So:
+
+- **"fatal" is withdrawn.** The confound is **unaddressed**, which is a weaker and true statement.
+- **"the same object" is withdrawn.** What stands is *"nothing here separates the generator from the
+  result."*
+- **"§98c is void" stands** - on the two established faults, the rooted tree and the one-branch
+  foreground, neither of which needs the mechanism.
+- **The report is still not run.** *"A count whose only audience is a dead section becomes a number
+  someone will cite."*
+
+**And the p-values go.** omega = 0.0024 on a terminal with essentially no non-synonymous change is a
+**boundary estimate** - the MLE pins against zero - and **a chi-squared-on-1-df p-value does not apply
+at a boundary.** LRT 28.00 is what a boundary case looks like. The p column has been deleted from
+§101b and every p-value from these runs removed from §98c, §98d and §101d. **The LRTs stay, as
+differences in fit.**
+
+**Audit of the rest, since the instruction was that any other likelihood-ratio number from those rooted
+logs is live until voided the same way:** searched. **Every LRT and every codeml p-value in this
+repository belongs to the §98c branch test and its §101 autopsy.** The M0 runs - MVP, GAPDH, CD4, the
+13-taxon panel, the topology variants - are **single-model fits with no likelihood-ratio test between
+them**; their gate was reproducibility from two starting omegas, not a p-value. **There is no other
+live LRT to void.**
+
+### 102b. The bracket survives; the adjective does not
+
+The surviving measurement is **the bracket, at one significant figure: MVP 0.06, GAPDH 0.05, CD4
+0.42.** Three things had to be fixed about how it was stated.
+
+**The third digit is noise across our own runs.** Variant-to-variant: MVP 0.0635 to 0.0617 (2.8%),
+GAPDH 0.0517 to 0.0521 (0.8%), CD4 0.4304 to 0.4200 (2.4%). With §98b's 13-taxon 0.0608 in the same
+family, our own band for MVP is **0.0608-0.0635, a 4.4% spread.** The gate's agreement to five decimal
+places is **reproducibility of one optimisation**, not precision of the estimate. **Report 0.06.**
+
+**The bracket's actual support is CD4 at 0.42**, which demonstrates the estimator still has range under
+this code and pipeline. That is what makes 0.06 read as *low* rather than as *broken*. Ratios hold at
+one significant figure: MVP/GAPDH 1.23 to 1.18, CD4/MVP near 7.
+
+**"Indistinguishable from a housekeeping gene" is withdrawn.** No standard error on any estimate, no
+test of equality registered or run, and an **18% gap** to GAPDH. The word asserts a test that was never
+computed. **It appeared twice in two sections on the same mistake** - here about MVP versus GAPDH, and
+in §101b about *Branchiostoma*'s p = 0.275 - and in both places it turned *"we did not detect a
+difference"* into *"we established there is none."* Both are gone.
+
+**No resolved unrooted rerun is needed for this.** The rooted-tree bug moved an LRT by 12 points while
+M0 moved under 3%. That asymmetry is the finding: **M0 is a tree-wide average and is insensitive to
+branch assignment, so the M0 check does not travel to any likelihood-ratio statistic** - and equally,
+the rooting bug does not reach the bracket.
+
+### 102c. The question I was not allowed to stop without answering, and it cuts both ways
+
+> *"The wrong-species *Branchiostoma* tip (0.752) is untested residue if it is still inside the M0
+> alignment. Say whether it is still in."*
+
+**Checked in the files, not from memory. The answer is: it depends which M0, and that is itself the
+problem.**
+
+| M0 run | taxa | *Branchiostoma* present | omega |
+|---|---|---|---|
+| **11-taxon panel** (§90a, `MVP.phy`) | human, rat, rabbit, dog, horse, cow, sheep, opossum, chicken, *Xenopus*, zebrafish | **NO - all 11 are vertebrates** | **0.0635** |
+| **13-taxon panel** (§98b, `deep.phy`) | the above + *Ciona* + *Branchiostoma* | **YES** | **0.0608** |
+
+**So the clean estimate was always available, and the number we put in prose was the dirty one.**
+§98e's headline was **0.0608 "across the chordates"** - **that phrase is now RETRACTED, §102c** - the
+panel that contains the flagged gene model
+- while **0.0635, which contains no invertebrate sequence at all, sat one row above it in the same
+table.** The surviving claim can be stated **entirely without the suspect sequence**, at the cost of
+one word: the panel is **vertebrate**, not chordate. That is the correction in §98b and §98e.
+
+**And looking at the sequence I had already fed to codeml - which I had never done - it is worse than
+"unverified."** Reading `branchiostoma_cds.fna`:
+
+- **2,718 nt, 906 codons, and two `N` ambiguity codes**, at nt 74 and nt 410. *Ciona*'s CDS has none.
+- **Both `N`s sit at the junction of a near-tandem repeat.** At nt 74:
+  `GAGGAGTCCATCTTCCGCATCCCGCCATTCTA` **N** `GAGGAGTCCATCTTCCGCATCCCACCATTCTAC` - a **33-nt repeat
+  with 2 mismatches**, the ambiguity exactly at the seam. At nt 410: `CCCTTGAAAGTGGT` **N**
+  `ACGCCCCTGAAAGTGGTCTCT` - the same pattern at ~14 nt. **Two for two.**
+- **Both survived into the analysed alignment.** The 785-codon `deep.phy` row for *Branchiostoma*
+  **still carries both `N`s**, and the control file sets **`cleandata = 0`**, so codeml read them
+  rather than dropping the sites.
+
+**What is observable** is the ambiguity codes and the repeat structure around them. **The reading that
+these are gene-model join artefacts is probable and untested** - I am not testing it, because the
+section it would inform is void. But it is the concrete content of "treat the lancelet sequence as an
+unverified gene model," and **it was visible in a file I had open the whole time.** This is house rule
+18 again, one section after clearing check 4: **the input was never read, only used.**
+
+### 102d. On whether rule 17 and check 4 belong in `CALIBRATION.md`: no, and the question was the tell
+
+I asked whether house rule 17 and check 4 should be added to the two-finding calibration file, and said
+plainly that I suspected this was **the audit-007 error - revaluing process because it was expensive to
+learn.** It was.
+
+**Ruled out, both.** Rule 17 is **a writing order learned at personal cost**; a stranger gains no
+false-result prevention from the slogan that they would lack from ordinary practice, and **a slogan
+lowers the file.** As for check 4: its first run was 47 lines in 21 files, of which **one** was the
+rooted-tree line **already caught by the ntime arithmetic**, **one** was a `ValueError` on a later
+attempt whose JSON predates the crash by 27 minutes, and **the rest were gates recorded on purpose.**
+**The scientific yield of the entire clearance was one sentence** - §10's scope limit - **and that
+sentence already sits on the verdict it qualifies**, which is the right file.
+
+**The clearance ritual is also demonstrably noisy**, by its own record: an ERE `\|` that searched for a
+literal backslash, and my own `READ (2):` annotation that missed the marker vocabulary. **A 45-of-47
+annotation load with a false-negative path like that decays into stamps.** The script stays in `src/`
+as a tool. It is not a finding.
+
+**The ntime fact** - rooted 2n-2, unrooted 2n-3, plus the warning line codeml already prints - belongs
+**in the §98c void**, where it has been put, **not copied into the calibration file as a souvenir.**
+
+`CALIBRATION.md` therefore still holds **two findings** and neither is about process.
+
+### 102e. The thing I had not worried about: my own stopping argument was false as a principle
+
+I justified stopping partly like this: *"the original question - what happens on the branches where the
+gene was lost - remains unanswerable, because every sequence in the alignment is by definition from a
+lineage that kept it."*
+
+**That is false as stated, and it undercuts the claim I am keeping.** Keeper-branch omega **is**
+estimable - it is exactly the M0 result in §90 that I call robust. The ascertainment is a real limit on
+**the loss contrast**, which cannot be run. It is **not** a limit on estimating omega among retainers.
+
+Turned the right way round, it is **the sampling frame of §90b**, and stating it is a correction to that
+section rather than a reason to stop: **GAPDH is retained almost everywhere, so its panel is nearly
+unconditioned; MVP's panel is keeper-only by construction.** The two genes went through identical code
+and are **not sampled the same way.** So the surviving sentence is:
+
+> **Among extant orthologues that remain alignable, MVP's M0 omega is 0.06 across 11 vertebrates, with
+> an essential control at 0.05 and a relaxed control at 0.42.**
+
+Added to §90b. **And the same pattern was flagged one step away:** §10's seven NaN genes (TEP1, PARP4,
+ABCB1, ABCG2, ABCC1, IFIT1, AXL) support **"§10 does not assess these genes"** and do **not** support
+**"single-cell dropout"** - the mechanism was never measured. The scope note in §10 was already worded
+correctly; **ledger #453 was not**, and has been corrected.
+
+### 102f. The stop
+
+**No further computation on this question.** The structural question is foreclosed by provenance - a
+blank `_refine.pdbx_starting_model` leaves **sample size 1** for any classification claim, and that
+stands. The branch test has a foreground of **one terminal**. The loss contrast has **no branches to
+measure**. The remaining ideas need data that does not exist in a form anyone can hand me.
+
+**What this file ends with**, after eleven audits:
+
+- **One measurement that survived everything and got sharper by being cut down:** MVP's M0 omega is
+  **0.06** among extant vertebrate orthologues, bracketed by **0.05** and **0.42**.
+- **Two calibration findings** for strangers, in `CALIBRATION.md`, neither of them biology.
+- **The paradox intact and unexplained:** a gene deletable from a mouse, invisible in 878
+  proliferation screens, and discarded outright by two major clades is strongly constrained wherever
+  it is retained. **Nothing in this work explains that.** It is a better-stated question than the one
+  I started with, and that is the whole of the result.

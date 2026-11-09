@@ -28,7 +28,10 @@ papers can be checked without any of this**; the data is only needed to recomput
    re-checked the title. **Audit the title.**
 3. **Read the table, do not describe it.** Faults #59, #60, #64, #70 and #90 are all the same mistake
    (**#90 is a dangling citation — the ledger has no entry 90, and none has 89 either; the rule stands on the other four, and
-   we leave the number visible rather than tidy away the provenance**):
+   we leave the number visible rather than tidy away the provenance. The ledger has two id gaps in all:
+   89-90 and 391-394. Verified #464: nothing in the repository cites 391-394, so unlike #90 these are
+   unused numbers rather than dangling citations. The gaps stay; renumbering 450+ rows to close them
+   would invalidate every citation in the file**):
    summarising a sorted file from memory instead of opening it. Check the top *and* the bottom.
 4. **Verify a collaborator's number against their data file, not their prose.** Fault #64.
 5. **Do not iterate a method until it passes.** Fault #113 is the decision to stop re-opening a finding
@@ -274,11 +277,22 @@ FAIL, `rooted tree`, convergence failures, singular/unidentifiable, Traceback, N
 truncated, skipped.
 
 **It is deliberately noisy.** First run: **47 lines across 21 files.** Most are registered gate failures
-we recorded on purpose. **One was fatal** (the rooted tree, present in *every* codeml run including the
-§90 controls). **One needed three minutes to clear** - a real `ValueError` traceback in
-`results/phospho_part2.log`, which turned out to be a **later aborted re-run**: the complete JSON is
-timestamped 08:37 and the crash log 09:04, so §24 rests on the successful run. **That ratio - one fatal,
-one to investigate, the rest annotated - is what a useful alarm looks like.**
+we recorded on purpose. **One mattered** - the rooted tree, present in *every* codeml run including the
+§90 controls. **It was fatal to the branch test (§98c) and did not reach the M0 bracket:** rooting moved
+a likelihood ratio by 12 points while the M0 estimates moved under 3%, because M0 is a tree-wide average
+and is insensitive to branch assignment. **That asymmetry runs both ways - the M0 check does not vouch
+for any likelihood-ratio statistic either** (§102b). **One needed three minutes to clear** - a real
+`ValueError` traceback in `results/phospho_part2.log`, which turned out to be a **later aborted re-run**:
+the complete JSON is timestamped 08:37 and the crash log 09:04, so §24 rests on the successful run.
+
+> **What this check is worth, assessed by grok audit 011 (§102d) rather than by us.** The **scientific**
+> yield of clearing all 47 was **one sentence**: §10's scope limit. One hit was the rooted-tree line
+> **already found by arithmetic** without reading the file; one was the aborted re-run; the rest were
+> gates we had recorded deliberately. **And the clearance path is itself unreliable** - an ERE `\|`
+> once searched for a literal backslash, and our own `READ (2):` annotation missed the marker
+> vocabulary. **A 45-of-47 annotation load with a false-negative path like that will decay into
+> stamps.** Keep the check; **it is a tool, not a finding**, and it was ruled out of `CALIBRATION.md`
+> for that reason.
 
 **To clear a file**, add a line containing `READ:` (or EXPECTED / benign / VOID / `see RESULTS`) saying
 what the warning means and why it is acceptable. **A judged warning is annotated. An unjudged warning is

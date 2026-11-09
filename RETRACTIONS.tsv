@@ -31,3 +31,13 @@ waist < distal. NOT MET	§94b	kill withdrawn: the geometric waist bin was not th
 now has a footprint attached	§99e	copy count sets a barrier only under concerted opening; a census does not choose the mechanism
 most strongly on the deepest branches	§100b	two extant tips, not deep branches; a tip omega is not a Cambrian coefficient
 ~27x MORE constrained	§101	rooted tree inflated it tenfold; and the effect is one branch, not a category
+(not distinguishable|indistinguishable) from a housekeeping gene	§102b	no SE, no test of equality registered or run, 18% gap to GAPDH; the word asserts a test never computed
+as constrained as GAPDH	§102b	same fault in a different phrasing; the bracket survives at one significant figure, the equality does not
+p *= *1\.2e-0?7	§102a	boundary estimate: omega pinned at zero has no chi-squared-on-1-df p-value
+p *= *0\.275	§102a	non-rejection, no CI, n = 1 branch; supports "nothing detected, test unpowered" only
+p *= *4\.9e-0?5	§102a	same Ciona branch after dilution by a null tip; no p from these runs may be quoted
+LRT 28\.33	§102a	rooted-tree run, superseded; and the p that accompanied it does not apply at the boundary
+across the chordates	§102c	the 11-taxon panel is entirely vertebrate; the 13-taxon figure is the one carrying the flagged Branchiostoma gene model
+hardens with depth|does not soften with depth	§98e	withdrawn in full: tips not branches, no corroboration, and the dirty panel was the headline
+the same object	§102a	the F3x4 misfit / omega identity is an assertion; the measurement that could support it was declined
+single-cell dropout	§102e	the NaNs support "does not assess these genes"; dropout was never measured

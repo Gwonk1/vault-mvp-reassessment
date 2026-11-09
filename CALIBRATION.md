@@ -149,3 +149,28 @@ All three return **0**. Both findings are direct score lookups and residualisati
 matched-null machinery at all**, so the degenerate matcher cannot reach them. The one CFdb parsing bug
 that did occur was caught by a registered positive control before any result was read, and the fix is
 present in all three CFdb readers.
+
+---
+
+## What this file deliberately does not contain
+
+**This file holds two findings, and neither is about process.** That is a deliberate restriction, and it
+has been tested twice against an external methods auditor.
+
+Over this project's eleven audit rounds the most *transferable*-feeling output was procedural: a rule
+about the order in which to write a comparison, a gate that greps your own tool output for the warnings
+it already printed. Both came out of real errors, and the temptation to promote them into this file was
+strong on exactly that basis. **Both were ruled out** (`RESULTS.md` §102d, and §72's earlier ruling on
+an annotation finding), for two reasons worth stating because they apply to anyone writing something
+like this:
+
+1. **A stranger gains nothing from a slogan they would not have from ordinary practice.** A rule that
+   encodes *our* sequence of mistakes reads, to someone who did not make them, as a platitude. It
+   lowers the file it sits in.
+2. **The cost of learning something is not evidence of its value.** Two days of expensive error makes a
+   lesson feel like a finding. It is the single most reliable way to inflate a results file, and the
+   auditor named it as a recurring failure of ours before we committed it again.
+
+The working rules themselves live in `CONTRIBUTING.md`, where they belong, and the checks live in
+`src/`. **If you are deciding what goes in a file like this, the test we settled on is: would this have
+prevented a false result for someone who never met us?** Both findings above clear it. Neither rule did.

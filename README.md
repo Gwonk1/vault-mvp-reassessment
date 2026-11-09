@@ -113,12 +113,19 @@ excluded**, in a wash-based pulldown and in pre-lysis covalent proximity labelli
 **degradation machinery the most depleted annotation of 1,276** in an anti-MVP pulldown;
 and subunit half-lives whose spread sits at only the 29.86th percentile of random triplets.
 
-**One positive measurement survived everything.** In the lineages that kept MVP, the gene is under
-**strong purifying selection** - dN/dS **0.1118** across seven one-to-one mammalian orthologues, above
-all four essential-gene controls (0.0031-0.0771) and below all three rapidly-evolving controls
-(0.2166-0.5578). **We refused this number on a gate technicality and an external methods audit
-reversed us** (§84, house rule 15). It **sharpens** the paradox: deletable from a mouse, discarded by
-two major clades, and actively conserved wherever it survives.
+**One positive measurement survived everything, and got sharper by being cut down.** Among extant
+orthologues that remain alignable, MVP is under **strong purifying selection** - a codon-model
+(`codeml` M0) **omega of 0.06 across 11 vertebrates**, between an essential control at **0.05** and a
+relaxed control at **0.42** (§90). **We refused this number on a gate technicality and an external
+methods audit reversed us** (§84, house rule 15); a second audit then cut it down to **one significant
+figure**, because our own reruns disagree about the third digit (§102b).
+
+**What it is not:** it is **not** an equality with a housekeeping gene (no standard error, no test of
+equality, an 18% gap - withdrawn, §102b); the panel is **vertebrate, not chordate**, and it is
+**keeper-only by construction**, since every sequence in it comes from a lineage that retained the gene
+(§102e). A pairwise NG86 estimate of 0.1118 (§84b) **understated** the constraint and is superseded by
+the codon model. It **sharpens** the paradox: deletable from a mouse, discarded by two major clades,
+and actively conserved wherever it survives.
 
 One observation has survived six registered attacks and is **still not promoted**: MVP's
 sub-threshold co-elution tail is translation-enriched at the 98th percentile of 150

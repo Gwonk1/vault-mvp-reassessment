@@ -1,10 +1,14 @@
 # Vault function: ten hypotheses, and ten candidate novel findings
 
-> **STANDING (added §84b):** the one positive measurement in this project is that **MVP is under
-> strong purifying selection where it is retained** - dN/dS **0.1118** over seven mammalian
-> orthologues, above all four essential-gene controls and below all three rapidly-evolving ones. It
-> **constrains** this list rather than picking a winner: it refuses the two nulls, and it is neutral
-> between every hypothesis that requires the protein to do something.
+> **STANDING (added §84b; number superseded §90, cut to one significant figure §102b):** the one
+> positive measurement in this project is that **MVP is under strong purifying selection where it is
+> retained** - a codon-model (`codeml` M0) **omega of 0.06 across 11 vertebrates**, with an
+> essential-gene control at **0.05** and a relaxed control at **0.42**. The earlier pairwise NG86
+> figure of 0.1118 **understated** it. **Two limits travel with the number:** there is **no interval
+> on any of these estimates**, so no equality with the essential control is claimed; and the panel is
+> **keeper-only by construction**, since only retained orthologues remain alignable. It **constrains**
+> this list rather than picking a winner: it refuses the two nulls, and it is neutral between every
+> hypothesis that requires the protein to do something.
 
 
 **Consolidated 2026-11-07.** The original lists were written at 20:24:07 and committed before Grok was
@@ -55,10 +59,11 @@ What remains untested is which mechanism, and whether it is the shell's or the c
 sequestration 0.05 · tissue pattern tracks xenobiotic flux 0.05 · ~~**furniture with no acute function
 0.04**~~ **-> 0.01** · ~~**near-neutral tolerated extravagance 0.03**~~ **-> 0.01**.
 
-> **Both nulls are downgraded on a measurement, not a judgement (§84b).** MVP's dN/dS across seven
-> mammalian orthologues is **0.1118** - above all four essential-gene controls, below all three
-> rapidly-evolving controls, **roughly 90% of amino-acid substitutions removed.** A gene that is
-> drifting, or tolerated as inert extravagance, does not look like that. **They are no longer merely
+> **Both nulls are downgraded on a measurement, not a judgement (§84b, now §90).** MVP's codon-model
+> omega across **11 vertebrate orthologues is 0.06** - near an essential-gene control at 0.05 and far
+> from a relaxed control at 0.42. A gene that is drifting, or tolerated as inert extravagance, does
+> not look like that. **The downgrade does not depend on the third digit or on the superseded pairwise
+> value**, which is why it survived both audits. **They are no longer merely
 > unsupported; they are contradicted.** They stay on the list at 0.01 rather than being deleted,
 > because a ranking that erases its own null is dishonest - and because selection is not proof of a
 > *current* function in humans; it is proof that something, somewhere in these lineages, is paying.

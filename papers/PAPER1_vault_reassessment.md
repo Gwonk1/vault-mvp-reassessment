@@ -30,13 +30,23 @@ files (§73d, §74). We subjected the major vault protein (MVP) and its partners
 pre-registered tests across public transcriptomic, proteomic, genomic, structural and comparative
 datasets, each gated on recovery of a known positive control.
 
-**One positive measurement survived all of it.** In the lineages that retained MVP, the gene is under
-**strong purifying selection**: dN/dS = **0.1118** across seven one-to-one mammalian orthologues
-(0.0850-0.1244), **above every one of four essential-gene controls** (0.0031-0.0771) and **below every
-one of three rapidly-evolving controls** (0.2166-0.5578). We first refused this number on a gate
-technicality and an external methods audit reversed us (§84a-b, house rule 15). **It sharpens the
-forty-year paradox rather than resolving it:** a gene deletable from a mouse without obvious
-consequence, and discarded outright by two major clades, is **actively conserved wherever it
+**One positive measurement survived all of it, and got sharper by being cut down.** Among extant
+orthologues that remain alignable, MVP is under **strong purifying selection**: a codon model
+(PAML `codeml` M0, F3x4 frequencies, fixed topology) gives **omega = 0.06 across 11 vertebrates**,
+with an essential-gene control at **0.05** and a relaxed control at **0.42** (§90). We first refused
+the earlier pairwise version of this number on a gate technicality and an external methods audit
+reversed us (§84a-b, house rule 15); that pairwise NG86 estimate of **0.1118 understated** the
+constraint and is superseded here.
+
+**Reported to one significant figure, with its frame.** Our own reruns of the same gene span
+0.0608-0.0635, so the third digit is noise (§102b). There is **no standard error or interval on any of
+these estimates**, so this is **not** a demonstrated equality with the housekeeping control - the gap
+to it is 18% of its own value. And the panel is **keeper-only by construction**: every sequence that
+remains alignable comes from a lineage that retained the gene, which is a real limit on any
+loss-versus-retention contrast and not a limit on the estimate itself (§102e).
+
+**It sharpens the forty-year paradox rather than resolving it:** a gene deletable from a mouse without
+obvious consequence, and discarded outright by two major clades, is **actively conserved wherever it
 survives.** Something is paying to keep it, and the payment is not visible in a dish.
 
 **One framing correction belongs at the front, because it changes what every negative result below
