@@ -294,6 +294,14 @@ the complete JSON is timestamped 08:37 and the crash log 09:04, so §24 rests on
 > stamps.** Keep the check; **it is a tool, not a finding**, and it was ruled out of `CALIBRATION.md`
 > for that reason.
 
+**Two scope faults in this check, both found by what it failed to catch (#468).** It originally scanned
+`results/` and the working scratch, **not the repository root** - and its filter required a `.log`,
+`.txt` or `.out` extension, while **PAML writes its default outputs with no extension at all** (`mlc`,
+`rst`, `rst1`, `rub`, `lnf`). Six codeml output files therefore sat in the repository root for a day
+without this check ever reading one of them, for two independent reasons. Both are fixed, and the
+general lesson is in the code comment: **a tool-output filter that assumes an extension is a filter
+that misses every tool whose convention is a bare name.**
+
 **To clear a file**, add a line containing `READ:` (or EXPECTED / benign / VOID / `see RESULTS`) saying
 what the warning means and why it is acceptable. **A judged warning is annotated. An unjudged warning is
 a pending fault.** Do not widen the exclusion list to make the check quiet.

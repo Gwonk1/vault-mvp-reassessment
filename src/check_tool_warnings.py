@@ -34,22 +34,37 @@ ROOTS = [pathlib.Path('results'),
                       '46738ac0-1f6d-4b80-81fe-caa9aa37b1a5/scratchpad/t0')]
 EXTS = {'.log', '.txt', '.out'}
 
-def main():
-    hits=[]; scanned=0
+# Ledger #468: six codeml output files sat in the repository ROOT for a day without
+# this check ever seeing them, for two independent reasons - the root was not a scan
+# root, and PAML writes its defaults with NO EXTENSION, so the EXTS filter would have
+# skipped them anyway. Both are fixed here. A tool-output filter that assumes an
+# extension is a filter that misses every tool whose convention is a bare name.
+BARE = {'mlc', 'rst', 'rst1', 'rub', 'lnf', '2NG.dN', '2NG.dS', '2NG.t', 'rates'}
+ROOT_TOP = pathlib.Path('.')   # top level only: results/ is already a root above
+
+def candidates():
+    """Every file this check should read, from the recursive roots plus the
+    repository top level (where a tool run in the wrong directory lands)."""
     for root in ROOTS:
         if not root.exists(): continue
         for f in sorted(root.rglob('*')):
-            if not f.is_file() or f.suffix not in EXTS: continue
-            if f.stat().st_size > 4_000_000: continue
-            try: txt=f.read_text(errors='replace')
-            except Exception: continue
-            scanned+=1
-            acked = bool(SEEN.search(txt))
-            for i,line in enumerate(txt.splitlines(),1):
-                m=RX.search(line)
-                if m and not acked:
-                    hits.append((f, i, m.group(0), line.strip()[:96]))
-    print(f'  scanned {scanned} tool-output files under {len(ROOTS)} roots')
+            if f.is_file() and f.suffix in EXTS: yield f
+    for f in sorted(ROOT_TOP.iterdir()):
+        if f.is_file() and (f.suffix in EXTS or f.name in BARE): yield f
+
+def main():
+    hits=[]; scanned=0
+    for f in candidates():
+        if f.stat().st_size > 4_000_000: continue
+        try: txt=f.read_text(errors='replace')
+        except Exception: continue
+        scanned+=1
+        acked = bool(SEEN.search(txt))
+        for i,line in enumerate(txt.splitlines(),1):
+            m=RX.search(line)
+            if m and not acked:
+                hits.append((f, i, m.group(0), line.strip()[:96]))
+    print(f'  scanned {scanned} tool-output files under {len(ROOTS)} roots + the repository top level')
     if not hits:
         print(f'  OK: no unacknowledged tool warnings.')
         return 0
