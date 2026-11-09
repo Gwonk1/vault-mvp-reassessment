@@ -5631,3 +5631,135 @@ engineers who needed the bridge and had to build it.
 structural paper says it in passing. What is now defensible is narrower and does not depend on
 novelty: **the numbers above are correct, the within-particle contrast is real, and the engineering
 literature is consistent with the functional reading.**
+
+## 86. Tier 0b, run properly: MVP is single-copy in the reviewed human proteome
+
+Registered at `06dd589`. Tools installed for the purpose: **HMMER 3.4**.
+
+### 86a. Both gates passed, and gate 2 is the one that earns the negative
+
+**Profile:** `hmmbuild` on eggNOG orthogroup **2QPP0** - 174 sequences, 1,943 aligned columns,
+**904 consensus positions**.
+
+| gate | result |
+|---|---|
+| **1.** the profile must recover MVP itself at E <= 1e-50 | **PASS** - MVP at **E = 0, bit score 1625.6, 98.8% coverage** |
+| **2.** `jackhmmer` ACTB must recover ACTG1 at E <= 0.001 and >= 50% coverage | **PASS** - ACTG1 at **E = 9.3e-200, 663.0 bits, 100% coverage** |
+
+**Gate 2 matters more than gate 1.** §84g's objection to the old search was that its controls were
+tested **only at 97-99% identity**, so they never showed the method could work in the regime the
+question lives in. Under the registered thresholds this pipeline returns **30 genuine actin-family
+paralogues** - ACTG1, ACTC1, ACTA2, ACTA1, ACTG2, the POTE family - all at 100% coverage. **The
+instrument detects paralogues. That is now demonstrated rather than assumed.**
+
+### 86b. The result
+
+**Non-MVP human proteins clearing E <= 0.001 with >= 50% envelope coverage: ZERO.**
+
+The only other hit at any threshold is **MRFAP1L2 at 10.2 bits, E = 0.14, 10% coverage** - noise.
+
+**Registered decision, fired:** **MVP is single-copy in the reviewed human proteome by profile
+search.** §83d's `UNINFORMATIVE` is resolved, and this is the **first time this project has been
+entitled to say it.**
+
+Note what changed and what did not. §83d's 6-mer prefilter returned **GAS2L1 at 28.7% over 251
+residues**; the profile search's only noise hit is a **different protein entirely**. **Two methods, two
+unrelated best-noise hits - which is what noise does**, and it confirms GAS2L1 was never a candidate.
+
+### 86c. What it means for the chair, and the two limits
+
+**The mirror-image hypothesis has no protein to be built from in human.** Graham's *"a similar inverted
+protein, maybe a mirror image"* required a paralogue to exist; there isn't one. **Reversible assembly,
+if it happens, must run through a non-paralogous mechanism** - a chaperone, a protease, a
+post-translational modification - not an inverted twin.
+
+**Two limits, stated rather than buried:**
+1. **This is the reviewed proteome** (Swiss-Prot, 20,429). A paralogue annotated only in TrEMBL, or
+   missed by annotation entirely, would not appear. The search should be repeated against the full
+   proteome and the genome before anyone calls it final.
+2. **Human only.** The salmon louse carries an **expanded** vault family, so single-copy here is not
+   single-copy everywhere - and the louse is exactly the lineage where a second vault protein was
+   repurposed into cement.
+
+## 87. The zipper: not unsupported, unobservable. No test was run, and here is why.
+
+Graham: *"what if the hinge is a zipper?"* **This section runs no test. It is a structural-logic
+argument about why no test can currently be run, and it is the most useful thing we can say about the
+idea.**
+
+### 87a. "Hinge" may be the wrong mechanical word, and the field's own structures say so
+
+A **hinge** is a localised pivot: two rigid bodies, one axis, one concerted rotation. **The vault's
+waist is not that.** It is a **continuous ring of 39 identical inter-half interfaces** (78-mer = 2 x
+39). A ring of identical contacts has only two ways to come apart:
+
+- **concertedly** - all 39 break together, which is a very high barrier; or
+- **progressively** - one breaks, which strains and then releases its neighbour, propagating around the
+  circumference. **That is a zipper.**
+
+Three published observations fit propagation better than rotation, and we had all three on file without
+assembling them:
+
+1. **Mrazek et al. 2014's waist mutants produce "continuous symmetric rolls that cannot pinch off."**
+   A broken *hinge* would fail to close. A broken *zipper* **keeps adding units** - which is what a
+   roll is. The mutation did not remove the pivot; it removed the **stop**.
+2. **The L05 shell was flipped into an open rosette by changing one amino acid near the cap.** One
+   residue controlling a whole-particle transition is a **nucleation** signature, not a hinge property.
+3. **HflK/C, MVP's SPFH relative, opens into a "nautilus"** under antibiotic stress - a **spiral**,
+   which is what a partially-propagated ring looks like, not a clamshell.
+
+### 87b. Why no test can be run on deposited data: symmetry imposition erases the signal
+
+**Every deposited vault structure was reconstructed with imposed point symmetry:**
+
+| structure | imposed symmetry |
+|---|---|
+| **4V60** (Tanaka 2009, rat liver, 3.5 A) | *"exhibiting **39-fold dihedral symmetry**"* (D39) |
+| **9BW6** (Lodwick 2025, human + PARP4) | `_pdbx_point_symmetry.circular_symmetry 39` - a 156-meric *"complete point assembly"* built by applying 39 operations |
+| **11JB** (78-mer, ADPR-bound) | `_em_3d_reconstruction.symmetry_type POINT`, 16,218 particles |
+
+**A zipper's entire signature is a broken symmetry** - one interface unlike the other 38, a seam, a
+partially-propagated intermediate. **Imposing C39 or D39 during reconstruction averages all 39
+interfaces into one by construction.** Whatever asymmetry a zipper would produce is **removed before
+the map exists.**
+
+**So the absence of evidence for progressive opening in the vault literature is not evidence of
+absence. It is a property of the reconstruction protocol.** The question has not been answered; **it
+has not been askable.**
+
+A further consequence worth stating: in a **perfectly symmetric** ring, a zipper has **no designated
+start** - nucleation is stochastic, anywhere. So there is also **no conservation test**: there is no
+privileged "first" residue for selection to have marked. We considered one and it is uninformative by
+construction.
+
+### 87c. The experiment, which is cheap and uses data that may already exist
+
+**C1 reconstruction with 3D classification.** Reprocess vault particles **without imposed symmetry**,
+then classify in 3D for states that are **not** 39-fold symmetric: a seam, a locally separated waist, a
+partially opened ring.
+
+- **11JB used 16,218 particles** - ample for C1 classification. **Symmetry expansion followed by
+  focused classification on a single waist interface** is the standard modern approach to exactly this
+  question, and it is routine in other fields.
+- Check **EMPIAR** for the deposited raw particle stacks of 4V60, 9BW6, 11JB and the 2025 PSP-brain
+  vault structure before collecting anything new.
+- **Prediction, if the zipper is right:** a minority class with **one or a few waist interfaces
+  separated while the rest remain closed**. Under a concerted hinge, intermediates should be absent and
+  particles should partition cleanly into closed and fully open.
+- The PSP-brain structure's incidental observation that **"many vaults contained internal density
+  while others were empty"** is exactly the kind of particle-to-particle heterogeneity that symmetry
+  imposition hides, and nobody followed it up.
+
+### 87d. Status
+
+**Not claimed as novel.** Symmetry-expansion and focused classification are standard practice, so the
+idea that vault asymmetry is unexamined may well have been said in print; at six for six the prior is
+that it has. **Not tested** - we ran nothing here. **What is established above is narrow and checkable:
+all three deposited structures imposed point symmetry, the field's "hinge" language describes a 39-fold
+ring, and the experiment that would separate hinge from zipper has not been done on any deposited
+vault dataset.**
+
+**And an incidental find, since we were in the file:** 11JB is titled *"RNA Vault with ADPR bound
+(MVP/PARP4/TEP1 NADP sample)"* but **models exactly one protein** - `1 polymer 'Major vault protein'
+x78`. PARP4 and TEP1 were in the sample and are not in the model. **Anyone reading that title as a
+three-protein structure, as we nearly did in §73, would be wrong.**

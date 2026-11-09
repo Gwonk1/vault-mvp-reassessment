@@ -99,9 +99,12 @@ interesting deep comparisons live.** It deserves a real number.
 5. **Extend beyond mammals.** The question that matters is selection across the ~600 My of lineages
    that **kept** MVP, including the tunicates (*Ciona* carries it, 2/2 in the §68 census). A mammal
    panel cannot answer it, and ours did not.
-6. **Branch test worth pre-registering:** is omega elevated on the branches leading to the clades that
-   **lost** MVP relative to those that retained it? That is the comparison the paradox actually asks
-   for and nobody in this project ran it.
+6. ~~**Branch test worth pre-registering:** is omega elevated on the branches leading to the clades
+   that **lost** MVP relative to those that retained it?~~ **ILL-POSED, corrected §86/`TIER0_PREREGISTRATION.md`:
+   you cannot estimate dN/dS on a branch where the gene is absent - there is no sequence.** The
+   measurable version is **relaxation among retainers**: fit a two-ratio branch model and ask whether
+   omega is uniform across the retained tree, or elevated in some retained lineages. We wrote the
+   wrong test into our own instruction and caught it only when installing the tools to run it.
 
 **What it decides.** Whether "actively conserved wherever it survives" holds at the depth that makes it
 interesting, and whether relaxation precedes loss.
@@ -128,6 +131,13 @@ uninformative in both directions - **neither a paralogue nor single-copy was sho
 **What it decides.** Whether the reversible-assembly model has a candidate partner protein at all, in
 any genome. Note the salmon louse carries an **expanded** vault family, so a human negative would not
 be a general one.
+
+> **RUN, §86.** Profile HMM from eggNOG 2QPP0 (174 sequences, 904 consensus positions), searched
+> against the reviewed human proteome. Both gates passed - the profile recovers MVP at **E = 0 /
+> 1625.6 bits / 98.8% coverage**, and `jackhmmer` ACTB recovers **30 genuine actin paralogues** under
+> the same thresholds. **Non-MVP hits clearing E <= 0.001 at >= 50% coverage: zero.** **MVP is
+> single-copy in the reviewed human proteome.** Still to do: repeat against the full proteome and the
+> genome, and against the salmon louse, where the family is expanded.
 
 ## Tier 1 - decides the most, costs the least
 
