@@ -44,3 +44,8 @@ Traceback (most recent call last):
   File "~/projects/Vault/.venv/lib/python3.12/site-packages/scipy/stats/_mstats_basic.py", line 675, in _spearmanr_2cols
     raise ValueError("The input must have at least 3 entries!")
 ValueError: The input must have at least 3 entries!
+
+READ: 2026-11-09. The ValueError above is from a LATER, SEPARATE re-run, not from the run that
+produced the result. results/phospho_part2.json is complete (7 cohorts, 64 primary rows) and
+timestamped 08:37; this log is 09:04. RESULTS.md section 24 rests on the successful run. Cleared
+under house rule 18 / check 4.

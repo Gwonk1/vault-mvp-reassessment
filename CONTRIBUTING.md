@@ -260,3 +260,26 @@ forks.
 
 **And a fork you cannot find is a fork.** §99d: the depositions' `_refine.pdbx_starting_model` fields
 are unpopulated, so the sample size is **1** until the primary methods are read - not 7.
+
+## 18. Read what your own tools printed. There is now a check for it.
+
+**Every other gate here compares a claim to data. None asked whether the tool had already told us we
+were wrong.** §101a: codeml printed `This is a rooted tree.  Please check!` and `lnL(ntime: 24 ...)` -
+where an unrooted 13-taxon tree has 23 branches - **in a file we never opened**, and an external auditor
+found the fault from **arithmetic alone**, with no access to it.
+
+`src/check_tool_warnings.py` scans every `.log`, `.txt` and `.out` under `results/` and the working
+scratch for the strings a tool uses when it is telling you something: *please check*, WARNING, ERROR,
+FAIL, `rooted tree`, convergence failures, singular/unidentifiable, Traceback, NaN, deprecated,
+truncated, skipped.
+
+**It is deliberately noisy.** First run: **47 lines across 21 files.** Most are registered gate failures
+we recorded on purpose. **One was fatal** (the rooted tree, present in *every* codeml run including the
+§90 controls). **One needed three minutes to clear** - a real `ValueError` traceback in
+`results/phospho_part2.log`, which turned out to be a **later aborted re-run**: the complete JSON is
+timestamped 08:37 and the crash log 09:04, so §24 rests on the successful run. **That ratio - one fatal,
+one to investigate, the rest annotated - is what a useful alarm looks like.**
+
+**To clear a file**, add a line containing `READ:` (or EXPECTED / benign / VOID / `see RESULTS`) saying
+what the warning means and why it is acceptable. **A judged warning is annotated. An unjudged warning is
+a pending fault.** Do not widen the exclusion list to make the check quiet.
