@@ -5574,3 +5574,55 @@ the protein.
 `hmmsearch`/`jackhmmer` at a pre-registered E-value with composition-based statistics on; or a
 structure search of the vault fold (Foldseek, DALI, HHpred). **Rank by bit score, never by percent
 identity**, and require coverage of a large fraction of the query.
+
+## 85. The outstanding literature check, performed - and the sharper version of the observation
+
+§82d logged the Cys/Met reading as *"an outstanding literature check rather than performed and
+forgotten."* Leaving it outstanding after six novelty failures was not defensible. Performed here.
+
+### 85a. The precise numbers, counted rather than z-scored
+
+| | length | Cys | Met | Cys+Met |
+|---|---|---|---|---|
+| **MVP** | 893 | **5 (0.56%)** | **9 (1.01%)** | **14** |
+| TEP1 | 2627 | 56 (2.13%) | 40 (1.52%) | 96 |
+| PARP4 | 1724 | 37 (2.15%) | 36 (2.09%) | 73 |
+| proteome median | - | **2.05%** | **2.14%** | - |
+
+**MVP carries about one quarter the median cysteine density and half the median methionine density.**
+Its five cysteines sit at **59, 182, 282, 515, 572** - spread, not paired.
+
+**And the contrast §82 missed: TEP1 and PARP4 are both proteome-typical.** The depletion is **specific
+to the subunit that forms the 78-mer shell**, not a property of the particle's proteins generally. That
+is a far better observation than MVP-against-the-proteome, because the caps are the closest available
+comparison: same particle, same cell, same expression program, **and no cysteine depletion at all.**
+
+This also supersedes the scaling complaint in §84c. Grok was right that a z against a binomial-inflated
+sd is the wrong statistic; **the raw percentages and the within-particle contrast need no sd at all.**
+
+### 85b. What the literature check found, and what it did not settle
+
+**It did not establish that this is unpublished, and it did not establish that it is published.**
+Searching for a native MVP cysteine count or a published remark on its depletion returned no such
+statement.
+
+**What it did return is directly relevant and better than either answer.** The 9-angstrom vault shell
+crystal structure was solved not from native MVP but from **`cpMVP`, an engineered construct carrying
+an N-terminal cysteine-peptide insertion**, and in that structure **the introduced cysteines
+disulfide-bridge nonequivalent chains across the upper and lower vault halves**
+([PLoS Biology 2007](https://journals.plos.org/plosbiology/article?id=10.1371%2Fjournal.pbio.0050318);
+[PMC2229873](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2229873/)). Vault engineering patents
+describe the same cysteine-rich-peptide fusion
+([US 9181312](https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/9181312)), and
+derivatives are used to tune molecular release
+([Sci Rep 2017](https://www.nature.com/articles/s41598-017-12870-x)).
+
+**So the field has been exploiting the absence for nearly twenty years without, as far as this check
+can tell, naming it as a feature.** You add cysteines to MVP **because native MVP will not crosslink
+its own halves**. That is the mechanistic reading of §82c arrived at from the opposite direction - by
+engineers who needed the bridge and had to build it.
+
+**Status: UNRESOLVED, and explicitly not claimed as novel.** At six for six the prior is that a
+structural paper says it in passing. What is now defensible is narrower and does not depend on
+novelty: **the numbers above are correct, the within-particle contrast is real, and the engineering
+literature is consistent with the functional reading.**
