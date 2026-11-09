@@ -5396,3 +5396,24 @@ be reading a conclusion out of a test we have just declared unfit.
 
 **Standing caveat (§71):** all of this is transcript level. **Vault abundance is not one quantity**, and
 MVP mRNA rising with maturation is not the same claim as a mature cell holding more particles.
+
+### 83f. Correction from Graham: the timing result was already known
+
+On being shown §83a, Graham's response was *"we knew that it was built as the organ matures - so we
+already knew that."*
+
+**He is right, and the framing in §83a was wrong.** We called it *"the first positive prediction this
+project has confirmed under a passing gate"* - true as a statement about our gate, and **misleading as
+a statement about knowledge.** A registered confirmation of something the field already holds is a
+**pipeline validation**, not a finding. The correct reading of §83a is that **our instrument reproduced
+known developmental biology**, which is reassuring about the instrument and uninformative about vaults.
+
+**This is the sixth time in this project that we presented something as new without checking** (§74
+diagnosed the first five). The pattern survived every rule written to stop it, and this time the check
+came from the user in one sentence rather than from us.
+
+**What may still be unchecked, flagged rather than claimed:** the **shell/cap dissociation** of §83b -
+MVP up in 7/7 organs while TEP1 falls in 6/7 and PARP4 in 5/7. That was not the test's purpose and is
+a different claim from the timing itself. **It is NOT asserted as novel.** It needs a literature check
+against the developmental and vault-assembly literature, and that check is **outstanding, not
+performed.**
