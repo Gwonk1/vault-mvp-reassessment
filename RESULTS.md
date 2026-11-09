@@ -6237,3 +6237,52 @@ that is a direct geometric measurement on the deposited assembly.
 
 **And §92b's recorded kill is withdrawn** - not because we dislike it, but because the test that
 produced it used a waist definition the structure does not support.
+
+## 95. The 12-residue waist replicates: human cryo-EM gives 10, all within the N-terminal 50
+
+Registered at `1055b31` before running, with the kill condition that **a non-N-terminal contact set in
+11JB would withdraw §94a as a single-structure artefact.**
+
+### 95a. Two structures, two species, two methods
+
+| | method | species | contacts | residue numbers |
+|---|---|---|---|---|
+| **4V60-assembly1** | crystallographic, D39 | rat | **12** | 1, 2, 3, 4, 6, 21, 42, 43, 44, 45, 46, 47 |
+| **11JB** | cryo-EM, point symmetry | human | **10** | 6, 7, 9, 21, 22, 36, 38, 39, 40, 42 |
+
+**GATE PASS** (39/39 split, non-empty set). **PREDICTION MET:** the set is small - 10 against a
+registered ceiling of 30 - and **100% of 11JB's contacts lie at residue <= 50.**
+
+**Three residue numbers match exactly across species and methods: 6, 21 and 42.**
+
+And both sets resolve into **the same two patches**: one at the extreme N-terminus (rat 1-6, human
+6-9, plus 21-22 in both) and one around **residue 36-47** (rat 42-47, human 36-42).
+
+### 95b. The differences are modelling, not biology
+
+Rat contributes contacts at residues **1-4** that human does not. **11JB's lowest contact residue is 6**
+- consistent with the human model simply **not resolving residues 1-5**, which is ordinary for a
+flexible N-terminal tail. The remaining offsets are what two species' numbering does to a 893-residue
+versus ~861-residue protein. **Nothing here needs a different interface to explain it.**
+
+### 95c. What this upgrades
+
+§94a's finding is **no longer a single-structure observation.** The statement that survives
+replication:
+
+> **The entire inter-half interface of the vault - the join between its two 39-mer halves - is
+> approximately ten residues of each chain's N-terminal tail, in two independent structures determined
+> by different methods on different species.**
+
+That is a geometric fact about a 13 MDa particle, measured twice, and it bears on §91a's energetics
+twice as hard: **grok's objection that "copy count does not set a barrier" now has a footprint attached
+to it.** Thirty-nine interfaces of ~10 residues each is not a formidable latch, and whatever holds the
+vault shut, **it is not a large buried surface.**
+
+### 95d. And it sharpens what is still missing
+
+Both contact sets come from **symmetry-averaged models** - the averaging §91a establishes cannot show
+interface inequality. **So this replication strengthens the "what" and does nothing for the "how":** we
+now know the join is a small N-terminal clasp in two species, and we still have no observation bearing
+on whether the 39 clasps release together, in sequence, or at all. **§91d's C1 classification remains
+the experiment, and nothing here substitutes for it.**
