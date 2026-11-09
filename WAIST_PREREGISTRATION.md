@@ -57,3 +57,46 @@ naive reading would then be the better one, and "an interface that must open is 
 It cannot distinguish zipper from hinge from iris - **every opening model uses these same contacts**,
 which is precisely why grok called the test informative regardless of mechanism. It also cannot
 establish that the waist opens at all in a mature particle (§91c).
+
+---
+
+# Addendum: waist-versus-cap order from deposited B-factors
+
+Registered before any B-factor was read. §91e lists **waist-versus-cap local resolution** as one of two
+cheap measurements we skipped. The deposited maps are not local; **the coordinate files are**, and in a
+cryo-EM model the per-atom `B_iso_or_equiv` is fitted against local map quality, so it is a usable
+proxy - **a weaker one than the map, and labelled as such.**
+
+## Why the direction matters
+
+Grok audit 009: *"39-fold is NCS... a well-resolved waist under that averaging is positive evidence
+that the crystallized molecules were closed and similar; a high open-occupancy would have cost waist
+resolution relative to the cap."*
+
+So the two outcomes mean opposite things:
+- **waist better ordered than cap** (lower B) -> the particles that entered the average were closed and
+  mutually consistent at the waist. **Evidence against a substantial open population in that dataset.**
+- **waist worse ordered than cap** (higher B) -> waist heterogeneity survived into the model.
+  **Consistent with, though not evidence for, a mixed population.**
+
+## Method, fixed now
+
+CA atoms only, from **11JB** (78-mer, `symmetry_type POINT`) and **4V60-assembly1** (D39). Parse the
+`_atom_site` loop header for column indices rather than assuming them - **the assumption is what broke
+the first attempt at this.** Waist and cap defined on the axial coordinate by the same geometry as
+above: **waist = the 15% of residues nearest the waist plane, cap = the 15% furthest.** Report median B
+for each and a Mann-Whitney U.
+
+## PREDICTION
+
+**The waist is better ordered than the cap - median B lower at the waist.** Reasoning: these are
+purified, closed particles selected for intactness through picking and 2D, and the waist is the most
+constrained part of such a particle; the caps carry PARP4/TEP1 density and flexible termini. **This
+prediction, if met, is evidence AGAINST our own zipper interest** - it says the deposited datasets were
+closed, which is what grok said a well-resolved waist would mean.
+
+## GATE
+
+Per-residue B must actually **vary** - if the deposited B-factors are constant or near-constant (some
+cryo-EM depositions set them uniformly), the proxy carries no information and **the test is void**.
+Require **interquartile range > 0** and at least 200 residues per bin.
