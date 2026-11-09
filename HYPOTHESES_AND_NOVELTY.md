@@ -1,5 +1,12 @@
 # Vault function: ten hypotheses, and ten candidate novel findings
 
+> **STANDING (added §84b):** the one positive measurement in this project is that **MVP is under
+> strong purifying selection where it is retained** - dN/dS **0.1118** over seven mammalian
+> orthologues, above all four essential-gene controls and below all three rapidly-evolving ones. It
+> **constrains** this list rather than picking a winner: it refuses the two nulls, and it is neutral
+> between every hypothesis that requires the protein to do something.
+
+
 **Consolidated 2026-11-07.** The original lists were written at 20:24:07 and committed before Grok was
 asked the same two questions (`git log` is the record); five rounds of correction followed. This file
 now leads with the final rankings. The record of what changed sits at the end rather than as stacked
@@ -45,8 +52,16 @@ What remains untested is which mechanism, and whether it is the shell's or the c
 | 10 | vtRNA chaperone — the shell exists for the RNA | 0.08 | vtRNAs are otherwise hard to account for; a 13 MDa shell is a plausible RNase shelter | never tested; §20's transcript-level test found nothing | vtRNA stability in MVP-null cells |
 
 **Below the line:** mechanical/crowding buffer 0.06 · export with altered cargo 0.06 · multidrug
-sequestration 0.05 · tissue pattern tracks xenobiotic flux 0.05 · **furniture with no acute function
-0.04** · **near-neutral tolerated extravagance 0.03**.
+sequestration 0.05 · tissue pattern tracks xenobiotic flux 0.05 · ~~**furniture with no acute function
+0.04**~~ **-> 0.01** · ~~**near-neutral tolerated extravagance 0.03**~~ **-> 0.01**.
+
+> **Both nulls are downgraded on a measurement, not a judgement (§84b).** MVP's dN/dS across seven
+> mammalian orthologues is **0.1118** - above all four essential-gene controls, below all three
+> rapidly-evolving controls, **roughly 90% of amino-acid substitutions removed.** A gene that is
+> drifting, or tolerated as inert extravagance, does not look like that. **They are no longer merely
+> unsupported; they are contradicted.** They stay on the list at 0.01 rather than being deleted,
+> because a ranking that erases its own null is dishonest - and because selection is not proof of a
+> *current* function in humans; it is proof that something, somewhere in these lineages, is paying.
 
 ---
 
@@ -94,8 +109,8 @@ protocols rather than a careful read of their data.
 | TEP1 binds the vault independently of PARP4 | 0.75, ranked **first** | **0.08** | ~25-year literature: MVP-only Sf9 vaults, TEP1-KO vaults intact, caps incorporate into preformed shells — plus the dataset's own PARP4-KO analysis (§66b, §71c) |
 | MVP ancestral in eukaryotes, lost in fungi/plants/Ecdysozoa | presented as a finding | **withdrawn** | Daly et al. 2013 reached it verbatim (§69a); and we had censused VIT-domain groups, not MVP's own orthogroup (§68) |
 | Degradation machinery most depleted of 1,276 terms | 0.65 | 0.25 | dataset provenance (§71c) |
-| Near-neutral "tolerated extravagance" | 0.14 | **0.03** | *Dictyostelium* MVP knockouts have reduced survival under nutrient stress; five systems show conditional phenotypes (§69c, §70) |
-| Furniture with no acute function | 0.12 | **0.04** | same |
+| Near-neutral "tolerated extravagance" | 0.14 | **0.01** (was 0.03; §84b) | *Dictyostelium* MVP knockouts have reduced survival under nutrient stress; five systems show conditional phenotypes (§69c, §70) |
+| Furniture with no acute function | 0.12 | **0.01** (was 0.04; §84b) | same |
 | Our "no fitness coupling" | read as "no function" | **read as "no function in rich medium"** | every published model is also normal at baseline (§70b) |
 | The bare shell hypothesis | absent from our list | **ranked first** | Grok's independent list; we held every component and never assembled it (§66a) |
 

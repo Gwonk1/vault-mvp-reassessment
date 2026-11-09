@@ -1,4 +1,4 @@
-# What a wet lab should do next with vaults: fifteen experiments, ranked by what they decide
+# What a wet lab should do next with vaults: two free computations and fifteen experiments, ranked by what they decide
 
 **Graham W. Syfert**, with Claude (Anthropic) and two independent reviewing agents. Companion to
 `PAPER1_vault_reassessment.md`. Written for a group with a working vault purification pipeline.
@@ -29,7 +29,11 @@ degradation, not off-rate, so a free cytoplasmic pool may dominate the number wh
 persist. Experiment 4 below is what would settle it.
 3. The particle is **dispensable for proliferation** (zero hits in 878 growth screens) yet
 **sequence-constrained** at the pocket (four residues invariant across 174 eukaryotes). Whatever
-selects it does not operate in a dish.
+selects it does not operate in a dish. **This is now measured rather than inferred:** dN/dS =
+**0.1118** across seven mammalian orthologues sits **above all four essential-gene controls and below
+all three rapidly-evolving controls** (§84b) - **strong purifying selection, roughly 90% of
+amino-acid substitutions removed.** Design accordingly: **the phenotype you are looking for is one
+selection can see and a growth screen cannot.**
 4. **TEP1 is a latent, autoinhibited TIR-family NAD(P)ase (E1008), and the uninhibited domain is
 lethal in human cells** - expressed without its STAND regulatory domains it drops cellular NAD+ to
 30-40% of control and kills HEK293 cells, both abolished by E1008A. The brake is **in cis**,
@@ -67,6 +71,63 @@ Section 70 adds the framing point: **the published vault function is signalling 
 challenge**, and transient regulatory interactions are what this pulldown recovers worst. **An
 experiment that sets out to confirm a stable physical partner is testing the hypothesis the
 instruments were already poorly suited to.**
+
+## Tier 0 - two free computations to run before spending any money
+
+Both are dry-lab, both take a day, and both were attempted here **badly enough that the right version
+is now fully specified**. A lab that runs these first will design better bench work.
+
+### 0a. The selection estimate, done properly
+
+**Why.** Our pairwise estimate (§84b) puts MVP under **strong purifying selection** where it is
+retained - dN/dS **0.1118**, above all four essential-gene controls and below all three
+rapidly-evolving ones. **That is the only positive measurement in this project**, and it was produced
+by the wrong tool: **NG86 pairwise against a single reference**, which biases the ratio **upward**,
+treats seven correlated comparisons as if they were independent, and **saturates exactly where the
+interesting deep comparisons live.** It deserves a real number.
+
+**Do this.**
+1. **Work from a local Ensembl/Compara dump or mirror.** The public REST endpoint returned HTTP 500 on
+   36 of 90 calls and **refused TEP1's 290 kDa CDS on 11 of 13 species** (§80b). This is the single
+   reason three registered attempts failed.
+2. **Fetch TEP1's CDS directly** rather than through homology-with-sequence, which is what broke.
+3. **Fit a codon model on the species phylogeny** (PAML `codeml`, or HyPhy) rather than pairwise
+   estimates. Report one omega with a likelihood interval, not a median of correlated pairs. **Collapse
+   or model the cow/sheep clade**, which we double-counted; effective independent clades in our panel
+   were **four or five, not seven.**
+4. **Use `dS > 1.0` as the saturation bound, not 1.5**, and publish a 0.5 / 1.0 / 1.5 sensitivity line.
+5. **Extend beyond mammals.** The question that matters is selection across the ~600 My of lineages
+   that **kept** MVP, including the tunicates (*Ciona* carries it, 2/2 in the §68 census). A mammal
+   panel cannot answer it, and ours did not.
+6. **Branch test worth pre-registering:** is omega elevated on the branches leading to the clades that
+   **lost** MVP relative to those that retained it? That is the comparison the paradox actually asks
+   for and nobody in this project ran it.
+
+**What it decides.** Whether "actively conserved wherever it survives" holds at the depth that makes it
+interesting, and whether relaxation precedes loss.
+
+### 0b. The paralogue question, with an instrument that can answer it
+
+**Why.** We asked whether a human MVP paralogue exists - the "mirror image" a disassembly partner would
+need - using a **6-mer Jaccard prefilter**, and the arithmetic says that cannot work: **an exact
+hexamer match at identity p has probability about p^6**, which is **0.53 at 90% identity, 0.016 at 50%,
+and 7x10^-4 at 30%.** A diverged paralogue never enters such a candidate list (§84g). Our result was
+uninformative in both directions - **neither a paralogue nor single-copy was shown.**
+
+**Do this.**
+1. Build a **profile HMM** from a curated MVP ortholog alignment; search human (and then broadly) with
+   `hmmsearch`, or iterate with `jackhmmer`. **Pre-register the E-value** (0.01 or 0.001), exclude the
+   query, and **turn on composition-based statistics** - MVP's leading compositional signal is a valine
+   enrichment of **+2.16 SD**, which breaks the null of a naive local alignment.
+2. Run a **structure search of the vault fold** - Foldseek, DALI or HHpred. At this divergence the fold
+   decides and sequence identity will not.
+3. **Rank by bit score or E-value, never by percent identity**, and require **coverage of a large
+   fraction of MVP**. Our best hit covered **28% of the protein** - even a genuine domain match at that
+   coverage is not a paralogue of the particle.
+
+**What it decides.** Whether the reversible-assembly model has a candidate partner protein at all, in
+any genome. Note the salmon louse carries an **expanded** vault family, so a human negative would not
+be a general one.
 
 ## Tier 1 - decides the most, costs the least
 

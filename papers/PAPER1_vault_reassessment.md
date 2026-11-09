@@ -30,10 +30,19 @@ files (§73d, §74). We subjected the major vault protein (MVP) and its partners
 pre-registered tests across public transcriptomic, proteomic, genomic, structural and comparative
 datasets, each gated on recovery of a known positive control.
 
+**One positive measurement survived all of it.** In the lineages that retained MVP, the gene is under
+**strong purifying selection**: dN/dS = **0.1118** across seven one-to-one mammalian orthologues
+(0.0850-0.1244), **above every one of four essential-gene controls** (0.0031-0.0771) and **below every
+one of three rapidly-evolving controls** (0.2166-0.5578). We first refused this number on a gate
+technicality and an external methods audit reversed us (§84a-b, house rule 15). **It sharpens the
+forty-year paradox rather than resolving it:** a gene deletable from a mouse without obvious
+consequence, and discarded outright by two major clades, is **actively conserved wherever it
+survives.** Something is paying to keep it, and the payment is not visible in a dish.
+
 **One framing correction belongs at the front, because it changes what every negative result below
 means.** We set out to find MVP's physical interaction neighbourhood and did not find one, by any
-instrument. We then discovered a substantial published literature — knockout work in five
-independent systems, several papers in *Nature Communications* — establishing MVP as a **modulator
+instrument. We then discovered a substantial published literature — knockout work across six papers whose convergence is **mostly one group's** (Jingjing Ben on five of
+the six; only the influenza study is authorially independent, §76b) — establishing MVP as a **modulator
 of signalling**: IKK-NF-kB in diet-induced obesity and atherosclerosis, calcineurin-NFATc1 in
 osteoclastogenesis, STAT3 in lung cancer, Parkin-mediated mitophagy in endothelium, and adaptive
 immunity on influenza rechallenge. **Those interactions are transient, low-stoichiometry and

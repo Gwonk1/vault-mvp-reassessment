@@ -113,6 +113,13 @@ excluded**, in a wash-based pulldown and in pre-lysis covalent proximity labelli
 **degradation machinery the most depleted annotation of 1,276** in an anti-MVP pulldown;
 and subunit half-lives whose spread sits at only the 29.86th percentile of random triplets.
 
+**One positive measurement survived everything.** In the lineages that kept MVP, the gene is under
+**strong purifying selection** - dN/dS **0.1118** across seven one-to-one mammalian orthologues, above
+all four essential-gene controls (0.0031-0.0771) and below all three rapidly-evolving controls
+(0.2166-0.5578). **We refused this number on a gate technicality and an external methods audit
+reversed us** (§84, house rule 15). It **sharpens** the paradox: deletable from a mouse, discarded by
+two major clades, and actively conserved wherever it survives.
+
 One observation has survived six registered attacks and is **still not promoted**: MVP's
 sub-threshold co-elution tail is translation-enriched at the 98th percentile of 150
 comparable seeds, and not explained by degree, abundance, family membership, apparent mass,
