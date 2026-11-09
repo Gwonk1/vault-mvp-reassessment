@@ -6079,7 +6079,10 @@ Registered at `045473f` before the conservation column was read for any waist sp
 | DISTAL interface (\|z\| > 50 A) | 251 | 0.7694 | 0.8311 |
 | NULL - exposed non-interface | 352 | 0.6764 | 0.7288 |
 
-**Registered prediction: waist < distal. NOT MET. The kill condition fired.** I argued that *"an
+~~**Registered prediction: waist < distal. NOT MET. The kill condition fired.**~~ **KILL WITHDRAWN,
+§94b:** the by-chain waist definition §91e asked for gives **the opposite direction and the prediction
+MET at p = 0.0076.** This geometric bin **contained mostly residues that are not inter-half contacts at
+all.** I argued that *"an
 interface that has to come apart cannot be optimised like one that never does"*, registered it
 explicitly against the naive guess, and **the direction went the other way.** That reasoning is
 recorded as wrong.
@@ -6168,3 +6171,69 @@ reading.
 
 **Net: one weak, confounded, consistent signal that the vault waist is where the particle's
 heterogeneity lives.** It earns the §91d experiment. It does not substitute for it.
+
+## 94. The by-chain waist: 12 residues, the prediction revives, and the gate's power clause fails
+
+Registered at `e93ab2a` as **a re-test of a dead prediction, not a new bet** - the better waist
+definition §91e asked for, specified before it was run.
+
+### 94a. The true inter-half interface is tiny, and it is the N-terminus
+
+Loading **4V60-assembly1** (78 chains, split 39/39 by the `-2` dihedral suffix - **GATE 1 PASS**) and
+calling a residue a waist contact when any of its atoms comes within **4.5 A of an atom in a chain of
+the other half**:
+
+**12 residues: 1, 2, 3, 4, 6, 21, 42, 43, 44, 45, 46, 47.**
+
+**Twelve, out of 845 modelled.** The entire inter-half interface of a 13 MDa particle is the
+**N-terminal ~47 residues**, and almost all of it is the first six. That is a structural fact
+independent of anything below, and **it bears directly on §91a's energetics**: grok's objection that
+*"copy count does not set a barrier"* is strengthened by how little contact each of the 39 interfaces
+actually makes. A 12-residue footprint per interface is not a high concerted barrier.
+
+### 94b. The prediction revives - and the proxy had it backwards
+
+| | n | mean `cons` | median |
+|---|---|---|---|
+| **TRUE waist contacts** (by chain, 4.5 A) | **10** | **0.5889** | 0.6854 |
+| other interface residues | 269 | 0.7727 | 0.8311 |
+| null - exposed non-interface | 352 | 0.6764 | 0.7288 |
+
+**Registered prediction - waist contacts LESS conserved than other interfaces - MET, p = 0.0076.**
+
+The §92b proxy version gave **the opposite**: waist 0.8187 vs distal 0.7694, p = 0.5906, and we recorded
+the kill as fired. **That kill was an artefact of a bad waist definition.** The geometric bin - the 15%
+of residues nearest the waist plane in one reference chain - **contained mostly residues that are not
+inter-half contacts at all**, and it reported the wrong direction.
+
+So the reasoning registered in `WAIST_PREREGISTRATION.md` - *"an interface that has to come apart cannot
+be optimised like one that never does"* - **survives its proper test**, having died on the proxy.
+
+### 94c. GATE 2 FAILED, and that governs how this may be read
+
+Registered: *"at least 40 true waist-contact residues, or the comparison is still underpowered and is
+reported as such."* **We got 10.** Reported as such:
+
+- **n = 10 against 269.** p = 0.0076 is real for a Mann-Whitney at that imbalance, but **ten residues
+  is ten residues.**
+- **Waist versus the non-contact null is NOT significant** - 0.5889 vs 0.6764, **p = 0.1674**. So the
+  waist contacts are **not** demonstrably less conserved than ordinary exposed surface; they are only
+  less conserved than *other interfaces*.
+- **One structure, one species.** 4V60 is rat, and the contact set is defined on a D39-averaged model -
+  the very averaging §91a says cannot show interface inequality. **A seam, if it exists, is not in this
+  contact list by construction.**
+- The two definitions disagreeing means **at least one of them is measuring the wrong thing**, and the
+  by-chain version is only better on argument, not on power.
+
+### 94d. What stands
+
+**Solid:** the inter-half interface of the vault is **12 residues, essentially the N-terminal tail**, and
+that is a direct geometric measurement on the deposited assembly.
+
+**Supported but underpowered:** those contacts are less conserved than the particle's other interfaces
+(p = 0.0076, n = 10), which is what we registered and what the proxy denied.
+
+**Not supported:** that they are less conserved than ordinary surface (p = 0.17).
+
+**And §92b's recorded kill is withdrawn** - not because we dislike it, but because the test that
+produced it used a waist definition the structure does not support.
