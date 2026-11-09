@@ -5908,8 +5908,11 @@ same topology.
 | **NG86 pairwise** (§84b) | 0.0771 (GAPDH) | **0.1118** | 0.2166 (MX1) | **25% of the way to relaxed** |
 | **codeml M0** (here) | 0.0516 (GAPDH) | **0.0635** | 0.4304 (CD4) | **3.1% of the way to relaxed** |
 
-**Under the proper model MVP is not intermediate between the clusters. It sits essentially on top of the
-housekeeping control** - 0.0119 above GAPDH against a 0.3788 span to CD4.
+**Under the proper model MVP is not intermediate between the clusters** - it is **0.0119 above GAPDH
+against a 0.3788 span to CD4.** ~~It sits essentially on top of the housekeeping control.~~
+**WITHDRAWN, §102b** - a paraphrase of the retracted equality claim, which is how the first five
+retractions escaped their own patterns (#327). **0.0119 is 23% of GAPDH's own value; "on top of" is a
+statement about a test nobody ran.**
 
 **So §84b understated the constraint.** The reversal grok forced there - that MVP is under strong
 purifying selection - **holds.**
