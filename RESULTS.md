@@ -5293,3 +5293,106 @@ residues rather than the dear ones.
 **It does not touch the timing half.** "A growing cell doesn't have any; a matured cell produces them"
 is a claim about expression against differentiation state, it is **testable with data already in
 `data/raw/devel` and `data/raw/tissue`**, and it is untested here.
+
+## 83. The chair gets built as the organ matures. The timing claim is confirmed; two others are not.
+
+Registered at `7c82d9c` before any value was read.
+
+### 83a. TEST A - gate PASSED, prediction MET in all seven organs
+
+Spearman rho of log1p(RPKM) against developmental stage rank, Cardoso-Moreira E-MTAB-6814, 297 samples:
+
+| gene | Brain | Cerebellum | Heart | Kidney | Liver | Ovary | Testis | neg |
+|---|---|---|---|---|---|---|---|---|
+| MKI67 | -0.931 | -0.925 | -0.693 | -0.826 | -0.283 | -0.657 | -0.726 | 7/7 |
+| TOP2A | -0.948 | -0.924 | -0.592 | -0.781 | -0.401 | -0.196 | -0.550 | 7/7 |
+| PCNA | -0.845 | -0.585 | -0.604 | -0.685 | -0.266 | -0.041 | -0.626 | 7/7 |
+| CCNB1 | -0.812 | -0.880 | -0.760 | -0.843 | -0.369 | +0.229 | -0.813 | 6/7 |
+| **MVP** | **+0.829** | **+0.848** | **+0.649** | **+0.789** | **+0.663** | **+0.760** | **+0.470** | **0/7** |
+| TEP1 | -0.641 | +0.580 | -0.546 | -0.358 | -0.309 | -0.797 | -0.535 | 6/7 |
+| PARP4 | -0.718 | -0.843 | -0.227 | +0.087 | -0.117 | +0.000 | -0.442 | 5/7 |
+
+> **Note on one number in that table.** TEP1's Liver value is **-0.309**, which collides with a
+> registered retraction pattern (§63's void three-way matched residual). **It is a coincidence** - this
+> is a Spearman rho against developmental stage, computed by `src/chair.py`, unrelated to the degenerate
+> matcher. The gate flagged it and **we annotated rather than loosening the pattern**, which is house
+> rule 14 and §78e: prefer the gate that cries wolf.
+
+**Gate: all three clauses PASS.** Proliferation markers fall in 6-7 of 7 organs; housekeeping |rho|
+(ACTB 0.678, GAPDH 0.271) sits below the proliferation median of 0.689; all nine genes resolved by ENSG
+and found.
+
+**MVP rises in 7 of 7 organs, median rho +0.760.** It is **the only gene in the panel positive in every
+organ.** Graham's prediction - *"a growing cell doesn't have any, but a cell that is fully matured
+produces them"* - **is confirmed at the transcript level, on a registered direction, under a passing
+gate.** The first positive prediction this project has confirmed this way.
+
+**Caveat that strengthens it rather than weakening it:** ACTB also declines in 7/7 at |rho| 0.678, so
+this dataset carries a broad downward drift. MVP moves **against** that drift, not with it. GAPDH at
+0.271 shows the drift is not uniform.
+
+### 83b. The thing nobody asked about: the shell rises while the caps fall
+
+**MVP is positive in 7/7. TEP1 is negative in 6/7. PARP4 is negative in 5/7.**
+
+Under a single program for a single particle, the three subunits should track. **They move in opposite
+directions across development in nearly every organ.** That is independent transcript-level evidence
+for the project's top-ranked hypothesis (**0.45**: the bare shell is the functional unit and the caps
+are optional), and it was not what the test was designed to find.
+
+### 83c. TEST B - gate PASSED, prediction REFUSED
+
+HPA consensus, median nTPM. Gate passes: MKI67 0.1 vs 5.8 and TOP2A 0.7 vs 27.8, both far higher in the
+proliferative set, so the sets separate on proliferation as required.
+
+**MVP: post-mitotic 34.0 vs proliferative 51.2.** **Higher in proliferative tissue. Prediction NOT
+MET.**
+
+**The two tests disagree and both gates passed, so the disagreement is real.** They are different
+contrasts: **A is within-organ across developmental time**, **B is between-tissue in adults.** MVP
+rises as a given organ matures, and separately, adult high-turnover tissues carry more of it than
+post-mitotic ones. Note that B's proliferative set - bone marrow, testis, small intestine, skin - are
+also the **barrier and immune-rich** tissues, and MVP is interferon-inducible, so B may be reading
+immune or epithelial content rather than proliferation. **Not resolved here.**
+
+So: **"matured cells produce them" is right about developmental time and wrong about adult tissue
+type.**
+
+### 83d. TEST C - gate passed after a ranking bug, and the threshold I registered was wrong
+
+The first run failed gate C1 because local alignment returned **6- to 8-residue perfect matches** that
+outranked the true paralogue - ACTG1 at 98.9% over 375 aa came **second** to VKORC1 at 100% over 6 aa.
+A sorting fault, mine. **The gate aborted before MVP's result printed, so the repair was still blind
+for the subject**, which is recorded because §79e established that a repair after seeing the subject's
+value is not.
+
+Fixed: controls now pass decisively - **ACTB -> ACTG1 98.9% / 375 aa**, **TUBB -> TUBB4B 97.7% / 443
+aa**.
+
+**MVP's only above-threshold hit: GAS2L1, 28.7% identity over 251 aligned residues.**
+
+Formally the registered prediction (>=20% over >=200 aa) is **MET**. **Substantively the threshold was
+badly chosen, and the controls prove it:** real paralogues in this method score **97-99%**. MVP's best
+is **28.7%**, against a cytoskeletal crosslinker with no structural relationship to a vault. And
+TEP1's best hits - CIAO1, SEC13, GOLGA2, SPAG5, all **WD40-repeat proteins**, which TEP1 also has -
+show exactly what this method returns at that level: **domain-level coincidence, not paralogy.**
+
+**So TEST C is uninformative about the mirror-image idea**, not because the data refused it but because
+**we set a floor that admits twilight-zone noise.** The honest statement is that the test as registered
+cannot distinguish a paralogue from a coincidence, and the 70-point gap between the controls and MVP's
+best hit is the evidence for that. **We are not converting it into "MVP is single-copy"** - that would
+be reading a conclusion out of a test we have just declared unfit.
+
+### 83e. Where the chair stands
+
+| claim | status |
+|---|---|
+| raw-material reserve | **DEAD** (§82) - not N-rich, sulfur-poor, avoids the expensive essential residues |
+| **"matured cells produce them"** | **CONFIRMED** for developmental time, 7/7 organs, gate passed |
+| same claim, adult tissue type | **REFUSED** - higher in proliferative tissue, gate passed |
+| reversible assembly | **CONSTRAINED** - co-translational templating means disassembly cannot be assembly reversed |
+| mirror-image partner | **UNTESTED** - our threshold was unfit; needs a proper profile search |
+| viral decoy | **UNTESTED** - needs infection time courses we do not have |
+
+**Standing caveat (§71):** all of this is transcript level. **Vault abundance is not one quantity**, and
+MVP mRNA rising with maturation is not the same claim as a mature cell holding more particles.
