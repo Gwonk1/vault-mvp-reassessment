@@ -230,3 +230,33 @@ asked.
 down **the statistic you are not computing** and **the outcome that would have been informative**. If
 you cannot state both, you are not refusing a test - you are substituting a narrative for one. It is
 the cheaper failure mode, because nothing goes in the ledger to contradict later.
+
+## 17. Intersection first, forks second, the adjective only if both survive
+
+**The error this exists for** (Grok audit 010): *"You counted containers, then described the count as
+agreement."* It has two subtypes. **Type I** - the containers are copies of one production, so the
+sample size is the number of **production events**, not of files. **Type II** - the containers hold the
+same **label**, not the same measurement, and you counted labels.
+
+The class: **a count of bearers of a label, written down as if it were the number of independent
+productions of a measurement.** It has now happened twice in unrelated domains (six papers that were
+one lab, §76; seven structures whose forks are unverified, §99d) and **a third time inside the
+correction written to fix the second** (§99c).
+
+> **You may not write "independent", and you may not use a count of objects as evidence, until two
+> lines are already on the page:**
+> 1. **Intersection** - the values common to **every** member. Residues, authors, starting-model PDB
+>    ids. **Not "members that returned something."**
+> 2. **Forks** - for each element of that intersection, the most recent cause shared with another
+>    member. **Collapse those; what remains is the sample size.**
+>
+> **If the intersection is empty, or a singleton you would not have bet on, there is no replicated
+> result. Order is the rule.**
+
+**"Independent" is a property of the errors, not of the nouns.** Two observations are independent
+evidence only when **the ways they could be wrong do not move together.** Species and method are nouns.
+Shared software, shared starting coordinates, a shared threshold, and the same person choosing it are
+forks.
+
+**And a fork you cannot find is a fork.** §99d: the depositions' `_refine.pdbx_starting_model` fields
+are unpopulated, so the sample size is **1** until the primary methods are read - not 7.

@@ -6280,8 +6280,7 @@ on which residues form it.** Calling them "independent" let a species-and-method
 corroboration.
 
 That is a geometric fact about a 13 MDa particle, measured twice, and it bears on §91a's energetics
-twice as hard: **grok's objection that "copy count does not set a barrier" now has a footprint attached
-to it.** Thirty-nine interfaces of ~10 residues each is not a formidable latch, and whatever holds the
+twice as hard: ~~**grok's objection that "copy count does not set a barrier" now has a footprint attached to it.**~~ **WITHDRAWN, §99e:** *"copy count sets a barrier only under the concerted mechanism - a contact census does not choose the mechanism"*, and a residue count is neither buried area nor binding energy. Thirty-nine interfaces of ~10 residues each is not a formidable latch, and whatever holds the
 vault shut, **it is not a large buried surface.**
 
 ### 95d. And it sharpens what is still missing
@@ -6378,7 +6377,7 @@ And in reverse: **human 38, 39, 40 map to rat 38, 39, 40**, none of which is in 
 patch is genuinely in a different place in the two structures:** rat at **42-47**, human at **36-41**.
 Adjacent stretches, four residues apart, with no alignment artefact available to reconcile them.
 
-**Shared contacts across species: residues 6 and 21. That is all.**
+**Shared contacts between the rat and human models: residues 6 and 21.** ~~That is all.~~ **NARROWER STILL, §99c: across all seven models the intersection is {21} alone** - residue 6 is absent from three of the six human structures, so "both species" was counting species labels.
 
 ### 97b. What this does to §96b's core
 
@@ -6391,9 +6390,9 @@ So the honest hierarchy:
 
 | claim | status |
 |---|---|
-| the inter-half interface is **small and N-terminal (<= residue 50)** | **7 of 7 structures, 2 species, 2 methods - holds** |
-| **residues 6 and 21** are in it | **both species - holds** |
-| the **five-residue core 21, 22, 38-40** | **5 of 5 human structures from one group by one method - holds there, and not shown beyond** |
+| ~~the interface is **small and N-terminal**~~ **SOFTENED, §99d-e** | **a container count.** "Small" is an integer the cutoff chose; "N-terminal" is the fold counted seven times; **and the starting-model fields are unpopulated, so the sample size is 1, not 7** |
+| ~~**residues 6 and 21** are in it~~ **WRONG, §99c** | **the intersection across all seven is {21}**; residue 6 is absent from 9MXH, 9MXV and 9BW6 - three of the six human models |
+| the **five-residue core 21, 22, 38-40** | ~~5 of 5 human from one group, not shown beyond~~ **FALSE, §99c: it is in SIX structures, 11JB included, which is not in that series** |
 | that core is **the vault's interface generally** | **NOT supported** |
 
 ### 97c. Two readings, and I cannot separate them
@@ -6492,5 +6491,177 @@ with the deep branches contributing the least amino-acid change of all.
 
 **So the paradox does not soften with depth. It hardens.** A gene deletable from a mouse, absent from
 878 proliferation screens, and discarded outright by two major clades, is **conserved at
-housekeeping-gene level across the chordates, and most strongly conserved on the deepest branches we
-can measure.**
+housekeeping-gene level across the chordates.** ~~and most strongly conserved on the deepest branches
+we can measure~~ **WITHDRAWN, §100b: those are two extant TIPS, not deep branches -** *"a tip omega is
+an average over the whole terminal; it is not a Cambrian coefficient."*
+
+## 99. Grok audit 010: the general form of the error, and it fires three times inside my own correction
+
+I asked for the thing I most needed: *"What is the general form of the error I keep making? Both times
+the word was 'independent.' Is there a check that catches the class rather than the instance?"*
+
+### 99a. The general form
+
+> ***"You counted containers, then described the count as agreement."***
+>
+> **Type I.** The containers are copies of one production. Six papers were one lab. Five ligand states
+> are one pipeline. Seven coordinate files may be one fold. **The sample size is the number of
+> production events, not the number of files.**
+>
+> **Type II.** The containers do not hold the same measurement. **They hold the same label, and you
+> counted labels.** "Two structures, two methods, two species" agreed as a sentence while the residue
+> sets did not.
+>
+> The class is: **a count of bearers of a label, written down as if it were the number of independent
+> productions of a measurement.** … "Independent" is doing the damage both times. **You applied it to
+> the nouns when it is a property of the errors. Two observations are independent evidence for a claim
+> only when the ways they could be wrong do not move together.**
+
+### 99b. HOUSE RULE 17, in Grok's construction
+
+> *You may not write "independent," and you may not use a count of objects as evidence, until these two
+> lines are already on the page:*
+> 1. **Intersection.** The values common to every member. Residues, authors, starting-model PDB ids -
+>    **not "members that returned something."**
+> 2. **Forks.** For each element of that intersection, the most recent cause shared with another
+>    member. **Collapse those, and what remains is the sample size.**
+>
+> *If the intersection is empty, or a singleton you would not have bet on, there is no replicated
+> result. **Order is the rule. Intersection first, forks second, adjective only if both survive.***
+
+### 99c. The rule fires on my own graded correction. Three times. All verified.
+
+**I wrote §97b as the careful, chastened version of §95. It contains three errors of the same class.**
+
+| my claim | checked | verdict |
+|---|---|---|
+| "residues **6 and 21** shared across species" | **intersection across all seven = {21}** | **WRONG.** Residue 6 is **absent from 9MXH, 9MXV and 9BW6** - three of the six human models. "Both species" counted **species labels**, not measurements. *"Species-level presence is the same mistake one level down."* |
+| "the core is **5/5 human from one group**, and not shown beyond" | the core {21,22,38,39,40} is present in **six** structures | **FALSE ON MY OWN TABLE.** **11JB contains all five and is not in the Lodwick series.** *"You bolded five rows and did not read the sixth. That is the rule, firing inside the correction."* |
+| "**7/7, two species, two methods**" | a container count | **WRONG KIND OF STATEMENT.** The residue intersection is a **singleton**, and the fork count is unknown. |
+
+### 99d. And the fork check has a decisive answer I did not look for
+
+> *"Cryo-EM vault models are often the crystal chain fitted into a map. Agreement is then the refinement
+> failing to move atoms. … Check the methods for the starting-model id. **If it is 4V60, or you cannot
+> find it, the coarse claim's sample size is 1.**"*
+
+Checked: **`_refine.pdbx_starting_model` is `?` and `_em_3d_fitting.method` is `?`.** The depositions
+**do not state** what the models were built from.
+
+**So by the rule's own terms the sample size is 1**, pending someone reading the primary methods
+sections. **Everything §95 through §97 said about "two methods" and "seven structures" rests on an
+unverified fork**, and the honest statement is:
+
+> **In seven deposited closed-cage models, the only residue index passing a 4.5 A inter-half cutoff in
+> all of them is 21. Whether those models are independent determinations is unestablished, and the
+> metadata does not say.**
+
+### 99e. What else comes off, from NEW 2
+
+- **"Small" comes off.** *"It is an integer the cutoff chose."*
+- **"N-terminal" is the weakest survivor, not the strongest.** *"The fold places the N-terminus at the
+  waist… A contact search on a closed particle built on that fold recovers the N-terminus because that
+  is where the halves were docked. **Seven models repeating the fold are one architectural fact counted
+  seven times.**"*
+- **The 12-vs-6 count difference largely evaporates.** Rat's 1-4 appear in **no** human model; **drop
+  them and rat is 8, inside the human range of 6-10.** *"'12 versus 6' is in large part 'the crystal
+  built four more terminal residues.'"*
+- **The barrier sentence is WITHDRAWN.** *"A small footprint does not imply a low barrier… That count
+  is not a buried area, and buried area is not a binding energy."* Counted as **elements** rather than
+  indices, rat's interface is **about four patches, not twelve contacts.** And decisively:
+  ***"Copy count sets a barrier only under the concerted mechanism. A contact census does not choose
+  the mechanism."*** My §95c/§96b claim that the footprint strengthened Grok's own objection was
+  wrong in both directions.
+
+## 100. Audit 010 on the rest: a ridge is reproducibly a ridge, and two tips are not deep time
+
+### 100a. NEW 1 - my reproducibility gate does not establish what I thought
+
+> *"That correction is a parametric extrapolation… Past saturation the likelihood ridge runs toward
+> large dS and small omega, and the optimizer reports a point on that ridge. **Reproducible starts at
+> 0.05 and 0.5 show you are not in a local optimum. A ridge is reproducibly a ridge.** F3x4's Markov
+> machinery is what prints 0.0025; it is not an independent reason to believe 0.0025."*
+
+**The registered reproducibility clause is a weaker instrument than I treated it as.** It rules out a
+local optimum. It does not rule out an unidentified parameter, and **an unidentified parameter
+reproduces perfectly.**
+
+**And I must not call the test "unpowered."** *"'Unpowered regardless of p' is the wrong bin, and it
+would repeat the rule-16 mistake: attacking a different test from the one you ran."* The test is
+**overpowered relative to its assumptions**: with 785 codons, sampling error is tiny, so **model error
+on the two longest branches wins.** The correct report is **a difference in fit, with the
+identification failure attached** - not a selection result, and not an underpowered one.
+
+### 100b. The thing I had not worried about: I measured two extant TIPS
+
+> ***"You measured two extant tips and described them as deep constraint."*** *The foreground is two
+> terminal branches, forced to share one omega. In the chordate tree those tips are not a clade, they
+> do not share a stem, and **the stem is the branch your wording cares about**… **A tip omega is an
+> average over the whole terminal. It is not a Cambrian coefficient.** The branch is old because the
+> tip is far away. The model does not isolate the old end of it.*
+
+§98e's *"most strongly conserved on the deepest branches we can measure"* is **withdrawn.** What was
+measured is **tunicate evolution since the split, and lancelet evolution since the split** - two
+living lineages, averaged over their whole terminals. The deep internal branches, including the
+olfactores stem, sat in the **background** at 0.0665.
+
+**Two further generators of a small foreground omega**, neither fixed by reporting dS:
+- **One stationary F3x4 vector**, dominated by the vertebrate majority, while ***Ciona* is
+  compositionally extreme.** The misfit is absorbed where the model has spare parameters - **the
+  foreground rate** - and a shared foreground omega lets the worse tip set the LRT.
+- **The 785 gap-free columns** are the sites that **survived being alignable at that distance**, which
+  *"pushes foreground dN down before the rate model starts."*
+
+**The report that cuts through all three** uses no omega at all: per foreground branch, the
+**amino-acid change count**, the observed synonymous divergence, the **GC3 / codon-usage distance from
+the vertebrate majority**, and the same three on a comparable vertebrate branch. *"If the protein count
+is indistinguishable from the vertebrate branches, 0.0025 was manufactured."*
+
+**And the ascertainment point, which closes the original question rather than answering it:**
+
+> *"**Every branch in this alignment is a retention branch, by ascertainment.** There is still no
+> sequence on a loss branch. The original question remains unanswered, and this test is not a back door
+> into it."*
+
+### 100c. NEW 3 - one clause could not fail, and I collapsed the one that did
+
+**The count clause was non-diagnostic.** Registered: counts within +/-8. **Observed: 6, 7, 8, 7, 8.**
+*"Counts of 6, 7, 8, 7, 8 cannot miss a +/-8 window."* **Marked non-diagnostic** - house rule 8's fault
+(a clause with only one reachable answer), committed again.
+
+**And my account of the Jaccard failure was wrong in a way that flattered me.** I wrote that *"with
+sets of six to eight, one fringe residue moves Jaccard by 0.1."* Grok:
+
+> *"**Worst Jaccard 0.50 is not a one-residue miss.** One fringe residue from a shared core of 5
+> produces a Jaccard around 0.6-0.7, which would have **met** 0.60. A Jaccard of 0.50 between sets of 7
+> and 8 is an intersection of 5 and a union of 10, **a symmetric difference of five residues.** Both
+> failing pairs are pairs that include **9MXV**… The other eight pairs meet the threshold. The
+> registered test fails, and **the fail is localized. Say both. Do not collapse them into 'essentially
+> passed.'**"*
+
+**I collapsed them.** The honest record: **the clause failed, eight of ten pairs met it, and both
+failures involve 9MXV specifically** - which is a statement about one model, not about the measurement.
+
+**What should have been registered**: the **maximum pairwise symmetric difference**, with the pass bound
+taken from **how far the apo set moves when the cutoff goes from 4.0 to 5.0 A on that one model.**
+*"Ligand-to-ligand movement inside cutoff-to-cutoff movement is a null you cannot see past."*
+
+**And the trigger hypothesis is not merely null - it was untestable by this design.** *"A ligand-driven
+opening was removed before your parse, by the symmetry you analyzed under… Recording it as 'no pattern'
+under the trigger hypothesis is insurance: a null entered against a hypothesis that could not fail and
+could not succeed."* Recorded as **"not a test of the trigger"**, with the symmetry bias named beside
+it.
+
+### 100d. NEW 4 stands, NEW 5 goes
+
+**NEW 4 - the length CV: my judgement was right, and for a better reason than I gave.** *"Thirty eggNOG
+orthogroups would not repair it"* - a null drawn from the same clustering repeats the bias. And the
+structural argument needs narrowing: **a fixed 39-fold register forbids changes to repeat count, not to
+termini and loops**, so total-length CV is *"a blunt proxy for 'same repeat count', which you already
+know from the architecture."* **Do not cite 7.2%.**
+
+**NEW 5 - the annotation finding does NOT go in `CALIBRATION.md`.** *"A working comparative genomicist
+already treats symbols as a vertebrate annotation layer… The audience that would lose 40 minutes to
+this is a structural biologist using Ensembl as a search box. That is a real trap, and it is a tutorial
+trap… **Putting it in the calibration file lowers the file.**"* It stays in the record as a mistakes-log
+entry, which is what it is.
