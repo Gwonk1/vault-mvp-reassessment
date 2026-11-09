@@ -126,3 +126,29 @@ power, that is recorded as the n = 18 result having been noise.
 **GATE:** (1) the two half-assignments must be 39 chains each; (2) at least 40 true waist-contact
 residues, or the comparison is still underpowered and is reported as such; (3) the general result
 (interface > exposed non-interface) must still hold on the mapped residues.
+
+---
+
+# Replication: the same contact calculation on 11JB (human, 78 chains)
+
+Registered before running. §94's 12-residue result comes from **one structure, 4V60, rat, D39
+crystallographic**. 11JB is **human, cryo-EM, 78 modelled MVP chains and nothing else** - an
+independent determination by a different method on a different species.
+
+**Method: identical.** Split the 78 chains into halves on mean axial coordinate (already verified
+39/39), call a residue a waist contact when any atom comes within **4.5 A of an atom in a chain of the
+other half**, and report the residue set.
+
+**Numbering caveat, stated first:** 11JB is human (893 aa canonical) and 4V60 is rat (~861 modelled), so
+the two residue sets are **not** directly comparable by number away from the N-terminus. At the
+N-terminus the sequences align closely and small-number identity is meaningful; anything past ~50
+requires an alignment before it can be compared, and we will not eyeball it.
+
+**PREDICTION:** **the contact set is again dominated by the N-terminal ~50 residues**, and the total
+count is again **small - under 30 residues.** If 11JB instead returns a large or differently located
+interface, §94a's "the join is twelve residues" is a property of 4V60 and not of the vault.
+
+**GATE:** the 39/39 split must hold (verified), and the calculation must return a non-empty contact set.
+
+**KILL:** if 11JB's contacts are **not** concentrated in the N-terminal region, §94a is withdrawn as a
+single-structure artefact.
