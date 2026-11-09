@@ -6417,3 +6417,80 @@ support. The two structures agree on *where* and disagree on *which*.
 **That is a species-and-method confound I built into a replication and then cited as independence.**
 Checking it cost one alignment, and I only ran it because §96e made me write down what I was declining
 to check - which is **house rule 16 working in the direction it was written for.**
+
+## 98. The registered branch test, delivered: constraint is NOT uniform, and the deep branches are MORE constrained
+
+The corrected version of the ill-posed test (§86/#400) - **relaxation among retainers** - registered in
+`TIER0_PREREGISTRATION.md` and listed by §90c as *"only partly delivered."* Delivered here.
+
+### 98a. Getting the deep taxa at all required abandoning gene symbols
+
+**MVP is not annotated by gene symbol outside the vertebrates.** Measured, not assumed:
+
+| species | `gene_symbol:MVP` hits | gene symbols present in file |
+|---|---|---|
+| *Ciona intestinalis* | **0** | 205 |
+| *Nematostella vectensis* | **0** | 2 |
+| *Dictyostelium discoideum* | **0** | **1,082** |
+
+So the three fetch attempts that kept returning vertebrates only were not unlucky - **they were asking
+a question the annotation cannot answer, and nothing errored.** The fallback: take the orthogroup
+protein we already hold, translate every CDS in the species' dump, and match on 5-mer Jaccard.
+
+- ***Ciona***: `ENSCINT00000018892.3`, **Jaccard 0.969**, 859 codons - unambiguous.
+- ***Branchiostoma***: `BL10645_evm0`, **Jaccard 0.752**, 906 codons - the orthogroup holds
+  *B. floridae* and Ensembl serves *B. lanceolatum*, so a cross-species match at 0.75 is plausible
+  **and is not proof it is the orthologue rather than a paralogue.** Flagged.
+
+### 98b. M0 across the chordates barely moves
+
+| panel | taxa | codons | **omega** | reproducible |
+|---|---|---|---|---|
+| mammals + chicken/*Xenopus*/zebrafish (§90) | 11 | 786 | **0.0635** | yes |
+| **+ *Ciona* + *Branchiostoma*** | **13** | **785** | **0.0608** | **yes, both starts** |
+
+Adding ~600 My of chordate outgroup moves the tree-wide estimate by **0.003**. **GATE PASS** on
+reproducibility.
+
+### 98c. The branch test is positive, and the direction is the opposite of "relaxation"
+
+Two-ratio model, the two invertebrate branches as foreground:
+
+| | omega |
+|---|---|
+| background (vertebrate branches) | **0.0665** |
+| **foreground (*Ciona* + *Branchiostoma* branches)** | **0.0025** |
+
+**LRT = 28.33 on 1 df, p = 1.0e-07.** **Constraint is not uniform across the retained tree** - and the
+deep branches are **~27x MORE constrained**, not less.
+
+**The registered framing expected the opposite.** "Relaxation among retainers" was built to look for
+lineages where constraint had loosened, possibly presaging loss. **It found the deep chordate branches
+to be the most constrained part of the tree.**
+
+### 98d. Why the magnitude must not be quoted as a selection coefficient
+
+**omega = 0.0025 means essentially no amino-acid change against a large synonymous change.** At 600+ My
+that is exactly where **synonymous saturation makes dS unreliable**: a saturated dS is a large dS, and a
+large denominator makes omega small **whether or not selection did it.** So:
+
+- **The direction is probably real** - MVP's protein is strongly conserved across the chordates while
+  synonymous sites have churned.
+- **The number is not a selection coefficient.** 0.0025 should be read as "dN is near zero on these
+  branches relative to a saturated dS", not as 99.75% of substitutions removed.
+- **Two foreground branches against twenty background**, 785 codons, 1 df: **p = 1e-07 is cheap under
+  those conditions** and the effect rests on two branches, one of which (*Branchiostoma*) has a
+  0.752 protein match.
+- A **dS-per-branch report and a saturation-aware model (or a closer outgroup)** are what would make
+  the magnitude meaningful, and neither was registered or run.
+
+### 98e. What this adds to the conservation story
+
+§90b established MVP's constraint as indistinguishable from a housekeeping gene's **among mammals.**
+This extends the measurement to **~600 My of chordates and finds the same answer tree-wide (0.0608)**,
+with the deep branches contributing the least amino-acid change of all.
+
+**So the paradox does not soften with depth. It hardens.** A gene deletable from a mouse, absent from
+878 proliferation screens, and discarded outright by two major clades, is **conserved at
+housekeeping-gene level across the chordates, and most strongly conserved on the deepest branches we
+can measure.**
