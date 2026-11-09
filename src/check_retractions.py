@@ -29,7 +29,12 @@ MARKERS = re.compile(
     # marking phrases found by the regex broadening itself (ledger #328)
     r'corrected|narrower than|first claimed|we first wrote|no support|overturn',
     re.I)
+# Ledger #483: CALIBRATION.md - the ONE file written for strangers, and the only one a reuser is
+# told to read first - was not in this list for the whole project. Neither were USEFULNESS.md or
+# HYPOTHESES_AND_NOVELTY.md, both of which carry live claims. A gate pointed at the internal
+# record and not at the exported document is pointed the wrong way.
 TARGETS = ['RESULTS.md', 'LEDGER.md', 'README.md',
+           'CALIBRATION.md', 'USEFULNESS.md', 'HYPOTHESES_AND_NOVELTY.md',
            'papers/PAPER1_vault_reassessment.md', 'papers/PAPER2_bench_experiments.md']
 
 def load_patterns(path='RETRACTIONS.tsv'):

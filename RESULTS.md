@@ -7031,15 +7031,25 @@ blank `_refine.pdbx_starting_model` leaves **sample size 1** for any classificat
 stands. The branch test has a foreground of **one terminal**. The loss contrast has **no branches to
 measure**. The remaining ideas need data that does not exist in a form anyone can hand me.
 
-**What this file ends with**, after eleven audits:
+> **This section claimed to be the end of the file and is not. A twelfth audit followed it (§103) and
+> changed two of the three bullets below.** Leaving a closing summary standing while later sections
+> contradict it is **house rule 19** - the sentence keeping its post after the repair. **The current
+> summary is §104.** The bullets below are kept because the stop itself held: no further computation
+> was run after this point, and §103 is a re-reading of numbers already in hand.
+
+**What this file was taken to end with**, after eleven audits:
 
 - **One measurement that survived everything and got sharper by being cut down:** MVP's M0 omega is
-  **0.06** among extant vertebrate orthologues, bracketed by **0.05** and **0.42**.
-- **Two calibration findings** for strangers, in `CALIBRATION.md`, neither of them biology.
+  **0.06** among extant vertebrate orthologues. ~~bracketed by **0.05** and **0.42**~~ **WITHDRAWN,
+  §103 / rule 19:** printing the three figures in a row performs the retracted housekeeping equality
+  typographically. **Stated as ratios: 1.2x the essential control, about one-seventh of the relaxed
+  one.**
+- ~~**Two calibration findings** for strangers, in `CALIBRATION.md`, neither of them biology.~~
+  **SUPERSEDED, §103g:** still two, but **not these two** - finding 1's headline was false and
+  finding 2 was not a rule. The pair is now the **sensitivity floor** and the **completeness split**.
 - **The paradox intact and unexplained:** a gene deletable from a mouse, invisible in 878
   proliferation screens, and discarded outright by two major clades is strongly constrained wherever
-  it is retained. **Nothing in this work explains that.** It is a better-stated question than the one
-  I started with, and that is the whole of the result.
+  it is retained. **Nothing in this work explains that.** This bullet survives §103 unchanged.
 
 ## 103. Grok audit 012, the whole-project sweep: the calibration file was wrong, and the result was filed as a limit
 
@@ -7210,3 +7220,54 @@ about MVP is not one of the two findings.**
 
 Also noted, and I am recording it because it is the honest shape of the whole week: **the omega work
 contains no buried result.** The audit looked and said so.
+
+## 104. What this file ends with, stated once and consistently
+
+§102f wrote a closing summary and then §103 contradicted two thirds of it. **This section replaces it,
+and is the only closing summary in the file.** If a later section ever contradicts this one, **this
+section is what has to change** - that is house rule 19 applied to the document's own ending.
+
+### 104a. What survives, with its frame attached
+
+**One measurement.** Among extant orthologues that remain alignable, MVP's codon-model (`codeml` M0)
+omega is **0.06 across 11 vertebrates** - **1.2x an essential-gene control, about one-seventh of a
+relaxed control.** One significant figure, because our own reruns span 0.0608-0.0635. **No interval on
+any of the three estimates**, so no equality with the control is claimed. **Keeper-only by
+construction**, since only retained orthologues remain alignable.
+
+**One transferable finding, in two parts, in `CALIBRATION.md`.** A **sensitivity floor**: three
+standard complex-detection signatures measured against a particle whose membership has not been in
+dispute for decades, **all three failing in different ways** - co-elution precise but incomplete
+(the top subunit in a list of one; both known subunits cost 1,733 names), shared-turnover concordance
+non-discriminating (the **true** triplet at the **29.86th percentile**), co-abundance returning the
+tissue. Its first face, the MVP-TEP1 completeness split, is given in full. **Limits: n = 1 particle,
+two of three are single resources, and the three failures are not independent votes.**
+
+**One question, better stated than when this started.** A gene deletable from a mouse, invisible in
+878 proliferation screens, and discarded outright by two major clades is strongly constrained wherever
+it is retained. **Nothing in this work explains that.**
+
+### 104b. What does not survive, listed so nobody has to reconstruct it
+
+- **The biological negative.** *"No stoichiometric partner beyond PARP4 and TEP1, across every
+  instrument"* is **one PRIDE deposit** on a contrast its depositors analysed. §103e.
+- **The branch test.** Rooted tree, and a foreground that was one tunicate terminal. §101, §102a.
+- **The seven-structure interface**, the composition/storage reading, the shell/cap dissociation, the
+  barrier argument. §§99-100, §82.
+- **The canonical-target stopping rule**, as a rule. §103d.
+- **Every p-value from the codeml branch runs**, and the `0.06 / 0.05 / 0.42` row. §102a, §103.
+
+### 104c. The honest count of the record
+
+**483 ledger rows** - **480 with numeric ids 1-486** (89-90 and 391-394 unused, house rule 3)
+plus **3 letter-suffixed** (13a, 26b, 34b) - **68 carrying a strikethrough**. **104 numbered
+sections** here. **49 pre-registrations.** **20 house rules**, each written after
+breaking the thing it describes. **Twelve adversarial audit rounds** in `grok/`, verbatim both ways.
+**49 registered retraction patterns** and **8 standing qualifications**, both machine-checked,
+plus a check that recomputes every count on this line (house rule 20).
+
+**And the last audit changed the file this repository tells you to read first.** That is the most
+useful single fact about this record: **the document aimed at strangers was the least audited one in
+it**, until the twelfth round - it was not even in the retraction gate's target list (#483). A
+project can run eleven rounds of adversarial review on its internal record and leave its one exported
+claim unchecked.

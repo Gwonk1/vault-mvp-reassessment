@@ -6,9 +6,10 @@ proteomic, genomic, structural and comparative data. Each test carried a positiv
 gate and an explicit kill condition written down and committed before the relevant data
 were read.
 
-**Most of the hypotheses failed, including ours. That is the result.** Of 264 ledger
-entries, **64 are struck through** — claims withdrawn, usually by us, sometimes by an
-adversarial reviewer.
+**Most of the hypotheses failed, including ours. That is the result.** Of **483** ledger
+rows, **68 carry a strikethrough** — claims withdrawn, usually by us, often by an
+adversarial reviewer. **Twelve audit rounds** are recorded verbatim in `grok/`; the last one
+rewrote the file this README points you at first.
 
 ## The most useful thing here is not about vaults
 
@@ -22,7 +23,7 @@ diagnose, four distinct failure modes in a single two-day run:
 | **a refusal band wider than its estimator** | A gate registered "confirm above 75, clear below 60" on a statistic that landed at 70.0 with an SE near 8.5, making EQUIVOCAL close to pre-ordained. |
 | **the wrong statistic entirely** | Three registered criteria were reachable and resolvable but did not discriminate what they were written to discriminate — one named charge when the axis was length; one reported a percentile that was 55% likely by construction; one used fold-decline to separate a complex from a co-migration window, when the quantity that separates them is whether hit counts saturate. |
 
-The ten house rules in [`CONTRIBUTING.md`](CONTRIBUTING.md) exist because we broke each
+The 20 house rules in [`CONTRIBUTING.md`](CONTRIBUTING.md) exist because we broke each
 of them. Four were written on the second day, each after breaking the one before.
 
 One sequence is worth reading end to end as a cautionary tale: **the same question, on
@@ -37,11 +38,11 @@ check invalidated the third control as well. The biology never changed. RESULTS 
 | File | What it is |
 |---|---|
 | [`papers/PAPER1_vault_reassessment.md`](papers/PAPER1_vault_reassessment.md) | The reassessment: what survived, what did not, and the gate scorecard |
-| [`papers/PAPER2_bench_experiments.md`](papers/PAPER2_bench_experiments.md) | **Fourteen** wet-lab experiments, ranked by what they decide, each with a positive control and a kill condition |
-| [`LEDGER.md`](LEDGER.md) | Every idea raised, struck, or still standing — **264 entries**, with the reason and the file that settled it |
-| [`RESULTS.md`](RESULTS.md) | Full per-test results and corrections — 63 sections |
-| [`CONTRIBUTING.md`](CONTRIBUTING.md) | The ten house rules, and the fault that produced each |
-| `*_PREREGISTRATION.md` | 44 files: the predictions, gates and kill conditions, as written before the data |
+| [`papers/PAPER2_bench_experiments.md`](papers/PAPER2_bench_experiments.md) | **Fifteen** wet-lab experiments plus **Tier 0** (two free computations to run first), ranked by what they decide, each with a positive control and a kill condition |
+| [`LEDGER.md`](LEDGER.md) | Every idea raised, struck, or still standing — **483 rows** (480 numeric ids 1-486, with 89-90 and 391-394 unused, plus 3 letter-suffixed; house rule 3), with the reason and the file that settled it |
+| [`RESULTS.md`](RESULTS.md) | Full per-test results and corrections — **104 numbered sections** |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | The **20 house rules**, and the fault that produced each. **Rule 19 is the one that matters most** — a repair is not real until the old sentence's job is withdrawn |
+| `*_PREREGISTRATION.md` | **49 files**: the predictions, gates and kill conditions, as written before the data |
 | `grok/`, `argon/`, `channel/` | Adversarial review correspondence, verbatim |
 
 ## The correction that reframes everything below
@@ -63,12 +64,28 @@ also normal.** See RESULTS §70.
 ## If you only read one file
 
 **[`CALIBRATION.md`](CALIBRATION.md)** — the two findings here that are useful to someone who does not
-work on vaults. Both are instrument calibration: native co-fractionation cannot retain a known
-stoichiometric subunit without admitting 1,733 partners, and there is a pre-registerable stopping rule
-for telling co-regulation from co-complex in any co-abundance dataset. Two independent assessments,
-each written before seeing the other, ranked these the same two out of ten candidates and zeroed most
-of the rest. **[`calibration_edges.tsv`](calibration_edges.tsv)** holds the test case in
-machine-readable form.
+work on vaults. Both are instrument calibration rather than biology.
+
+**1. A sensitivity floor.** Three standard complex-detection signatures, measured against a particle
+whose membership has not been in dispute for decades — ~100,000 copies per cell, three agreed members,
+established by pulldown, knockout mice and structure. **All three fail, in three different ways:**
+co-elution is **precise but incomplete** (the top subunit comes back in a list of one; both known
+subunits cost 1,733 names), shared-turnover concordance **does not discriminate** (the *true* triplet
+sits at the 29.86th percentile of abundance-matched random triplets), and regulon-residualised
+co-abundance **returns the tissue** rather than the complex.
+
+**2. The completeness split in detail** — the MVP–TEP1 discordant edge, one of that floor's three
+faces. **[`calibration_edges.tsv`](calibration_edges.tsv)** holds the test case in machine-readable
+form.
+
+> **Both of these were corrected late and hard** (§103). Finding 1's original headline — *"no cutoff
+> both retains a true subunit and returns a followable list"* — was **false on our own results file**,
+> which prints a length-1 list containing PARP4. And the floor itself had been written down in three
+> separate places **as caveats on a biological negative** before an external audit pointed out that
+> read forward they are one measurement. A **pre-registerable stopping rule** was the second finding
+> until the same audit removed it: *"residualise **until** a canonical target leaves the top-N"* fits
+> the regression depth to its own control. It is now a demoted lab note at the foot of that file, with
+> the three conditions that would make it a rule.
 
 ## Provenance, and what five literature checks found
 
@@ -126,12 +143,27 @@ for a negative result (§103g).
 
 ## What survives
 
-A short list, deliberately: the **MVP-PARP4-TEP1 trimer**, with TEP1 shown independent of
-PARP4 in a PARP4-knockout line; **ANXA2 and S100A10** as the only confirmed non-subunit interactors of
-the old membrane list; **COP1** at 27-fold in one instrument class; **myoferlin actively
-excluded**, in a wash-based pulldown and in pre-lysis covalent proximity labelling;
-**degradation machinery the most depleted annotation of 1,276** in an anti-MVP pulldown;
-and subunit half-lives whose spread sits at only the 29.86th percentile of random triplets.
+A short list, deliberately — and **shorter after §103**, which reinterpreted three of its items:
+
+- the **MVP-PARP4-TEP1 trimer**, with TEP1 present in a PARP4-knockout line. **This is the textbook
+  composition of the particle**, re-read in one deposit; it is not a contribution of this work.
+- **ANXA2 and S100A10** as the only non-subunit interactors of the old membrane list to survive. Note
+  they are an **abundant heterotetramer**, the prey class pulldowns retain by mass.
+- **COP1 at 27-fold in one instrument class.** Flagged in §103e as **the strongest unreconciled
+  positive number in the project** — an enrichment parked in the support list of a no-further-partner
+  claim, with no exclusion rule ever applied to it. **Not resolved, and not promoted.**
+- ~~**myoferlin actively excluded**, in a wash-based pulldown and in pre-lysis covalent proximity
+  labelling~~ — **WITHDRAWN, §103e.** *"Actively excluded"* describes a **depletion** as an action,
+  and the two arms are **two assays inside one production**, not two instruments. Surviving statement:
+  **myoferlin is depleted, not enriched, in these data.**
+- **degradation machinery the most depleted annotation of 1,276** in an anti-MVP pulldown —
+  **flagged, §103e.** That is **the minimum of 1,276 categories**; every ranked list has one, and no
+  effect size or null was attached. The direction is measured; its distinction from the extreme of
+  1,276 draws is not.
+- subunit half-lives whose spread sits at the **29.86th percentile** of random triplets. **This one
+  has changed sides.** It was listed here as support for a negative; §103g reads it forward as part of
+  the sensitivity floor — **a concordance statistic that does not recognise the true particle cannot
+  corroborate the absence of further ones.**
 
 **One positive measurement survived everything, and got sharper by being cut down.** Among extant
 orthologues that remain alignable, MVP is under **strong purifying selection** - a codon-model

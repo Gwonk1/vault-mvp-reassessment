@@ -1,17 +1,32 @@
-# One assembly, no stoichiometric neighbourhood, and an instrument that cannot see a known subunit: a pre-registered reassessment of major vault protein across public human and comparative data
+# Three standard complex signatures fail on a particle whose composition was already known: a pre-registered reassessment of major vault protein across public human and comparative data
 
 > **Title history.** The first title claimed *"three lifetimes"* (removed, §61b: compatibility
 > never tested). The second claimed *"a sealed nucleotide pocket"* — removed here, because §73 found
 > that pocket **published** (Lodwick et al. 2025) and **not sealed**: it is lumen-facing,
 > inter-subunit, and created by assembly. **Twice the title headlined something that was not ours or
-> not true.** This one headlines the well-controlled negative and the calibration finding, which are.
+> not true.**
+>
+> **The third title** read *"One assembly, no stoichiometric neighbourhood, and an instrument that
+> cannot see a known subunit"* — **and all three clauses are now gone (§103).** "One assembly" and
+> "no stoichiometric neighbourhood" were the **well-controlled negative, withdrawn**: it reduces to
+> one PRIDE deposit, on a contrast the depositors themselves analysed, and "across every instrument"
+> was labels on one production. "An instrument that cannot see a known subunit" was **false as
+> stated** — the instrument sees PARP4 at rank 1 of 10,614, in a list of length one. What it cannot
+> do is return **both** known subunits inside a followable list.
+>
+> **So the title has been wrong three times, in three different ways:** something untested, then
+> something already published, then two things an audit refuted. **This fourth title headlines the
+> sensitivity floor** — the measurement that survived §103, and the only finding here aimed at a
+> reader who does not work on vaults.
 
 **Graham W. Syfert.** Analysis performed with Claude (Anthropic). Two further language-model agents
 reviewed the manuscript adversarially against the committed data, in three rounds; between them they
 struck or qualified more than a dozen claims made here, and those reversals are recorded in place
 rather than quietly removed. All hypotheses were committed to a timestamped git history before the
-relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (452 entries, ids 1-454 with 89 and 90 unused)
-and `RESULTS.md` (24 sections). **That history is currently local and has not been published**, so
+relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (**483 rows**: 480 numeric ids 1-486 with 89-90
+and 391-394 unused, plus 3 letter-suffixed — see house rule 3) and `RESULTS.md` (**104 numbered
+sections**). **Twelve
+adversarial audit rounds sit in `grok/`**, verbatim in both directions. **That history is currently local and has not been published**, so
 the ordering it establishes is not yet independently verifiable; we state the fact rather than imply
 otherwise, and the repository is available to anyone who asks. Correspondence welcome, including
 corrections.
@@ -438,6 +453,13 @@ same pulldown recovers at log-p 3.33 - sits at co-elution precision **0.041**, a
 retaining TEP1 retains **1,733** MVP partners, the entire noise floor. At the cutoff we used, MVP
 has **zero** partners of any kind. The zero describes our threshold, not the vault. Cortical actin
 is **unresolved**.
+
+> **Sharpened by §103a, and the sharper version is less flattering to the original framing.** At a
+> cutoff of **0.5** the list is not empty — it has **length 1, and that entry is PARP4**, a true
+> subunit. The resource is not blind to this complex; it recovers the best-behaved member cheaply and
+> precisely. **What no cutoff achieves is retaining BOTH known subunits in a followable list.** The
+> actin exclusion still fails for the same reason — a cutoff admitting a TEP1-class edge admits 1,733
+> partners — but the correct statement of the defect is about **completeness**, not capability.
 
 **And the length-and-charge control that appeared to settle the translation question was
 degenerate.** An adversarial reviewer accepted the control in principle, on the condition that the

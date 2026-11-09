@@ -349,3 +349,27 @@ its post.
   was appended at the end while the claims it qualifies stayed live where a reader meets them (#262,
   #283, #319, and the RESULTS.md head banner). **The banner was the fourth instance of the fault, not
   the fix for it.**
+
+## 20. A number written in prose must be computed, not maintained
+
+**Ledger #358 corrected a count that had been "incremented instead of counted." #482 found the same
+fault again, in five places at once** - the README claiming **264** ledger entries and **63** RESULTS
+sections against an actual **482** and **104**, "the ten house rules" when there were nineteen, and
+Paper 1's front matter still citing **452 entries, ids 1-454** and **"RESULTS.md (24 sections)"**.
+
+**Care does not fix this.** A number typed beside a file that grows will drift, and it drifts silently,
+because nothing in a document disagrees with it. Within ten minutes of *writing #482 down*, the row
+describing the fault had itself made §104c's count wrong.
+
+**So counts are computed. `src/check_counts.py` (check 5, in the pre-commit hook) recomputes every
+count in the repository and fails on any prose figure that no longer matches.** It is wired to 17
+claim sites across four files.
+
+**Two things it taught immediately:**
+
+- **"Number of rows" and "number of ids" were being conflated.** The ledger has **482 rows**, of which
+  **479 carry numeric ids** (1-485, with 89-90 and 391-394 unused) and **3 are letter-suffixed**
+  (13a, 26b, 34b). Both of the figures previously quoted were wrong, in opposite directions.
+- **When the check fails, do not just edit the number.** If the count is stated somewhere new, add the
+  site to `CLAIMS` so it is checked from now on. Editing the figure and moving on is how it drifted
+  the previous two times.

@@ -82,15 +82,15 @@ literature, and the base rate says expect attrition.
 | # | candidate | P | checked | type |
 |---|---|---|---|---|
 | **1** | **Published stool proteomics cannot see a vault** — the canonical workflow discards the 35,000 x g pellet, the range vaults are purified in; and the one dataset retaining it recovers a lumenal secretome with no beta-actin, GAPDH or HSC70 | ~~0.65~~ **0.35** | **yes — splits** | **the general principle is published** (see below); the vault application is not |
-| 2 | **CFdb scores MVP-TEP1 at the noise floor** (0.041 against PARP4's 0.676) — a sensitivity failure of a public resource on a known subunit; any cutoff retaining TEP1 admits 1,733 partners | 0.60 | no | new observation |
-| 3 | **The interferon co-abundance block is a STAT1/IRF9 regulon** — residualising until TAP1 leaves MVP's top 200 collapses it to CNS only | 0.60 | no | new reading |
+| 2 | **CFdb scores MVP-TEP1 at the noise floor** (0.041 against PARP4's 0.676) — a sensitivity failure of a public resource on a known subunit; any cutoff retaining TEP1 admits 1,733 partners | 0.60 | no | new observation | **CORRECTED §103a-b: the headline was false** — at >=0.5 the list has length 1 and that entry is PARP4, a true subunit, so the defect is **completeness**, not capability. PARP4's precision is 0.6757 (the 0.676 cutoff row was a rounding artefact) and "99.99th percentile" was rank 1 restated; quote the **1.98x gap to rank 2** instead.
+| 3 | **The interferon co-abundance block is a STAT1/IRF9 regulon** — residualising until TAP1 leaves MVP's top 200 collapses it to CNS only — **the *technique* was DEMOTED out of `CALIBRATION.md`, §103d: "until" fits the regression depth to its own control and states only a disappear condition. The CNS residue was never a finding; it is now one face of the sensitivity floor (§103g)** | 0.60 | no | new reading |
 | 4 | **MVP is present in human colonic and ileal mucus** — 52 unique peptides, 94.4th and 94.8th percentiles | 0.55 | no | new reading |
 | 5 | **The ruffle signal dies at contact** — 13 observed against 3.1 expected across three cohorts in co-abundance, flat and below its matched null in the pulldown | 0.55 | no | new observation |
 | 6 | MVP's co-elution tail is specifically translation-enriched, surviving four controls | 0.50 | no | new observation |
 | 7 | **Adrenal ranks first for the shell only**; the armed holoenzyme peaks in gut mucosa, so "vault abundance" is not one quantity | 0.45 | no | new reading |
-| 8 | The three subunit half-lives were never tested for mutual compatibility — spread at the 29.86th percentile of random triplets | 0.40 | no | new reading |
+| 8 | The three subunit half-lives were never tested for mutual compatibility — spread at the 29.86th percentile of random triplets | 0.40 | no | new reading | **REREAD §103g: this has changed sides** — the 29.86th percentile is now part of the **sensitivity floor** (a concordance statistic that does not recognise the TRUE triplet), not a reading about vaults.
 | 9 | ANXA2 and S100A10 are the only confirmed survivors of the classical membrane list, and the shape of that list matters | 0.30 | partial | new reading |
-| 10 | Myoferlin is actively excluded — depleted in the pulldown and in pre-lysis covalent proximity labelling | 0.25 | partial | new reading |
+| 10 | ~~Myoferlin is actively excluded~~ **WITHDRAWN §103e** — *"actively excluded"* describes a depletion as an action, and the two arms are two assays inside **one production**, not two instruments. Survives as: **myoferlin is depleted, not enriched** | 0.25 | partial | new reading |
 
 **#1 splits on checking.** The general methods principle is published: a 2021 *J. Proteomics* study is
 titled around the finding that *"metaproteomic sample preparation methods bias the recovery of host and

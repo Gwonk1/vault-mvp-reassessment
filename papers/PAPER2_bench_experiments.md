@@ -488,6 +488,14 @@ right next step. We cannot interpret it computationally (§47), and §48c record
 (present in the universe, not an interactor at LWTP 0.71) is positive evidence for free COP1 over an
 assembled CRL4 holocomplex.
 
+> **Flagged by grok audit 012 as the strongest unreconciled positive number in the project** (§103e),
+> and it is flagged here because it bears directly on this experiment's value. **COP1 at 27-fold sits
+> inside the support list of a no-further-stoichiometric-partner claim, and no exclusion rule was ever
+> applied to it.** Either it is a partner the negative should have accounted for, or there is a stated
+> reason it does not count — and this project never wrote that reason down. **It is one dataset wide**
+> and it is **not a result**; it is the clearest thing on this page that the bench could settle
+> quickly, and the reason it is unresolved is ours, not the data's.
+
 **Design:** co-immunoprecipitate COP1 and MVP reciprocally in a cell line where both are expressed,
 then (a) ask whether endogenous MVP carries ubiquitin by immunoblot after COP1 knockdown versus
 control, and (b) measure MVP's half-life by cycloheximide chase in COP1-knockdown versus control

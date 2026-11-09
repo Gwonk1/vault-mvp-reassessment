@@ -14,7 +14,10 @@
 set -u
 REPO="$(git rev-parse --show-toplevel)" || exit 0
 cd "$REPO" || exit 0
-WATCHED='^(RESULTS\.md|LEDGER\.md|README\.md|RETRACTIONS\.tsv|papers/.*\.md)$'
+# Ledger #483: CALIBRATION.md, USEFULNESS.md and HYPOTHESES_AND_NOVELTY.md were missing from
+# this list for the whole project - including the one file the README tells a reader to open
+# first, which turned out to carry a false existential claim (#470).
+WATCHED='^(RESULTS\.md|LEDGER\.md|README\.md|CALIBRATION\.md|USEFULNESS\.md|HYPOTHESES_AND_NOVELTY\.md|RETRACTIONS\.tsv|QUALIFICATIONS\.tsv|papers/.*\.md)$'
 git diff --cached --name-only | grep -qE "$WATCHED" || exit 0
 PY=".venv/bin/python"
 [ -x "$PY" ] || PY="$(command -v python3 || true)"
@@ -29,6 +32,23 @@ Either annotate it where a reader meets it, or - if the claim is no longer retra
 remove its row from RETRACTIONS.tsv and record that in the ledger.
 
 This is the failure the project repeated three times (#262, #283, section 65).
+Override with: git commit --no-verify
+MSG
+  exit 1
+fi
+
+# CHECK 5 (ledger #482/#486): every count stated in prose must match the thing it counts.
+# README once claimed 264 ledger entries and 63 RESULTS sections against actual 478 and 103,
+# and #358 had ALREADY corrected a count that was being incremented instead of counted.
+if ! "$PY" -I src/check_counts.py; then
+  cat >&2 <<'MSG'
+
+pre-commit: BLOCKED by the stated-counts check.
+
+A number written in prose no longer matches what it counts. Update the prose, or - if this is
+a new place where a count is stated - add it to CLAIMS in src/check_counts.py so it is checked
+from now on. Do not just edit the number and move on; that is how it drifted the last two times.
+
 Override with: git commit --no-verify
 MSG
   exit 1
