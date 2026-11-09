@@ -100,3 +100,29 @@ closed, which is what grok said a well-resolved waist would mean.
 Per-residue B must actually **vary** - if the deposited B-factors are constant or near-constant (some
 cryo-EM depositions set them uniformly), the proxy carries no information and **the test is void**.
 Require **interquartile range > 0** and at least 200 residues per bin.
+
+---
+
+# Refinement: inter-half contacts identified BY CHAIN, not by axial position
+
+Registered before running. **Same statistic, same prediction, same null as the test above** - the only
+change is how "waist" is defined, and it is the change §91e asks for.
+
+§92e's limit: the waist bin was **the 15% of residues nearest the waist plane in a single reference
+chain**, which gave n = 18 and p = 0.59. That is a geometric proxy for the inter-half interface, not the
+interface itself.
+
+**This version:** load **11JB** (78 MVP chains, and nothing but MVP in the model), split the chains into
+two halves on mean axial coordinate, and call a residue a **true waist contact** if any of its atoms
+comes within **4.5 A of an atom in a chain belonging to the other half.** Lateral contacts within a
+half, and cap contacts, are excluded by construction - which is exactly what the previous definition
+could not do.
+
+**The prediction does not change and it already failed once:** registered as **waist contacts LESS
+conserved than other interface residues** (§92b, kill fired at n = 18). **Running it again with a better
+waist definition is a re-test of a dead prediction, not a new bet** - and if the direction flips with
+power, that is recorded as the n = 18 result having been noise.
+
+**GATE:** (1) the two half-assignments must be 39 chains each; (2) at least 40 true waist-contact
+residues, or the comparison is still underpowered and is reported as such; (3) the general result
+(interface > exposed non-interface) must still hold on the mapped residues.
