@@ -63,3 +63,5 @@ MYOF        0.382
 ABCC3       0.381
 IQGAP1      0.379
 GPRC5A      0.379
+
+READ: GATE3 (EMT validity) FAILED and that IS the result. RESULTS.md section 29: 'The EMT control is UNINFORMATIVE - its own validity gate failed, so #109 stays open.' Recorded, not overlooked.

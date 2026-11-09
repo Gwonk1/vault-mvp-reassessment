@@ -246,6 +246,11 @@ claim that none exists.
 GSE150949 (Oren et al., Watermelon), 3 usable models, 50,735 cells. Replication GSE149383 (Aissa et al.).
 **Verdict: NOT A PERSISTER MARKER**, and formally UNINFORMATIVE because the pre-registered gate failed.
 
+> **SCOPE LIMIT, added §453 (found by annotating check 4):** this verdict is about **MVP alone.**
+> **TEP1, PARP4, ABCB1, ABCG2, ABCC1, IFIT1 and AXL are all undetected** in these single-cell
+> datasets - NaN across every column - while MVP, MKI67, TOP2A, CCNB1, ISG15, STAT1 and B2M return
+> values. **The test could not assess the caps or the canonical efflux pumps at all.**
+
 **The reframe failed in the form it was specified.** The threshold was the 90th percentile of genome-wide
 induction in at least 2 of 3 models. MVP reached it in none.
 

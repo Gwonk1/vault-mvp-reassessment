@@ -49,3 +49,5 @@ TCGA skcm {'ba': np.float64(0.361), 'bc': np.float64(-0.294), 'd': np.float64(0.
 TCGA paad {'ba': np.float64(0.096), 'bc': np.float64(0.918), 'd': np.float64(-0.822), 'se_d': 0.329, 'n': 177, 'pct': 17.909} r_ac 0.84
 TCGA lihc {'ba': np.float64(-0.027), 'bc': np.float64(0.625), 'd': np.float64(-0.652), 'se_d': 0.226, 'n': 366, 'pct': 18.253} r_ac 0.81
 TCGA thca {'ba': np.float64(-0.161), 'bc': np.float64(1.405), 'd': np.float64(-1.566), 'se_d': 0.17, 'n': 497, 'pct': 8.047} r_ac 0.85
+
+READ: the NaN values are correct missing data, not a fault. 'strat_diff' is NaN exactly where 'strat_n' is 0 - no samples in that stratum, so no difference to compute. The resp_* NaNs are cohorts (vanallen, jung) without usable response data. Both are visible in the adjacent columns.

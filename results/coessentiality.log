@@ -35,3 +35,5 @@ ANKRD34A  0.1699  0.0000  0.0000
 SGCE      0.1696  0.0000  0.0000
 
 core / control ranks (rank, r, q): {'PARP4': (9020, 0.002, 0.973780960444509), 'TEP1': (11734, -0.02, 0.695358134007556), 'ANXA2': (14985, -0.052, 0.21369724642100774), 'S100A10': (10286, -0.008, 0.881732935342475), 'CAV1': (10310, -0.008, 0.8791812147145665), 'CAVIN1': (3550, 0.049, 0.24861987884900552), 'EHD2': (10246, -0.008, 0.8876388364491338)}
+
+READ: the CAV1 recovery gate FAILED and that is recorded. RESULTS.md section 19 (COESSENTIALITY_PREREGISTRATION.md) reports the test as gated and the failure as the verdict, not as an error. A registered gate that fails is the instrument working.

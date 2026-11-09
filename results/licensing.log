@@ -27,3 +27,5 @@ TEST B: 200 random GOCC_NUCLEUS proteins vs MVP (residualised)
 TEST B verdict: COMPARTMENT ARTEFACT
 
 VERDICT: UNINFORMATIVE (gate failed)
+
+READ: the STAT1-vs-TAP1 gate FAILED on a mis-specified criterion, which is the subject of RESULTS.md section 34: 'Argon's licensing model: UNINFORMATIVE on a mis-specified gate, with both predictions confirmed anyway.' The failure is the finding.

@@ -96,3 +96,5 @@ comparators (pct_raw per model, count >=90th):
   KDM5A [np.float64(27.3), np.float64(67.3), np.float64(54.7)] 0
   TEP1 [None, None, None] 0
   PARP4 [None, np.float64(22.5), np.float64(36.7)] 0
+
+READ: the NaN rows are single-cell DROPOUT, not failure. MVP, MKI67, TOP2A, CCNB1, ISG15, STAT1 and B2M all return values; TEP1, PARP4, ABCB1, ABCG2, ABCC1, IFIT1 and AXL are simply not detected in these scRNA datasets. Worth noting for interpretation: the persister test could not assess the CAPS at all, so section 10's verdict is about MVP alone.
