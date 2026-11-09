@@ -1,20 +1,19 @@
-# virtualenv (a symlink here when the single working tree shares one)
-.venv
-.venv/
-__pycache__/
-*.pyc
 
-# large inputs: symlinked to the local data store, never committed
-data/raw
-data/raw/
+argon/raw/*
+!argon/raw/fetch.sh
+!argon/raw/README.md
+!argon/raw/SHA256SUMS.txt
 data/processed
 data/processed/
-
-# third-party sources: not redistributed, see argon/raw/README.md
-argon/raw/*
-!argon/raw/README.md
-!argon/raw/fetch.sh
-!argon/raw/SHA256SUMS.txt
-
+data/raw
+data/raw/
+data/raw/human_sp.fasta.gz
+# large inputs: symlinked to the local data store, never committed
 # local working notes and source material are kept out of this repository
 *.pdf
+*.pyc
+__pycache__/
+# third-party sources: not redistributed, see argon/raw/README.md
+.venv
+.venv/
+# virtualenv (a symlink here when the single working tree shares one)

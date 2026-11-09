@@ -5232,3 +5232,64 @@ where the interesting comparisons live.
 **The conservation paradox is where the article series left it.** Forty-odd gated tests, three
 registered attempts at the one question both Rome's rubric and the series named, and the answer is still
 *"I don't have an answer."*
+
+## 82. MVP is not built to be banked. It is built to be opened and not to rust.
+
+Registered at `25c270b` before any value existed, prompted by Graham's chair/furniture line and his
+question **what would the chemical composition be useful for?**
+
+### 82a. The gate passed, and the prediction died
+
+| | |
+|---|---|
+| clause 1: >=2 of 3 reserve proteins above the proteome mean on N/residue | **PASS** - CSN1S1 +0.83, FTL +0.29 (ALB -0.35) |
+| clause 2: >=2 of 3 structural proteins not above +1 SD | **PASS** - all three (CLTC -0.09, ACTB -0.83, TUBB -0.56) |
+| clause 3: every control found by name, counts reported | **PASS** - 20,129 proteins >=50 aa from 20,429 Swiss-Prot entries |
+
+**MVP nitrogen/residue z = +0.29.** Registered prediction was **>= +1 SD**. **NOT MET. Kill condition
+fires.** The simplest version of the raw-material-reserve idea gets **no support from composition**, and
+it is the first gate this project has passed on the first attempt.
+
+### 82b. And the composition argues the other way, not merely weakly
+
+**MVP is sulfur-poor: z(S) = -1.20.** 0.0157 S atoms per residue against a proteome mean of 0.0483 -
+roughly **one third**. Cysteine z = **-0.76**, methionine z = **-1.18**, both among its five most
+depleted residues.
+
+That matters for the storage reading specifically. **Met is essential and both Met and Cys are among
+the most metabolically expensive residues to make.** A protein banking scarce material would
+*include* them. MVP avoids them. So composition does not just fail to support storage - **it points
+away from it.**
+
+### 82c. What the composition does look built for
+
+Two signatures, both consistent with things already established about the particle:
+
+**Cysteine- and methionine-poor.** A 78-mer that must open and close at a waist **cannot afford
+disulfide cross-links**, and a particle that leaves the cell as a free, unwrapped object in an
+oxidizing extracellular environment - which Jeppesen et al. 2019 showed it does - would be at risk of
+random disulfide formation and methionine oxidation if it were sulfur-rich. **Redox-inert, reversibly
+openable.**
+
+**Valine-enriched at z = +2.16**, the single largest deviation in the protein and far beyond anything
+else. Val is beta-branched and beta-sheet-favouring, and MVP's wall is built from repeated beta-sheet
+repeats. **This is what a beta-rich structural shell looks like.**
+
+### 82d. The novelty question, asked this time instead of assumed
+
+**The Cys/Met-poor reading is NOT claimed as new.** Five novelty claims in this project produced five
+prior-art hits (§74), and the lesson was that an absence of consensus is not a thin literature. A
+compositional observation about a protein solved four times by cryo-EM is **exactly** the kind of thing
+a structural paper says in passing. **It needs a literature check before anyone repeats it**, and that
+check is logged as outstanding rather than performed and forgotten.
+
+### 82e. Where this leaves the chair
+
+Graham's framing was that a cell making chairs might eventually want to sit down - that the vault could
+be built ahead of a need, its material borrowed back later. **Composition refuses the material half of
+that.** The shell is not a nitrogen bank and not a sulfur bank, and it is built out of the cheap
+residues rather than the dear ones.
+
+**It does not touch the timing half.** "A growing cell doesn't have any; a matured cell produces them"
+is a claim about expression against differentiation state, it is **testable with data already in
+`data/raw/devel` and `data/raw/tissue`**, and it is untested here.
