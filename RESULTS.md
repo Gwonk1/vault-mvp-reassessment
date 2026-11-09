@@ -6114,3 +6114,57 @@ fetching.**
 the split was run, and we are not moving it now. **A properly powered version needs the inter-half
 contacts identified by chain in the full assembly**, rather than approximated by axial position in a
 single reference chain - which is the measurement §91e still lists as outstanding.
+
+## 93. Waist-versus-cap order: wrong prediction, consistent answer, and the one result that leans toward heterogeneity
+
+Registered at `e316176`, including the note that **a pass would have argued against our own zipper
+interest.** It did not pass.
+
+### 93a. Both structures, same direction
+
+| | CA atoms | B range | **waist median B** | **cap median B** | ratio |
+|---|---|---|---|---|---|
+| **11JB** (78-mer, cryo-EM, `symmetry_type POINT`) | 60,450 | 14.3-109.4 | **63.52** | **51.63** | **1.23x** |
+| **4V60** (rat liver, crystallographic, D39) | 63,336 | 6.6-300.0 | **166.62** | **97.52** | **1.71x** |
+
+**Gate passed** on both (IQR 28.0 and 64.3; >= 200 residues per bin, actual n ~9,100-9,500).
+
+**Registered prediction - waist better ordered than cap, i.e. LOWER B - NOT MET in either structure.**
+In both, **the waist is the least well-ordered part of the particle**, and in the crystal structure it
+is 71% worse than the caps.
+
+### 93b. What that does and does not mean
+
+Grok audit 009 set the interpretation in advance, which is why this was worth running:
+
+> *"A well-resolved waist under that averaging is positive evidence that the crystallized molecules
+> were closed and similar; a high open-occupancy would have cost waist resolution relative to the cap."*
+
+**We got the second branch.** Waist disorder survived into both models. That is **consistent with** a
+mixed population at the waist - which is what a partially-open subpopulation would produce under
+symmetry averaging - and it is the **only measurement in this project that leans that way rather than
+away.**
+
+**It is not evidence for a zipper, or for opening at all.** Four reasons, stated before anyone quotes
+the ratio:
+1. **B-factors absorb far more than local resolution** - model error, genuine flexibility, occupancy,
+   and in a crystal structure real thermal motion. 4V60's ceiling of exactly 300.00 is a refinement
+   cap, which means the worst regions are **censored, not measured.**
+2. **The waist being the most flexible part of a permanently closed particle predicts the same thing.**
+   A pinched junction between two 39-mers is where a closed barrel would flex regardless of whether it
+   ever opens.
+3. **p ~ 0 is an artefact of n.** With ~9,000 residues per bin, any real difference is "significant";
+   the effect sizes (1.23x and 1.71x) are the only numbers worth reading.
+4. **Our waist bin is geometric** - the 15% of residues nearest the particle's median z - not the
+   inter-half contact set identified by chain. §91e's measurement is still the one that would settle it.
+
+### 93c. What is worth keeping
+
+**The direction is consistent across two independent structures determined by different methods**
+- cryo-EM with imposed point symmetry, and crystallography with 39-fold NCS - **and it is the opposite
+of what we predicted.** That combination is the only thing here resistant to our own enthusiasm: we
+registered the comfortable outcome, the data refused it, and the refusal points at the uncomfortable
+reading.
+
+**Net: one weak, confounded, consistent signal that the vault waist is where the particle's
+heterogeneity lives.** It earns the §91d experiment. It does not substitute for it.
