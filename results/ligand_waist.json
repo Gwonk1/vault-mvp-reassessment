@@ -1,0 +1,93 @@
+{
+ "9BW5": {
+  "lig": "apo",
+  "nchain": 78,
+  "split": [
+   39,
+   39
+  ],
+  "mvp_chains_entity": "1",
+  "contacts": [
+   6,
+   9,
+   21,
+   22,
+   38,
+   39,
+   40
+  ]
+ },
+ "9MXH": {
+  "lig": "+NAD+",
+  "nchain": 78,
+  "split": [
+   39,
+   39
+  ],
+  "mvp_chains_entity": "1",
+  "contacts": [
+   9,
+   21,
+   22,
+   38,
+   39,
+   40
+  ]
+ },
+ "9MXV": {
+  "lig": "+ADP",
+  "nchain": 78,
+  "split": [
+   39,
+   39
+  ],
+  "mvp_chains_entity": "1",
+  "contacts": [
+   7,
+   21,
+   22,
+   36,
+   38,
+   39,
+   40,
+   41
+  ]
+ },
+ "9BW6": {
+  "lig": "+PARP4",
+  "nchain": 78,
+  "split": [
+   39,
+   39
+  ],
+  "mvp_chains_entity": "1",
+  "contacts": [
+   9,
+   21,
+   22,
+   36,
+   38,
+   39,
+   40
+  ]
+ },
+ "9BW7": {
+  "lig": "+PARP4/NAD+",
+  "nchain": 78,
+  "split": [
+   39,
+   39
+  ],
+  "mvp_chains_entity": "1",
+  "contacts": [
+   6,
+   9,
+   21,
+   22,
+   36,
+   38,
+   39,
+   40
+  ]
+ }
+}

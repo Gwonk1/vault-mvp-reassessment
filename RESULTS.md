@@ -6286,3 +6286,67 @@ interface inequality. **So this replication strengthens the "what" and does noth
 now know the join is a small N-terminal clasp in two species, and we still have no observation bearing
 on whether the 39 clasps release together, in sequence, or at all. **§91d's C1 classification remains
 the experiment, and nothing here substitutes for it.**
+
+## 96. Five human vault structures, five ligand states: a five-residue core holds the halves together
+
+Registered at `b94fef7`. Full assemblies fetched from RCSB; MVP chains only, so PARP4 does not enter
+the comparison.
+
+### 96a. The series
+
+| PDB | ligand | chains | split | n | contact residues |
+|---|---|---|---|---|---|
+| **9BW5** | apo | 78 | 39/39 | 7 | 6, 9, 21, 22, 38, 39, 40 |
+| **9MXH** | +NAD+ | 78 | 39/39 | 6 | 9, 21, 22, 38, 39, 40 |
+| **9MXV** | +ADP | 78 | 39/39 | 8 | 7, 21, 22, 36, 38, 39, 40, 41 |
+| **9BW6** | +PARP4 | 78 | 39/39 | 7 | 9, 21, 22, 36, 38, 39, 40 |
+| **9BW7** | +PARP4/NAD+ | 78 | 39/39 | 8 | 6, 9, 21, 22, 36, 38, 39, 40 |
+
+**GATE PASS on all five** - every assembly splits 39/39 and returns a non-empty set.
+
+### 96b. The core, and it is the strongest structural result in this project
+
+**PREDICTION 1 MET for all five:** 6-8 contacts, and **100% of them at residue <= 50** in every
+structure.
+
+**PREDICTION 3 MET:** a consensus set exists. **Residues 9, 21, 22, 38, 39, 40 contact in at least four
+of five** - and
+
+> **residues 21, 22, 38, 39 and 40 contact across the half-interface in ALL FIVE structures.**
+
+Together with §95's two, that is **seven independent determinations**, and the five human ones converge
+on a **five-residue core.** The join holding a 13 MDa particle's two halves together is **five amino
+acids per chain**, times 39.
+
+### 96c. PREDICTION 2 failed, and the reason is my statistic, not the data
+
+Registered: pairwise overlap **>= 60% Jaccard** and counts within **+/- 8**. **Counts: 6-8, spread 2 -
+easily met. Worst pairwise Jaccard: 0.50 (9BW5 vs 9MXV) - failed.** Registered conjunctively, so
+**NOT MET.**
+
+**But look at where the disagreement is.** 9BW5 is {6, 9, 21, 22, 38, 39, 40} and 9MXV is
+{7, 21, 22, 36, 38, 39, 40}: the **intersection is the entire core**, and every difference is a single
+fringe residue - 6, 7, 9, 36, 41. **With sets of six to eight members, one fringe residue moves Jaccard
+by 0.1.** A 4.5 A cutoff applied to five models at slightly different resolutions will reshuffle fringe
+residues by construction.
+
+**Jaccard was the wrong statistic for sets this small, and I registered it anyway.** That is the same
+error class as §89a's coverage bar: **a threshold chosen for plausibility rather than for the
+distribution it would be applied to.** The failure is mine, the data is consistent, and **I am not
+reinterpreting the clause** - it is recorded as failed and the reason is recorded next to it.
+
+### 96d. The ligand comparison: no signal, exactly as registered
+
+apo 7, +NAD+ 6, +ADP 8, +PARP4 7, +PARP4/NAD+ 8. **No pattern by ligand state.** Registered in advance
+as *"largely foreclosed by what gets deposited"* - all five are closed cages under imposed C39, so a
+ligand-driven opening could not have survived into any of them. **Grok's "trigger nucleating a
+homomeric opening" is untouched by this: not supported, not refuted, not addressable with deposited
+closed-cage structures.**
+
+### 96e. One thing left unresolved on purpose
+
+4V60 (rat) gave **1, 2, 3, 4, 6, 21, 42-47**; the five human structures give a core at **21, 22,
+38-40**. Residue 21 is shared outright, and the second patch is **rat 42-47 against human 36-42** -
+overlapping ranges that are plausibly the same structural element offset by species numbering.
+**Plausibly is not demonstrated.** Establishing it needs a rat-human alignment mapped onto both
+structures, and **we are not eyeballing a numbering offset** (house rule 3). Flagged, not claimed.
