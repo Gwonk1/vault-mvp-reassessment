@@ -32,8 +32,10 @@ datasets, each gated on recovery of a known positive control.
 
 **One positive measurement survived all of it, and got sharper by being cut down.** Among extant
 orthologues that remain alignable, MVP is under **strong purifying selection**: a codon model
-(PAML `codeml` M0, F3x4 frequencies, fixed topology) gives **omega = 0.06 across 11 vertebrates**,
-with an essential-gene control at **0.05** and a relaxed control at **0.42** (§90). We first refused
+(PAML `codeml` M0, F3x4 frequencies, fixed topology) gives **omega = 0.06 across 11 vertebrates** -
+**1.2x the essential-gene control and about one-seventh of the relaxed control** (GAPDH 0.05, CD4 0.4
+at one significant figure, §90). **Stated as ratios deliberately: printing the three figures side by
+side performs the retracted equality claim typographically** (§103, house rule 19). We first refused
 the earlier pairwise version of this number on a gate technicality and an external methods audit
 reversed us (§84a-b, house rule 15); that pairwise NG86 estimate of **0.1118 understated** the
 constraint and is superseded here.
@@ -84,7 +86,9 @@ human cell types, with ratios from 1.5- to 8.1-fold, though that test also faile
 resolve the thirty-year LRP chemoresistance biomarker as a passenger phenomenon carried by two
 separate mechanisms, ABCB1-mediated efflux and slow division, which do not partition by drug class.
 In native co-fractionation across 411 datasets, where symmetric scoring and a size axis replace
-sample covariation, MVP's highest-scoring partner of 10,614 is PARP4 at the 99.99th percentile, with
+sample covariation, MVP's highest-scoring partner of 10,614 is PARP4 - ~~at the 99.99th percentile~~
+**(WITHDRAWN §103b: 1 - 1/10,614 = 0.99991, so that is rank 1 restated and true of whichever partner
+came first; the content is the gap below)** - with
 a profile matching flotillin-1's obligate heterodimer rather than a multi-subunit machine; TEP1
 scores at the noise floor in the same data, so sensitivity for known vault subunits there is one of
 two.
@@ -328,7 +332,8 @@ power, so the membrane and immune nulls here are uninformative rather than well-
 claims are withdrawn.
 
 **What the full score distribution does support is narrower and better controlled.** Across all
-10,614 of MVP's scored pairs, PARP4 sits at the 99.99th percentile with twice the score of rank two,
+10,614 of MVP's scored pairs, PARP4 sits ~~at the 99.99th percentile~~ **(WITHDRAWN §103b: rank 1
+restated)** with twice the score of rank two,
 then a smooth plateau - a cliff, not an artefact of where we cut. The instrument's own calibration
 places that profile precisely: PSMA1 returns ten partners at precision 1.00, flotillin-1 returns its
 obligate heterodimer partner flotillin-2 at 0.60 followed by a drop, and MVP returns PARP4 at 0.68

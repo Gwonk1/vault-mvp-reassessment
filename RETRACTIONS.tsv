@@ -42,3 +42,12 @@ hardens with depth|does not soften with depth	§98e	withdrawn in full: tips not 
 the same object	§102a	the F3x4 misfit / omega identity is an assertion; the measurement that could support it was declined
 single-cell dropout	§102e	the NaNs support "does not assess these genes"; dropout was never measured
 (sits|sitting) (essentially )?on top of (the housekeeping|GAPDH)	§102b	paraphrase of the retracted equality claim; 0.0119 is 23% of GAPDH's own value and no test was run
+no threshold.{0,80}both retains	§103a	false on our own table: at >=0.5 the list has length 1 and that entry is PARP4, a true subunit
+cannot retain a real subunit	§103a	same claim; the >=0.5 row is a length-1 list containing the true top subunit
+99\.99th percentile	§103b	1 - 1/10,614 = 0.99991, i.e. rank 1 restated; the content is the 1.98x gap to rank 2
+recall falls with subunit abundance	§103c	PARP4 is also large and substoichiometric and was recovered at rank 1; n = 1 miss supports no slope
+(no|without a) stoichiometric partner.{0,60}every instrument	§103e	one PRIDE deposit; co-fractionation failed its positive control; labels on one production
+MYOF (is )?actively excluded	§103e	depletion in one deposit described as an action, and the two assays are one production
+(MYOF|[Mm]yoferlin) actively excluded	§103e	same claim in the hypothesis table
+independent of PARP4 by knockdown	§103e	the dataset is a PARP4-knockout line, not a knockdown
+[Ss]upported but underpowered	§103e	small p at a small dependent n; the defect is fragility, not power

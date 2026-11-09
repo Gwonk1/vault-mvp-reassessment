@@ -130,14 +130,35 @@ fixed in all three CFdb readers. **The condition is satisfied.**
 
 ## The joint verdict
 
-**Two items are useful to a stranger, and both are instrument calibration rather than biology:**
+> ### SUPERSEDED by grok audit 012 (§103g). Both items below were ranked wrongly, and the real finding is not on this page.
+>
+> **The pair is now:** **(1)** a **sensitivity floor** - three standard complex-detection signatures
+> measured against a particle whose membership has not been in dispute for decades, **all three
+> failing in different ways**; and **(2)** the MVP-TEP1 completeness split, which is **one of that
+> floor's three faces** in full detail.
+>
+> **What changed, and why it matters more than the ranking:** the floor was **already measured**, in
+> three places, each of them **written down as a caveat on a biological negative** - co-fractionation
+> needing 1,733 names for completeness, half-life concordance putting the **true** triplet at the
+> 29.86th percentile, and regulon-residualised co-abundance collapsing to a single tissue. **We filed
+> the measurement as a limit and the textbook composition of the particle as the contribution.**
+>
+> **And item 2 below was removed from the stranger-facing file entirely** (§103d): *"residualise
+> **until** a canonical target leaves the top-N"* fits the depth of the regression to its own control,
+> states **only a disappear condition** with no false-negative bound, and counted **five slices of one
+> resource** as five replications. It is a lab note, and `CALIBRATION.md` now says what would make it
+> a rule.
+>
+> **Item 1's headline was also false as written** (§103a): at cutoff >=0.5 the list has **length 1 and
+> that entry is PARP4, a true subunit**, so *"cannot retain a true subunit"* is refuted by our own
+> results file. The corrected claim is about **completeness**, not capability.
 
-1. **MVP-TEP1 as a discordant-edge test case** — refuse a global co-fractionation cutoff that cannot
-   retain a true subunit without admitting 1,733 partners; keep a discordant true edge in any
-   integrator's regression suite.
-2. **The canonical-target stopping rule** — residualise on the regulon drivers until a pre-chosen target
-   leaves the top-N, required in every dataset, before calling a co-abundance block a complex.
+**The original verdict, kept for the record:** two items useful to a stranger, both instrument
+calibration rather than biology - MVP-TEP1 as a discordant-edge test case, and the canonical-target
+stopping rule.
 
 **Everything else is zero, or useful only to a lab already holding the specific lead.** And the thing I
 nominated as most useful — the methodological record — loses to a single number that a stranger can put
-in a test harness on Monday.
+in a test harness on Monday. **That last sentence survives audit 012 and sharpened: the number that
+goes in the harness is the floor, and the methodological record lost again** - house rule 17 and check
+4 were both refused admission to the calibration file in §102d.

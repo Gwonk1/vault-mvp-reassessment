@@ -581,7 +581,7 @@ q < 0.05 (**corrected below to 7 of 18 unique drugs — `Docetaxel` was duplicat
 |---|---|---|
 | Vinorelbine | +0.249 | 0.0003 |
 | Vinblastine | +0.220 | 0.0015 |
-| Paclitaxel | +0.184 | 0.010 |
+| Paclitaxel | +0.184 ~~(RETRACTED §63: degenerate three-way matched cells)~~ | 0.010 |
 | Methotrexate | +0.171 | 0.016 |
 | Docetaxel | +0.158 | 0.022 |
 | Etoposide | +0.147 | 0.039 |
@@ -1708,7 +1708,9 @@ pairs:
 | 4 | ZC3HAV1 | 0.1161 | 0.324 |
 | 5 | EIF3A | 0.1148 | 0.320 |
 
-**PARP4 sits at the 99.99th percentile of MVP's 10,614 scores, with twice the score of rank 2 and then
+**PARP4 sits at the 99.99th percentile of MVP's 10,614 scores** - **that half is WITHDRAWN, §103b:
+1 - 1/10,614 = 0.99991, so the percentile is rank 1 restated and true of whichever partner came
+first.** What carries the content is the rest of this sentence: **twice the score of rank 2 and then
 a smooth plateau.** That is the cliff, and it excludes grok's ramp and flat worlds.
 
 **And the right control was in the same file.** FLOT1, a known obligate heterodimer partner of FLOT2:
@@ -2325,6 +2327,12 @@ there is one of two.
 
 ### 43b. MYOF is actively excluded, and two instruments now agree
 
+> **WITHDRAWN on both counts, §103e.** *"Actively excluded"* describes a **depletion** as an action,
+> which no measurement here supports. And **"two instruments" is one production**: both the wash-based
+> pulldown and the pre-lysis proximity labelling arm trace to the same deposit family, so this is
+> **house rule 17 Type I** - containers that are copies of one production. The surviving statement is
+> **"myoferlin is depleted, not enriched, in these data."**
+
 The secondary analysis re-states #39's background from the primary table: **17 of 88 WT interactors
 (19.3%) are PARP4-dependent**, matching the 18.5% figure quoted there.
 
@@ -2478,7 +2486,7 @@ members do**, so that instrument does not even rank SMC5/6 above the controls. P
 decides nothing on its own — a CFdb negative is weak evidence, and MVP-TEP1 at 0.041 for a protein the
 pulldown confirms at LWTP 3.33 is the standing reason why.
 
-## 46. COP1 is the only non-subunit vault partner with three independent instruments
+## 46. COP1 is the only non-subunit vault partner with three independent instruments ~~(RETRACTED §55c: one instrument class counted three times)~~
 
 Began as a list-level replication test — do any of the 88 physical interactors appear as MVP partners
 elsewhere? — and **house rule 7 stopped it before it was registered.**
@@ -2801,6 +2809,13 @@ demonstration available that §48a's correction was not a universal solvent.
 `GOCC_MITOCHONDRION` sits at top 24.76%, p = 0.491 — the abundance control behaves.
 
 ### 49c. Degradation machinery is actively excluded, and we were wrong about how
+
+> **FLAGGED, not retracted, §103e.** Two separate problems, neither resolved here. **(1)** *"Actively
+> excluded"* describes a depletion as an action. **(2)** *"the most depleted annotation of 1,276"* is
+> **the minimum of 1,276 categories** - every ranked list has one - and **no effect size or null was
+> attached to it.** The direction of the depletion is measured; **its distinction from the extreme of
+> 1,276 draws is not.** Left standing with this note because the fix is a null model that was never
+> registered and the project is stopped.
 
 We registered that the degradation terms would "stay flat, since §46d's counts were below expectation
 rather than merely unremarkable." **They are not flat. They are the most depleted terms in the entire
@@ -4004,7 +4019,7 @@ Recomputed on both orderings for `GOBP_CYTOPLASMIC_TRANSLATION`:
 
 | | cells | donors | adjacent fraction | universe | **ratio** |
 |---|---|---|---|---|---|
-| GENCODE order — **what #243 published** | 65 | 189 | 0.772 | 0.311 | **2.48x** |
+| GENCODE order — **what #243 published** | 65 | 189 | 0.772 | 0.311 | **2.48x** ~~(RETRACTED §64b: buggy frame order; correct 2.86x)~~ |
 | table order — **correct** | **35** | **129** | **0.891** | 0.311 | **2.86x** |
 
 Fewer cells, fewer donors, **89.1% of available donors translation-adjacent rather than 77.2%**, and a
@@ -4609,7 +4624,7 @@ probabilities cannot stand:
 | claim | was | now | why |
 |---|---|---|---|
 | **B1** TEP1 PARP4-independent | 0.75 → 0.20 (#289) | **→ 0.08** | the depositors ran WT vs PARP4-KO; TEP1's behaviour in that contrast is the first thing their analysis would show |
-| **B2** MYOF actively excluded | 0.70 | **→ 0.25** | depletion in their own WT-vs-KO comparison; survives partly because the TurboID arm is a second dataset |
+| **B2** ~~MYOF actively excluded~~ **WITHDRAWN §103e; read as "depleted, not enriched"** | 0.70 | **→ 0.25** | depletion in their own WT-vs-KO comparison; survives partly because the TurboID arm is a second dataset |
 | **B3** degradation most depleted | 0.65 | **→ 0.25** | a term-level read of their interactor list |
 | **B7** translation-enriched co-elution tail | 0.50 | **0.50, unchanged** | rests on CFdb, not on this pulldown |
 
@@ -4781,7 +4796,7 @@ were most confident about failed hardest:
 | 2 | MVP ancestral in eukaryotes, lost in fungi/plants/Ecdysozoa | **Daly et al. 2013**, verbatim |
 | 3 | the interactor readings | the pulldown is a **public deposit with its own analysis** of our comparison |
 | 4 | stool proteomics cannot recover a vault — **our best-standing claim at 0.65** | the methods principle is published; only the vault application is ours |
-| 5 | a sealed SPFH nucleotide pocket — **the foundation of our top-ranked hypothesis** | **Tanaka 2009** for SPFH, **Lodwick 2025** for the pocket, and the premise "sealed" is contradicted |
+| 5 | a ~~sealed~~ SPFH nucleotide pocket **(RETRACTED §73: never sealed)** — **the foundation of our top-ranked hypothesis** | **Tanaka 2009** for SPFH, **Lodwick 2025** for the pocket, and the premise "sealed" is contradicted |
 
 ### 74a. The premise was the error, not the individual claims
 
@@ -4924,7 +4939,7 @@ author-list fetch.**
 
 ## 77. The retraction gate did not cover `results/`, and the obvious fix inverts the outcome
 
-Reading four stored logs surfaced **`ENRICHMENT RATIO = 2.48x`** in `results/donor_and_k.log` - a
+Reading four stored logs surfaced **`ENRICHMENT RATIO = 2.48x`** ~~(RETRACTED §64b; correct 2.86x)~~ in `results/donor_and_k.log` - a
 **registered retraction pattern** (§64b: buggy frame order, correct value 2.86x). The gate scans five
 documents. It never looked at `results/*.log`, which are **in the public repository**.
 
@@ -5590,6 +5605,11 @@ identity**, and require coverage of a large fraction of the query.
 §82d logged the Cys/Met reading as *"an outstanding literature check rather than performed and
 forgotten."* Leaving it outstanding after six novelty failures was not defensible. Performed here.
 
+**On the two counts** (reconciled §103e): **five** formal literature checks were run and all five found
+prior art; **six** is the number of times something was *presented as new without being checked at
+all*. The sixth was caught by the user in one sentence, not by a check. **Different denominators, both
+correct.**
+
 ### 85a. The precise numbers, counted rather than z-scored
 
 | | length | Cys | Met | Cys+Met |
@@ -5685,6 +5705,15 @@ post-translational modification - not an inverted twin.~~ **WITHDRAWN, §88b:** 
 path** - the same MVP chain changing conformation, which is §87's entire content - so **our two new
 conclusions excluded each other.** Reconciliation: **a trigger nucleating a homomeric opening.** And
 §89b shows paralogues **do** exist in 23 of 134 taxa, so the idea is **relocated, not refuted.**
+
+> **Restated on a single inclusion rule, grok audit 012 (§103f).** The original wording compared a
+> **reviewed-human-proteome** count against an **eggNOG orthogroup** count - two different inclusion
+> rules, differing over isoforms, fragments and unreviewed records. **Checked: human has exactly one
+> sequence in orthogroup 2QPP0** (`9606.ENSP00000378760`), so **the contrast can be made entirely
+> inside eggNOG** and needs no cross-resource comparison: **human 1 copy, 23 of 134 taxa multi-copy.**
+> The copy-number distribution, which had never been published and so forced the auditor to assume
+> uniformity, is: **111 taxa x1, 12 x2, 7 x3, 3 x4, 1 x6 = 174 sequences, 40 extra, 23 multi-copy.**
+> **The claim is stronger stated this way, and the mixed framing was unnecessary from the start.**
 
 **Two limits, stated rather than buried:**
 1. **This is the reviewed proteome** (Swiss-Prot, 20,429). A paralogue annotated only in TrEMBL, or
@@ -6261,8 +6290,17 @@ reported as such."* **We got 10.** Reported as such:
 **Solid:** the inter-half interface of the vault is **12 residues, essentially the N-terminal tail**, and
 that is a direct geometric measurement on the deposited assembly.
 
-**Supported but underpowered:** those contacts are less conserved than the particle's other interfaces
-(p = 0.0076, n = 10), which is what we registered and what the proxy denied.
+~~**Supported but underpowered:** those contacts are less conserved than the particle's other interfaces
+(p = 0.0076, n = 10), which is what we registered and what the proxy denied.~~
+
+**RELABELLED, §103e: the word was wrong and the relabelling was the fault.** *"Underpowered"* describes
+a test that returns a **large** p when an effect is real. This one returned a **small p at a small,
+dependent n** - the n = 10 counts **symmetry copies and neighbouring sites as independent
+observations**, inside a structure series whose classification sample size is already **1**. **The
+defect is fragility, not power.** And leaving the p-value on the live list with a softer adjective
+attached is **house rule 19** exactly: the sentence kept its job while the criticised word was
+swapped. **The claim is therefore: registered direction observed, on a statistic whose n is not a
+count of independent observations. It is not evidence of differential conservation.**
 
 **Not supported:** that they are less conserved than ordinary surface (p = 0.17).
 
@@ -6821,7 +6859,7 @@ And every caveat from §100 survives intact and now applies to a single branch:
 - **A ridge is reproducibly a ridge** - the saturated denominator is unaddressed.
 - ***Ciona* is compositionally extreme** relative to the vertebrate-dominated F3x4 vector, and that
   misfit is absorbed by **exactly the parameter being reported**. **Whether the misfit and the 0.0024
-  are the same object is an assertion, not a finding** - the amino-acid counts, per-branch dS and GC3
+  are ~~the same object~~ **(WITHDRAWN §102a)** is an assertion, not a finding** - the amino-acid counts, per-branch dS and GC3
   that could support it **were not computed and will not be** (§102a). What is established is weaker
   and sufficient: **nothing here separates the generator from the result.**
 - **785 gap-free columns** are the sites that stayed alignable at that distance.
@@ -7002,3 +7040,173 @@ measure**. The remaining ideas need data that does not exist in a form anyone ca
   proliferation screens, and discarded outright by two major clades is strongly constrained wherever
   it is retained. **Nothing in this work explains that.** It is a better-stated question than the one
   I started with, and that is the whole of the result.
+
+## 103. Grok audit 012, the whole-project sweep: the calibration file was wrong, and the result was filed as a limit
+
+§102f said the work was stopped. Graham then asked for one more pass - *"any other insights.. or
+errors?"* - and the answer is the largest single correction in this project. **The one file written for
+strangers contained a false claim, and the thing that should have been in it was sitting in three
+places labelled as excuses.**
+
+### 103a. The existential claim in `CALIBRATION.md` was false, and my own results file said so in one line
+
+Finding 1's headline read - **and this is the sentence being RETRACTED here** - *"there is no
+threshold on this resource that both retains a known stoichiometric subunit and returns a followable
+list."*
+
+**That is the claim ¬∃t (retains a true subunit ∧ short list), and the table under it contains the
+counterexample.** At cutoff ≥ 0.5, MVP's partner list has **length 1**, and `results/cfdb.json` prints
+what that one entry is:
+
+```
+/threshold_results/0.5/mvp_degree = 1
+/threshold_results/0.5/mvp_partners = ['PARP4']
+```
+
+**A list of one is followable, and PARP4 is a true subunit - the very edge used as the positive
+control.** The claim is refuted by the row above the one I was pointing at.
+
+**The corrected statement, which is narrower and still useful:** no cutoff retains **both** known
+subunits inside a followable list. **The top subunit is recoverable cheaply; what costs 1,733 names is
+completeness** - a span of 1 to 1,733 in list length between "best-behaved member" and "all known
+members."
+
+### 103b. And two rounding faults in the same five-row table
+
+**`≥ 0.676 → 0` was a rounding artefact, and I had quoted it as the strongest row.** It appeared to say
+*even at PARP4's own precision, nothing survives.* `results/grok_audit_checks.log` prints the truth:
+
+```
+TEP1 precision = 0.0407108414788818  PARP4 = 0.675679035365778
+```
+
+**PARP4's precision is 0.675679. I rounded it to 0.676 for display, then used the rounded value as a
+cutoff** - which excludes the datum it was rounding. Meanwhile **TEP1's 0.0407108 was displayed as
+0.041 but applied at full precision.** So **the two calibrator edges in one table were rounded in
+opposite directions**, and the row that looked most damning was an artefact of my own display
+convention. The row is removed and the reason stated in its place.
+
+**And "99.99th percentile" is vacuous.** The denominator was MVP's own 10,614 partners, and
+**1 − 1/10,614 = 0.99991**. The "99.99th percentile" is **rank 1 restated**, true of whichever partner
+came first. It had looked like independent corroboration of PARP4's recovery and was a different
+spelling of the same fact. **What is not vacuous is the cliff**, which was in the ledger all along
+(#145): PARP4 at score **0.2722**, rank 2 (ZNF598) at **0.1378** - **1.98x** - then a smooth plateau.
+The percentile is withdrawn; the gap replaces it.
+
+### 103c. The mechanism sentence is withdrawn, and the better explanation was available
+
+I had written that **co-fractionation recall falls with subunit abundance**, from TEP1 being
+substoichiometric and large. Three faults:
+
+- **The positive control in the same table contradicts it.** PARP4 is **1,724 residues** and also
+  substoichiometric against MVP's high-copy 893-residue shell - **and PARP4 is the edge that was
+  recovered at rank 1.** The recovered side shares both properties with the missed side.
+- **n = 1 missed subunit cannot support a slope.** Two ordered points define "a direction" by
+  arithmetic.
+- **A property specific to TEP1 predicts this contrast with no abundance story at all: TEP1 is also a
+  telomerase subunit.** Its elution profile is a **mixture over two particles** at any copy number,
+  and a co-fractionation method that models one profile per protein is penalised by its own
+  assumption. **PARP4 has no second residence.**
+
+This is the third time an unevidenced cause has been attached to a real observation (#436 the selection
+coefficient, #464 "single-cell dropout" - both WITHDRAWN - here). **The observation was fine each time. The sentence
+explaining it was the failure each time.**
+
+### 103d. Finding 2 is out of the stranger-facing file: the depth of the regression was fitted to its own control
+
+The "stopping rule" rested on *"residualise until the canonical target leaves the top N."* **The word
+"until" means the depth of the regression is fitted to the control**, so *"held in 5 of 5 datasets"*
+reports that **a target was met by a procedure adjusted toward meeting it.** It states **only a
+disappear condition** - nothing in the five steps forbids the same regression from ejecting PARP4 or
+TEP1 - so **it has no false-negative bound**, which is precisely house rule 7, the defect this project
+kept finding in other people's gates. And **TAP1's rank before residualisation was never recorded**, so
+the distance the "until" had to travel is invisible. **Also "5 of 5 datasets" was being used as a
+replication count for five slices of one resource** - house rule 17, again.
+
+Moved to a demoted section with the three conditions that would make it a rule: freeze the regression
+in advance and **record** where the control lands; add a **retain** condition requiring a known true
+partner to survive; report the pre-residualisation rank.
+
+### 103e. What else came off, in one list
+
+- **The contribution sentence fails.** *"No stoichiometric partner beyond PARP4 and TEP1, across every
+  instrument, gates passing"* reduces to: **one PRIDE deposit (PXD052802), on a contrast the
+  depositors themselves analysed, recovers the known particle and does not produce a second one.**
+  "Every instrument" and myoferlin's "pulldown **and** proximity labelling" are **labels on one
+  production.** Co-fractionation **failed its positive control** on TEP1, so it cannot contribute to a
+  negative. The half-life statistic **does not recognise the true triplet** (29.86th percentile), so
+  it cannot corroborate the absence of further ones. **"Most depleted annotation of 1,276" is the
+  minimum of 1,276 categories** - every ranked list has one - with no effect size or null attached.
+- **COP1 at 27-fold is the strongest unreconciled positive number in the project**, parked in the
+  support list of a no-partner claim with no exclusion rule applied to it. Flagged, not resolved.
+- **"Actively excluded" turns a non-enrichment into an action.** Withdrawn.
+- **"TEP1 shown independent of PARP4 by knockdown"** - the dataset is a PARP4 **knockout** A549 line.
+  One of the two words was wrong; corrected in `README.md`.
+- **"Underpowered" was the wrong word for the waist result.** p = 0.008 at n = 10 is a *small* p at a
+  small, **dependent** n - symmetry copies and neighbouring sites counted as observations, in a series
+  whose classification sample size is already 1. **"Underpowered" describes a test returning a large p
+  when an effect is real.** The defect here is **fragility**, not power, and relabelling it was
+  house rule 19 in action.
+- **"Top remaining hypothesis" exports a winner** from a weight of 0.25. What the weights show is that
+  **they do not concentrate.**
+- **The two novelty counts are reconciled:** **five** formal literature checks, all five finding prior
+  art; **six** occasions of presenting something as new without checking at all. Different
+  denominators, both correct, and **the second governs the contribution claim.**
+
+### 103f. The eggNOG claim survives, and checking it made it stronger
+
+Audit 012 challenged the arithmetic: *"174 over 134 taxa accounts for 'duplicated in 23 taxa' only if
+those 23 carry 17 further sequences beyond one extra copy each (111×1 + 23×2 = 157; 174 − 157 = 17)."*
+
+**Recounted from the alignment. The numbers are right, and the 17 dissolves, because the 23 taxa do not
+carry two copies each:**
+
+| copies per taxon | taxa |
+|---|---|
+| 1 | **111** |
+| 2 | 12 |
+| 3 | 7 |
+| 4 | 3 |
+| 6 | 1 |
+
+111 + 24 + 21 + 12 + 6 = **174** across **134** taxa, with **23** multi-copy and **40** extra
+sequences. The distribution had never been published, so the auditor had to assume uniformity - **a
+fair inference from an underspecified statement.** It is published now.
+
+**The framing criticism, though, was right and is the useful half:** the claim compared a **reviewed
+human proteome** count with an **eggNOG orthogroup** count, two different inclusion rules. **Checked:
+human has exactly one sequence in the orthogroup** (`9606.ENSP00000378760`). So the contrast can be
+made **entirely inside one resource** and does not need the reviewed-proteome count at all. **Restated
+on a single inclusion rule it is stronger, not weaker** - and the mixed framing was unnecessary from
+the start.
+
+### 103g. The result that was filed as a limit
+
+**This is the answer to the question I asked, and I did not expect one.**
+
+Three numbers in this project were each written down as a **caveat on a biological negative**:
+
+1. **Co-fractionation** recovers PARP4 at list length 1 but needs 1,733 names for both subunits.
+2. **Half-life concordance** puts the **true** triplet at the **29.86th percentile** of random
+   abundance-matched triplets - it fails a 5th-percentile unity bar and is barely less dispersed than
+   chance.
+3. **Regulon-residualised co-abundance**, after the interferon programme was removed, **collapsed to a
+   single tissue class.**
+
+Read forward instead of apologetically, **they are one measurement: a sensitivity floor for the three
+commonest complex-detection signatures, calibrated on a particle whose membership has not been in
+dispute for decades.** Not a borderline assembly, not a transient interaction - ~100,000 copies per
+cell, three agreed members, established by pulldown, knockout mice and structure. **All three
+signatures fail, and they fail in three different ways:** co-elution is precise but incomplete,
+turnover concordance does not discriminate, co-abundance returns the tissue.
+
+**I filed the floor as a limit and the incumbent description of the particle as the contribution.** The
+floor is the transferable measurement; the biological negative is the textbook composition, re-read in
+one line, on one deposit, in a project whose five novelty checks all found prior art.
+
+**`CALIBRATION.md` is restructured accordingly:** finding 2 is now the floor, finding 1 is one of its
+three faces in full detail, and the stopping rule is demoted below both. **The biological negative
+about MVP is not one of the two findings.**
+
+Also noted, and I am recording it because it is the honest shape of the whole week: **the omega work
+contains no buried result.** The audit looked and said so.

@@ -12,6 +12,14 @@ import re, sys, pathlib
 WINDOW = 12         # lines either side that may carry the marker. Widened from 6 after the regex
                     # broadening (#328) showed a VOID banner sitting 8 lines above its own table rows
                     # — a marker immediately above a table must cover that table (#329).
+# Ledger #472: the +-WINDOW proximity test had a false-negative path. Two live instances of
+# "99.99th percentile" in PAPER1 were cleared by the word "uninformative" twelve lines away,
+# written about a DIFFERENT claim. A generic marker in the neighbourhood is not a retraction of
+# the sentence in front of you. So markers are now split: STRONG ones clear by proximity (a VOID
+# banner above a table must cover its rows, #329); everything else must sit in the SAME
+# PARAGRAPH as the hit.
+STRONG = re.compile(r'VOID|SUPERSEDED|WITHDRAWN|RETRACTED|STRUCK|\[FIXED\]|~~|'
+                    r'RETRACTIONS\.tsv|check_retractions|planted|self-test', re.I)
 MARKERS = re.compile(
     r'VOID|SUPERSEDED|WITHDRAWN|RETRACTED|STRUCK|\[FIXED\]|~~|corrected to|'
     r'wrong;|not valid|no longer|was wrong|overreach|degenerate|does not support|'
@@ -140,13 +148,20 @@ def main():
                 except re.error:
                     if pat not in line: continue
                 lo, hi = max(0, i - WINDOW), min(len(lines), i + WINDOW + 1)
-                if not MARKERS.search('\n'.join(lines[lo:hi])):
+                if STRONG.search('\n'.join(lines[lo:hi])): continue
+                # weak marker: must be in the same blank-line-delimited paragraph
+                pstart = i
+                while pstart > 0 and lines[pstart - 1].strip(): pstart -= 1
+                pend = i
+                while pend < len(lines) - 1 and lines[pend + 1].strip(): pend += 1
+                if not MARKERS.search('\n'.join(lines[pstart:pend + 1])):
                     violations.append((t, i + 1, pat, by, note, line.strip()[:90]))
     nq, qtot = check_qualifications()
     ns, stot = check_superseded_logs()
     if not violations and not nq and not ns:
         print(f'OK: {len(pats)} retracted claims checked across {len(TARGETS)} documents; '
-              f'every occurrence carries a retraction marker within {WINDOW} lines.')
+              f'every occurrence carries a STRONG marker within {WINDOW} lines or a weaker one '
+              f'in the same paragraph.')
         print(f'OK: {qtot} qualified claims checked; every document asserting one carries its '
               f'standing context.')
         print(f'OK: {stot} superseded result log(s) checked; each carries its '

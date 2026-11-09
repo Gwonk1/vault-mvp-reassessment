@@ -3,7 +3,9 @@
 > **STANDING (added §84b; number superseded §90, cut to one significant figure §102b):** the one
 > positive measurement in this project is that **MVP is under strong purifying selection where it is
 > retained** - a codon-model (`codeml` M0) **omega of 0.06 across 11 vertebrates**, with an
-> essential-gene control at **0.05** and a relaxed control at **0.42**. The earlier pairwise NG86
+> essential-gene control at **0.05** and a relaxed control at **0.4** - MVP at **1.2x** the essential
+> control and about **one-seventh** of the relaxed one, stated as ratios because a row of three figures
+> performs the retracted equality (§103). The earlier pairwise NG86
 > figure of 0.1118 **understated** it. **Two limits travel with the number:** there is **no interval
 > on any of these estimates**, so no equality with the essential control is claimed; and the panel is
 > **keeper-only by construction**, since only retained orthologues remain alignable. It **constrains**
@@ -61,7 +63,7 @@ sequestration 0.05 · tissue pattern tracks xenobiotic flux 0.05 · ~~**furnitur
 
 > **Both nulls are downgraded on a measurement, not a judgement (§84b, now §90).** MVP's codon-model
 > omega across **11 vertebrate orthologues is 0.06** - near an essential-gene control at 0.05 and far
-> from a relaxed control at 0.42. A gene that is drifting, or tolerated as inert extravagance, does
+> from a relaxed control at 0.4. A gene that is drifting, or tolerated as inert extravagance, does
 > not look like that. **The downgrade does not depend on the third digit or on the superseded pairwise
 > value**, which is why it survived both audits. **They are no longer merely
 > unsupported; they are contradicted.** They stay on the list at 0.01 rather than being deleted,

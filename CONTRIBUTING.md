@@ -305,3 +305,47 @@ that misses every tool whose convention is a bare name.**
 **To clear a file**, add a line containing `READ:` (or EXPECTED / benign / VOID / `see RESULTS`) saying
 what the warning means and why it is acceptable. **A judged warning is annotated. An unjudged warning is
 a pending fault.** Do not widen the exclusion list to make the check quiet.
+
+## 19. A repair is not real until the old sentence's JOB is withdrawn
+
+**Grok audit 012. This is the class under all the others, and it took twelve audits to see.**
+
+Every rule above was written after an error, and every one of those errors got a local fix: the word
+was replaced, a caveat was added, a strikethrough went in, a scope note was appended. **And in almost
+every case the sentence kept its post.** The claim that was criticised went on doing the same
+inferential work in the document, wearing the repair.
+
+The auditor's own list, which is checkable against this repository's history:
+
+| what was criticised | what came back |
+|---|---|
+| "indistinguishable from a housekeeping gene" | the same comparison as a **one-significant-figure juxtaposition**: "0.06, with controls at 0.05 and 0.42" |
+| the dismissal of co-fractionation | "**cannot retain a real subunit**" — while the table showed a length-1 list containing the true top subunit |
+| the need for a transferable method | a "**stopping rule**" whose own text calls it a heuristic and whose depth is fitted to its control |
+| the need for a biological contribution | the no-further-partner headline, **with a qualification beside it that removes the content** |
+| the structural result | p = 0.008, **relabelled "underpowered"** and left on the live list |
+| the need for a leading idea | a weight of **0.25 called "the top hypothesis"** |
+
+**The shape: the caveat is stored in a scope that does not edit the sentence that gets exported.**
+Disclosure *beside* a claim leaves the claim at its old strength. A reader meets the headline; the
+qualification is in a banner, a footnote, a limits subsection, or two hundred sections later.
+
+### The test, which takes one minute
+
+**Write the inferential job of the old sentence in one line. Write the job of the repaired sentence in
+one line. If they match, nothing was repaired** — the criticised token was swapped and the claim kept
+its post.
+
+### What this rule forbids
+
+- **Adding a caveat instead of weakening the claim.** If the caveat is true, the claim is smaller: say
+  the smaller thing in the sentence a reader meets first.
+- **Relabelling a statistic instead of retiring it.** Calling p = 0.008 "underpowered" and leaving it
+  in the results is not a correction; "underpowered" describes a test that returns a *large* p when an
+  effect is real, and so was also the wrong word (§103e).
+- **Rounding two numbers to one significant figure so that they read as equal.** That is the retracted
+  equality, re-executed by typography.
+- **Standing banners doing the work of a rewrite.** This repository has four places where a correction
+  was appended at the end while the claims it qualifies stayed live where a reader meets them (#262,
+  #283, #319, and the RESULTS.md head banner). **The banner was the fourth instance of the fault, not
+  the fix for it.**

@@ -31,7 +31,10 @@ persist. Experiment 4 below is what would settle it.
 **sequence-constrained** at the pocket (four residues invariant across 174 eukaryotes). Whatever
 selects it does not operate in a dish. **This is now measured rather than inferred:** a codon model
 (`codeml` M0, F3x4, fixed topology) gives **omega = 0.06 across 11 vertebrate orthologues**, with an
-essential control at **0.05** and a relaxed control at **0.42** (§90) - **strong purifying selection.**
+essential control at **0.05** and a relaxed control at **0.4** (§90) - **strong purifying selection**,
+MVP sitting at **1.2x** the essential control and about **one-seventh** of the relaxed one. **Report
+the ratios, not the three numbers in a row: a row performs an equality claim that was retracted**
+(§103, house rule 19).
 Report it to **one significant figure**: our own reruns span 0.0608-0.0635 (§102b). The earlier
 pairwise NG86 figure of 0.1118 (§84b) **understated** the constraint and is superseded. **Two limits
 travel with it:** there is **no standard error or interval on any of these estimates**, so no equality
@@ -87,7 +90,7 @@ is now fully specified**. A lab that runs these first will design better bench w
 next person. The pairwise NG86 estimate (§84b, dN/dS 0.1118) was produced by the wrong tool - it
 biases the ratio **upward**, treats seven correlated comparisons as independent, and **saturates
 exactly where the interesting deep comparisons live.** The codon model gives **omega = 0.06 across 11
-vertebrates, with an essential control at 0.05 and a relaxed control at 0.42.** So the pairwise figure
+vertebrates - 1.2x the essential control, about one-seventh of the relaxed one.** So the pairwise figure
 **understated** the constraint.
 
 **Three things we got wrong in reporting it, which cost more than the computation did:**

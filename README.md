@@ -100,14 +100,34 @@ the observation was already known and only the **vault-specific application** wa
 unchecked candidates in [`HYPOTHESES_AND_NOVELTY.md`](HYPOTHESES_AND_NOVELTY.md) should be read as
 probably-known rather than provisional** — on a five-for-five base rate, that is the correct prior.
 
-**What was produced rather than rediscovered is one well-controlled negative:** MVP has no
+> **Two counts appear in this repository and they count different things.** **Five** is the number of
+> *formal literature checks* run on candidate novel findings; all five found prior art. **Six** is the
+> number of times we *presented something as new without checking at all* (§85, §5435) - the sixth was
+> caught not by a literature check but by the user, in one sentence, about a result we had already
+> known was known. **Neither number is a typo for the other**, and the second is the worse one.
+
+~~**What was produced rather than rediscovered is one well-controlled negative:** MVP has no
 stoichiometric partner complex beyond PARP4 and TEP1, across every instrument available, with
-calibration gates passing. No literature check has touched it.
+calibration gates passing. No literature check has touched it.~~
+
+**WITHDRAWN, §103e.** That sentence reduces to: **one PRIDE deposit (PXD052802), on a contrast the
+depositors themselves analysed, recovers the known particle and does not produce a second one.**
+"Every instrument" was **labels on one production** - all 75 interactor terms across eight sections
+come from that deposit. Co-fractionation **failed its own positive control** on TEP1, so it cannot
+contribute to a negative; the half-life statistic **does not recognise the true triplet** (29.86th
+percentile), so it cannot corroborate the absence of others. And "no literature check has touched it"
+sat next to "the depositors analysed the same contrast."
+
+**What was actually produced is a sensitivity floor**, and it is in
+[`CALIBRATION.md`](CALIBRATION.md) finding 2: **three standard complex-detection signatures, measured
+against a particle whose membership has not been in dispute for decades, all three failing in
+different ways.** That measurement was in hand the whole time, written down in three places as excuses
+for a negative result (§103g).
 
 ## What survives
 
 A short list, deliberately: the **MVP-PARP4-TEP1 trimer**, with TEP1 shown independent of
-PARP4 by knockdown; **ANXA2 and S100A10** as the only confirmed non-subunit interactors of
+PARP4 in a PARP4-knockout line; **ANXA2 and S100A10** as the only confirmed non-subunit interactors of
 the old membrane list; **COP1** at 27-fold in one instrument class; **myoferlin actively
 excluded**, in a wash-based pulldown and in pre-lysis covalent proximity labelling;
 **degradation machinery the most depleted annotation of 1,276** in an anti-MVP pulldown;
@@ -115,8 +135,11 @@ and subunit half-lives whose spread sits at only the 29.86th percentile of rando
 
 **One positive measurement survived everything, and got sharper by being cut down.** Among extant
 orthologues that remain alignable, MVP is under **strong purifying selection** - a codon-model
-(`codeml` M0) **omega of 0.06 across 11 vertebrates**, between an essential control at **0.05** and a
-relaxed control at **0.42** (§90). **We refused this number on a gate technicality and an external
+(`codeml` M0) **omega of 0.06 across 11 vertebrates** - **1.2x the essential-gene control and about
+one-seventh of the relaxed control** (GAPDH 0.05, CD4 0.4 at the same one significant figure, §90).
+**The ratios are given rather than the three numbers side by side, because printing "0.06, 0.05, 0.42"
+performs the retracted equality by typography** (§103, house rule 19) - and 0.4304 to one significant
+figure is 0.4, so the old "0.42" was not even consistent with its own rounding. **We refused this number on a gate technicality and an external
 methods audit reversed us** (§84, house rule 15); a second audit then cut it down to **one significant
 figure**, because our own reruns disagree about the third digit (§102b).
 
