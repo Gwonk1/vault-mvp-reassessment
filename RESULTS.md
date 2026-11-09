@@ -6460,8 +6460,11 @@ Two-ratio model, the two invertebrate branches as foreground:
 | background (vertebrate branches) | **0.0665** |
 | **foreground (*Ciona* + *Branchiostoma* branches)** | **0.0025** |
 
-**LRT = 28.33 on 1 df, p = 1.0e-07.** **Constraint is not uniform across the retained tree** - and the
-deep branches are **~27x MORE constrained**, not less.
+~~**LRT = 28.33 on 1 df, p = 1.0e-07.** Constraint is not uniform and the deep branches are ~27x MORE
+constrained.~~ **VOID TWICE OVER, §101.** The tree was **rooted** (codeml printed `This is a rooted
+tree. Please check!` and `ntime: 24` where unrooted 13-taxon is 23); unrooted gives **0.0247, LRT
+16.50**. And the foreground was never a category: ***Ciona* alone 0.0024, p = 1.2e-07; *Branchiostoma*
+alone 0.0415, p = 0.275 - not significant.* **The entire effect is one branch.**
 
 **The registered framing expected the opposite.** "Relaxation among retainers" was built to look for
 lineages where constraint had loosened, possibly presaging loss. **It found the deep chordate branches
@@ -6665,3 +6668,77 @@ already treats symbols as a vertebrate annotation layer… The audience that wou
 this is a structural biologist using Ensembl as a search box. That is a real trap, and it is a tutorial
 trap… **Putting it in the calibration file lowers the file.**"* It stays in the record as a mistakes-log
 entry, which is what it is.
+
+## 101. §98c is void twice over: a rooted tree, and a foreground that was one branch
+
+Grok audit 010 made an arithmetic aside - *"an unrooted 13-taxon tree has 23 branches, and 'two against
+twenty' does not add up. Print the #1 labels and check."* Checked. It opens onto two separate faults,
+and together they destroy §98c.
+
+### 101a. Fault one: the tree was rooted, and codeml said so in my own output
+
+The original run printed, in the file I never opened:
+
+```
+TREE #  1:  (13, (12, (((((1, (9, 6)), (2, 5)), (3, 4)), 7), (8, (10, 11)))));
+This is a rooted tree.  Please check!
+lnL(ntime: 24  np: 27)
+```
+
+**`ntime: 24`.** An unrooted 13-taxon tree has **23** branches. codeml was fitting an unidentifiable
+root branch - **and my two foreground branches were the ones sitting on it.**
+
+**This is house rule 3** - *read the table, do not describe it* - **committed on my own tool's output,
+one hundred sections after writing the rule.** Grok derived the problem from arithmetic alone, with no
+access to the file that states it twice.
+
+### 101b. Fault two: the foreground was never a category
+
+Unrooting the tree and then decomposing the foreground tip by tip:
+
+| run | ntime | foreground omega | LRT | p |
+|---|---|---|---|---|
+| 13 taxa, **rooted**, both tips share omega - **as published §98c** | **24** | **0.0025** | 28.33 | 1.0e-07 |
+| 13 taxa, unrooted, both tips share omega | 23 | **0.0247** | 16.50 | 4.9e-05 |
+| 13 taxa, unrooted, ***Branchiostoma* alone** | 23 | **0.0415** | **1.19** | **0.275 - NOT SIGNIFICANT** |
+| 13 taxa, unrooted, ***Ciona* alone** | 23 | **0.0024** | **28.00** | **1.2e-07** |
+| 12 taxa, unrooted, *Ciona* (*Branchiostoma* removed) | 21 | 0.0027 | 25.40 | 4.7e-07 |
+
+**The entire effect is one branch.** *Branchiostoma*'s terminal is **indistinguishable from the
+vertebrate background (p = 0.275)**; *Ciona*'s carries all of it. Forcing them to share one omega
+produced 0.0247 - **an average of a real outlier and a null** - and the rooted tree then pushed that
+average to 0.0025.
+
+**"Invertebrate branches" was two unrelated terminals sharing a label.** That is **house rule 17's Type
+II**, and I committed it **in the analysis I was running while writing rule 17 up.**
+
+### 101c. And my suspicion about which sequence to distrust was backwards
+
+I flagged *Branchiostoma* as the weak link: a **0.752** 5-mer match, from *B. lanceolatum* against a
+*B. floridae* query. Grok called the leave-one-out mandatory for that reason.
+
+**It is the well-behaved tip.** The outlier is ***Ciona* - the 0.969 match I called "unambiguous."** The
+sequence I trusted is the one producing the extreme value, and the sequence I distrusted produces
+nothing. **Flagging a weak input is not the same as knowing which input drives a result**, and I treated
+them as the same thing.
+
+### 101d. What replaces §98c
+
+> **One terminal branch - *Ciona intestinalis* - prefers a markedly lower omega than the vertebrate
+> background (0.0024 against 0.0664, LRT 28.0, p = 1.2e-07). *Branchiostoma*'s does not (p = 0.275).
+> That is n = 1 lineage.**
+
+And every caveat from §100 survives intact and now applies to a single branch:
+- **A tip omega is an average over the whole terminal.** *Ciona* is far from the vertebrates because the
+  tip is distant, not because the model isolated deep time. **It is not a Cambrian coefficient.**
+- **A ridge is reproducibly a ridge** - the saturated denominator is unaddressed.
+- ***Ciona* is compositionally extreme** relative to the vertebrate-dominated F3x4 vector, and that
+  misfit is absorbed by **exactly the parameter being reported**. With the foreground now a single
+  *Ciona* branch, **this generator and the result are the same object**, and nothing here separates
+  them.
+- **785 gap-free columns** are the sites that stayed alignable at that distance.
+- **Every branch is a retention branch by ascertainment.** The loss question is untouched.
+
+**The registered branch test is therefore delivered and uninformative.** It returns a difference in fit
+on one terminal, with a magnitude that is unidentified and a composition confound that is
+indistinguishable from the signal.
