@@ -6274,6 +6274,11 @@ replication:
 > approximately ten residues of each chain's N-terminal tail, in two independent structures determined
 > by different methods on different species.**
 
+**QUALIFIED, §97b.** That holds **about location** and is all it holds. The alignment (§97a) shows the
+two structures **share only residues 6 and 21** - they agree on *where* the interface is and **disagree
+on which residues form it.** Calling them "independent" let a species-and-method confound pass as
+corroboration.
+
 That is a geometric fact about a 13 MDa particle, measured twice, and it bears on §91a's energetics
 twice as hard: **grok's objection that "copy count does not set a barrier" now has a footprint attached
 to it.** Thirty-nine interfaces of ~10 residues each is not a formidable latch, and whatever holds the
@@ -6350,3 +6355,65 @@ closed-cage structures.**
 overlapping ranges that are plausibly the same structural element offset by species numbering.
 **Plausibly is not demonstrated.** Establishing it needs a rat-human alignment mapped onto both
 structures, and **we are not eyeballing a numbering offset** (house rule 3). Flagged, not claimed.
+
+## 97. The rat-human mapping: no numbering offset, so the second patch genuinely differs
+
+§96e flagged *"plausibly the same structural element offset by species numbering"* and refused to
+eyeball it. Aligned properly - sequences taken **as modelled** from each structure, MAFFT, contacts
+mapped through the alignment.
+
+### 97a. The alignment is 1:1 in this region. There is no offset to hide behind.
+
+| rat contact | aligned column | human residue |
+|---|---|---|
+| 1, 2, 3, 4 | 0-3 | **gap** (9BW5 models from residue 5) |
+| **6** | 5 | **6** - a human contact |
+| **21** | 20 | **21** - a human contact |
+| 42 | 41 | 42 - **not** a human contact |
+| 43, 44, 45, 46, 47 | 42-46 | 43, 44, 45, 46, 47 - **none a human contact** |
+
+And in reverse: **human 38, 39, 40 map to rat 38, 39, 40**, none of which is in the rat contact set.
+
+**So my §96e guess is refuted.** The numbering is not offset - rat 42 is human 42. **The second contact
+patch is genuinely in a different place in the two structures:** rat at **42-47**, human at **36-41**.
+Adjacent stretches, four residues apart, with no alignment artefact available to reconcile them.
+
+**Shared contacts across species: residues 6 and 21. That is all.**
+
+### 97b. What this does to §96b's core
+
+**§96b stands as written** - residues 21, 22, 38, 39, 40 contact in all five human structures - **but
+the qualifier it carried matters more than I gave it credit for.** Those five are **one group, one
+species, one method.** The one structure from a different method on a different species **shares none of
+22, 38, 39 or 40.**
+
+So the honest hierarchy:
+
+| claim | status |
+|---|---|
+| the inter-half interface is **small and N-terminal (<= residue 50)** | **7 of 7 structures, 2 species, 2 methods - holds** |
+| **residues 6 and 21** are in it | **both species - holds** |
+| the **five-residue core 21, 22, 38-40** | **5 of 5 human structures from one group by one method - holds there, and not shown beyond** |
+| that core is **the vault's interface generally** | **NOT supported** |
+
+### 97c. Two readings, and I cannot separate them
+
+1. **A real species difference** in which residues of the 36-47 stretch make the inter-half contact.
+2. **A method artefact.** 4V60 is 3.5 A crystallography; the five human models are cryo-EM. **A 4.5 A
+   contact cutoff applied to a flexible loop will pick different residues depending on how that loop
+   was resolved**, and 36-47 is exactly the sort of stretch where that happens.
+
+**Reading 2 is the more likely and the less interesting, and nothing here distinguishes them.** What
+would: the same calculation on a **second non-human structure**, or a **non-cryo-EM human structure**.
+Neither exists in the deposited set we have.
+
+### 97d. The lesson, which is about my own §95
+
+**§95 called the replication "two independent structures determined by different methods on different
+species" and treated the agreement as strong.** It was strong **about location** - small, N-terminal -
+and I let that strength bleed into an implied agreement **about identity** that the data does not
+support. The two structures agree on *where* and disagree on *which*.
+
+**That is a species-and-method confound I built into a replication and then cited as independence.**
+Checking it cost one alignment, and I only ran it because §96e made me write down what I was declining
+to check - which is **house rule 16 working in the direction it was written for.**
