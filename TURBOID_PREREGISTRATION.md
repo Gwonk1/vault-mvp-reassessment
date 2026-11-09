@@ -11,7 +11,7 @@ Co-abundance has failed the neighbourhood question **five times** (§11 nominati
 that it is the wrong instrument: it cannot separate physical association from shared transcriptional
 regulation, which is exactly the deflation recorded in #123.
 
-Zheng et al. 2025 (*Sci Data* 12:405, PMID 40058474, Figshare 10.6084/m9.figshare.27906234) is a
+Zheng et al. 2025 (*Sci Data* 12:405, PMID 40057523, Figshare 10.6084/m9.figshare.27906234; an earlier draft of this file said 40058474, which is the wrong number, #487) is a
 different instrument. `V5-TurboID` biotinylates neighbours **covalently, inside living cells, before
 lysis**, so it does not depend on a complex surviving detergent. Critically it labels **all 17 human
 PARP family members in one batch**, giving **16 matched non-vault baits as a built-in specificity

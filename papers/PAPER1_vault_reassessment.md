@@ -23,13 +23,14 @@
 reviewed the manuscript adversarially against the committed data, in three rounds; between them they
 struck or qualified more than a dozen claims made here, and those reversals are recorded in place
 rather than quietly removed. All hypotheses were committed to a timestamped git history before the
-relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (**483 rows**: 480 numeric ids 1-486 with 89-90
-and 391-394 unused, plus 3 letter-suffixed — see house rule 3) and `RESULTS.md` (**104 numbered
-sections**). **Twelve
-adversarial audit rounds sit in `grok/`**, verbatim in both directions. **That history is currently local and has not been published**, so
-the ordering it establishes is not yet independently verifiable; we state the fact rather than imply
-otherwise, and the repository is available to anyone who asks. Correspondence welcome, including
-corrections.
+relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (**487 rows**: 484 numeric ids 1-490 with 89-90
+and 391-394 unused, plus 3 letter-suffixed — see house rule 3) and `RESULTS.md` (**106 numbered sections**). **Twelve
+adversarial audit rounds sit in `grok/`**, verbatim in both directions. **The repository is public**
+at `https://github.com/Gwonk1/vault-mvp-reassessment`. Ledger #87 was right to strike a public-history
+claim when no remote existed. The sentence that replaced it, that this history was local and
+unpublished, is no longer true. Two later tests (`RESULTS.md` §105 and §106) were pre-registered on a
+divergent working tree whose commit is not in this history. That limit is stated on those sections.
+Correspondence welcome, including corrections.
 
 ---
 
@@ -315,7 +316,8 @@ one.
 the same residualisation, in addition to cell lines and to the original thirteen-cohort analysis.
 That is the most robust quantitative finding in this work. The broad membrane neighbourhood around
 it is not supported by co-abundance data, and the hypothesis one of us favoured is withdrawn with
-it. Nothing here disproves a membrane association as biology: the SPFH domain, the *Dictyostelium*
+it. A later bidirectional EMT score does not absorb the cell-line residual (`RESULTS.md` §105). It
+also does not put that residual back into the cohorts where replication failed. Nothing here disproves a membrane association as biology: the SPFH domain, the *Dictyostelium*
 tomography placing vaults on membranes, ANXA2 and S100A10 as confirmed interactors, and the
 published CFTR-raft knockout phenotype all stand. What is dead is the inference from co-abundance.
 

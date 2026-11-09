@@ -1,0 +1,137 @@
+{
+ "score_mes_used": [
+  "ZEB1",
+  "ZEB2",
+  "SNAI1",
+  "SNAI2",
+  "PRRX1",
+  "FOXC2",
+  "CDH2"
+ ],
+ "score_epi_used": [
+  "ESRP1",
+  "ESRP2",
+  "GRHL2",
+  "OCLN",
+  "CLDN4",
+  "CLDN7",
+  "TJP3",
+  "CRB3"
+ ],
+ "score_excluded": {
+  "mes": [],
+  "epi": []
+ },
+ "validators": {
+  "mes": {
+   "VIM": 0.6917,
+   "FN1": 0.2994,
+   "SPARC": 0.4989,
+   "MMP2": 0.3342
+  },
+  "epi": {
+   "CDH1": -0.8318,
+   "EPCAM": -0.8578,
+   "KRT8": -0.5717
+  },
+  "mes_mean": 0.4561,
+  "epi_mean": -0.7538
+ },
+ "gate1_assembly": true,
+ "gate1_ranks": {
+  "PARP4": 1,
+  "TEP1": 2
+ },
+ "gate2_proteasome": true,
+ "gate2_recovered": 19,
+ "gate3_score_valid": true,
+ "verdict": "MODULE SURVIVES bidirectional EMT adjustment",
+ "primary": {
+  "GOBP_PLASMA_MEMBRANE_REPAIR": {
+   "n_members": 24,
+   "observed_in_top200": 5,
+   "specificity_p": 0.0
+  }
+ },
+ "secondary": {
+  "GOCC_LYSOSOME": null,
+  "GOCC_LATE_ENDOSOME": {
+   "n_members": 210,
+   "observed_in_top200": 7,
+   "specificity_p": 0.155
+  },
+  "GOBP_ENDOSOMAL_TRANSPORT": {
+   "n_members": 243,
+   "observed_in_top200": 5,
+   "specificity_p": 0.645
+  },
+  "GOCC_CAVEOLA": {
+   "n_members": 52,
+   "observed_in_top200": 7,
+   "specificity_p": 0.0
+  },
+  "GOCC_MEMBRANE_RAFT": null,
+  "GOBP_PLASMA_MEMBRANE_ORGANIZATION": {
+   "n_members": 87,
+   "observed_in_top200": 9,
+   "specificity_p": 0.0
+  }
+ },
+ "n_proteins": 8982,
+ "named_ranks": {
+  "PARP4": 1,
+  "TEP1": 2,
+  "ANXA2": 5,
+  "S100A10": 4,
+  "EHD2": 6,
+  "EHD4": 32,
+  "CAPN2": 30,
+  "MYOF": 10,
+  "AHNAK": 12,
+  "AHNAK2": 9
+ },
+ "named_rho": {
+  "PARP4": 0.844,
+  "TEP1": 0.5824,
+  "ANXA2": 0.522,
+  "S100A10": 0.5278,
+  "EHD2": 0.5097,
+  "EHD4": 0.4376,
+  "CAPN2": 0.4416,
+  "MYOF": 0.4833,
+  "AHNAK": 0.4691,
+  "AHNAK2": 0.4854
+ },
+ "mvp_top30": {
+  "PARP4": 0.844,
+  "TEP1": 0.5824,
+  "NIBAN2": 0.5445,
+  "S100A10": 0.5278,
+  "ANXA2": 0.522,
+  "EHD2": 0.5097,
+  "NT5E": 0.4989,
+  "LMNA": 0.4901,
+  "AHNAK2": 0.4854,
+  "MYOF": 0.4833,
+  "HLA-F": 0.4773,
+  "AHNAK": 0.4691,
+  "S100A6": 0.4663,
+  "FOSL1": 0.462,
+  "MGLL": 0.46,
+  "NMI": 0.4578,
+  "ANLN": 0.4544,
+  "PIK3R3": 0.4524,
+  "DDX60": 0.4519,
+  "PSMB8": 0.4513,
+  "EFCAB7": 0.4502,
+  "NCEH1": 0.4486,
+  "CAVIN1": 0.4477,
+  "RRAS": 0.4476,
+  "BCAR1": 0.446,
+  "IFI35": 0.4456,
+  "FHL2": 0.4441,
+  "CD151": 0.4437,
+  "ITGA3": 0.4416,
+  "CAPN2": 0.4416
+ }
+}

@@ -1259,6 +1259,11 @@ behaviour the pre-registration discipline exists to prevent. The honest state of
 
 That is where it should sit until someone runs it who did not write the hypothesis.
 
+**SUPERSEDED as the current state by §105.** The bidirectional test named in the previous paragraph
+was later run, by a lead who had not written the hypothesis, which is the condition this section set.
+The result does not reinstate the module. §30 had already withdrawn replication outside this cell-line
+matrix. §105 is what the cell-line residual does under that score.
+
 ## 30. The membrane-repair module does NOT replicate in independent tumour proteomics
 
 `MODULE_REPLICATION_PREREGISTRATION.md`. The registered kill condition fired, and §28's reversal of
@@ -1417,7 +1422,7 @@ Argon was asked the single question of whether a physical-interaction dataset ex
 used, since co-abundance has now failed this question five times and is plainly the wrong instrument.
 Its answer, with the local 2025-26 corpus checked and nothing additional found there:
 
-1. **Zheng et al., *Sci Data* 2025, PMID 40058474** (PRIDE PXD052745; Figshare
+1. **Zheng et al., *Sci Data* 2025, PMID 40057523** (carried as 40058474 until #487; PRIDE PXD052745; Figshare
    10.6084/m9.figshare.27906234) — `V5-TurboID` proximity labelling across **all 17 human PARP family
    members including PARP4**, in HEK293T. Covalent in-cell labelling before lysis, and **16 matched
    non-vault PARP baits in the same batch as a built-in specificity background.** This is the best
@@ -1444,7 +1449,7 @@ literature gap of the session after Moadab and Izquierdo.
 
 ## 32. The TurboID contact test is UNINFORMATIVE, for a reason argon predicted and we failed to gate on
 
-`TURBOID_PREREGISTRATION.md`. Zheng et al. 2025 (PMID 40058474), `V5-TurboID` across all 17 human PARP
+`TURBOID_PREREGISTRATION.md`. Zheng et al. 2025 (PMID 40057523; carried as 40058474 until #487), `V5-TurboID` across all 17 human PARP
 family members in HEK293T, with 16 matched non-vault baits as specificity background.
 
 **The dataset is excellent and both gates passed emphatically.** PARP4 self-labels at log2 fold-change
@@ -7259,9 +7264,8 @@ it is retained. **Nothing in this work explains that.**
 
 ### 104c. The honest count of the record
 
-**483 ledger rows** - **480 with numeric ids 1-486** (89-90 and 391-394 unused, house rule 3)
-plus **3 letter-suffixed** (13a, 26b, 34b) - **68 carrying a strikethrough**. **104 numbered
-sections** here. **49 pre-registrations.** **20 house rules**, each written after
+**487 ledger rows** - **484 with numeric ids 1-490** (89-90 and 391-394 unused, house rule 3)
+plus **3 letter-suffixed** (13a, 26b, 34b) - **68 carrying a strikethrough**. **106 numbered sections** here. **51 pre-registrations.** **20 house rules**, each written after
 breaking the thing it describes. **Twelve adversarial audit rounds** in `grok/`, verbatim both ways.
 **49 registered retraction patterns** and **8 standing qualifications**, both machine-checked,
 plus a check that recomputes every count on this line (house rule 20).
@@ -7271,3 +7275,105 @@ useful single fact about this record: **the document aimed at strangers was the 
 it**, until the twelfth round - it was not even in the retraction gate's target list (#483). A
 project can run eleven rounds of adversarial review on its internal record and leave its one exported
 claim unchecked.
+
+§105 and §106 do not change §104a or §104b. This section remains the closing summary.
+
+## 105. Bidirectional EMT does not absorb the CCLE repair residual, and that does not reinstate the module
+
+`EMT_BIDIRECTIONAL_PREREGISTRATION.md`. Ledger #113 stopped this question until someone who had not
+written the membrane-repair hypothesis ran a bidirectional score. That is this test. It was
+pre-registered on a divergent working tree at 2026-11-09 13:45:10 -0500, before any correlation of
+the score with MVP was computed, and the result file was written at 13:53. **That commit is not an
+ancestor of this history, so this repository alone does not prove the order.** The gene lists were
+not taken from MVP's correlates. No second score was substituted.
+
+The score is the mean z of a mesenchymal arm minus the mean z of an epithelial arm. Held-out
+validators are not in the score. TWIST1 is absent from the CCLE protein matrix, so the mesenchymal
+arm is 7 of 8. The epithelial arm is 8 of 8. DSP is also absent, so the epithelial validators are 3
+of 4. `score_excluded` in the JSON is empty because that field records collisions with the tested GO
+sets, and neither missing gene is in those sets.
+
+**All three gates pass.**
+
+| gate | result |
+|---|---|
+| Assembly | PARP4 rank 1, rho +0.844; TEP1 rank 2, rho +0.5824, of 8,982 proteins |
+| Complex | PSMA1 recovers 19 proteasome subunits in its top 50 |
+| Score | held-out mesenchymal mean r +0.4561; epithelial mean r -0.7538 |
+
+The mesenchymal validators are VIM +0.6917, FN1 +0.2994, SPARC +0.4989, MMP2 +0.3342. FN1 alone is
+just under 0.30. The registered rule is the mean, not each gene. The earlier HALLMARK gate, which
+required each of VIM, FN1 and CDH1, is a different rule and stays UNINFORMATIVE (§29). The epithelial
+validators are CDH1 -0.8318, EPCAM -0.8578, KRT8 -0.5717.
+
+| gene set | members | in top 200 | specificity p |
+|---|---|---|---|
+| `GOBP_PLASMA_MEMBRANE_REPAIR` | 24 | 5 | 0.0 |
+| `GOCC_CAVEOLA` | 52 | 7 | 0.0 |
+| `GOBP_PLASMA_MEMBRANE_ORGANIZATION` | 87 | 9 | 0.0 |
+| `GOCC_LATE_ENDOSOME` | 210 | 7 | 0.155 |
+| `GOBP_ENDOSOMAL_TRANSPORT` | 243 | 5 | 0.645 |
+| `GOCC_LYSOSOME` | | | null |
+| `GOCC_MEMBRANE_RAFT` | | | null |
+
+The two nulls are absent names. The GMT contains `GOCC_LYSOSOMAL_LUMEN` and
+`GOCC_PLASMA_MEMBRANE_RAFT`. Those were not substituted after the primary result. The same secondary
+list is the one `membrane_module2.py` used. The specificity draws sort the member list before
+sampling, so the null is deterministic. The committed late-endosome p is 0.155.
+
+Named residual correlations, after the score: S100A10 rank 4 (+0.5278), ANXA2 rank 5 (+0.522),
+EHD2 rank 6 (+0.5097), AHNAK2 rank 9 (+0.4854), MYOF rank 10 (+0.4833), AHNAK rank 12 (+0.4691),
+CAPN2 rank 30 (+0.4416), EHD4 rank 32 (+0.4376). The top 30 still contains LMNA (+0.4901) and FOSL1
+(+0.462). An adhesion axis is still visible. The registered kill, repair specificity p >= 0.05, did
+not fire.
+
+**The script's verdict string is "MODULE SURVIVES bidirectional EMT adjustment".** On the tree where
+the registration was written, #41's co-abundance reversal was the live claim, and survival was the
+registered word for "the CCLE enrichment remains." On this tree that reversal has already been
+withdrawn by §30, which is a different test: the same gene sets do not replicate in independent
+tumour proteomes. §105 was not run on those cohorts. **Surviving EMT in CCLE does not unstrike §30.**
+It says the cell-line residual is not the HALLMARK EMT axis §29 failed to measure. It is still
+co-abundance. It is still one matrix. It is still not contact.
+
+## 106. The 2021 chromatograms do not show both vault subunits in the MVP peak, and that is not the CFdb result
+
+`COFRACTION_PREREGISTRATION.md`. Zenodo record 4106578, `Chromatograms.zip`, the 206-experiment
+matrix release from 2021. This is not the 411-experiment CFdb feature table. That table was already
+analysed, and its MVP-PARP4 precision is a different summary. The registration locked this release
+before any profile was read, and it forbade swapping in the 2023 matrix afterwards. Same provenance
+limit as §105: the registration commit is on a divergent working tree, not in this history.
+
+Census of sample directories: 156 unlabeled, 25 ion exchange, 5 density, 20 size exclusion. An
+unlabeled directory is excluded, not reclassified after the profiles were seen. MVP is present in 4
+of the 20 size-exclusion directories. All four are PRIDE PXD002892, quantified by iBAQ, 55 fractions,
+fraction 01 first as shipped. OmicsDI lists the publication for that accession as Scott et al.,
+*Molecular Systems Biology* 2017, PMID 28082348, on interactome disassembly during apoptosis
+initiation. The other 16 size-exclusion directories returned no MVP row and are counted `no_matrix`,
+because the reader returns no table when MVP is absent: SEC1-heavy and SEC1-medium of the same
+project, 10 directories in PXD005968 (first accessions are not human; D6XCX1 is one), and 4
+directories in PXD006694 (A0A178UT56 is one).
+
+| channel | MVP peak (1-based) | early | PARP4 r | PARP4 peak (1-based) | TEP1 |
+|---|---|---|---|---|---|
+| SEC2-heavy | 49 | no | absent | | absent |
+| SEC2-medium | 4 | yes | absent | | absent |
+| SEC3-heavy | 5 | yes | 0.2154 | 42 | absent |
+| SEC3-medium | 5 | yes | -0.016 | 17 | absent |
+
+The partner peak stored in the JSON is 0-based (`nanargmax`). The table above is 1-based, the same
+numbering as `mvp_peak_1based`. Co-elution required Pearson r >= 0.50 on at least 8 points, or the
+partner's own peak inside the MVP peak plus or minus one fraction. The gate required both PARP4 and
+TEP1 on at least one early channel. TEP1 is absent throughout. PARP4 does not meet the rule in either
+channel where it is quantified. **Verdict: UNINFORMATIVE.** The repair-set test was not run. Repair
+correlations that the script stored on these failed-gate channels, including AHNAK, are not a result.
+
+The proteasome diagnostic is not a gate. Mean correlation of PSMA1 with PSMB1, PSMB2, PSMB3, PSMC1
+and PSMD1, where measured, is 0.572, 0.5976, 0.5969 and 0.6188 on the four channels. Co-elution of
+an abundant complex is visible in this release.
+
+**What this section does not say.** It does not revise the CFdb score of the MVP-PARP4 pair. It does
+not say the particle lacks PARP4: a free pool, which pulse-SILAC already allows to dominate a bulk
+measurement, produces a second peak. It does not interpret heavy versus medium SILAC as vault
+disassembly. The paper those channels come from is about apoptosis, and that context is why a reader
+should not generalise one project's profiles to the particle at rest. The contact question remains
+where §33 and the later audits left it.

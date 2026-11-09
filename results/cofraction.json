@@ -1,0 +1,248 @@
+{
+ "summary": {
+  "n_sample_directories": 206,
+  "n_sec_with_mvp": 4,
+  "skipped": {
+   "no_matrix": 16,
+   "no_mvp": 0,
+   "not_sec": 186
+  },
+  "method_counts": {
+   "unlabeled": 156,
+   "IEX": 25,
+   "density": 5,
+   "SEC": 20
+  },
+  "n_sec_early": 3,
+  "n_gate_experiments": 0,
+  "gate_pass": false,
+  "repair_mean_r": {
+   "ANXA2": null,
+   "S100A10": null,
+   "MYOF": null,
+   "AHNAK": null,
+   "AHNAK2": null,
+   "EHD2": null,
+   "EHD4": null,
+   "CAPN2": null,
+   "CD151": null,
+   "CAVIN1": null
+  },
+  "repair_n_experiments": {
+   "ANXA2": null,
+   "S100A10": null,
+   "MYOF": null,
+   "AHNAK": null,
+   "AHNAK2": null,
+   "EHD2": null,
+   "EHD4": null,
+   "CAPN2": null,
+   "CD151": null,
+   "CAVIN1": null
+  },
+  "observed_mean_r": null,
+  "null_p": null,
+  "null_mean_of_means": null,
+  "peak_in_window_rate": {
+   "ANXA2": null,
+   "S100A10": null,
+   "MYOF": null,
+   "AHNAK": null,
+   "AHNAK2": null,
+   "EHD2": null,
+   "EHD4": null,
+   "CAPN2": null,
+   "CD151": null,
+   "CAVIN1": null
+  },
+  "proteasome_diagnostic_mean_r": null,
+  "verdict": "UNINFORMATIVE (vault core not visible in an early SEC fraction)",
+  "gate_experiments": []
+ },
+ "experiments": [
+  {
+   "n_fractions": 55,
+   "mvp_peak_1based": 49,
+   "early": false,
+   "both_partners": false,
+   "partners": {
+    "PARP4": {
+     "coelutes": false,
+     "r": null,
+     "peak": null
+    },
+    "TEP1": {
+     "coelutes": false,
+     "r": null,
+     "peak": null
+    }
+   },
+   "repair": {
+    "ANXA2": {
+     "r": 0.0698,
+     "n_finite": 55,
+     "peak_in_window": false
+    },
+    "S100A10": null,
+    "MYOF": null,
+    "AHNAK": {
+     "r": 0.5561,
+     "n_finite": 55,
+     "peak_in_window": false
+    },
+    "AHNAK2": null,
+    "EHD2": null,
+    "EHD4": {
+     "r": -0.0621,
+     "n_finite": 55,
+     "peak_in_window": false
+    },
+    "CAPN2": null,
+    "CD151": null,
+    "CAVIN1": null
+   },
+   "proteasome_mean_r": 0.572,
+   "path": "Chromatograms/PXD002892/SEC2-heavy/iBAQ.tsv.gz",
+   "method": "SEC",
+   "quant_file": "iBAQ.tsv.gz"
+  },
+  {
+   "n_fractions": 55,
+   "mvp_peak_1based": 4,
+   "early": true,
+   "both_partners": false,
+   "partners": {
+    "PARP4": {
+     "coelutes": false,
+     "r": null,
+     "peak": null
+    },
+    "TEP1": {
+     "coelutes": false,
+     "r": null,
+     "peak": null
+    }
+   },
+   "repair": {
+    "ANXA2": {
+     "r": 0.0964,
+     "n_finite": 55,
+     "peak_in_window": false
+    },
+    "S100A10": null,
+    "MYOF": null,
+    "AHNAK": {
+     "r": 0.6768,
+     "n_finite": 55,
+     "peak_in_window": true
+    },
+    "AHNAK2": null,
+    "EHD2": null,
+    "EHD4": {
+     "r": -0.0693,
+     "n_finite": 55,
+     "peak_in_window": false
+    },
+    "CAPN2": null,
+    "CD151": null,
+    "CAVIN1": null
+   },
+   "proteasome_mean_r": 0.5976,
+   "path": "Chromatograms/PXD002892/SEC2-medium/iBAQ.tsv.gz",
+   "method": "SEC",
+   "quant_file": "iBAQ.tsv.gz"
+  },
+  {
+   "n_fractions": 55,
+   "mvp_peak_1based": 5,
+   "early": true,
+   "both_partners": false,
+   "partners": {
+    "PARP4": {
+     "coelutes": false,
+     "r": 0.2154,
+     "peak": 41
+    },
+    "TEP1": {
+     "coelutes": false,
+     "r": null,
+     "peak": null
+    }
+   },
+   "repair": {
+    "ANXA2": {
+     "r": 0.23,
+     "n_finite": 55,
+     "peak_in_window": true
+    },
+    "S100A10": null,
+    "MYOF": null,
+    "AHNAK": {
+     "r": 0.3886,
+     "n_finite": 55,
+     "peak_in_window": true
+    },
+    "AHNAK2": null,
+    "EHD2": null,
+    "EHD4": {
+     "r": 0.0283,
+     "n_finite": 55,
+     "peak_in_window": false
+    },
+    "CAPN2": null,
+    "CD151": null,
+    "CAVIN1": null
+   },
+   "proteasome_mean_r": 0.5969,
+   "path": "Chromatograms/PXD002892/SEC3-heavy/iBAQ.tsv.gz",
+   "method": "SEC",
+   "quant_file": "iBAQ.tsv.gz"
+  },
+  {
+   "n_fractions": 55,
+   "mvp_peak_1based": 5,
+   "early": true,
+   "both_partners": false,
+   "partners": {
+    "PARP4": {
+     "coelutes": false,
+     "r": -0.016,
+     "peak": 16
+    },
+    "TEP1": {
+     "coelutes": false,
+     "r": null,
+     "peak": null
+    }
+   },
+   "repair": {
+    "ANXA2": {
+     "r": 0.2984,
+     "n_finite": 55,
+     "peak_in_window": true
+    },
+    "S100A10": null,
+    "MYOF": null,
+    "AHNAK": {
+     "r": 0.3003,
+     "n_finite": 55,
+     "peak_in_window": true
+    },
+    "AHNAK2": null,
+    "EHD2": null,
+    "EHD4": {
+     "r": 0.1616,
+     "n_finite": 55,
+     "peak_in_window": false
+    },
+    "CAPN2": null,
+    "CD151": null,
+    "CAVIN1": null
+   },
+   "proteasome_mean_r": 0.6188,
+   "path": "Chromatograms/PXD002892/SEC3-medium/iBAQ.tsv.gz",
+   "method": "SEC",
+   "quant_file": "iBAQ.tsv.gz"
+  }
+ ]
+}
