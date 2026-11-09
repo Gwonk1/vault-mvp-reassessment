@@ -5646,7 +5646,13 @@ Registered at `06dd589`. Tools installed for the purpose: **HMMER 3.4**.
 | **1.** the profile must recover MVP itself at E <= 1e-50 | **PASS** - MVP at **E = 0, bit score 1625.6, 98.8% coverage** |
 | **2.** `jackhmmer` ACTB must recover ACTG1 at E <= 0.001 and >= 50% coverage | **PASS** - ACTG1 at **E = 9.3e-200, 663.0 bits, 100% coverage** |
 
-**Gate 2 matters more than gate 1.** §84g's objection to the old search was that its controls were
+> **GO, §88b.** Grok audit 009: *"jackhmmer is iterative and builds bridges through the paralogues it
+> is trying to find; the MVP result came from a static hmmsearch."* **Our gate ran a different
+> algorithm from our test**, and ACTB/ACTG1 at ~99% identity is the easy case at a new E-value.
+> **"Pre-registering a weak event and then passing it is house rule 15 in form only."** The negative
+> stands on the **130.4-bit gap** of §89a, not on this gate.
+
+~~**Gate 2 matters more than gate 1.**~~ §84g's objection to the old search was that its controls were
 tested **only at 97-99% identity**, so they never showed the method could work in the regime the
 question lives in. Under the registered thresholds this pipeline returns **30 genuine actin-family
 paralogues** - ACTG1, ACTC1, ACTA2, ACTA1, ACTG2, the POTE family - all at 100% coverage. **The
@@ -5669,9 +5675,11 @@ unrelated best-noise hits - which is what noise does**, and it confirms GAS2L1 w
 ### 86c. What it means for the chair, and the two limits
 
 **The mirror-image hypothesis has no protein to be built from in human.** Graham's *"a similar inverted
-protein, maybe a mirror image"* required a paralogue to exist; there isn't one. **Reversible assembly,
-if it happens, must run through a non-paralogous mechanism** - a chaperone, a protease, a
-post-translational modification - not an inverted twin.
+protein, maybe a mirror image"* required a paralogue to exist; there isn't one. ~~**Reversible assembly must run through a non-paralogous mechanism** - a chaperone, a protease, a
+post-translational modification - not an inverted twin.~~ **WITHDRAWN, §88b:** it **omits the homomeric
+path** - the same MVP chain changing conformation, which is §87's entire content - so **our two new
+conclusions excluded each other.** Reconciliation: **a trigger nucleating a homomeric opening.** And
+§89b shows paralogues **do** exist in 23 of 134 taxa, so the idea is **relocated, not refuted.**
 
 **Two limits, stated rather than buried:**
 1. **This is the reviewed proteome** (Swiss-Prot, 20,429). A paralogue annotated only in TrEMBL, or
@@ -5723,14 +5731,22 @@ partially-propagated intermediate. **Imposing C39 or D39 during reconstruction a
 interfaces into one by construction.** Whatever asymmetry a zipper would produce is **removed before
 the map exists.**
 
-**So the absence of evidence for progressive opening in the vault literature is not evidence of
-absence. It is a property of the reconstruction protocol.** The question has not been answered; **it
+~~**So the absence of evidence for progressive opening in the vault literature is not evidence of
+absence. It is a property of the reconstruction protocol.**~~ **GO, §91a.** What stands is narrower: **a
+rare, randomly phased seam mixes 38:1 into every interface - a 2.6% alternate conformer - so a C39
+consensus map is not evidence against a zipper.** Several traces **do** survive symmetrisation and we
+checked none of them (NCS local resolution; **2D classes, which precede any point-group symmetry**).
+And "the vault literature" was a **widening** - crosslinking and exchange experiments are not
+symmetrised at all. The question has not been answered; **it
 has not been askable.**
 
 A further consequence worth stating: in a **perfectly symmetric** ring, a zipper has **no designated
 start** - nucleation is stochastic, anywhere. So there is also **no conservation test**: there is no
-privileged "first" residue for selection to have marked. We considered one and it is uninformative by
-construction.
+privileged "first" residue for selection to have marked. ~~We considered one and it is uninformative by construction.~~ **GO, §91b - HOUSE RULE 16.** That
+argument answers a **different** question: *"stochastic nucleation removes a start-site conservation
+test and leaves the contact test untouched."* Whether the **39 waist contact residues** are constrained
+relative to non-contact surface residues is cheap, uses the alignment we already hold, and is
+informative under every opening model. **Outstanding and owed.**
 
 ### 87c. The experiment, which is cheap and uses data that may already exist
 
@@ -5763,3 +5779,281 @@ vault dataset.**
 (MVP/PARP4/TEP1 NADP sample)"* but **models exactly one protein** - `1 polymer 'Major vault protein'
 x78`. PARP4 and TEP1 were in the sample and are not in the model. **Anyone reading that title as a
 three-protein structure, as we nearly did in §73, would be wrong.**
+
+## 88. Grok audit 009: the single-copy claim survives, its stated reasons do not, and my two new conclusions contradicted each other
+
+`grok/from-grok/009r-20261108-2154-grok.md`. Requested as an audit of §86 (Tier 0b) and §87 (the
+zipper). **The most damaging of the seven**, and it reverses a decision *not* to run a test.
+
+### 88a. What stands
+
+**"No second reviewed-human protein matches the 2QPP0 profile over a substantial fraction of its
+length at E <= 0.001" - STANDS.** Grok's reason is better than ours: **the empty tail and the score
+gap**, not the thresholds. Self-hit 1625.6 bits at 1.80 bits per consensus column; next hit 10.2 bits
+at the noise floor; **nothing in between.** *"A second full-length MVP-like protein would have landed
+hundreds of bits above that floor."*
+
+### 88b. What goes - and the first one is structural
+
+**The actin gate does not certify the MVP search. GO.**
+
+> *"jackhmmer is iterative and builds bridges through the paralogues it is trying to find; the MVP
+> result came from a static hmmsearch of a prebuilt orthogroup profile. **A pass on the more sensitive
+> algorithm does not certify the search that returned zero.**"*
+
+**Our gate ran a different algorithm from our test.** And ACTB/ACTG1 are ~99% identical, so 663 bits at
+100% coverage is *"the easy case run at a new E-value"*; the 30-paralogue count is inflated by recent
+high-identity duplications. We reported identity, bits, E and coverage only for ACTG1 - **never for the
+worst hit in that list**, which is the only number that would have shown the control leaving the
+high-identity regime. ***"Pre-registering a weak event and then passing it is house rule 15 in form
+only."***
+
+**The 50% coverage bar as the reason for the zero. GO.** Nothing existed between the 10% noise envelope
+and 50%, so the bar was not load-bearing - and §89a shows it was actively **wrong**.
+
+**"Therefore disassembly must run through a chaperone, protease or modification." GO.**
+
+> *"It omits the homomeric path: the same MVP chain changing conformation, which is the entire content
+> of NEW 2."*
+
+**Our two new conclusions excluded each other** and neither section noticed. The reconciliation grok
+supplies: **a trigger - ligand, modification or chaperone - nucleating a homomeric opening.**
+
+### 88c. The blindness, demonstrated in our own output
+
+> *"You treat HflK/C as MVP's SPFH relative, and the human SPFH proteins are in the reviewed proteome;
+> none of them cleared E <= 0.001. **This profile does not see its own accepted superfamily.**"*
+
+So the zero's actual scope: **it excludes a mirror-shell protein at 25-40% identity over most of ~900
+columns. It says nothing about a one-domain relative at SPFH-like divergence.** The main hole is
+**remoteness past this orthogroup**, not TrEMBL and not the coverage bar.
+
+## 89. Two things we were holding and had not reported
+
+### 89a. The empirical detection floor, which inverts our own coverage logic
+
+Grok: *"the sensitivity calibration you already hold and did not report is the score distribution of the
+in-profile sequences."* Run on all 174:
+
+| | bits | E | coverage |
+|---|---|---|---|
+| self-hit (human MVP) | 1625.6 | 0 | 98.8% |
+| median in-profile member | 1427.7 | - | - |
+| **weakest TRUE member** | **140.6** | **4.6e-43** | **18.0%** |
+| next four weakest | 181.3, 197.9, 200.3, 204.5 | ~1e-55..1e-62 | **13.6, 13.9, 12.8, 13.2%** |
+| **MRFAP1L2** (only non-MVP human hit) | **10.2** | 0.14 | 10.0% |
+
+**The gap between a genuine remote vault relative and the human noise floor is 130.4 bits.** That is a
+far stronger negative than any threshold argument.
+
+**And it shows our registered coverage bar was wrong in substance, not merely inert:** the five weakest
+true members cover **12.8-23.7%** of the profile. **A 50% coverage requirement would have discarded
+every one of them.** The criterion that works is **bit score**; coverage was the wrong axis and we
+registered it as a safeguard.
+
+### 89b. MVP paralogues exist in nature - inside the very orthogroup we built the profile from
+
+| copies per taxon | taxa |
+|---|---|
+| 1 | 111 |
+| 2 | 12 |
+| 3 | 7 |
+| 4 | 3 |
+| **6** | **1** |
+
+**23 of 134 taxa carry more than one MVP in OG 2QPP0** - including *Dictyostelium discoideum* (3),
+*Nematostella vectensis* (4), *Aplysia californica* (4) and one taxon with **six**.
+
+**So "single-copy" is a statement about the human lineage, not about the protein family.** Vault
+proteins duplicate readily across eukaryotes. **Graham's inverted-partner idea is not refuted - it is
+relocated:** the place to look for a second vault protein is a genome that has one.
+
+**And grok's hypothesised blindness is partly confirmed:** the salmon louse (taxid 72036), the one
+lineage published as having an **expanded** vault family, is **absent from OG 2QPP0 entirely** - so
+eggNOG did not place those copies here, and the profile was never trained on them.
+
+## 90. TIER 0a RUN PROPERLY: under a codon model, MVP's constraint is at housekeeping-gene level
+
+Registered at `06dd589`. `codeml` 4.9j, M0 (one omega), F3x4 codon frequencies, MAFFT protein alignment
+threaded to codons, gap-free columns only, fixed topology, **two starting omegas as the registered
+reproducibility gate**.
+
+### 90a. The gate, and the number
+
+| gene | class | **omega** | start 0.05 | start 0.5 | taxa | codons | lnL | kappa |
+|---|---|---|---|---|---|---|---|---|
+| GAPDH | essential control | **0.0516** | 0.05165 | 0.05165 | 9 | 333 | -4011.44 | 1.32 |
+| **MVP** | **subject** | **0.0635** | 0.06350 | 0.06350 | 11 | 786 | -14149.21 | 2.44 |
+| CD4 | relaxed control | **0.4304** | 0.43041 | 0.43041 | 11 | 386 | -11801.00 | 2.14 |
+
+**GATE PASS.** Registered tolerance between starting values was 0.02; all three genes agree to **five
+decimal places**, and MVP's two runs give identical likelihoods to six.
+
+**PREDICTION MET.** Registered: *"omega lands below 0.20 and above 0.02… expected to come in lower than
+pairwise NG86's 0.1118, because NG86 biases omega upward."* **0.0635 is in range and is lower.**
+
+### 90b. And the placement changed, which is the substantive result
+
+The whole reason for running this was grok's warning that **a codeml omega cannot be placed against
+NG86 pairwise control values** (§84b). So the controls were rerun under the same model, same pipeline,
+same topology.
+
+| | essential control | MVP | relaxed control | MVP's position |
+|---|---|---|---|---|
+| **NG86 pairwise** (§84b) | 0.0771 (GAPDH) | **0.1118** | 0.2166 (MX1) | **25% of the way to relaxed** |
+| **codeml M0** (here) | 0.0516 (GAPDH) | **0.0635** | 0.4304 (CD4) | **3.1% of the way to relaxed** |
+
+**Under the proper model MVP is not intermediate between the clusters. It sits essentially on top of the
+housekeeping control** - 0.0119 above GAPDH against a 0.3788 span to CD4.
+
+**So §84b understated the constraint.** The reversal grok forced there - that MVP is under strong
+purifying selection - **holds and gets stronger**: the honest statement is now that **MVP's selective
+constraint is not distinguishable from a housekeeping gene's** on this panel.
+
+**This sharpens the paradox as far as it can be sharpened by sequence alone.** A gene that is deletable
+from a mouse with no obvious phenotype, discarded outright by two major clades, and absent from
+proliferation screens in 878 cell lines, is **as constrained as GAPDH** wherever it is retained.
+
+### 90c. Limits, stated rather than buried
+
+- **One essential and one relaxed control, not four and three.** §84b's broader panel was NG86 and
+  cannot be mixed in.
+- **Unequal panels:** GAPDH lost rat (a 618-nt fragmentary transcript, dropped by the filter added in
+  §90d) and has no opossum orthologue in the dump, so it ran on 9 taxa and 333 codons against MVP's 11
+  and 786.
+- **M0 averages one omega over all sites and all branches.** It says nothing about which residues are
+  constrained, and site models were not registered and were not run.
+- **The topology groups Cetartiodactyla outside the dog/horse clade**, making Laurasiatheria
+  paraphyletic. It was fixed in advance and left alone; M0 is robust to this, but it is wrong.
+- **Transcript choice was "longest CDS carrying the gene symbol"**, which for human MVP selected a
+  **917-codon isoform** rather than the 893-residue canonical. Different isoforms across species add
+  gaps rather than bias omega, but the choice was not orthology-aware.
+- **The registered extension beyond mammals is only partly delivered**: chicken, *Xenopus* and
+  zebrafish are in, but the ~600 My question wants the tunicates, and *Ciona* is not in these dumps
+  under this gene symbol.
+
+### 90d. Two faults in our own pipeline, found by their symptoms
+
+**The tree pruner produced single-child nodes.** Dropping a taxon by regex turned `),opossum)` into
+`))`, leaving a node with one child, which **codeml rejects silently - GAPDH simply returned no
+omega.** Replaced with a real Newick parse that collapses single-child nodes on removal.
+
+**And nothing checked for fragmentary transcripts.** Rat's GAPDH came back at **618 nt against a
+~1,002 nt median**, and the resulting alignment retained only **203 gap-free codons** instead of 333.
+A median-relative length filter now drops any sequence under 70% of the set's median, and says so.
+**Both faults were invisible until a control failed to produce a number at all** - the gate caught
+them, which is what it is for.
+
+## 91. Grok audit 009 on the zipper: most of it goes, and it caught us refusing a test on bad reasoning
+
+### 91a. Verdicts, item by item
+
+**(a) the concerted-or-progressive dichotomy - GO.** *"Copy count does not set a barrier."* Thirty-nine
+interfaces at 1 kT each is ~23 kcal/mol and slow; at 0.3 kT each it is crossable; if the closed ring is
+strained the net barrier can be small. ***"The sign of the coupling is doing all the work and is
+undefended."*** Worse, the coupling can run the other way: **strain relief after one break stabilises
+the remaining 38 - an anti-zipper - and a ring under tension does that by default.** Independent
+interfaces give a binomial scatter of open contacts with **no front at all.** And the modes symmetric
+capsids actually use - **axial separation, iris dilation, a global subunit switch** - keep every
+interface equivalent throughout and are **neither hinge nor zipper.** **What survives:** a C39 ring
+gives selection no geometric reason to mark a single hinge axis, so **a localised pivot is an extra
+assumption rather than the default.**
+
+**(b) the three observations as evidence for propagation - GO.** All three are **end states** and two
+are **assembly phenotypes.** Mrazek's rolls: every subunit carries the same mutation, so it changes a
+**distributed angular parameter**, and a symmetric roll is what a **symmetry-preserving failure to
+close** looks like. *"'Removed the stop, not the pivot' discriminates nothing, because a uniformly
+weakened contact and a changed dihedral angle both keep adding units."* ***"A zipper-specific
+prediction would be an excess of incomplete arcs with a free end. The phenotype as described is the
+observation you get when that prediction is not met."*** L05 is **read backwards**: one residue
+flipping a particle is what a **cooperative two-state system** does, haemoglobin included, and a
+symmetric rosette is an end state of an iris as easily as of a completed zipper. HflK/C's nautilus is
+a **static spiral in a relative**, producible by a wedge defect plus curvature with **no time-ordered
+front.**
+
+**(c) SPLITS.** **STANDS, in these words:** *a rare, randomly phased seam is invisible in a C39/D39
+consensus map, so those maps are not evidence against a zipper* - a seam mixes **38:1 into every
+interface, a 2.6% alternate conformer.** **GO:** "unobservable" and "a property of the protocol, not a
+finding." Several traces **do** survive, and we did not look at any of them:
+- **39-fold is NCS, not a crystallographic axis**, so 4V60's 3.5 A is reached **only where the copies
+  agree.** A well-resolved waist is **positive evidence the crystallised molecules were closed.**
+  **Waist-versus-cap local resolution is available in the deposited maps and we never compared it.**
+- **A large opening is sorted into discarded 2D/3D classes rather than blurred in place**, because
+  alignment of a ~13 MDa particle is dominated by the intact shell.
+- ***"2D classes are computed before any point-group symmetry.*** A gap large enough to see in
+  projection would be there, **and you have not looked.**"
+- Per-particle B-factors are one global number and record nothing about which interface failed; local
+  resolution stays flat for a randomly phased seam, so **absence of a cold spot is the expected outcome
+  under our own model**, not evidence.
+- The metadata tags are **weaker than the use we made of them** - a genuinely symmetric particle
+  carries the same tags. **One part does stand alone: 9BW6's 156/39 = 4 chains expanded by 39
+  operators, so that deposited model has zero power to show inequality.**
+- And we **widened a map limitation into "the vault literature"**: crosslinking, exchange and
+  subunit-exchange experiments are not symmetrised by C39, and their silence is not explained by the
+  reconstruction protocol.
+
+**(d) SPLITS.** **STANDS, and §88 makes it stronger:** there is **one MVP gene**, so all 39 chains are
+the same polypeptide and **no conservation statistic can name a start subunit the gene does not
+distinguish.** An asymmetric cue does not restore it - an **on-axis** cue (cap, TEP1, a membrane
+facing one pole) picks a **pole, not one of 39 longitudes**; an off-axis cargo picks a longitude
+**epigenetically**, and that chain is still the same sequence as the other 38.
+
+### 91b. HOUSE RULE 16 - rule 15 applies to a decision NOT to run a test
+
+**GO: "a waist-residue conservation test is therefore uninformative and correctly refused."**
+
+> ***"Stochastic nucleation removes a start-site conservation test and leaves the contact test
+> untouched.*** Every opening model, zipper included, uses the same 39 waist contacts, and those
+> columns can be conserved, or not, in the 174-sequence alignment you already built. 'Uninformative by
+> construction' conflates **'which copy fires first'** with **'are the contact residues
+> constrained.'** … **House rule 15 applies to a decision not to run a test: the statistic and the
+> informative outcome have to be written down, and here the narrative replaced them.**"
+
+We refused a cheap, informative test by arguing against a **different** test. The question *"are the
+waist contact residues under constraint relative to non-contact surface residues"* is ordinary, has a
+clean null, uses an alignment we already hold, **and is informative under every opening model.**
+**Outstanding and owed.**
+
+### 91c. The hole under both sections
+
+> *"Zipper and hinge are being treated as alternative mechanisms when **a partial ring opening is a
+> hinge either way**, and this whole kinetic distinction is being asked of equilibrium maps."*
+
+**Once a contiguous arc is open and the rest is shut, the closed remainder IS the pivot.** That
+intermediate is what a stalled zipper, an asynchronous concerted opening, and a damaged barrel all look
+like. **Path-independence:** the net free energy of separating all 39 contacts is the same however they
+are ordered - **a zipper only changes the shape of the barrier**, and only if the coupling is positive
+and something pays the energy.
+
+**And nothing in (a)-(d) establishes that mature vaults open at the waist at all**, as opposed to
+failing to close during assembly: **Mrazek is an assembly phenotype; L05 and the nautilus are
+alternative oligomers.** If intact half-vaults are the dissociation product, the stable unit is a
+39-mer and the coordinate is **axial separation of two rigid halves** - concerted as easily as
+zippered.
+
+### 91d. The experiment, rebuilt
+
+**GO as specified, including "16,218 particles should suffice."** Those are the particles that
+**survived picking and 2D as intact vaults** - *"the set least likely to contain halves, nautiluses and
+open arcs."* Power: expansion gives 16,218 x 39 = **632,502 interface views**, and a one-seam particle
+contributes one open view, so an intermediate fraction f yields **f/39 of the expanded stack** - at
+f = 0.10 that is **0.26%**, at f = 0.01 it is 162 images. ***"Focused classification on a small mask
+finds a minority 'open' class on purely symmetric noise. Running it once, with this prediction, would
+manufacture the zipper."***
+
+**The rebuilt design:**
+1. **A control mask on a region that must stay closed**, which must come back empty.
+2. **The discarded 2D and 3D classes**, which is where a real opening would have gone.
+3. **The zipper-specific observable is spatial, not a class count:** open interfaces should form
+   **contiguous arcs**, with a **neighbour-correlation length longer than a binomial draw at the same
+   occupancy** - and that length should **grow under a triggered-opening condition and shrink under a
+   stabilising one.**
+4. **A second biochemical state.** ADPR-bound 11JB is one arm only if apo, or another ligand state, is
+   classified identically. *"An equilibrium snapshot cannot establish a kinetic path."*
+
+### 91e. The two cheap measurements we declined or skipped
+
+Both are informative **under either kinetic model**, and neither was run:
+1. **Conservation of the 39 waist contact residues** against the 174-sequence alignment, with
+   non-contact surface residues as the null (§91b).
+2. **Waist-versus-cap local resolution** in 4V60 and 11JB, which is in the deposited maps.

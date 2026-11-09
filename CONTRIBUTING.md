@@ -213,3 +213,20 @@ fault. **The test is not "did a clause fail" but "does the failed clause describ
 about to quote."** Write gates so that question has an obvious answer: separate the clauses that
 establish validity from the clauses that establish coverage, and say which is which **in the
 registration**.
+
+## 16. Rule 15 applies to a decision NOT to run a test
+
+Rule 15 says a gate binds inference only when the failed clause is about that estimator. **The mirror
+case is refusing to measure something.** In §87d we declined a waist-residue conservation test by
+arguing that a perfectly symmetric ring has no designated start, so no statistic could name which
+subunit fires first. True - and it answers a **different question** from the one the test would have
+asked.
+
+> *"Stochastic nucleation removes a start-site conservation test and leaves the contact test
+> untouched… 'uninformative by construction' conflates 'which copy fires first' with 'are the contact
+> residues constrained.'"*
+
+**A refusal to test is an inference and needs the same paperwork as a result.** Before declining, write
+down **the statistic you are not computing** and **the outcome that would have been informative**. If
+you cannot state both, you are not refusing a test - you are substituting a narrative for one. It is
+the cheaper failure mode, because nothing goes in the ledger to contradict later.
