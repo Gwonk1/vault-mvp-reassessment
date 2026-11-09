@@ -5275,6 +5275,11 @@ a long-protein bin); only the *inference* is void.
 
 Two signatures, both consistent with things already established about the particle:
 
+> **Better statistic available, §85a.** The z-scores below are superseded by direct counts and a
+> within-particle contrast that needs no sd: **MVP has 5 Cys in 893 residues (0.56%) against a proteome
+> median of 2.05%, while TEP1 (2.13%) and PARP4 (2.15%) are proteome-typical.** The depletion is
+> specific to the shell subunit, with the caps as the closest available comparison.
+
 **Cysteine- and methionine-poor.** A 78-mer that must open and close at a waist **cannot afford
 disulfide cross-links**, and a particle that leaves the cell as a free, unwrapped object in an
 oxidizing extracellular environment - which Jeppesen et al. 2019 showed it does - would be at risk of
