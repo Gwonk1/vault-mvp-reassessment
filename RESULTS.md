@@ -5212,7 +5212,12 @@ essential gene from a drifting one **both passed**. MVP's own seven pairs are on
 tight. Clause 3 failed on a different gene's server errors, and clause 4 counted errored calls rather
 than actual inferred absences - and we are not, in fact, inferring that MVP is absent from mouse.
 
-**A reasonable person would report 0.1118 with caveats. That is exactly what house rule 5 forbids.**
+~~**A reasonable person would report 0.1118 with caveats. That is exactly what house rule 5 forbids.**~~
+**REVERSED, §84b.** Grok audit 008: *"a gate binds inference only when the failed clause is about
+that estimator."* Clauses 3 and 4 were TEP1's pair count and a tally of HTTP timeouts - **neither
+enters the sampling distribution of MVP's omega.** 0.1118 stands as strong purifying selection. The
+reasoning below is preserved because the *shape* of it is still right; it was **applied to the wrong
+clauses.** HOUSE RULE 15.
 
 The clause was written by us, the check was implemented by us, and the check says FAIL. Arguing *now*
 that clause 4 "really meant" something narrower - having seen which clauses failed and having seen that
@@ -5229,7 +5234,9 @@ homology-with-sequence; and for the question that actually matters - selection a
 lineages that kept MVP - **a codon model on a phylogeny, not pairwise NG86**, which saturates exactly
 where the interesting comparisons live.
 
-**The conservation paradox is where the article series left it.** Forty-odd gated tests, three
+~~**The conservation paradox is where the article series left it.**~~ **SUPERSEDED, §84b: it has an
+answer, and it is the uncomfortable one we predicted - where MVP is kept, it is kept under strong
+purifying selection.** Forty-odd gated tests, three
 registered attempts at the one question both Rome's rubric and the series named, and the answer is still
 *"I don't have an answer."*
 
@@ -5256,10 +5263,13 @@ it is the first gate this project has passed on the first attempt.
 roughly **one third**. Cysteine z = **-0.76**, methionine z = **-1.18**, both among its five most
 depleted residues.
 
-That matters for the storage reading specifically. **Met is essential and both Met and Cys are among
-the most metabolically expensive residues to make.** A protein banking scarce material would
-*include* them. MVP avoids them. So composition does not just fail to support storage - **it points
-away from it.**
+That matters for the storage reading specifically. ~~**Met is essential and both Met and Cys are among the most metabolically expensive residues to
+make.** A protein banking scarce material would *include* them. MVP avoids them. So composition does
+not just fail to support storage - **it points away from it.**~~ **WITHDRAWN, §84c.** Grok: *"low
+Met/Cys is what casein-like storage looks like, and you never showed the reserve controls are
+sulfur-rich."* **We invented a second hypothesis after the fact and scored it against controls never
+tested for it.** The depletion is real and **understated** (0.33x the mean sulfur density, z near -2 in
+a long-protein bin); only the *inference* is void.
 
 ### 82c. What the composition does look built for
 
@@ -5336,9 +5346,13 @@ this dataset carries a broad downward drift. MVP moves **against** that drift, n
 **MVP is positive in 7/7. TEP1 is negative in 6/7. PARP4 is negative in 5/7.**
 
 Under a single program for a single particle, the three subunits should track. **They move in opposite
-directions across development in nearly every organ.** That is independent transcript-level evidence
-for the project's top-ranked hypothesis (**0.45**: the bare shell is the functional unit and the caps
-are optional), and it was not what the test was designed to find.
+directions across development in nearly every organ.** ~~That is independent transcript-level evidence for the project's top-ranked hypothesis (**0.45**: the
+bare shell is the functional unit and the caps are optional), and it was not what the test was designed
+to find.~~ **WITHDRAWN, §84f.** TEP1 is **reversed in cerebellum (+0.58)**, and PARP4's "5/7" counted
+kidney +0.087, liver -0.117 and ovary 0.000 as directional; **at |rho| > 0.3, PARP4 keeps three of
+seven.** What survives is weaker: MVP and TEP1 have opposite signs in most organs, which no global
+scale factor can produce - but which is also what class membership looks like when thousands of genes
+fall and the complement rises.
 
 ### 83c. TEST B - gate PASSED, prediction REFUSED
 
@@ -5417,3 +5431,146 @@ MVP up in 7/7 organs while TEP1 falls in 6/7 and PARP4 in 5/7. That was not the 
 a different claim from the timing itself. **It is NOT asserted as novel.** It needs a literature check
 against the developmental and vault-assembly literature, and that check is **outstanding, not
 performed.**
+
+## 84. Grok methods audit: one refusal reversed, one inference withdrawn, one gate declared not a gate
+
+Audit 008 (`grok/from-grok/008r-20261108-2045-grok.md`), requested as a **calculations** audit of the
+four tests. It is the sharpest of the six. **It reverses one of our refusals, withdraws one of our
+inferences, and supplies a principle we did not have.**
+
+### 84a. The principle we were missing - HOUSE RULE 15
+
+> *"The two overrides are different kinds of decision. Test 4 overrode a met threshold because the
+> threshold sits inside the null. That is the right scientific move. Test 2 honoured two failed clauses
+> that are not validity conditions of the MVP estimator.* **A gate binds inference only when the failed
+> clause is about that estimator.**"
+
+We treated all four dN/dS clauses as equally binding. **They are not the same kind of object.** Clauses
+1 and 2 test whether the instrument can separate an essential gene from a drifting one - those are
+validity conditions. **Clause 3 is TEP1's pair count and clause 4 is a tally of HTTP timeouts. Neither
+enters the sampling distribution of MVP's omega.** Honouring them was not rigour; it was a category
+error pointing the same direction rigour usually points, which is why it felt right.
+
+### 84b. REVERSED: MVP's dN/dS of 0.1118 stands, and it means strong purifying selection
+
+**§81d's refusal is withdrawn.** The correct handling is a **protocol deviation on the bundle**, MVP
+interpreted against the controls that cleared, and TEP1 left uninterpreted at n=2.
+
+**Placement:** (0.1118 - 0.0771) / (0.2166 - 0.0771) = **0.25** - one quarter of the way from GAPDH to
+MX1. **Above every essential control** (all <= 0.0771) **and below every relaxed control** (all >=
+0.2166). That is **strong purifying selection, roughly 90% of amino-acid substitutions removed**, and it
+is **outside the essential envelope**.
+
+Four corrections to how we reported it:
+- **Cow and sheep are one clade.** Collapsing them gives median **0.110**. Effective independent clades
+  are **4-5, not 7**; no iid standard error or t-test applies.
+- **NG86 biases omega upward**, since dS is the saturated class and Jukes-Cantor under-corrects it. A
+  codon model would move these pairs **down together, not reorder them** - toward GAPDH, not toward
+  MX1. **The rank is trustworthy; the absolute value is a little high.**
+- **The third digit is decorative.** Sampling SE of one pairwise omega is about **0.02**.
+- **`dS > 1.5` is lenient**; 1.0 is the defensible cut. **Internal check that saturation is not
+  manufacturing the result: opossum is the deepest pair and its omega is mid-pack, not the maximum.**
+  Saturation inflation would have put opossum on top. Dropping distant pairs moves the median *down*,
+  toward rat's 0.0850 - i.e. more constrained, not less.
+
+**So the conservation paradox has an answer after all, and it is the uncomfortable one we predicted:
+where MVP is kept, it is kept under strong purifying selection.** §81e's *"we do not get to know this"*
+was wrong - we did know it, and refused to look.
+
+### 84c. WITHDRAWN: sulfur as evidence against storage
+
+§82b argued that MVP's sulfur depletion **argues against** storage because Met is essential and
+Met/Cys are expensive, so a bank would hold them. **Grok refuses this and is right:**
+
+> *"Low Met/Cys is what casein-like storage looks like, and you never showed the reserve controls are
+> sulfur-rich. 'A bank would hold every expensive amino acid' is a different hypothesis from the one you
+> registered."*
+
+**We invented a second hypothesis after the fact and scored it against controls never tested for it.**
+The depletion is real - and **understated**: the published sd of 0.0272 matches binomial noise at L~60,
+so a z against it compresses the low end, and the distribution is bounded at 0. The length-invariant
+statement is **0.0157 / 0.0483 = 0.33x the mean sulfur density, about 14 Cys+Met in 893 residues
+against ~43 expected**; in a long-protein bin the z is plausibly **near -2**. §82c's reading - that
+Cys/Met-poor fits a particle that must open and must not crosslink - **is unaffected, because it never
+depended on the storage comparison.**
+
+**Label hazard in our own output:** `S -1.40` in §82c's residue list is **serine**; `S z = -1.20` is
+**sulfur**. Two different things one line apart.
+
+### 84d. §82's gate was non-diagnostic, and the bar was above the only valid control
+
+**FTL stores iron. ALB is a carrier. Neither is an amino-acid nitrogen bank** - two of three "reserve"
+controls were the wrong class. The only real one, **CSN1S1 at +0.83, fails the +1.0 bar we imposed on
+MVP.** *">= 2 of 3 reserves above the mean" is a coin flip; ">= 2 of 3 structural below +1 sd" is the
+default for almost any protein.* **The gate passing did not mean the assay could detect storage.**
+
+The kill still stands: length-stratification lifts MVP from +0.29 to roughly **+0.35 to +0.50**, still
+ordinary, and MVP sits about **a third of the way from the mean to casein** (0.29/0.83). **A bar at
+casein's own level would also have killed it.** And **residue-pooling is the wrong fix** - the sequence
+is fully observed, so the unit is the protein; stratify by length instead.
+
+**Val z = +2.16 is the largest of 20 correlated residue tests, where the maximum of 20 lands near 2
+under a null. It is a description, not a second hit.**
+
+### 84e. §83's "prediction met" - restated after running grok's prescribed check
+
+Grok's threat model: RPKM fixes the length-weighted sum, so if a large declining class loses read mass,
+every remaining gene is multiplied by a shared k(stage) > 1, and **Spearman scores that inflation as a
+strong rise even for a gene at 1.3x, because rho cannot see magnitude.**
+
+We ran its prescription - stage medians, per-gene fold, MVP's percentile in the gene-wise distribution,
+and a residual against the cross-gene median trajectory. **`src/chair_repair.py`, 22,879-26,390 genes
+per organ.**
+
+| check | result |
+|---|---|
+| **was the 7/7 sign test mis-centred?** | **No.** Fraction of all genes with rho>0 is **0.486** median (0.387-0.501). The null is centred. |
+| MVP fold percentile | 86.3, 91.1, 95.3, 95.4, 89.3, 91.9, 85.0 - **top decile, but >= 95th in only 2 of 7** |
+| **residual rho after removing the bulk trajectory** | **0.837, 0.844, 0.791, 0.831, 0.720, 0.790, 0.439 - above 0.5 in 6 of 7** |
+| MVP log2 fold | **+4.17 Kidney, +3.10 Ovary, +2.70 Testis, +1.97 Liver** - 4x to 18x, not a coasting 1.3x |
+| ACTB / GAPDH | now plainly **inside the declining class** (ACTB 1.4th-45.5th percentile) |
+
+**So MVP's rise is gene-specific, not a normalisation artefact.** The null is correctly centred, the
+residual survives removal of the bulk trajectory in 6 of 7 organs, and the fold changes are large.
+**But it does not clear grok's stated 95th-percentile bar in 5 of 7 organs**, so **"extreme" overstates
+it; "top decile" is the honest word.** And `log1p` was pointless - **Spearman sees only ranks**, so
+those rho values are identical to Spearman on raw RPKM.
+
+**Gate clause 2 is recorded as FAILED.** ACTB passed at |rho| 0.678 against a proliferation median of
+0.689 - **a margin of 0.011** - and the clause used `|rho|`, discarding the fact that **ACTB is signed
+*with* the proliferation markers in 7/7 organs**. 13 of 28 proliferation |rho| values sit below ACTB's.
+**ACTB is a failure that an inequality converted into a pass.** GAPDH at 0.271 is a real pass.
+
+**And "pipeline validated" is only true for declines**: there was **no positive control known to rise**,
+so the rising side of the instrument is unvalidated.
+
+### 84f. WITHDRAWN: the shell/cap dissociation
+
+§83b claimed MVP up 7/7 while TEP1 down 6/7 and PARP4 down 5/7 supports the shell-first hypothesis.
+**Not supported.** TEP1 is **reversed in cerebellum (+0.58)**, and PARP4's 5/7 counts **kidney +0.087,
+liver -0.117 and ovary 0.000** as directional. **Require |rho| > 0.3 and PARP4 keeps three of seven.**
+The repair run confirms it: PARP4 is **+0.168 Kidney, +0.133 Ovary, -0.270 Liver, -0.518 Testis** -
+mixed and small.
+
+**What survives is exploratory and weaker:** MVP and TEP1 have opposite signs in most organs; PARP4 is
+mixed. A global scale factor cannot produce opposite signs, so that much is real - but it is also what
+class membership looks like when thousands of genes fall and the complement rises.
+
+### 84g. Test 4 - the refusal was right, and the reasoning should be sharper
+
+Grok upholds it and supplies the arithmetic we should have used: **an exact hexamer match at identity p
+has probability ~p^6 - about 0.53 at 90% identity, 0.016 at 50%, and 7x10^-4 at 30%.** So **a diverged
+paralogue never enters the top 40**, and the prefilter keeps recent duplicates and compositional
+accidents. TEP1's WD40 hits passed only because exact short motifs survived - a special case, not a
+remote-homology search.
+
+Also: **the floor sits inside the null.** The best local alignment of an 893-residue Val/Glu-rich query
+against 20,211 proteins routinely clears 20% over 200 aa; we applied **no correction for 20,211
+searches**, and `PairwiseAligner` applies neither SEG nor composition-based statistics. **GAS2L1's 251
+aligned residues are 28% of MVP's length** - even a real domain hit would not make it a paralogue of
+the protein.
+
+**What should have been run:** a profile HMM from the mammal alignment we already had, searched with
+`hmmsearch`/`jackhmmer` at a pre-registered E-value with composition-based statistics on; or a
+structure search of the vault fold (Foldseek, DALI, HHpred). **Rank by bit score, never by percent
+identity**, and require coverage of a large fraction of the query.

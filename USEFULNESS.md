@@ -31,7 +31,7 @@ instrument or a design that will mislead you, and here is what to do instead." N
 anyone what a vault does.
 
 **And the most useful output of the project is not on this list at all**, because the list was scoped to
-vaults: the **fourteen house rules and two enforced gates** in `CONTRIBUTING.md` and
+vaults: the **fifteen house rules and two enforced gates** in `CONTRIBUTING.md` and
 `src/check_retractions.py`. One-way gates, a control with no power to fail, a refusal band wider than
 its estimator, three criteria that measured the wrong quantity, a degenerate matching scheme read for
 two sections, the same indexing bug three times, one correction propagated through four documents one at

@@ -18,3 +18,6 @@ mistook\s+the\s+former\s+for\s+the\s+latter	§55	slogan withdrawn
 three\s+(?:distinct\s+)?(?:subunit\s+)?lifetimes	§61b	compatibility never tested
 sealed\s+(?:SPFH[- ]shoulder\s+)?(?:nucleotide\s+)?pocket	§73	pocket is lumen-facing, inter-subunit, created by assembly; also published by Lodwick 2025
 sealed\s+SPFH	§73	same; the 78 'sealed' pockets were never sealed
+we do not get to know this	§84b	refusal reversed: 0.1118 stands as strong purifying selection
+points\s+away\s+from\s+it	§84c	sulfur-as-anti-storage inference withdrawn; a second hypothesis invented after the fact
+independent\s+transcript-level\s+evidence	§84f	shell/cap dissociation withdrawn; PARP4 mixed and small

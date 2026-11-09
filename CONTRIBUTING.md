@@ -194,3 +194,22 @@ property that is actually decidable there. For logs that is a banner - `SUPERSED
 
 **Enumerate the cases before shipping the tightening.** We would have shipped `(?!\d)` as an
 improvement otherwise. See §77.
+
+## 15. A gate binds inference only when the failed clause is about that estimator
+
+The dN/dS gate had four clauses. Clauses 1 and 2 tested whether the instrument could separate an
+essential gene from a drifting one - **validity conditions**. Clause 3 was a different gene's pair
+count and clause 4 was a tally of HTTP timeouts. **Neither enters the sampling distribution of the
+subject's estimate.**
+
+We treated all four as equally binding and refused a result that two passing validity clauses had
+earned (§81d, reversed in §84b). **That was not rigour. It was a category error that happened to point
+the same way rigour usually points**, which is exactly why it felt virtuous.
+
+**The rule has a sharp edge and it cuts both ways.** Overriding a *met* threshold because the threshold
+sits inside the null is correct (§84g: a 20%-identity floor over 200 residues is noise for an 893-aa
+query against 20,211 proteins). Overriding a *failed* clause because you dislike the answer is the §41
+fault. **The test is not "did a clause fail" but "does the failed clause describe the estimator I am
+about to quote."** Write gates so that question has an obvious answer: separate the clauses that
+establish validity from the clauses that establish coverage, and say which is which **in the
+registration**.

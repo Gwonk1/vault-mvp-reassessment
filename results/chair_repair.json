@@ -1,0 +1,492 @@
+{
+ "Brain": {
+  "genes": 24198,
+  "frac_rho_pos": 0.492,
+  "median_fold": -0.079,
+  "rows": {
+   "MVP": {
+    "rho": 0.813,
+    "rho_pct": 92.4,
+    "fold": 2.681,
+    "fold_pct": 86.3,
+    "resid_rho": 0.837
+   },
+   "TEP1": {
+    "rho": -0.689,
+    "rho_pct": 16.4,
+    "fold": -1.315,
+    "fold_pct": 23.7,
+    "resid_rho": -0.697
+   },
+   "PARP4": {
+    "rho": -0.79,
+    "rho_pct": 10.0,
+    "fold": -3.128,
+    "fold_pct": 6.3,
+    "resid_rho": -0.781
+   },
+   "MKI67": {
+    "rho": -0.959,
+    "rho_pct": 0.1,
+    "fold": -12.059,
+    "fold_pct": 1.0,
+    "resid_rho": -0.939
+   },
+   "TOP2A": {
+    "rho": -0.955,
+    "rho_pct": 0.2,
+    "fold": -12.518,
+    "fold_pct": 1.0,
+    "resid_rho": -0.953
+   },
+   "PCNA": {
+    "rho": -0.823,
+    "rho_pct": 7.9,
+    "fold": -3.461,
+    "fold_pct": 5.1,
+    "resid_rho": -0.832
+   },
+   "CCNB1": {
+    "rho": -0.767,
+    "rho_pct": 11.5,
+    "fold": -4.235,
+    "fold_pct": 3.4,
+    "resid_rho": -0.815
+   },
+   "ACTB": {
+    "rho": -0.77,
+    "rho_pct": 11.3,
+    "fold": -0.94,
+    "fold_pct": 30.6,
+    "resid_rho": -0.732
+   },
+   "GAPDH": {
+    "rho": 0.47,
+    "rho_pct": 71.9,
+    "fold": 0.114,
+    "fold_pct": 54.2,
+    "resid_rho": 0.429
+   }
+  }
+ },
+ "Cerebellum": {
+  "genes": 25153,
+  "frac_rho_pos": 0.501,
+  "median_fold": -0.036,
+  "rows": {
+   "MVP": {
+    "rho": 0.872,
+    "rho_pct": 95.0,
+    "fold": 3.373,
+    "fold_pct": 91.1,
+    "resid_rho": 0.844
+   },
+   "TEP1": {
+    "rho": 0.696,
+    "rho_pct": 82.2,
+    "fold": 0.412,
+    "fold_pct": 60.9,
+    "resid_rho": 0.598
+   },
+   "PARP4": {
+    "rho": -0.878,
+    "rho_pct": 5.1,
+    "fold": -2.996,
+    "fold_pct": 7.1,
+    "resid_rho": -0.89
+   },
+   "MKI67": {
+    "rho": -0.947,
+    "rho_pct": 0.7,
+    "fold": -12.951,
+    "fold_pct": 1.0,
+    "resid_rho": -0.968
+   },
+   "TOP2A": {
+    "rho": -0.958,
+    "rho_pct": 0.4,
+    "fold": -11.534,
+    "fold_pct": 1.1,
+    "resid_rho": -0.98
+   },
+   "PCNA": {
+    "rho": -0.603,
+    "rho_pct": 22.2,
+    "fold": -2.388,
+    "fold_pct": 10.1,
+    "resid_rho": -0.595
+   },
+   "CCNB1": {
+    "rho": -0.878,
+    "rho_pct": 5.1,
+    "fold": -3.788,
+    "fold_pct": 4.8,
+    "resid_rho": -0.907
+   },
+   "ACTB": {
+    "rho": -0.923,
+    "rho_pct": 1.9,
+    "fold": -1.879,
+    "fold_pct": 14.2,
+    "resid_rho": -0.929
+   },
+   "GAPDH": {
+    "rho": -0.295,
+    "rho_pct": 37.0,
+    "fold": -0.847,
+    "fold_pct": 30.0,
+    "resid_rho": -0.284
+   }
+  }
+ },
+ "Heart": {
+  "genes": 23288,
+  "frac_rho_pos": 0.387,
+  "median_fold": -0.38,
+  "rows": {
+   "MVP": {
+    "rho": 0.77,
+    "rho_pct": 96.0,
+    "fold": 3.15,
+    "fold_pct": 95.3,
+    "resid_rho": 0.791
+   },
+   "TEP1": {
+    "rho": -0.467,
+    "rho_pct": 32.5,
+    "fold": -0.646,
+    "fold_pct": 43.2,
+    "resid_rho": -0.216
+   },
+   "PARP4": {
+    "rho": -0.518,
+    "rho_pct": 28.3,
+    "fold": -0.879,
+    "fold_pct": 37.8,
+    "resid_rho": -0.3
+   },
+   "MKI67": {
+    "rho": -0.811,
+    "rho_pct": 5.6,
+    "fold": -7.034,
+    "fold_pct": 11.7,
+    "resid_rho": -0.819
+   },
+   "TOP2A": {
+    "rho": -0.725,
+    "rho_pct": 11.6,
+    "fold": -7.799,
+    "fold_pct": 11.6,
+    "resid_rho": -0.672
+   },
+   "PCNA": {
+    "rho": -0.744,
+    "rho_pct": 10.0,
+    "fold": -1.5,
+    "fold_pct": 26.5,
+    "resid_rho": -0.649
+   },
+   "CCNB1": {
+    "rho": -0.888,
+    "rho_pct": 1.8,
+    "fold": -5.006,
+    "fold_pct": 12.6,
+    "resid_rho": -0.83
+   },
+   "ACTB": {
+    "rho": -0.277,
+    "rho_pct": 45.5,
+    "fold": -0.576,
+    "fold_pct": 45.0,
+    "resid_rho": -0.126
+   },
+   "GAPDH": {
+    "rho": 0.258,
+    "rho_pct": 73.3,
+    "fold": 1.197,
+    "fold_pct": 81.9,
+    "resid_rho": 0.318
+   }
+  }
+ },
+ "Kidney": {
+  "genes": 25057,
+  "frac_rho_pos": 0.465,
+  "median_fold": -0.137,
+  "rows": {
+   "MVP": {
+    "rho": 0.829,
+    "rho_pct": 95.4,
+    "fold": 4.174,
+    "fold_pct": 95.4,
+    "resid_rho": 0.831
+   },
+   "TEP1": {
+    "rho": -0.35,
+    "rho_pct": 32.8,
+    "fold": -0.663,
+    "fold_pct": 36.1,
+    "resid_rho": -0.238
+   },
+   "PARP4": {
+    "rho": 0.168,
+    "rho_pct": 62.3,
+    "fold": 0.132,
+    "fold_pct": 58.1,
+    "resid_rho": 0.24
+   },
+   "MKI67": {
+    "rho": -0.858,
+    "rho_pct": 3.4,
+    "fold": -6.208,
+    "fold_pct": 7.8,
+    "resid_rho": -0.891
+   },
+   "TOP2A": {
+    "rho": -0.827,
+    "rho_pct": 5.0,
+    "fold": -7.161,
+    "fold_pct": 7.4,
+    "resid_rho": -0.808
+   },
+   "PCNA": {
+    "rho": -0.75,
+    "rho_pct": 8.7,
+    "fold": -1.314,
+    "fold_pct": 23.4,
+    "resid_rho": -0.738
+   },
+   "CCNB1": {
+    "rho": -0.872,
+    "rho_pct": 2.9,
+    "fold": -4.193,
+    "fold_pct": 9.4,
+    "resid_rho": -0.843
+   },
+   "ACTB": {
+    "rho": -0.519,
+    "rho_pct": 22.5,
+    "fold": -0.411,
+    "fold_pct": 42.9,
+    "resid_rho": -0.515
+   },
+   "GAPDH": {
+    "rho": -0.243,
+    "rho_pct": 39.3,
+    "fold": 0.092,
+    "fold_pct": 57.1,
+    "resid_rho": -0.261
+   }
+  }
+ },
+ "Liver": {
+  "genes": 22879,
+  "frac_rho_pos": 0.486,
+  "median_fold": -0.166,
+  "rows": {
+   "MVP": {
+    "rho": 0.678,
+    "rho_pct": 91.3,
+    "fold": 1.971,
+    "fold_pct": 89.3,
+    "resid_rho": 0.72
+   },
+   "TEP1": {
+    "rho": -0.116,
+    "rho_pct": 44.0,
+    "fold": -0.364,
+    "fold_pct": 43.5,
+    "resid_rho": -0.125
+   },
+   "PARP4": {
+    "rho": -0.27,
+    "rho_pct": 34.4,
+    "fold": -0.854,
+    "fold_pct": 29.0,
+    "resid_rho": -0.255
+   },
+   "MKI67": {
+    "rho": -0.528,
+    "rho_pct": 17.9,
+    "fold": -5.993,
+    "fold_pct": 5.5,
+    "resid_rho": -0.516
+   },
+   "TOP2A": {
+    "rho": -0.574,
+    "rho_pct": 14.6,
+    "fold": -6.073,
+    "fold_pct": 5.4,
+    "resid_rho": -0.538
+   },
+   "PCNA": {
+    "rho": -0.522,
+    "rho_pct": 18.3,
+    "fold": -1.079,
+    "fold_pct": 23.9,
+    "resid_rho": -0.523
+   },
+   "CCNB1": {
+    "rho": -0.525,
+    "rho_pct": 18.2,
+    "fold": -5.396,
+    "fold_pct": 5.7,
+    "resid_rho": -0.508
+   },
+   "ACTB": {
+    "rho": -0.781,
+    "rho_pct": 4.1,
+    "fold": -1.387,
+    "fold_pct": 18.8,
+    "resid_rho": -0.798
+   },
+   "GAPDH": {
+    "rho": -0.768,
+    "rho_pct": 4.7,
+    "fold": -0.989,
+    "fold_pct": 25.8,
+    "resid_rho": -0.779
+   }
+  }
+ },
+ "Ovary": {
+  "genes": 26070,
+  "frac_rho_pos": 0.496,
+  "median_fold": -0.01,
+  "rows": {
+   "MVP": {
+    "rho": 0.79,
+    "rho_pct": 93.9,
+    "fold": 3.096,
+    "fold_pct": 91.9,
+    "resid_rho": 0.79
+   },
+   "TEP1": {
+    "rho": -0.804,
+    "rho_pct": 3.6,
+    "fold": -0.838,
+    "fold_pct": 21.0,
+    "resid_rho": -0.846
+   },
+   "PARP4": {
+    "rho": 0.133,
+    "rho_pct": 58.0,
+    "fold": 0.157,
+    "fold_pct": 56.5,
+    "resid_rho": 0.14
+   },
+   "MKI67": {
+    "rho": -0.636,
+    "rho_pct": 13.0,
+    "fold": -1.298,
+    "fold_pct": 12.6,
+    "resid_rho": -0.636
+   },
+   "TOP2A": {
+    "rho": -0.154,
+    "rho_pct": 41.2,
+    "fold": -0.322,
+    "fold_pct": 37.1,
+    "resid_rho": -0.161
+   },
+   "PCNA": {
+    "rho": -0.007,
+    "rho_pct": 49.7,
+    "fold": -0.035,
+    "fold_pct": 49.1,
+    "resid_rho": 0.119
+   },
+   "CCNB1": {
+    "rho": 0.406,
+    "rho_pct": 73.4,
+    "fold": 0.017,
+    "fold_pct": 51.5,
+    "resid_rho": 0.308
+   },
+   "ACTB": {
+    "rho": -0.867,
+    "rho_pct": 1.4,
+    "fold": -1.068,
+    "fold_pct": 16.7,
+    "resid_rho": -0.916
+   },
+   "GAPDH": {
+    "rho": -0.469,
+    "rho_pct": 22.6,
+    "fold": -0.564,
+    "fold_pct": 28.8,
+    "resid_rho": -0.392
+   }
+  }
+ },
+ "Testis": {
+  "genes": 26390,
+  "frac_rho_pos": 0.439,
+  "median_fold": -0.273,
+  "rows": {
+   "MVP": {
+    "rho": 0.449,
+    "rho_pct": 77.4,
+    "fold": 2.701,
+    "fold_pct": 85.0,
+    "resid_rho": 0.439
+   },
+   "TEP1": {
+    "rho": -0.534,
+    "rho_pct": 22.9,
+    "fold": -2.508,
+    "fold_pct": 13.8,
+    "resid_rho": -0.591
+   },
+   "PARP4": {
+    "rho": -0.518,
+    "rho_pct": 24.1,
+    "fold": -1.923,
+    "fold_pct": 20.0,
+    "resid_rho": -0.536
+   },
+   "MKI67": {
+    "rho": -0.753,
+    "rho_pct": 6.5,
+    "fold": -4.253,
+    "fold_pct": 6.4,
+    "resid_rho": -0.756
+   },
+   "TOP2A": {
+    "rho": -0.594,
+    "rho_pct": 18.2,
+    "fold": -1.567,
+    "fold_pct": 25.1,
+    "resid_rho": -0.595
+   },
+   "PCNA": {
+    "rho": -0.582,
+    "rho_pct": 19.1,
+    "fold": -0.254,
+    "fold_pct": 50.4,
+    "resid_rho": -0.581
+   },
+   "CCNB1": {
+    "rho": -0.766,
+    "rho_pct": 5.8,
+    "fold": -1.159,
+    "fold_pct": 32.2,
+    "resid_rho": -0.781
+   },
+   "ACTB": {
+    "rho": -0.857,
+    "rho_pct": 1.9,
+    "fold": -1.989,
+    "fold_pct": 19.2,
+    "resid_rho": -0.853
+   },
+   "GAPDH": {
+    "rho": -0.66,
+    "rho_pct": 12.7,
+    "fold": -0.918,
+    "fold_pct": 36.8,
+    "resid_rho": -0.662
+   }
+  }
+ }
+}
