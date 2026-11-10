@@ -7264,8 +7264,8 @@ it is retained. **Nothing in this work explains that.**
 
 ### 104c. The honest count of the record
 
-**490 ledger rows** - **487 with numeric ids 1-493** (89-90 and 391-394 unused, house rule 3)
-plus **3 letter-suffixed** (13a, 26b, 34b) - **68 carrying a strikethrough**. **106 numbered sections** here. **51 pre-registrations.** **20 house rules**, each written after
+**493 ledger rows** - **490 with numeric ids 1-496** (89-90 and 391-394 unused, house rule 3)
+plus **3 letter-suffixed** (13a, 26b, 34b) - **69 carrying a strikethrough**. **107 numbered sections** here. **52 pre-registrations.** **20 house rules**, each written after
 breaking the thing it describes. **Twelve adversarial audit rounds** in `grok/`, verbatim both ways.
 **49 registered retraction patterns** and **8 standing qualifications**, both machine-checked,
 plus a check that recomputes every count on this line (house rule 20).
@@ -7377,3 +7377,76 @@ measurement, produces a second peak. It does not interpret heavy versus medium S
 disassembly. The paper those channels come from is about apoptosis, and that context is why a reader
 should not generalise one project's profiles to the particle at rest. The contact question remains
 where §33 and the later audits left it.
+
+## 107. The steroid-sulfate refinement of the adrenal reading is KILLED by its own pre-registered bar, and the residual points somewhere else
+
+`SULFATE_PREREGISTRATION.md`, committed at `65c9723` with no result in it. The hypothesis was raised
+in conversation on 2026-11-10 and killed the same day. **It was mine, arrived at by reading a ranked
+list for a story, which is fault #59/#60/#64/#70/#90, and the registration said so before the run.**
+
+**Why it was worth a test rather than a sentence.** Argon's test A6 found the apo human lumen carries
+**+37.60 mV at the SPFH keyhole**, the highest positive potential in the whole lumen, an anion trap;
+and argon's `007r` had excluded *"steroidogenesis or NADPH biosynthesis per se"* because **placenta is
+massively steroidogenic and ranks #38/51** for MVP. Adrenal cortex *sulfates* steroids (SULT2A1,
+DHEA-S) and placenta *de*-sulfates them (STS). So a steroid-sulfate load predicted the exact pattern
+that killed the generic steroid reading, which is the only asymmetry that made it testable.
+
+**Gate: PASSED cleanly, which is what makes the negative worth anything.** SULT2A1 puts adrenal at
+**rank 2 of 51**, STS puts placenta at **rank 1 of 51** — textbook, so this file can see the contrast
+if MVP follows it.
+
+**The asymmetry the design rested on EXISTS, and at two tissues MVP appears to follow the sulfating
+side:**
+
+| gene | adrenal rank (nTPM) | placenta rank (nTPM) |
+|---|---|---|
+| **MVP** | **#1** (176.2) | #38 (35.7) |
+| SULT2A1 | #2 (225.9) | #25 (0.1) |
+| SULT2B1 | #40 (0.2) | #19 (1.4) |
+| **STS** | #24 (4.4) | **#1** (24.5) |
+| PAPSS2 | **#1** (132.1) | #7 (54.9) |
+
+**Primary: KILLED.** Against MVP's genome-wide co-expression distribution over **16,930 expressed
+genes x 51 tissues**, the two registered sulfotransferases sit at the **71.31st (SULT2A1)** and
+**51.64th (SULT2B1)** percentiles. The pre-registered bar was the 80th for either. Both are below it,
+so the kill condition fired as written.
+
+**And the GI-matched control makes it worse rather than rescuing it.** Of 4,236 genes whose own
+51-tissue profile loads on the GI tissues as SULT2A1's does, the MVP-co-expression percentile IQR is
+**[57.1, 90.1] with median 75.8.** SULT2A1's 71.31 is **inside that interquartile range and below its
+median**: a random GI-weighted gene tracks MVP slightly better than the adrenal sulfotransferase does.
+**The two-tissue table above is therefore the flattering view and the nulled statistic is the real
+one** — stated in the same breath, per house rule 19, because the table is the kind of thing that
+otherwise travels on its own.
+
+**The de-sulfation side is not worse, it is better.** `ARSA` **89.00** and `GNS` **88.88** both exceed
+SULT2A1's 71.31. The registered STS-specific clause did not fire (STS 62.69 is below SULT2A1), so the
+primary was killed by the low-percentile limb, not the contrast limb — but there is no sulfo-versus-
+de-sulfo separation here at all. **ARSA and GNS are lysosomal sulfatases, which is argon's rank-1
+endolysosomal hypothesis (`007r`), not this one.** The residual in a test of my hypothesis supports
+somebody else's.
+
+**The strongest unreconciled positive number in this section, parked and NOT promoted: `PAPSS2` at
+the 99.91st percentile, rank 16 of 16,929, rho +0.781, and adrenal #1 of 51 — MVP's own top tissue.**
+PAPSS2 makes the universal sulfate donor PAPS. **This is the COP1-at-27-fold situation (#480): a large
+number sitting in the support space of a hypothesis whose kill condition has already fired, with no
+exclusion rule applied to it.** It is recorded as unreconciled, not as a finding, and **no probability
+is attached to anything on the strength of it.** The obvious confound is named now: PAPSS2 is itself a
+GI-and-adrenal gene and the matched null above spans to 90.1, so even 99.91 needs the class control
+run against *it* before it means anything.
+
+**`SULT1E1` at 81.75 clears the 80th percentile.** It is not a rescue and may not be used as one: the
+registration named SULT2A1 and SULT2B1, and substituting the panel member that happened to clear the
+bar is the fault this project's registrations exist to prevent.
+
+**Deviation, recorded.** §22 reports "15,736 expressed genes" but **no script implementing that filter
+is in the repository**, so it could not be reused. The filter here is defined in `src/sulfate.py` —
+nTPM >= 1 in at least 5 of 51 tissues — and yields **16,930**. The two counts are not comparable and
+no statement in this section depends on the difference.
+
+**What this section does not say.** It does not touch the anion-trap measurement itself, which is
+argon's and stands. It does not say vaults have nothing to do with sulfated amphiphiles: tissue
+co-expression is not binding, transcript is not activity, and **the measurement that would settle it
+is a binding assay against purified vaults, which does not exist publicly.** It says that the one
+cheap instrument available could see the sulfating-versus-de-sulfating contrast, and MVP did not
+follow it beyond what its tissue class already gives.

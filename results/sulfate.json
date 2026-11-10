@@ -1,0 +1,136 @@
+{
+ "filter": {
+  "deviation": "the \u00a722 filter could not be reused; no script implements it",
+  "expressed_genes": 16930,
+  "min_ntpm": 1.0,
+  "min_tissues": 5,
+  "n_tissues": 51
+ },
+ "gate": {
+  "STS_placenta_rank": 1,
+  "SULT2A1_adrenal_rank": 2,
+  "passed": true,
+  "sts_pass": true,
+  "sult2a1_pass": true
+ },
+ "gi_matched_control": {
+  "SULT2A1_inside_iqr": true,
+  "SULT2B1_inside_iqr": false,
+  "gi_corr_cutoff": 0.1635,
+  "matched_n": 4236,
+  "matched_pct_median": 75.84,
+  "matched_pct_q1": 57.12,
+  "matched_pct_q3": 90.12
+ },
+ "primary": {
+  "ARSA": {
+   "percentile": 89.0,
+   "rank": 1863,
+   "rho": 0.5075
+  },
+  "ARSB": {
+   "percentile": 58.18,
+   "rank": 7079,
+   "rho": 0.2199
+  },
+  "GALNS": {
+   "percentile": 51.45,
+   "rank": 8219,
+   "rho": 0.1589
+  },
+  "GNS": {
+   "percentile": 88.88,
+   "rank": 1882,
+   "rho": 0.5064
+  },
+  "PAPSS1": {
+   "percentile": 24.61,
+   "rank": 12763,
+   "rho": -0.1244
+  },
+  "PAPSS2": {
+   "percentile": 99.91,
+   "rank": 16,
+   "rho": 0.7806
+  },
+  "SLC35B2": {
+   "percentile": 67.76,
+   "rank": 5458,
+   "rho": 0.3058
+  },
+  "SLC35B3": {
+   "percentile": 86.09,
+   "rank": 2355,
+   "rho": 0.4777
+  },
+  "STS": {
+   "percentile": 62.69,
+   "rank": 6317,
+   "rho": 0.2617
+  },
+  "SULT1A1": {
+   "percentile": 64.19,
+   "rank": 6062,
+   "rho": 0.2759
+  },
+  "SULT1A3": {
+   "percentile": 65.65,
+   "rank": 5815,
+   "rho": 0.2883
+  },
+  "SULT1E1": {
+   "percentile": 81.75,
+   "rank": 3090,
+   "rho": 0.4337
+  },
+  "SULT2A1": {
+   "percentile": 71.31,
+   "rank": 4857,
+   "rho": 0.3366
+  },
+  "SULT2B1": {
+   "percentile": 51.64,
+   "rank": 8187,
+   "rho": 0.1608
+  }
+ },
+ "primary_verdict": {
+  "KILLED": true,
+  "killed_both_below_80": true,
+  "killed_sts_above_both": false
+ },
+ "secondary_asymmetry": {
+  "MVP": {
+   "adrenal_ntpm": 176.2,
+   "adrenal_rank": 1,
+   "placenta_ntpm": 35.7,
+   "placenta_rank": 38
+  },
+  "PAPSS2": {
+   "adrenal_ntpm": 132.1,
+   "adrenal_rank": 1,
+   "placenta_ntpm": 54.9,
+   "placenta_rank": 7
+  },
+  "STS": {
+   "adrenal_ntpm": 4.4,
+   "adrenal_rank": 24,
+   "placenta_ntpm": 24.5,
+   "placenta_rank": 1
+  },
+  "SULT2A1": {
+   "adrenal_ntpm": 225.9,
+   "adrenal_rank": 2,
+   "placenta_ntpm": 0.1,
+   "placenta_rank": 25
+  },
+  "SULT2B1": {
+   "adrenal_ntpm": 0.2,
+   "adrenal_rank": 40,
+   "placenta_ntpm": 1.4,
+   "placenta_rank": 19
+  },
+  "asymmetry_exists": true,
+  "design_killed": false
+ }
+}
