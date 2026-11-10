@@ -32,9 +32,22 @@ addenda — nothing is deleted, but the current state should be readable first.
 > influenza study shares no author with any other (§76b). Read it as **one programme plus one
 > independent replication**, not six independent results —
 > IKK-NF-kB, calcineurin-NFATc1, STAT3, Parkin-mediated mitophagy, adaptive immunity on influenza
-> rechallenge — and **every published phenotype is conditional**, absent at baseline. Those
+> rechallenge — and **five of six published phenotypes are conditional**, absent at baseline, the
+> exception being *Theranostics* 2021's unchallenged-knockout bone phenotype (§76c, ledger #344; this
+> paragraph read "every published phenotype" until #493 and that was the claim #344 retracted). Those
 > interactions are transient and low-stoichiometry: what co-abundance, co-fractionation and wash-based
 > IP recover worst. **So no negative in this project is evidence against vault function.** §70.
+>
+> **And the set of six was not the whole literature (ledger #491).** A seventh paper sits outside it in a
+> different evidence class: **Rayo et al., *PNAS* 2021;118(12):e2012529118 (PMID 33723037, PMC8000436)**
+> identifies MVP by **photoaffinity probe** as a target of the *P. aeruginosa* quorum-sensing signal
+> **3-oxo-C12-homoserine lactone**, with AHL-driven translocation into lipid rafts and p38-mediated
+> attenuation of TRAIL apoptosis. **It does not add an independent group and the discount above is
+> unchanged:** its 25 authors include **Wiemer**, already counted on 3 of 6 of the Ben set, and
+> **Kickhoefer and Rome**, so the influenza study remains the only paper sharing no author with any
+> other. What it adds is **the first published candidate ligand class for ledger #18**, whose stated
+> weakness was that "absorb what?" had no answer at all. **We have not read it** — the abstract record
+> only — and a high labelling ratio on an abundant raft-translocating protein is not a binding site.
 
 ---
 

@@ -7264,7 +7264,7 @@ it is retained. **Nothing in this work explains that.**
 
 ### 104c. The honest count of the record
 
-**487 ledger rows** - **484 with numeric ids 1-490** (89-90 and 391-394 unused, house rule 3)
+**490 ledger rows** - **487 with numeric ids 1-493** (89-90 and 391-394 unused, house rule 3)
 plus **3 letter-suffixed** (13a, 26b, 34b) - **68 carrying a strikethrough**. **106 numbered sections** here. **51 pre-registrations.** **20 house rules**, each written after
 breaking the thing it describes. **Twelve adversarial audit rounds** in `grok/`, verbatim both ways.
 **49 registered retraction patterns** and **8 standing qualifications**, both machine-checked,

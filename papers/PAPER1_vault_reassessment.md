@@ -23,7 +23,7 @@
 reviewed the manuscript adversarially against the committed data, in three rounds; between them they
 struck or qualified more than a dozen claims made here, and those reversals are recorded in place
 rather than quietly removed. All hypotheses were committed to a timestamped git history before the
-relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (**487 rows**: 484 numeric ids 1-490 with 89-90
+relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (**490 rows**: 487 numeric ids 1-493 with 89-90
 and 391-394 unused, plus 3 letter-suffixed — see house rule 3) and `RESULTS.md` (**106 numbered sections**). **Twelve
 adversarial audit rounds sit in `grok/`**, verbatim in both directions. **The repository is public**
 at `https://github.com/Gwonk1/vault-mvp-reassessment`. Ledger #87 was right to strike a public-history
