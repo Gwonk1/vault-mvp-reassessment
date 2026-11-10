@@ -6,8 +6,8 @@ proteomic, genomic, structural and comparative data. Each test carried a positiv
 gate and an explicit kill condition written down and committed before the relevant data
 were read.
 
-**Most of the hypotheses failed, including ours. That is the result.** Of **493** ledger
-rows, **69 carry a strikethrough** — claims withdrawn, usually by us, often by an
+**Most of the hypotheses failed, including ours. That is the result.** Of **496** ledger
+rows, **70 carry a strikethrough** — claims withdrawn, usually by us, often by an
 adversarial reviewer. **Twelve audit rounds** are recorded verbatim in `grok/`; the last one
 rewrote the file this README points you at first.
 
@@ -39,10 +39,10 @@ check invalidated the third control as well. The biology never changed. RESULTS 
 |---|---|
 | [`papers/PAPER1_vault_reassessment.md`](papers/PAPER1_vault_reassessment.md) | The reassessment: what survived, what did not, and the gate scorecard |
 | [`papers/PAPER2_bench_experiments.md`](papers/PAPER2_bench_experiments.md) | **Fifteen** wet-lab experiments plus **Tier 0** (two free computations to run first), ranked by what they decide, each with a positive control and a kill condition |
-| [`LEDGER.md`](LEDGER.md) | Every idea raised, struck, or still standing — **493 rows** (490 numeric ids 1-496, with 89-90 and 391-394 unused, plus 3 letter-suffixed; house rule 3), with the reason and the file that settled it |
-| [`RESULTS.md`](RESULTS.md) | Full per-test results and corrections — **107 numbered sections** |
+| [`LEDGER.md`](LEDGER.md) | Every idea raised, struck, or still standing — **496 rows** (493 numeric ids 1-499, with 89-90 and 391-394 unused, plus 3 letter-suffixed; house rule 3), with the reason and the file that settled it |
+| [`RESULTS.md`](RESULTS.md) | Full per-test results and corrections — **108 numbered sections** |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | The **20 house rules**, and the fault that produced each. **Rule 19 is the one that matters most** — a repair is not real until the old sentence's job is withdrawn |
-| `*_PREREGISTRATION.md` | **52 files**: the predictions, gates and kill conditions, as written before the data |
+| `*_PREREGISTRATION.md` | **53 files**: the predictions, gates and kill conditions, as written before the data |
 | `grok/`, `argon/`, `channel/` | Adversarial review correspondence, verbatim |
 
 ## The correction that reframes everything below

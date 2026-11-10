@@ -184,8 +184,20 @@ error rate, and the vault may be unusual in ways that matter: unusually abundant
 with one member (TEP1) that is **also a telomerase subunit** and therefore genuinely bimodal in any
 profile-based method.
 
-**Two of the three rest on single resources** (CFdb; one half-life dataset). The co-abundance result is
-**five slices of one resource, which is one production and not five replications.**
+**The co-elution and half-life limbs rest on single resources** (CFdb; one half-life dataset). **The
+co-abundance limb no longer does, and it is now the only one of the three carrying a positive
+control.** It originally rested on **five slices of one resource, which is one production and not five
+replications** — that sentence applied to the regulon-residualised CCLE lineage result alone and is
+kept because it is still true of it. A **second resource** has since been run on the same question
+(§108): in HPA consensus bulk tissue, 16,930 expressed genes across 51 tissues, each candidate scored
+against a null of the 200 genes most similar to it in tissue profile, **a textbook stoichiometric
+subunit (PARP4) reaches only the 74.50th percentile of its own tissue class and the second subunit
+(TEP1) the 36.00th, while a metabolic enzyme that is not a vault component reaches the 95.50th** — so
+the ranking is not ordering by complex membership, and this limb's failure is now demonstrated with a
+known positive rather than inferred from what survived residualisation. **Its own limits, in the same
+breath: still n = 1 particle, still transcript rather than protein, still bulk tissue rather than cell
+type, and a profile-matched null is matched on the quantity being controlled for, so it can show a
+correlation is unremarkable and cannot establish that a remarkable one is physical.**
 
 **And the three failures are not three independent votes.** Co-elution and co-abundance are both
 profile-correlation methods, on different axes; a protein that is bimodal for one underlying reason can

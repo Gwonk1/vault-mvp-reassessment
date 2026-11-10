@@ -7264,8 +7264,8 @@ it is retained. **Nothing in this work explains that.**
 
 ### 104c. The honest count of the record
 
-**493 ledger rows** - **490 with numeric ids 1-496** (89-90 and 391-394 unused, house rule 3)
-plus **3 letter-suffixed** (13a, 26b, 34b) - **69 carrying a strikethrough**. **107 numbered sections** here. **52 pre-registrations.** **20 house rules**, each written after
+**496 ledger rows** - **493 with numeric ids 1-499** (89-90 and 391-394 unused, house rule 3)
+plus **3 letter-suffixed** (13a, 26b, 34b) - **70 carrying a strikethrough**. **108 numbered sections** here. **53 pre-registrations.** **20 house rules**, each written after
 breaking the thing it describes. **Twelve adversarial audit rounds** in `grok/`, verbatim both ways.
 **49 registered retraction patterns** and **8 standing qualifications**, both machine-checked,
 plus a check that recomputes every count on this line (house rule 20).
@@ -7450,3 +7450,80 @@ co-expression is not binding, transcript is not activity, and **the measurement 
 is a binding assay against purified vaults, which does not exist publicly.** It says that the one
 cheap instrument available could see the sulfating-versus-de-sulfating contrast, and MVP did not
 follow it beyond what its tissue class already gives.
+
+## 108. The class control on PAPSS2 GATE-FAILED, and the gate failure is the result: a fourth complex signature cannot rank a true subunit above its own tissue class
+
+`PAPSS2_PREREGISTRATION.md`, committed at `f6b455c` with no result in it. Run to close the number
+§107 parked, which it does — but not in the direction either branch was aimed at.
+
+**The procedure, fixed before it was pointed at anything.** For a seed S, take the 200 genes whose own
+51-tissue profile is most similar to S's, then ask where **rho(MVP, S)** falls in the distribution of
+**rho(MVP, g)** over that matched set. It asks whether MVP tracks S better than it tracks genes that
+merely share S's tissue pattern.
+
+### The gate, and it failed
+
+| seed | rho(MVP, seed) | percentile in its own tissue-matched null | | |
+|---|---|---|---|---|
+| | | **N = 200** | **N = 500** | |
+| **PARP4** — textbook stoichiometric subunit | **+0.700** | **74.50** | 86.60 | **GATE FAILED** (needed >95) |
+| **TEP1** — textbook subunit, descriptive only | **+0.611** | **36.00** | — | below its class median |
+| **PAPSS2** — the parked number | **+0.781** | **95.50** | 97.00 | not interpretable, see below |
+| **PAPSS1** — internal negative | **−0.124** | **54.00** | — | unremarkable for its class |
+
+**PARP4's matched null at N = 200 has quartiles +0.602 / +0.661 / +0.703 and a 95th percentile of
++0.745.** A genuine vault subunit at +0.700 sits essentially **on the third quartile of genes that
+merely look like it across tissues.** TEP1, the other genuine subunit, sits **below its class median.**
+
+**So the registered gate fired, and by the registration the primary is not interpreted.** That was
+declared in advance as the expected branch, and it is the useful one.
+
+### What the gate failure says, which is more than the primary could have
+
+**This is `CALIBRATION.md` finding 2's third face — *"co-abundance returns the tissue"* — appearing on
+a fourth instrument, and for the first time with a known-positive seed and a matched null.** The
+existing co-abundance limb of finding 2 was regulon-residualised CCLE lineage co-abundance that
+collapsed to a single tissue class, with the stated limit that it was **five slices of one resource.**
+This is a **different resource** (HPA consensus bulk tissue RNA, 16,930 genes x 51 tissues), a
+**different method** (profile-matched null rather than regulon residualisation), and it adds the thing
+the first one did not have: **a positive control.** The answer is that the instrument puts a textbook
+subunit at the 74.50th percentile of its own tissue class and the other textbook subunit at the 36th.
+
+**The ordering is the part a stranger should take.** A non-partner sulfate-donor enzyme reaches the
+**95.50th** percentile of its class while a real stoichiometric subunit reaches the **74.50th**. An
+instrument whose ranking places a metabolic enzyme above a known subunit is not ordering by complex
+membership, and **no claim about partnership can be promoted on it by anyone** — including the claim
+this test was run to check.
+
+### #495 is closed, and PAPSS2 is not promoted
+
+Its 95.50 / 97.00 would have read as "NOT STRUCK" under the registered thresholds, and the
+registration said in advance that **"NOT STRUCK" is not support** and that a gate failure makes the
+primary uninterpretable. Both apply. Two further reasons it stays closed:
+
+1. **The reciprocal is the strongest form of the number and changes nothing: MVP is rank 1 of 16,929
+   in PAPSS2's own genome-wide tissue co-expression, at the 99.99th percentile.** On an instrument
+   that cannot clear PARP4, being first means being first in a tissue ordering.
+2. **PAPSS2's tissue class has a name, and it is not "sulfate metabolism."** Its 15 nearest profile
+   neighbours are `C4BPB, CCDC68, TMEM176A, TMEM176B, MRC1, MAN1A1, TMEM150B, IL13RA1, LILRB5,
+   S100A10, NR1H3, SLC35C1, UGDH, C2, PPARG` — tissue-resident **macrophage and lipid-handling**
+   genes (MRC1, NR1H3, PPARG, LILRB5, C2). **MVP is a macrophage-and-glandular protein** by
+   Izquierdo 1996 (§27d), so the 99.91st percentile in §107 is MVP and PAPSS2 sharing that class.
+   **`S100A10` sitting in that neighbour list is hypothesis 7's partner arriving as a tissue
+   neighbour, which is a warning about hypothesis 7 rather than support for it.**
+
+**And the paralogue split that made PAPSS2 look specific is mostly class, not chemistry.** §107 had
+PAPSS2 at the 99.91st percentile against PAPSS1 at the 24.61st, two enzymes making the same
+metabolite. Run against their own matched nulls the gap narrows to **95.50 against 54.00**: PAPSS1 is
+exactly average for its class, PAPSS2 is high in a class that is high in MVP. The residual elevation
+is not interpretable here for the reason the gate gives.
+
+### Limits, carried from the registration
+
+**PAPSS2 was selected as the maximum of §107's 14-gene panel**, so its percentile is a maximum order
+statistic and the matched null does not correct for that. **n = 1 seed, one pair, transcript not
+protein, bulk tissue not cell type.** A profile-matched null is matched on the quantity being
+controlled for, so **it can show a correlation is unremarkable and cannot establish that a remarkable
+one is physical.** §27b's equal-mass TMT confound does not apply to this file, which is RNA.
+
+**Nothing in `HYPOTHESES_AND_NOVELTY.md` was edited on this outcome**, as the registration required.

@@ -23,8 +23,8 @@
 reviewed the manuscript adversarially against the committed data, in three rounds; between them they
 struck or qualified more than a dozen claims made here, and those reversals are recorded in place
 rather than quietly removed. All hypotheses were committed to a timestamped git history before the
-relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (**493 rows**: 490 numeric ids 1-496 with 89-90
-and 391-394 unused, plus 3 letter-suffixed — see house rule 3) and `RESULTS.md` (**107 numbered sections**). **Twelve
+relevant data were read; every gate, deviation and failure is recorded in `LEDGER.md` (**496 rows**: 493 numeric ids 1-499 with 89-90
+and 391-394 unused, plus 3 letter-suffixed — see house rule 3) and `RESULTS.md` (**108 numbered sections**). **Twelve
 adversarial audit rounds sit in `grok/`**, verbatim in both directions. **The repository is public**
 at `https://github.com/Gwonk1/vault-mvp-reassessment`. Ledger #87 was right to strike a public-history
 claim when no remote existed. The sentence that replaced it, that this history was local and
